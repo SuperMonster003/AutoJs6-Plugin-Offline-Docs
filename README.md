@@ -74,7 +74,7 @@ discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
 
-OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿主仅在固定包名通过启用状态, 兼容性, 签名, 元数据和内容指纹检查后接受插件.
+OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿主仅在固定包名通过启用状态, 兼容性, 签名, 元数据, 清单和文件内容自洽性检查后接受插件.
 
 ******
 
@@ -82,7 +82,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
-universal APK 的 `assets/docs/` 中包含 161 个文件, 总计 6996000 字节. 其规范 SHA-256 树指纹属于契约版本 1 的一部分.
+内容元数据和清单根据 `assets/docs/` 中的当前文档资产自动生成. 宿主验证元数据, 清单和文件内容相互一致.
 
 ******
 
@@ -90,7 +90,7 @@ universal APK 的 `assets/docs/` 中包含 161 个文件, 总计 6996000 字节.
 
 ******
 
-构建两种变体, 运行 JVM 测试, 并执行单 APK, 内容指纹, 元数据, 已知断链基线, 无 `lib/*.so` 载荷和许可证门禁:
+构建两种变体, 运行 JVM 测试, 并执行 APK 门禁, 校验动态生成的内容元数据, 契约元数据, 断链, 单一 universal APK, 无 `lib/*.so` 载荷和许可证:
 
 ```powershell
 .\gradlew.bat :app:testDebugUnitTest :app:verifyOfflineDocsApks
@@ -115,6 +115,12 @@ universal APK 的 `assets/docs/` 中包含 161 个文件, 总计 6996000 字节.
 ### 发行历史
 
 ******
+
+# v1.0.1
+
+###### 2026/07/23
+
+* `优化` 将固定内容指纹基线改为根据当前文档资产自动生成内容元数据和清单, 使资产可直接更新
 
 # v1.0.0
 

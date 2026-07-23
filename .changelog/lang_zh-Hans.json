@@ -5,6 +5,12 @@
   "changelog_label_improvement": "优化",
   "changelog_label_dependency": "依赖",
   "$data": {
+    "v1.0.1": {
+      "released_date": "2026/07/23",
+      "improvement": [
+        "将固定内容指纹基线改为根据当前文档资产自动生成内容元数据和清单, 使资产可直接更新"
+      ]
+    },
     "v1.0.0": {
       "released_date": "2026/07/23",
       "feature": [

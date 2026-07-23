@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Improvement",
   "changelog_label_dependency": "Dependency",
   "$data": {
+    "v1.0.1": {
+      "released_date": "2026/07/23",
+      "improvement": [
+        "Replaced the fixed content fingerprint baseline with content metadata and an inventory generated automatically from the current documentation assets, allowing the assets to be updated directly"
+      ]
+    },
     "v1.0.0": {
       "released_date": "2026/07/23",
       "feature": [

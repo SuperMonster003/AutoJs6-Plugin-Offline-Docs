@@ -22,10 +22,13 @@ val offlineDocsContentFormat = "autojs6-static-html-v1"
 val offlineDocsAssetRoot = "docs"
 val offlineDocsEntryPoint = "index.html"
 val offlineDocsInventoryFile = "offline-docs-inventory-v1.txt"
-val offlineDocsFileCount = 161
-val offlineDocsTotalBytes = 6_996_000L
-val offlineDocsContentSha256 = "3cb93aa2a8228a5566c6fec278f0e625886694f6fc9b57f8a36224d8f030ecf8"
 val requiredHostVersionCode = 5240L
+val supportedOfflineDocsExtensions = setOf("html", "css", "js", "png", "woff2")
+val maxOfflineDocsPathLength = 1024
+val maxOfflineDocsFileCount = 512
+val maxOfflineDocsFileBytes = 16L * 1024L * 1024L
+val maxOfflineDocsTotalBytes = 64L * 1024L * 1024L
+val maxOfflineDocsInventoryBytes = 1024L * 1024L
 val commonPluginApiSha256 = "6d75eb2350aa56ed412dabf84b34c0f65b9a6f6cfce3f3c23f79b9b198c24a63"
 val offlineDocsApiSha256 = "958c7051ebd4db8a203ecf74471158599e9e4ea132e3347feffb120cb7b44e4a"
 val docsDirectory = file("src/main/assets/$offlineDocsAssetRoot")
@@ -114,18 +117,46 @@ fun List<AssetRecord>.inventoryBytes(): ByteArray = joinToString(separator = "")
 
 fun List<AssetRecord>.treeSha256(): String = inventoryBytes().sha256Hex()
 
+val configuredOfflineDocsRecords = sourceAssetRecords(docsDirectory)
+val offlineDocsFileCount = configuredOfflineDocsRecords.size
+val offlineDocsTotalBytes = configuredOfflineDocsRecords.sumOf(AssetRecord::size)
+val offlineDocsContentSha256 = configuredOfflineDocsRecords.treeSha256()
+
+fun isSupportedOfflineDocsPath(path: String): Boolean {
+    if (path.isEmpty() || path.length > maxOfflineDocsPathLength || path.startsWith('/')) return false
+    if (path.any { it == '\\' || it == '\u0000' || it == '%' || it == '?' || it == '#' || it == ':' }) return false
+    if (path.any { it.code < 0x20 || it.code == 0x7f }) return false
+    val segments = path.split('/')
+    if (segments.any { it.isEmpty() || it == "." || it == ".." }) return false
+    return path.substringAfterLast('.', missingDelimiterValue = "").lowercase() in supportedOfflineDocsExtensions
+}
+
 fun verifySourceAssets(): List<AssetRecord> {
     val records = sourceAssetRecords(docsDirectory)
-    val totalBytes = records.sumOf(AssetRecord::size)
-    val treeHash = records.treeSha256()
-    if (records.size != offlineDocsFileCount || totalBytes != offlineDocsTotalBytes || treeHash != offlineDocsContentSha256) {
+    if (records != configuredOfflineDocsRecords) {
         throw GradleException(
-            "Offline documentation source fingerprint mismatch: " +
-                "files=${records.size}, bytes=$totalBytes, sha256=$treeHash",
+            "Offline documentation assets changed after Gradle configuration. Rerun the build.",
         )
     }
     if (records.none { it.path == offlineDocsEntryPoint }) {
         throw GradleException("Offline documentation entry point is missing: $offlineDocsEntryPoint")
+    }
+    if (records.size !in 1..maxOfflineDocsFileCount) {
+        throw GradleException("Offline documentation file count is unsupported: ${records.size}")
+    }
+    records.firstOrNull { it.size !in 0L..maxOfflineDocsFileBytes }?.let {
+        throw GradleException("Offline documentation asset is too large: ${it.path} (${it.size} bytes)")
+    }
+    val totalBytes = records.sumOf(AssetRecord::size)
+    if (totalBytes !in 1L..maxOfflineDocsTotalBytes) {
+        throw GradleException("Offline documentation total size is unsupported: $totalBytes bytes")
+    }
+    val inventoryBytes = records.inventoryBytes()
+    if (inventoryBytes.size.toLong() !in 1L..maxOfflineDocsInventoryBytes) {
+        throw GradleException("Offline documentation inventory is too large: ${inventoryBytes.size} bytes")
+    }
+    records.firstOrNull { !isSupportedOfflineDocsPath(it.path) }?.let {
+        throw GradleException("Offline documentation asset path is unsupported by the host: ${it.path}")
     }
     return records
 }
@@ -146,12 +177,16 @@ fun verifyLicenses() {
         "MIT.txt" to "Permission is hereby granted, free of charge",
         "OFL-1.1.txt" to "SIL OPEN FONT LICENSE",
         "NOTICE.md" to "Lato",
-        "SOURCE_PROVENANCE.md" to "37190cd9681b9d4bdc8e786f146b1b88f7818dc2",
+        "SOURCE_PROVENANCE.md" to "Source repository: `SuperMonster003/AutoJs6`",
     )
     requiredMarkers.forEach { (name, marker) ->
         if (marker !in contents.getValue(name)) {
             throw GradleException("Offline documentation license asset $name is missing marker: $marker")
         }
+    }
+    val sourceProvenance = contents.getValue("SOURCE_PROVENANCE.md")
+    if (!Regex("""(?m)^- Source commit: `[0-9a-f]{40}`$""").containsMatchIn(sourceProvenance)) {
+        throw GradleException("Offline documentation source provenance has no valid source commit")
     }
     val requiredNotices = mapOf(
         "MIT.txt" to listOf(
@@ -206,11 +241,15 @@ fun verifyKnownBrokenReferences() {
             }
         }
     }
-    if (missing != knownBrokenReferences) {
+    val unexpected = missing - knownBrokenReferences
+    if (unexpected.isNotEmpty()) {
         throw GradleException(
-            "Offline documentation broken-reference baseline changed: " +
-                "missing=${knownBrokenReferences - missing}, unexpected=${missing - knownBrokenReferences}",
+            "Offline documentation contains unexpected broken references: $unexpected",
         )
+    }
+    val resolved = knownBrokenReferences - missing
+    if (resolved.isNotEmpty()) {
+        println("Offline documentation fixed known broken references: $resolved")
     }
 }
 

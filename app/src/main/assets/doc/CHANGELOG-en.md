@@ -4,6 +4,12 @@
 
 ******
 
+# v1.0.1
+
+###### 2026/07/23
+
+* `Improvement` Replaced the fixed content fingerprint baseline with content metadata and an inventory generated automatically from the current documentation assets, allowing the assets to be updated directly
+
 # v1.0.0
 
 ###### 2026/07/23

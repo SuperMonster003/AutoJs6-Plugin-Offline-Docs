@@ -4,6 +4,12 @@
 
 ******
 
+# v1.0.1
+
+###### 2026/07/23
+
+* `Mejora` Sustituyó la base fija de la huella del contenido por metadatos de contenido y un inventario generados automáticamente a partir de los recursos de documentación actuales, lo que permite actualizar directamente los recursos
+
 # v1.0.0
 
 ###### 2026/07/23

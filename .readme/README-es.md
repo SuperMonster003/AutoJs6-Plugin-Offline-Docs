@@ -74,7 +74,7 @@ discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
 
-OfflineDocsPluginInfoService publica PluginInfo mediante IPluginInfoProvider. El host acepta el paquete fijo solo después de comprobar habilitación, compatibilidad, firma, metadatos y huella del contenido.
+OfflineDocsPluginInfoService publica PluginInfo mediante IPluginInfoProvider. El host acepta el paquete fijo solo después de comprobar habilitación, compatibilidad, firma, metadatos, inventario y coherencia del contenido de los archivos.
 
 ******
 
@@ -82,7 +82,7 @@ OfflineDocsPluginInfoService publica PluginInfo mediante IPluginInfoProvider. El
 
 ******
 
-El APK universal contiene 161 archivos en `assets/docs/`, con un total de 6996000 bytes. Su huella de árbol SHA-256 canónica forma parte del contrato versión 1.
+Los metadatos del contenido y el inventario se derivan automáticamente de los recursos de documentación actuales en `assets/docs/`. El host verifica que los metadatos, el inventario y el contenido de los archivos sean coherentes entre sí.
 
 ******
 
@@ -90,7 +90,7 @@ El APK universal contiene 161 archivos en `assets/docs/`, con un total de 699600
 
 ******
 
-Compila ambas variantes, ejecuta las pruebas JVM y aplica verificaciones de APK único, huella, metadatos, enlaces rotos conocidos, ausencia de cargas `lib/*.so` y licencias:
+Compila ambas variantes, ejecuta las pruebas JVM y aplica verificaciones de APK para los metadatos de contenido generados dinámicamente, los metadatos del contrato, los enlaces rotos, un único APK universal, la ausencia de cargas `lib/*.so` y las licencias:
 
 ```powershell
 .\gradlew.bat :app:testDebugUnitTest :app:verifyOfflineDocsApks
@@ -115,6 +115,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ### Historial de versiones
 
 ******
+
+# v1.0.1
+
+###### 2026/07/23
+
+* `Mejora` Sustituyó la base fija de la huella del contenido por metadatos de contenido y un inventario generados automáticamente a partir de los recursos de documentación actuales, lo que permite actualizar directamente los recursos
 
 # v1.0.0
 

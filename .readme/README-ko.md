@@ -74,7 +74,7 @@ discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
 
-OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제공합니다. 호스트는 고정 패키지가 활성화, 호환성, 서명, 메타데이터 및 콘텐츠 지문 검사를 통과한 경우에만 플러그인을 허용합니다.
+OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제공합니다. 호스트는 고정 패키지가 활성화, 호환성, 서명, 메타데이터, 인벤토리 및 파일 콘텐츠 일관성 검사를 통과한 경우에만 플러그인을 허용합니다.
 
 ******
 
@@ -82,7 +82,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
-universal APK의 `assets/docs/`에는 총 6996000바이트인 161개 파일이 있습니다. 정규 SHA-256 트리 지문은 계약 버전 1의 일부입니다.
+`assets/docs/`의 현재 문서 자산에서 콘텐츠 메타데이터와 인벤토리를 자동으로 파생합니다. 호스트는 메타데이터, 인벤토리 및 파일 콘텐츠가 서로 일치하는지 검증합니다.
 
 ******
 
@@ -90,7 +90,7 @@ universal APK의 `assets/docs/`에는 총 6996000바이트인 161개 파일이 �
 
 ******
 
-두 변형을 빌드하고 JVM 테스트와 단일 APK, 콘텐츠 지문, 메타데이터, 알려진 끊어진 링크 기준, `lib/*.so` 페이로드 부재 및 라이선스 검사를 실행합니다:
+두 변형을 빌드하고 JVM 테스트를 실행하며 APK 검사로 동적으로 생성된 콘텐츠 메타데이터, 계약 메타데이터, 끊어진 링크, 단일 universal APK, `lib/*.so` 페이로드 부재 및 라이선스를 검증합니다:
 
 ```powershell
 .\gradlew.bat :app:testDebugUnitTest :app:verifyOfflineDocsApks
@@ -115,6 +115,12 @@ universal APK의 `assets/docs/`에는 총 6996000바이트인 161개 파일이 �
 ### 릴리스 기록
 
 ******
+
+# v1.0.1
+
+###### 2026/07/23
+
+* `개선` 고정 콘텐츠 지문 기준을 현재 문서 자산에서 자동 생성되는 콘텐츠 메타데이터와 인벤토리로 대체하여 자산을 직접 업데이트할 수 있도록 변경
 
 # v1.0.0
 

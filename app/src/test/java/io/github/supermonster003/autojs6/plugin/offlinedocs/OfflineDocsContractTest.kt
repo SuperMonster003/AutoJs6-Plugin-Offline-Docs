@@ -21,18 +21,14 @@ class OfflineDocsContractTest {
         assertEquals(16L * 1024L * 1024L, OfflineDocsPluginContract.MAX_FILE_BYTES)
         assertEquals(64L * 1024L * 1024L, OfflineDocsPluginContract.MAX_TOTAL_BYTES)
         assertEquals(1024L * 1024L, OfflineDocsPluginContract.MAX_INVENTORY_BYTES)
-        assertTrue(BuildConfig.OFFLINE_DOCS_CONTENT_SHA256.matches(Regex("[0-9a-f]{64}")))
     }
 
     @Test
-    fun `build metadata matches contract`() {
+    fun `generated build metadata stays within contract bounds`() {
         assertEquals(OfflineDocsPluginContract.VERSION, BuildConfig.OFFLINE_DOCS_CONTRACT_VERSION)
-        assertEquals("6.6.4", BuildConfig.OFFLINE_DOCS_CONTENT_VERSION)
-        assertEquals(161, BuildConfig.OFFLINE_DOCS_FILE_COUNT)
-        assertEquals(6_996_000L, BuildConfig.OFFLINE_DOCS_TOTAL_BYTES)
-        assertEquals(
-            "3cb93aa2a8228a5566c6fec278f0e625886694f6fc9b57f8a36224d8f030ecf8",
-            BuildConfig.OFFLINE_DOCS_CONTENT_SHA256,
-        )
+        assertTrue(BuildConfig.OFFLINE_DOCS_CONTENT_VERSION.isNotBlank())
+        assertTrue(BuildConfig.OFFLINE_DOCS_FILE_COUNT.toLong() in 1L..OfflineDocsPluginContract.MAX_FILE_COUNT)
+        assertTrue(BuildConfig.OFFLINE_DOCS_TOTAL_BYTES in 1L..OfflineDocsPluginContract.MAX_TOTAL_BYTES)
+        assertTrue(BuildConfig.OFFLINE_DOCS_CONTENT_SHA256.matches(Regex("[0-9a-f]{64}")))
     }
 }

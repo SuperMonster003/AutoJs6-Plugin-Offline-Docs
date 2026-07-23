@@ -74,7 +74,7 @@ discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
 
-OfflineDocsPluginInfoService publie PluginInfo via IPluginInfoProvider. L'hôte accepte le paquet fixe uniquement après les contrôles d'activation, de compatibilité, de signature, de métadonnées et d'empreinte du contenu.
+OfflineDocsPluginInfoService publie PluginInfo via IPluginInfoProvider. L'hôte accepte le paquet fixe uniquement après les contrôles d'activation, de compatibilité, de signature, de métadonnées, d'inventaire et de cohérence du contenu des fichiers.
 
 ******
 
@@ -82,7 +82,7 @@ OfflineDocsPluginInfoService publie PluginInfo via IPluginInfoProvider. L'hôte 
 
 ******
 
-L'APK universal contient 161 fichiers sous `assets/docs/`, pour un total de 6996000 octets. Leur empreinte canonique SHA-256 fait partie du contrat version 1.
+Les métadonnées du contenu et l'inventaire sont dérivés automatiquement des ressources de documentation actuelles sous `assets/docs/`. L'hôte vérifie la cohérence mutuelle des métadonnées, de l'inventaire et du contenu des fichiers.
 
 ******
 
@@ -90,7 +90,7 @@ L'APK universal contient 161 fichiers sous `assets/docs/`, pour un total de 6996
 
 ******
 
-Compile les deux variantes, exécute les tests JVM et applique les contrôles d'APK unique, d'empreinte, de métadonnées, de liens rompus connus, d'absence de charge `lib/*.so` et de licences:
+Compile les deux variantes, exécute les tests JVM et applique les contrôles APK portant sur les métadonnées de contenu générées dynamiquement, les métadonnées du contrat, les liens rompus, l'unique APK universal, l'absence de charges `lib/*.so` et les licences:
 
 ```powershell
 .\gradlew.bat :app:testDebugUnitTest :app:verifyOfflineDocsApks
@@ -115,6 +115,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ### Historique des versions
 
 ******
+
+# v1.0.1
+
+###### 2026/07/23
+
+* `Amélioration` Remplacement de la base fixe de l'empreinte du contenu par des métadonnées de contenu et un inventaire générés automatiquement à partir des ressources de documentation actuelles, permettant leur mise à jour directe
 
 # v1.0.0
 

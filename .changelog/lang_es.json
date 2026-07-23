@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Mejora",
   "changelog_label_dependency": "Dependencia",
   "$data": {
+    "v1.0.1": {
+      "released_date": "2026/07/23",
+      "improvement": [
+        "Sustituyó la base fija de la huella del contenido por metadatos de contenido y un inventario generados automáticamente a partir de los recursos de documentación actuales, lo que permite actualizar directamente los recursos"
+      ]
+    },
     "v1.0.0": {
       "released_date": "2026/07/23",
       "feature": [

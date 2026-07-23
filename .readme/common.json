@@ -17,9 +17,6 @@
   "asset_root": "docs",
   "entry_point": "index.html",
   "inventory_file": "offline-docs-inventory-v1.txt",
-  "file_count": "161",
-  "total_bytes": "6996000",
-  "content_sha256": "3cb93aa2a8228a5566c6fec278f0e625886694f6fc9b57f8a36224d8f030ecf8",
   "source_repository": "SuperMonster003/AutoJs6",
   "source_commit": "37190cd9681b9d4bdc8e786f146b1b88f7818dc2",
   "source_path": "app/src/main/assets-app/docs"

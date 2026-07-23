@@ -4,6 +4,12 @@
 
 ******
 
+# v1.0.1
+
+###### 2026/07/23
+
+* `Amélioration` Remplacement de la base fixe de l'empreinte du contenu par des métadonnées de contenu et un inventaire générés automatiquement à partir des ressources de documentation actuelles, permettant leur mise à jour directe
+
 # v1.0.0
 
 ###### 2026/07/23

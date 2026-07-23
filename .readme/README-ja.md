@@ -74,7 +74,7 @@ discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
 
-OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を公開します. ホストは固定パッケージが有効化, 互換性, 署名, メタデータ, コンテンツ指紋の検査に合格した場合だけ受け入れます.
+OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を公開します. ホストは固定パッケージが有効化, 互換性, 署名, メタデータ, インベントリ, ファイル内容の整合性検査に合格した場合だけ受け入れます.
 
 ******
 
@@ -82,7 +82,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
-universal APK の `assets/docs/` には合計 6996000 バイトの 161 ファイルがあります. 正規 SHA-256 ツリー指紋は契約バージョン 1 の一部です.
+`assets/docs/` の現在のドキュメント資産からコンテンツメタデータとインベントリを自動的に導出します. ホストはメタデータ, インベントリ, ファイル内容が互いに整合していることを検証します.
 
 ******
 
@@ -90,7 +90,7 @@ universal APK の `assets/docs/` には合計 6996000 バイトの 161 ファイ
 
 ******
 
-両方のバリアントをビルドし, JVM テストと単一 APK, コンテンツ指紋, メタデータ, 既知のリンク切れ基準, `lib/*.so` ペイロード不在, ライセンスの検査を実行します:
+両方のバリアントをビルドし, JVM テストを実行し, APK 検査によって動的に生成されたコンテンツメタデータ, 契約メタデータ, リンク切れ, 単一 universal APK, `lib/*.so` ペイロード不在, ライセンスを検証します:
 
 ```powershell
 .\gradlew.bat :app:testDebugUnitTest :app:verifyOfflineDocsApks
@@ -115,6 +115,12 @@ universal APK の `assets/docs/` には合計 6996000 バイトの 161 ファイ
 ### リリース履歴
 
 ******
+
+# v1.0.1
+
+###### 2026/07/23
+
+* `改善` 固定コンテンツ指紋基準を現在のドキュメント資産から自動生成するコンテンツメタデータとインベントリに置き換え, 資産を直接更新可能に変更
 
 # v1.0.0
 

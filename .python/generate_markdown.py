@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import hashlib
 import json
 import re
 import xml.etree.ElementTree as ElementTree
@@ -50,6 +51,7 @@ README_DIR = ROOT / ".readme"
 CHANGELOG_DIR = ROOT / ".changelog"
 ANDROID_CHANGELOG_DIR = ROOT / "app" / "src" / "main" / "assets" / "doc"
 ANDROID_RES_DIR = ROOT / "app" / "src" / "main" / "res"
+OFFLINE_DOCS_DIR = ROOT / "app" / "src" / "main" / "assets" / "docs"
 VERSION_PROPERTIES = ROOT / "version.properties"
 
 
@@ -105,6 +107,49 @@ def load_json(path: Path):
     return value
 
 
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(8192), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def offline_docs_content_metadata() -> dict:
+    root = OFFLINE_DOCS_DIR.resolve(strict=True)
+    records = []
+    for source in OFFLINE_DOCS_DIR.rglob("*"):
+        if not source.is_file():
+            continue
+        real_path = source.resolve(strict=True)
+        try:
+            relative = real_path.relative_to(root).as_posix()
+        except ValueError as error:
+            raise ValueError(f"Offline documentation asset escapes its root: {source}") from error
+        if (
+            not relative
+            or relative.startswith("/")
+            or "\\" in relative
+            or ".." in relative.split("/")
+        ):
+            raise ValueError(f"Unsafe offline documentation asset path: {relative}")
+        records.append((relative, real_path.stat().st_size, file_sha256(real_path)))
+
+    # Kotlin orders String values by UTF-16 code units when it builds the APK inventory.
+    records.sort(key=lambda record: record[0].encode("utf-16-be", errors="surrogatepass"))
+    if not any(path == "index.html" for path, _, _ in records):
+        raise ValueError("Offline documentation entry point is missing: index.html")
+    inventory = "".join(
+        f"{path}\t{size}\t{sha256}\n"
+        for path, size, sha256 in records
+    ).encode("utf-8")
+    return {
+        "file_count": str(len(records)),
+        "total_bytes": str(sum(size for _, size, _ in records)),
+        "content_sha256": hashlib.sha256(inventory).hexdigest(),
+    }
+
+
 def load_template(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     validate_symbols(text, path.relative_to(ROOT))
@@ -150,6 +195,7 @@ def changelog_version_name() -> str:
 
 def load_languages():
     common = load_json(README_DIR / "common.json")
+    common.update(offline_docs_content_metadata())
     languages = {}
     changelogs = {}
     expected_version = changelog_version_name()

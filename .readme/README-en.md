@@ -74,7 +74,7 @@ discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
 
-OfflineDocsPluginInfoService publishes PluginInfo through IPluginInfoProvider. The host accepts the fixed package only after enablement, compatibility, signer, metadata, and content fingerprint checks pass.
+OfflineDocsPluginInfoService publishes PluginInfo through IPluginInfoProvider. The host accepts the fixed package only after enablement, compatibility, signer, metadata, inventory, and file-content consistency checks pass.
 
 ******
 
@@ -82,7 +82,7 @@ OfflineDocsPluginInfoService publishes PluginInfo through IPluginInfoProvider. T
 
 ******
 
-The universal APK contains 161 files under `assets/docs/`, totaling 6996000 bytes. Their canonical SHA-256 tree fingerprint is part of contract version 1.
+The content metadata and inventory are automatically derived from the current documentation assets under `assets/docs/`. The host verifies that the metadata, inventory, and file contents are mutually consistent.
 
 ******
 
@@ -90,7 +90,7 @@ The universal APK contains 161 files under `assets/docs/`, totaling 6996000 byte
 
 ******
 
-Build both variants, run JVM tests, and enforce the single-APK, content fingerprint, metadata, broken-link baseline, no `lib/*.so` payload, and license gates:
+Build both variants, run JVM tests, and enforce APK gates for dynamically generated content metadata, contract metadata, broken links, a single universal APK, the absence of `lib/*.so` payloads, and licenses:
 
 ```powershell
 .\gradlew.bat :app:testDebugUnitTest :app:verifyOfflineDocsApks
@@ -115,6 +115,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ### Release History
 
 ******
+
+# v1.0.1
+
+###### 2026/07/23
+
+* `Improvement` Replaced the fixed content fingerprint baseline with content metadata and an inventory generated automatically from the current documentation assets, allowing the assets to be updated directly
 
 # v1.0.0
 

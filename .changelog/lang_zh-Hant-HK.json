@@ -5,6 +5,12 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "依賴",
   "$data": {
+    "v1.0.1": {
+      "released_date": "2026/07/23",
+      "improvement": [
+        "將固定內容指紋基線改為根據目前文件資產自動產生內容中繼資料和清單, 使資產可直接更新"
+      ]
+    },
     "v1.0.0": {
       "released_date": "2026/07/23",
       "feature": [

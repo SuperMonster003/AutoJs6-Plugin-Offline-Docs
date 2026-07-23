@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Amélioration",
   "changelog_label_dependency": "Dépendance",
   "$data": {
+    "v1.0.1": {
+      "released_date": "2026/07/23",
+      "improvement": [
+        "Remplacement de la base fixe de l'empreinte du contenu par des métadonnées de contenu et un inventaire générés automatiquement à partir des ressources de documentation actuelles, permettant leur mise à jour directe"
+      ]
+    },
     "v1.0.0": {
       "released_date": "2026/07/23",
       "feature": [

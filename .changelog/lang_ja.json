@@ -5,6 +5,12 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v1.0.1": {
+      "released_date": "2026/07/23",
+      "improvement": [
+        "固定コンテンツ指紋基準を現在のドキュメント資産から自動生成するコンテンツメタデータとインベントリに置き換え, 資産を直接更新可能に変更"
+      ]
+    },
     "v1.0.0": {
       "released_date": "2026/07/23",
       "feature": [

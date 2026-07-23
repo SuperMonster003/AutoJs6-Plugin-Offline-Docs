@@ -74,7 +74,7 @@ discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
 
-OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿主只在固定套件名稱通過啟用狀態, 相容性, 簽署, 中繼資料和內容指紋檢查後接受插件.
+OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿主只在固定套件名稱通過啟用狀態, 相容性, 簽署, 中繼資料, 清單和檔案內容一致性檢查後接受插件.
 
 ******
 
@@ -82,7 +82,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
-universal APK 的 `assets/docs/` 中包含 161 個檔案, 總計 6996000 位元組. 其規範 SHA-256 樹指紋是契約版本 1 的一部分.
+內容中繼資料和清單會根據 `assets/docs/` 中的目前文件資產自動產生. 宿主會驗證中繼資料, 清單和檔案內容互相一致.
 
 ******
 
@@ -90,7 +90,7 @@ universal APK 的 `assets/docs/` 中包含 161 個檔案, 總計 6996000 位元�
 
 ******
 
-建置兩種變體, 執行 JVM 測試, 並套用單一 APK, 內容指紋, 中繼資料, 已知失效連結基線, 無 `lib/*.so` 載荷和授權門禁:
+建置兩種變體, 執行 JVM 測試, 並套用 APK 門禁, 驗證動態產生的內容中繼資料, 契約中繼資料, 失效連結, 單一 universal APK, 無 `lib/*.so` 載荷和授權:
 
 ```powershell
 .\gradlew.bat :app:testDebugUnitTest :app:verifyOfflineDocsApks
@@ -115,6 +115,12 @@ universal APK 的 `assets/docs/` 中包含 161 個檔案, 總計 6996000 位元�
 ### 發行歷史
 
 ******
+
+# v1.0.1
+
+###### 2026/07/23
+
+* `優化` 將固定內容指紋基線改為根據目前文件資產自動產生內容中繼資料和清單, 使資產可直接更新
 
 # v1.0.0
 
