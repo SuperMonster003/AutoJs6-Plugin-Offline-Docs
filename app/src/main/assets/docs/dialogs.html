@@ -212,14 +212,13 @@
         <div id="apicontent">
             <h1>对话框 (Dialogs)<span><a class="mark" href="#dialogs_dialogs" id="dialogs_dialogs">#</a></span></h1>
 <hr>
-<p style="font: italic 1em sans-serif; color: #78909C">此章节待补充或完善...</p>
-<p style="font: italic 1em sans-serif; color: #78909C">Marked by SuperMonster003 on Oct 22, 2022.</p>
-
-<hr>
-<p>dialogs 模块提供了简单的对话框支持, 可以通过对话框和用户进行交互. 最简单的例子如下：</p>
+<aside class="doc-status doc-status--incomplete" data-marked-by="SuperMonster003" data-marked-on="2022-10-22">
+<p><strong>文档状态:</strong> 此章节仍在补充或完善中.</p>
+</aside>
+<p>dialogs 模块提供了简单的对话框支持, 可以通过对话框和用户进行交互. 最简单的例子如下:</p>
 <pre><code>alert(&quot;您好&quot;);
-</code></pre><p>这段代码会弹出一个消息提示框显示&quot;您好&quot;, 并在用户点击&quot;确定&quot;后继续运行. 稍微复杂一点的例子如下：</p>
-<pre><code>var clear = confirm(&quot;要清除所有缓存吗?&quot;);
+</code></pre><p>这段代码会弹出一个消息提示框显示&quot;您好&quot;, 并在用户点击&quot;确定&quot;后继续运行. 稍微复杂一点的例子如下:</p>
+<pre><code>let clear = confirm(&quot;要清除所有缓存吗?&quot;);
 if(clear){
     alert(&quot;清除成功!&quot;);
 }
@@ -241,13 +240,13 @@ confirm(&quot;要清除所有缓存吗?&quot;)
     });
 </code></pre><h2>dialogs.alert(title[, content, callback])<span><a class="mark" href="#dialogs_dialogs_alert_title_content_callback" id="dialogs_dialogs_alert_title_content_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>title</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框的标题.</li>
-<li><code>content</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 可选, 对话框的内容. 默认为空.</li>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
+<li><strong>title</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框的标题.</li>
+<li><strong>content</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 可选, 对话框的内容. 默认为空.</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
 </ul>
-</div><p>显示一个只包含“确定”按钮的提示对话框. 直至用户点击确定脚本才继续运行.</p>
+</div><p>显示一个只包含&quot;确定&quot;按钮的提示对话框. 直至用户点击确定脚本才继续运行.</p>
 <p>该函数也可以作为全局函数使用.</p>
-<pre><code>alert(&quot;出现错误~&quot;, &quot;出现未知错误, 请联系脚本作者”);
+<pre><code>alert(&quot;出现错误~&quot;, &quot;出现未知错误, 请联系脚本作者&quot;);
 </code></pre><p>在ui模式下该函数返回一个<code>Promise</code>. 例如:</p>
 <pre><code>&quot;ui&quot;;
 alert(&quot;嘿嘿嘿&quot;).then(()=&gt;{
@@ -255,11 +254,11 @@ alert(&quot;嘿嘿嘿&quot;).then(()=&gt;{
 });
 </code></pre><h2>dialogs.confirm(title[, content, callback])<span><a class="mark" href="#dialogs_dialogs_confirm_title_content_callback" id="dialogs_dialogs_confirm_title_content_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>title</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框的标题.</li>
-<li><code>content</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 可选, 对话框的内容. 默认为空.</li>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
+<li><strong>title</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框的标题.</li>
+<li><strong>content</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 可选, 对话框的内容. 默认为空.</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
 </ul>
-</div><p>显示一个包含“确定”和“取消”按钮的提示对话框. 如果用户点击“确定”则返回 <code>true</code> , 否则返回 <code>false</code> .</p>
+</div><p>显示一个包含&quot;确定&quot;和&quot;取消&quot;按钮的提示对话框. 如果用户点击&quot;确定&quot;则返回 <code>true</code> , 否则返回 <code>false</code> .</p>
 <p>该函数也可以作为全局函数使用.</p>
 <p>在ui模式下该函数返回一个<code>Promise</code>. 例如:</p>
 <pre><code>&quot;ui&quot;;
@@ -268,13 +267,13 @@ confirm(&quot;确定吗&quot;).then(value=&gt;{
 });
 </code></pre><h2>dialogs.rawInput(title[, prefill, callback])<span><a class="mark" href="#dialogs_dialogs_rawinput_title_prefill_callback" id="dialogs_dialogs_rawinput_title_prefill_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>title</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框的标题.</li>
-<li><code>prefill</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 输入框的初始内容, 可选, 默认为空.</li>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
+<li><strong>title</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框的标题.</li>
+<li><strong>prefill</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 输入框的初始内容, 可选, 默认为空.</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
 </ul>
 </div><p>显示一个包含输入框的对话框, 等待用户输入内容, 并在用户点击确定时将输入的字符串返回. 如果用户取消了输入, 返回null.</p>
 <p>该函数也可以作为全局函数使用.</p>
-<pre><code>var name = rawInput(&quot;请输入您的名字&quot;, &quot;小明&quot;);
+<pre><code>let name = rawInput(&quot;请输入您的名字&quot;, &quot;小明&quot;);
 alert(&quot;您的名字是&quot; + name);
 </code></pre><p>在ui模式下该函数返回一个<code>Promise</code>. 例如:</p>
 <pre><code>&quot;ui&quot;;
@@ -287,28 +286,28 @@ rawInput(&quot;请输入您的名字&quot;, &quot;小明&quot;).then(name =&gt; 
 });
 </code></pre><h2>dialogs.input(title[, prefill, callback])<span><a class="mark" href="#dialogs_dialogs_input_title_prefill_callback" id="dialogs_dialogs_input_title_prefill_callback">#</a></span></h2>
 <p>等效于 <code>eval(dialogs.rawInput(title, prefill, callback))</code>, 该函数和rawInput的区别在于, 会把输入的字符串用eval计算一遍再返回, 返回的可能不是字符串.</p>
-<p>可以用该函数输入数字、数组等. 例如：</p>
-<pre><code>var age = dialogs.input(&quot;请输入您的年龄&quot;, &quot;18&quot;);
+<p>可以用该函数输入数字, 数组等. 例如:</p>
+<pre><code>let age = dialogs.input(&quot;请输入您的年龄&quot;, &quot;18&quot;);
 // new Date().getYear() + 1900 可获取当前年份
-var year = new Date().getYear() + 1900 - age;
+let year = new Date().getYear() + 1900 - age;
 alert(&quot;您的出生年份是&quot; + year);
 </code></pre><p>在ui模式下该函数返回一个<code>Promise</code>. 例如:</p>
 <pre><code>&quot;ui&quot;;
 dialogs.input(&quot;请输入您的年龄&quot;, &quot;18&quot;).then(age =&gt; {
-    var year = new Date().getYear() + 1900 - age;
+    let year = new Date().getYear() + 1900 - age;
     alert(&quot;您的出生年份是&quot; + year);
 });
 </code></pre><h2>dialogs.prompt(title[, prefill, callback])<span><a class="mark" href="#dialogs_dialogs_prompt_title_prefill_callback" id="dialogs_dialogs_prompt_title_prefill_callback">#</a></span></h2>
 <p>相当于 <code>dialogs.rawInput()</code>;</p>
 <h2>dialogs.select(title, items, callback)<span><a class="mark" href="#dialogs_dialogs_select_title_items_callback" id="dialogs_dialogs_select_title_items_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>title</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框的标题.</li>
-<li><code>items</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 对话框的选项列表, 是一个字符串数组.</li>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
+<li><strong>title</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框的标题.</li>
+<li><strong>items</strong> { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 对话框的选项列表, 是一个字符串数组.</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
 </ul>
 </div><p>显示一个带有选项列表的对话框, 等待用户选择, 返回用户选择的选项索引(0 ~ item.length - 1). 如果用户取消了选择, 返回-1.</p>
-<pre><code>var options = [&quot;选项A&quot;, &quot;选项B&quot;, &quot;选项C&quot;, &quot;选项D&quot;]
-var i = dialogs.select(&quot;请选择一个选项&quot;, options);
+<pre><code>let options = [&quot;选项A&quot;, &quot;选项B&quot;, &quot;选项C&quot;, &quot;选项D&quot;]
+let i = dialogs.select(&quot;请选择一个选项&quot;, options);
 if(i &gt;= 0){
     toast(&quot;您选择的是&quot; + options[i]);
 }else{
@@ -322,28 +321,28 @@ dialogs.select(&quot;请选择一个选项&quot;, [&quot;选项A&quot;, &quot;�
     });
 </code></pre><h2>dialogs.singleChoice(title, items[, index, callback])<span><a class="mark" href="#dialogs_dialogs_singlechoice_title_items_index_callback" id="dialogs_dialogs_singlechoice_title_items_index_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>title</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框的标题.</li>
-<li><code>items</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 对话框的选项列表, 是一个字符串数组.</li>
-<li><code>index</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框的初始选项的位置, 默认为0.</li>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
+<li><strong>title</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框的标题.</li>
+<li><strong>items</strong> { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 对话框的选项列表, 是一个字符串数组.</li>
+<li><strong>index</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框的初始选项的位置, 默认为0.</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
 </ul>
 </div><p>显示一个单选列表对话框, 等待用户选择, 返回用户选择的选项索引(0 ~ item.length - 1). 如果用户取消了选择, 返回-1.</p>
 <p>在ui模式下该函数返回一个<code>Promise</code>.</p>
 <h2>dialogs.multiChoice(title, items[, indices, callback])<span><a class="mark" href="#dialogs_dialogs_multichoice_title_items_indices_callback" id="dialogs_dialogs_multichoice_title_items_indices_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>title</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框的标题.</li>
-<li><code>items</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 对话框的选项列表, 是一个字符串数组.</li>
-<li><code>indices</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 选项列表中初始选中的项目索引的数组, 默认为空数组.</li>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
+<li><strong>title</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框的标题.</li>
+<li><strong>items</strong> { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 对话框的选项列表, 是一个字符串数组.</li>
+<li><strong>indices</strong> { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 选项列表中初始选中的项目索引的数组, 默认为空数组.</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数, 可选. 当用户点击确定时被调用,一般用于ui模式.</li>
 </ul>
 </div><p>显示一个多选列表对话框, 等待用户选择, 返回用户选择的选项索引的数组. 如果用户取消了选择, 返回<code>[]</code>.</p>
 <p>在ui模式下该函数返回一个<code>Promise</code>.</p>
 <h2>dialogs.build(properties)<span><a class="mark" href="#dialogs_dialogs_build_properties" id="dialogs_dialogs_build_properties">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>properties</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">Object</a> } 对话框属性, 用于配置对话框.</li>
-<li>返回 { <span class="type">Dialog</span> }</li>
+<li><strong>properties</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } 对话框属性, 用于配置对话框.</li>
+<li><ins><strong>returns</strong></ins> { <span class="type">Dialog</span> }</li>
 </ul>
-</div><p>创建一个可自定义的对话框, 例如：</p>
+</div><p>创建一个可自定义的对话框, 例如:</p>
 <pre><code>dialogs.build({
     //对话框标题
     title: &quot;发现新版本&quot;,
@@ -369,43 +368,43 @@ dialogs.select(&quot;请选择一个选项&quot;, [&quot;选项A&quot;, &quot;�
 }).show();
 </code></pre><p>选项properties可供配置的项目为:</p>
 <ul>
-<li><code>title</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框标题</li>
-<li><code>titleColor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框标题的颜色</li>
-<li><code>buttonRippleColor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框按钮的波纹效果颜色</li>
-<li><code>icon</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <span class="type">Image</span> } 对话框的图标, 是一个URL或者图片对象</li>
-<li><code>content</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框文字内容</li>
-<li><code>contentColor</code>{ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框文字内容的颜色</li>
-<li><code>contentLineSpacing</code>{ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框文字内容的行高倍数, 1.0为一倍行高</li>
-<li><code>items</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 对话框列表的选项</li>
-<li><code>itemsColor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框列表的选项的文字颜色</li>
-<li><code>itemsSelectMode</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框列表的选项选择模式, 可以为:<ul>
+<li><strong>title</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框标题</li>
+<li><strong>titleColor</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框标题的颜色</li>
+<li><strong>buttonRippleColor</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框按钮的波纹效果颜色</li>
+<li><strong>icon</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type">Image</span> } 对话框的图标, 是一个URL或者图片对象</li>
+<li><strong>content</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框文字内容</li>
+<li><strong>contentColor</strong>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框文字内容的颜色</li>
+<li><strong>contentLineSpacing</strong>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框文字内容的行高倍数, 1.0为一倍行高</li>
+<li><strong>items</strong> { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 对话框列表的选项</li>
+<li><strong>itemsColor</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框列表的选项的文字颜色</li>
+<li><strong>itemsSelectMode</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框列表的选项选择模式, 可以为:<ul>
 <li><code>select</code> 普通选择模式</li>
 <li><code>single</code> 单选模式</li>
 <li><code>multi</code> 多选模式</li>
 </ul>
 </li>
-<li><code>itemsSelectedIndex</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 对话框列表中预先选中的项目索引, 如果是单选模式为一个索引；多选模式则为数组</li>
-<li><code>positive</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框确定按钮的文字内容(最右边按钮)</li>
-<li><code>positiveColor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框确定按钮的文字颜色(最右边按钮)</li>
-<li><code>neutral</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框中立按钮的文字内容(最左边按钮)</li>
-<li><code>neutralColor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框中立按钮的文字颜色(最左边按钮)</li>
-<li><code>negative</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框取消按钮的文字内容(确定按钮左边的按钮)</li>
-<li><code>negativeColor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 对话框取消按钮的文字颜色(确定按钮左边的按钮)</li>
-<li><code>checkBoxPrompt</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 勾选框文字内容</li>
-<li><code>checkBoxChecked</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 勾选框是否勾选</li>
-<li><code>progress</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">Object</a> } 配置对话框进度条的对象：<ul>
-<li><code>max</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 进度条的最大值, 如果为-1则为无限循环的进度条</li>
-<li><code>horizontal</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 如果为true, 则对话框无限循环的进度条为水平进度条</li>
-<li><code>showMinMax</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 是否显示进度条的最大值和最小值</li>
+<li><strong>itemsSelectedIndex</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 对话框列表中预先选中的项目索引, 如果是单选模式为一个索引; 多选模式则为数组</li>
+<li><strong>positive</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框确定按钮的文字内容(最右边按钮)</li>
+<li><strong>positiveColor</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框确定按钮的文字颜色(最右边按钮)</li>
+<li><strong>neutral</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框中立按钮的文字内容(最左边按钮)</li>
+<li><strong>neutralColor</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框中立按钮的文字颜色(最左边按钮)</li>
+<li><strong>negative</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框取消按钮的文字内容(确定按钮左边的按钮)</li>
+<li><strong>negativeColor</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 对话框取消按钮的文字颜色(确定按钮左边的按钮)</li>
+<li><strong>checkBoxPrompt</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 勾选框文字内容</li>
+<li><strong>checkBoxChecked</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 勾选框是否勾选</li>
+<li><strong>progress</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } 配置对话框进度条的对象: <ul>
+<li><strong>max</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 进度条的最大值, 如果为-1则为无限循环的进度条</li>
+<li><strong>horizontal</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 如果为true, 则对话框无限循环的进度条为水平进度条</li>
+<li><strong>showMinMax</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 是否显示进度条的最大值和最小值</li>
 </ul>
 </li>
-<li><code>cancelable</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 对话框是否可取消, 如果为false, 则对话框只能用代码手动取消</li>
-<li><code>canceledOnTouchOutside</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 对话框是否在点击对话框以外区域时自动取消, 默认为true</li>
-<li><code>inputHint</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框的输入框的输入提示</li>
-<li><code>inputPrefill</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 对话框输入框的默认输入内容</li>
+<li><strong>cancelable</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 对话框是否可取消, 如果为false, 则对话框只能用代码手动取消</li>
+<li><strong>canceledOnTouchOutside</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 对话框是否在点击对话框以外区域时自动取消, 默认为true</li>
+<li><strong>inputHint</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框的输入框的输入提示</li>
+<li><strong>inputPrefill</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 对话框输入框的默认输入内容</li>
 </ul>
-<p>通过这些选项可以自定义一个对话框, 并通过监听返回的Dialog对象的按键、输入事件来实现交互. 下面是一些例子.</p>
-<p>模拟alert对话框：</p>
+<p>通过这些选项可以自定义一个对话框, 并通过监听返回的Dialog对象的按键, 输入事件来实现交互. 下面是一些例子.</p>
+<p>模拟alert对话框:</p>
 <pre><code>dialogs.build({
     title: &quot;你好&quot;,
     content: &quot;今天也要元气满满哦&quot;,
@@ -432,7 +431,7 @@ dialogs.select(&quot;请选择一个选项&quot;, [&quot;选项A&quot;, &quot;�
     toast(&quot;您选择的是&quot; + item);
 }).show();
 </code></pre><p>&quot;处理中&quot;对话框:</p>
-<pre><code>var d = dialogs.build({
+<pre><code>let d = dialogs.build({
     title: &quot;下载中...&quot;,
     progress: {
         max: -1
@@ -448,26 +447,26 @@ setTimeout(()=&gt;{
     title: &quot;请输入您的年龄&quot;,
     inputPrefill: &quot;18&quot;
 }).on(&quot;input&quot;, (input)=&gt;{
-    var age = parseInt(input);
+    let age = parseInt(input);
     toastLog(age);
 }).show();
-</code></pre><p>使用这个函数来构造对话框, 一个明显的不同是需要使用回调函数而不能像dialogs其他函数一样同步地返回结果；但也可以通过threads模块的方法来实现. 例如显示一个输入框并获取输入结果为：</p>
-<pre><code>var input = threads.disposable();
+</code></pre><p>使用这个函数来构造对话框, 一个明显的不同是需要使用回调函数而不能像dialogs其他函数一样同步地返回结果; 但也可以通过threads模块的方法来实现. 例如显示一个输入框并获取输入结果为:</p>
+<pre><code>let input = threads.disposable();
 dialogas.build({
     title: &quot;请输入您的年龄&quot;,
     inputPrefill: &quot;18&quot;
 }).on(&quot;input&quot;, text =&gt; {
     input.setAndNotify(text);
 }).show();
-var age = parseInt(input.blockedGet());
+let age = parseInt(input.blockedGet());
 tosatLog(age);
 </code></pre><h1>Dialog<span><a class="mark" href="#dialogs_dialog" id="dialogs_dialog">#</a></span></h1>
 <p><code>dialogs.build()</code>返回的对话框对象, 内置一些事件用于响应用户的交互, 也可以获取对话框的状态和信息.</p>
 <h2>事件: <code>show</code><span><a class="mark" href="#dialogs_show" id="dialogs_show">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>对话框显示时会触发的事件. 例如：</p>
+</div><p>对话框显示时会触发的事件. 例如:</p>
 <pre><code>dialogs.build({
     title: &quot;标题&quot;
 }).on(&quot;show&quot;, (dialog)=&gt;{
@@ -475,9 +474,9 @@ tosatLog(age);
 }).show();
 </code></pre><h2>事件: <code>cancel</code><span><a class="mark" href="#dialogs_cancel" id="dialogs_cancel">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>对话框被取消时会触发的事件. 一个对话框可能按取消按钮、返回键取消或者点击对话框以外区域取消. 例如：</p>
+</div><p>对话框被取消时会触发的事件. 一个对话框可能按取消按钮, 返回键取消或者点击对话框以外区域取消. 例如:</p>
 <pre><code>dialogs.build({
     title: &quot;标题&quot;,
     positive: &quot;确定&quot;,
@@ -487,10 +486,10 @@ tosatLog(age);
 }).show();
 </code></pre><h2>事件: <code>dismiss</code><span><a class="mark" href="#dialogs_dismiss" id="dialogs_dismiss">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>对话框消失时会触发的事件. 对话框被取消或者手动调用<code>dialog.dismiss()</code>函数都会触发该事件. 例如：</p>
-<pre><code>var d = dialogs.build({
+</div><p>对话框消失时会触发的事件. 对话框被取消或者手动调用<code>dialog.dismiss()</code>函数都会触发该事件. 例如:</p>
+<pre><code>let d = dialogs.build({
     title: &quot;标题&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;
@@ -503,10 +502,10 @@ setTimeout(()=&gt;{
 }, 5000);
 </code></pre><h2>事件: <code>positive</code><span><a class="mark" href="#dialogs_positive" id="dialogs_positive">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>确定按钮按下时触发的事件. 例如：</p>
-<pre><code>var d = dialogs.build({
+</div><p>确定按钮按下时触发的事件. 例如:</p>
+<pre><code>let d = dialogs.build({
     title: &quot;标题&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;
@@ -515,10 +514,10 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>negative</code><span><a class="mark" href="#dialogs_negative" id="dialogs_negative">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>取消按钮按下时触发的事件. 例如：</p>
-<pre><code>var d = dialogs.build({
+</div><p>取消按钮按下时触发的事件. 例如:</p>
+<pre><code>let d = dialogs.build({
     title: &quot;标题&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;
@@ -527,10 +526,10 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>neutral</code><span><a class="mark" href="#dialogs_neutral" id="dialogs_neutral">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>中性按钮按下时触发的事件. 例如：</p>
-<pre><code>var d = dialogs.build({
+</div><p>中性按钮按下时触发的事件. 例如:</p>
+<pre><code>let d = dialogs.build({
     title: &quot;标题&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;,
@@ -540,8 +539,8 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>any</code><span><a class="mark" href="#dialogs_any" id="dialogs_any">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
-<li><code>action</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 被点击的按钮, 可能的值为:<ul>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>action</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 被点击的按钮, 可能的值为:<ul>
 <li><code>positive</code> 确定按钮</li>
 <li><code>negative</code> 取消按钮</li>
 <li><code>neutral</code> 中性按钮</li>
@@ -549,7 +548,7 @@ setTimeout(()=&gt;{
 </li>
 </ul>
 </div><p>任意按钮按下时触发的事件. 例如:</p>
-<pre><code>var d = dialogs.build({
+<pre><code>let d = dialogs.build({
     title: &quot;标题&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;,
@@ -563,12 +562,12 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>item_select</code><span><a class="mark" href="#dialogs_item_select" id="dialogs_item_select">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>index</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 被选中的项目索引, 从0开始</li>
-<li><code>item</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">Object</a> } 被选中的项目</li>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>index</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 被选中的项目索引, 从0开始</li>
+<li><strong>item</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } 被选中的项目</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>对话框列表(itemsSelectMode为&quot;select&quot;)的项目被点击选中时触发的事件. 例如：</p>
-<pre><code>var d = dialogs.build({
+</div><p>对话框列表(itemsSelectMode为&quot;select&quot;)的项目被点击选中时触发的事件. 例如:</p>
+<pre><code>let d = dialogs.build({
     title: &quot;请选择&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;,
@@ -579,12 +578,12 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>single_choice</code><span><a class="mark" href="#dialogs_single_choice" id="dialogs_single_choice">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>index</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 被选中的项目索引, 从0开始</li>
-<li><code>item</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">Object</a> } 被选中的项目</li>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>index</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 被选中的项目索引, 从0开始</li>
+<li><strong>item</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } 被选中的项目</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>对话框单选列表(itemsSelectMode为&quot;singleChoice&quot;)的项目被选中并点击确定时触发的事件. 例如：</p>
-<pre><code>var d = dialogs.build({
+</div><p>对话框单选列表(itemsSelectMode为&quot;singleChoice&quot;)的项目被选中并点击确定时触发的事件. 例如:</p>
+<pre><code>let d = dialogs.build({
     title: &quot;请选择&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;,
@@ -595,12 +594,12 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>multi_choice</code><span><a class="mark" href="#dialogs_multi_choice" id="dialogs_multi_choice">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>indices</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 被选中的项目的索引的数组</li>
-<li><code>items</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">Array</a> } 被选中的项目的数组</li>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>indices</strong> { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 被选中的项目的索引的数组</li>
+<li><strong>items</strong> { <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> } 被选中的项目的数组</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>对话框多选列表(itemsSelectMode为&quot;multiChoice&quot;)的项目被选中并点击确定时触发的事件. 例如：</p>
-<pre><code>var d = dialogs.build({
+</div><p>对话框多选列表(itemsSelectMode为&quot;multiChoice&quot;)的项目被选中并点击确定时触发的事件. 例如:</p>
+<pre><code>let d = dialogs.build({
     title: &quot;请选择&quot;,
     positive: &quot;确定&quot;,
     negative: &quot;取消&quot;,
@@ -611,10 +610,10 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>input</code><span><a class="mark" href="#dialogs_input" id="dialogs_input">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>text</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 输入框的内容</li>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>text</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 输入框的内容</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>带有输入框的对话框当点击确定时会触发的事件. 例如：</p>
+</div><p>带有输入框的对话框当点击确定时会触发的事件. 例如:</p>
 <pre><code>dialogs.build({
     title: &quot;请输入&quot;,
     positive: &quot;确定&quot;,
@@ -625,10 +624,10 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>事件: <code>input_change</code><span><a class="mark" href="#dialogs_input_change" id="dialogs_input_change">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>text</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 输入框的内容</li>
-<li><code>dialog</code> { <span class="type">Dialog</span> } 对话框</li>
+<li><strong>text</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 输入框的内容</li>
+<li><strong>dialog</strong> { <span class="type">Dialog</span> } 对话框</li>
 </ul>
-</div><p>对话框的输入框的文本发生变化时会触发的事件. 例如：</p>
+</div><p>对话框的输入框的文本发生变化时会触发的事件. 例如:</p>
 <pre><code>dialogs.build({
     title: &quot;请输入&quot;,
     positive: &quot;确定&quot;,
@@ -639,17 +638,17 @@ setTimeout(()=&gt;{
 }).show();
 </code></pre><h2>dialog.getProgress()<span><a class="mark" href="#dialogs_dialog_getprogress" id="dialogs_dialog_getprogress">#</a></span></h2>
 <div class="signature"><ul>
-<li>返回 { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> }</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
 </ul>
 </div><p>获取当前进度条的进度值, 是一个整数</p>
 <h2>dialog.getMaxProgress()<span><a class="mark" href="#dialogs_dialog_getmaxprogress" id="dialogs_dialog_getmaxprogress">#</a></span></h2>
 <div class="signature"><ul>
-<li>返回 { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> }</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
 </ul>
 </div><p>获取当前进度条的最大进度值, 是一个整数</p>
 <h2>dialog.getActionButton(action)<span><a class="mark" href="#dialogs_dialog_getactionbutton_action" id="dialogs_dialog_getactionbutton_action">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>action</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 动作, 包括:<ul>
+<li><strong>action</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 动作, 包括:<ul>
 <li><code>positive</code></li>
 <li><code>negative</code></li>
 <li><code>neutral</code></li>

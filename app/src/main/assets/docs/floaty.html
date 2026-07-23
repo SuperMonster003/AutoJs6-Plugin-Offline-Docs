@@ -212,22 +212,21 @@
         <div id="apicontent">
             <h1>悬浮窗 (Floaty)<span><a class="mark" href="#floaty_floaty" id="floaty_floaty">#</a></span></h1>
 <hr>
-<p style="font: italic 1em sans-serif; color: #78909C">此章节待补充或完善...</p>
-<p style="font: italic 1em sans-serif; color: #78909C">Marked by SuperMonster003 on Oct 22, 2022.</p>
-
-<hr>
-<p>floaty模块提供了悬浮窗的相关函数, 可以在屏幕上显示自定义悬浮窗, 控制悬浮窗大小、位置等.</p>
-<p>悬浮窗在脚本停止运行时会自动关闭, 因此, 要保持悬浮窗不被关闭, 可以用一个空的setInterval来实现, 例如：</p>
+<aside class="doc-status doc-status--incomplete" data-marked-by="SuperMonster003" data-marked-on="2022-10-22">
+<p><strong>文档状态:</strong> 此章节仍在补充或完善中.</p>
+</aside>
+<p>floaty模块提供了悬浮窗的相关函数, 可以在屏幕上显示自定义悬浮窗, 控制悬浮窗大小, 位置等.</p>
+<p>悬浮窗在脚本停止运行时会自动关闭, 因此, 要保持悬浮窗不被关闭, 可以用一个空的setInterval来实现, 例如:</p>
 <pre><code>setInterval(()=&gt;{}, 1000);
 </code></pre><h2>floaty.window(layout)<span><a class="mark" href="#floaty_floaty_window_layout" id="floaty_floaty_window_layout">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>layout</code> { <span class="type">xml</span> } | { <span class="type">View</span> } 悬浮窗界面的XML或者View</li>
+<li><strong>layout</strong> { <span class="type">xml</span> } | { <span class="type">View</span> } 悬浮窗界面的XML或者View</li>
 </ul>
 </div><p>指定悬浮窗的布局, 创建并<strong>显示</strong>一个悬浮窗, 返回一个<code>FloatyWindow</code>对象.</p>
-<p>该悬浮窗自带关闭、调整大小、调整位置按键, 可根据需要调用<code>setAdjustEnabled()</code>函数来显示或隐藏.</p>
+<p>该悬浮窗自带关闭, 调整大小, 调整位置按键, 可根据需要调用<code>setAdjustEnabled()</code>函数来显示或隐藏.</p>
 <p>其中layout参数可以是xml布局或者一个View, 更多信息参见ui模块的说明.</p>
-<p>例子：</p>
-<pre><code>var w = floaty.window(
+<p>例子:</p>
+<pre><code>let w = floaty.window(
     &lt;frame gravity=&quot;center&quot;&gt;
         &lt;text id=&quot;text&quot;&gt;悬浮文字&lt;/text&gt;
     &lt;/frame&gt;
@@ -243,12 +242,12 @@ setTimeout(()=&gt;{
 </code></pre><p>有关返回的<code>FloatyWindow</code>对象的说明, 参见下面的<code>FloatyWindow</code>章节.</p>
 <h2>floaty.rawWindow(layout)<span><a class="mark" href="#floaty_floaty_rawwindow_layout" id="floaty_floaty_rawwindow_layout">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>layout</code> { <span class="type">xml</span> } | { <span class="type">View</span> } 悬浮窗界面的XML或者View</li>
+<li><strong>layout</strong> { <span class="type">xml</span> } | { <span class="type">View</span> } 悬浮窗界面的XML或者View</li>
 </ul>
 </div><p>指定悬浮窗的布局, 创建并<strong>显示</strong>一个原始悬浮窗, 返回一个<code>FloatyRawWindow</code>对象.</p>
-<p>与<code>floaty.window()</code>函数不同的是, 该悬浮窗不会增加任何额外设施（例如调整大小、位置按钮）, 您可以根据自己需要编写任何布局.</p>
+<p>与<code>floaty.window()</code>函数不同的是, 该悬浮窗不会增加任何额外设施 (例如调整大小, 位置按钮), 您可以根据自己需要编写任何布局.</p>
 <p>而且, 该悬浮窗支持完全全屏, 可以覆盖状态栏, 因此可以做护眼模式之类的应用.</p>
-<pre><code>var w = floaty.rawWindow(
+<pre><code>let w = floaty.rawWindow(
     &lt;frame gravity=&quot;center&quot;&gt;
         &lt;text id=&quot;text&quot;&gt;悬浮文字&lt;/text&gt;
     &lt;/frame&gt;
@@ -267,14 +266,14 @@ setTimeout(()=&gt;{
 <p>悬浮窗对象, 可通过<code>FloatyWindow.{id}</code>获取悬浮窗界面上的元素. 例如, 悬浮窗window上一个控件的id为aaa, 那么<code>window.aaa</code>即可获取到该控件, 类似于ui.</p>
 <h2>window.setAdjustEnabled(enabled)<span><a class="mark" href="#floaty_window_setadjustenabled_enabled" id="floaty_window_setadjustenabled_enabled">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>enabled</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 是否启用悬浮窗调整(大小、位置)</li>
+<li><strong>enabled</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 是否启用悬浮窗调整(大小, 位置)</li>
 </ul>
-</div><p>如果enabled为true, 则在悬浮窗左上角、右上角显示可供位置、大小调整的标示, 就像控制台一样；
+</div><p>如果enabled为true, 则在悬浮窗左上角, 右上角显示可供位置, 大小调整的标示, 就像控制台一样;
 如果enabled为false, 则隐藏上述标示.</p>
 <h2>window.setPosition(x, y)<span><a class="mark" href="#floaty_window_setposition_x_y" id="floaty_window_setposition_x_y">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>x</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } x</li>
-<li><code>x</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } y</li>
+<li><strong>x</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } x</li>
+<li><strong>x</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } y</li>
 </ul>
 </div><p>设置悬浮窗位置.</p>
 <h2>window.getX()<span><a class="mark" href="#floaty_window_getx" id="floaty_window_getx">#</a></span></h2>
@@ -283,8 +282,8 @@ setTimeout(()=&gt;{
 <p>返回悬浮窗位置的Y坐标.</p>
 <h2>window.setSize(width, height)<span><a class="mark" href="#floaty_window_setsize_width_height" id="floaty_window_setsize_width_height">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>width</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 宽度</li>
-<li><code>height</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 高度</li>
+<li><strong>width</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 宽度</li>
+<li><strong>height</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 高度</li>
 </ul>
 </div><p>设置悬浮窗宽高.</p>
 <h2>window.getWidth()<span><a class="mark" href="#floaty_window_getwidth" id="floaty_window_getwidth">#</a></span></h2>
@@ -300,11 +299,11 @@ setTimeout(()=&gt;{
 <p>原始悬浮窗对象, 可通过<code>window.{id}</code>获取悬浮窗界面上的元素. 例如, 悬浮窗window上一个控件的id为aaa, 那么<code>window.aaa</code>即可获取到该控件, 类似于ui.</p>
 <h2>window.setTouchable(touchable)<span><a class="mark" href="#floaty_window_settouchable_touchable" id="floaty_window_settouchable_touchable">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>touchable</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">Boolean</a> } 是否可触摸</li>
+<li><strong>touchable</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">Boolean</a></span> } 是否可触摸</li>
 </ul>
-</div><p>设置悬浮窗是否可触摸, 如果为true, 则悬浮窗将接收到触摸、点击等事件并且无法继续传递到悬浮窗下面；如果为false, 悬浮窗上的触摸、点击等事件将被直接传递到悬浮窗下面. 处于安全考虑, 被悬浮窗接收的触摸事情无法再继续传递到下层.</p>
+</div><p>设置悬浮窗是否可触摸, 如果为true, 则悬浮窗将接收到触摸, 点击等事件并且无法继续传递到悬浮窗下面; 如果为false, 悬浮窗上的触摸, 点击等事件将被直接传递到悬浮窗下面. 处于安全考虑, 被悬浮窗接收的触摸事情无法再继续传递到下层.</p>
 <p>可以用此特性来制作护眼模式脚本.</p>
-<pre><code>var w = floaty.rawWindow(
+<pre><code>let w = floaty.rawWindow(
     &lt;frame gravity=&quot;center&quot; bg=&quot;#44ffcc00&quot;/&gt;
 );
 
@@ -317,8 +316,8 @@ setTimeout(()=&gt;{
 
 </code></pre><h2>window.setPosition(x, y)<span><a class="mark" href="#floaty_window_setposition_x_y_1" id="floaty_window_setposition_x_y_1">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>x</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } x</li>
-<li><code>x</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } y</li>
+<li><strong>x</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } x</li>
+<li><strong>x</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } y</li>
 </ul>
 </div><p>设置悬浮窗位置.</p>
 <h2>window.getX()<span><a class="mark" href="#floaty_window_getx_1" id="floaty_window_getx_1">#</a></span></h2>
@@ -327,12 +326,12 @@ setTimeout(()=&gt;{
 <p>返回悬浮窗位置的Y坐标.</p>
 <h2>window.setSize(width, height)<span><a class="mark" href="#floaty_window_setsize_width_height_1" id="floaty_window_setsize_width_height_1">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>width</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 宽度</li>
-<li><code>height</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 高度</li>
+<li><strong>width</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 宽度</li>
+<li><strong>height</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 高度</li>
 </ul>
 </div><p>设置悬浮窗宽高.</p>
-<p>特别地, 如果设置为-1, 则为占满全屏；设置为-2则为根据悬浮窗内容大小而定. 例如：</p>
-<pre><code>var w = floaty.rawWindow(
+<p>特别地, 如果设置为-1, 则为占满全屏; 设置为-2则为根据悬浮窗内容大小而定. 例如:</p>
+<pre><code>let w = floaty.rawWindow(
     &lt;frame gravity=&quot;center&quot; bg=&quot;#77ff0000&quot;&gt;
         &lt;text id=&quot;text&quot;&gt;悬浮文字&lt;/text&gt;
     &lt;/frame&gt;

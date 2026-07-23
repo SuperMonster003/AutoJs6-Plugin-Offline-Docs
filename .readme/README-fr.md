@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=161
-totalBytes=6996000
-contentSha256=3cb93aa2a8228a5566c6fec278f0e625886694f6fc9b57f8a36224d8f030ecf8
+totalBytes=6973820
+contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
 sourceRepository=SuperMonster003/AutoJs6
 sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
 sourcePath=app/src/main/assets-app/docs
@@ -118,9 +118,10 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v1.0.1
 
-###### 2026/07/23
+###### 2026/07/24
 
 * `Amélioration` Remplacement de la base fixe de l'empreinte du contenu par des métadonnées de contenu et un inventaire générés automatiquement à partir des ressources de documentation actuelles, permettant leur mise à jour directe
+* `Amélioration` Harmonisation de la documentation intégrée avec le style de référence de l'API AutoJs6 et normalisation du nom actuel du produit, des déclarations de variables JavaScript, des liens de types locaux, des avis de sections à compléter et de la ponctuation ASCII
 
 # v1.0.0
 
@@ -154,6 +155,7 @@ Chaque APK contient un résumé des attributions et les textes complets Apache-2
 ```text
 .readme/lang_*.json
 .changelog/lang_*.json
+.python/normalize_offline_docs.py
 .python/generate_markdown.py
 app/src/main/res/values-*/strings.xml
 app/src/main/res/raw-*/plugin_instruction.md

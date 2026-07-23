@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=161
-totalBytes=6996000
-contentSha256=3cb93aa2a8228a5566c6fec278f0e625886694f6fc9b57f8a36224d8f030ecf8
+totalBytes=6973820
+contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
 sourceRepository=SuperMonster003/AutoJs6
 sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
 sourcePath=app/src/main/assets-app/docs
@@ -118,9 +118,10 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v1.0.1
 
-###### 2026/07/23
+###### 2026/07/24
 
 * `개선` 고정 콘텐츠 지문 기준을 현재 문서 자산에서 자동 생성되는 콘텐츠 메타데이터와 인벤토리로 대체하여 자산을 직접 업데이트할 수 있도록 변경
+* `개선` 내장 문서를 AutoJs6 API 참조 형식으로 통일하고, 현재 제품명, JavaScript 변수 선언, 로컬 타입 링크, 미완성 섹션 안내 및 ASCII 문장 부호를 표준화
 
 # v1.0.0
 
@@ -154,6 +155,7 @@ AutoJs6-Documentation에서 가져온 문서는 Apache-2.0입니다. Node.js 문
 ```text
 .readme/lang_*.json
 .changelog/lang_*.json
+.python/normalize_offline_docs.py
 .python/generate_markdown.py
 app/src/main/res/values-*/strings.xml
 app/src/main/res/raw-*/plugin_instruction.md

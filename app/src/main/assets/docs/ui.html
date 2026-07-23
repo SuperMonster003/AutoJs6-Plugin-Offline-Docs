@@ -310,21 +310,20 @@
         <div id="apicontent">
             <h1>用户界面 (UI)<span><a class="mark" href="#ui_ui" id="ui_ui">#</a></span></h1>
 <hr>
-<p style="font: italic 1em sans-serif; color: #78909C">此章节待补充或完善...</p>
-<p style="font: italic 1em sans-serif; color: #78909C">Marked by SuperMonster003 on Oct 22, 2022.</p>
-
-<hr>
+<aside class="doc-status doc-status--incomplete" data-marked-by="SuperMonster003" data-marked-on="2022-10-22">
+<p><strong>文档状态:</strong> 此章节仍在补充或完善中.</p>
+</aside>
 <p>ui模块提供了编写用户界面的支持.</p>
-<pre><code>给Android开发者或者高阶用户的提醒, Auto.js的UI系统来自于Android, 所有属性和方法都能在Android源码中找到. 如果某些代码或属性没有出现在Auto.js的文档中, 可以参考Android的文档.
+<pre><code>给Android开发者或者高阶用户的提醒, AutoJs6的UI系统来自于Android, 所有属性和方法都能在Android源码中找到. 如果某些代码或属性没有出现在AutoJs6的文档中, 可以参考Android的文档.
 View: https://developer.android.google.cn/reference/android/view/View?hl=cn
 Widget: https://developer.android.google.cn/reference/android/widget/package-summary?hl=cn
 </code></pre><p>带有ui的脚本的的最前面必须使用<code>&quot;ui&quot;;</code>指定ui模式, 否则脚本将不会以ui模式运行. 正确示范:s</p>
 <pre><code>&quot;ui&quot;;
 
 //脚本的其他代码
-</code></pre><p>字符串&quot;ui&quot;的前面可以有注释、空行和空格<strong>[v4.1.0新增]</strong>, 但是不能有其他代码.</p>
-<p>界面是由视图(View)组成的. View分成两种, 控件(Widget)和布局(Layout). 控件(Widget)用来具体显示文字、图片、网页等, 比如文本控件(text)用来显示文字, 按钮控件(button)则可以显示一个按钮并提供点击效果, 图片控件(img)则用来显示来自网络或者文件的图片, 除此之外还有输入框控件(input)、进度条控件(progressbar)、单选复选框控件(checkbox)等；布局(Layout)则是装着一个或多个控件的&quot;容器&quot;, 用于控制在他里面的控件的位置, 比如垂直布局(vertical)会把他里面的控件从上往下依次显示(即纵向排列), 水平布局(horizontal)则会把他里面的控件从左往右依次显示(即横向排列), 以及帧布局(frame), 他会把他里面的控件直接在左上角显示, 如果有多个控件, 后面的控件会重叠在前面的控件上.</p>
-<p>我们使用xml来编写界面, 并通过<code>ui.layout()</code>函数指定界面的布局xml. 举个例子：</p>
+</code></pre><p>字符串&quot;ui&quot;的前面可以有注释, 空行和空格<strong>[v4.1.0新增]</strong>, 但是不能有其他代码.</p>
+<p>界面是由视图(View)组成的. View分成两种, 控件(Widget)和布局(Layout). 控件(Widget)用来具体显示文字, 图片, 网页等, 比如文本控件(text)用来显示文字, 按钮控件(button)则可以显示一个按钮并提供点击效果, 图片控件(img)则用来显示来自网络或者文件的图片, 除此之外还有输入框控件(input), 进度条控件(progressbar), 单选复选框控件(checkbox)等; 布局(Layout)则是装着一个或多个控件的&quot;容器&quot;, 用于控制在他里面的控件的位置, 比如垂直布局(vertical)会把他里面的控件从上往下依次显示(即纵向排列), 水平布局(horizontal)则会把他里面的控件从左往右依次显示(即横向排列), 以及帧布局(frame), 他会把他里面的控件直接在左上角显示, 如果有多个控件, 后面的控件会重叠在前面的控件上.</p>
+<p>我们使用xml来编写界面, 并通过<code>ui.layout()</code>函数指定界面的布局xml. 举个例子:</p>
 <pre><code>&quot;ui&quot;;
 $ui.layout(
     &lt;vertical&gt;
@@ -333,9 +332,9 @@ $ui.layout(
     &lt;/vertical&gt;
 );
 </code></pre><p>在这个例子中, 第3~6行的部分就是xml, 指定了界面的具体内容. 代码的第3行的标签<code>&lt;vertical&gt; ... &lt;/vertical&gt;</code>表示垂直布局, 布局的标签通常以<code>&lt;...&gt;</code>开始, 以<code>&lt;/...&gt;</code>结束, 两个标签之间的内容就是布局里面的内容, 例如<code>&lt;frame&gt; ... &lt;/frame&gt;</code>. 在这个例子中第4, 5行的内容就是垂直布局(vertical)里面的内容. 代码的第4行是一个按钮控件(button), 控件的标签通常以<code>&lt;...</code>开始, 以<code>/&gt;</code>结束, 他们之间是控件的具体属性, 例如<code>&lt;text ... /&gt;</code>. 在这个例子中<code>text=&quot;第一个按钮&quot;</code>的部分就是按钮控件(button)的属性, 这个属性指定了这个按钮控件的文本内容(text)为&quot;第一个按钮&quot;.</p>
-<p>代码的第5行和第4行一样, 也是一个按钮控件, 只不过他的文本内容为&quot;第二个按钮&quot;. 这两个控件在垂直布局中, 因此会纵向排列, 效果如图：</p>
+<p>代码的第5行和第4行一样, 也是一个按钮控件, 只不过他的文本内容为&quot;第二个按钮&quot;. 这两个控件在垂直布局中, 因此会纵向排列, 效果如图:</p>
 <p><img src="images/ex1.png" alt="ex1"></p>
-<p>如果我们把这个例子的垂直布局(vertical)改成水平布局(horizontal), 也即：</p>
+<p>如果我们把这个例子的垂直布局(vertical)改成水平布局(horizontal), 也即:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;horizontal&gt;
@@ -343,9 +342,9 @@ ui.layout(
         &lt;button text=&quot;第二个按钮&quot;/&gt;
     &lt;/horizontal&gt;
 );
-</code></pre><p>则这两个按钮会横向排列, 效果如图：</p>
+</code></pre><p>则这两个按钮会横向排列, 效果如图:</p>
 <p><img src="images/ex1-horizontal.png" alt="ex1-horizontal"></p>
-<p>一个控件可以指定多个属性(甚至可以不指定任何属性), 用空格隔开即可；布局同样也可以指定属性, 例如:</p>
+<p>一个控件可以指定多个属性(甚至可以不指定任何属性), 用空格隔开即可; 布局同样也可以指定属性, 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;vertical bg=&quot;#ff0000&quot;&gt;
@@ -353,19 +352,19 @@ ui.layout(
         &lt;button text=&quot;第二个按钮&quot;/&gt;
     &lt;/vertical&gt;
 );
-</code></pre><p>第三行<code>bg=&quot;#ff0000&quot;</code>指定了垂直布局的背景色(bg)为&quot;#ff0000&quot;, 这是一个RGB颜色, 表示红色(有关RGB的相关知识参见<a href="http://tool.oschina.net/commons?type=3">RGB颜色对照表</a>). 第四行的<code>textSize=&quot;20sp&quot;</code>则指定了按钮控件的字体大小(textSize)为&quot;20sp&quot;, sp是一个字体单位, 暂时不用深入理会. 上述代码的效果如图：</p>
+</code></pre><p>第三行<code>bg=&quot;#ff0000&quot;</code>指定了垂直布局的背景色(bg)为&quot;#ff0000&quot;, 这是一个RGB颜色, 表示红色(有关RGB的相关知识参见<a href="http://tool.oschina.net/commons?type=3">RGB颜色对照表</a>). 第四行的<code>textSize=&quot;20sp&quot;</code>则指定了按钮控件的字体大小(textSize)为&quot;20sp&quot;, sp是一个字体单位, 暂时不用深入理会. 上述代码的效果如图:</p>
 <p><img src="images/ex1-properties.png" alt="ex-properties"></p>
-<p>一个界面便由一些布局和控件组成. 为了便于文档阅读, 我们再说明一下以下术语：</p>
+<p>一个界面便由一些布局和控件组成. 为了便于文档阅读, 我们再说明一下以下术语:</p>
 <ul>
 <li>子视图, 子控件: 布局里面的控件是这个布局的子控件/子视图. 实际上布局里面不仅仅只能有控件, 还可以是嵌套的布局. 因此用子视图(Child View)更准确一些. 在上面的例子中, 按钮便是垂直布局的子控件.</li>
-<li>父视图, 父布局：直接包含一个控件的布局是这个控件的父布局/父视图(Parent View). 在上面的例子中, 垂直布局便是按钮的父布局.</li>
+<li>父视图, 父布局: 直接包含一个控件的布局是这个控件的父布局/父视图(Parent View). 在上面的例子中, 垂直布局便是按钮的父布局.</li>
 </ul>
 <h1>视图: View<span><a class="mark" href="#ui_view" id="ui_view">#</a></span></h1>
 <p>控件和布局都属于视图(View). 在这个章节中将介绍所有控件和布局的共有的属性和函数. 例如属性背景, 宽高等(所有控件和布局都能设置背景和宽高), 函数<code>click()</code>设置视图(View)被点击时执行的动作.</p>
 <h2>attr(name, value)<span><a class="mark" href="#ui_attr_name_value" id="ui_attr_name_value">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>name</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 属性名称</li>
-<li><code>value</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 属性的值</li>
+<li><strong>name</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 属性名称</li>
+<li><strong>value</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 属性的值</li>
 </ul>
 </div><p>设置属性的值. 属性指定是View在xml中的属性. 例如可以通过语句<code>attr(&quot;text&quot;, &quot;文本&quot;)</code>来设置文本控件的文本值.</p>
 <pre><code class="lang-javascript">&quot;ui&quot;;
@@ -379,18 +378,18 @@ $ui.layout(
 // 5秒后执行
 $ui.post(() =&gt; {
     // 修改文本
-    $ui.example.attr(&quot;text&quot;, &quot;Hello, Auto.js UI&quot;);
+    $ui.example.attr(&quot;text&quot;, &quot;Hello, AutoJs6 UI&quot;);
     // 修改背景
     $ui.example.attr(&quot;bg&quot;, &quot;#ff00ff&quot;);
     // 修改高度
     $ui.example.attr(&quot;h&quot;, &quot;500dp&quot;);
 }, 5000);
 </code></pre>
-<p><strong>注意：</strong>并不是所有属性都能在js代码设置, 有一些属性只能在布局创建时设置, 例如style属性；还有一些属性虽然能在代码中设置, 但是还没支持；对于这些情况, 在Auto.js Pro 8.1.0+会抛出异常, 其他版本则不会抛出异常.</p>
+<p><strong>注意:</strong>并不是所有属性都能在js代码设置, 有一些属性只能在布局创建时设置, 例如style属性; 还有一些属性虽然能在代码中设置, 但是还没支持; 对于这些情况, 在Auto.js Pro 8.1.0+会抛出异常, 其他版本则不会抛出异常.</p>
 <h2>attr(name)<span><a class="mark" href="#ui_attr_name" id="ui_attr_name">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>name</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 属性名称</li>
-<li>返回 { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> }</li>
+<li><strong>name</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 属性名称</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
 </div><p>获取属性的值.</p>
 <pre><code class="lang-javascript">&quot;ui&quot;;
@@ -418,7 +417,7 @@ function plusOne() {
 
 </code></pre>
 <h2>w<span><a class="mark" href="#ui_w" id="ui_w">#</a></span></h2>
-<p>View的宽度, 是属性<code>width</code>的缩写形式. 可以设置的值为<code>*</code>, <code>auto</code>和具体数值. 其中<code>*</code>表示宽度<strong>尽量</strong>填满父布局, 而<code>auto</code>表示宽度将根据View的内容自动调整(自适应宽度). 例如：</p>
+<p>View的宽度, 是属性<code>width</code>的缩写形式. 可以设置的值为<code>*</code>, <code>auto</code>和具体数值. 其中<code>*</code>表示宽度<strong>尽量</strong>填满父布局, 而<code>auto</code>表示宽度将根据View的内容自动调整(自适应宽度). 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;horizontal&gt;
@@ -426,7 +425,7 @@ ui.layout(
         &lt;button w=&quot;*&quot; text=&quot;填满父布局&quot;/&gt;
     &lt;/horizontal&gt;
 );
-</code></pre><p>在这个例子中, 第一个按钮为自适应宽度, 第二个按钮为填满父布局, 显示效果为：</p>
+</code></pre><p>在这个例子中, 第一个按钮为自适应宽度, 第二个按钮为填满父布局, 显示效果为:</p>
 <p><img src="images/ex-w.png" alt="ex-w"></p>
 <p>如果不设置该属性, 则不同的控件和布局有不同的默认宽度, 大多数为<code>auto</code>.</p>
 <p>宽度属性也可以指定一个具体数值. 例如<code>w=&quot;20&quot;</code>, <code>w=&quot;20px&quot;</code>等. 不加单位的情况下默认单位为dp, 其他单位包括px(像素), mm(毫米), in(英寸). 有关尺寸单位的更多内容, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
@@ -442,7 +441,7 @@ ui.layout(
 <p>如果不设置该属性, 则不同的控件和布局有不同的默认高度, 大多数为<code>auto</code>.</p>
 <p>宽度属性也可以指定一个具体数值. 例如<code>h=&quot;20&quot;</code>, <code>h=&quot;20px&quot;</code>等. 不加单位的情况下默认单位为dp, 其他单位包括px(像素), mm(毫米), in(英寸). 有关尺寸单位的更多内容, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
 <h2>id<span><a class="mark" href="#ui_id" id="ui_id">#</a></span></h2>
-<p>View的id, 用来区分一个界面下的不同控件和布局, 一个界面的id在同一个界面下通常是唯一的, 也就是一般不存在两个View有相同的id. id属性也是连接xml布局和JavaScript代码的桥梁, 在代码中可以通过一个View的id来获取到这个View, 并对他进行操作(设置点击动作、设置属性、获取属性等). 例如：</p>
+<p>View的id, 用来区分一个界面下的不同控件和布局, 一个界面的id在同一个界面下通常是唯一的, 也就是一般不存在两个View有相同的id. id属性也是连接xml布局和JavaScript代码的桥梁, 在代码中可以通过一个View的id来获取到这个View, 并对他进行操作(设置点击动作, 设置属性, 获取属性等). 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;frame&gt;
@@ -464,7 +463,7 @@ toast(ui.ok.getText());
 <li><code>center_vertical</code> 垂直居中</li>
 <li><code>center_horizontal</code> 水平居中</li>
 </ul>
-<p>例如对于一个按钮控件, <code>gravity=&quot;right&quot;</code>会使其中的文本内容靠右显示. 例如：</p>
+<p>例如对于一个按钮控件, <code>gravity=&quot;right&quot;</code>会使其中的文本内容靠右显示. 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;frame&gt;
@@ -483,7 +482,7 @@ ui.layout(
         &lt;button layout_gravity=&quot;right|bottom&quot; w=&quot;auto&quot; h=&quot;auto&quot; text=&quot;右下角的按钮&quot;/&gt;
     &lt;/frame&gt;
 );
-</code></pre><p>在这个例子中, 我们让帧布局(frame)的大小占满整个屏幕, 通过给第一个按钮设置属性<code>layout_gravity=&quot;center&quot;</code>来使得按钮在帧布局中居中, 通过给第二个按钮设置属性<code>layout_gravity=&quot;right|bottom&quot;</code>使得他在帧布局中位于右下角. 效果如图：</p>
+</code></pre><p>在这个例子中, 我们让帧布局(frame)的大小占满整个屏幕, 通过给第一个按钮设置属性<code>layout_gravity=&quot;center&quot;</code>来使得按钮在帧布局中居中, 通过给第二个按钮设置属性<code>layout_gravity=&quot;right|bottom&quot;</code>使得他在帧布局中位于右下角. 效果如图:</p>
 <p><img src="images/ex-layout-gravity.png" alt="ex-layout-gravity"></p>
 <p>要注意的是, layout_gravity的属性不一定总是生效的, 具体取决于布局的类别. 例如不能让水平布局中的第一个子控件靠底部显示(否则和水平布局本身相违背).</p>
 <h2>margin<span><a class="mark" href="#ui_margin" id="ui_margin">#</a></span></h2>
@@ -500,7 +499,7 @@ ui.layout(
 <li><code>margin=&quot;marginLeft marginTop marginRight marginBottom&quot;</code> 分别指定各个外边距. 例如<code>margin=&quot;10 20 30 40&quot;</code>表示左边距为10dp, 上边距为20dp, 右边距为30dp, 下边距为40dp</li>
 <li><code>margin=&quot;marginHorizontal marginVertical&quot;</code> 指定水平外边距和垂直外边距. 例如<code>margin=&quot;10 20&quot;</code>表示左右边距为10dp, 上下边距为20dp.</li>
 </ul>
-<p>用一个例子来具体理解外边距的含义：</p>
+<p>用一个例子来具体理解外边距的含义:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;horizontal&gt;
@@ -522,7 +521,7 @@ ui.layout(
         &lt;button text=&quot;普通的按钮&quot;/&gt;
     &lt;/horizontal&gt;
 );
-</code></pre><p>第一个按钮指定了左外边距为50dp, 则他和他的父布局水平布局(horizontal)的左边的间距为50dp, 效果如图：</p>
+</code></pre><p>第一个按钮指定了左外边距为50dp, 则他和他的父布局水平布局(horizontal)的左边的间距为50dp, 效果如图:</p>
 <p><img src="images/ex-marginLeft.png" alt="ex-marginLeft"></p>
 <h2>marginRight<span><a class="mark" href="#ui_marginright" id="ui_marginright">#</a></span></h2>
 <p>View的右外边距. 如果该属性和margin属性指定的值冲突, 则在后面的属性生效, 前面的属性无效.</p>
@@ -532,20 +531,20 @@ ui.layout(
 <p>View的下外边距. 如果该属性和margin属性指定的值冲突, 则在后面的属性生效, 前面的属性无效.</p>
 <h2>padding<span><a class="mark" href="#ui_padding" id="ui_padding">#</a></span></h2>
 <p>View和他的自身内容的间距, 也就是内边距. 注意和margin属性区分开来, margin属性是View之间的间距, 而padding是View和他自身内容的间距. 举个例子, 一个文本控件的padding也即文本控件的边缘和他的文本内容的间距, paddingLeft即文本控件的左边和他的文本内容的间距.</p>
-<p>paddding属性的值同样有三种格式：</p>
+<p>paddding属性的值同样有三种格式:</p>
 <ul>
 <li><code>padding=&quot;paddingAll&quot;</code> 指定各个内边距都是该值. 例如<code>padding=&quot;10&quot;</code>表示左右上下内边距都是10dp.</li>
 <li><code>padding=&quot;paddingLeft paddingTop paddingRight paddingBottom&quot;</code> 分别指定各个内边距. 例如<code>padding=&quot;10 20 30 40&quot;</code>表示左内边距为10dp, 上内边距为20dp, 右内边距为30dp, 下内边距为40dp</li>
 <li><code>padding=&quot;paddingHorizontal paddingVertical&quot;</code> 指定水平内边距和垂直内边距. 例如<code>padding=&quot;10 20&quot;</code>表示左右内边距为10dp, 上下内边距为20dp.</li>
 </ul>
-<p>用一个例子来具体理解内边距的含义：</p>
+<p>用一个例子来具体理解内边距的含义:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;frame w=&quot;*&quot; h=&quot;*&quot; gravity=&quot;center&quot;&gt;
         &lt;text padding=&quot;10 20 30 40&quot; bg=&quot;#ff0000&quot; w=&quot;auto&quot; h=&quot;auto&quot; text=&quot;HelloWorld&quot;/&gt;
     &lt;/frame&gt;
 );
-</code></pre><p>这个例子是一个居中的按钮(通过父布局的<code>gravity=&quot;center&quot;</code>属性设置), 背景色为红色(<code>bg=&quot;#ff0000&quot;</code>), 文本内容为&quot;HelloWorld&quot;, 左边距为10dp, 上边距为20dp, 下边距为30dp, 右边距为40dp, 其显示效果如图：</p>
+</code></pre><p>这个例子是一个居中的按钮(通过父布局的<code>gravity=&quot;center&quot;</code>属性设置), 背景色为红色(<code>bg=&quot;#ff0000&quot;</code>), 文本内容为&quot;HelloWorld&quot;, 左边距为10dp, 上边距为20dp, 下边距为30dp, 右边距为40dp, 其显示效果如图:</p>
 <p><img src="images/ex-padding.png" alt="ex-padding"></p>
 <h2>paddingLeft<span><a class="mark" href="#ui_paddingleft" id="ui_paddingleft">#</a></span></h2>
 <p>View的左内边距. 如果该属性和padding属性指定的值冲突, 则在后面的属性生效, 前面的属性无效.</p>
@@ -564,14 +563,14 @@ ui.layout(
 <p>View的前景. 前景即在一个View的内容上显示的内容, 可能会覆盖掉View本身的内容. 其值和属性bg的值类似.</p>
 <h2>minHeight<span><a class="mark" href="#ui_minheight" id="ui_minheight">#</a></span></h2>
 <p>View的最小高度. 该值不总是生效的, 取决于其父布局是否有足够的空间容纳.</p>
-<p>例：<code>&lt;text height=&quot;auto&quot; minHeight=&quot;50&quot;/&gt;</code></p>
+<p>例: <code>&lt;text height=&quot;auto&quot; minHeight=&quot;50&quot;/&gt;</code></p>
 <p>有关该属性的单位, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
 <h2>minWidth<span><a class="mark" href="#ui_minwidth" id="ui_minwidth">#</a></span></h2>
 <p>View的最小宽度. 该值不总是生效的, 取决于其父布局是否有足够的空间容纳.</p>
-<p>例：<code>&lt;input width=&quot;auto&quot; minWidth=&quot;50&quot;/&gt;</code></p>
+<p>例: <code>&lt;input width=&quot;auto&quot; minWidth=&quot;50&quot;/&gt;</code></p>
 <p>有关该属性的单位, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
 <h2>visibility<span><a class="mark" href="#ui_visibility" id="ui_visibility">#</a></span></h2>
-<p>View的可见性, 该属性可以决定View是否显示出来. 其值可以为：</p>
+<p>View的可见性, 该属性可以决定View是否显示出来. 其值可以为:</p>
 <ul>
 <li><code>gone</code> 不可见.</li>
 <li><code>visible</code> 可见. 默认情况下View都是可见的.</li>
@@ -581,11 +580,11 @@ ui.layout(
 <p>View的旋转角度. 通过该属性可以让这个View顺时针旋转一定的角度. 例如<code>rotation=&quot;90&quot;</code>可以让他顺时针旋转90度.</p>
 <p>如果要设置旋转中心, 可以通过<code>transformPivotX</code>, <code>transformPivotY</code>属性设置. 默认的旋转中心为View的中心.</p>
 <h2>transformPivotX<span><a class="mark" href="#ui_transformpivotx" id="ui_transformpivotx">#</a></span></h2>
-<p>View的变换中心坐标x. 用于View的旋转、放缩等变换的中心坐标. 例如<code>transformPivotX=&quot;10&quot;</code>.</p>
+<p>View的变换中心坐标x. 用于View的旋转, 放缩等变换的中心坐标. 例如<code>transformPivotX=&quot;10&quot;</code>.</p>
 <p>该坐标的坐标系以View的左上角为原点. 也就是x值为变换中心到View的左边的距离.</p>
 <p>有关该属性的单位, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
 <h2>transformPivotY<span><a class="mark" href="#ui_transformpivoty" id="ui_transformpivoty">#</a></span></h2>
-<p>View的变换中心坐标y. 用于View的旋转、放缩等变换的中心坐标. 例如<code>transformPivotY=&quot;10&quot;</code>.</p>
+<p>View的变换中心坐标y. 用于View的旋转, 放缩等变换的中心坐标. 例如<code>transformPivotY=&quot;10&quot;</code>.</p>
 <p>该坐标的坐标系以View的左上角为原点. 也就是y值为变换中心到View的上边的距离.</p>
 <p>有关该属性的单位, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
 <h2>style<span><a class="mark" href="#ui_style" id="ui_style">#</a></span></h2>
@@ -598,21 +597,21 @@ ui.layout(
 <p>设置文本的内容. 例如<code>text=&quot;一段文本&quot;</code>.</p>
 <h2>textColor<span><a class="mark" href="#ui_textcolor" id="ui_textcolor">#</a></span></h2>
 <p>设置字体的颜色, 可以是RGB格式的颜色(例如#ff00ff), 或者颜色名称(例如red, green等), 具体参见<a href="#ui_ui_颜色">颜色</a>.</p>
-<p>示例, 红色字体：<code>&lt;text text=&quot;红色字体&quot; textColor=&quot;red&quot;/&gt;</code></p>
+<p>示例, 红色字体: <code>&lt;text text=&quot;红色字体&quot; textColor=&quot;red&quot;/&gt;</code></p>
 <h2>textSize<span><a class="mark" href="#ui_textsize" id="ui_textsize">#</a></span></h2>
 <p>设置字体的大小, 单位一般是sp. 按照Material Design的规范, 正文字体大小为14sp, 标题字体大小为18sp, 次标题为16sp.</p>
 <p>示例, 超大字体: <code>&lt;text text=&quot;超大字体&quot; textSize=&quot;40sp&quot;/&gt;</code></p>
 <h2>textStyle<span><a class="mark" href="#ui_textstyle" id="ui_textstyle">#</a></span></h2>
-<p>设置字体的样式, 比如斜体、粗体等. 可选的值为：</p>
+<p>设置字体的样式, 比如斜体, 粗体等. 可选的值为:</p>
 <ul>
 <li>bold 加粗字体</li>
 <li>italic 斜体</li>
 <li>normal 正常字体</li>
 </ul>
 <p>可以用或(&quot;|&quot;)把他们组合起来, 比如粗斜体为&quot;bold|italic&quot;.</p>
-<p>例如, 粗体：`<text textStyle="bold" textSize="18sp" text="这是粗体"/></p>
+<p>例如, 粗体: `<text textStyle="bold" textSize="18sp" text="这是粗体"/></p>
 <h2>lines<span><a class="mark" href="#ui_lines" id="ui_lines">#</a></span></h2>
-<p>设置文本控件的行数. 即使文本内容没有达到设置的行数, 控件也会留出相应的宽度来显示空白行；如果文本内容超出了设置的行数, 则超出的部分不会显示.</p>
+<p>设置文本控件的行数. 即使文本内容没有达到设置的行数, 控件也会留出相应的宽度来显示空白行; 如果文本内容超出了设置的行数, 则超出的部分不会显示.</p>
 <p>另外在xml中是不能设置多行文本的, 要在代码中设置. 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
@@ -625,7 +624,7 @@ ui.myText.setText(&quot;第一行\n第二行\n第三行\n第四行&quot;);
 </code></pre><h2>maxLines<span><a class="mark" href="#ui_maxlines" id="ui_maxlines">#</a></span></h2>
 <p>设置文本控件的最大行数.</p>
 <h2>typeface<span><a class="mark" href="#ui_typeface" id="ui_typeface">#</a></span></h2>
-<p>设置字体. 可选的值为：</p>
+<p>设置字体. 可选的值为:</p>
 <ul>
 <li><code>normal</code> 正常字体</li>
 <li><code>sans</code> 衬线字体</li>
@@ -634,7 +633,7 @@ ui.myText.setText(&quot;第一行\n第二行\n第三行\n第四行&quot;);
 </ul>
 <p>示例, 等宽字体: <code>&lt;text text=&quot;等宽字体&quot; typeface=&quot;monospace&quot;/&gt;</code></p>
 <h2>ellipsize<span><a class="mark" href="#ui_ellipsize" id="ui_ellipsize">#</a></span></h2>
-<p>设置文本的省略号位置. 文本的省略号会在文本内容超出文本控件时显示. 可选的值为：</p>
+<p>设置文本的省略号位置. 文本的省略号会在文本内容超出文本控件时显示. 可选的值为:</p>
 <ul>
 <li><code>end</code>   在文本末尾显示省略号</li>
 <li><code>marquee</code>   跑马灯效果, 文本将滚动显示</li>
@@ -643,34 +642,34 @@ ui.myText.setText(&quot;第一行\n第二行\n第三行\n第四行&quot;);
 <li><code>start</code>    在文本开头显示省略号</li>
 </ul>
 <h2>ems<span><a class="mark" href="#ui_ems" id="ui_ems">#</a></span></h2>
-<p>当设置该属性后,TextView显示的字符长度（单位是em）,超出的部分将不显示, 或者根据ellipsize属性的设置显示省略号.</p>
+<p>当设置该属性后,TextView显示的字符长度 (单位是em),超出的部分将不显示, 或者根据ellipsize属性的设置显示省略号.</p>
 <p>例如, 限制文本最长为5em: `<text ems="5" ellipsize="end" text="很长很长很长很长很长很长很长的文本"/></p>
 <h2>autoLink<span><a class="mark" href="#ui_autolink" id="ui_autolink">#</a></span></h2>
-<p>控制是否自动找到url和电子邮件地址等链接, 并转换为可点击的链接. 默认值为“none”.</p>
-<p>设置该值可以让文本中的链接、电话等变成可点击状态.</p>
-<p>可选的值为以下的值以其通过或(&quot;|&quot;)的组合：</p>
+<p>控制是否自动找到url和电子邮件地址等链接, 并转换为可点击的链接. 默认值为&quot;none&quot;.</p>
+<p>设置该值可以让文本中的链接, 电话等变成可点击状态.</p>
+<p>可选的值为以下的值以其通过或(&quot;|&quot;)的组合:</p>
 <ul>
-<li><code>all</code>    匹配所有连接、邮件、地址、电话</li>
+<li><code>all</code>    匹配所有连接, 邮件, 地址, 电话</li>
 <li><code>email</code>    匹配电子邮件地址</li>
 <li><code>map</code>    匹配地图地址</li>
 <li><code>none</code>    不匹配 (默认)</li>
 <li><code>phone</code>    匹配电话号码</li>
 <li><code>web</code>    匹配URL地址</li>
 </ul>
-<p>示例：<code>&lt;text autoLink=&quot;web|phone&quot; text=&quot;百度: http://www.baidu.com 电信电话: 10000&quot;/&gt;</code></p>
+<p>示例: <code>&lt;text autoLink=&quot;web|phone&quot; text=&quot;百度: http://www.baidu.com 电信电话: 10000&quot;/&gt;</code></p>
 <h1>按钮控件: button<span><a class="mark" href="#ui_button" id="ui_button">#</a></span></h1>
 <p>按钮控件是一个特殊的文本控件, 因此所有文本控件的函数的属性都适用于按钮控件.</p>
-<p>除此之外, 按钮控件有一些内置的样式, 通过<code>style</code>属性设置, 包括：</p>
+<p>除此之外, 按钮控件有一些内置的样式, 通过<code>style</code>属性设置, 包括:</p>
 <ul>
 <li>Widget.AppCompat.Button.Colored 带颜色的按钮</li>
 <li>Widget.AppCompat.Button.Borderless 无边框按钮</li>
 <li>Widget.AppCompat.Button.Borderless.Colored 带颜色的无边框按钮</li>
 </ul>
 <p>这些样式的具体效果参见&quot;示例/界面控件/按钮控件.js&quot;.</p>
-<p>例如：<code>&lt;button style=&quot;Widget.AppCompat.Button.Colored&quot; text=&quot;漂亮的按钮&quot;/&gt;</code></p>
+<p>例如: <code>&lt;button style=&quot;Widget.AppCompat.Button.Colored&quot; text=&quot;漂亮的按钮&quot;/&gt;</code></p>
 <h1>输入框控件: input<span><a class="mark" href="#ui_input" id="ui_input">#</a></span></h1>
 <p>输入框控件也是一个特殊的文本控件, 因此所有文本控件的函数的属性和函数都适用于按钮控件. 输入框控件有自己的属性和函数, 要查看所有这些内容, 阅读<a href="http://www.zhdoc.net/android/reference/android/widget/EditText.html">EditText</a>.</p>
-<p>对于一个输入框控件, 我们可以通过text属性设置他的内容, 通过lines属性指定输入框的行数；在代码中通过<code>getText()</code>函数获取输入的内容. 例如：</p>
+<p>对于一个输入框控件, 我们可以通过text属性设置他的内容, 通过lines属性指定输入框的行数; 在代码中通过<code>getText()</code>函数获取输入的内容. 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;vertical padding=&quot;16&quot;&gt;
@@ -682,16 +681,16 @@ ui.layout(
 //指定确定按钮点击时要执行的动作
 ui.ok.click(function(){
     //通过getText()获取输入的内容
-    var name = ui.name.getText();
+    let name = ui.name.getText();
     toast(name + &quot;您好!&quot;);
 });
-</code></pre><p>效果如图：</p>
+</code></pre><p>效果如图:</p>
 <p><img src="ex-input.png" alt="ex-input"></p>
-<p>除此之外, 输入框控件有另外一些主要属性(虽然这些属性对于文本控件也是可用的但一般只用于输入框控件)：</p>
+<p>除此之外, 输入框控件有另外一些主要属性(虽然这些属性对于文本控件也是可用的但一般只用于输入框控件):</p>
 <h2>hint<span><a class="mark" href="#ui_hint" id="ui_hint">#</a></span></h2>
 <p>输入提示. 这个提示会在输入框为空的时候显示出来. 如图所示:</p>
 <p><img src="images/ex-hint.png" alt="ex-hint"></p>
-<p>上面图片效果的代码为：</p>
+<p>上面图片效果的代码为:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;vertical&gt;
@@ -740,24 +739,24 @@ ui.layout(
 <p>例如, 想指定一个输入框的输入类型为小数数字, 为: <code>&lt;input inputType=&quot;number|numberDecimal&quot;/&gt;</code></p>
 <h2>password<span><a class="mark" href="#ui_password" id="ui_password">#</a></span></h2>
 <p>指定输入框输入框是否为密码输入框. 默认为<code>false</code>.</p>
-<p>例如：<code>&lt;input password=&quot;true&quot;/&gt;</code></p>
+<p>例如: <code>&lt;input password=&quot;true&quot;/&gt;</code></p>
 <h2>numeric<span><a class="mark" href="#ui_numeric" id="ui_numeric">#</a></span></h2>
 <p>指定输入框输入框是否为数字输入框. 默认为<code>false</code>.</p>
-<p>例如：<code>&lt;input numeric=&quot;true&quot;/&gt;</code></p>
+<p>例如: <code>&lt;input numeric=&quot;true&quot;/&gt;</code></p>
 <h2>phoneNumber<span><a class="mark" href="#ui_phonenumber" id="ui_phonenumber">#</a></span></h2>
 <p>指定输入框输入框是否为电话号码输入框. 默认为<code>false</code>.</p>
-<p>例如：<code>&lt;input phoneNumber=&quot;true&quot;/&gt;</code></p>
+<p>例如: <code>&lt;input phoneNumber=&quot;true&quot;/&gt;</code></p>
 <h2>digits<span><a class="mark" href="#ui_digits" id="ui_digits">#</a></span></h2>
 <p>指定输入框可以输入的字符. 例如, 要指定输入框只能输入&quot;1234567890+-&quot;, 为<code>&lt;input digits=&quot;1234567890+-&quot;/&gt;</code>.</p>
 <h2>singleLine<span><a class="mark" href="#ui_singleline" id="ui_singleline">#</a></span></h2>
 <p>指定输入框是否为单行输入框. 默认为<code>false</code>. 您也可以通过<code>lines=&quot;1&quot;</code>来指定单行输入框.</p>
-<p>例如：<code>&lt;input singleLine=&quot;true&quot;/&gt;</code></p>
+<p>例如: <code>&lt;input singleLine=&quot;true&quot;/&gt;</code></p>
 <h1>图片控件: img<span><a class="mark" href="#ui_img" id="ui_img">#</a></span></h1>
-<p>图片控件用于显示来自网络、本地或者内嵌数据的图片, 并可以指定图片以圆角矩形、圆形等显示. 但是不能用于显示gif动态图.</p>
+<p>图片控件用于显示来自网络, 本地或者内嵌数据的图片, 并可以指定图片以圆角矩形, 圆形等显示. 但是不能用于显示gif动态图.</p>
 <p>这里只介绍他的主要方法和属性, 如果要查看他的所有方法和属性, 阅读<a href="http://www.zhdoc.net/android/reference/android/widget/ImageView.html">ImageView</a>.</p>
 <h2>src<span><a class="mark" href="#ui_src" id="ui_src">#</a></span></h2>
 <p>使用一个Uri指定图片的来源. 可以是图片的地址(http://....), 本地路径(file://....)或者base64数据(&quot;data:image/png;base64,...&quot;).</p>
-<p>如果使用图片地址或本地路径, Auto.js会自动使用适当的缓存来储存这些图片, 减少下次加载的时间.</p>
+<p>如果使用图片地址或本地路径, AutoJs6会自动使用适当的缓存来储存这些图片, 减少下次加载的时间.</p>
 <p>例如, 显示百度的logo:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
@@ -766,7 +765,7 @@ ui.layout(
     &lt;/frame&gt;
 );
 </code></pre><p>再例如, 显示文件/sdcard/1.png的图片为 <code>&lt;img src=&quot;file:///sdcard/1.png&quot;/&gt;</code>.
-再例如, 使base64显示一张钱包小图片为：</p>
+再例如, 使base64显示一张钱包小图片为:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;frame&gt;
@@ -777,7 +776,7 @@ ui.layout(
 <p>图片着色, 其值是一个颜色名称或RGB颜色值. 使用该属性会将图片中的非透明区域都涂上同一颜色. 可以用于改变图片的颜色.</p>
 <p>例如, 对于上面的base64的图片: <code>&lt;img w=&quot;40&quot; h=&quot;40&quot; tint=&quot;red&quot; src=&quot;data:image/png;base64,...&quot;/&gt;</code>, 则钱包图标颜色会变成红色.</p>
 <h2>scaleType<span><a class="mark" href="#ui_scaletype" id="ui_scaletype">#</a></span></h2>
-<p>控制图片根据图片控件的宽高放缩时的模式. 可选的值为：</p>
+<p>控制图片根据图片控件的宽高放缩时的模式. 可选的值为:</p>
 <ul>
 <li><code>center</code>    在控件中居中显示图像, 但不执行缩放.</li>
 <li><code>centerCrop</code>    保持图像的长宽比缩放图片, 使图像的尺寸 (宽度和高度) 等于或大于控件的相应尺寸 (不包括内边距padding)并且使图像在控件中居中显示.</li>
@@ -788,10 +787,10 @@ ui.layout(
 <li><code>fitXY</code>    使图片和宽高和控件的宽高完全匹配, 但图片的长宽比可能不能保持一致</li>
 <li><code>matrix</code>    绘制时使用图像矩阵进行缩放. 需要在代码中使用<code>setImageMatrix(Matrix)</code>函数才能生效.</li>
 </ul>
-<p>默认的scaleType为<code>fitCenter</code>；除此之外最常用的是<code>fitXY</code>,  他能使图片放缩到控件一样的大小, 但图片可能会变形.</p>
+<p>默认的scaleType为<code>fitCenter</code>; 除此之外最常用的是<code>fitXY</code>,  他能使图片放缩到控件一样的大小, 但图片可能会变形.</p>
 <h2>radius<span><a class="mark" href="#ui_radius" id="ui_radius">#</a></span></h2>
-<p>图片控件的半径. 如果设置为控件宽高的一半并且控件的宽高相同则图片将剪切为圆形显示；否则图片为圆角矩形显示, 半径即为四个圆角的半径, 也可以通过<code>radiusTopLeft</code>, <code>radiusTopRight</code>, <code>radiusBottomLeft</code>, <code>radiusBottomRight</code>等属性分别设置四个圆角的半径.</p>
-<p>例如, 圆角矩形的Auto.js图标：<code>&lt;img w=&quot;100&quot; h=&quot;100&quot; radius=&quot;20&quot; bg=&quot;white&quot; src=&quot;http://www.autojs.org/assets/uploads/profile/3-profileavatar.png&quot; /&gt;</code></p>
+<p>图片控件的半径. 如果设置为控件宽高的一半并且控件的宽高相同则图片将剪切为圆形显示; 否则图片为圆角矩形显示, 半径即为四个圆角的半径, 也可以通过<code>radiusTopLeft</code>, <code>radiusTopRight</code>, <code>radiusBottomLeft</code>, <code>radiusBottomRight</code>等属性分别设置四个圆角的半径.</p>
+<p>例如, 圆角矩形的Auto.js图标: <code>&lt;img w=&quot;100&quot; h=&quot;100&quot; radius=&quot;20&quot; bg=&quot;white&quot; src=&quot;http://www.autojs.org/assets/uploads/profile/3-profileavatar.png&quot; /&gt;</code></p>
 <p>有关该属性的单位, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
 <h2>radiusTopLeft<span><a class="mark" href="#ui_radiustopleft" id="ui_radiustopleft">#</a></span></h2>
 <p>图片控件的左上角圆角的半径. 有关该属性的单位, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
@@ -803,23 +802,23 @@ ui.layout(
 <p>图片控件的右下角圆角的半径. 有关该属性的单位, 参见<a href="#ui_ui_尺寸的单位_Dimension">尺寸的单位: Dimension</a>.</p>
 <h2>borderWidth<span><a class="mark" href="#ui_borderwidth" id="ui_borderwidth">#</a></span></h2>
 <p>图片控件的边框宽度. 用于在图片外面显示一个边框, 边框会随着图片控件的外形(圆角等)改变而相应变化.
-例如, 圆角矩形带灰色边框的Auto.js图标：<code>&lt;img w=&quot;100&quot; h=&quot;100&quot; radius=&quot;20&quot; borderWidth=&quot;5&quot; borderColor=&quot;gray&quot; bg=&quot;white&quot; src=&quot;http://www.autojs.org/assets/uploads/profile/3-profileavatar.png&quot; /&gt;</code></p>
+例如, 圆角矩形带灰色边框的Auto.js图标: <code>&lt;img w=&quot;100&quot; h=&quot;100&quot; radius=&quot;20&quot; borderWidth=&quot;5&quot; borderColor=&quot;gray&quot; bg=&quot;white&quot; src=&quot;http://www.autojs.org/assets/uploads/profile/3-profileavatar.png&quot; /&gt;</code></p>
 <h2>borderColor<span><a class="mark" href="#ui_bordercolor" id="ui_bordercolor">#</a></span></h2>
 <p>图片控件的边框颜色.</p>
 <h2>circle<span><a class="mark" href="#ui_circle" id="ui_circle">#</a></span></h2>
 <p>指定该图片控件的图片是否剪切为圆形显示. 如果为<code>true</code>, 则图片控件会使其宽高保持一致(如果宽高不一致, 则保持高度等于宽度)并使圆形的半径为宽度的一半.</p>
-<p>例如, 圆形的Auto.js图标：<code>&lt;img w=&quot;100&quot; h=&quot;100&quot; circle=&quot;true&quot; bg=&quot;white&quot; src=&quot;http://www.autojs.org/assets/uploads/profile/3-profileavatar.png&quot; /&gt;</code></p>
+<p>例如, 圆形的Auto.js图标: <code>&lt;img w=&quot;100&quot; h=&quot;100&quot; circle=&quot;true&quot; bg=&quot;white&quot; src=&quot;http://www.autojs.org/assets/uploads/profile/3-profileavatar.png&quot; /&gt;</code></p>
 <h1>垂直布局: vertical<span><a class="mark" href="#ui_vertical" id="ui_vertical">#</a></span></h1>
-<p>垂直布局是一种比较简单的布局, 会把在它里面的控件按照垂直方向依次摆放, 如下图所示：</p>
+<p>垂直布局是一种比较简单的布局, 会把在它里面的控件按照垂直方向依次摆放, 如下图所示:</p>
 <p>垂直布局:</p>
-<p>—————</p>
+<p>-----</p>
 <p>| 控件1 |</p>
 <p>| 控件2 |</p>
 <p>| 控件3 |</p>
 <p>| ............ |</p>
-<p>——————</p>
+<p>------</p>
 <h2>layout_weight<span><a class="mark" href="#ui_layout_weight" id="ui_layout_weight">#</a></span></h2>
-<p>垂直布局中的控件可以通过<code>layout_weight</code>属性来控制控件高度占垂直布局高度的比例. 如果为一个控件指定<code>layout_weight</code>, 则这个控件的高度=垂直布局剩余高度 * layout_weight / weightSum；如果不指定weightSum, 则weightSum为所有子控件的layout_weight之和. 所谓&quot;剩余高度&quot;, 指的是垂直布局中减去没有指定layout_weight的控件的剩余高度.
+<p>垂直布局中的控件可以通过<code>layout_weight</code>属性来控制控件高度占垂直布局高度的比例. 如果为一个控件指定<code>layout_weight</code>, 则这个控件的高度=垂直布局剩余高度 * layout_weight / weightSum; 如果不指定weightSum, 则weightSum为所有子控件的layout_weight之和. 所谓&quot;剩余高度&quot;, 指的是垂直布局中减去没有指定layout_weight的控件的剩余高度.
 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
@@ -830,7 +829,7 @@ ui.layout(
     &lt;/vertical&gt;
 );
 </code></pre><p>在这个布局中, 三个控件的layout_weight都是1, 也就是他们的高度都会占垂直布局高度的1/3, 都是33.3dp.
-再例如：</p>
+再例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;vertical h=&quot;100dp&quot;&gt;
@@ -840,7 +839,7 @@ ui.layout(
     &lt;/vertical&gt;
 );
 </code></pre><p>在这个布局中, 第一个控件高度为1/4, 第二个控件为2/4, 第三个控件为1/4.
-再例如：</p>
+再例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;vertical h=&quot;100dp&quot; weightSum=&quot;5&quot;&gt;
@@ -850,7 +849,7 @@ ui.layout(
     &lt;/vertical&gt;
 );
 </code></pre><p>在这个布局中, 因为指定了weightSum为5, 因此第一个控件高度为1/5, 第二个控件为2/5, 第三个控件为1/5.
-再例如：</p>
+再例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;vertical h=&quot;100dp&quot;&gt;
@@ -860,7 +859,7 @@ ui.layout(
     &lt;/vertical&gt;
 );
 </code></pre><p>在这个布局中, 第一个控件并没有指定layout_weight, 而是指定高度为40dp, 因此不加入比例计算, 此时布局剩余高度为60dp. 第二个控件高度为剩余高度的2/3, 也就是40dp, 第三个控件高度为剩余高度的1/3, 也就是20dp.</p>
-<p>垂直布局的layout_weight属性还可以用于控制他的子控件高度占满剩余空间, 例如：</p>
+<p>垂直布局的layout_weight属性还可以用于控制他的子控件高度占满剩余空间, 例如:</p>
 <pre><code>&quot;ui&quot;;
 ui.layout(
     &lt;vertical h=&quot;100dp&quot;&gt;
@@ -871,11 +870,11 @@ ui.layout(
 );
 </code></pre><p>在这个布局中, 第三个控件的高度会占满除去控件1和控件2的剩余空间.</p>
 <h1>水平布局: horizontal<span><a class="mark" href="#ui_horizontal" id="ui_horizontal">#</a></span></h1>
-<p>水平布局是一种比较简单的布局, 会把在它里面的控件按照水平方向依次摆放, 如下图所示：
+<p>水平布局是一种比较简单的布局, 会把在它里面的控件按照水平方向依次摆放, 如下图所示:
 水平布局:
-————————————————————————————</p>
+----------------------------</p>
 <p>| 控件1 | 控件2 | 控件3 | ... |</p>
-<p>————————————————————————————</p>
+<p>----------------------------</p>
 <h2>layout_weight<span><a class="mark" href="#ui_layout_weight_1" id="ui_layout_weight_1">#</a></span></h2>
 <p>水平布局中也可以使用layout_weight属性来控制子控件的<strong>宽度</strong>占父布局的比例. 和垂直布局中类似, 不再赘述.</p>
 <h1>线性布局: linear<span><a class="mark" href="#ui_linear" id="ui_linear">#</a></span></h1>
@@ -891,7 +890,7 @@ ui.layout(
 <h1>开关控件: Switch<span><a class="mark" href="#ui_switch" id="ui_switch">#</a></span></h1>
 <p>开关控件用于表示一个选项是否被选中.</p>
 <h2>checked<span><a class="mark" href="#ui_checked" id="ui_checked">#</a></span></h2>
-<p>表示开关是否被选中. 可选的值为：</p>
+<p>表示开关是否被选中. 可选的值为:</p>
 <ul>
 <li><code>true</code> 打开开关</li>
 <li><code>false</code> 关闭开关</li>
@@ -906,7 +905,7 @@ ui.layout(
 <h1>浮动按钮控件: fab<span><a class="mark" href="#ui_fab" id="ui_fab">#</a></span></h1>
 <h1>标题栏控件: toolbar<span><a class="mark" href="#ui_toolbar" id="ui_toolbar">#</a></span></h1>
 <h1>卡片: card<span><a class="mark" href="#ui_card" id="ui_card">#</a></span></h1>
-<p>卡片控件是一个拥有圆角、阴影的控件.</p>
+<p>卡片控件是一个拥有圆角, 阴影的控件.</p>
 <h2>cardBackgroundColor<span><a class="mark" href="#ui_cardbackgroundcolor" id="ui_cardbackgroundcolor">#</a></span></h2>
 <p>卡片的背景颜色.</p>
 <h2>cardCornerRadius<span><a class="mark" href="#ui_cardcornerradius" id="ui_cardcornerradius">#</a></span></h2>
@@ -914,7 +913,7 @@ ui.layout(
 <h2>cardElevation<span><a class="mark" href="#ui_cardelevation" id="ui_cardelevation">#</a></span></h2>
 <p>设置卡片在z轴上的高度, 来控制阴影的大小.</p>
 <h2>contentPadding<span><a class="mark" href="#ui_contentpadding" id="ui_contentpadding">#</a></span></h2>
-<p>设置卡片的内边距. 该属性包括四个值：</p>
+<p>设置卡片的内边距. 该属性包括四个值:</p>
 <ul>
 <li><code>contentPaddingLeft</code> 左内边距</li>
 <li><code>contentPaddingRight</code> 右内边距</li>
@@ -929,23 +928,23 @@ ui.layout(
 <h1>ui<span><a class="mark" href="#ui_ui_1" id="ui_ui_1">#</a></span></h1>
 <h2>ui.layout(xml)<span><a class="mark" href="#ui_ui_layout_xml" id="ui_ui_layout_xml">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>xml</code> { <span class="type">XML</span> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 布局XML或者XML字符串</li>
+<li><strong>xml</strong> { <span class="type">XML</span> } | { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 布局XML或者XML字符串</li>
 </ul>
-</div><p>将布局XML渲染为视图（View）对象,  并设置为当前视图.</p>
+</div><p>将布局XML渲染为视图 (View) 对象,  并设置为当前视图.</p>
 <h2>ui.layoutFile(xmlFile)<span><a class="mark" href="#ui_ui_layoutfile_xmlfile" id="ui_ui_layoutfile_xmlfile">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>xml</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 布局XML文件的路径</li>
+<li><strong>xml</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 布局XML文件的路径</li>
 </ul>
 </div><p>此函数和<code>ui.layout</code>相似, 只不过允许传入一个xml文件路径来渲染布局.</p>
 <h2>ui.inflate(xml[, parent = null, attachToParent = false])<span><a class="mark" href="#ui_ui_inflate_xml_parent_null_attachtoparent_false" id="ui_ui_inflate_xml_parent_null_attachtoparent_false">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>xml</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <span class="type">XML</span> } 布局XML或者XML字符串</li>
-<li><code>parent</code> { <span class="type">View</span> } 父视图</li>
-<li><code>attachToParent</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 是否渲染的View加到父视图中, 默认为false</li>
-<li>返回 { <span class="type">View</span> }</li>
+<li><strong>xml</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type">XML</span> } 布局XML或者XML字符串</li>
+<li><strong>parent</strong> { <span class="type">View</span> } 父视图</li>
+<li><strong>attachToParent</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 是否渲染的View加到父视图中, 默认为false</li>
+<li><ins><strong>returns</strong></ins> { <span class="type">View</span> }</li>
 </ul>
-</div><p>将布局XML渲染为视图（View）对象. 如果该View将作为某个View的子View, 我们建议传入<code>parent</code>参数, 这样在渲染时依赖于父视图的一些布局属性能够正确应用.</p>
-<p>此函数用于动态创建、显示View.</p>
+</div><p>将布局XML渲染为视图 (View) 对象. 如果该View将作为某个View的子View, 我们建议传入<code>parent</code>参数, 这样在渲染时依赖于父视图的一些布局属性能够正确应用.</p>
+<p>此函数用于动态创建, 显示View.</p>
 <pre><code class="lang-javascript">&quot;ui&quot;;
 
 $ui.layout(
@@ -954,8 +953,8 @@ $ui.layout(
 );
 
 // 动态创建3个文本控件, 并加到container容器中
-// 这里仅为实例, 实际上并不推荐这种做法, 如果要展示列表, 
-// 使用list组件；动态创建十几个、几十个View会让界面卡顿
+// 这里仅为实例, 实际上并不推荐这种做法, 如果要展示列表,
+// 使用list组件; 动态创建十几个, 几十个View会让界面卡顿
 for (let i = 0; i &lt; 3; i++) {
     let textView = $ui.inflate(
         &lt;text textColor=&quot;#000000&quot; textSize=&quot;14sp&quot;/&gt;
@@ -966,13 +965,13 @@ for (let i = 0; i &lt; 3; i++) {
 </code></pre>
 <h1>ui.registerWidget(name, widget)<span><a class="mark" href="#ui_ui_registerwidget_name_widget" id="ui_ui_registerwidget_name_widget">#</a></span></h1>
 <div class="signature"><ul>
-<li><code>name</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 组件名称</li>
-<li><code>widget</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 组件</li>
+<li><strong>name</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 组件名称</li>
+<li><strong>widget</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 组件</li>
 </ul>
 </div><p>注册一个自定义组件. 参考示例-&gt;界面控件-&gt;自定义控件.</p>
 <h1>ui.isUiThread()<span><a class="mark" href="#ui_ui_isuithread" id="ui_ui_isuithread">#</a></span></h1>
 <div class="signature"><ul>
-<li>返回 { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> }</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
 </ul>
 </div><p>返回当前线程是否是UI线程.</p>
 <pre><code class="lang-javascript">&quot;ui&quot;;
@@ -986,8 +985,8 @@ $threads.start(function () {
 </code></pre>
 <h2>ui.findView(id)<span><a class="mark" href="#ui_ui_findview_id" id="ui_ui_findview_id">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>id</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } View的ID</li>
-<li>返回 { <span class="type">View</span> }</li>
+<li><strong>id</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } View的ID</li>
+<li><ins><strong>returns</strong></ins> { <span class="type">View</span> }</li>
 </ul>
 </div><p>在当前视图中根据ID查找相应的视图对象并返回. 如果当前未设置视图或找不到此ID的视图时返回<code>null</code>.</p>
 <p>一般我们都是通过<code>ui.xxx</code>来获取id为xxx的控件, 如果xxx是一个ui已经有的属性, 就可以通过<code>$ui.findView()</code>来获取这个控件.</p>
@@ -995,16 +994,16 @@ $threads.start(function () {
 <p>结束当前活动并销毁界面.</p>
 <h2>ui.setContentView(view)<span><a class="mark" href="#ui_ui_setcontentview_view" id="ui_ui_setcontentview_view">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>view</code> { <span class="type">View</span> }</li>
+<li><strong>view</strong> { <span class="type">View</span> }</li>
 </ul>
 </div><p>将视图对象设置为当前视图.</p>
 <h2>ui.post(callback[, delay = 0])<span><a class="mark" href="#ui_ui_post_callback_delay_0" id="ui_ui_post_callback_delay_0">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数</li>
-<li><code>delay</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 延迟, 单位毫秒</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数</li>
+<li><strong>delay</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 延迟, 单位毫秒</li>
 </ul>
-</div><p>将<code>callback</code>加到UI线程的消息循环中, 并延迟delay毫秒后执行（不能准确保证一定在delay毫秒后执行）.</p>
-<p>此函数可以用于UI线程中延时执行动作（sleep不能在UI线程中使用）, 也可以用于子线程中更新UI.</p>
+</div><p>将<code>callback</code>加到UI线程的消息循环中, 并延迟delay毫秒后执行 (不能准确保证一定在delay毫秒后执行).</p>
+<p>此函数可以用于UI线程中延时执行动作 (sleep不能在UI线程中使用), 也可以用于子线程中更新UI.</p>
 <pre><code class="lang-javascript">&quot;ui&quot;;
 
 ui.layout(
@@ -1028,20 +1027,20 @@ threads.start({
 </code></pre>
 <h2>ui.run(callback)<span><a class="mark" href="#ui_ui_run_callback" id="ui_ui_run_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>callback</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } 回调函数</li>
-<li>返回 callback的执行结果</li>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } 回调函数</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a></span> } callback 的执行结果</li>
 </ul>
-</div><p>将<code>callback</code>在UI线程中执行. 如果当前已经在UI线程中, 则直接执行<code>callback</code>；否则将<code>callback</code>抛到UI线程中执行（加到UI线程的消息循环的末尾）, <strong>并等待callback执行结束(阻塞当前线程)</strong>.</p>
+</div><p>将<code>callback</code>在UI线程中执行. 如果当前已经在UI线程中, 则直接执行<code>callback</code>; 否则将<code>callback</code>抛到UI线程中执行 (加到UI线程的消息循环的末尾), <strong>并等待callback执行结束(阻塞当前线程)</strong>.</p>
 <h2>ui.statusBarColor(color)<span><a class="mark" href="#ui_ui_statusbarcolor_color" id="ui_ui_statusbarcolor_color">#</a></span></h2>
 <div class="signature"><ul>
-<li>color { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } | { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 颜色</li>
+<li><strong>color</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } | { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 颜色</li>
 </ul>
 </div><p>设置当前界面的状态栏颜色.</p>
 <pre><code class="lang-javascript">&quot;ui&quot;;
 ui.statusBarColor(&quot;#000000&quot;);
 </code></pre>
 <h2>ui.useAndroidResources()<span><a class="mark" href="#ui_ui_useandroidresources" id="ui_ui_useandroidresources">#</a></span></h2>
-<p>启用使用Android的布局(layout)、绘图(drawable)、动画(anim)、样式(style)等资源的特性. 启用该特性后, 在project.json中进行以下配置, 就可以像写Android原生一样写界面：</p>
+<p>启用使用Android的布局(layout), 绘图(drawable), 动画(anim), 样式(style)等资源的特性. 启用该特性后, 在project.json中进行以下配置, 就可以像写Android原生一样写界面:</p>
 <pre><code class="lang-json">{
     // ...
     androidResources: {
@@ -1050,12 +1049,12 @@ ui.statusBarColor(&quot;#000000&quot;);
     }
 }
 </code></pre>
-<p>res文件夹通常为以下结构：</p>
+<p>res文件夹通常为以下结构:</p>
 <pre><code>- res
     - layout  // 布局资源
-    - drawable // 图片、形状等资源
+    - drawable // 图片, 形状等资源
     - menu // 菜单资源
-    - values // 样式、字符串等资源
+    - values // 样式, 字符串等资源
     // ...
 </code></pre><p>可参考示例-&gt;复杂界面-&gt;Android原生界面.</p>
 <h1>尺寸的单位: Dimension<span><a class="mark" href="#ui_dimension" id="ui_dimension">#</a></span></h1>

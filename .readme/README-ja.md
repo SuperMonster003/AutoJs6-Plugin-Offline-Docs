@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=161
-totalBytes=6996000
-contentSha256=3cb93aa2a8228a5566c6fec278f0e625886694f6fc9b57f8a36224d8f030ecf8
+totalBytes=6973820
+contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
 sourceRepository=SuperMonster003/AutoJs6
 sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
 sourcePath=app/src/main/assets-app/docs
@@ -118,9 +118,10 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v1.0.1
 
-###### 2026/07/23
+###### 2026/07/24
 
 * `改善` 固定コンテンツ指紋基準を現在のドキュメント資産から自動生成するコンテンツメタデータとインベントリに置き換え, 資産を直接更新可能に変更
+* `改善` 内蔵ドキュメントを AutoJs6 API リファレンス形式に統一し, 現行の製品名, JavaScript 変数宣言, ローカル型リンク, 未完成セクションの案内, ASCII 句読点を標準化
 
 # v1.0.0
 
@@ -154,6 +155,7 @@ AutoJs6-Documentation 由来のドキュメントは Apache-2.0 です. Node.js 
 ```text
 .readme/lang_*.json
 .changelog/lang_*.json
+.python/normalize_offline_docs.py
 .python/generate_markdown.py
 app/src/main/res/values-*/strings.xml
 app/src/main/res/raw-*/plugin_instruction.md

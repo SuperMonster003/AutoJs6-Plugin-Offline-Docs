@@ -132,6 +132,7 @@ category=offline-docs
 ```text
 .readme/lang_*.json
 .changelog/lang_*.json
+.python/normalize_offline_docs.py
 .python/generate_markdown.py
 app/src/main/res/values-*/strings.xml
 app/src/main/res/raw-*/plugin_instruction.md

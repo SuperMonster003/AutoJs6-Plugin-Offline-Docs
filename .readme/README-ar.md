@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=161
-totalBytes=6996000
-contentSha256=3cb93aa2a8228a5566c6fec278f0e625886694f6fc9b57f8a36224d8f030ecf8
+totalBytes=6973820
+contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
 sourceRepository=SuperMonster003/AutoJs6
 sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
 sourcePath=app/src/main/assets-app/docs
@@ -118,9 +118,10 @@ category=offline-docs
 
 # v1.0.1
 
-###### 2026/07/23
+###### 2026/07/24
 
 * `تحسين` استبدال خط أساس بصمة المحتوى الثابت ببيانات وصفية للمحتوى وقائمة جرد يتم إنشاؤهما تلقائيا من أصول التوثيق الحالية, ما يتيح تحديث الأصول مباشرة
+* `تحسين` مواءمة التوثيق المضمن مع نمط مرجع AutoJs6 API وتوحيد اسم المنتج الحالي وتعريفات متغيرات JavaScript وروابط الأنواع المحلية وتنبيهات الأقسام غير المكتملة وعلامات ترقيم ASCII
 
 # v1.0.0
 
@@ -154,6 +155,7 @@ category=offline-docs
 ```text
 .readme/lang_*.json
 .changelog/lang_*.json
+.python/normalize_offline_docs.py
 .python/generate_markdown.py
 app/src/main/res/values-*/strings.xml
 app/src/main/res/raw-*/plugin_instruction.md

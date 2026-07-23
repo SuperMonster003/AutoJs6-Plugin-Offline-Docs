@@ -496,7 +496,7 @@ Color(0).setAlpha(1).toHex(); /* 同上. */
 Color(&#39;green&#39;).toHex(); // #00FF00
 Color(&#39;#00FF00&#39;).toHex(); /* 同上. */
 Color().setGreen(255).toHex(); /* 同上. */
-Color(&#39;white&#39;).removeRed().removeBlue().toHex(); /* 同上. */ 
+Color(&#39;white&#39;).removeRed().removeBlue().toHex(); /* 同上. */
 </code></pre>
 <p>需特别留意, <code>Color(0)</code> 返回的不是默认的黑色, 而是 <code>透明色 (#00000000)</code>:</p>
 <pre><code class="lang-js">Color(0).toFullHex(); // #00000000

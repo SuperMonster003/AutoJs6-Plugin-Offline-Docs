@@ -423,7 +423,7 @@ let rectRef = new android.graphics.Rect(200, 0, 800, 800);
 console.log(rectThis.intersect(rectRef)); // true
 
 /* rectThis 被修改. */
-console.log(rectThis); // Rect(200, 0 - 600, 600) 
+console.log(rectThis); // Rect(200, 0 - 600, 600)
 </code></pre>
 <p>如果不相交, 则返回 false, 当前矩形不会被修改:</p>
 <pre><code class="lang-js">let rectThis = new android.graphics.Rect(0, 0, 100, 100);

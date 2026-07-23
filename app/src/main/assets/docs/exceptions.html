@@ -284,9 +284,9 @@ let a = Array(-1);
 
 /* 复现 (Number 部分实例方法参数不合法). */
 
-// RangeError: Precision -1 out of range. 
+// RangeError: Precision -1 out of range.
 let n = (23).toExponential(-1);
-// RangeError: Precision -2 out of range. 
+// RangeError: Precision -2 out of range.
 let n = (23).toFixed(-2);
 // RangeError: Precision -3 out of range.
 let n = (23).toPrecision(-3);
@@ -531,7 +531,7 @@ function ensureFruitName(name) {
 <li>摘录自 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error">MDN</a> 的示例:</li>
 </ul>
 <pre><code class="lang-js">function CustomError(foo, message, fileName, lineNumber) {
-    var instance = new Error(message, fileName, lineNumber);
+    let instance = new Error(message, fileName, lineNumber);
     instance.foo = foo;
     Object.setPrototypeOf(instance, CustomError.prototype);
     if (Error.captureStackTrace) {

@@ -1,9 +1,11 @@
 # Offline documentation notices
 
-The `assets/docs/` tree is copied byte-for-byte from the AutoJs6 6.6.4 offline
-documentation distribution. The documentation originated in the
-AutoJs6-Documentation project and is distributed under Apache License 2.0.
-See `Apache-2.0.txt` and `SOURCE_PROVENANCE.md`.
+The `assets/docs/` tree is a project-normalized derivative of the AutoJs6 6.6.4
+offline documentation distribution. Its recorded upstream basis comes from the
+AutoJs6 project. The documentation originated in the AutoJs6-Documentation
+project and is distributed under Apache License 2.0. The bundled files are not
+expected to be byte-identical to that upstream basis. See `Apache-2.0.txt` and
+`SOURCE_PROVENANCE.md`.
 
 The distribution also contains the following third-party components:
 
@@ -18,5 +20,5 @@ The distribution also contains the following third-party components:
   the SIL Open Font License 1.1.
 
 The complete Apache-2.0, GPL-3.0, MIT, and OFL-1.1 license texts accompany every
-APK in this directory. URLs and notices embedded in the original files are
-retained in the byte-for-byte documentation payload.
+APK in this directory. Required upstream notices and third-party attributions
+remain included in the normalized documentation payload.

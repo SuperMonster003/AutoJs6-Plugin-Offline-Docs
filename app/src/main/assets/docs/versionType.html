@@ -495,10 +495,10 @@ console.log(new Version(&#39;2.3-alpha2&#39;).isAtLeast(&#39;2.3&#39;, true)); /
 /* 后缀将被忽略. */
 console.log(new Version(&#39;2.3.5-alpha9&#39;).getSubversionNumbers()); // [2, 3, 5]
 
-/* 
+/*
  * 注意虽然 &#39;2&#39; 与 &#39;2.0.0&#39; 版本比较等同,
  * 即 new Version(&#39;2&#39;).isEqual(&#39;2.0.0&#39;) 为 true,
- * 但两者 getSubversionNumbers() 不同. 
+ * 但两者 getSubversionNumbers() 不同.
  */
 console.log(new Version(&#39;2.0.0&#39;).getSubversionNumbers()); // [2, 0, 0]
 console.log(new Version(&#39;2&#39;).getSubversionNumbers()); // [2]

@@ -253,8 +253,8 @@ module developers as well. It can be accessed using:</p>
 <div class="api_metadata">
 <span>Added in: v8.2.0</span>
 </div><ul>
-<li><code>original</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } An <code>async</code> function</li>
-<li>Returns: { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } a callback style function</li>
+<li><strong>original</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } An <code>async</code> function</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } a callback style function</li>
 </ul>
 <p>Takes an <code>async</code> function (or a function that returns a Promise) and returns a
 function following the Node.js error first callback style. In the callback, the
@@ -303,9 +303,9 @@ callbackFunction((err, ret) =&gt; {
 <div class="api_metadata">
 <span>Added in: v0.11.3</span>
 </div><ul>
-<li><code>section</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } A string identifying the portion of the application for
+<li><strong>section</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } A string identifying the portion of the application for
 which the <code>debuglog</code> function is being created.</li>
-<li>Returns: { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> } The logging function</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } The logging function</li>
 </ul>
 <p>The <code>util.debuglog()</code> method is used to create a function that conditionally
 writes debug messages to <code>stderr</code> based on the existence of the <code>NODE_DEBUG</code>
@@ -372,7 +372,7 @@ property take precedence over <code>--trace-deprecation</code> and
 </table>
 </details>
 </div><ul>
-<li><code>format</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } A <code>printf</code>-like format string.</li>
+<li><strong>format</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } A <code>printf</code>-like format string.</li>
 </ul>
 <p>The <code>util.format()</code> method returns a formatted string using the first argument
 as a <code>printf</code>-like format.</p>
@@ -434,8 +434,8 @@ without any formatting.</p>
 and <code>extends</code> keywords to get language level inheritance support. Also note
 that the two styles are <a href="https://github.com/nodejs/node/issues/4179">semantically incompatible</a>.</p>
 <ul>
-<li><code>constructor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> }</li>
-<li><code>superConstructor</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> }</li>
+<li><strong>constructor</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> }</li>
+<li><strong>superConstructor</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> }</li>
 </ul>
 <p>Inherit the prototype methods from one [constructor][] into another. The
 prototype of <code>constructor</code> will be set to a new object created from
@@ -505,27 +505,27 @@ stream.write(&#39;With ES6&#39;);
 </table>
 </details>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> } Any JavaScript primitive or Object.</li>
-<li><code>options</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">Object</a> }<ul>
-<li><code>showHidden</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } If <code>true</code>, the <code>object</code>&#39;s non-enumerable symbols and
+<li><strong>object</strong> { <span class="type">any</span> } Any JavaScript primitive or Object.</li>
+<li><strong>options</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> }<ul>
+<li><strong>showHidden</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } If <code>true</code>, the <code>object</code>&#39;s non-enumerable symbols and
 properties will be included in the formatted result. Defaults to <code>false</code>.</li>
-<li><code>depth</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } Specifies the number of times to recurse while formatting
+<li><strong>depth</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } Specifies the number of times to recurse while formatting
 the <code>object</code>. This is useful for inspecting large complicated objects.
 Defaults to <code>2</code>. To make it recurse indefinitely pass <code>null</code>.</li>
-<li><code>colors</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } If <code>true</code>, the output will be styled with ANSI color
+<li><strong>colors</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } If <code>true</code>, the output will be styled with ANSI color
 codes. Defaults to <code>false</code>. Colors are customizable, see
 <a href="#util_util_customizing_util_inspect_colors">Customizing <code>util.inspect</code> colors</a>.</li>
-<li><code>customInspect</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } If <code>false</code>, then custom <code>inspect(depth, opts)</code>
+<li><strong>customInspect</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } If <code>false</code>, then custom <code>inspect(depth, opts)</code>
 functions exported on the <code>object</code> being inspected will not be called.
 Defaults to <code>true</code>.</li>
-<li><code>showProxy</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } If <code>true</code>, then objects and functions that are
+<li><strong>showProxy</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } If <code>true</code>, then objects and functions that are
 <code>Proxy</code> objects will be introspected to show their <code>target</code> and <code>handler</code>
 objects. Defaults to <code>false</code>.</li>
-<li><code>maxArrayLength</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } Specifies the maximum number of array and
+<li><strong>maxArrayLength</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } Specifies the maximum number of array and
 <code>TypedArray</code> elements to include when formatting. Defaults to <code>100</code>. Set to
 <code>null</code> to show all array elements. Set to <code>0</code> or negative to show no array
 elements.</li>
-<li><code>breakLength</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } The length at which an object&#39;s keys are split
+<li><strong>breakLength</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } The length at which an object&#39;s keys are split
 across multiple lines. Set to <code>Infinity</code> to format an object as a single
 line. Defaults to 60 for legacy compatibility.</li>
 </ul>
@@ -648,7 +648,7 @@ console.log(arr); // logs the full array
 <div class="api_metadata">
 <span>Added in: v8.0.0</span>
 </div><ul>
-<li><code>original</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">Function</a> }</li>
+<li><strong>original</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> }</li>
 </ul>
 <p>Takes a function following the common Node.js callback style, i.e. taking a
 <code>(err, value) =&gt; ...</code> callback as the last argument, and returns a version
@@ -703,7 +703,7 @@ standard format of taking an error-first callback as the last argument.</p>
 <div class="api_metadata">
 <span>Added in: v8.0.0</span>
 </div><ul>
-<li>{ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Symbol_type" class="type">symbol</a> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_symbol">symbol</a></span> }</li>
 </ul>
 <p>A Symbol that can be used to declare custom promisified variants of functions,
 see <a href="#util_util_custom_promisified_functions">Custom promisified functions</a>.</p>
@@ -919,13 +919,13 @@ with ICU and using the full ICU data (see <a href="intl.html">Internationalizati
 is not supported.</p>
 <h3>new TextDecoder([encoding[, options]])<span><a class="mark" href="#util_new_textdecoder_encoding_options" id="util_new_textdecoder_encoding_options">#</a></span></h3>
 <div class="signature"><ul>
-<li><code>encoding</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } Identifies the <code>encoding</code> that this <code>TextDecoder</code> instance
+<li><strong>encoding</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } Identifies the <code>encoding</code> that this <code>TextDecoder</code> instance
 supports. Defaults to <code>&#39;utf-8&#39;</code>.</li>
-<li><code>options</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">Object</a> }<ul>
-<li><code>fatal</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } <code>true</code> if decoding failures are fatal. Defaults to
+<li><strong>options</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> }<ul>
+<li><strong>fatal</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } <code>true</code> if decoding failures are fatal. Defaults to
 <code>false</code>. This option is only supported when ICU is enabled (see
 <a href="intl.html">Internationalization</a>).</li>
-<li><code>ignoreBOM</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } When <code>true</code>, the <code>TextDecoder</code> will include the byte
+<li><strong>ignoreBOM</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } When <code>true</code>, the <code>TextDecoder</code> will include the byte
 order mark in the decoded result. When <code>false</code>, the byte order mark will
 be removed from the output. This option is only used when <code>encoding</code> is
 <code>&#39;utf-8&#39;</code>, <code>&#39;utf-16be&#39;</code> or <code>&#39;utf-16le&#39;</code>. Defaults to <code>false</code>.</li>
@@ -936,14 +936,14 @@ be removed from the output. This option is only used when <code>encoding</code> 
 supported encodings or an alias.</p>
 <h3>textDecoder.decode([input[, options]])<span><a class="mark" href="#util_textdecoder_decode_input_options" id="util_textdecoder_decode_input_options">#</a></span></h3>
 <div class="signature"><ul>
-<li><code>input</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" class="type">ArrayBuffer</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView" class="type">DataView</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray" class="type">TypedArray</a> } An <code>ArrayBuffer</code>, <code>DataView</code> or
+<li><strong>input</strong> { <span class="type"><a href="dataTypes.html#datatypes_arraybuffer">ArrayBuffer</a></span> | <span class="type"><a href="dataTypes.html#datatypes_dataview">DataView</a></span> | <span class="type"><a href="dataTypes.html#datatypes_typedarray">TypedArray</a></span> } An <code>ArrayBuffer</code>, <code>DataView</code> or
 Typed Array instance containing the encoded data.</li>
-<li><code>options</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">Object</a> }<ul>
-<li><code>stream</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } <code>true</code> if additional chunks of data are expected.
+<li><strong>options</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> }<ul>
+<li><strong>stream</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } <code>true</code> if additional chunks of data are expected.
 Defaults to <code>false</code>.</li>
 </ul>
 </li>
-<li>Returns: { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> }</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
 </div><p>Decodes the <code>input</code> and returns a string. If <code>options.stream</code> is <code>true</code>, any
 incomplete byte sequences occuring at the end of the <code>input</code> are buffered
@@ -952,18 +952,18 @@ internally and emitted after the next call to <code>textDecoder.decode()</code>.
 <code>TypeError</code> being thrown.</p>
 <h3>textDecoder.encoding<span><a class="mark" href="#util_textdecoder_encoding" id="util_textdecoder_encoding">#</a></span></h3>
 <div class="signature"><ul>
-<li>{ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
 </div><p>The encoding supported by the <code>TextDecoder</code> instance.</p>
 <h3>textDecoder.fatal<span><a class="mark" href="#util_textdecoder_fatal" id="util_textdecoder_fatal">#</a></span></h3>
 <div class="signature"><ul>
-<li>{ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
 </ul>
 </div><p>The value will be <code>true</code> if decoding errors result in a <code>TypeError</code> being
 thrown.</p>
 <h3>textDecoder.ignoreBOM<span><a class="mark" href="#util_textdecoder_ignorebom" id="util_textdecoder_ignorebom">#</a></span></h3>
 <div class="signature"><ul>
-<li>{ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
 </ul>
 </div><p>The value will be <code>true</code> if the decoding result will include the byte order
 mark.</p>
@@ -977,14 +977,14 @@ const uint8array = encoder.encode(&#39;this is some data&#39;);
 </code></pre>
 <h3>textEncoder.encode([input])<span><a class="mark" href="#util_textencoder_encode_input" id="util_textencoder_encode_input">#</a></span></h3>
 <div class="signature"><ul>
-<li><code>input</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } The text to encode. Defaults to an empty string.</li>
-<li>Returns: { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array" class="type">Uint8Array</a> }</li>
+<li><strong>input</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } The text to encode. Defaults to an empty string.</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_uint8array">Uint8Array</a></span> }</li>
 </ul>
 </div><p>UTF-8 encodes the <code>input</code> string and returns a <code>Uint8Array</code> containing the
 encoded bytes.</p>
 <h3>textDecoder.encoding<span><a class="mark" href="#util_textdecoder_encoding_1" id="util_textdecoder_encoding_1">#</a></span></h3>
 <div class="signature"><ul>
-<li>{ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
 </div><p>The encoding supported by the <code>TextEncoder</code> instance. Always set to <code>&#39;utf-8&#39;</code>.</p>
 <h2>Deprecated APIs<span><a class="mark" href="#util_deprecated_apis" id="util_deprecated_apis">#</a></span></h2>
@@ -1001,21 +1001,21 @@ similar built-in functionality through <a href="https://developer.mozilla.org/en
 <div class="api_metadata">
 <span>Added in: v0.3.0</span><span>Deprecated since: v0.11.3</span>
 </div><ul>
-<li><code>string</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } The message to print to <code>stderr</code></li>
+<li><strong>string</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } The message to print to <code>stderr</code></li>
 </ul>
 <p>Deprecated predecessor of <code>console.error</code>.</p>
 <h3>util.error([...strings])<span><a class="mark" href="#util_util_error_strings" id="util_util_error_strings">#</a></span></h3>
 <div class="api_metadata">
 <span>Added in: v0.3.0</span><span>Deprecated since: v0.11.3</span>
 </div><ul>
-<li><code>...strings</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } The message to print to <code>stderr</code></li>
+<li><strong>...strings</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } The message to print to <code>stderr</code></li>
 </ul>
 <p>Deprecated predecessor of <code>console.error</code>.</p>
 <h3>util.isArray(object)<span><a class="mark" href="#util_util_isarray_object" id="util_util_isarray_object">#</a></span></h3>
 <div class="api_metadata">
 <span>Added in: v0.6.0</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Internal alias for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"><code>Array.isArray</code></a>.</p>
 <p>Returns <code>true</code> if the given <code>object</code> is an <code>Array</code>. Otherwise, returns <code>false</code>.</p>
@@ -1032,7 +1032,7 @@ util.isArray({});
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>Boolean</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1048,7 +1048,7 @@ util.isBoolean(false);
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>Buffer</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1064,7 +1064,7 @@ util.isBuffer(Buffer.from(&#39;hello world&#39;));
 <div class="api_metadata">
 <span>Added in: v0.6.0</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>Date</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1080,7 +1080,7 @@ util.isDate({});
 <div class="api_metadata">
 <span>Added in: v0.6.0</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is an <a href="errors.html#errors_errors_class_error"><code>Error</code></a>. Otherwise, returns
 <code>false</code>.</p>
@@ -1109,7 +1109,7 @@ util.isError(obj);
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>Function</code>. Otherwise, returns
 <code>false</code>.</p>
@@ -1129,7 +1129,7 @@ util.isFunction(Bar);
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is strictly <code>null</code>. Otherwise, returns
 <code>false</code>.</p>
@@ -1146,7 +1146,7 @@ util.isNull(null);
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is <code>null</code> or <code>undefined</code>. Otherwise,
 returns <code>false</code>.</p>
@@ -1163,7 +1163,7 @@ util.isNullOrUndefined(null);
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>Number</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1181,7 +1181,7 @@ util.isNumber(NaN);
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is strictly an <code>Object</code> <strong>and</strong> not a
 <code>Function</code>. Otherwise, returns <code>false</code>.</p>
@@ -1200,7 +1200,7 @@ util.isObject(function() {});
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a primitive type. Otherwise, returns
 <code>false</code>.</p>
@@ -1229,7 +1229,7 @@ util.isPrimitive(new Date());
 <div class="api_metadata">
 <span>Added in: v0.6.0</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>RegExp</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1245,7 +1245,7 @@ util.isRegExp({});
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>string</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1263,7 +1263,7 @@ util.isString(5);
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is a <code>Symbol</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1279,7 +1279,7 @@ util.isSymbol(Symbol(&#39;foo&#39;));
 <div class="api_metadata">
 <span>Added in: v0.11.5</span><span>Deprecated since: v4.0.0</span>
 </div><ul>
-<li><code>object</code> { <span class="type">any</span> }</li>
+<li><strong>object</strong> { <span class="type">any</span> }</li>
 </ul>
 <p>Returns <code>true</code> if the given <code>object</code> is <code>undefined</code>. Otherwise, returns <code>false</code>.</p>
 <pre><code class="lang-js">const util = require(&#39;util&#39;);
@@ -1296,7 +1296,7 @@ util.isUndefined(null);
 <div class="api_metadata">
 <span>Added in: v0.3.0</span><span>Deprecated since: v6.0.0</span>
 </div><ul>
-<li><code>string</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> }</li>
+<li><strong>string</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
 <p>The <code>util.log()</code> method prints the given <code>string</code> to <code>stdout</code> with an included
 timestamp.</p>

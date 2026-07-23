@@ -56,8 +56,79 @@ val knownBrokenReferences = setOf(
     "util.html -> intl.html",
     "util.html -> process.html",
 )
+// Keep these style predicates aligned with .python/normalize_offline_docs.py.
+val prohibitedDocumentationSymbol = Regex(
+    "[\u2010-\u2027\u3000-\u303F\u30FB\uFE10-\uFE6F\uFF00-\uFFEF]",
+)
+val trailingDocumentationWhitespace = Regex("""(?m)[ \t]+${'$'}""")
+val externalMdnTypeLink = Regex(
+    """<a\b""" +
+        """(?=[^>]*\bhref\s*=\s*(['"])https://developer\.mozilla\.org/[^'"]+\1)""" +
+        """(?=[^>]*\bclass\s*=\s*(['"])[^'"]*\btype\b[^'"]*\2)[^>]*>""",
+    RegexOption.IGNORE_CASE,
+)
+val bareLegacyAutoJsName = Regex("""AutoJs(?!6|Pro|-Docs)""")
+val codeBlock = Regex(
+    """<pre><code([^>]*)>(.*?)</code></pre>""",
+    setOf(RegexOption.DOT_MATCHES_ALL),
+)
+val legacyVarDeclaration = Regex("""\bvar(?=\s+(?:[A-Za-z_\x24]|\{|\[))""")
+val legacyTypedCodeName = Regex(
+    """<li>(?:<p>)?<code>(?:\.{2,3})?[A-Za-z_\x24][A-Za-z0-9_\x24]*(?:\(\))?</code>[ \t]*\{""",
+)
+val legacyTypedCombinedName = Regex(
+    """<li>(?:<p>)?""" +
+        """[A-Za-z_\x24][A-Za-z0-9_\x24]*(?:[ \t]*,[ \t]*[A-Za-z_\x24][A-Za-z0-9_\x24]*)+""" +
+        """[ \t]+\{""",
+)
+val legacyTypedPlainName = Regex(
+    """<li>(?:<p>)?(?!(?:return|returns)\b)[A-Za-z_\x24][A-Za-z0-9_\x24]*(?:\(\))?[ \t]+\{""",
+    RegexOption.IGNORE_CASE,
+)
+val legacyBracedReturn = Regex(
+    """<li>(?:<p>)?(?:返回|Returns:)[ \t]*\{""",
+    RegexOption.IGNORE_CASE,
+)
+val legacyLinkedReturn = Regex(
+    """<li>返回\s*<a href="[^"]+">(?:ScriptSource|SensorEventEmitter|Thread|Disposable|""" +
+        """AtomicLong|ReentrantLock)</a></li>""",
+)
+val documentationHtmlEntity = Regex(
+    """&(?:#[xX]([0-9A-Fa-f]+)|#([0-9]+)|([A-Za-z][A-Za-z0-9]+));""",
+)
+val prohibitedDocumentationNamedEntities = setOf(
+    "ndash",
+    "mdash",
+    "lsquo",
+    "rsquo",
+    "sbquo",
+    "ldquo",
+    "rdquo",
+    "bdquo",
+    "dagger",
+    "Dagger",
+    "bull",
+    "hellip",
+)
+val allowedLegacyAutoJsLineMarkers = setOf(
+    "Auto.js Pro",
+    "Auto.js DevTools",
+    "Auto.js 4",
+    "Auto.js 应用",
+    "github.com/hyb1996/Auto.js",
+    "github.com/TonyJiangWJ/Auto.js",
+    ">Auto.js</td>",
+    "Auto.js图标",
+)
 
 data class AssetRecord(val path: String, val size: Long, val sha256: String)
+
+fun Int.isProhibitedDocumentationSymbol(): Boolean =
+    this in 0x2010..0x2027 ||
+        this in 0x3000..0x303F ||
+        this == 0x30FB ||
+        this in 0xFE10..0xFE6F ||
+        this in 0xFF00..0xFFEF
 
 fun ByteArray.sha256Hex(): String = MessageDigest.getInstance("SHA-256")
     .digest(this)
@@ -131,7 +202,114 @@ fun isSupportedOfflineDocsPath(path: String): Boolean {
     return path.substringAfterLast('.', missingDelimiterValue = "").lowercase() in supportedOfflineDocsExtensions
 }
 
+fun verifyDocumentationStyle() {
+    val violations = mutableListOf<String>()
+    docsDirectory.walkTopDown()
+        .filter(File::isFile)
+        .filter { it.extension.lowercase() in setOf("html", "css", "js") }
+        .forEach { source ->
+            val relative = source.relativeTo(docsDirectory).invariantSeparatorsPath
+            val text = source.readText(Charsets.UTF_8)
+            prohibitedDocumentationSymbol.find(text)?.let { match ->
+                violations += "$relative contains prohibited symbol U+${match.value[0].code.toString(16).uppercase()}"
+            }
+            if (trailingDocumentationWhitespace.containsMatchIn(text)) {
+                violations += "$relative contains trailing whitespace"
+            }
+            documentationHtmlEntity.findAll(text).firstOrNull { match ->
+                val codePoint = when {
+                    match.groupValues[1].isNotEmpty() -> match.groupValues[1].toIntOrNull(16)
+                    match.groupValues[2].isNotEmpty() -> match.groupValues[2].toIntOrNull()
+                    match.groupValues[3] in prohibitedDocumentationNamedEntities -> 0x2010
+                    else -> null
+                }
+                codePoint?.isProhibitedDocumentationSymbol() == true
+            }?.let { match ->
+                violations += "$relative contains a prohibited symbol entity: ${match.value}"
+            }
+            text.firstOrNull { character ->
+                (character.code < 0x20 && character !in setOf('\n', '\r', '\t')) ||
+                    character.code == 0x7F
+            }?.let { character ->
+                violations += "$relative contains prohibited control character U+${character.code.toString(16).uppercase()}"
+            }
+            if (!source.extension.equals("html", ignoreCase = true)) return@forEach
+            if ("此章节待补充或完善..." in text || "Marked by SuperMonster003 on" in text) {
+                violations += "$relative contains a legacy incomplete-section marker"
+            }
+            if (externalMdnTypeLink.containsMatchIn(text)) {
+                violations += "$relative contains an external MDN type link"
+            }
+            if (bareLegacyAutoJsName.containsMatchIn(text)) {
+                violations += "$relative contains the legacy bare AutoJs product name"
+            }
+            if ("packageName: &quot;org.autojs.autojs&quot;" in text) {
+                violations += "$relative contains the legacy current-product package name"
+            }
+            if ("cosnt csvPath" in text) {
+                violations += "$relative contains the misspelled const declaration"
+            }
+            listOf(
+                "verionName",
+                "Emiiter",
+                ">Boolea<",
+                "最快的更新频率]",
+                "应用的签名信息(已弃用",
+                "应用的签名信息 (已弃用</li>",
+            ).firstOrNull(text::contains)?.let { issue ->
+                violations += "$relative contains known legacy text issue: $issue"
+            }
+            if (Regex("""(?m)^[ \t]*r = http\.postJson""").containsMatchIn(text)) {
+                violations += "$relative contains an implicit HTTP example variable"
+            }
+            if (legacyTypedCodeName.containsMatchIn(text) ||
+                legacyTypedCombinedName.containsMatchIn(text) ||
+                legacyTypedPlainName.containsMatchIn(text)
+            ) {
+                violations += "$relative contains a legacy typed-name signature"
+            }
+            if (legacyBracedReturn.containsMatchIn(text)) {
+                violations += "$relative contains a legacy return signature"
+            }
+            if (legacyLinkedReturn.containsMatchIn(text) ||
+                "<li>返回 callback的执行结果</li>" in text
+            ) {
+                violations += "$relative contains a legacy natural-language return signature"
+            }
+            codeBlock.findAll(text).forEach codeBlockLoop@{ match ->
+                val attributes = match.groupValues[1]
+                val body = match.groupValues[2]
+                val preservesVar = "lang-kotlin" in attributes.lowercase() ||
+                    ("var sales = &lt;sales" in body && "for each( var price" in body) ||
+                    listOf(
+                        "let selector = 1;",
+                        "const selector = 1;",
+                        "var selector = 1;",
+                    ).all(body::contains)
+                if (!preservesVar && legacyVarDeclaration.containsMatchIn(body)) {
+                    violations += "$relative contains a legacy JavaScript var declaration"
+                    return@codeBlockLoop
+                }
+            }
+            text.lineSequence().forEachIndexed { index, line ->
+                if ("Auto.js" in line &&
+                    allowedLegacyAutoJsLineMarkers.none(line::contains)
+                ) {
+                    violations += "$relative:${index + 1} uses Auto.js outside an allowed historical context"
+                }
+            }
+        }
+    if (violations.isNotEmpty()) {
+        throw GradleException(
+            "Offline documentation style verification failed:\n" +
+                violations.take(20).joinToString(separator = "\n") { " - $it" } +
+                if (violations.size > 20) "\n - ... and ${violations.size - 20} more" else "",
+        )
+    }
+}
+
 fun verifySourceAssets(): List<AssetRecord> {
+    verifyDocumentationStyle()
     val records = sourceAssetRecords(docsDirectory)
     if (records != configuredOfflineDocsRecords) {
         throw GradleException(
@@ -430,9 +608,16 @@ val generatedOfflineDocsAssetsDirectory = layout.buildDirectory.dir("generated/o
 val generatedOfflineDocsInventoryFile = generatedOfflineDocsAssetsDirectory.map {
     it.file(offlineDocsInventoryFile)
 }
+val verifyOfflineDocsStyle = tasks.register("verifyOfflineDocsStyle") {
+    group = "verification"
+    description = "Verifies the normalized Offline Documentation style"
+    inputs.dir(docsDirectory)
+    doLast { verifyDocumentationStyle() }
+}
 val generateOfflineDocsInventory = tasks.register("generateOfflineDocsInventory") {
     group = "build"
     description = "Generates the signed Offline Documentation content inventory"
+    dependsOn(verifyOfflineDocsStyle)
     inputs.dir(docsDirectory)
     outputs.file(generatedOfflineDocsInventoryFile)
 

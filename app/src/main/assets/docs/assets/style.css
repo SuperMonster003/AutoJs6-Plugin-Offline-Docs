@@ -161,6 +161,29 @@ em code {
     margin-right: 0;
 }
 
+.doc-status {
+    color: #37474F;
+    background-color: #ECEFF1;
+    border-left: .25em solid #78909C;
+    margin: 0 0 1em;
+    padding: .75em 1em;
+    line-height: 1.5;
+}
+
+.doc-status p:last-child {
+    margin-bottom: 0;
+}
+
+.doc-status strong {
+    color: inherit;
+}
+
+.doc-status--incomplete {
+    color: #5D4037;
+    background-color: #FFF8E1;
+    border-left-color: #F9A825;
+}
+
 ul.plain {
     list-style: none;
 }
@@ -652,6 +675,18 @@ blockquote {
 
     .api_stability code {
         background: rgba(255, 255, 255, .1);
+    }
+
+    .doc-status {
+        color: #CFD8DC;
+        background-color: #263238;
+        border-left-color: #78909C;
+    }
+
+    .doc-status--incomplete {
+        color: #FFE082;
+        background-color: #3E3520;
+        border-left-color: #F9A825;
     }
 
     #column2 .line {

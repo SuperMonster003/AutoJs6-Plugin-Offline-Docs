@@ -6,9 +6,10 @@
 
 # v1.0.1
 
-###### 2026/07/23
+###### 2026/07/24
 
 * `Improvement` Replaced the fixed content fingerprint baseline with content metadata and an inventory generated automatically from the current documentation assets, allowing the assets to be updated directly
+* `Improvement` Aligned the built-in documentation with the AutoJs6 API reference style and standardized the current product name, JavaScript variable declarations, local type links, incomplete-section notices, and ASCII punctuation
 
 # v1.0.0
 

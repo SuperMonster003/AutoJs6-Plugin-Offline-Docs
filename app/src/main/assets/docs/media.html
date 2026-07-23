@@ -194,43 +194,42 @@
         <div id="apicontent">
             <h1>多媒体 (Media)<span><a class="mark" href="#media_media" id="media_media">#</a></span></h1>
 <hr>
-<p style="font: italic 1em sans-serif; color: #78909C">此章节待补充或完善...</p>
-<p style="font: italic 1em sans-serif; color: #78909C">Marked by SuperMonster003 on Oct 22, 2022.</p>
-
-<hr>
+<aside class="doc-status doc-status--incomplete" data-marked-by="SuperMonster003" data-marked-on="2022-10-22">
+<p><strong>文档状态:</strong> 此章节仍在补充或完善中.</p>
+</aside>
 <p>media模块提供多媒体编程的支持. 目前仅支持音乐播放和媒体文件扫描. 后续会结合UI加入视频播放等功能.</p>
-<p>需要注意是, 使用该模块播放音乐时是在后台异步播放的, 在脚本结束后会自动结束播放, 因此可能需要插入诸如<code>sleep()</code>的语句来使脚本保持运行. 例如：</p>
+<p>需要注意是, 使用该模块播放音乐时是在后台异步播放的, 在脚本结束后会自动结束播放, 因此可能需要插入诸如<code>sleep()</code>的语句来使脚本保持运行. 例如:</p>
 <pre><code>//播放音乐
 media.playMusic(&quot;/sdcard/1.mp3&quot;);
 //让音乐播放完
 sleep(media.getMusicDuration());
 </code></pre><h2>media.scanFile(path)<span><a class="mark" href="#media_media_scanfile_path" id="media_media_scanfile_path">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>path</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 媒体文件路径</li>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 媒体文件路径</li>
 </ul>
-</div><p>扫描路径path的媒体文件, 将它加入媒体库中；或者如果该文件以及被删除, 则通知媒体库移除该文件.</p>
-<p>媒体库包括相册、音乐库等, 因此该函数可以用于把某个图片文件加入相册.</p>
+</div><p>扫描路径path的媒体文件, 将它加入媒体库中; 或者如果该文件以及被删除, 则通知媒体库移除该文件.</p>
+<p>媒体库包括相册, 音乐库等, 因此该函数可以用于把某个图片文件加入相册.</p>
 <pre><code>//请求截图
 requestScreenCapture(false);
 //截图
-var im = captureScreen();
-var path = &quot;/sdcard/screenshot.png&quot;;
+let im = captureScreen();
+let path = &quot;/sdcard/screenshot.png&quot;;
 //保存图片
 im.saveTo(path);
 //把图片加入相册
 media.scanFile(path);
 </code></pre><h2>media.playMusic(path[, volume, looping])<span><a class="mark" href="#media_media_playmusic_path_volume_looping" id="media_media_playmusic_path_volume_looping">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>path</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">string</a> } 音乐文件路径</li>
-<li><code>volume</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 播放音量, 为0~1的浮点数, 默认为1</li>
-<li><code>looping</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> } 是否循环播放, 如果looping为<code>true</code>则循环播放, 默认为<code>false</code></li>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 音乐文件路径</li>
+<li><strong>volume</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 播放音量, 为0~1的浮点数, 默认为1</li>
+<li><strong>looping</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } 是否循环播放, 如果looping为<code>true</code>则循环播放, 默认为<code>false</code></li>
 </ul>
 </div><p>播放音乐文件path. 该函数不会显示任何音乐播放界面. 如果文件不存在或者文件不是受支持的音乐格式, 则抛出<code>UncheckedIOException</code>异常.</p>
 <pre><code>//播放音乐
 media.playMusic(&quot;/sdcard/1.mp3&quot;);
 //让音乐播放完
 sleep(media.getMusicDuration());
-</code></pre><p>如果要循环播放音乐, 则使用looping参数：</p>
+</code></pre><p>如果要循环播放音乐, 则使用looping参数:</p>
 <pre><code>
 </code></pre><p>//传递第三个参数为true以循环播放音乐
 media.playMusic(&quot;/sdcard/1.mp3&quot;, 1, true);
@@ -240,7 +239,7 @@ sleep(media.getMusicDuration() * 3);</p>
 </code></pre><p>如果要使用音乐播放器播放音乐, 调用<code>app.viewFile(path)</code>函数.</p>
 <h2>media.musicSeekTo(msec)<span><a class="mark" href="#media_media_musicseekto_msec" id="media_media_musicseekto_msec">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>msec</code> { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> } 毫秒数, 表示音乐进度</li>
+<li><strong>msec</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } 毫秒数, 表示音乐进度</li>
 </ul>
 </div><p>把当前播放进度调整到时间msec的位置. 如果当前没有在播放音乐, 则调用函数没有任何效果.</p>
 <p>例如, 要把音乐调到1分钟的位置, 为<code>media.musicSeekTo(60 * 1000)</code>.</p>
@@ -258,17 +257,17 @@ sleep(media.getMusicDuration() - 30 * 1000);
 <p>停止音乐播放. 如果当前没有在播放音乐, 则调用函数没有任何效果.</p>
 <h2>media.isMusicPlaying()<span><a class="mark" href="#media_media_ismusicplaying" id="media_media_ismusicplaying">#</a></span></h2>
 <div class="signature"><ul>
-<li>返回 { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">boolean</a> }</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
 </ul>
 </div><p>返回当前是否正在播放音乐.</p>
 <h2>media.getMusicDuration()<span><a class="mark" href="#media_media_getmusicduration" id="media_media_getmusicduration">#</a></span></h2>
 <div class="signature"><ul>
-<li>返回 { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> }</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
 </ul>
 </div><p>返回当前音乐的时长. 单位毫秒.</p>
 <h2>media.getMusicCurrentPosition()<span><a class="mark" href="#media_media_getmusiccurrentposition" id="media_media_getmusiccurrentposition">#</a></span></h2>
 <div class="signature"><ul>
-<li>返回 { <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">number</a> }</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
 </ul>
 </div><p>返回当前音乐的播放进度(已经播放的时间), 单位毫秒.</p>
 

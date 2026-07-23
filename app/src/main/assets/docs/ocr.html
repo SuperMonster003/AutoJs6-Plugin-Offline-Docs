@@ -302,7 +302,7 @@ let img = images.captureScreen();
 let results = ocr(img, [ 0, 0, 100, 150 ]);
 
 /* 结果过滤, 筛选出文本中可部分匹配 &quot;app&quot; 的结果, 如 &quot;apple&quot;, &quot;disappear&quot; 等. */
-results.filter(text =&gt; text.includes(&#39;app&#39;)); 
+results.filter(text =&gt; text.includes(&#39;app&#39;));
 </code></pre>
 <p>关于 OCR 区域参数 <code>region</code> 的更多用法, 参阅 <a href="ocrOptionsType.html#ocroptionstype_p_region">OcrOptions#region</a> 小节.</p>
 <h3>ocr(imgPath, options?)<span><a class="mark" href="#ocr_ocr_imgpath_options" id="ocr_ocr_imgpath_options">#</a></span></h3>

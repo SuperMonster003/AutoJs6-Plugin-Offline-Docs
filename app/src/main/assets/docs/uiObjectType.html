@@ -764,7 +764,7 @@ detect(w, &#39;p3&#39;); /* 同上. */
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="uiObjectType.html">UiObject</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> }</li>
 </ul>
 <p>返回其索引为 <code>i</code> 的子控件.</p>
-<p><code>i</code> 为正整数或 <code>0</code>, 返回正数索引子控件,<br><code>i</code> 为负整数, 返回倒数索引子控件,  </p>
+<p><code>i</code> 为正整数或 <code>0</code>, 返回正数索引子控件,<br><code>i</code> 为负整数, 返回倒数索引子控件,</p>
 <pre><code class="lang-js">let w = pickup(/.+/);
 w.child(3);
 w.compass(&#39;c3&#39;); /* 同上. */
@@ -843,7 +843,7 @@ console.log(w.find().length); /* e.g. 20 */
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="uiObjectType.html">UiObject</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> }</li>
 </ul>
 <p>返回其索引为 <code>i</code> 的兄弟控件.</p>
-<p><code>i</code> 为正整数或 <code>0</code>, 返回正数索引兄弟控件,<br><code>i</code> 为负整数, 返回倒数索引兄弟控件,  </p>
+<p><code>i</code> 为正整数或 <code>0</code>, 返回正数索引兄弟控件,<br><code>i</code> 为负整数, 返回倒数索引兄弟控件,</p>
 <p>当 <code>i</code> 与 <a href="#uiobjecttype_m_indexinparent">indexInParent()</a> 相同时, 返回其自身.</p>
 <pre><code class="lang-js">let w = pickup(/.+/);
 w.sibling(0); /* 第 1 (索引为 0) 的兄弟控件. */
@@ -938,7 +938,7 @@ detect(w, &#39;s&lt;2&#39;); /* 同上. */
 <p>返回当前节点在其父控件的索引值.</p>
 <pre><code class="lang-js">/* 例如 p 控件有 3 个子控件 (a, b, c). */
 
-a.indexInParent(); // 0 
+a.indexInParent(); // 0
 p.child(0); /* 对应 a. */
 
 console.log(c.indexInParent()); // 2

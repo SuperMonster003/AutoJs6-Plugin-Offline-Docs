@@ -179,7 +179,12 @@
 <li><span class="stability_undefined"><a href="#datatypes_boolean">Boolean</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_number">Number</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_string">String</a></span></li>
+<li><span class="stability_undefined"><a href="#datatypes_symbol">Symbol</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_array">Array</a></span></li>
+<li><span class="stability_undefined"><a href="#datatypes_arraybuffer">ArrayBuffer</a></span></li>
+<li><span class="stability_undefined"><a href="#datatypes_dataview">DataView</a></span></li>
+<li><span class="stability_undefined"><a href="#datatypes_typedarray">TypedArray</a></span></li>
+<li><span class="stability_undefined"><a href="#datatypes_uint8array">Uint8Array</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_tuple">Tuple</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_function">Function</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_regexp">RegExp</a></span></li>
@@ -330,10 +335,9 @@
         <div id="apicontent">
             <h1>数据类型 (Data Types)<span><a class="mark" href="#datatypes_data_types" id="datatypes_data_types">#</a></span></h1>
 <hr>
-<p style="font: italic 1em sans-serif; color: #78909C">此章节待补充或完善...</p>
-<p style="font: italic 1em sans-serif; color: #78909C">Marked by SuperMonster003 on Feb 22, 2023.</p>
-
-<hr>
+<aside class="doc-status doc-status--incomplete" data-marked-by="SuperMonster003" data-marked-on="2023-02-22">
+<p><strong>文档状态:</strong> 此章节仍在补充或完善中.</p>
+</aside>
 <p>数据类型是用来约束数据的解释.<br>本章节的数据类型包括 [ number / void / any / object / 泛型 / 交叉类型 ] 等.</p>
 <blockquote>
 <p>注: 此章节的类型概念 与 JavaScript 数据类型 (如 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Primitive/">基本类型</a>) 以及 TypeScript 数据类型 (如 <a href="https://www.typescriptlang.org/docs/handbook/2/everyday-types.html">基础类型</a>) 在概念上可能存在出入, 因此仅适用于对文档内容的辅助理解, 不适用于严格的概念参考.</p>
@@ -459,6 +463,24 @@ foo(&#39;3.3&#39;); /* 符合预期. */
 foo(`3e3 equals to ${3000}`); /* 符合预期. */
 foo(NaN.toString()); /* 符合预期. */
 </code></pre>
+<h2>Symbol<span><a class="mark" href="#datatypes_symbol" id="datatypes_symbol">#</a></span></h2>
+<p>符号类型.</p>
+<p>Symbol 是一种不可变的基本类型, 每个 Symbol 值都具有唯一性, 常用于创建不会与其他属性名冲突的对象属性键.</p>
+<p><strong>foo(bar)</strong></p>
+<ul>
+<li><strong>bar</strong> { <span class="type"><a href="#datatypes_symbol">symbol</a></span> }</li>
+</ul>
+<pre><code class="lang-js">let key = Symbol(&quot;id&quot;);
+let anotherKey = Symbol(&quot;id&quot;);
+
+foo(key); /* 符合预期. */
+foo(&quot;id&quot;); /* 不符合预期. */
+console.log(key === anotherKey); // false
+</code></pre>
+<blockquote>
+<p>注: Symbol 是基本类型, 不能使用 <code>new Symbol()</code> 创建实例.</p>
+</blockquote>
+<p>参阅: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Symbol_type">MDN</a></p>
 <h2>Array<span><a class="mark" href="#datatypes_array" id="datatypes_array">#</a></span></h2>
 <p>数组类型.</p>
 <p>后缀 &quot;[]&quot; 代表数组类型.<br>如 <code>number[]</code> 代表一个数组, 其中的元素全部为 <a href="#datatypes_number">number</a> 类型, 且元素数量不限 (包括 0, 即空数组).</p>
@@ -477,6 +499,83 @@ foo([ 3 ]); /* 不符合预期. */
 foo([ &quot;3&quot;, 3 ]); /* 不符合预期. */
 foo([]); /* 符合预期. */
 </code></pre>
+<h2>ArrayBuffer<span><a class="mark" href="#datatypes_arraybuffer" id="datatypes_arraybuffer">#</a></span></h2>
+<p>二进制数据缓冲区类型.</p>
+<p>ArrayBuffer 表示一段具有固定字节长度的连续内存. 它只负责存储原始字节, 不能直接按元素读取或写入, 通常需借助 <a href="#datatypes_dataview">DataView</a> 或 <a href="#datatypes_typedarray">TypedArray</a> 访问其内容.</p>
+<p><strong>foo(bar)</strong></p>
+<ul>
+<li><strong>bar</strong> { <span class="type"><a href="#datatypes_arraybuffer">ArrayBuffer</a></span> }</li>
+</ul>
+<pre><code class="lang-js">let buffer = new ArrayBuffer(4);
+let bytes = new Uint8Array(buffer);
+
+foo(buffer); /* 符合预期. */
+foo(bytes); /* 不符合预期. */
+console.log(buffer.byteLength); // 4
+</code></pre>
+<blockquote>
+<p>注: 由同一 ArrayBuffer 创建的多个视图共享底层数据, 创建视图不会复制缓冲区内容.</p>
+</blockquote>
+<p>参阅: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">MDN</a></p>
+<h2>DataView<span><a class="mark" href="#datatypes_dataview" id="datatypes_dataview">#</a></span></h2>
+<p>二进制数据视图类型.</p>
+<p>DataView 可在 ArrayBuffer 的任意字节偏移处, 按指定数值类型和字节序读取或写入数据.</p>
+<p><strong>foo(bar)</strong></p>
+<ul>
+<li><strong>bar</strong> { <span class="type"><a href="#datatypes_dataview">DataView</a></span> }</li>
+</ul>
+<pre><code class="lang-js">let buffer = new ArrayBuffer(4);
+let view = new DataView(buffer);
+
+view.setUint16(0, 0x1234, false);
+foo(view); /* 符合预期. */
+foo(buffer); /* 不符合预期. */
+console.log(view.getUint16(0, false)); // 4660
+</code></pre>
+<blockquote>
+<p>注: DataView 是 ArrayBuffer 视图, 但不是 TypedArray.</p>
+</blockquote>
+<p>参阅: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView">MDN</a></p>
+<h2>TypedArray<span><a class="mark" href="#datatypes_typedarray" id="datatypes_typedarray">#</a></span></h2>
+<p>类型化数组类型.</p>
+<p>TypedArray 是 Int8Array, Uint8Array, Float32Array 等具体类型化数组的统称. 类型化数组具有固定元素数量, 所有元素使用同一种数值类型, 并通过 ArrayBuffer 存储底层二进制数据.</p>
+<p><strong>foo(bar)</strong></p>
+<ul>
+<li><strong>bar</strong> { <span class="type"><a href="#datatypes_typedarray">TypedArray</a></span> }</li>
+</ul>
+<pre><code class="lang-js">let integers = new Int16Array([ 1, 2 ]);
+let bytes = new Uint8Array([ 3, 4 ]);
+let view = new DataView(new ArrayBuffer(2));
+
+foo(integers); /* 符合预期. */
+foo(bytes); /* 符合预期. */
+foo(view); /* 不符合预期. */
+</code></pre>
+<blockquote>
+<p>注: TypedArray 是文档对具体类型化数组的统称, 不能使用 <code>new TypedArray()</code> 直接创建实例.</p>
+</blockquote>
+<p>参阅: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">MDN</a></p>
+<h2>Uint8Array<span><a class="mark" href="#datatypes_uint8array" id="datatypes_uint8array">#</a></span></h2>
+<p>无符号 8 位整数数组类型.</p>
+<p>Uint8Array 是一种 TypedArray, 每个元素占用 1 字节, 取值范围为 0 到 255.</p>
+<p><strong>foo(bar)</strong></p>
+<ul>
+<li><strong>bar</strong> { <span class="type"><a href="#datatypes_uint8array">Uint8Array</a></span> }</li>
+</ul>
+<pre><code class="lang-js">let bytes = new Uint8Array([ 0, 255 ]);
+let signedBytes = new Int8Array([ 0, 127 ]);
+
+foo(bytes); /* 符合预期. */
+foo(signedBytes); /* 不符合预期. */
+
+bytes[0] = 256;
+bytes[1] = -1;
+console.log([ bytes[0], bytes[1] ]); // [0, 255]
+</code></pre>
+<blockquote>
+<p>注: 超出 0 到 255 的赋值会按无符号 8 位整数规则转换. Uint8Array 不会像 Uint8ClampedArray 一样执行钳制.</p>
+</blockquote>
+<p>参阅: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">MDN</a></p>
 <h2>Tuple<span><a class="mark" href="#datatypes_tuple" id="datatypes_tuple">#</a></span></h2>
 <p>元组类型.</p>
 <p>元组类型严格限制数组的对应类型及元素数量.<br>如 <code>[ number, number, string, number ]</code> 有如下限制:<br>&#45; &#45; 数组有且必有 4 个元素;<br>&#45; &#45; 元素类型依次为 number, number, string, number.</p>
@@ -512,7 +611,7 @@ foo(function () {
 </code></pre>
 <p><strong>foo(bar)</strong></p>
 <ul>
-<li><strong>bar</strong> { <span class="type"><a href="#datatypes_function">(a: </a><a href="#datatypes_string">string</a><a href="#datatypes_function">, b: </a><a href="#datatypes_any">any</a><a href="#datatypes_function">) =&gt; </a><a href="#datatypes_string">string</a></span> }</li>
+<li><strong>bar</strong> { <span class="type"><a href="#datatypes_function">(a:</a><a href="#datatypes_string">string</a><a href="#datatypes_function">, b:</a><a href="#datatypes_any">any</a><a href="#datatypes_function">) =&gt;</a><a href="#datatypes_string">string</a></span> }</li>
 </ul>
 <p>上述 <a href="documentation.html#documentation_方法签名">方法签名</a> 中, bar 为函数参数, 该函数包含两个参函数且返回值为 string 类型.</p>
 <pre><code class="lang-js">/* 参数 a 为 string 类型, b 为 any 类型. */

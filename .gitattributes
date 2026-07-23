@@ -1,4 +1,4 @@
-# Keep the documentation payload identical to the authoritative Git blobs.
+# Keep line endings stable for reproducible documentation normalization.
 app/src/main/assets/docs/**/*.html text eol=lf
 app/src/main/assets/docs/**/*.css text eol=lf
 app/src/main/assets/docs/**/*.js text eol=lf
