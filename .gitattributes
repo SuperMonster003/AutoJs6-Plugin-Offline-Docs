@@ -1,0 +1,6 @@
+# Keep the documentation payload identical to the authoritative Git blobs.
+app/src/main/assets/docs/**/*.html text eol=lf
+app/src/main/assets/docs/**/*.css text eol=lf
+app/src/main/assets/docs/**/*.js text eol=lf
+app/src/main/assets/docs/**/*.png binary
+app/src/main/assets/docs/**/*.woff2 binary

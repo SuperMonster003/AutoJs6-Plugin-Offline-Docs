@@ -1,0 +1,20 @@
+{
+  "changelog_label_hint": "ヒント",
+  "changelog_label_feature": "機能",
+  "changelog_label_fix": "修正",
+  "changelog_label_improvement": "改善",
+  "changelog_label_dependency": "依存関係",
+  "$data": {
+    "v1.0.0": {
+      "released_date": "2026/07/23",
+      "feature": [
+        "契約バージョン 1 の検出と単一 universal APK を備えた独立 AutoJs6 6.6.4 オフラインドキュメントコンテンツプラグインを公開",
+        "161 個のドキュメントファイル, ローカライズしたメタデータ, 完全な Apache-2.0, GPL-3.0, MIT, OFL-1.1 通知を同梱"
+      ],
+      "improvement": [
+        "正規コンテンツ指紋, 契約メタデータ, 既知のリンク切れ基準, 単一 universal APK, `lib/*.so` ペイロード不在, ライセンス資産の JVM と APK 検査を追加",
+        "バイト単位でコピーしたドキュメント内容の正確な AutoJs6 ソースコミットとソースパスを記録"
+      ]
+    }
+  }
+}
