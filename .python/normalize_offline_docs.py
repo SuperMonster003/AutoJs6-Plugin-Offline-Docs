@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Normalize the bundled AutoJs6 documentation to the current reference style."""
+"""Verify generated AutoJs6 offline documentation without modifying it."""
 
 from __future__ import annotations
 
@@ -177,6 +177,7 @@ ALLOWED_LEGACY_AUTOJS_LINE_MARKERS = (
     "Auto.js DevTools",
     "Auto.js 4",
     "Auto.js 应用",
+    "Auto.js 版本",
     "github.com/hyb1996/Auto.js",
     "github.com/TonyJiangWJ/Auto.js",
     ">Auto.js</td>",
@@ -234,7 +235,7 @@ LINKED_RETURN_PATTERN = re.compile(
 PROHIBITED_CONTROL_PATTERN = re.compile(r"[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]")
 TRAILING_HORIZONTAL_WHITESPACE_PATTERN = re.compile(r"[ \t]+(?=\r?$)", re.MULTILINE)
 PUNCTUATION_SPACE_BEFORE_NON_TEXT_PATTERN = re.compile(
-    r"([,;:])[ \t]+(?=(?:</|<br\b))",
+    r"([,;:])[ \t]+(?=(?:</(?!a\b)|<br\b))",
     re.IGNORECASE,
 )
 LEGACY_MARKER_PATTERN = re.compile(
@@ -267,7 +268,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="report files that are not normalized without modifying them",
+        help="retained for compatibility; validation is always read-only",
     )
     return parser.parse_args()
 
@@ -564,13 +565,8 @@ def read_lf(path: Path) -> str:
         return source.read()
 
 
-def write_lf(path: Path, text: str) -> None:
-    with path.open("w", encoding="utf-8", newline="\n") as target:
-        target.write(text)
-
-
 def main() -> int:
-    args = parse_args()
+    parse_args()
     paths = sorted(DOCS_DIR.rglob("*.html"))
     if not paths:
         raise FileNotFoundError(f"No HTML documentation found in {DOCS_DIR}")
@@ -583,19 +579,16 @@ def main() -> int:
         validate(normalized, path)
         if normalized != original:
             changed.append(path)
-            if not args.check:
-                write_lf(path, normalized)
 
-    if args.check and changed:
+    if changed:
         print("Offline documentation requires normalization:")
         for path in changed:
             print(f"  {path.relative_to(ROOT).as_posix()}")
         return 1
 
-    action = "checked" if args.check else "normalized"
     summary = [f"files={len(paths)}", f"changed={len(changed)}"]
     summary.extend(f"{key}={value}" for key, value in sorted(stats.items()))
-    print(f"Offline documentation {action}: {', '.join(summary)}")
+    print(f"Offline documentation checked: {', '.join(summary)}")
     return 0
 
 

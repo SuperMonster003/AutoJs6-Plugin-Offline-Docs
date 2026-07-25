@@ -64,12 +64,13 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=161
-totalBytes=6973820
-contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
-sourceRepository=SuperMonster003/AutoJs6
-sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
-sourcePath=app/src/main/assets-app/docs
+fileCount=164
+totalBytes=8565450
+contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+sourceRepository=SuperMonster003/AutoJs6-Documentation
+sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourcePath=api
+sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
@@ -82,7 +83,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
-`assets/docs/`의 현재 문서 자산에서 콘텐츠 메타데이터와 인벤토리를 자동으로 파생합니다. 호스트는 메타데이터, 인벤토리 및 파일 콘텐츠가 서로 일치하는지 검증합니다.
+`assets/docs/`의 현재 문서 자산에서 콘텐츠 메타데이터와 인벤토리를 자동으로 파생합니다. 호스트는 메타데이터, 인벤토리 및 파일 콘텐츠가 서로 일치하는지 검증합니다. 오프라인 문서는 제목과 본문을 대상으로 전체 텍스트 검색을 지원하며 검색 결과에서 일치하는 섹션으로 바로 이동할 수 있습니다.
 
 ******
 
@@ -118,10 +119,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v1.0.1
 
-###### 2026/07/24
+###### 2026/07/25
 
 * `개선` 고정 콘텐츠 지문 기준을 현재 문서 자산에서 자동 생성되는 콘텐츠 메타데이터와 인벤토리로 대체하여 자산을 직접 업데이트할 수 있도록 변경
+* `개선` AutoJs6 공식 Markdown 소스에서 오프라인 문서를 생성하고 동기화하여 온라인 및 오프라인 콘텐츠의 일관성 유지
 * `개선` 내장 문서를 AutoJs6 API 참조 형식으로 통일하고, 현재 제품명, JavaScript 변수 선언, 로컬 타입 링크, 미완성 섹션 안내 및 ASCII 문장 부호를 표준화
+* `개선` 제목과 본문을 대상으로 하는 전체 텍스트 검색 및 일치하는 섹션으로 바로 이동하는 기능으로 오프라인 문서 탐색 환경 개선
 
 # v1.0.0
 
@@ -162,7 +165,7 @@ app/src/main/res/raw-*/plugin_instruction.md
 app/src/main/assets/doc/CHANGELOG-*.md
 ```
 
-`strings.xml`에는 현지화된 플러그인 설명이 포함됩니다; `plugin_instruction.md`에는 호스트에서 표시하는 사용 설명이 포함됩니다. README와 CHANGELOG는 `.python/generate_markdown.py`가 JSON 소스에서 생성하며 완전한 CHANGELOG는 `app/src/main/assets/doc/`에 출력됩니다.
+`strings.xml`에는 현지화된 플러그인 설명이 포함됩니다; `plugin_instruction.md`에는 호스트에서 표시하는 사용 설명이 포함됩니다. `.python/normalize_offline_docs.py`는 생성된 오프라인 문서를 변경하지 않고 검증합니다. README와 CHANGELOG는 `.python/generate_markdown.py`가 JSON 소스에서 생성하며 완전한 CHANGELOG는 `app/src/main/assets/doc/`에 출력됩니다.
 
 ******
 

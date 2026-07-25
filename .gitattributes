@@ -1,4 +1,4 @@
-# Keep line endings stable for reproducible documentation normalization.
+# Keep line endings stable for reproducible generated documentation.
 app/src/main/assets/docs/**/*.html text eol=lf
 app/src/main/assets/docs/**/*.css text eol=lf
 app/src/main/assets/docs/**/*.js text eol=lf

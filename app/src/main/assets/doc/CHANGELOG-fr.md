@@ -6,10 +6,12 @@
 
 # v1.0.1
 
-###### 2026/07/24
+###### 2026/07/25
 
 * `Amélioration` Remplacement de la base fixe de l'empreinte du contenu par des métadonnées de contenu et un inventaire générés automatiquement à partir des ressources de documentation actuelles, permettant leur mise à jour directe
+* `Amélioration` Génération et synchronisation de la documentation hors ligne à partir des sources Markdown officielles d'AutoJs6, afin d'aligner les contenus en ligne et hors ligne
 * `Amélioration` Harmonisation de la documentation intégrée avec le style de référence de l'API AutoJs6 et normalisation du nom actuel du produit, des déclarations de variables JavaScript, des liens de types locaux, des avis de sections à compléter et de la ponctuation ASCII
+* `Amélioration` Amélioration de la navigation dans la documentation hors ligne avec la recherche en texte intégral dans les titres et le contenu, ainsi que l'accès direct aux sections correspondantes
 
 # v1.0.0
 

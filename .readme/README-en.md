@@ -64,12 +64,13 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=161
-totalBytes=6973820
-contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
-sourceRepository=SuperMonster003/AutoJs6
-sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
-sourcePath=app/src/main/assets-app/docs
+fileCount=164
+totalBytes=8565450
+contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+sourceRepository=SuperMonster003/AutoJs6-Documentation
+sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourcePath=api
+sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
@@ -82,7 +83,7 @@ OfflineDocsPluginInfoService publishes PluginInfo through IPluginInfoProvider. T
 
 ******
 
-The content metadata and inventory are automatically derived from the current documentation assets under `assets/docs/`. The host verifies that the metadata, inventory, and file contents are mutually consistent.
+The content metadata and inventory are automatically derived from the current documentation assets under `assets/docs/`. The host verifies that the metadata, inventory, and file contents are mutually consistent. The offline documentation supports full-text search across titles and page body content, with results linking directly to matching sections.
 
 ******
 
@@ -118,10 +119,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 # v1.0.1
 
-###### 2026/07/24
+###### 2026/07/25
 
 * `Improvement` Replaced the fixed content fingerprint baseline with content metadata and an inventory generated automatically from the current documentation assets, allowing the assets to be updated directly
+* `Improvement` Generated and synchronized the offline documentation from the official AutoJs6 Markdown sources, keeping the online and offline content aligned
 * `Improvement` Aligned the built-in documentation with the AutoJs6 API reference style and standardized the current product name, JavaScript variable declarations, local type links, incomplete-section notices, and ASCII punctuation
+* `Improvement` Improved offline documentation navigation with full-text search across titles and content and direct jumps to matching sections
 
 # v1.0.0
 
@@ -162,7 +165,7 @@ app/src/main/res/raw-*/plugin_instruction.md
 app/src/main/assets/doc/CHANGELOG-*.md
 ```
 
-`strings.xml` contains localized plugin descriptions; `plugin_instruction.md` contains usage instructions displayed by the host. README and CHANGELOG files are generated from JSON sources by `.python/generate_markdown.py`, with complete CHANGELOG output written to `app/src/main/assets/doc/`.
+`strings.xml` contains localized plugin descriptions; `plugin_instruction.md` contains usage instructions displayed by the host. `.python/normalize_offline_docs.py` is a read-only validator for the generated offline documentation. README and CHANGELOG files are generated from JSON sources by `.python/generate_markdown.py`, with complete CHANGELOG output written to `app/src/main/assets/doc/`.
 
 ******
 

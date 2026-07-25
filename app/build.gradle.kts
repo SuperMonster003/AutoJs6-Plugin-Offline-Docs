@@ -115,6 +115,7 @@ val allowedLegacyAutoJsLineMarkers = setOf(
     "Auto.js DevTools",
     "Auto.js 4",
     "Auto.js 应用",
+    "Auto.js 版本",
     "github.com/hyb1996/Auto.js",
     "github.com/TonyJiangWJ/Auto.js",
     ">Auto.js</td>",
@@ -355,7 +356,7 @@ fun verifyLicenses() {
         "MIT.txt" to "Permission is hereby granted, free of charge",
         "OFL-1.1.txt" to "SIL OPEN FONT LICENSE",
         "NOTICE.md" to "Lato",
-        "SOURCE_PROVENANCE.md" to "Source repository: `SuperMonster003/AutoJs6`",
+        "SOURCE_PROVENANCE.md" to "Source repository: `SuperMonster003/AutoJs6-Documentation`",
     )
     requiredMarkers.forEach { (name, marker) ->
         if (marker !in contents.getValue(name)) {
@@ -363,8 +364,8 @@ fun verifyLicenses() {
         }
     }
     val sourceProvenance = contents.getValue("SOURCE_PROVENANCE.md")
-    if (!Regex("""(?m)^- Source commit: `[0-9a-f]{40}`$""").containsMatchIn(sourceProvenance)) {
-        throw GradleException("Offline documentation source provenance has no valid source commit")
+    if (!Regex("""(?m)^- Source base commit: `[0-9a-f]{40}`$""").containsMatchIn(sourceProvenance)) {
+        throw GradleException("Offline documentation source provenance has no valid source base commit")
     }
     val requiredNotices = mapOf(
         "MIT.txt" to listOf(

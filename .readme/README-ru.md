@@ -64,12 +64,13 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=161
-totalBytes=6973820
-contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
-sourceRepository=SuperMonster003/AutoJs6
-sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
-sourcePath=app/src/main/assets-app/docs
+fileCount=164
+totalBytes=8565450
+contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+sourceRepository=SuperMonster003/AutoJs6-Documentation
+sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourcePath=api
+sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
@@ -82,7 +83,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
-Метаданные содержимого и реестр автоматически формируются на основе текущих ресурсов документации в `assets/docs/`. Хост проверяет взаимную согласованность метаданных, реестра и содержимого файлов.
+Метаданные содержимого и реестр автоматически формируются на основе текущих ресурсов документации в `assets/docs/`. Хост проверяет взаимную согласованность метаданных, реестра и содержимого файлов. Офлайн-документация поддерживает полнотекстовый поиск по заголовкам и содержимому страниц с прямым переходом из результатов к найденным разделам.
 
 ******
 
@@ -118,10 +119,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v1.0.1
 
-###### 2026/07/24
+###### 2026/07/25
 
 * `Улучшение` Фиксированная база отпечатка содержимого заменена метаданными содержимого и реестром, автоматически формируемыми из текущих ресурсов документации, что позволяет напрямую обновлять эти ресурсы
+* `Улучшение` Офлайн-документация переведена на генерацию и синхронизацию из официальных исходных файлов Markdown AutoJs6, что обеспечивает единое содержимое онлайн- и офлайн-версий
 * `Улучшение` Встроенная документация приведена к стилю справочника API AutoJs6, а также стандартизированы текущее название продукта, объявления переменных JavaScript, локальные ссылки на типы, уведомления о незавершенных разделах и пунктуация ASCII
+* `Улучшение` Навигация по офлайн-документации улучшена полнотекстовым поиском по заголовкам и содержимому с прямым переходом к найденным разделам
 
 # v1.0.0
 
@@ -162,7 +165,7 @@ app/src/main/res/raw-*/plugin_instruction.md
 app/src/main/assets/doc/CHANGELOG-*.md
 ```
 
-`strings.xml` содержит локализованные описания плагина; `plugin_instruction.md` содержит инструкции, отображаемые хостом. README и CHANGELOG генерируются из JSON-источников с помощью `.python/generate_markdown.py`, а полный CHANGELOG записывается в `app/src/main/assets/doc/`.
+`strings.xml` содержит локализованные описания плагина; `plugin_instruction.md` содержит инструкции, отображаемые хостом. `.python/normalize_offline_docs.py` проверяет сгенерированную офлайн-документацию, не изменяя ее. README и CHANGELOG генерируются из JSON-источников с помощью `.python/generate_markdown.py`, а полный CHANGELOG записывается в `app/src/main/assets/doc/`.
 
 ******
 

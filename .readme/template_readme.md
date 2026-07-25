@@ -59,8 +59,9 @@ fileCount={{ file_count }}
 totalBytes={{ total_bytes }}
 contentSha256={{ content_sha256 }}
 sourceRepository={{ source_repository }}
-sourceCommit={{ source_commit }}
+sourceBaseCommit={{ source_base_commit }}
 sourcePath={{ source_path }}
+sourceGenerator={{ source_generator }}
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```

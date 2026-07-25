@@ -6,10 +6,12 @@
 
 # v1.0.1
 
-###### 2026/07/24
+###### 2026/07/25
 
 * `Improvement` Replaced the fixed content fingerprint baseline with content metadata and an inventory generated automatically from the current documentation assets, allowing the assets to be updated directly
+* `Improvement` Generated and synchronized the offline documentation from the official AutoJs6 Markdown sources, keeping the online and offline content aligned
 * `Improvement` Aligned the built-in documentation with the AutoJs6 API reference style and standardized the current product name, JavaScript variable declarations, local type links, incomplete-section notices, and ASCII punctuation
+* `Improvement` Improved offline documentation navigation with full-text search across titles and content and direct jumps to matching sections
 
 # v1.0.0
 

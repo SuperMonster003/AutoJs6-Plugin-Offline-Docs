@@ -64,12 +64,13 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=161
-totalBytes=6973820
-contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
-sourceRepository=SuperMonster003/AutoJs6
-sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
-sourcePath=app/src/main/assets-app/docs
+fileCount=164
+totalBytes=8565450
+contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+sourceRepository=SuperMonster003/AutoJs6-Documentation
+sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourcePath=api
+sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
@@ -82,7 +83,7 @@ OfflineDocsPluginInfoService publica PluginInfo mediante IPluginInfoProvider. El
 
 ******
 
-Los metadatos del contenido y el inventario se derivan automáticamente de los recursos de documentación actuales en `assets/docs/`. El host verifica que los metadatos, el inventario y el contenido de los archivos sean coherentes entre sí.
+Los metadatos del contenido y el inventario se derivan automáticamente de los recursos de documentación actuales en `assets/docs/`. El host verifica que los metadatos, el inventario y el contenido de los archivos sean coherentes entre sí. La documentación sin conexión permite realizar búsquedas de texto completo en los títulos y el contenido de las páginas, y los resultados llevan directamente a las secciones coincidentes.
 
 ******
 
@@ -118,10 +119,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 # v1.0.1
 
-###### 2026/07/24
+###### 2026/07/25
 
 * `Mejora` Sustituyó la base fija de la huella del contenido por metadatos de contenido y un inventario generados automáticamente a partir de los recursos de documentación actuales, lo que permite actualizar directamente los recursos
+* `Mejora` Generó y sincronizó la documentación sin conexión a partir de las fuentes Markdown oficiales de AutoJs6, manteniendo alineados los contenidos en línea y sin conexión
 * `Mejora` Unificó la documentación integrada con el estilo de referencia de la API de AutoJs6 y normalizó el nombre actual del producto, las declaraciones de variables JavaScript, los enlaces de tipos locales, los avisos de secciones pendientes y la puntuación ASCII
+* `Mejora` Mejoró la navegación de la documentación sin conexión con búsqueda de texto completo en títulos y contenido y saltos directos a las secciones coincidentes
 
 # v1.0.0
 
@@ -162,7 +165,7 @@ app/src/main/res/raw-*/plugin_instruction.md
 app/src/main/assets/doc/CHANGELOG-*.md
 ```
 
-`strings.xml` contiene descripciones localizadas del plugin; `plugin_instruction.md` contiene las instrucciones de uso que muestra el host. README y CHANGELOG se generan desde fuentes JSON mediante `.python/generate_markdown.py`, y la salida CHANGELOG completa se escribe en `app/src/main/assets/doc/`.
+`strings.xml` contiene descripciones localizadas del plugin; `plugin_instruction.md` contiene las instrucciones de uso que muestra el host. `.python/normalize_offline_docs.py` actúa como validador de solo lectura de la documentación sin conexión generada. README y CHANGELOG se generan desde fuentes JSON mediante `.python/generate_markdown.py`, y la salida CHANGELOG completa se escribe en `app/src/main/assets/doc/`.
 
 ******
 

@@ -64,12 +64,13 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=161
-totalBytes=6973820
-contentSha256=572023f28fb24499b34c021b8e8ec83451c4346eb5f48c00cb677905ab5aefda
-sourceRepository=SuperMonster003/AutoJs6
-sourceCommit=37190cd9681b9d4bdc8e786f146b1b88f7818dc2
-sourcePath=app/src/main/assets-app/docs
+fileCount=164
+totalBytes=8565450
+contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+sourceRepository=SuperMonster003/AutoJs6-Documentation
+sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourcePath=api
+sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
 category=offline-docs
 ```
@@ -82,7 +83,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
-`assets/docs/` の現在のドキュメント資産からコンテンツメタデータとインベントリを自動的に導出します. ホストはメタデータ, インベントリ, ファイル内容が互いに整合していることを検証します.
+`assets/docs/` の現在のドキュメント資産からコンテンツメタデータとインベントリを自動的に導出します. ホストはメタデータ, インベントリ, ファイル内容が互いに整合していることを検証します. オフラインドキュメントではタイトルと本文を対象に全文検索でき, 検索結果から一致するセクションへ直接移動できます.
 
 ******
 
@@ -118,10 +119,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v1.0.1
 
-###### 2026/07/24
+###### 2026/07/25
 
 * `改善` 固定コンテンツ指紋基準を現在のドキュメント資産から自動生成するコンテンツメタデータとインベントリに置き換え, 資産を直接更新可能に変更
+* `改善` AutoJs6 公式 Markdown ソースからオフラインドキュメントを生成して同期し, オンライン版とオフライン版の内容を統一
 * `改善` 内蔵ドキュメントを AutoJs6 API リファレンス形式に統一し, 現行の製品名, JavaScript 変数宣言, ローカル型リンク, 未完成セクションの案内, ASCII 句読点を標準化
+* `改善` タイトルと本文を対象とする全文検索と一致するセクションへの直接移動により, オフラインドキュメントの閲覧性を改善
 
 # v1.0.0
 
@@ -162,7 +165,7 @@ app/src/main/res/raw-*/plugin_instruction.md
 app/src/main/assets/doc/CHANGELOG-*.md
 ```
 
-`strings.xml` にはローカライズされたプラグイン説明が含まれます; `plugin_instruction.md` にはホスト側で表示される使用説明が含まれます. README と CHANGELOG は `.python/generate_markdown.py` により JSON ソースから生成され, 完全な CHANGELOG は `app/src/main/assets/doc/` に出力されます.
+`strings.xml` にはローカライズされたプラグイン説明が含まれます; `plugin_instruction.md` にはホスト側で表示される使用説明が含まれます. `.python/normalize_offline_docs.py` は生成されたオフラインドキュメントを変更せずに検証します. README と CHANGELOG は `.python/generate_markdown.py` により JSON ソースから生成され, 完全な CHANGELOG は `app/src/main/assets/doc/` に出力されます.
 
 ******
 

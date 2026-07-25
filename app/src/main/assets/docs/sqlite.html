@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>活动 (Activity) | AutoJs6 文档 - 6.6.4</title>
+    <title>SQLite | AutoJs6 文档 - 6.6.4</title>
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/sh.css">
     <link rel="stylesheet" href="plugins/docsify-copy-code@2-styles.css">
     <link rel="stylesheet" href="plugins/zoom-image-styles.css">
-    <link rel="canonical" href="https://nodejs.org/api/activity.html">
+    <link rel="canonical" href="https://nodejs.org/api/sqlite.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="user-scalable=no">
 </head>
-<body class="alt apidoc" id="api-section-activity">
+<body class="alt apidoc" id="api-section-sqlite">
 <div id="content" class="clearfix">
     <div id="column2" class="interior">
         <div id="intro" class="interior">
@@ -68,7 +68,7 @@
 <li><a class="nav-sensors" href="sensors.html">Sensor - 传感器</a></li>
 <li><a class="nav-shell" href="shell.html">Shell</a></li>
 <li><a class="nav-shizuku" href="shizuku.html">Shizuku</a></li>
-<li><a class="nav-sqlite" href="sqlite.html">SQLite - 数据库</a></li>
+<li><a class="nav-sqlite active" href="sqlite.html">SQLite - 数据库</a></li>
 <li><a class="nav-s13n" href="s13n.html">Standardization - 标准化</a></li>
 <li><a class="nav-storages" href="storages.html">Storage - 储存</a></li>
 <li><a class="nav-tasks" href="tasks.html">Task - 任务</a></li>
@@ -103,7 +103,7 @@
 <li><a class="nav-intentType" href="intentType.html">Intent - 意图</a></li>
 <li><a class="nav-runtime" href="runtime.html">Runtime - 运行时</a></li>
 <li><a class="nav-context" href="context.html">Context - 上下文</a></li>
-<li><a class="nav-activity active" href="activity.html">Activity - 活动</a></li>
+<li><a class="nav-activity" href="activity.html">Activity - 活动</a></li>
 </ul>
 <div class="line"></div>
 
@@ -161,7 +161,7 @@
 
     </div>
 
-    <div id="column1" data-id="activity" class="interior">
+    <div id="column1" data-id="sqlite" class="interior">
         <header>
             <h1>AutoJs6 文档 - 6.6.4</h1>
             <div id="gtoc">
@@ -206,26 +206,65 @@
         <div id="toc">
             <h2>目录</h2>
 <ul>
-<li><span class="stability_undefined"><a href="#activity_activity">活动 (Activity)</a></span></li>
+<li><span class="stability_undefined"><a href="#sqlite_sqlite">SQLite</a></span><ul>
+<li><span class="stability_undefined"><a href="#sqlite_sqlite_1">[@] sqlite</a></span><ul>
+<li><span class="stability_undefined"><a href="#sqlite_sqlite_databasefilepath_options_callback">sqlite(databaseFilePath, options?, callback?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#sqlite_m_open">[m] open</a></span><ul>
+<li><span class="stability_undefined"><a href="#sqlite_open_databasefilepath_options_callback">open(databaseFilePath, options?, callback?)</a></span></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
 
         <div id="apicontent">
-            <h1>活动 (Activity)<span><a class="mark" href="#activity_activity" id="activity_activity">#</a></span></h1>
-<p>Activity 是 Android 的关键组件.</p>
-<p>Activity 的启动和组合方式是 Android 应用模型的基本组成部分.<br></p>
-<p>Android 系统通过调用与其生命周期特定阶段相对应的特定回调方法来启动 Activity 实例中的代码. 当一个应用调用另一个应用时, 调用方会调用另一个应用中的 Activity, 而非整个应用. 通过这种方式, Activity 充当了应用与用户互动的入口点.<br></p>
-<p>Activity 提供窗口用于界面的绘制. 此窗口通常会填满屏幕并浮动于其他所有窗口之上.</p>
-<p>一个 Activity 通常用于实现应用中的一个屏幕. 例如, 一个 Activity 实现 &quot;设置&quot; 屏幕, 另一个 Activity 实现 &quot;选择文件&quot; 屏幕.</p>
-<p>大多数应用包含多个屏幕, 即多个 Activity. 通常, 应用中的一个 Activity 会被指定为主 Activity, 这是应用启动时出现的首个屏幕. 每个 Activity 可启动另一个 Activity 以执行不同操作.</p>
-<p>在 AutoJs6 的 UI 模式下, 存在一个全局可用的 activity 对象:</p>
-<pre><code class="lang-js">&#39;ui&#39;;
-typeof activity === &#39;object&#39;; // true
-species(activity); // JavaObject
-util.getClassName(activity); // org.autojs.autojs.execution.ScriptExecuteActivity
+            <h1>SQLite<span><a class="mark" href="#sqlite_sqlite" id="sqlite_sqlite">#</a></span></h1>
+<p><code>sqlite</code> 模块用于在脚本中以较低门槛操作 SQLite 数据库文件, 支持常见的建表/增删改查/原生 SQL 查询, 以及事务封装与游标结果的便捷转换.</p>
+<hr>
+<p style="font: bold 2em sans-serif; color: #FF7043">sqlite</p>
+
+<hr>
+<h2>[@] sqlite<span><a class="mark" href="#sqlite_sqlite_1" id="sqlite_sqlite_1">#</a></span></h2>
+<p>sqlite 可作为全局对象使用:</p>
+<pre><code class="lang-js">log(typeof sqlite); // &quot;function&quot;
+log(typeof sqlite.open); // &quot;function&quot;
 </code></pre>
-<p>activity 是一个 <code>ScriptExecuteActivity</code> 实例, 同时也是一个 <code>Activity</code> 实例, 详见 <a href="dataTypes.html#datatypes_scriptexecuteactivity">数据类型</a> 章节.</p>
+<h3>sqlite(databaseFilePath, options?, callback?)<span><a class="mark" href="#sqlite_sqlite_databasefilepath_options_callback" id="sqlite_sqlite_databasefilepath_options_callback">#</a></span></h3>
+<p><strong><code>6.6.0</code></strong> <strong><code>Overload [1-3]/3</code></strong></p>
+<ul>
+<li><strong>databaseFilePath</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 数据库文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type">SQLiteOpenOptions</span> } - 选项参数</li>
+<li><strong>[ callback ]</strong> { <span class="type">DatabaseCallback</span> } - 生命周期回调</li>
+<li><ins><strong>returns</strong></ins> { <span class="type">Database</span> } - 数据库对象</li>
+</ul>
+<p>打开 (或创建) 一个数据库, 并返回数据库对象.</p>
+<p>等价集合:</p>
+<ul>
+<li>sqlite(databaseFilePath, options?, callback?)</li>
+<li><a href="#sqlite_opendatabasefilepath_options_callback">sqlite.open(databaseFilePath, options?, callback?)</a></li>
+</ul>
+<h2>[m] open<span><a class="mark" href="#sqlite_m_open" id="sqlite_m_open">#</a></span></h2>
+<h3>open(databaseFilePath, options?, callback?)<span><a class="mark" href="#sqlite_open_databasefilepath_options_callback" id="sqlite_open_databasefilepath_options_callback">#</a></span></h3>
+<p><strong><code>6.6.0</code></strong> <strong><code>Overload [1-3]/3</code></strong></p>
+<ul>
+<li><strong>databaseFilePath</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 数据库文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type">SQLiteOpenOptions</span> } - 选项参数</li>
+<li><strong>[ callback ]</strong> { <span class="type">DatabaseCallback</span> } - 生命周期回调</li>
+<li><ins><strong>returns</strong></ins> { <span class="type">Database</span> } - 数据库对象</li>
+</ul>
+<p>打开 (或创建) 一个数据库, 并返回数据库对象.</p>
+<p>等价集合:</p>
+<ul>
+<li>sqlite.open(databaseFilePath, options?, callback?)</li>
+<li><a href="#sqlite_sqlitedatabasefilepath_options_callback">sqlite(databaseFilePath, options?, callback?)</a></li>
+</ul>
+<blockquote>
+<p>提示: 数据库与游标均属于系统资源, 使用完毕需及时调用 <code>close()</code> 方法.</p>
+</blockquote>
 
         </div>
     </div>
