@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Улучшение",
   "changelog_label_dependency": "Зависимость",
   "$data": {
+    "v6.8.0": {
+      "released_date": "2026/07/25",
+      "improvement": [
+        "Версия versionName плагина согласована с целевой версией документации AutoJs6, а build/versionCode каждого из двух проектов автоматически увеличивается на 1 после успешной синхронизации документации"
+      ]
+    },
     "v1.0.1": {
       "released_date": "2026/07/25",
       "improvement": [

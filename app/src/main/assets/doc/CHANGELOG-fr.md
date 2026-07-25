@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.0
+
+###### 2026/07/25
+
+* `Amélioration` Alignement du versionName du plugin sur la version cible de la documentation AutoJs6 et incrémentation automatique de 1 du build/versionCode de chaque projet après une synchronisation réussie de la documentation
+
 # v1.0.1
 
 ###### 2026/07/25

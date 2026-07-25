@@ -117,6 +117,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.0
+
+###### 2026/07/25
+
+* `改善` プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加
+
 # v1.0.1
 
 ###### 2026/07/25

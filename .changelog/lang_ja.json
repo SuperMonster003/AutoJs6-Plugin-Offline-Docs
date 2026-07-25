@@ -5,6 +5,12 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v6.8.0": {
+      "released_date": "2026/07/25",
+      "improvement": [
+        "プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加"
+      ]
+    },
     "v1.0.1": {
       "released_date": "2026/07/25",
       "improvement": [

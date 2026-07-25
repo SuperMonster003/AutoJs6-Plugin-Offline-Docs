@@ -117,6 +117,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.0
+
+###### 2026/07/25
+
+* `優化` 使插件 versionName 與目標 AutoJs6 文件版本保持一致, 並在文件同步成功時將兩個項目各自的 build/versionCode 自動增加 1
+
 # v1.0.1
 
 ###### 2026/07/25

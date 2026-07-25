@@ -5,6 +5,12 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "依賴",
   "$data": {
+    "v6.8.0": {
+      "released_date": "2026/07/25",
+      "improvement": [
+        "使插件 versionName 與目標 AutoJs6 文件版本保持一致, 並在文件同步成功時將兩個項目各自的 build/versionCode 自動增加 1"
+      ]
+    },
     "v1.0.1": {
       "released_date": "2026/07/25",
       "improvement": [

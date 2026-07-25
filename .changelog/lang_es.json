@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Mejora",
   "changelog_label_dependency": "Dependencia",
   "$data": {
+    "v6.8.0": {
+      "released_date": "2026/07/25",
+      "improvement": [
+        "Alineó el versionName del plugin con la versión de la documentación de AutoJs6 de destino e incrementó automáticamente en 1 el build/versionCode de cada proyecto tras sincronizar correctamente la documentación"
+      ]
+    },
     "v1.0.1": {
       "released_date": "2026/07/25",
       "improvement": [

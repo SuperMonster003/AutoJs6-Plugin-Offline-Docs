@@ -117,6 +117,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.0
+
+###### 2026/07/25
+
+* `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
+
 # v1.0.1
 
 ###### 2026/07/25
