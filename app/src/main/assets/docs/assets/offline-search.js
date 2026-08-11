@@ -2,21 +2,31 @@
     'use strict';
 
     const root = document.querySelector('[data-offline-search]');
-    if (!root) {
+    const toggleButton = document.querySelector(
+        '[data-offline-search-toggle]',
+    );
+    if (!root || !toggleButton) {
         return;
     }
 
     const input = root.querySelector('[data-offline-search-input]');
     const clearButton = root.querySelector('[data-offline-search-clear]');
+    const closeButton = root.querySelector('[data-offline-search-close]');
     const status = root.querySelector('[data-offline-search-status]');
     const results = root.querySelector('[data-offline-search-results]');
     const indexSource = root.getAttribute('data-index-src');
+    if (!input || !clearButton || !closeButton || !status || !results) {
+        return;
+    }
     const maximumResults = 50;
     let preparedEntries = null;
     let loadingPromise = null;
     let searchTimer = null;
+    let searchRequestId = 0;
     let selectedIndex = -1;
     let lastMatches = [];
+    let lastQuery = '';
+    let resultsDismissed = false;
     let composing = false;
 
     function normalize(value) {
@@ -30,6 +40,55 @@
     function setStatus(message, state) {
         status.textContent = message;
         root.setAttribute('data-state', state || '');
+    }
+
+    function resetSelection() {
+        const links = Array.from(
+            results.querySelectorAll('.offline-search-result-link'),
+        );
+        links.forEach(function (link) {
+            link.classList.remove('selected');
+            link.setAttribute('aria-selected', 'false');
+        });
+        selectedIndex = -1;
+        input.removeAttribute('aria-activedescendant');
+    }
+
+    function hideResults() {
+        results.hidden = true;
+        input.setAttribute('aria-expanded', 'false');
+        resetSelection();
+    }
+
+    function dismissResults() {
+        resultsDismissed = true;
+        hideResults();
+    }
+
+    function cancelSearch() {
+        window.clearTimeout(searchTimer);
+        searchTimer = null;
+        searchRequestId += 1;
+    }
+
+    function openSearch(selectContents) {
+        resultsDismissed = false;
+        root.hidden = false;
+        toggleButton.setAttribute('aria-expanded', 'true');
+        input.focus();
+        if (selectContents) {
+            input.select();
+        }
+    }
+
+    function closeSearch(restoreFocus) {
+        cancelSearch();
+        dismissResults();
+        root.hidden = true;
+        toggleButton.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) {
+            toggleButton.focus();
+        }
     }
 
     function prepareIndex(index) {
@@ -172,13 +231,8 @@
         const links = Array.from(
             results.querySelectorAll('.offline-search-result-link'),
         );
-        links.forEach(function (link) {
-            link.classList.remove('selected');
-            link.setAttribute('aria-selected', 'false');
-        });
+        resetSelection();
         if (!links.length) {
-            selectedIndex = -1;
-            input.removeAttribute('aria-activedescendant');
             return;
         }
         selectedIndex = (nextIndex + links.length) % links.length;
@@ -189,13 +243,16 @@
         input.setAttribute('aria-activedescendant', selected.id);
     }
 
-    function renderMatches(matches, terms, total) {
+    function renderMatches(matches, terms, total, showResults) {
         results.textContent = '';
-        selectedIndex = -1;
-        input.removeAttribute('aria-activedescendant');
+        resetSelection();
         if (!matches.length) {
-            results.hidden = false;
-            input.setAttribute('aria-expanded', 'true');
+            if (showResults) {
+                results.hidden = false;
+                input.setAttribute('aria-expanded', 'true');
+            } else {
+                hideResults();
+            }
             setStatus('无搜索结果', 'empty');
             return;
         }
@@ -236,8 +293,12 @@
             list.appendChild(item);
         });
         results.appendChild(list);
-        results.hidden = false;
-        input.setAttribute('aria-expanded', 'true');
+        if (showResults) {
+            results.hidden = false;
+            input.setAttribute('aria-expanded', 'true');
+        } else {
+            hideResults();
+        }
         const suffix = total > matches.length
             ? ', 显示前 ' + matches.length + ' 条'
             : '';
@@ -245,20 +306,26 @@
     }
 
     function searchNow() {
+        window.clearTimeout(searchTimer);
+        searchTimer = null;
+        const requestId = ++searchRequestId;
         const query = normalize(input.value);
         clearButton.hidden = !query;
         if (!query) {
-            results.hidden = true;
+            hideResults();
             results.textContent = '';
-            input.setAttribute('aria-expanded', 'false');
             lastMatches = [];
+            lastQuery = '';
             setStatus('输入关键词搜索全部离线文档', 'idle');
             return;
         }
         const terms = query.split(' ').filter(Boolean);
         setStatus('正在搜索...', 'loading');
         loadIndex().then(function () {
-            if (query !== normalize(input.value)) {
+            if (
+                requestId !== searchRequestId ||
+                query !== normalize(input.value)
+            ) {
                 return;
             }
             const matches = [];
@@ -273,33 +340,59 @@
                     left.entry.heading.localeCompare(right.entry.heading);
             });
             lastMatches = matches.slice(0, maximumResults);
-            renderMatches(lastMatches, terms, matches.length);
+            lastQuery = query;
+            renderMatches(
+                lastMatches,
+                terms,
+                matches.length,
+                !resultsDismissed && !root.hidden,
+            );
         }).catch(function () {
-            results.hidden = true;
+            if (
+                requestId !== searchRequestId ||
+                query !== normalize(input.value)
+            ) {
+                return;
+            }
+            lastMatches = [];
+            lastQuery = '';
+            hideResults();
             setStatus('搜索索引加载失败, 请重新打开文档后再试', 'error');
         });
     }
 
     function scheduleSearch() {
+        resultsDismissed = false;
         window.clearTimeout(searchTimer);
         searchTimer = window.setTimeout(searchNow, 120);
     }
 
     input.addEventListener('focus', function () {
+        const query = normalize(input.value);
+        resultsDismissed = false;
         if (!preparedEntries) {
-            setStatus('正在加载搜索索引...', 'loading');
             loadIndex().then(function () {
-                if (input.value) {
-                    searchNow();
-                } else {
+                if (
+                    !normalize(input.value) &&
+                    root.getAttribute('data-state') === 'error'
+                ) {
                     setStatus('输入关键词搜索全部离线文档', 'idle');
                 }
             }).catch(function () {
                 setStatus('搜索索引加载失败, 请重新打开文档后再试', 'error');
             });
-        } else if (lastMatches.length && input.value) {
+        }
+        if (
+            query &&
+            lastQuery === query &&
+            ['ready', 'empty'].indexOf(
+                root.getAttribute('data-state'),
+            ) !== -1
+        ) {
             results.hidden = false;
             input.setAttribute('aria-expanded', 'true');
+        } else if (query) {
+            scheduleSearch();
         }
     });
     input.addEventListener('compositionstart', function () {
@@ -310,17 +403,24 @@
         scheduleSearch();
     });
     input.addEventListener('input', function () {
+        clearButton.hidden = !normalize(input.value);
         if (!composing) {
             scheduleSearch();
         }
     });
     input.addEventListener('keydown', function (event) {
         if (event.key === 'ArrowDown') {
+            if (results.hidden) {
+                return;
+            }
             event.preventDefault();
             updateSelection(selectedIndex + 1);
         } else if (event.key === 'ArrowUp') {
+            if (results.hidden) {
+                return;
+            }
             event.preventDefault();
-            updateSelection(selectedIndex - 1);
+            updateSelection(selectedIndex < 0 ? -1 : selectedIndex - 1);
         } else if (event.key === 'Enter' && selectedIndex >= 0) {
             const selected = results.querySelector(
                 '.offline-search-result-link.selected',
@@ -329,20 +429,36 @@
                 selected.click();
             }
         } else if (event.key === 'Escape') {
-            results.hidden = true;
-            input.setAttribute('aria-expanded', 'false');
-            input.blur();
+            event.preventDefault();
+            if (!results.hidden) {
+                dismissResults();
+            } else {
+                closeSearch(true);
+            }
         }
     });
+    toggleButton.addEventListener('click', function () {
+        if (root.hidden) {
+            openSearch(false);
+        } else {
+            closeSearch(true);
+        }
+    });
+    closeButton.addEventListener('click', function () {
+        closeSearch(true);
+    });
     clearButton.addEventListener('click', function () {
+        resultsDismissed = false;
         input.value = '';
         searchNow();
         input.focus();
     });
     document.addEventListener('click', function (event) {
-        if (!root.contains(event.target)) {
-            results.hidden = true;
-            input.setAttribute('aria-expanded', 'false');
+        if (
+            !root.contains(event.target) &&
+            !toggleButton.contains(event.target)
+        ) {
+            dismissResults();
         }
     });
     document.addEventListener('keydown', function (event) {
@@ -355,11 +471,11 @@
             ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k');
         if (!editable && shortcut) {
             event.preventDefault();
-            input.focus();
-            input.select();
+            openSearch(true);
         }
     });
 
-    clearButton.hidden = true;
+    closeSearch(false);
+    clearButton.hidden = !normalize(input.value);
     setStatus('输入关键词搜索全部离线文档', 'idle');
 })();
