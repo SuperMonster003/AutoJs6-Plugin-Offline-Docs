@@ -6,8 +6,9 @@
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `優化` 刷新 AutoJs6 6.8.0 API 文件, 補充透過獨立 Python Runtime 插件啟動本機 Python 檔案以及失敗時不回退到 JavaScript 的行為
 * `優化` 使插件 versionName 與目標 AutoJs6 文件版本保持一致, 並在文件同步成功時將兩個項目各自的 build/versionCode 自動增加 1
 
 # v1.0.1

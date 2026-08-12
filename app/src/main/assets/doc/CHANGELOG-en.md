@@ -6,8 +6,9 @@
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `Improvement` Refreshed the AutoJs6 6.8.0 API documentation with local Python file launches through the independent Python Runtime plugin and fail-closed behavior without JavaScript fallback
 * `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
 
 # v1.0.1

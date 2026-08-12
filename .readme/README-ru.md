@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>Плагин содержимого офлайн-документации 6.6.4 для AutoJs6</p>
+  <p>Плагин содержимого офлайн-документации 6.8.0 для AutoJs6</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -44,7 +44,7 @@
 
 ******
 
-Плагин Offline Documentation для AutoJs6 предоставляет полный сайт документации 6.6.4 как отдельно устанавливаемый пакет содержимого.
+Плагин Offline Documentation для AutoJs6 предоставляет полный сайт документации 6.8.0 как отдельно устанавливаемый пакет содержимого.
 
 ******
 
@@ -56,19 +56,19 @@
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
-contentVersion=6.6.4
+contentVersion=6.8.0
 contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=180
+totalBytes=9940465
+contentSha256=85f4791cf50ec068aa31dad06e621ada3cf82f86e3e08b2f0c37ed4753530544
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourceBaseCommit=8aed22caaa7c1c4dcd3c93389e5f93ce5e18f64c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,8 +119,9 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `Улучшение` Обновлена документация API AutoJs6 6.8.0: запуск локальных файлов Python через независимый плагин Python Runtime и отказ без отката к JavaScript
 * `Улучшение` Версия versionName плагина согласована с целевой версией документации AutoJs6, а build/versionCode каждого из двух проектов автоматически увеличивается на 1 после успешной синхронизации документации
 
 # v1.0.1

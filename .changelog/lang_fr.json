@@ -6,8 +6,9 @@
   "changelog_label_dependency": "Dépendance",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/07/25",
+      "released_date": "2026/08/12",
       "improvement": [
+        "Actualisation de la documentation API AutoJs6 6.8.0 avec le lancement des fichiers Python locaux via le plugin Python Runtime indépendant et un échec sans repli vers JavaScript",
         "Alignement du versionName du plugin sur la version cible de la documentation AutoJs6 et incrémentation automatique de 1 du build/versionCode de chaque projet après une synchronisation réussie de la documentation"
       ]
     },

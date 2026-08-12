@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>适用于 AutoJs6 的 6.6.4 离线文档内容插件</p>
+  <p>适用于 AutoJs6 的 6.8.0 离线文档内容插件</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -44,7 +44,7 @@
 
 ******
 
-AutoJs6 Offline Documentation 插件将完整的 6.6.4 文档站点作为可独立安装的内容包提供.
+AutoJs6 Offline Documentation 插件将完整的 6.8.0 文档站点作为可独立安装的内容包提供.
 
 ******
 
@@ -56,19 +56,19 @@ AutoJs6 Offline Documentation 插件将完整的 6.6.4 文档站点作为可独�
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
-contentVersion=6.6.4
+contentVersion=6.8.0
 contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=180
+totalBytes=9940465
+contentSha256=85f4791cf50ec068aa31dad06e621ada3cf82f86e3e08b2f0c37ed4753530544
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourceBaseCommit=8aed22caaa7c1c4dcd3c93389e5f93ce5e18f64c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,8 +119,9 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `优化` 刷新 AutoJs6 6.8.0 API 文档, 补充通过独立 Python Runtime 插件启动本地 Python 文件以及失败时不回退到 JavaScript 的行为
 * `优化` 使插件 versionName 与目标 AutoJs6 文档版本保持一致, 并在文档同步成功时将两个项目各自的 build/versionCode 自动增加 1
 
 # v1.0.1

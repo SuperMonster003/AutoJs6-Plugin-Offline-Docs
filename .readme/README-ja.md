@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>AutoJs6 用オフラインドキュメント 6.6.4 コンテンツプラグイン</p>
+  <p>AutoJs6 用オフラインドキュメント 6.8.0 コンテンツプラグイン</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -44,7 +44,7 @@
 
 ******
 
-AutoJs6 Offline Documentation プラグインは完全な 6.6.4 ドキュメントサイトを個別にインストールできるコンテンツパッケージとして提供します.
+AutoJs6 Offline Documentation プラグインは完全な 6.8.0 ドキュメントサイトを個別にインストールできるコンテンツパッケージとして提供します.
 
 ******
 
@@ -56,19 +56,19 @@ AutoJs6 Offline Documentation プラグインは完全な 6.6.4 ドキュメン�
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
-contentVersion=6.6.4
+contentVersion=6.8.0
 contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=180
+totalBytes=9940465
+contentSha256=85f4791cf50ec068aa31dad06e621ada3cf82f86e3e08b2f0c37ed4753530544
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourceBaseCommit=8aed22caaa7c1c4dcd3c93389e5f93ce5e18f64c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,8 +119,9 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `改善` AutoJs6 6.8.0 API ドキュメントを更新し, 独立した Python Runtime プラグインによるローカル Python ファイル起動と, 失敗時に JavaScript へフォールバックしない動作を追記
 * `改善` プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加
 
 # v1.0.1

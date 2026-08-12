@@ -17,7 +17,7 @@ plugins {
 
 val globalApplicationId = "io.github.supermonster003.autojs6.plugin.offlinedocs"
 val offlineDocsContractVersion = 1
-val offlineDocsContentVersion = "6.6.4"
+val offlineDocsContentVersion = "6.8.0"
 val offlineDocsContentFormat = "autojs6-static-html-v1"
 val offlineDocsAssetRoot = "docs"
 val offlineDocsEntryPoint = "index.html"

@@ -6,8 +6,9 @@
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `Mejora` Actualizó la documentación de la API de AutoJs6 6.8.0 con el inicio de archivos Python locales mediante el plugin Python Runtime independiente y el fallo cerrado sin recurrir a JavaScript
 * `Mejora` Alineó el versionName del plugin con la versión de la documentación de AutoJs6 de destino e incrementó automáticamente en 1 el build/versionCode de cada proyecto tras sincronizar correctamente la documentación
 
 # v1.0.1

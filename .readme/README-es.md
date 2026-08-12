@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>Plugin de contenido de documentación sin conexión 6.6.4 para AutoJs6</p>
+  <p>Plugin de contenido de documentación sin conexión 6.8.0 para AutoJs6</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -44,7 +44,7 @@ El README.md actual admite los siguientes idiomas:
 
 ******
 
-El plugin Offline Documentation de AutoJs6 proporciona el sitio completo de documentación 6.6.4 como paquete de contenido instalable por separado.
+El plugin Offline Documentation de AutoJs6 proporciona el sitio completo de documentación 6.8.0 como paquete de contenido instalable por separado.
 
 ******
 
@@ -56,19 +56,19 @@ El plugin Offline Documentation de AutoJs6 proporciona el sitio completo de docu
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
-contentVersion=6.6.4
+contentVersion=6.8.0
 contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=180
+totalBytes=9940465
+contentSha256=85f4791cf50ec068aa31dad06e621ada3cf82f86e3e08b2f0c37ed4753530544
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourceBaseCommit=8aed22caaa7c1c4dcd3c93389e5f93ce5e18f64c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,8 +119,9 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `Mejora` Actualizó la documentación de la API de AutoJs6 6.8.0 con el inicio de archivos Python locales mediante el plugin Python Runtime independiente y el fallo cerrado sin recurrir a JavaScript
 * `Mejora` Alineó el versionName del plugin con la versión de la documentación de AutoJs6 de destino e incrementó automáticamente en 1 el build/versionCode de cada proyecto tras sincronizar correctamente la documentación
 
 # v1.0.1

@@ -6,8 +6,9 @@
   "changelog_label_dependency": "의존성",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/07/25",
+      "released_date": "2026/08/12",
       "improvement": [
+        "AutoJs6 6.8.0 API 문서를 갱신하고, 독립 Python Runtime 플러그인을 통한 로컬 Python 파일 실행 및 실패 시 JavaScript로 폴백하지 않는 동작을 추가",
         "플러그인의 versionName을 대상 AutoJs6 문서 버전과 일치시키고, 문서 동기화 성공 시 두 프로젝트의 build/versionCode를 각각 자동으로 1 증가"
       ]
     },

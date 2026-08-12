@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>AutoJs6용 오프라인 문서 6.6.4 콘텐츠 플러그인</p>
+  <p>AutoJs6용 오프라인 문서 6.8.0 콘텐츠 플러그인</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -44,7 +44,7 @@
 
 ******
 
-AutoJs6 Offline Documentation 플러그인은 전체 6.6.4 문서 사이트를 독립적으로 설치할 수 있는 콘텐츠 패키지로 제공합니다.
+AutoJs6 Offline Documentation 플러그인은 전체 6.8.0 문서 사이트를 독립적으로 설치할 수 있는 콘텐츠 패키지로 제공합니다.
 
 ******
 
@@ -56,19 +56,19 @@ AutoJs6 Offline Documentation 플러그인은 전체 6.6.4 문서 사이트를 �
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
-contentVersion=6.6.4
+contentVersion=6.8.0
 contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=180
+totalBytes=9940465
+contentSha256=85f4791cf50ec068aa31dad06e621ada3cf82f86e3e08b2f0c37ed4753530544
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourceBaseCommit=8aed22caaa7c1c4dcd3c93389e5f93ce5e18f64c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,8 +119,9 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/12
 
+* `개선` AutoJs6 6.8.0 API 문서를 갱신하고, 독립 Python Runtime 플러그인을 통한 로컬 Python 파일 실행 및 실패 시 JavaScript로 폴백하지 않는 동작을 추가
 * `개선` 플러그인의 versionName을 대상 AutoJs6 문서 버전과 일치시키고, 문서 동기화 성공 시 두 프로젝트의 build/versionCode를 각각 자동으로 1 증가
 
 # v1.0.1
