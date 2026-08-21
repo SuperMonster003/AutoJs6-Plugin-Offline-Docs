@@ -59,16 +59,16 @@ engine=offline-docs
 variant=6.6.4
 contractVersion=1
 requiredHostVersionCode=5240
-contentVersion=6.6.4
+contentVersion=6.8.0
 contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=9984248
-contentSha256=d99a5e5928ad662eca7ae3887cd6194d2b6645836813228751f65debc6bd2759
+totalBytes=10009623
+contentSha256=89ba1e1bbf158e5db78ef962d42f20dab0bc1e80f09d4d7f3f7e4728526d55ab
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
+sourceBaseCommit=c86f5741ad6c228255fcca09147314850c210f33
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -123,6 +123,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 * `優化` 使插件 versionName 與目標 AutoJs6 文件版本保持一致, 並在文件同步成功時將兩個項目各自的 build/versionCode 自動增加 1
 * `優化` 更新內置 AutoJs6 6.8.0 文檔及離線搜尋索引, 補充 YOLO 物件偵測 Preview API 的精確提供方設定, 模型設定檔, 結果類型及穩定錯誤碼
+* `優化` 完善內置 AI 參考文件, 涵蓋插件模型探索, 官方與精確元件選擇器, 多角色訊息歷史, 生成參數, 精確用量和串流負載, 以及完整路由範例
 
 # v1.0.1
 
