@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10025521
-contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
+totalBytes=10032472
+contentSha256=88502a147c30a2f5e53e2d1aee779c420b9af11a8de3d9400b1324f5699561c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
+sourceBaseCommit=fc3a420e04dd27a4015cf331179685dea89c503c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -125,6 +125,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Обновлена встроенная документация AutoJs6 6.8.0 и индекс офлайн-поиска: добавлены Preview API обнаружения объектов YOLO, настройка точного провайдера, профиль модели, типы результатов и стабильные коды ошибок
 * `Улучшение` Дополнен встроенный справочник по ИИ: обнаружение моделей плагина, выбор официального или точного компонента, история сообщений с несколькими ролями, параметры генерации, точные данные об использовании и потоковой передаче, а также полные примеры маршрутизации
 * `Улучшение` Расширены встроенный справочник по ИИ и индекс офлайн-поиска: постоянный Conversation API `ai.session`, фиксированные параметры сессии, правила жизненного цикла с одной новой подсказкой на ход, обнаружение возможностей и явное освобождение ресурсов
+* `Улучшение` Расширены встроенный справочник по ИИ и индекс офлайн-поиска: нативный вывод с ограничениями JSON Schema через `structuredJson`/`responseSchema`, фиксированная schema постоянной сессии, возврат текста JSON и правила ошибок
 
 # v1.0.1
 

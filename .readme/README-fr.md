@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10025521
-contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
+totalBytes=10032472
+contentSha256=88502a147c30a2f5e53e2d1aee779c420b9af11a8de3d9400b1324f5699561c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
+sourceBaseCommit=fc3a420e04dd27a4015cf331179685dea89c503c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -125,6 +125,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Mise à jour de la documentation AutoJs6 6.8.0 intégrée et de l'index de recherche hors ligne avec l'API Preview de détection d'objets YOLO, la configuration du fournisseur exact, le profil de modèle, les types de résultat et les codes d'erreur stables
 * `Amélioration` Documentation de référence IA intégrée complétée avec la découverte des modèles de plugins, les sélecteurs officiels et de composants exacts, l'historique des messages multirôle, les paramètres de génération, les charges utiles précises d'utilisation et de streaming, ainsi que des exemples de routage complets
 * `Amélioration` Référence IA intégrée et index de recherche hors ligne étendus avec l'API Conversation persistante `ai.session`, les paramètres de session fixes, les règles de cycle de vie à un nouveau prompt par tour, la découverte des capacités et la libération explicite des ressources
+* `Amélioration` Référence IA intégrée et index hors ligne étendus avec la sortie contrainte par JSON Schema via `structuredJson`/`responseSchema`, un schema fixe pour les sessions persistantes, le retour de texte JSON et les règles d'échec
 
 # v1.0.1
 

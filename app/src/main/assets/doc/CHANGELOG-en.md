@@ -12,6 +12,7 @@
 * `Improvement` Updated the bundled AutoJs6 6.8.0 documentation and offline search index with the YOLO target-detection Preview API, exact-provider setup, model profile, result types, and stable error codes
 * `Improvement` Completed the bundled AI reference with plugin model discovery, official and exact-component selectors, multi-role message history, generation controls, precise usage and streaming payloads, and complete routing examples
 * `Improvement` Extended the bundled AI reference and offline search index with the persistent `ai.session` Conversation API, fixed session controls, one-prompt-per-turn lifecycle rules, capability discovery, and explicit cleanup semantics
+* `Improvement` Extended the bundled AI reference and offline search index with native JSON Schema constrained output through `structuredJson`/`responseSchema`, fixed persistent-session schemas, JSON text return semantics, and failure behavior
 
 # v1.0.1
 

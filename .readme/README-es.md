@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10025521
-contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
+totalBytes=10032472
+contentSha256=88502a147c30a2f5e53e2d1aee779c420b9af11a8de3d9400b1324f5699561c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
+sourceBaseCommit=fc3a420e04dd27a4015cf331179685dea89c503c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -125,6 +125,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` Se actualizaron la documentación integrada de AutoJs6 6.8.0 y el índice de búsqueda sin conexión con la API Preview de detección de objetos YOLO, la configuración del proveedor exacto, el perfil del modelo, los tipos de resultado y los códigos de error estables
 * `Mejora` Se completó la referencia de IA integrada con descubrimiento de modelos de plugins, selectores oficiales y de componentes exactos, historial de mensajes multirrol, controles de generación, cargas útiles precisas de uso y streaming, y ejemplos completos de enrutamiento
 * `Mejora` Se amplió la referencia de IA integrada y el índice de búsqueda sin conexión con la API de conversación persistente `ai.session`, controles fijos de sesión, reglas de ciclo de vida de un prompt nuevo por turno, descubrimiento de capacidades y semántica de limpieza explícita
+* `Mejora` Se amplió la referencia de IA integrada y el índice sin conexión con salida restringida por JSON Schema mediante `structuredJson`/`responseSchema`, schema fijo para sesiones persistentes, retorno de texto JSON y reglas de fallo
 
 # v1.0.1
 

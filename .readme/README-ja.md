@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10025521
-contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
+totalBytes=10032472
+contentSha256=88502a147c30a2f5e53e2d1aee779c420b9af11a8de3d9400b1324f5699561c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
+sourceBaseCommit=fc3a420e04dd27a4015cf331179685dea89c503c
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -125,6 +125,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` 内蔵 AutoJs6 6.8.0 ドキュメントとオフライン検索インデックスを更新し, YOLO 物体検出 Preview API, 厳密なプロバイダー設定, モデルプロファイル, 結果型, 安定したエラーコードを追加
 * `改善` 内蔵 AI リファレンスを拡充し, プラグインモデル探索, 公式/厳密コンポーネント選択, 複数ロールのメッセージ履歴, 生成パラメータ, 正確な使用量とストリーミングペイロード, 完全なルーティング例に対応
 * `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, 永続 `ai.session` Conversation API, 固定セッション設定, 各ターンで新しいプロンプトだけを渡すライフサイクル規則, 能力探索, 明示的なリソース解放に対応
+* `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, `structuredJson`/`responseSchema` によるネイティブ JSON Schema 制約出力, 永続セッション固定 schema, JSON テキストの戻り値と失敗規則に対応
 
 # v1.0.1
 
