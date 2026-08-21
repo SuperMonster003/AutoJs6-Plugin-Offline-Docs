@@ -64,9 +64,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=181
+totalBytes=9984248
+contentSha256=d99a5e5928ad662eca7ae3887cd6194d2b6645836813228751f65debc6bd2759
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
 sourcePath=api
@@ -119,9 +119,10 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/21
 
 * `Улучшение` Версия versionName плагина согласована с целевой версией документации AutoJs6, а build/versionCode каждого из двух проектов автоматически увеличивается на 1 после успешной синхронизации документации
+* `Улучшение` Обновлена встроенная документация AutoJs6 6.8.0 и индекс офлайн-поиска: добавлены Preview API обнаружения объектов YOLO, настройка точного провайдера, профиль модели, типы результатов и стабильные коды ошибок
 
 # v1.0.1
 

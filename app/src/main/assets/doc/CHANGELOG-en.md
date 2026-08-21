@@ -6,9 +6,10 @@
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/21
 
 * `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
+* `Improvement` Updated the bundled AutoJs6 6.8.0 documentation and offline search index with the YOLO target-detection Preview API, exact-provider setup, model profile, result types, and stable error codes
 
 # v1.0.1
 

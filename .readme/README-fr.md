@@ -64,9 +64,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=181
+totalBytes=9984248
+contentSha256=d99a5e5928ad662eca7ae3887cd6194d2b6645836813228751f65debc6bd2759
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
 sourcePath=api
@@ -119,9 +119,10 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/21
 
 * `Amélioration` Alignement du versionName du plugin sur la version cible de la documentation AutoJs6 et incrémentation automatique de 1 du build/versionCode de chaque projet après une synchronisation réussie de la documentation
+* `Amélioration` Mise à jour de la documentation AutoJs6 6.8.0 intégrée et de l'index de recherche hors ligne avec l'API Preview de détection d'objets YOLO, la configuration du fournisseur exact, le profil de modèle, les types de résultat et les codes d'erreur stables
 
 # v1.0.1
 

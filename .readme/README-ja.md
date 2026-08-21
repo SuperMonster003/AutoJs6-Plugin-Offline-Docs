@@ -64,9 +64,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=181
+totalBytes=9984248
+contentSha256=d99a5e5928ad662eca7ae3887cd6194d2b6645836813228751f65debc6bd2759
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
 sourcePath=api
@@ -119,9 +119,10 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/21
 
 * `改善` プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加
+* `改善` 内蔵 AutoJs6 6.8.0 ドキュメントとオフライン検索インデックスを更新し, YOLO 物体検出 Preview API, 厳密なプロバイダー設定, モデルプロファイル, 結果型, 安定したエラーコードを追加
 
 # v1.0.1
 

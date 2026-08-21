@@ -6,9 +6,10 @@
   "changelog_label_dependency": "依存関係",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/07/25",
+      "released_date": "2026/08/21",
       "improvement": [
-        "プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加"
+        "プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加",
+        "内蔵 AutoJs6 6.8.0 ドキュメントとオフライン検索インデックスを更新し, YOLO 物体検出 Preview API, 厳密なプロバイダー設定, モデルプロファイル, 結果型, 安定したエラーコードを追加"
       ]
     },
     "v1.0.1": {

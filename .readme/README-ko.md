@@ -64,9 +64,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=181
+totalBytes=9984248
+contentSha256=d99a5e5928ad662eca7ae3887cd6194d2b6645836813228751f65debc6bd2759
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
 sourcePath=api
@@ -119,9 +119,10 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/21
 
 * `개선` 플러그인의 versionName을 대상 AutoJs6 문서 버전과 일치시키고, 문서 동기화 성공 시 두 프로젝트의 build/versionCode를 각각 자동으로 1 증가
+* `개선` 내장 AutoJs6 6.8.0 문서와 오프라인 검색 인덱스를 업데이트하여 YOLO 객체 탐지 Preview API, 정확한 공급자 설정, 모델 프로필, 결과 유형 및 안정적인 오류 코드 반영
 
 # v1.0.1
 

@@ -64,9 +64,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=164
-totalBytes=8565450
-contentSha256=521ea5d4e410167d468e7f6dce814017a8fc0f08f6744de7800135bb4c0d6b62
+fileCount=181
+totalBytes=9984248
+contentSha256=d99a5e5928ad662eca7ae3887cd6194d2b6645836813228751f65debc6bd2759
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9
 sourcePath=api
@@ -119,9 +119,10 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.0
 
-###### 2026/07/25
+###### 2026/08/21
 
 * `优化` 使插件 versionName 与目标 AutoJs6 文档版本保持一致, 并在文档同步成功时将两个项目各自的 build/versionCode 自动增加 1
+* `优化` 更新内置 AutoJs6 6.8.0 文档及离线搜索索引, 补充 YOLO 目标检测 Preview API 的精确提供方配置, 模型配置, 返回类型及稳定错误码
 
 # v1.0.1
 

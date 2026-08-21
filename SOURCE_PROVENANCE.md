@@ -1,10 +1,10 @@
 # Source provenance
 
 - Source repository: `SuperMonster003/AutoJs6-Documentation`
-- Source base commit: `8117e0fb4dbb52d13f3b6b958e9f25fd4ce696a9`
+- Source base commit: `6e0d617fb9a52781eccdaecd4ccf6fe0b8d5df2e`
 - Source path: `api`
 - Source generator: `generator/auto-generate-for-autojs6.bat`
-- Documentation version: `6.6.4`
+- Documentation version: `6.8.0`
 - Content metadata: File count, total bytes, and canonical content SHA-256 are derived from the current `app/src/main/assets/docs` tree at build time and written to the manifest and inventory.
 
 The recorded base commit identifies the Git basis of the official
