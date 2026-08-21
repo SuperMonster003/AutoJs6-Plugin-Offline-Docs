@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10032472
-contentSha256=88502a147c30a2f5e53e2d1aee779c420b9af11a8de3d9400b1324f5699561c9
+totalBytes=10038249
+contentSha256=a109d2f0746b118d772a44a5ebd0512e208f7955d83cff6563c0a0c21d3b77fc
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=fc3a420e04dd27a4015cf331179685dea89c503c
+sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -126,6 +126,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 完善内置 AI 参考文档, 覆盖插件模型发现, 官方与精确组件选择器, 多角色消息历史, 生成参数, 精确用量和流式负载, 以及完整路由示例
 * `优化` 扩充内置 AI 参考文档及离线搜索索引, 补充持久 `ai.session` Conversation API, 固定会话参数, 每轮仅传新提示词的生命周期规则, 能力发现及显式资源释放语义
 * `优化` 扩充内置 AI 参考文档及离线搜索索引, 补充 `structuredJson`/`responseSchema` 原生 JSON Schema 约束输出, 持久会话固定 schema, JSON 文本返回及失败语义
+* `优化` 扩充内置 AI 参考文档及离线搜索索引, 补充显式 CPU/GPU/NPU backend profile, `ai.models` 设备可用性及稳定不可用原因, 持久会话固定 backend, GPU 兼容性限制和禁止回退契约
 
 # v1.0.1
 

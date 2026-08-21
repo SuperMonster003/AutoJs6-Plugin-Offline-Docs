@@ -12,7 +12,8 @@
         "내장 AutoJs6 6.8.0 문서와 오프라인 검색 인덱스를 업데이트하여 YOLO 객체 탐지 Preview API, 정확한 공급자 설정, 모델 프로필, 결과 유형 및 안정적인 오류 코드 반영",
         "내장 AI 참조 문서를 보완하여 플러그인 모델 검색, 공식/정확한 구성 요소 선택기, 다중 역할 메시지 기록, 생성 제어, 정확한 사용량 및 스트리밍 페이로드, 전체 라우팅 예제 반영",
         "내장 AI 참조 문서와 오프라인 검색 색인을 확장하여 영구 `ai.session` Conversation API, 고정 세션 제어, 턴마다 새 프롬프트 하나만 전달하는 수명 주기 규칙, 기능 검색 및 명시적 리소스 해제 의미를 반영",
-        "내장 AI 참조 문서와 오프라인 검색 색인을 확장하여 `structuredJson`/`responseSchema` 기반 네이티브 JSON Schema 제약 출력, 영구 세션 고정 schema, JSON 텍스트 반환 및 실패 규칙을 반영"
+        "내장 AI 참조 문서와 오프라인 검색 색인을 확장하여 `structuredJson`/`responseSchema` 기반 네이티브 JSON Schema 제약 출력, 영구 세션 고정 schema, JSON 텍스트 반환 및 실패 규칙을 반영",
+        "내장 AI 참조 문서와 오프라인 검색 색인을 확장하여 명시적 CPU/GPU/NPU backend profile, `ai.models` 기기 가용성과 안정적 사용 불가 사유, 영구 세션 고정 backend, GPU 호환성 제한 및 fallback 금지 계약을 반영"
       ]
     },
     "v1.0.1": {

@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10032472
-contentSha256=88502a147c30a2f5e53e2d1aee779c420b9af11a8de3d9400b1324f5699561c9
+totalBytes=10038249
+contentSha256=a109d2f0746b118d772a44a5ebd0512e208f7955d83cff6563c0a0c21d3b77fc
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=fc3a420e04dd27a4015cf331179685dea89c503c
+sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -126,6 +126,7 @@ category=offline-docs
 * `تحسين` استكمال مرجع الذكاء الاصطناعي المضمن باكتشاف نماذج الإضافات, ومحددات الإضافة الرسمية والمكونات الدقيقة, وسجل الرسائل متعدد الأدوار, وعناصر تحكم التوليد, وبيانات الاستخدام والبث الدقيقة, وأمثلة التوجيه الكاملة
 * `تحسين` توسيع مرجع الذكاء الاصطناعي المضمن وفهرس البحث دون اتصال بإضافة واجهة Conversation الدائمة `ai.session`, وعناصر تحكم جلسة ثابتة, وقواعد دورة حياة بمطالبة جديدة واحدة لكل دورة, واكتشاف القدرات, ودلالات تحرير الموارد الصريح
 * `تحسين` توسيع مرجع الذكاء الاصطناعي المضمن وفهرس البحث دون اتصال بإخراج مقيد أصليا عبر JSON Schema باستخدام `structuredJson` و`responseSchema`, وschema ثابت للجلسات الدائمة, وإرجاع نص JSON, وقواعد الفشل
+* `تحسين` توسيع مرجع الذكاء الاصطناعي المضمن وفهرس البحث دون اتصال بملفات backend profile صريحة لـ CPU/GPU/NPU, وتوافر الجهاز والأسباب الثابتة في `ai.models`, وbackend ثابت للجلسات الدائمة, وحدود توافق GPU, وعقد منع الرجوع
 
 # v1.0.1
 
