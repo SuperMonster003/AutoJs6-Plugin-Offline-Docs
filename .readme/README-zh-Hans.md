@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10009623
-contentSha256=89ba1e1bbf158e5db78ef962d42f20dab0bc1e80f09d4d7f3f7e4728526d55ab
+totalBytes=10025521
+contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c86f5741ad6c228255fcca09147314850c210f33
+sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -124,6 +124,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 使插件 versionName 与目标 AutoJs6 文档版本保持一致, 并在文档同步成功时将两个项目各自的 build/versionCode 自动增加 1
 * `优化` 更新内置 AutoJs6 6.8.0 文档及离线搜索索引, 补充 YOLO 目标检测 Preview API 的精确提供方配置, 模型配置, 返回类型及稳定错误码
 * `优化` 完善内置 AI 参考文档, 覆盖插件模型发现, 官方与精确组件选择器, 多角色消息历史, 生成参数, 精确用量和流式负载, 以及完整路由示例
+* `优化` 扩充内置 AI 参考文档及离线搜索索引, 补充持久 `ai.session` Conversation API, 固定会话参数, 每轮仅传新提示词的生命周期规则, 能力发现及显式资源释放语义
 
 # v1.0.1
 

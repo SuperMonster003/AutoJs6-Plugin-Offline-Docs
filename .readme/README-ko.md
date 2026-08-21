@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10009623
-contentSha256=89ba1e1bbf158e5db78ef962d42f20dab0bc1e80f09d4d7f3f7e4728526d55ab
+totalBytes=10025521
+contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c86f5741ad6c228255fcca09147314850c210f33
+sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -124,6 +124,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` 플러그인의 versionName을 대상 AutoJs6 문서 버전과 일치시키고, 문서 동기화 성공 시 두 프로젝트의 build/versionCode를 각각 자동으로 1 증가
 * `개선` 내장 AutoJs6 6.8.0 문서와 오프라인 검색 인덱스를 업데이트하여 YOLO 객체 탐지 Preview API, 정확한 공급자 설정, 모델 프로필, 결과 유형 및 안정적인 오류 코드 반영
 * `개선` 내장 AI 참조 문서를 보완하여 플러그인 모델 검색, 공식/정확한 구성 요소 선택기, 다중 역할 메시지 기록, 생성 제어, 정확한 사용량 및 스트리밍 페이로드, 전체 라우팅 예제 반영
+* `개선` 내장 AI 참조 문서와 오프라인 검색 색인을 확장하여 영구 `ai.session` Conversation API, 고정 세션 제어, 턴마다 새 프롬프트 하나만 전달하는 수명 주기 규칙, 기능 검색 및 명시적 리소스 해제 의미를 반영
 
 # v1.0.1
 

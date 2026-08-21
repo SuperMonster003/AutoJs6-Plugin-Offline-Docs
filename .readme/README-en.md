@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10009623
-contentSha256=89ba1e1bbf158e5db78ef962d42f20dab0bc1e80f09d4d7f3f7e4728526d55ab
+totalBytes=10025521
+contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c86f5741ad6c228255fcca09147314850c210f33
+sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -124,6 +124,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
 * `Improvement` Updated the bundled AutoJs6 6.8.0 documentation and offline search index with the YOLO target-detection Preview API, exact-provider setup, model profile, result types, and stable error codes
 * `Improvement` Completed the bundled AI reference with plugin model discovery, official and exact-component selectors, multi-role message history, generation controls, precise usage and streaming payloads, and complete routing examples
+* `Improvement` Extended the bundled AI reference and offline search index with the persistent `ai.session` Conversation API, fixed session controls, one-prompt-per-turn lifecycle rules, capability discovery, and explicit cleanup semantics
 
 # v1.0.1
 

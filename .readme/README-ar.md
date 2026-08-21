@@ -65,10 +65,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10009623
-contentSha256=89ba1e1bbf158e5db78ef962d42f20dab0bc1e80f09d4d7f3f7e4728526d55ab
+totalBytes=10025521
+contentSha256=2fe7755ab4409120f183cbbb4af691cb9fd9ecfc0d44c0e19b7af847340f01c3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c86f5741ad6c228255fcca09147314850c210f33
+sourceBaseCommit=845d4a94b1ada26ccc9b9a697f45d25c03e0195a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -124,6 +124,7 @@ category=offline-docs
 * `تحسين` مواءمة versionName للإضافة مع إصدار توثيق AutoJs6 المستهدف, وزيادة build/versionCode تلقائيا بمقدار 1 في كلا المشروعين عند نجاح مزامنة التوثيق
 * `تحسين` تم تحديث وثائق AutoJs6 6.8.0 المضمنة وفهرس البحث دون اتصال لإضافة واجهة YOLO Preview لاكتشاف الأهداف, وإعداد المزود الدقيق, وملف تعريف النموذج, وأنواع النتائج, ورموز الأخطاء الثابتة
 * `تحسين` استكمال مرجع الذكاء الاصطناعي المضمن باكتشاف نماذج الإضافات, ومحددات الإضافة الرسمية والمكونات الدقيقة, وسجل الرسائل متعدد الأدوار, وعناصر تحكم التوليد, وبيانات الاستخدام والبث الدقيقة, وأمثلة التوجيه الكاملة
+* `تحسين` توسيع مرجع الذكاء الاصطناعي المضمن وفهرس البحث دون اتصال بإضافة واجهة Conversation الدائمة `ai.session`, وعناصر تحكم جلسة ثابتة, وقواعد دورة حياة بمطالبة جديدة واحدة لكل دورة, واكتشاف القدرات, ودلالات تحرير الموارد الصريح
 
 # v1.0.1
 
