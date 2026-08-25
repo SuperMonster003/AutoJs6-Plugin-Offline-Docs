@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10038249
-contentSha256=a109d2f0746b118d772a44a5ebd0512e208f7955d83cff6563c0a0c21d3b77fc
+totalBytes=10057274
+contentSha256=da281f7e264406afaa12ff9969304cf361ab8b9db948a59cfd73c28108c7ba86
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -126,7 +126,8 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` 完善內置 AI 參考文件, 涵蓋插件模型探索, 官方與精確元件選擇器, 多角色訊息歷史, 生成參數, 精確用量和串流負載, 以及完整路由範例
 * `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充持久 `ai.session` Conversation API, 固定會話參數, 每輪只傳新提示詞的生命週期規則, 能力探索及明確資源釋放語義
 * `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充 `structuredJson`/`responseSchema` 原生 JSON Schema 約束輸出, 持久會話固定 schema, JSON 文字回傳及失敗語義
-* `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充明確 CPU/GPU/NPU backend profile, `ai.models` 裝置可用性及穩定不可用原因, 持久會話固定 backend, GPU 兼容性限制及禁止回退契約
+* `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充明確 CPU/GPU/NPU backend profile, `ai.catalog` 裝置可用性及穩定不可用原因, 持久會話固定 backend, GPU 兼容性限制及禁止回退契約
+* `優化` 以統一 `ai.catalog` 目標目錄直接取代全部未發佈嘅 AI 列表同設定探測 API, 補齊精確 `target` 路由, 完整回應同會話元數據, 穩定禁止回退錯誤, 並同步在線/離線資產
 
 # v1.0.1
 
