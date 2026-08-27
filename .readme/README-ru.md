@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10057274
-contentSha256=da281f7e264406afaa12ff9969304cf361ab8b9db948a59cfd73c28108c7ba86
+totalBytes=10037498
+contentSha256=f3ca9b16d05c3f61ca082df98c6e0b530f164e0a7d3853f479d4ca51cd413cbc
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -128,6 +128,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Расширены встроенный справочник по ИИ и индекс офлайн-поиска: нативный вывод с ограничениями JSON Schema через `structuredJson`/`responseSchema`, фиксированная schema постоянной сессии, возврат текста JSON и правила ошибок
 * `Улучшение` Расширены встроенный справочник по ИИ и индекс офлайн-поиска: явные backend profile CPU/GPU/NPU, доступность устройства и стабильные причины в `ai.catalog`, фиксированный backend постоянной сессии, ограничения совместимости GPU и контракт без отката
 * `Улучшение` Все неопубликованные API списка и проверки конфигурации ИИ заменены единым каталогом целей `ai.catalog`, точной маршрутизацией через `target`, полными метаданными ответов и сеансов, стабильными ошибками без отката и синхронизированными сетевыми/офлайн-ресурсами
+* `Улучшение` Встроенная справка runtime и офлайн-индекс поиска дополнены шестью перегрузками `loadJarWithR8` для проверенного экспорта mapping/seeds/usage/retrace metadata и API `retraceR8Stack` протокола 1.1, включая привязку происхождения и закрытый отказ без fallback
 
 # v1.0.1
 

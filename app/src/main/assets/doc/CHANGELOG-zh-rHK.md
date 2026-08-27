@@ -15,6 +15,7 @@
 * `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充 `structuredJson`/`responseSchema` 原生 JSON Schema 約束輸出, 持久會話固定 schema, JSON 文字回傳及失敗語義
 * `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充明確 CPU/GPU/NPU backend profile, `ai.catalog` 裝置可用性及穩定不可用原因, 持久會話固定 backend, GPU 兼容性限制及禁止回退契約
 * `優化` 以統一 `ai.catalog` 目標目錄直接取代全部未發佈嘅 AI 列表同設定探測 API, 補齊精確 `target` 路由, 完整回應同會話元數據, 穩定禁止回退錯誤, 並同步在線/離線資產
+* `優化` 擴充內置 runtime 參考文件同離線搜尋索引, 加入用於驗證 mapping/seeds/usage/retrace metadata 匯出嘅 6 個 `loadJarWithR8` 多載及協議 1.1 `retraceR8Stack` API, 並說明來源綁定同失敗即終止嘅禁止回退語義
 
 # v1.0.1
 

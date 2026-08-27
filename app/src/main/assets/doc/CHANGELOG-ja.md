@@ -15,6 +15,7 @@
 * `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, `structuredJson`/`responseSchema` によるネイティブ JSON Schema 制約出力, 永続セッション固定 schema, JSON テキストの戻り値と失敗規則に対応
 * `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, 明示的 CPU/GPU/NPU backend profile, `ai.catalog` のデバイス可用性と安定した使用不可理由, 永続セッション固定 backend, GPU 互換性制限, フォールバック禁止契約に対応
 * `改善` 未公開の AI 一覧/設定確認 API を統一 `ai.catalog` ターゲットディレクトリ, `target` による厳密なルーティング, 完全なレスポンス/セッションメタデータ, フォールバックしない安定エラーへ直接置換し, オンライン/オフライン資産を同期
+* `改善` 内蔵 runtime リファレンスとオフライン検索インデックスを拡張し, 検証済み mapping/seeds/usage/retrace metadata を出力する 6 つの `loadJarWithR8` オーバーロードとプロトコル 1.1 `retraceR8Stack` API, 来歴の結合, フォールバックしない fail-closed 動作を追加
 
 # v1.0.1
 

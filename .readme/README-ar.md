@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10057274
-contentSha256=da281f7e264406afaa12ff9969304cf361ab8b9db948a59cfd73c28108c7ba86
+totalBytes=10037498
+contentSha256=f3ca9b16d05c3f61ca082df98c6e0b530f164e0a7d3853f479d4ca51cd413cbc
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -128,6 +128,7 @@ category=offline-docs
 * `تحسين` توسيع مرجع الذكاء الاصطناعي المضمن وفهرس البحث دون اتصال بإخراج مقيد أصليا عبر JSON Schema باستخدام `structuredJson` و`responseSchema`, وschema ثابت للجلسات الدائمة, وإرجاع نص JSON, وقواعد الفشل
 * `تحسين` توسيع مرجع الذكاء الاصطناعي المضمن وفهرس البحث دون اتصال بملفات backend profile صريحة لـ CPU/GPU/NPU, وتوافر الجهاز والأسباب الثابتة في `ai.catalog`, وbackend ثابت للجلسات الدائمة, وحدود توافق GPU, وعقد منع الرجوع
 * `تحسين` استبدال جميع واجهات قائمة الذكاء الاصطناعي وفحص الضبط غير المنشورة مباشرة بدليل الاهداف الموحد `ai.catalog` والتوجيه الدقيق عبر `target` وبيانات الاستجابة والجلسة الكاملة والاخطاء الثابتة دون رجوع, مع مزامنة الاصول المتصلة وغير المتصلة
+* `تحسين` توسيع مرجع runtime المضمن وفهرس البحث دون اتصال بستة تحميلات لـ `loadJarWithR8` لتصدير mapping/seeds/usage/retrace metadata بعد التحقق وواجهة `retraceR8Stack` للبروتوكول 1.1, مع ربط المصدر والفشل المغلق دون fallback
 
 # v1.0.1
 
