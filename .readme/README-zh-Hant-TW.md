@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10037498
-contentSha256=f3ca9b16d05c3f61ca082df98c6e0b530f164e0a7d3853f479d4ca51cd413cbc
+totalBytes=10058908
+contentSha256=f8ce88d1e03a3e8ef0aeac3b616d7ca09b03cc20e8a5b0036418620a9d11b5fa
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -121,6 +121,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ###### 2026/08/21
 
+* `優化` 同步 Image Quantization v4 參考文件與離線搜尋索引, 新增可設定的像素及工作記憶體預算, 型別化資源上限診斷, 已計入預算的尖峰記憶體指標, 以及明確要求或指令碼結束時的取消機制
 * `優化` 使外掛 versionName 與目標 AutoJs6 說明文件版本保持一致, 並在說明文件同步成功時將兩個專案各自的 build/versionCode 自動增加 1
 * `優化` 更新內建 AutoJs6 6.8.0 文件及離線搜尋索引, 補充 YOLO 物件偵測 Preview API 的精確提供端設定, 模型設定檔, 結果型別及穩定錯誤碼
 * `優化` 完善內建 AI 參考說明文件, 涵蓋外掛模型探索, 官方與精確元件選擇器, 多角色訊息歷程, 生成參數, 精確用量和串流負載, 以及完整路由範例

@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10037498
-contentSha256=f3ca9b16d05c3f61ca082df98c6e0b530f164e0a7d3853f479d4ca51cd413cbc
+totalBytes=10058908
+contentSha256=f8ce88d1e03a3e8ef0aeac3b616d7ca09b03cc20e8a5b0036418620a9d11b5fa
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -121,6 +121,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ###### 2026/08/21
 
+* `Improvement` Synchronized the Image Quantization v4 reference and offline search index with configurable pixel and working-memory budgets, typed resource-limit diagnostics, accounted peak-memory metrics, and cancellation on explicit requests or script shutdown
 * `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
 * `Improvement` Updated the bundled AutoJs6 6.8.0 documentation and offline search index with the YOLO target-detection Preview API, exact-provider setup, model profile, result types, and stable error codes
 * `Improvement` Completed the bundled AI reference with plugin model discovery, official and exact-component selectors, multi-role message history, generation controls, precise usage and streaming payloads, and complete routing examples

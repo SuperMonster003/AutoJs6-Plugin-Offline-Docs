@@ -65,8 +65,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10037498
-contentSha256=f3ca9b16d05c3f61ca082df98c6e0b530f164e0a7d3853f479d4ca51cd413cbc
+totalBytes=10058908
+contentSha256=f8ce88d1e03a3e8ef0aeac3b616d7ca09b03cc20e8a5b0036418620a9d11b5fa
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -121,6 +121,7 @@ category=offline-docs
 
 ###### 2026/08/21
 
+* `تحسين` مزامنة مرجع Image Quantization v4 وفهرس البحث دون اتصال مع ميزانيات قابلة للضبط لعدد البكسلات وذاكرة العمل, وتشخيصات نوعية لتجاوز الموارد, ومقاييس لذروة الذاكرة المحتسبة, والإلغاء عند الطلب الصريح أو إيقاف البرنامج النصي
 * `تحسين` مواءمة versionName للإضافة مع إصدار توثيق AutoJs6 المستهدف, وزيادة build/versionCode تلقائيا بمقدار 1 في كلا المشروعين عند نجاح مزامنة التوثيق
 * `تحسين` تم تحديث وثائق AutoJs6 6.8.0 المضمنة وفهرس البحث دون اتصال لإضافة واجهة YOLO Preview لاكتشاف الأهداف, وإعداد المزود الدقيق, وملف تعريف النموذج, وأنواع النتائج, ورموز الأخطاء الثابتة
 * `تحسين` استكمال مرجع الذكاء الاصطناعي المضمن باكتشاف نماذج الإضافات, ومحددات الإضافة الرسمية والمكونات الدقيقة, وسجل الرسائل متعدد الأدوار, وعناصر تحكم التوليد, وبيانات الاستخدام والبث الدقيقة, وأمثلة التوجيه الكاملة
