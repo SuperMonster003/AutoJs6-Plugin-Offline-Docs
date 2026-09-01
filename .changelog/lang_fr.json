@@ -11,6 +11,7 @@
         "Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu"
       ],
       "improvement": [
+        "Synchronisation de la référence MediaInfo et de l'index de recherche hors ligne avec la frontière entre `read` historique et `snapshot` versionné, la négociation des schémas v1/v2 du plugin, `capabilities` léger et les métadonnées dynamiques des tracks v2 et du moteur",
         "Synchronisation de la référence Pinyin et de l'index de recherche hors ligne avec les substitutions de lecture `customDictionary` limitées à chaque appel, `compare`/`compact` finalisés et l'accès Node.js via `autojs6:bridge.callAutoJs` avec la capacité explicite `pinyin`",
         "Synchronisation de la reference Image Quantization v4 et de l'index de recherche hors ligne avec des budgets configurables de pixels et de memoire de travail, des diagnostics types de limite de ressources, des mesures du pic de memoire comptabilisee et l'annulation sur demande explicite ou arret du script",
         "Alignement du versionName du plugin sur la version cible de la documentation AutoJs6 et incrémentation automatique de 1 du build/versionCode de chaque projet après une synchronisation réussie de la documentation",

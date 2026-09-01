@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10072371
-contentSha256=9a865cb8064128a56ae64a9d7eb166a34da169bb57ab99f7d5e02febb3d5abc2
+totalBytes=10100614
+contentSha256=b90ae4853864b340874e48415b83943b9e82b4963bbd9eccca19240b351fea52
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -119,6 +119,7 @@ category=offline-docs
 ###### 2026/09/01
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
+* `تحسين` تمت مزامنة مرجع MediaInfo وفهرس البحث دون اتصال مع الحد الفاصل بين `read` القديم و`snapshot` ذي الإصدار, والتفاوض على مخططي v1/v2 للملحق, و`capabilities` الخفيف, وبيانات tracks v2 والمحرك الديناميكية
 * `تحسين` تمت مزامنة مرجع Pinyin وفهرس البحث غير المتصل مع تجاوزات القراءة `customDictionary` لكل استدعاء, وإكمال `compare`/`compact`, وإتاحة الوصول من Node.js عبر `autojs6:bridge.callAutoJs` باستخدام capability صريحة باسم `pinyin`
 * `تحسين` مزامنة مرجع Image Quantization v4 وفهرس البحث دون اتصال مع ميزانيات قابلة للضبط لعدد البكسلات وذاكرة العمل, وتشخيصات نوعية لتجاوز الموارد, ومقاييس لذروة الذاكرة المحتسبة, والإلغاء عند الطلب الصريح أو إيقاف البرنامج النصي
 * `تحسين` مواءمة versionName للإضافة مع إصدار توثيق AutoJs6 المستهدف, وزيادة build/versionCode تلقائيا بمقدار 1 في كلا المشروعين عند نجاح مزامنة التوثيق

@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10072371
-contentSha256=9a865cb8064128a56ae64a9d7eb166a34da169bb57ab99f7d5e02febb3d5abc2
+totalBytes=10100614
+contentSha256=b90ae4853864b340874e48415b83943b9e82b4963bbd9eccca19240b351fea52
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -119,6 +119,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/09/01
 
 * `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
+* `Improvement` Synchronized the MediaInfo reference and offline search index with the legacy `read` versus versioned `snapshot` boundary, plugin snapshot v1/v2 schema negotiation, lightweight `capabilities`, and dynamic v2 track plus engine metadata
 * `Improvement` Synchronized the Pinyin reference and offline search index with per-call `customDictionary` reading overrides, completed `compare`/`compact`, and Node.js access through `autojs6:bridge.callAutoJs` with the explicit `pinyin` capability
 * `Improvement` Synchronized the Image Quantization v4 reference and offline search index with configurable pixel and working-memory budgets, typed resource-limit diagnostics, accounted peak-memory metrics, and cancellation on explicit requests or script shutdown
 * `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
