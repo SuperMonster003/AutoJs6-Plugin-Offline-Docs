@@ -12,9 +12,6 @@
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=A24232&label=Issues"/></a>
-    <br>
-    <a href="https://developer.android.com/studio/archive"><img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-2023.3+-B64FC8"/></a>
-    <a href="https://www.jetbrains.com/idea/download/other.html"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJ%20IDEA-2023.3+-EE4677"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=534BAE&label=License"/></a>
   </p>
 </div>
@@ -119,7 +116,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.0
 
-###### 2026/08/21
+###### 2026/09/01
 
 * `Улучшение` Синхронизированы справочник Image Quantization v4 и индекс автономного поиска: добавлены настраиваемые бюджеты пикселей и рабочей памяти, типизированная диагностика лимитов ресурсов, метрики учтенного пика памяти и отмена по явному запросу или при завершении скрипта
 * `Улучшение` Версия versionName плагина согласована с целевой версией документации AutoJs6, а build/versionCode каждого из двух проектов автоматически увеличивается на 1 после успешной синхронизации документации
@@ -130,6 +127,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Расширены встроенный справочник по ИИ и индекс офлайн-поиска: явные backend profile CPU/GPU/NPU, доступность устройства и стабильные причины в `ai.catalog`, фиксированный backend постоянной сессии, ограничения совместимости GPU и контракт без отката
 * `Улучшение` Все неопубликованные API списка и проверки конфигурации ИИ заменены единым каталогом целей `ai.catalog`, точной маршрутизацией через `target`, полными метаданными ответов и сеансов, стабильными ошибками без отката и синхронизированными сетевыми/офлайн-ресурсами
 * `Улучшение` Встроенная справка runtime и офлайн-индекс поиска дополнены шестью перегрузками `loadJarWithR8` для проверенного экспорта mapping/seeds/usage/retrace metadata и API `retraceR8Stack` протокола 1.1, включая привязку происхождения и закрытый отказ без fallback
+* `Улучшение` Унифицировать оформление README и управление версиями платформы Gradle
 
 # v1.0.1
 

@@ -12,9 +12,6 @@
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=A24232&label=Issues"/></a>
-    <br>
-    <a href="https://developer.android.com/studio/archive"><img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-2023.3+-B64FC8"/></a>
-    <a href="https://www.jetbrains.com/idea/download/other.html"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJ%20IDEA-2023.3+-EE4677"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=534BAE&label=License"/></a>
   </p>
 </div>
@@ -119,7 +116,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 # v6.8.0
 
-###### 2026/08/21
+###### 2026/09/01
 
 * `Improvement` Synchronized the Image Quantization v4 reference and offline search index with configurable pixel and working-memory budgets, typed resource-limit diagnostics, accounted peak-memory metrics, and cancellation on explicit requests or script shutdown
 * `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
@@ -130,6 +127,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Extended the bundled AI reference and offline search index with explicit CPU/GPU/NPU backend profiles, `ai.catalog` per-device availability and stable unavailable reasons, fixed persistent-session backend selection, GPU compatibility limits, and the no-fallback contract
 * `Improvement` Replaced all unpublished AI listing and configuration-probe APIs with the unified `ai.catalog` target directory, exact `target` routing, complete response and session metadata, stable no-fallback failures, and synchronized online/offline assets
 * `Improvement` Extended the bundled runtime reference and offline search index with six `loadJarWithR8` overloads for verified mapping/seeds/usage/retrace-metadata export and the protocol 1.1 `retraceR8Stack` API, including provenance binding and fail-closed no-fallback behavior
+* `Improvement` Standardize the README layout and Gradle platform version management
 
 # v1.0.1
 

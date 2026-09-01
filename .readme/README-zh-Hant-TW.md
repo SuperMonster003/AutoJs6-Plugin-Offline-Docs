@@ -12,9 +12,6 @@
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=A24232&label=Issues"/></a>
-    <br>
-    <a href="https://developer.android.com/studio/archive"><img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-2023.3+-B64FC8"/></a>
-    <a href="https://www.jetbrains.com/idea/download/other.html"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJ%20IDEA-2023.3+-EE4677"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=534BAE&label=License"/></a>
   </p>
 </div>
@@ -119,7 +116,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 # v6.8.0
 
-###### 2026/08/21
+###### 2026/09/01
 
 * `優化` 同步 Image Quantization v4 參考文件與離線搜尋索引, 新增可設定的像素及工作記憶體預算, 型別化資源上限診斷, 已計入預算的尖峰記憶體指標, 以及明確要求或指令碼結束時的取消機制
 * `優化` 使外掛 versionName 與目標 AutoJs6 說明文件版本保持一致, 並在說明文件同步成功時將兩個專案各自的 build/versionCode 自動增加 1
@@ -130,6 +127,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 * `優化` 擴充內建 AI 參考說明文件及離線搜尋索引, 補充明確 CPU/GPU/NPU backend profile, `ai.catalog` 裝置可用性及穩定不可用原因, 持久工作階段固定 backend, GPU 相容性限制與禁止回退契約
 * `優化` 以統一 `ai.catalog` 目標目錄直接取代全部未發布的 AI 清單與設定探測 API, 補齊精確 `target` 路由, 完整回應與工作階段中繼資料, 穩定禁止回退錯誤, 並同步線上/離線資產
 * `優化` 擴充內建 runtime 參考文件與離線搜尋索引, 加入用於驗證 mapping/seeds/usage/retrace metadata 匯出的 6 個 `loadJarWithR8` 多載及通訊協定 1.1 `retraceR8Stack` API, 並說明溯源綁定與失敗即終止的禁止回退語義
+* `優化` 統一 README 版式與 Gradle 平台版本管理方式
 
 # v1.0.1
 

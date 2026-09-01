@@ -12,9 +12,6 @@
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=A24232&label=Issues"/></a>
-    <br>
-    <a href="https://developer.android.com/studio/archive"><img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-2023.3+-B64FC8"/></a>
-    <a href="https://www.jetbrains.com/idea/download/other.html"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJ%20IDEA-2023.3+-EE4677"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=534BAE&label=License"/></a>
   </p>
 </div>
@@ -119,7 +116,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v6.8.0
 
-###### 2026/08/21
+###### 2026/09/01
 
 * `개선` Image Quantization v4 참조와 오프라인 검색 색인을 동기화하여 구성 가능한 픽셀 및 작업 메모리 예산, 형식화된 리소스 한도 진단, 계산된 최대 메모리 지표, 명시적 요청 또는 스크립트 종료 시 취소를 추가
 * `개선` 플러그인의 versionName을 대상 AutoJs6 문서 버전과 일치시키고, 문서 동기화 성공 시 두 프로젝트의 build/versionCode를 각각 자동으로 1 증가
@@ -130,6 +127,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` 내장 AI 참조 문서와 오프라인 검색 색인을 확장하여 명시적 CPU/GPU/NPU backend profile, `ai.catalog` 기기 가용성과 안정적 사용 불가 사유, 영구 세션 고정 backend, GPU 호환성 제한 및 fallback 금지 계약을 반영
 * `개선` 공개되지 않은 모든 AI 목록/구성 확인 API를 통합 `ai.catalog` 대상 디렉터리, `target` 정확 라우팅, 완전한 응답/세션 메타데이터, 폴백 없는 안정 오류로 직접 교체하고 온라인/오프라인 자산을 동기화
 * `개선` 내장 runtime 참조와 오프라인 검색 인덱스를 확장하여 검증된 mapping/seeds/usage/retrace metadata 내보내기를 위한 6개 `loadJarWithR8` 오버로드와 프로토콜 1.1 `retraceR8Stack` API, 출처 결합 및 fallback 없는 fail-closed 동작을 추가
+* `개선` README 레이아웃과 Gradle 플랫폼 버전 관리 방식을 통일
 
 # v1.0.1
 

@@ -6,7 +6,7 @@
   "changelog_label_dependency": "Dépendance",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/08/21",
+      "released_date": "2026/09/01",
       "improvement": [
         "Synchronisation de la reference Image Quantization v4 et de l'index de recherche hors ligne avec des budgets configurables de pixels et de memoire de travail, des diagnostics types de limite de ressources, des mesures du pic de memoire comptabilisee et l'annulation sur demande explicite ou arret du script",
         "Alignement du versionName du plugin sur la version cible de la documentation AutoJs6 et incrémentation automatique de 1 du build/versionCode de chaque projet après une synchronisation réussie de la documentation",
@@ -16,7 +16,8 @@
         "Référence IA intégrée et index hors ligne étendus avec la sortie contrainte par JSON Schema via `structuredJson`/`responseSchema`, un schema fixe pour les sessions persistantes, le retour de texte JSON et les règles d'échec",
         "Référence IA intégrée et index hors ligne étendus avec les profils backend CPU/GPU/NPU explicites, la disponibilité par appareil et les raisons stables dans `ai.catalog`, un backend fixe par session persistante, les limites de compatibilité GPU et le contrat sans repli",
         "Toutes les API non publiées de liste et de détection de configuration IA ont été remplacées par le répertoire unifié de cibles `ai.catalog`, le routage exact par `target`, les métadonnées complètes de réponse et de session, les erreurs stables sans repli et les ressources en ligne/hors ligne synchronisées",
-        "Extension de la référence runtime intégrée et de l'index de recherche hors ligne avec six surcharges de `loadJarWithR8` pour l'export vérifié de mapping/seeds/usage/retrace metadata et l'API `retraceR8Stack` du protocole 1.1, avec liaison de provenance et échec fermé sans repli"
+        "Extension de la référence runtime intégrée et de l'index de recherche hors ligne avec six surcharges de `loadJarWithR8` pour l'export vérifié de mapping/seeds/usage/retrace metadata et l'API `retraceR8Stack` du protocole 1.1, avec liaison de provenance et échec fermé sans repli",
+        "Uniformiser la mise en page du README et la gestion des versions de la plateforme Gradle"
       ]
     },
     "v1.0.1": {

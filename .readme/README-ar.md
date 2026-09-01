@@ -12,9 +12,6 @@
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=A24232&label=Issues"/></a>
-    <br>
-    <a href="https://developer.android.com/studio/archive"><img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-2023.3+-B64FC8"/></a>
-    <a href="https://www.jetbrains.com/idea/download/other.html"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJ%20IDEA-2023.3+-EE4677"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=534BAE&label=License"/></a>
   </p>
 </div>
@@ -119,7 +116,7 @@ category=offline-docs
 
 # v6.8.0
 
-###### 2026/08/21
+###### 2026/09/01
 
 * `تحسين` مزامنة مرجع Image Quantization v4 وفهرس البحث دون اتصال مع ميزانيات قابلة للضبط لعدد البكسلات وذاكرة العمل, وتشخيصات نوعية لتجاوز الموارد, ومقاييس لذروة الذاكرة المحتسبة, والإلغاء عند الطلب الصريح أو إيقاف البرنامج النصي
 * `تحسين` مواءمة versionName للإضافة مع إصدار توثيق AutoJs6 المستهدف, وزيادة build/versionCode تلقائيا بمقدار 1 في كلا المشروعين عند نجاح مزامنة التوثيق
@@ -130,6 +127,7 @@ category=offline-docs
 * `تحسين` توسيع مرجع الذكاء الاصطناعي المضمن وفهرس البحث دون اتصال بملفات backend profile صريحة لـ CPU/GPU/NPU, وتوافر الجهاز والأسباب الثابتة في `ai.catalog`, وbackend ثابت للجلسات الدائمة, وحدود توافق GPU, وعقد منع الرجوع
 * `تحسين` استبدال جميع واجهات قائمة الذكاء الاصطناعي وفحص الضبط غير المنشورة مباشرة بدليل الاهداف الموحد `ai.catalog` والتوجيه الدقيق عبر `target` وبيانات الاستجابة والجلسة الكاملة والاخطاء الثابتة دون رجوع, مع مزامنة الاصول المتصلة وغير المتصلة
 * `تحسين` توسيع مرجع runtime المضمن وفهرس البحث دون اتصال بستة تحميلات لـ `loadJarWithR8` لتصدير mapping/seeds/usage/retrace metadata بعد التحقق وواجهة `retraceR8Stack` للبروتوكول 1.1, مع ربط المصدر والفشل المغلق دون fallback
+* `تحسين` توحيد تخطيط README وطريقة إدارة إصدارات منصة Gradle
 
 # v1.0.1
 

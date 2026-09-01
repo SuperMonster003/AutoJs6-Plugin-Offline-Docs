@@ -12,9 +12,6 @@
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=A24232&label=Issues"/></a>
-    <br>
-    <a href="https://developer.android.com/studio/archive"><img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-2023.3+-B64FC8"/></a>
-    <a href="https://www.jetbrains.com/idea/download/other.html"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJ%20IDEA-2023.3+-EE4677"/></a>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/SuperMonster003/AutoJs6-Plugin-Offline-Docs?color=534BAE&label=License"/></a>
   </p>
 </div>
@@ -119,7 +116,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v6.8.0
 
-###### 2026/08/21
+###### 2026/09/01
 
 * `改善` Image Quantization v4 リファレンスとオフライン検索索引を同期し, 設定可能なピクセル数と作業メモリの予算, 型付きリソース上限診断, 計上済みピークメモリ指標, 明示要求またはスクリプト終了時のキャンセルを追加
 * `改善` プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加
@@ -130,6 +127,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, 明示的 CPU/GPU/NPU backend profile, `ai.catalog` のデバイス可用性と安定した使用不可理由, 永続セッション固定 backend, GPU 互換性制限, フォールバック禁止契約に対応
 * `改善` 未公開の AI 一覧/設定確認 API を統一 `ai.catalog` ターゲットディレクトリ, `target` による厳密なルーティング, 完全なレスポンス/セッションメタデータ, フォールバックしない安定エラーへ直接置換し, オンライン/オフライン資産を同期
 * `改善` 内蔵 runtime リファレンスとオフライン検索インデックスを拡張し, 検証済み mapping/seeds/usage/retrace metadata を出力する 6 つの `loadJarWithR8` オーバーロードとプロトコル 1.1 `retraceR8Stack` API, 来歴の結合, フォールバックしない fail-closed 動作を追加
+* `改善` README のレイアウトと Gradle プラットフォームのバージョン管理方式を統一
 
 # v1.0.1
 

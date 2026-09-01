@@ -1,10 +1,8 @@
 {
   "repo_url": "https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs",
+  "icon_alt": "autojs6-plugin-offline-docs-ic-launcher",
   "repo_slug": "SuperMonster003/AutoJs6-Plugin-Offline-Docs",
   "license_url": "https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/LICENSE",
-  "android_studio_url": "https://developer.android.com/studio/archive",
-  "intellij_idea_url": "https://www.jetbrains.com/idea/download/other.html",
-  "minimum_ide_version": "2023.3",
   "autojs6_docs_url": "https://docs.autojs6.com/",
   "plugin_application_id": "io.github.supermonster003.autojs6.plugin.offlinedocs",
   "plugin_id": "offline-docs",
