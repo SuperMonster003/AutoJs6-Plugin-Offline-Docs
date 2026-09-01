@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10058908
-contentSha256=f8ce88d1e03a3e8ef0aeac3b616d7ca09b03cc20e8a5b0036418620a9d11b5fa
+totalBytes=10072371
+contentSha256=9a865cb8064128a56ae64a9d7eb166a34da169bb57ab99f7d5e02febb3d5abc2
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -118,6 +118,8 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ###### 2026/09/01
 
+* `Исправление` Валидаторы офлайн-документации больше не принимают публичное имя метода Node bridge `callAutoJs` за устаревшее неполное имя продукта
+* `Улучшение` Синхронизированы справочник Pinyin и индекс офлайн-поиска: добавлены переопределения чтений `customDictionary` на один вызов, завершенные `compare`/`compact` и доступ из Node.js через `autojs6:bridge.callAutoJs` с явной capability `pinyin`
 * `Улучшение` Синхронизированы справочник Image Quantization v4 и индекс автономного поиска: добавлены настраиваемые бюджеты пикселей и рабочей памяти, типизированная диагностика лимитов ресурсов, метрики учтенного пика памяти и отмена по явному запросу или при завершении скрипта
 * `Улучшение` Версия versionName плагина согласована с целевой версией документации AutoJs6, а build/versionCode каждого из двух проектов автоматически увеличивается на 1 после успешной синхронизации документации
 * `Улучшение` Обновлена встроенная документация AutoJs6 6.8.0 и индекс офлайн-поиска: добавлены Preview API обнаружения объектов YOLO, настройка точного провайдера, профиль модели, типы результатов и стабильные коды ошибок

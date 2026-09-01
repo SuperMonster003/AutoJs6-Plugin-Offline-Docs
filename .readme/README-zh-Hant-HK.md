@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=181
-totalBytes=10058908
-contentSha256=f8ce88d1e03a3e8ef0aeac3b616d7ca09b03cc20e8a5b0036418620a9d11b5fa
+totalBytes=10072371
+contentSha256=9a865cb8064128a56ae64a9d7eb166a34da169bb57ab99f7d5e02febb3d5abc2
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -118,6 +118,8 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ###### 2026/09/01
 
+* `修復` 離線文件校驗器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
+* `優化` 同步 Pinyin 參考文件與離線搜尋索引, 補充僅當前調用生效的 `customDictionary` 自訂讀音覆蓋, 已完成的 `compare`/`compact`, 以及透過帶明確 `pinyin` capability 的 `autojs6:bridge.callAutoJs` 進行 Node.js 存取
 * `優化` 同步 Image Quantization v4 參考文件與離線搜尋索引, 新增可配置的像素及工作記憶體預算, 類型化資源上限診斷, 已計入預算的峰值記憶體指標, 以及明確請求或腳本結束時的取消機制
 * `優化` 使插件 versionName 與目標 AutoJs6 文件版本保持一致, 並在文件同步成功時將兩個項目各自的 build/versionCode 自動增加 1
 * `優化` 更新內置 AutoJs6 6.8.0 文檔及離線搜尋索引, 補充 YOLO 物件偵測 Preview API 的精確提供方設定, 模型設定檔, 結果類型及穩定錯誤碼

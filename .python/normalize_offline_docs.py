@@ -528,7 +528,8 @@ def validate(text: str, path: Path) -> None:
         for match in HTML_ANCHOR_PATTERN.finditer(text)
     ):
         raise ValueError(f"External MDN type link in {relative}")
-    if re.search(r"AutoJs(?!6|Pro|-Docs)", text):
+    # `callAutoJs` is the public Node bridge API name, not a legacy product name.
+    if re.search(r"(?<!call)AutoJs(?!6|Pro|-Docs)", text):
         raise ValueError(f"Legacy bare AutoJs product name in {relative}")
     if 'packageName: &quot;org.autojs.autojs&quot;' in text:
         raise ValueError(f"Legacy current-product package name in {relative}")
