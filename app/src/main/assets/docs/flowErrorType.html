@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>全能类型 (Omnipotent Types) | AutoJs6 文档 - 6.8.0</title>
+    <title>流程错误 (FlowError) | AutoJs6 文档 - 6.8.0</title>
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/sh.css">
     <link rel="stylesheet" href="plugins/docsify-copy-code@2-styles.css">
     <link rel="stylesheet" href="plugins/zoom-image-styles.css">
-    <link rel="canonical" href="https://nodejs.org/api/omniTypes.html">
+    <link rel="canonical" href="https://nodejs.org/api/flowErrorType.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="user-scalable=no">
 </head>
-<body class="alt apidoc" id="api-section-omniTypes">
+<body class="alt apidoc" id="api-section-flowErrorType">
 <div id="content" class="clearfix">
     <div id="column2" class="interior">
         <div id="intro" class="interior">
@@ -106,7 +106,7 @@
 <li><a class="nav-uiObjectCollectionType" href="uiObjectCollectionType.html">UiObjectCollection - 控件集合</a></li>
 <li><a class="nav-uiObjectActionsType" href="uiObjectActionsType.html">UiObjectActions - 控件节点行为</a></li>
 <li><a class="nav-flowType" href="flowType.html">Flow - 流程对象</a></li>
-<li><a class="nav-flowErrorType" href="flowErrorType.html">FlowError - 流程错误</a></li>
+<li><a class="nav-flowErrorType active" href="flowErrorType.html">FlowError - 流程错误</a></li>
 <li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
 <li><a class="nav-eventEmitterType" href="eventEmitterType.html">EventEmitter - 事件发射器</a></li>
 <li><a class="nav-imageWrapperType" href="imageWrapperType.html">ImageWrapper - 包装图像类</a></li>
@@ -147,7 +147,7 @@
 
 <ul>
 <li><a class="nav-dataTypes" href="dataTypes.html">Data Types - 数据类型</a></li>
-<li><a class="nav-omniTypes active" href="omniTypes.html">Omnipotent Types - 全能类型</a></li>
+<li><a class="nav-omniTypes" href="omniTypes.html">Omnipotent Types - 全能类型</a></li>
 <li><a class="nav-storageType" href="storageType.html">Storage - 存储类</a></li>
 <li><a class="nav-androidBundleType" href="androidBundleType.html">AndroidBundle</a></li>
 <li><a class="nav-androidRectType" href="androidRectType.html">AndroidRect</a></li>
@@ -183,7 +183,7 @@
 
     </div>
 
-    <div id="column1" data-id="omniTypes" class="interior">
+    <div id="column1" data-id="flowErrorType" class="interior">
         <header>
             <h1>AutoJs6 文档 - 6.8.0</h1>
             <div id="gtoc">
@@ -259,12 +259,15 @@
         <div id="toc">
             <h2>目录</h2>
 <ul>
-<li><span class="stability_undefined"><a href="#omnitypes_omnipotent_types">全能类型 (Omnipotent Types)</a></span><ul>
-<li><span class="stability_undefined"><a href="#omnitypes_omnicolor">OmniColor</a></span></li>
-<li><span class="stability_undefined"><a href="#omnitypes_omniintent">OmniIntent</a></span></li>
-<li><span class="stability_undefined"><a href="#omnitypes_omnivibrationpattern">OmniVibrationPattern</a></span></li>
-<li><span class="stability_undefined"><a href="#omnitypes_omniregion">OmniRegion</a></span></li>
-<li><span class="stability_undefined"><a href="#omnitypes_omnithrowable">OmniThrowable</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype_flowerror">流程错误 (FlowError)</a></span><ul>
+<li><span class="stability_undefined"><a href="#flowerrortype_flowerror_1">[@] FlowError</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype_p_code">[p#] code</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype_p_step">[p#] step</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype_p_selector">[p#] selector</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype_p_elapsed">[p#] elapsed</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype_p_attempts">[p#] attempts</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype_p_reason">[p#] reason</a></span></li>
+<li><span class="stability_undefined"><a href="#flowerrortype">错误处理示例</a></span></li>
 </ul>
 </li>
 </ul>
@@ -272,247 +275,114 @@
         </div>
 
         <div id="apicontent">
-            <h1>全能类型 (Omnipotent Types)<span><a class="mark" href="#omnitypes_omnipotent_types" id="omnitypes_omnipotent_types">#</a></span></h1>
-<p>全能类型是一种聚合类型.</p>
-<p>AutoJs6 模块中, 一个参数往往接受多种不同的类型, 这些类型均可体现这个参数的含义. 这样的类型称为全能类型.</p>
-<p>如对于 <code>颜色 (color)</code>, 有 <a href="dataTypes.html#datatypes_colorhex">ColorHex</a> 和 <a href="dataTypes.html#datatypes_colorname">ColorName</a> 等多种类型可以表示, 它们都可以作为实参传入方法中:</p>
-<pre><code class="lang-js">/* 需要为 console 悬浮窗设置一个浅蓝色标题. */
-/* 以下 4 种方法分别传入不同类型的参数, 但实现了同样的效果. */
-
-console.setTitleTextColor(&#39;light-blue&#39;); /* ColorName 类型. */
-console.setTitleTextColor(&#39;#ADD8E6&#39;); /* ColorHex 类型. */
-console.setTitleTextColor(Color(&#39;#ADD8E6&#39;).toInt()); /* ColorInt 类型. */
-console.setTitleTextColor(Color(&#39;#ADD8E6&#39;)); /* Color 类型. */
-
-console.show(); /* 显示控制台悬浮窗. */
+            <h1>流程错误 (FlowError)<span><a class="mark" href="#flowerrortype_flowerror" id="flowerrortype_flowerror">#</a></span></h1>
+<p>FlowError 是 <a href="flow.html">流程 (Flow)</a> 的步骤失败时产生的错误对象, 也是 <a href="automator.html#automator_toolkit">工具集</a> 与 <a href="automator.html#automator_4">事件驱动等待</a> 的同步函数抛出的错误类型.</p>
+<p>它是 <code>name</code> 为 <code>&#39;FlowError&#39;</code> 的 JavaScript <a href="exceptions.html#exceptions_error_1">Error</a>, 在 <code>message</code> 之外提供结构化的字段 (<code>code</code>, <code>step</code>, <code>selector</code>, <code>elapsed</code>, <code>attempts</code>, <code>reason</code>), 便于按原因分支处理.</p>
+<pre><code class="lang-js">flow.wait(&#39;登录&#39;, 5e3).click().catch(e =&gt; {
+    console.log(e.name); /* FlowError */
+    console.log(e.code); /* TIMEOUT */
+    console.log(e.step); /* wait */
+    console.log(e.message); /* Timed out after 5003 ms and 25 attempt(s) in step &quot;wait&quot; waiting for content(&quot;登录&quot;) */
+});
 </code></pre>
-<p>上述示例中 <code>console.setTitleTextColor</code> 的方法签名可以写成以下形式:</p>
-<pre><code class="lang-text">console.setTitleTextColor(color: OmniColor): void
-</code></pre>
-<p>其中使用 <code>OmniColor</code> 这个全能类型代表了颜色聚合类型.</p>
 <hr>
-<h2>OmniColor<span><a class="mark" href="#omnitypes_omnicolor" id="omnitypes_omnicolor">#</a></span></h2>
-<p>颜色聚合类型.</p>
+<p style="font: bold 2em sans-serif; color: #FF7043">FlowError</p>
+
+<hr>
+<h2>[@] FlowError<span><a class="mark" href="#flowerrortype_flowerror_1" id="flowerrortype_flowerror_1">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<p>Flow 步骤失败时的错误对象, 是 <code>name</code> 为 <code>&#39;FlowError&#39;</code> 的 JavaScript <a href="exceptions.html#exceptions_error_1">Error</a>. 由 <a href="automator.html#automator_toolkit">工具集</a> 与 <a href="automator.html#automator_4">事件驱动等待</a> 的同步函数抛出的错误也是此类型.</p>
+<h2>[p#] code<span><a class="mark" href="#flowerrortype_p_code" id="flowerrortype_p_code">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<ul>
+<li>{ <code>&#39;TIMEOUT&#39;</code> | <code>&#39;ACTION_FAILED&#39;</code> | <code>&#39;CANCELLED&#39;</code> | <code>&#39;A11Y_UNAVAILABLE&#39;</code> | <code>&#39;INVALID_TARGET&#39;</code> }</li>
+</ul>
+<p>错误代码:</p>
 <table>
 <thead>
 <tr>
-<th>类型</th>
-<th>简述</th>
-<th>示例</th>
+<th>code</th>
+<th>含义</th>
+<th>典型消息</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="dataTypes.html#datatypes_colorhex">ColorHex</a></td>
-<td><span style="white-space:nowrap">颜色代码</span></td>
-<td><span style="white-space:nowrap"><code>#663399</code></span></td>
+<td>TIMEOUT</td>
+<td>等待超时</td>
+<td>Timed out after 5003 ms and 25 attempt(s) in step &quot;wait&quot; waiting for content(&quot;登录&quot;)</td>
 </tr>
 <tr>
-<td><a href="dataTypes.html#datatypes_colorint">ColorInt</a></td>
-<td><span style="white-space:nowrap">颜色整数</span></td>
-<td><span style="white-space:nowrap"><code>-10079335</code></span></td>
+<td>ACTION_FAILED</td>
+<td>动作返回 false 或工具动作失败</td>
+<td>Action &quot;click&quot; failed</td>
 </tr>
 <tr>
-<td><a href="dataTypes.html#datatypes_colorname">ColorName</a></td>
-<td><span style="white-space:nowrap">颜色名称</span></td>
-<td><span style="white-space:nowrap"><code>&#39;rebecca-purple&#39;</code></span></td>
+<td>CANCELLED</td>
+<td>被 <a href="flowType.html#flowtype_m_cancel">cancel</a> / <a href="flow.html#flow_m_cancelall">cancelAll</a> 或脚本退出取消</td>
+<td>Cancelled in step &quot;wait&quot;</td>
 </tr>
 <tr>
-<td><a href="colorType.html">Color</a></td>
-<td><span style="white-space:nowrap">颜色类</span></td>
-<td><span style="white-space:nowrap"><code>Color(&#39;#663399&#39;)</code></span></td>
+<td>A11Y_UNAVAILABLE</td>
+<td>无障碍服务不可用</td>
+<td>Accessibility service unavailable for step &quot;wait&quot;</td>
 </tr>
 <tr>
-<td><a href="dataTypes.html#datatypes_themecolor">ThemeColor</a></td>
-<td><span style="white-space:nowrap">主题颜色类</span></td>
-<td><span style="white-space:nowrap"><code>autojs.themeColor</code></span></td>
+<td>INVALID_TARGET</td>
+<td>链上的值不是可作用的目标, 或工具的目标无效</td>
+<td>Invalid target for step &quot;click&quot; (null)</td>
 </tr>
 </tbody>
 </table>
-<p><code>OmniColor</code> 不仅可用于参数传入方法中, 还可以作为 XML 元素的属性值:</p>
-<pre><code class="lang-js">&#39;ui&#39;;
+<h2>[p#] step<span><a class="mark" href="#flowerrortype_p_step" id="flowerrortype_p_step">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+<p>失败的步骤名, 如 <code>&#39;wait&#39;</code>, <code>&#39;click&#39;</code>, <code>&#39;smartClick&#39;</code>, <code>&#39;sync&#39;</code>.</p>
+<h2>[p#] selector<span><a class="mark" href="#flowerrortype_p_selector" id="flowerrortype_p_selector">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a> \</span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> }</li>
+</ul>
+<p>等待的目标描述 (如 <code>content(&quot;登录&quot;)</code>), 无目标时为 <code>null</code>.</p>
+<h2>[p#] elapsed<span><a class="mark" href="#flowerrortype_p_elapsed" id="flowerrortype_p_elapsed">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
+</ul>
+<p>失败前已等待的毫秒数 (超时类错误), 其余为 <code>0</code>.</p>
+<h2>[p#] attempts<span><a class="mark" href="#flowerrortype_p_attempts" id="flowerrortype_p_attempts">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
+</ul>
+<p>失败前的检测次数 (超时类错误), 其余为 <code>0</code>.</p>
+<h2>[p#] reason<span><a class="mark" href="#flowerrortype_p_reason" id="flowerrortype_p_reason">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a> \</span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> }</li>
+</ul>
+<p>细化错误代码的原因, 如 <code>&#39;chain&#39;</code> (链截止), <code>&#39;sync&#39;</code> (sync 超时), <code>&#39;noTarget&#39;</code>, <code>&#39;notClickable&#39;</code>, <code>&#39;verify&#39;</code>, <code>&#39;maxSteps&#39;</code>, <code>&#39;end&#39;</code>, <code>&#39;filtered out&#39;</code>; 无则为 <code>null</code>.</p>
+<h2>错误处理示例<span><a class="mark" href="#flowerrortype" id="flowerrortype">#</a></span></h2>
+<pre><code class="lang-js">flow.wait(&#39;登录&#39;, 5e3).click().then(null, e =&gt; {
+    switch (e.code) {
+        case &#39;TIMEOUT&#39;:
+            console.log(`${e.elapsed} 毫秒内未找到 ${e.selector}`);
+            break;
+        case &#39;A11Y_UNAVAILABLE&#39;:
+            auto.launchSettings();
+            break;
+        default:
+            console.error(e);
+    }
+});
 
-ui.layout(&lt;vertical&gt;
-    &lt;button text=&quot;click to start&quot; color=&quot;#006400&quot;/&gt;
-&lt;/vertical&gt;);
-</code></pre>
-<p>上述示例设置按钮布局的文字颜色为深绿色, 使用了 <a href="dataTypes.html#datatypes_colorhex">ColorHex</a> 作为颜色值.</p>
-<p>使用 <a href="dataTypes.html#datatypes_colorname">ColorName</a> 作为颜色值也可达到相同的效果:</p>
-<pre><code class="lang-js">&#39;ui&#39;;
-
-ui.layout(&lt;vertical&gt;
-    &lt;button text=&quot;click to start&quot; color=&quot;dark-green&quot;/&gt;
-&lt;/vertical&gt;);
-</code></pre>
-<p>使用 <a href="dataTypes.html#datatypes_colorint">ColorInt</a> 作为颜色值同样可以达到相同的效果:</p>
-<pre><code class="lang-js">&#39;ui&#39;;
-
-ui.layout(&lt;vertical&gt;
-    &lt;button text=&quot;click to start&quot; color=&quot;-16751616&quot;/&gt;
-&lt;/vertical&gt;);
-</code></pre>
-<p>如需使用主题色作为颜色值, 需要使用一对花括号以及绑定全局作用域的表达式:</p>
-<pre><code class="lang-js">&#39;ui&#39;;
-
-ui.layout(&lt;vertical&gt;
-    &lt;button text=&quot;click to start&quot; color=&quot;{{autojs.themeColor}}&quot;/&gt;
-&lt;/vertical&gt;);
-</code></pre>
-<h2>OmniIntent<span><a class="mark" href="#omnitypes_omniintent" id="omnitypes_omniintent">#</a></span></h2>
-<p>Intent 聚合类型.</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>简述</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="intentType.html">Intent</a></td>
-<td><span style="white-space:nowrap">意图类</span></td>
-<td><span style="white-space:nowrap"><code>new Intent().setAction( ... )</code> / <code>app.intent({ ... })</code></span></td>
-</tr>
-<tr>
-<td><a href="app.html#app_app_intent_options">IntentOptions</a></td>
-<td><span style="white-space:nowrap">意图选项</span></td>
-<td><span style="white-space:nowrap"><code>{ action: ... , className: ... , data: ... }</code></span></td>
-</tr>
-<tr>
-<td><a href="dataTypes.html#datatypes_intentshortformforactivity">IntentShortFormForActivity</a></td>
-<td><span style="white-space:nowrap">意图活动简称</span></td>
-<td><span style="white-space:nowrap"><code>docs</code> / <code>home</code> / <code>settings</code> / <code>console</code> / <code>about</code></span></td>
-</tr>
-<tr>
-<td><a href="dataTypes.html#datatypes_intenturistring">IntentUriString</a></td>
-<td><span style="white-space:nowrap">意图 URI 字符串</span></td>
-<td><span style="white-space:nowrap"><code>&#39;https://msn.com&#39;</code> / <code>&#39;msn.com&#39;</code></span></td>
-</tr>
-</tbody>
-</table>
-<h2>OmniVibrationPattern<span><a class="mark" href="#omnitypes_omnivibrationpattern" id="omnitypes_omnivibrationpattern">#</a></span></h2>
-<p>振动模式聚合类型.</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>简述</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span style="white-space:nowrap"><a href="dataTypes.html#datatypes_number">number</a><a href="dataTypes.html#datatypes_array">[]</a></span></td>
-<td><span style="white-space:nowrap">传统振动模式 (按数字代表的启停间隔振动)</span></td>
-<td><span style="white-space:nowrap"><code>[ 0, 200, 0, 200, 0, 200 ]</code></span></td>
-</tr>
-<tr>
-<td><a href="dataTypes.html#datatypes_string">string</a></td>
-<td><span style="white-space:nowrap">文本 (按文本对应的摩斯电码振动)</span></td>
-<td><span style="white-space:nowrap"><code>&#39;hello&#39;</code></span></td>
-</tr>
-</tbody>
-</table>
-<p>用于模拟 SOS (紧急求救信号) 的示例:</p>
-<pre><code class="lang-js">device.vibrate([ 100, 100, 100, 100, 100, 300, 300, 100, 300, 100, 300, 300, 100, 100, 100, 100, 100 ], 0);
-device.vibrate(&#39;SOS&#39;); /* 效果同上. */
-</code></pre>
-<h2>OmniRegion<span><a class="mark" href="#omnitypes_omniregion" id="omnitypes_omniregion">#</a></span></h2>
-<p>区域聚合类型.</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>简述</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span style="white-space:nowrap"><a href="dataTypes.html#datatypes_number">number</a><a href="dataTypes.html#datatypes_array">[]</a></span></td>
-<td><span style="white-space:nowrap">数字数组, [ X 坐标, Y 坐标, 宽, 高 ]</span></td>
-<td><span style="white-space:nowrap"><code>[ 0, 0, 200, 400 ]</code></span></td>
-</tr>
-<tr>
-<td><a href="opencvRectType.html">OpenCVRect</a></td>
-<td><span style="white-space:nowrap"><code>org.opencv.core.Rect</code> 类型</span></td>
-<td><span style="white-space:nowrap">1. <code>images.buildRegion(img, [ 0, 0, 200, 400 ])</code><br/>2. <code>new org.opencv.core.Rect(x, y, w, h)</code></span></td>
-</tr>
-<tr>
-<td><a href="androidRectType.html">AndroidRect</a></td>
-<td><span style="white-space:nowrap"><code>android.graphics.Rect</code> 类型</span></td>
-<td><span style="white-space:nowrap">1. <code>pickup(/\w+/, &#39;bounds&#39;)</code><br/>2. <code>new android.graphics.Rect(left, top, right, bottom)</code></span></td>
-</tr>
-</tbody>
-</table>
-<p>将一个 500 × 500 的图片裁剪其中心区域 300 × 300 的示例:</p>
-<pre><code class="lang-js">let img = images.read(&#39;...&#39;);
-let imgWidth = img.getWidth(); // 500
-let imgHeight = img.getHeight(); // 500
-
-let clipWidth = 300;
-let clipHeight = 300;
-let clipX = (imgWidth - clipWidth) / 2;
-let clipY = (imgHeight - clipHeight) / 2;
-
-/* 使用 number[] 作为区域. */
-
-images.clip(img, [ clipX, clipY, clipWidth, clipHeight ]);
-
-/* 使用 OpenCVRect 作为区域. */
-
-images.clip(img, new org.opencv.core.Rect(clipX, clipY, clipWidth, clipHeight));
-
-/* 使用 AndroidRect 作为区域. */
-
-let left = clipX;
-let top = clipY;
-let right = clipX + clipWidth;
-let bottom = clipY + clipHeight;
-images.clip(img, new android.graphics.Rect(left, top, right, bottom));
-
-/* AndroidRect 结合控件的应用. */
-/* 假设屏幕的活动窗口中存在一个控件, id 为 aim, 它的控件矩形区域恰好为所需区域. */
-
-let bounds = pickup({ id: &#39;aim&#39; }, &#39;bounds&#39;);
-images.clip(img, bounds); /* bounds 是一个 AndroidRect 实例. */
-</code></pre>
-<h2>OmniThrowable<span><a class="mark" href="#omnitypes_omnithrowable" id="omnitypes_omnithrowable">#</a></span></h2>
-<p>可抛异常聚合类型.</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>简述</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="exceptions.html#exceptions_error_1">Error</a></td>
-<td><span style="white-space:nowrap">AutoJs6 内置错误类型</span></td>
-<td><span style="white-space:nowrap">1. <code>Error(&#39;error&#39;)</code><br/>2. <code>TypeError(&#39;error&#39;)</code></span></td>
-</tr>
-<tr>
-<td><span style="white-space:nowrap"><a href="exceptions.html#exceptions_java">java.lang.Throwable</a></span></td>
-<td><span style="white-space:nowrap"><code>Throwable</code> 及其所有子类型</span></td>
-<td><span style="white-space:nowrap">1. <code>new java.lang.Exception(&#39;error&#39;)</code><br/>2. <code>try { a++ } catch(e) { e.rhinoException }</code></span></td>
-</tr>
-<tr>
-<td><a href="dataTypes.html#datatypes_string">string</a></td>
-<td><span style="white-space:nowrap">字符串, 表示异常消息, 将被包装为 <code>java.lang.Exception</code> 实例</span></td>
-<td><span style="white-space:nowrap"><code>&#39;An error has occurred&#39;</code></span></td>
-</tr>
-</tbody>
-</table>
-<p>使用 <a href="console.html#console_m_printallstacktrace">console.printAllStackTrace</a> 打印详细栈追踪的示例:</p>
-<pre><code class="lang-js">try {
-    a++;
+/* 同步形式捕获. */
+try {
+    smartClick(&#39;不存在的按钮&#39;);
 } catch (e) {
-    console.printAllStackTrace(e); /* Error 实例. */
-    console.printAllStackTrace(e.rhinoException); /* java.lang.Throwable 实例. */
-    console.printAllStackTrace(e.message); /* 字符串变量. */
+    console.log(e.name === &#39;FlowError&#39;, e.code); /* true TIMEOUT */
 }
 </code></pre>
 
