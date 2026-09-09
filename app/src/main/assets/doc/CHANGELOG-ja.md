@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/01
+###### 2026/09/10
 
 * `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
 * `改善` MediaInfo リファレンスとオフライン検索インデックスを同期し, 従来の `read` とバージョン付き `snapshot` の境界, プラグイン snapshot v1/v2 schema ネゴシエーション, 軽量 `capabilities`, 動的な v2 track とエンジン情報を追加
@@ -21,6 +21,7 @@
 * `改善` 未公開の AI 一覧/設定確認 API を統一 `ai.catalog` ターゲットディレクトリ, `target` による厳密なルーティング, 完全なレスポンス/セッションメタデータ, フォールバックしない安定エラーへ直接置換し, オンライン/オフライン資産を同期
 * `改善` 内蔵 runtime リファレンスとオフライン検索インデックスを拡張し, 検証済み mapping/seeds/usage/retrace metadata を出力する 6 つの `loadJarWithR8` オーバーロードとプロトコル 1.1 `retraceR8Stack` API, 来歴の結合, フォールバックしない fail-closed 動作を追加
 * `改善` README のレイアウトと Gradle プラットフォームのバージョン管理方式を統一
+* `改善` MediaInfo リファレンスとオフライン検索に streamNumber, countGet, infoKind と元のファイルパスの仕様を反映
 
 # v1.0.1
 

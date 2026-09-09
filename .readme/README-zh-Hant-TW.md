@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=181
-totalBytes=10100614
-contentSha256=b90ae4853864b340874e48415b83943b9e82b4963bbd9eccca19240b351fea52
+fileCount=184
+totalBytes=10542542
+contentSha256=1183ed5d038ca82cfe045fa1e173cb47b439cbee1c2e6c7f3e360551d53c6812
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 # v6.8.0
 
-###### 2026/09/01
+###### 2026/09/10
 
 * `修復` 離線文件驗證器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
 * `優化` 同步 MediaInfo 參考文件與離線搜尋索引, 補充相容 `read` 與版本化 `snapshot` 的邊界, 外掛快照 v1/v2 schema 協商, 輕量 `capabilities` 以及動態 v2 track 和引擎資訊
@@ -131,6 +131,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 * `優化` 以統一 `ai.catalog` 目標目錄直接取代全部未發布的 AI 清單與設定探測 API, 補齊精確 `target` 路由, 完整回應與工作階段中繼資料, 穩定禁止回退錯誤, 並同步線上/離線資產
 * `優化` 擴充內建 runtime 參考文件與離線搜尋索引, 加入用於驗證 mapping/seeds/usage/retrace metadata 匯出的 6 個 `loadJarWithR8` 多載及通訊協定 1.1 `retraceR8Stack` API, 並說明溯源綁定與失敗即終止的禁止回退語義
 * `優化` 統一 README 版式與 Gradle 平台版本管理方式
+* `優化` MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義
 
 # v1.0.1
 

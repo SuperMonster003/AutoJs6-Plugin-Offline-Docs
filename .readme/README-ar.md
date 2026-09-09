@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=181
-totalBytes=10100614
-contentSha256=b90ae4853864b340874e48415b83943b9e82b4963bbd9eccca19240b351fea52
+fileCount=184
+totalBytes=10542542
+contentSha256=1183ed5d038ca82cfe045fa1e173cb47b439cbee1c2e6c7f3e360551d53c6812
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -116,7 +116,7 @@ category=offline-docs
 
 # v6.8.0
 
-###### 2026/09/01
+###### 2026/09/10
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
 * `تحسين` تمت مزامنة مرجع MediaInfo وفهرس البحث دون اتصال مع الحد الفاصل بين `read` القديم و`snapshot` ذي الإصدار, والتفاوض على مخططي v1/v2 للملحق, و`capabilities` الخفيف, وبيانات tracks v2 والمحرك الديناميكية
@@ -131,6 +131,7 @@ category=offline-docs
 * `تحسين` استبدال جميع واجهات قائمة الذكاء الاصطناعي وفحص الضبط غير المنشورة مباشرة بدليل الاهداف الموحد `ai.catalog` والتوجيه الدقيق عبر `target` وبيانات الاستجابة والجلسة الكاملة والاخطاء الثابتة دون رجوع, مع مزامنة الاصول المتصلة وغير المتصلة
 * `تحسين` توسيع مرجع runtime المضمن وفهرس البحث دون اتصال بستة تحميلات لـ `loadJarWithR8` لتصدير mapping/seeds/usage/retrace metadata بعد التحقق وواجهة `retraceR8Stack` للبروتوكول 1.1, مع ربط المصدر والفشل المغلق دون fallback
 * `تحسين` توحيد تخطيط README وطريقة إدارة إصدارات منصة Gradle
+* `تحسين` تحديث مرجع MediaInfo والبحث دون اتصال لخيارات streamNumber وcountGet وinfoKind ومسارات الملفات الأصلية
 
 # v1.0.1
 

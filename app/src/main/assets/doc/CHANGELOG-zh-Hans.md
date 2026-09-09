@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/01
+###### 2026/09/10
 
 * `修复` 离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称
 * `优化` 同步 MediaInfo 参考文档与离线搜索索引, 补充兼容 `read` 与版本化 `snapshot` 的边界, 插件快照 v1/v2 schema 协商, 轻量 `capabilities` 以及动态 v2 track 和引擎信息
@@ -21,6 +21,7 @@
 * `优化` 以统一 `ai.catalog` 目标目录直接替换全部未发布的 AI 列表与配置探测 API, 补齐精确 `target` 路由, 完整响应与会话元数据, 稳定禁止回退错误, 并同步在线/离线资产
 * `优化` 扩充内置 runtime 参考文档及离线搜索索引, 补充用于校验 mapping/seeds/usage/retrace metadata 导出的 6 个 `loadJarWithR8` 重载及协议 1.1 `retraceR8Stack` API, 并说明溯源绑定与失败即终止的禁止回退语义
 * `优化` 统一 README 版式与 Gradle 平台版本管理方式
+* `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
 
 # v1.0.1
 

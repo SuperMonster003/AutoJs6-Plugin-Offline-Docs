@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=181
-totalBytes=10100614
-contentSha256=b90ae4853864b340874e48415b83943b9e82b4963bbd9eccca19240b351fea52
+fileCount=184
+totalBytes=10542542
+contentSha256=1183ed5d038ca82cfe045fa1e173cb47b439cbee1c2e6c7f3e360551d53c6812
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.0
 
-###### 2026/09/01
+###### 2026/09/10
 
 * `Исправление` Валидаторы офлайн-документации больше не принимают публичное имя метода Node bridge `callAutoJs` за устаревшее неполное имя продукта
 * `Улучшение` Синхронизированы справочник MediaInfo и автономный поисковый индекс: граница между прежним `read` и версионированным `snapshot`, согласование схем v1/v2 плагина, облегчённый `capabilities`, а также динамические данные треков v2 и движка
@@ -131,6 +131,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Все неопубликованные API списка и проверки конфигурации ИИ заменены единым каталогом целей `ai.catalog`, точной маршрутизацией через `target`, полными метаданными ответов и сеансов, стабильными ошибками без отката и синхронизированными сетевыми/офлайн-ресурсами
 * `Улучшение` Встроенная справка runtime и офлайн-индекс поиска дополнены шестью перегрузками `loadJarWithR8` для проверенного экспорта mapping/seeds/usage/retrace metadata и API `retraceR8Stack` протокола 1.1, включая привязку происхождения и закрытый отказ без fallback
 * `Улучшение` Унифицировать оформление README и управление версиями платформы Gradle
+* `Улучшение` Справочник MediaInfo и автономный поиск охватывают streamNumber, countGet, infoKind и исходные пути файлов
 
 # v1.0.1
 

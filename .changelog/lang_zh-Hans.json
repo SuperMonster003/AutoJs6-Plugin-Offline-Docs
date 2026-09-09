@@ -6,7 +6,7 @@
   "changelog_label_dependency": "依赖",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/09/01",
+      "released_date": "2026/09/10",
       "fix": [
         "离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称"
       ],
@@ -22,7 +22,8 @@
         "扩充内置 AI 参考文档及离线搜索索引, 补充显式 CPU/GPU/NPU backend profile, `ai.catalog` 设备可用性及稳定不可用原因, 持久会话固定 backend, GPU 兼容性限制和禁止回退契约",
         "以统一 `ai.catalog` 目标目录直接替换全部未发布的 AI 列表与配置探测 API, 补齐精确 `target` 路由, 完整响应与会话元数据, 稳定禁止回退错误, 并同步在线/离线资产",
         "扩充内置 runtime 参考文档及离线搜索索引, 补充用于校验 mapping/seeds/usage/retrace metadata 导出的 6 个 `loadJarWithR8` 重载及协议 1.1 `retraceR8Stack` API, 并说明溯源绑定与失败即终止的禁止回退语义",
-        "统一 README 版式与 Gradle 平台版本管理方式"
+        "统一 README 版式与 Gradle 平台版本管理方式",
+        "MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义"
       ]
     },
     "v1.0.1": {
