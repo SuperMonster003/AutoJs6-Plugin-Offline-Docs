@@ -6,7 +6,7 @@
   "changelog_label_dependency": "Dépendance",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/09/10",
+      "released_date": "2026/09/11",
       "fix": [
         "Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu"
       ],
@@ -23,7 +23,8 @@
         "Toutes les API non publiées de liste et de détection de configuration IA ont été remplacées par le répertoire unifié de cibles `ai.catalog`, le routage exact par `target`, les métadonnées complètes de réponse et de session, les erreurs stables sans repli et les ressources en ligne/hors ligne synchronisées",
         "Extension de la référence runtime intégrée et de l'index de recherche hors ligne avec six surcharges de `loadJarWithR8` pour l'export vérifié de mapping/seeds/usage/retrace metadata et l'API `retraceR8Stack` du protocole 1.1, avec liaison de provenance et échec fermé sans repli",
         "Uniformiser la mise en page du README et la gestion des versions de la plateforme Gradle",
-        "La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources"
+        "La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources",
+        "La vérification de compilation rejette les dépendances natives involontaires et produit un rapport JSON"
       ]
     },
     "v1.0.1": {

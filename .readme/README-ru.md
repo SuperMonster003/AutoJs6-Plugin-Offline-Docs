@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `Исправление` Валидаторы офлайн-документации больше не принимают публичное имя метода Node bridge `callAutoJs` за устаревшее неполное имя продукта
 * `Улучшение` Синхронизированы справочник MediaInfo и автономный поисковый индекс: граница между прежним `read` и версионированным `snapshot`, согласование схем v1/v2 плагина, облегчённый `capabilities`, а также динамические данные треков v2 и движка
@@ -132,6 +132,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Встроенная справка runtime и офлайн-индекс поиска дополнены шестью перегрузками `loadJarWithR8` для проверенного экспорта mapping/seeds/usage/retrace metadata и API `retraceR8Stack` протокола 1.1, включая привязку происхождения и закрытый отказ без fallback
 * `Улучшение` Унифицировать оформление README и управление версиями платформы Gradle
 * `Улучшение` Справочник MediaInfo и автономный поиск охватывают streamNumber, countGet, infoKind и исходные пути файлов
+* `Улучшение` Проверка сборки отклоняет непреднамеренные нативные зависимости и создает отчет JSON
 
 # v1.0.1
 
@@ -191,3 +192,6 @@ app/src/main/assets/doc/CHANGELOG-*.md
 
 - [AutoJs6](https://docs.autojs6.com/)
 - [AutoJs6 Documentation](https://docs.autojs6.com/)
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/docs/16kb.md)

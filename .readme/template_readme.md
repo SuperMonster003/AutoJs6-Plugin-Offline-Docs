@@ -147,3 +147,6 @@ app/src/main/assets/doc/CHANGELOG-*.md
 
 - [AutoJs6]({{ autojs6_docs_url }})
 - [AutoJs6 Documentation]({{ autojs6_docs_url }})
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/docs/16kb.md)

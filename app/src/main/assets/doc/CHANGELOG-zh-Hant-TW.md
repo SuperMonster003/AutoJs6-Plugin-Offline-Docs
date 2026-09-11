@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `修復` 離線文件驗證器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
 * `優化` 同步 MediaInfo 參考文件與離線搜尋索引, 補充相容 `read` 與版本化 `snapshot` 的邊界, 外掛快照 v1/v2 schema 協商, 輕量 `capabilities` 以及動態 v2 track 和引擎資訊
@@ -22,6 +22,7 @@
 * `優化` 擴充內建 runtime 參考文件與離線搜尋索引, 加入用於驗證 mapping/seeds/usage/retrace metadata 匯出的 6 個 `loadJarWithR8` 多載及通訊協定 1.1 `retraceR8Stack` API, 並說明溯源綁定與失敗即終止的禁止回退語義
 * `優化` 統一 README 版式與 Gradle 平台版本管理方式
 * `優化` MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義
+* `優化` 建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告
 
 # v1.0.1
 

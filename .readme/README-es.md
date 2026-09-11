@@ -116,7 +116,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar
 * `Mejora` Se sincronizaron la referencia de MediaInfo y el índice de búsqueda sin conexión con el límite entre `read` heredado y `snapshot` versiónado, la negociación de schema v1/v2 del plugin, `capabilities` ligero y metadatos dinámicos de tracks v2 y del motor
@@ -132,6 +132,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` Se amplió la referencia runtime integrada y el índice de búsqueda sin conexión con seis sobrecargas de `loadJarWithR8` para exportar mapping/seeds/usage/retrace metadata verificados y la API `retraceR8Stack` del protocolo 1.1, con vínculo de procedencia y fallo cerrado sin fallback
 * `Mejora` Unificar el diseño del README y la gestión de versiones de la plataforma Gradle
 * `Mejora` La referencia MediaInfo y la búsqueda sin conexión cubren streamNumber, countGet, infoKind y las rutas originales
+* `Mejora` La verificación de compilación rechaza dependencias nativas accidentales y genera un informe JSON
 
 # v1.0.1
 
@@ -191,3 +192,6 @@ app/src/main/assets/doc/CHANGELOG-*.md
 
 - [AutoJs6](https://docs.autojs6.com/)
 - [AutoJs6 Documentation](https://docs.autojs6.com/)
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/docs/16kb.md)

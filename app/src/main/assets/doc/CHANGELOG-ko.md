@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
 * `개선` MediaInfo 참조와 오프라인 검색 인덱스를 동기화하고 기존 `read`와 버전이 지정된 `snapshot`의 경계, 플러그인 snapshot v1/v2 schema 협상, 경량 `capabilities`, 동적 v2 track 및 엔진 정보를 추가
@@ -22,6 +22,7 @@
 * `개선` 내장 runtime 참조와 오프라인 검색 인덱스를 확장하여 검증된 mapping/seeds/usage/retrace metadata 내보내기를 위한 6개 `loadJarWithR8` 오버로드와 프로토콜 1.1 `retraceR8Stack` API, 출처 결합 및 fallback 없는 fail-closed 동작을 추가
 * `개선` README 레이아웃과 Gradle 플랫폼 버전 관리 방식을 통일
 * `개선` MediaInfo 참조 문서와 오프라인 검색에 streamNumber, countGet, infoKind 및 원본 경로 동작을 반영
+* `개선` 빌드 시 의도하지 않은 네이티브 의존성을 거부하고 JSON 보고서 생성
 
 # v1.0.1
 

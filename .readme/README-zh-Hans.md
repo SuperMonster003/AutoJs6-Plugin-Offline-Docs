@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `修复` 离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称
 * `优化` 同步 MediaInfo 参考文档与离线搜索索引, 补充兼容 `read` 与版本化 `snapshot` 的边界, 插件快照 v1/v2 schema 协商, 轻量 `capabilities` 以及动态 v2 track 和引擎信息
@@ -132,6 +132,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 扩充内置 runtime 参考文档及离线搜索索引, 补充用于校验 mapping/seeds/usage/retrace metadata 导出的 6 个 `loadJarWithR8` 重载及协议 1.1 `retraceR8Stack` API, 并说明溯源绑定与失败即终止的禁止回退语义
 * `优化` 统一 README 版式与 Gradle 平台版本管理方式
 * `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
+* `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
 
 # v1.0.1
 
@@ -191,3 +192,6 @@ app/src/main/assets/doc/CHANGELOG-*.md
 
 - [AutoJs6](https://docs.autojs6.com/)
 - [AutoJs6 Documentation](https://docs.autojs6.com/)
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/docs/16kb.md)

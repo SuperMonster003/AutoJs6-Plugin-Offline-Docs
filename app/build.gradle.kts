@@ -8,6 +8,7 @@ import java.util.zip.ZipFile
 import javax.xml.parsers.DocumentBuilderFactory
 
 plugins {
+    id("io.github.supermonster003.autojs6-native-alignment")
     id("org.autojs.build.utils")
     id("org.autojs.build.versions")
     id("org.autojs.build.signs")
@@ -806,3 +807,6 @@ tasks {
         doLast { println("Destination: ${file(dst)}") }
     }
 }
+
+// Reject accidental native dependencies on every ABI.
+nativeAlignment { expectNoNativeLibraries.set(true) }

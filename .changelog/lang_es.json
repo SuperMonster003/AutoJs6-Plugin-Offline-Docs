@@ -6,7 +6,7 @@
   "changelog_label_dependency": "Dependencia",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/09/10",
+      "released_date": "2026/09/11",
       "fix": [
         "Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar"
       ],
@@ -23,7 +23,8 @@
         "Se sustituyeron todas las API de listado y comprobación de configuración de IA no publicadas por el directorio unificado de destinos `ai.catalog`, el enrutamiento exacto mediante `target`, metadatos completos de respuestas y sesiones, errores estables sin fallback y recursos en línea/sin conexión sincronizados",
         "Se amplió la referencia runtime integrada y el índice de búsqueda sin conexión con seis sobrecargas de `loadJarWithR8` para exportar mapping/seeds/usage/retrace metadata verificados y la API `retraceR8Stack` del protocolo 1.1, con vínculo de procedencia y fallo cerrado sin fallback",
         "Unificar el diseño del README y la gestión de versiones de la plataforma Gradle",
-        "La referencia MediaInfo y la búsqueda sin conexión cubren streamNumber, countGet, infoKind y las rutas originales"
+        "La referencia MediaInfo y la búsqueda sin conexión cubren streamNumber, countGet, infoKind y las rutas originales",
+        "La verificación de compilación rechaza dependencias nativas accidentales y genera un informe JSON"
       ]
     },
     "v1.0.1": {

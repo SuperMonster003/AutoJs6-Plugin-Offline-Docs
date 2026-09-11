@@ -116,7 +116,7 @@ category=offline-docs
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
 * `تحسين` تمت مزامنة مرجع MediaInfo وفهرس البحث دون اتصال مع الحد الفاصل بين `read` القديم و`snapshot` ذي الإصدار, والتفاوض على مخططي v1/v2 للملحق, و`capabilities` الخفيف, وبيانات tracks v2 والمحرك الديناميكية
@@ -132,6 +132,7 @@ category=offline-docs
 * `تحسين` توسيع مرجع runtime المضمن وفهرس البحث دون اتصال بستة تحميلات لـ `loadJarWithR8` لتصدير mapping/seeds/usage/retrace metadata بعد التحقق وواجهة `retraceR8Stack` للبروتوكول 1.1, مع ربط المصدر والفشل المغلق دون fallback
 * `تحسين` توحيد تخطيط README وطريقة إدارة إصدارات منصة Gradle
 * `تحسين` تحديث مرجع MediaInfo والبحث دون اتصال لخيارات streamNumber وcountGet وinfoKind ومسارات الملفات الأصلية
+* `تحسين` التحقق أثناء البناء لمنع إدخال تبعيات أصلية غير مقصودة, مع تقرير JSON
 
 # v1.0.1
 
@@ -191,3 +192,6 @@ app/src/main/assets/doc/CHANGELOG-*.md
 
 - [AutoJs6](https://docs.autojs6.com/)
 - [AutoJs6 Documentation](https://docs.autojs6.com/)
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/docs/16kb.md)

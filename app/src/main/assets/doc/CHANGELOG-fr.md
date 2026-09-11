@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
 * `Amélioration` Synchronisation de la référence MediaInfo et de l'index de recherche hors ligne avec la frontière entre `read` historique et `snapshot` versionné, la négociation des schémas v1/v2 du plugin, `capabilities` léger et les métadonnées dynamiques des tracks v2 et du moteur
@@ -22,6 +22,7 @@
 * `Amélioration` Extension de la référence runtime intégrée et de l'index de recherche hors ligne avec six surcharges de `loadJarWithR8` pour l'export vérifié de mapping/seeds/usage/retrace metadata et l'API `retraceR8Stack` du protocole 1.1, avec liaison de provenance et échec fermé sans repli
 * `Amélioration` Uniformiser la mise en page du README et la gestion des versions de la plateforme Gradle
 * `Amélioration` La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources
+* `Amélioration` La vérification de compilation rejette les dépendances natives involontaires et produit un rapport JSON
 
 # v1.0.1
 

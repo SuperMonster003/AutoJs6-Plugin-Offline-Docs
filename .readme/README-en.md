@@ -116,7 +116,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 # v6.8.0
 
-###### 2026/09/10
+###### 2026/09/11
 
 * `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
 * `Improvement` Synchronized the MediaInfo reference and offline search index with the legacy `read` versus versioned `snapshot` boundary, plugin snapshot v1/v2 schema negotiation, lightweight `capabilities`, and dynamic v2 track plus engine metadata
@@ -132,6 +132,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Extended the bundled runtime reference and offline search index with six `loadJarWithR8` overloads for verified mapping/seeds/usage/retrace-metadata export and the protocol 1.1 `retraceR8Stack` API, including provenance binding and fail-closed no-fallback behavior
 * `Improvement` Standardize the README layout and Gradle platform version management
 * `Improvement` Updated the MediaInfo reference and offline search with streamNumber, countGet, infoKind and original source paths
+* `Improvement` Build verification rejects accidental native dependencies and produces a JSON report
 
 # v1.0.1
 
@@ -191,3 +192,6 @@ app/src/main/assets/doc/CHANGELOG-*.md
 
 - [AutoJs6](https://docs.autojs6.com/)
 - [AutoJs6 Documentation](https://docs.autojs6.com/)
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/docs/16kb.md)
