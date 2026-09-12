@@ -6,9 +6,10 @@
 
 # v6.8.0
 
-###### 2026/09/11
+###### 2026/09/12
 
 * `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
+* `개선` OCR 참조 문서와 오프라인 검색 색인을 동기화하고 엔진 자동 선택, 실시간 모드 읽기, tap 초기화, 호출별 옵션 및 사용 가능한 플러그인이 없을 때의 동작 보완
 * `개선` MediaInfo 참조와 오프라인 검색 인덱스를 동기화하고 기존 `read`와 버전이 지정된 `snapshot`의 경계, 플러그인 snapshot v1/v2 schema 협상, 경량 `capabilities`, 동적 v2 track 및 엔진 정보를 추가
 * `개선` Pinyin 참조 문서와 오프라인 검색 인덱스를 동기화하고 호출 단위 `customDictionary` 발음 재정의, 완성된 `compare`/`compact`, 명시적 `pinyin` capability 가 있는 `autojs6:bridge.callAutoJs` 를 통한 Node.js 접근을 추가
 * `개선` Image Quantization v4 참조와 오프라인 검색 색인을 동기화하여 구성 가능한 픽셀 및 작업 메모리 예산, 형식화된 리소스 한도 진단, 계산된 최대 메모리 지표, 명시적 요청 또는 스크립트 종료 시 취소를 추가

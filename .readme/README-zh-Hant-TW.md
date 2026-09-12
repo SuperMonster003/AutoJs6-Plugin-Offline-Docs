@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 # v6.8.0
 
-###### 2026/09/11
+###### 2026/09/12
 
 * `修復` 離線文件驗證器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
+* `優化` 同步 OCR 參考文件與離線搜尋索引, 補充引擎自動選擇, 即時模式讀取, tap 重設, 單次呼叫選項及無可用外掛時的行為
 * `優化` 同步 MediaInfo 參考文件與離線搜尋索引, 補充相容 `read` 與版本化 `snapshot` 的邊界, 外掛快照 v1/v2 schema 協商, 輕量 `capabilities` 以及動態 v2 track 和引擎資訊
 * `優化` 同步 Pinyin 參考文件與離線搜尋索引, 補充僅目前呼叫生效的 `customDictionary` 自訂讀音覆寫, 已完成的 `compare`/`compact`, 以及透過具備明確 `pinyin` capability 的 `autojs6:bridge.callAutoJs` 進行 Node.js 存取
 * `優化` 同步 Image Quantization v4 參考文件與離線搜尋索引, 新增可設定的像素及工作記憶體預算, 型別化資源上限診斷, 已計入預算的尖峰記憶體指標, 以及明確要求或指令碼結束時的取消機制
