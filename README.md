@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10542542
-contentSha256=1183ed5d038ca82cfe045fa1e173cb47b439cbee1c2e6c7f3e360551d53c6812
+totalBytes=10551572
+contentSha256=8a0c7a061d6b5272e70d916629a0a8ecfb39cac57a74bdb48237947b75f77aad
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.0
 
-###### 2026/09/12
+###### 2026/09/13
 
 * `修复` 离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称
+* `优化` 同步 `device.pageSize` 参考文档与离线搜索索引, 说明页大小的字节单位, 只读属性及运行环境与原生库兼容性的区别
 * `优化` 同步 OCR 参考文档与离线搜索索引, 补充引擎自动选择, 实时模式读取, tap 重置, 单次调用选项及无可用插件时的行为
 * `优化` 同步 MediaInfo 参考文档与离线搜索索引, 补充兼容 `read` 与版本化 `snapshot` 的边界, 插件快照 v1/v2 schema 协商, 轻量 `capabilities` 以及动态 v2 track 和引擎信息
 * `优化` 同步 Pinyin 参考文档与离线搜索索引, 补充仅当前调用生效的 `customDictionary` 自定义读音覆盖, 已完成的 `compare`/`compact`, 以及通过带显式 `pinyin` capability 的 `autojs6:bridge.callAutoJs` 进行 Node.js 访问

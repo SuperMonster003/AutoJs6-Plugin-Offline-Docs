@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10542542
-contentSha256=1183ed5d038ca82cfe045fa1e173cb47b439cbee1c2e6c7f3e360551d53c6812
+totalBytes=10551572
+contentSha256=8a0c7a061d6b5272e70d916629a0a8ecfb39cac57a74bdb48237947b75f77aad
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v6.8.0
 
-###### 2026/09/12
+###### 2026/09/13
 
 * `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
+* `개선` `device.pageSize` 참조 문서와 오프라인 검색 인덱스를 동기화하고 바이트 단위, 읽기 전용 속성 및 실행 환경과 네이티브 라이브러리 호환성의 차이를 설명
 * `개선` OCR 참조 문서와 오프라인 검색 색인을 동기화하고 엔진 자동 선택, 실시간 모드 읽기, tap 초기화, 호출별 옵션 및 사용 가능한 플러그인이 없을 때의 동작 보완
 * `개선` MediaInfo 참조와 오프라인 검색 인덱스를 동기화하고 기존 `read`와 버전이 지정된 `snapshot`의 경계, 플러그인 snapshot v1/v2 schema 협상, 경량 `capabilities`, 동적 v2 track 및 엔진 정보를 추가
 * `개선` Pinyin 참조 문서와 오프라인 검색 인덱스를 동기화하고 호출 단위 `customDictionary` 발음 재정의, 완성된 `compare`/`compact`, 명시적 `pinyin` capability 가 있는 `autojs6:bridge.callAutoJs` 를 통한 Node.js 접근을 추가

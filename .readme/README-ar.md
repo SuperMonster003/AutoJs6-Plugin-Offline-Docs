@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10542542
-contentSha256=1183ed5d038ca82cfe045fa1e173cb47b439cbee1c2e6c7f3e360551d53c6812
+totalBytes=10551572
+contentSha256=8a0c7a061d6b5272e70d916629a0a8ecfb39cac57a74bdb48237947b75f77aad
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -116,9 +116,10 @@ category=offline-docs
 
 # v6.8.0
 
-###### 2026/09/12
+###### 2026/09/13
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
+* `تحسين` مزامنة مرجع `device.pageSize` وفهرس البحث دون اتصال مع توضيح وحدة البايت والقراءة فقط والفرق بين بيئة التشغيل وتوافق المكتبات الأصلية
 * `تحسين` مزامنة مرجع OCR وفهرس البحث دون اتصال مع اختيار المحرك تلقائيا وقراءة الوضع مباشرة وإعادة الضبط عبر tap وخيارات كل استدعاء والسلوك عند عدم توفر إضافات
 * `تحسين` تمت مزامنة مرجع MediaInfo وفهرس البحث دون اتصال مع الحد الفاصل بين `read` القديم و`snapshot` ذي الإصدار, والتفاوض على مخططي v1/v2 للملحق, و`capabilities` الخفيف, وبيانات tracks v2 والمحرك الديناميكية
 * `تحسين` تمت مزامنة مرجع Pinyin وفهرس البحث غير المتصل مع تجاوزات القراءة `customDictionary` لكل استدعاء, وإكمال `compare`/`compact`, وإتاحة الوصول من Node.js عبر `autojs6:bridge.callAutoJs` باستخدام capability صريحة باسم `pinyin`

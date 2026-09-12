@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10542542
-contentSha256=1183ed5d038ca82cfe045fa1e173cb47b439cbee1c2e6c7f3e360551d53c6812
+totalBytes=10551572
+contentSha256=8a0c7a061d6b5272e70d916629a0a8ecfb39cac57a74bdb48237947b75f77aad
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.0
 
-###### 2026/09/12
+###### 2026/09/13
 
 * `Исправление` Валидаторы офлайн-документации больше не принимают публичное имя метода Node bridge `callAutoJs` за устаревшее неполное имя продукта
+* `Улучшение` Синхронизация справки `device.pageSize` и индекса автономного поиска с описанием единиц в байтах, доступа только для чтения и различий между средой выполнения и совместимостью нативных библиотек
 * `Улучшение` Синхронизированы справка OCR и индекс автономного поиска: автоматический выбор движка, чтение текущего режима, сброс через tap, параметры отдельного вызова и поведение при отсутствии доступных плагинов
 * `Улучшение` Синхронизированы справочник MediaInfo и автономный поисковый индекс: граница между прежним `read` и версионированным `snapshot`, согласование схем v1/v2 плагина, облегчённый `capabilities`, а также динамические данные треков v2 и движка
 * `Улучшение` Синхронизированы справочник Pinyin и индекс офлайн-поиска: добавлены переопределения чтений `customDictionary` на один вызов, завершенные `compare`/`compact` и доступ из Node.js через `autojs6:bridge.callAutoJs` с явной capability `pinyin`
