@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10557951
-contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
+totalBytes=10566051
+contentSha256=b7fd01f3f73904bdd3aaec778cf280d57ab99c17f4e6d8f300b59d4526ee6f43
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
+sourceBaseCommit=7769e6d428a44fc872f5746b12edc4306a3e5aec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ###### 2026/09/13
 
+* `개선` Media, Device, TTS, Settings 참조에 Android 17 백그라운드 오디오 조건, 알림 없는 차단, 앱이 표시된 상태에서의 복구 및 TTS 엔진 프로세스 범위 반영
 * `개선` 릴리스 서명 설정, 예상 APK 구성 및 문서 재생성 결과 검증
 
 # v6.8.0

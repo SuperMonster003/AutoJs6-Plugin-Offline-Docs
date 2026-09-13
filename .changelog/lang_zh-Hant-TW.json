@@ -8,6 +8,7 @@
     "v6.8.1": {
       "released_date": "2026/09/13",
       "improvement": [
+        "同步 Media, Device, TTS 和 Settings 的 Android 17 背景音訊執行條件, 靜默抑制, 可見介面恢復操作與 TTS 引擎程序邊界",
         "校驗發行簽章設定, 預期 APK 集合與可重現文件"
       ]
     },
