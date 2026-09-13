@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=184
-totalBytes=10570151
-contentSha256=2331d9f04557e9cde2eadc79c8daec32bc732c8ac6316aa82ff6e10f522fd5b4
+fileCount=185
+totalBytes=10604934
+contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
 sourcePath=api
@@ -118,6 +118,7 @@ category=offline-docs
 
 ###### 2026/09/13
 
+* `تحسين` مزامنة مرجع Pangu وفهرس البحث, بما يشمل pangu.js 10.1.0 المضمن والوصول العام وضبط مسافات النص والتحقق منها
 * `تحسين` مزامنة توثيق HTTP لنطاق طلب isInsecure / insecure وإعدادات العميل المشتركة والثقة بالشهادات و CT و ECH وأذونات الشبكة المحلية
 * `تحسين` مزامنة مراجع Media و Device و TTS و Settings مع شروط الصوت في الخلفية على Android 17 والمنع الصامت والاستعادة من واجهة التطبيق الظاهرة وحدود عملية محرك TTS
 * `تحسين` التحقق من اكتمال إعداد توقيع حزم الإصدار وملفات APK المتوقعة وإمكانية إعادة إنشاء الوثائق

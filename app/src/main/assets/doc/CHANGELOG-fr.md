@@ -8,6 +8,7 @@
 
 ###### 2026/09/13
 
+* `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
 * `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local
 * `Amélioration` Synchroniser les références Media, Device, TTS et Settings avec les conditions audio en arrière-plan d'Android 17, le blocage silencieux, la reprise depuis l'application visible et les limites du processus du moteur TTS
 * `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation

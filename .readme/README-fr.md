@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=184
-totalBytes=10570151
-contentSha256=2331d9f04557e9cde2eadc79c8daec32bc732c8ac6316aa82ff6e10f522fd5b4
+fileCount=185
+totalBytes=10604934
+contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
 sourcePath=api
@@ -118,6 +118,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ###### 2026/09/13
 
+* `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
 * `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local
 * `Amélioration` Synchroniser les références Media, Device, TTS et Settings avec les conditions audio en arrière-plan d'Android 17, le blocage silencieux, la reprise depuis l'application visible et les limites du processus du moteur TTS
 * `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation

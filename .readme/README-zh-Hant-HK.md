@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=184
-totalBytes=10570151
-contentSha256=2331d9f04557e9cde2eadc79c8daec32bc732c8ac6316aa82ff6e10f522fd5b4
+fileCount=185
+totalBytes=10604934
+contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
 sourcePath=api
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ###### 2026/09/13
 
+* `優化` 同步 Pangu 參考文件與搜尋索引, 涵蓋內置 pangu.js 10.1.0, 全域物件, 文字間距處理與間距檢查
 * `優化` 同步 HTTP 的 isInsecure / insecure 請求範圍, 共用用戶端設定及憑證信任, CT, ECH 和本地網絡權限說明
 * `優化` 同步 Media, Device, TTS 和 Settings 的 Android 17 後台音頻運行條件, 靜默抑制, 可見介面恢復操作與 TTS 引擎進程邊界
 * `優化` 校驗發行簽署設定, 預期 APK 集合與可重現文件
