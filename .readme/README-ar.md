@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10551572
-contentSha256=8a0c7a061d6b5272e70d916629a0a8ecfb39cac57a74bdb48237947b75f77aad
+totalBytes=10557951
+contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -119,6 +119,7 @@ category=offline-docs
 ###### 2026/09/13
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
+* `تحسين` مزامنة مرجع أذونات الشبكة المحلية وفهرس البحث دون اتصال, مع شروط Android 17 / targetSdk 37 ومنح الإذن غير المتزامن وإعادة المحاولة وحدود أذونات Socket / MQTT الأصلية والإضافات
 * `تحسين` مزامنة مرجع `device.pageSize` وفهرس البحث دون اتصال مع توضيح وحدة البايت والقراءة فقط والفرق بين بيئة التشغيل وتوافق المكتبات الأصلية
 * `تحسين` مزامنة مرجع OCR وفهرس البحث دون اتصال مع اختيار المحرك تلقائيا وقراءة الوضع مباشرة وإعادة الضبط عبر tap وخيارات كل استدعاء والسلوك عند عدم توفر إضافات
 * `تحسين` تمت مزامنة مرجع MediaInfo وفهرس البحث دون اتصال مع الحد الفاصل بين `read` القديم و`snapshot` ذي الإصدار, والتفاوض على مخططي v1/v2 للملحق, و`capabilities` الخفيف, وبيانات tracks v2 والمحرك الديناميكية

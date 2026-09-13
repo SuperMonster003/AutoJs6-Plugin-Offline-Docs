@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10551572
-contentSha256=8a0c7a061d6b5272e70d916629a0a8ecfb39cac57a74bdb48237947b75f77aad
+totalBytes=10557951
+contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
 sourcePath=api
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/09/13
 
 * `修复` 离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称
+* `优化` 同步运行时本地网络权限文档与离线搜索索引, 说明 Android 17 / targetSdk 37 条件, 异步授权, 重试及原生 Socket / MQTT 和插件权限边界
 * `优化` 同步 `device.pageSize` 参考文档与离线搜索索引, 说明页大小的字节单位, 只读属性及运行环境与原生库兼容性的区别
 * `优化` 同步 OCR 参考文档与离线搜索索引, 补充引擎自动选择, 实时模式读取, tap 重置, 单次调用选项及无可用插件时的行为
 * `优化` 同步 MediaInfo 参考文档与离线搜索索引, 补充兼容 `read` 与版本化 `snapshot` 的边界, 插件快照 v1/v2 schema 协商, 轻量 `capabilities` 以及动态 v2 track 和引擎信息
