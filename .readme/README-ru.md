@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=184
-totalBytes=10570151
-contentSha256=2331d9f04557e9cde2eadc79c8daec32bc732c8ac6316aa82ff6e10f522fd5b4
+fileCount=185
+totalBytes=10604934
+contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
 sourcePath=api
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ###### 2026/09/13
 
+* `Улучшение` Синхронизация справочника Pangu и поискового индекса, включая встроенный pangu.js 10.1.0, глобальный доступ, расстановку пробелов и проверку
 * `Улучшение` Синхронизация документации HTTP об области действия isInsecure / insecure, общих настройках клиента, доверии сертификатам, CT, ECH и разрешениях локальной сети
 * `Улучшение` Синхронизация справки Media, Device, TTS и Settings с условиями фонового аудио Android 17, подавлением без ошибки, восстановлением из видимого приложения и границами процесса движка TTS
 * `Улучшение` Проверка полной настройки подписи, ожидаемого набора APK и воспроизводимости документации

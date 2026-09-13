@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=184
-totalBytes=10570151
-contentSha256=2331d9f04557e9cde2eadc79c8daec32bc732c8ac6316aa82ff6e10f522fd5b4
+fileCount=185
+totalBytes=10604934
+contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
 sourcePath=api
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ###### 2026/09/13
 
+* `改善` Pangu リファレンスと検索インデックスを同期し, 組み込み pangu.js 10.1.0, グローバルアクセス, 文字間隔の調整と確認を説明
 * `改善` HTTP の isInsecure / insecure のリクエスト単位の適用範囲, 共有クライアント設定, 証明書の信頼, CT, ECH とローカルネットワーク権限の説明を同期
 * `改善` Media, Device, TTS, Settings のリファレンスに Android 17 のバックグラウンド音声条件, 通知のない抑制, アプリ表示中の復旧操作, TTS エンジンプロセスの範囲を反映
 * `改善` リリース署名の設定, APK の構成, ドキュメントの再生成結果を検証

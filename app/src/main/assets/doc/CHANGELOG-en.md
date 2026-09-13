@@ -8,6 +8,7 @@
 
 ###### 2026/09/13
 
+* `Improvement` Synchronize the Pangu reference and search index, covering bundled pangu.js 10.1.0, global access, text spacing and spacing checks
 * `Improvement` Synchronize HTTP documentation for request-scoped isInsecure / insecure, shared client configuration, certificate trust, CT, ECH and local network permissions
 * `Improvement` Synchronize the Media, Device, TTS and Settings references with Android 17 background audio conditions, silent suppression, recovery from the visible app and TTS engine process boundaries
 * `Improvement` Release packages are checked for a complete signing configuration, exact APK contents and reproducible documentation
