@@ -8,6 +8,7 @@
 
 ###### 2026/09/13
 
+* `优化` 同步 HTTP 的 isInsecure / insecure 请求范围, 共享客户端配置及证书信任, CT, ECH 和本地网络权限说明
 * `优化` 同步 Media, Device, TTS 和 Settings 的 Android 17 后台音频运行条件, 静默抑制, 可见界面恢复操作与 TTS 引擎进程边界
 * `优化` 校验发行签名配置, 预期 APK 集合与可复现文档
 

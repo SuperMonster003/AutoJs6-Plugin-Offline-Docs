@@ -8,6 +8,7 @@
     "v6.8.1": {
       "released_date": "2026/09/13",
       "improvement": [
+        "HTTP の isInsecure / insecure のリクエスト単位の適用範囲, 共有クライアント設定, 証明書の信頼, CT, ECH とローカルネットワーク権限の説明を同期",
         "Media, Device, TTS, Settings のリファレンスに Android 17 のバックグラウンド音声条件, 通知のない抑制, アプリ表示中の復旧操作, TTS エンジンプロセスの範囲を反映",
         "リリース署名の設定, APK の構成, ドキュメントの再生成結果を検証"
       ]

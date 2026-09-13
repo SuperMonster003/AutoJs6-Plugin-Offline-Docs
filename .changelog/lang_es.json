@@ -8,6 +8,7 @@
     "v6.8.1": {
       "released_date": "2026/09/13",
       "improvement": [
+        "Sincronizar la documentación HTTP sobre el alcance por solicitud de isInsecure / insecure, la configuración compartida del cliente, la confianza en certificados, CT, ECH y los permisos de red local",
         "Sincronizar las referencias de Media, Device, TTS y Settings con las condiciones de audio en segundo plano de Android 17, el bloqueo silencioso, la recuperación desde la aplicación visible y los límites del proceso del motor TTS",
         "Comprobación de la firma completa, los APK esperados y la documentación reproducible de cada versión"
       ]
