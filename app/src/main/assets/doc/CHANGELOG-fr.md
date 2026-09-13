@@ -8,6 +8,7 @@
 
 ###### 2026/09/13
 
+* `Amélioration` Synchroniser les références Media, Device, TTS et Settings avec les conditions audio en arrière-plan d'Android 17, le blocage silencieux, la reprise depuis l'application visible et les limites du processus du moteur TTS
 * `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation
 
 # v6.8.0

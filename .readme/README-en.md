@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10557951
-contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
+totalBytes=10566051
+contentSha256=b7fd01f3f73904bdd3aaec778cf280d57ab99c17f4e6d8f300b59d4526ee6f43
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
+sourceBaseCommit=7769e6d428a44fc872f5746b12edc4306a3e5aec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ###### 2026/09/13
 
+* `Improvement` Synchronize the Media, Device, TTS and Settings references with Android 17 background audio conditions, silent suppression, recovery from the visible app and TTS engine process boundaries
 * `Improvement` Release packages are checked for a complete signing configuration, exact APK contents and reproducible documentation
 
 # v6.8.0

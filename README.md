@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10557951
-contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
+totalBytes=10566051
+contentSha256=b7fd01f3f73904bdd3aaec778cf280d57ab99c17f4e6d8f300b59d4526ee6f43
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
+sourceBaseCommit=7769e6d428a44fc872f5746b12edc4306a3e5aec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ###### 2026/09/13
 
+* `优化` 同步 Media, Device, TTS 和 Settings 的 Android 17 后台音频运行条件, 静默抑制, 可见界面恢复操作与 TTS 引擎进程边界
 * `优化` 校验发行签名配置, 预期 APK 集合与可复现文档
 
 # v6.8.0

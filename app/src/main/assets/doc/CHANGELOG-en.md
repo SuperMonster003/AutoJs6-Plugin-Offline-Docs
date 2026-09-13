@@ -8,6 +8,7 @@
 
 ###### 2026/09/13
 
+* `Improvement` Synchronize the Media, Device, TTS and Settings references with Android 17 background audio conditions, silent suppression, recovery from the visible app and TTS engine process boundaries
 * `Improvement` Release packages are checked for a complete signing configuration, exact APK contents and reproducible documentation
 
 # v6.8.0
