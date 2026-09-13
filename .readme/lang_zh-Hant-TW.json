@@ -1,11 +1,11 @@
 {
   "$name": "繁體中文 (台灣)",
   "text_current_lowercase": "目前",
-  "text_plugin_synopsis": "適用於 AutoJs6 的 6.6.4 離線說明文件內容外掛",
+  "text_plugin_synopsis": "適用於 AutoJs6 的 6.8.0 離線說明文件內容外掛",
   "h3_languages_with_ascii": "語言 (Languages)",
   "p_languages_all_supported_for_readme": "目前 README.md 支援以下語言",
   "h3_introduction": "簡介",
-  "p_introduction": "AutoJs6 Offline Documentation 外掛將完整的 6.6.4 說明文件網站作為可獨立安裝的內容套件提供.",
+  "p_introduction": "AutoJs6 Offline Documentation 外掛將完整的 6.8.0 說明文件網站作為可獨立安裝的內容套件提供.",
   "h3_contract": "外掛契約",
   "p_contract": "OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主程式只在固定套件名稱通過啟用狀態, 相容性, 簽章, 中繼資料, 清單和檔案內容一致性檢查後接受外掛.",
   "h3_content": "內容",

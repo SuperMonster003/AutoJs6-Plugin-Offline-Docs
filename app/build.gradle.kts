@@ -42,21 +42,7 @@ val requiredLicenseAssetNames = setOf(
     "OFL-1.1.txt",
     "SOURCE_PROVENANCE.md",
 )
-val knownBrokenReferences = setOf(
-    "all.html -> ex-input.png",
-    "all.html -> images.html",
-    "all.html -> images/ex-hint.png",
-    "all.html -> images/ex1-properties.png",
-    "events.html -> images.html",
-    "omniTypes.html -> intentOptionsType.html",
-    "shizuku.html -> shellResultType.html",
-    "ui.html -> ex-input.png",
-    "ui.html -> images/ex-hint.png",
-    "ui.html -> images/ex1-properties.png",
-    "util.html -> errors.html",
-    "util.html -> intl.html",
-    "util.html -> process.html",
-)
+val knownBrokenReferences = emptySet<String>()
 // Keep these style predicates aligned with .python/normalize_offline_docs.py.
 val prohibitedDocumentationSymbol = Regex(
     "[\u2010-\u2027\u3000-\u303F\u30FB\uFE10-\uFE6F\uFF00-\uFFEF]",
@@ -649,6 +635,7 @@ android {
         targetSdk = versions.sdkVersionTarget
         versionCode = versions.appVersionCode
         versionName = versions.appVersionName
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "VERSION_DATE", "\"${utils.getDateString("MMM d, yyyy", "GMT+08:00")}\"")
         buildConfigField("int", "OFFLINE_DOCS_CONTRACT_VERSION", offlineDocsContractVersion.toString())
@@ -734,6 +721,8 @@ dependencies {
     implementation(files("$rootDir/libs/common-plugin-api.aar"))
     implementation(files("$rootDir/libs/offline-docs-api.aar"))
     testImplementation(libs.junit)
+    androidTestImplementation(libs.test.ext.junit)
+    androidTestImplementation(libs.test.runner)
 }
 
 tasks {
@@ -789,24 +778,50 @@ tasks {
     }
 
     register<Copy>("appendDigestToReleasedFiles") {
-        val buildTypeRelease = "release"
-        val ext = utils.FILE_EXTENSION_APK
-        val dst = "${buildTypeRelease}s"
-        from(file(buildTypeRelease)) {
-            include("*.$ext")
-            eachFile {
-                val suffix = ".$ext"
-                val digest = utils.digestCRC32(file)
-                name = "${name.removeSuffix(suffix)}-$digest$suffix"
-            }
+        group = "distribution"
+        dependsOn("assembleRelease", "verifySignedReleaseArtifacts", "verifyOfflineDocsReleaseApk")
+        val source = layout.buildDirectory.dir("outputs/apk/release")
+        val destination = rootProject.layout.projectDirectory.dir("releases")
+        from(source) {
+            include("*.apk")
+            eachFile { name = "${name.removeSuffix(".apk")}-${utils.digestCRC32(file)}.apk" }
         }
-        into(dst)
+        into(destination)
         includeEmptyDirs = false
         duplicatesStrategy = DuplicatesStrategy.FAIL
-
-        doLast { println("Destination: ${file(dst)}") }
     }
 }
 
 // Reject accidental native dependencies on every ABI.
 nativeAlignment { expectNoNativeLibraries.set(true) }
+
+
+// Fail before collection when credentials, keystore or the actual APK set are incomplete.
+val verifySignedReleaseArtifacts = tasks.register("verifySignedReleaseArtifacts") {
+    group = "verification"
+    dependsOn("assembleRelease")
+    doLast {
+        val signing = android.buildTypes.getByName("release").signingConfig
+        check(signing != null && signing.storeFile?.isFile == true &&
+            !signing.storePassword.isNullOrBlank() && !signing.keyAlias.isNullOrBlank() &&
+            !signing.keyPassword.isNullOrBlank()) { "Release signing configuration is missing or incomplete" }
+        val directory = layout.buildDirectory.dir("outputs/apk/release").get().asFile
+        val apks = directory.listFiles { file -> file.isFile && file.extension == "apk" }.orEmpty()
+        check(apks.map { it.name }.toSet() == setOf("${rootProject.name}-v${versions.appVersionName}-universal.apk")) {
+            "Unexpected release APK set: ${apks.map { it.name }.sorted()}"
+        }
+        val buildTools = androidComponents.sdkComponents.sdkDirectory.get().asFile
+            .resolve("build-tools/${android.buildToolsVersion}")
+        val signerJar = buildTools.resolve("lib/apksigner.jar")
+        check(signerJar.isFile) { "Android SDK apksigner is unavailable" }
+        val result = providers.exec {
+            commandLine("java", "-jar", signerJar.absolutePath, "verify", apks.single().absolutePath)
+            isIgnoreExitValue = true
+        }.result.get()
+        check(result.exitValue == 0) { "Release APK signature verification failed" }
+    }
+}
+tasks.named("appendDigestToReleasedFiles") { dependsOn(verifySignedReleaseArtifacts) }
+tasks.matching { it.name == "prepareReleaseArtifacts" }.configureEach {
+    dependsOn(verifySignedReleaseArtifacts)
+}

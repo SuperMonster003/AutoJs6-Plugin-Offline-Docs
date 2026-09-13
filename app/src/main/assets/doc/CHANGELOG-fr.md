@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation
+
 # v6.8.0
 
 ###### 2026/09/13

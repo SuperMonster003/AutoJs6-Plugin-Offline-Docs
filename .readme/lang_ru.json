@@ -1,11 +1,11 @@
 {
   "$name": "Русский",
   "text_current_lowercase": "текущий",
-  "text_plugin_synopsis": "Плагин содержимого офлайн-документации 6.6.4 для AutoJs6",
+  "text_plugin_synopsis": "Плагин содержимого офлайн-документации 6.8.0 для AutoJs6",
   "h3_languages_with_ascii": "Языки (Languages)",
   "p_languages_all_supported_for_readme": "Текущий README.md поддерживает следующие языки",
   "h3_introduction": "Введение",
-  "p_introduction": "Плагин Offline Documentation для AutoJs6 предоставляет полный сайт документации 6.6.4 как отдельно устанавливаемый пакет содержимого.",
+  "p_introduction": "Плагин Offline Documentation для AutoJs6 предоставляет полный сайт документации 6.8.0 как отдельно устанавливаемый пакет содержимого.",
   "h3_contract": "Контракт плагина",
   "p_contract": "OfflineDocsPluginInfoService публикует PluginInfo через IPluginInfoProvider. Хост принимает фиксированный пакет только после проверок включения, совместимости, подписи, метаданных, реестра и согласованности содержимого файлов.",
   "h3_content": "Содержимое",

@@ -1,11 +1,11 @@
 {
   "$name": "English",
   "text_current_lowercase": "current",
-  "text_plugin_synopsis": "Offline documentation 6.6.4 content plugin for AutoJs6",
+  "text_plugin_synopsis": "Offline documentation 6.8.0 content plugin for AutoJs6",
   "h3_languages_with_ascii": "Languages",
   "p_languages_all_supported_for_readme": "The current README.md supports the following languages",
   "h3_introduction": "Introduction",
-  "p_introduction": "The AutoJs6 Offline Documentation plugin supplies the complete 6.6.4 documentation website as an independently installable content package.",
+  "p_introduction": "The AutoJs6 Offline Documentation plugin supplies the complete 6.8.0 documentation website as an independently installable content package.",
   "h3_contract": "Plugin contract",
   "p_contract": "OfflineDocsPluginInfoService publishes PluginInfo through IPluginInfoProvider. The host accepts the fixed package only after enablement, compatibility, signer, metadata, inventory, and file-content consistency checks pass.",
   "h3_content": "Content",

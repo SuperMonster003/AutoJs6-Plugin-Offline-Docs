@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>Plugin de contenido de documentación sin conexión 6.6.4 para AutoJs6</p>
+  <p>Plugin de contenido de documentación sin conexión 6.8.0 para AutoJs6</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@ El README.md actual admite los siguientes idiomas:
 
 ******
 
-El plugin Offline Documentation de AutoJs6 proporciona el sitio completo de documentación 6.6.4 como paquete de contenido instalable por separado.
+El plugin Offline Documentation de AutoJs6 proporciona el sitio completo de documentación 6.8.0 como paquete de contenido instalable por separado.
 
 ******
 
@@ -53,7 +53,7 @@ El plugin Offline Documentation de AutoJs6 proporciona el sitio completo de docu
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `Mejora` Comprobación de la firma completa, los APK esperados y la documentación reproducible de cada versión
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` Generó y sincronizó la documentación sin conexión a partir de las fuentes Markdown oficiales de AutoJs6, manteniendo alineados los contenidos en línea y sin conexión
 * `Mejora` Unificó la documentación integrada con el estilo de referencia de la API de AutoJs6 y normalizó el nombre actual del producto, las declaraciones de variables JavaScript, los enlaces de tipos locales, los avisos de secciones pendientes y la puntuación ASCII
 * `Mejora` Mejoró la navegación de la documentación sin conexión con búsqueda de texto completo en títulos y contenido y saltos directos a las secciones coincidentes
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `Función` Publicó el plugin independiente de documentación sin conexión AutoJs6 6.6.4 con descubrimiento por contrato versión 1 y un único APK universal
-* `Función` Incluyó 161 archivos de documentación, metadatos localizados y avisos completos Apache-2.0, GPL-3.0, MIT y OFL-1.1
-* `Mejora` Añadió verificaciones JVM y APK para la huella canónica, metadatos del contrato, base de enlaces rotos conocidos, único APK universal, ausencia de cargas `lib/*.so` y licencias
-* `Mejora` Registró el commit y la ruta fuente exactos de AutoJs6 para el contenido de documentación copiado byte por byte
 
 ##### Para ver más historial de versiones
 

@@ -16,7 +16,6 @@
 output.json
 output-metadata.json
 desktop.ini
-AGENTS.md
 
 .bak/
 .git/
@@ -52,3 +51,7 @@ __pycache__/
 app/build/
 build-logic/build/
 build-logic/*/build/
+
+*.keystore
+
+*.pre-platform-versions.bak

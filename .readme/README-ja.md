@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>AutoJs6 用オフラインドキュメント 6.6.4 コンテンツプラグイン</p>
+  <p>AutoJs6 用オフラインドキュメント 6.8.0 コンテンツプラグイン</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@
 
 ******
 
-AutoJs6 Offline Documentation プラグインは完全な 6.6.4 ドキュメントサイトを個別にインストールできるコンテンツパッケージとして提供します.
+AutoJs6 Offline Documentation プラグインは完全な 6.8.0 ドキュメントサイトを個別にインストールできるコンテンツパッケージとして提供します.
 
 ******
 
@@ -53,7 +53,7 @@ AutoJs6 Offline Documentation プラグインは完全な 6.6.4 ドキュメン�
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `改善` リリース署名の設定, APK の構成, ドキュメントの再生成結果を検証
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` AutoJs6 公式 Markdown ソースからオフラインドキュメントを生成して同期し, オンライン版とオフライン版の内容を統一
 * `改善` 内蔵ドキュメントを AutoJs6 API リファレンス形式に統一し, 現行の製品名, JavaScript 変数宣言, ローカル型リンク, 未完成セクションの案内, ASCII 句読点を標準化
 * `改善` タイトルと本文を対象とする全文検索と一致するセクションへの直接移動により, オフラインドキュメントの閲覧性を改善
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `機能` 契約バージョン 1 の検出と単一 universal APK を備えた独立 AutoJs6 6.6.4 オフラインドキュメントコンテンツプラグインを公開
-* `機能` 161 個のドキュメントファイル, ローカライズしたメタデータ, 完全な Apache-2.0, GPL-3.0, MIT, OFL-1.1 通知を同梱
-* `改善` 正規コンテンツ指紋, 契約メタデータ, 既知のリンク切れ基準, 単一 universal APK, `lib/*.so` ペイロード不在, ライセンス資産の JVM と APK 検査を追加
-* `改善` バイト単位でコピーしたドキュメント内容の正確な AutoJs6 ソースコミットとソースパスを記録
 
 ##### その他のリリース履歴
 

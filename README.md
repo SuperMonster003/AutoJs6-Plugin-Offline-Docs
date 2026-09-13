@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>适用于 AutoJs6 的 6.6.4 离线文档内容插件</p>
+  <p>适用于 AutoJs6 的 6.8.0 离线文档内容插件</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@
 
 ******
 
-AutoJs6 Offline Documentation 插件将完整的 6.6.4 文档站点作为可独立安装的内容包提供.
+AutoJs6 Offline Documentation 插件将完整的 6.8.0 文档站点作为可独立安装的内容包提供.
 
 ******
 
@@ -53,7 +53,7 @@ AutoJs6 Offline Documentation 插件将完整的 6.6.4 文档站点作为可独�
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `优化` 校验发行签名配置, 预期 APK 集合与可复现文档
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 改为从 AutoJs6 官方 Markdown 源生成并同步离线文档, 使在线和离线内容保持一致
 * `优化` 将内置文档统一为 AutoJs6 API 参考风格, 规范当前产品名称, JavaScript 变量声明, 本地类型链接, 待完善章节提示和 ASCII 标点符号
 * `优化` 完善离线文档浏览体验, 支持按标题和全文内容搜索并直接跳转到匹配章节
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `新增` 发布独立的 AutoJs6 6.6.4 离线文档内容插件, 支持契约版本 1 发现机制并提供单一 universal APK
-* `新增` 打包 161 个文档文件, 本地化插件元数据及完整的 Apache-2.0, GPL-3.0, MIT 和 OFL-1.1 许可证说明
-* `优化` 增加 JVM 和 APK 门禁, 校验规范内容指纹, 契约元数据, 已知断链基线, 单一 universal 产物, 无 `lib/*.so` 载荷和许可证资产
-* `优化` 记录逐字节文档载荷对应的 AutoJs6 源提交和源路径
 
 ##### 更多发行历史可参阅
 

@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>Offline documentation 6.6.4 content plugin for AutoJs6</p>
+  <p>Offline documentation 6.8.0 content plugin for AutoJs6</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@ The current README.md supports the following languages:
 
 ******
 
-The AutoJs6 Offline Documentation plugin supplies the complete 6.6.4 documentation website as an independently installable content package.
+The AutoJs6 Offline Documentation plugin supplies the complete 6.8.0 documentation website as an independently installable content package.
 
 ******
 
@@ -53,7 +53,7 @@ The AutoJs6 Offline Documentation plugin supplies the complete 6.6.4 documentati
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `Improvement` Release packages are checked for a complete signing configuration, exact APK contents and reproducible documentation
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Generated and synchronized the offline documentation from the official AutoJs6 Markdown sources, keeping the online and offline content aligned
 * `Improvement` Aligned the built-in documentation with the AutoJs6 API reference style and standardized the current product name, JavaScript variable declarations, local type links, incomplete-section notices, and ASCII punctuation
 * `Improvement` Improved offline documentation navigation with full-text search across titles and content and direct jumps to matching sections
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `Feature` Released the standalone AutoJs6 6.6.4 Offline Documentation content plugin with contract version 1 discovery and one universal APK
-* `Feature` Packaged 161 documentation files with localized plugin metadata and complete Apache-2.0, GPL-3.0, MIT, and OFL-1.1 notices
-* `Improvement` Added JVM and APK gates for the canonical content fingerprint, contract metadata, known broken-link baseline, single universal artifact, absence of `lib/*.so` payloads, and license assets
-* `Improvement` Recorded the exact AutoJs6 source commit and source path for the byte-for-byte documentation payload
 
 ##### For more release history
 

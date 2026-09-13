@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>AutoJs6용 오프라인 문서 6.6.4 콘텐츠 플러그인</p>
+  <p>AutoJs6용 오프라인 문서 6.8.0 콘텐츠 플러그인</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@
 
 ******
 
-AutoJs6 Offline Documentation 플러그인은 전체 6.6.4 문서 사이트를 독립적으로 설치할 수 있는 콘텐츠 패키지로 제공합니다.
+AutoJs6 Offline Documentation 플러그인은 전체 6.8.0 문서 사이트를 독립적으로 설치할 수 있는 콘텐츠 패키지로 제공합니다.
 
 ******
 
@@ -53,7 +53,7 @@ AutoJs6 Offline Documentation 플러그인은 전체 6.6.4 문서 사이트를 �
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `개선` 릴리스 서명 설정, 예상 APK 구성 및 문서 재생성 결과 검증
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` AutoJs6 공식 Markdown 소스에서 오프라인 문서를 생성하고 동기화하여 온라인 및 오프라인 콘텐츠의 일관성 유지
 * `개선` 내장 문서를 AutoJs6 API 참조 형식으로 통일하고, 현재 제품명, JavaScript 변수 선언, 로컬 타입 링크, 미완성 섹션 안내 및 ASCII 문장 부호를 표준화
 * `개선` 제목과 본문을 대상으로 하는 전체 텍스트 검색 및 일치하는 섹션으로 바로 이동하는 기능으로 오프라인 문서 탐색 환경 개선
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `기능` 계약 버전 1 검색과 단일 universal APK를 제공하는 독립 AutoJs6 6.6.4 오프라인 문서 콘텐츠 플러그인 출시
-* `기능` 161개 문서 파일, 현지화된 플러그인 메타데이터 및 완전한 Apache-2.0, GPL-3.0, MIT, OFL-1.1 고지 포함
-* `개선` 정규 콘텐츠 지문, 계약 메타데이터, 알려진 끊어진 링크 기준, 단일 universal APK, `lib/*.so` 페이로드 부재 및 라이선스 자산을 위한 JVM 및 APK 검사 추가
-* `개선` 바이트 단위 문서 콘텐츠의 정확한 AutoJs6 소스 커밋과 소스 경로 기록
 
 ##### 더 많은 릴리스 기록
 
