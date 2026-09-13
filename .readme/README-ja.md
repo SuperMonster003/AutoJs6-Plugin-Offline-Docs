@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10566051
-contentSha256=b7fd01f3f73904bdd3aaec778cf280d57ab99c17f4e6d8f300b59d4526ee6f43
+totalBytes=10570151
+contentSha256=2331d9f04557e9cde2eadc79c8daec32bc732c8ac6316aa82ff6e10f522fd5b4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=7769e6d428a44fc872f5746b12edc4306a3e5aec
 sourcePath=api
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ###### 2026/09/13
 
+* `改善` HTTP の isInsecure / insecure のリクエスト単位の適用範囲, 共有クライアント設定, 証明書の信頼, CT, ECH とローカルネットワーク権限の説明を同期
 * `改善` Media, Device, TTS, Settings のリファレンスに Android 17 のバックグラウンド音声条件, 通知のない抑制, アプリ表示中の復旧操作, TTS エンジンプロセスの範囲を反映
 * `改善` リリース署名の設定, APK の構成, ドキュメントの再生成結果を検証
 

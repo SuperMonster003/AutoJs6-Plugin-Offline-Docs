@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=184
-totalBytes=10566051
-contentSha256=b7fd01f3f73904bdd3aaec778cf280d57ab99c17f4e6d8f300b59d4526ee6f43
+totalBytes=10570151
+contentSha256=2331d9f04557e9cde2eadc79c8daec32bc732c8ac6316aa82ff6e10f522fd5b4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=7769e6d428a44fc872f5746b12edc4306a3e5aec
 sourcePath=api
@@ -118,6 +118,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ###### 2026/09/13
 
+* `Mejora` Sincronizar la documentación HTTP sobre el alcance por solicitud de isInsecure / insecure, la configuración compartida del cliente, la confianza en certificados, CT, ECH y los permisos de red local
 * `Mejora` Sincronizar las referencias de Media, Device, TTS y Settings con las condiciones de audio en segundo plano de Android 17, el bloqueo silencioso, la recuperación desde la aplicación visible y los límites del proceso del motor TTS
 * `Mejora` Comprobación de la firma completa, los APK esperados y la documentación reproducible de cada versión
 
