@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>Плагин содержимого офлайн-документации 6.6.4 для AutoJs6</p>
+  <p>Плагин содержимого офлайн-документации 6.8.0 для AutoJs6</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@
 
 ******
 
-Плагин Offline Documentation для AutoJs6 предоставляет полный сайт документации 6.6.4 как отдельно устанавливаемый пакет содержимого.
+Плагин Offline Documentation для AutoJs6 предоставляет полный сайт документации 6.8.0 как отдельно устанавливаемый пакет содержимого.
 
 ******
 
@@ -53,7 +53,7 @@
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `Улучшение` Проверка полной настройки подписи, ожидаемого набора APK и воспроизводимости документации
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Офлайн-документация переведена на генерацию и синхронизацию из официальных исходных файлов Markdown AutoJs6, что обеспечивает единое содержимое онлайн- и офлайн-версий
 * `Улучшение` Встроенная документация приведена к стилю справочника API AutoJs6, а также стандартизированы текущее название продукта, объявления переменных JavaScript, локальные ссылки на типы, уведомления о незавершенных разделах и пунктуация ASCII
 * `Улучшение` Навигация по офлайн-документации улучшена полнотекстовым поиском по заголовкам и содержимому с прямым переходом к найденным разделам
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `Функция` Выпущен автономный плагин офлайн-документации AutoJs6 6.6.4 с обнаружением по контракту версии 1 и единственным universal APK
-* `Функция` Добавлен 161 файл документации, локализованные метаданные и полные уведомления Apache-2.0, GPL-3.0, MIT и OFL-1.1
-* `Улучшение` Добавлены проверки JVM и APK для канонического отпечатка, метаданных контракта, базы известных битых ссылок, единственного universal APK, отсутствия `lib/*.so` и лицензий
-* `Улучшение` Записаны точные коммит и путь источника AutoJs6 для побайтово скопированного содержимого документации
 
 ##### Больше истории выпусков
 

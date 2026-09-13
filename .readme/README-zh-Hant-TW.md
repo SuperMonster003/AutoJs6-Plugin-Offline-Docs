@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>適用於 AutoJs6 的 6.6.4 離線說明文件內容外掛</p>
+  <p>適用於 AutoJs6 的 6.8.0 離線說明文件內容外掛</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@
 
 ******
 
-AutoJs6 Offline Documentation 外掛將完整的 6.6.4 說明文件網站作為可獨立安裝的內容套件提供.
+AutoJs6 Offline Documentation 外掛將完整的 6.8.0 說明文件網站作為可獨立安裝的內容套件提供.
 
 ******
 
@@ -53,7 +53,7 @@ AutoJs6 Offline Documentation 外掛將完整的 6.6.4 說明文件網站作為�
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `優化` 校驗發行簽章設定, 預期 APK 集合與可重現文件
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 * `優化` 改為從 AutoJs6 官方 Markdown 來源產生並同步離線說明文件, 使線上和離線內容保持一致
 * `優化` 將內建說明文件統一為 AutoJs6 API 參考風格, 規範目前產品名稱, JavaScript 變數宣告, 內部型別連結, 待完善章節提示和 ASCII 標點符號
 * `優化` 改善離線說明文件瀏覽體驗, 支援依標題和全文內容搜尋並直接跳轉至相符章節
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `新增` 發布獨立的 AutoJs6 6.6.4 離線說明文件內容外掛, 支援契約版本 1 探索機制並提供單一 universal APK
-* `新增` 封裝 161 個說明文件檔案, 本地化外掛中繼資料及完整的 Apache-2.0, GPL-3.0, MIT 和 OFL-1.1 授權說明
-* `優化` 加入 JVM 和 APK 門檻, 驗證規範內容指紋, 契約中繼資料, 已知失效連結基準, 單一 universal 成品, 無 `lib/*.so` 內容和授權資產
-* `優化` 記錄逐位元組說明文件內容對應的 AutoJs6 來源提交和來源路徑
 
 ##### 更多發行歷史可參閱
 

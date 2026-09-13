@@ -10,6 +10,6 @@ class OfflineDocsPluginInfoService : Service() {
     override fun onBind(intent: Intent?): IBinder = binder
 
     private val binder = object : IPluginInfoProvider.Stub() {
-        override fun getInfo() = offlineDocsPluginInfo()
+        override fun getInfo() = offlineDocsPluginInfo().apply { supportedAbis = emptyArray() }
     }
 }

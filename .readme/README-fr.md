@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>Plugin de contenu de documentation hors ligne 6.6.4 pour AutoJs6</p>
+  <p>Plugin de contenu de documentation hors ligne 6.8.0 pour AutoJs6</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@ Le README.md actuel prend en charge les langues suivantes:
 
 ******
 
-Le plugin Offline Documentation d'AutoJs6 fournit le site complet de documentation 6.6.4 sous forme de paquet de contenu installable séparément.
+Le plugin Offline Documentation d'AutoJs6 fournit le site complet de documentation 6.8.0 sous forme de paquet de contenu installable séparément.
 
 ******
 
@@ -53,7 +53,7 @@ Le plugin Offline Documentation d'AutoJs6 fournit le site complet de documentati
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Génération et synchronisation de la documentation hors ligne à partir des sources Markdown officielles d'AutoJs6, afin d'aligner les contenus en ligne et hors ligne
 * `Amélioration` Harmonisation de la documentation intégrée avec le style de référence de l'API AutoJs6 et normalisation du nom actuel du produit, des déclarations de variables JavaScript, des liens de types locaux, des avis de sections à compléter et de la ponctuation ASCII
 * `Amélioration` Amélioration de la navigation dans la documentation hors ligne avec la recherche en texte intégral dans les titres et le contenu, ainsi que l'accès direct aux sections correspondantes
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `Fonctionnalité` Publication du plugin autonome de documentation hors ligne AutoJs6 6.6.4 avec découverte par le contrat version 1 et un seul APK universal
-* `Fonctionnalité` Ajout de 161 fichiers de documentation, de métadonnées localisées et des notices complètes Apache-2.0, GPL-3.0, MIT et OFL-1.1
-* `Amélioration` Ajout de contrôles JVM et APK pour l'empreinte canonique, les métadonnées du contrat, la base des liens rompus connus, l'unique APK universal, l'absence de charges `lib/*.so` et les licences
-* `Amélioration` Enregistrement du commit et du chemin source AutoJs6 exacts du contenu de documentation copié octet par octet
 
 ##### Pour plus d'historique des versions
 

@@ -7,7 +7,7 @@
     </picture>
   </p>
 
-  <p>إضافة محتوى التوثيق دون اتصال 6.6.4 لتطبيق AutoJs6</p>
+  <p>إضافة محتوى التوثيق دون اتصال 6.8.0 لتطبيق AutoJs6</p>
 
   <p>
     <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/SuperMonster003/AutoJs6-Plugin-Offline-Docs?label=Release"/></a>
@@ -41,7 +41,7 @@
 
 ******
 
-توفر إضافة Offline Documentation لتطبيق AutoJs6 موقع التوثيق الكامل 6.6.4 كحزمة محتوى قابلة للتثبيت بشكل مستقل.
+توفر إضافة Offline Documentation لتطبيق AutoJs6 موقع التوثيق الكامل 6.8.0 كحزمة محتوى قابلة للتثبيت بشكل مستقل.
 
 ******
 
@@ -53,7 +53,7 @@
 applicationId=io.github.supermonster003.autojs6.plugin.offlinedocs
 pluginId=offline-docs
 engine=offline-docs
-variant=6.6.4
+variant=6.8.0
 contractVersion=1
 requiredHostVersionCode=5240
 contentVersion=6.8.0
@@ -65,7 +65,7 @@ fileCount=184
 totalBytes=10557951
 contentSha256=c3194e204e92172fa808c5243e564de54d1a7f9bc0dbddb70ab5eee5ecc6f9c9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e6bded6c8d0dbeb688c26eec2b5a241a4664ecc4
+sourceBaseCommit=ecb72eb988f5699d0705773e6853fe180b9bc78e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.1
+
+###### 2026/09/13
+
+* `تحسين` التحقق من اكتمال إعداد توقيع حزم الإصدار وملفات APK المتوقعة وإمكانية إعادة إنشاء الوثائق
+
 # v6.8.0
 
 ###### 2026/09/13
@@ -145,15 +151,6 @@ category=offline-docs
 * `تحسين` إنشاء التوثيق دون اتصال ومزامنته من مصادر Markdown الرسمية لـ AutoJs6, بما يحافظ على اتساق المحتوى بين النسختين عبر الإنترنت ودون اتصال
 * `تحسين` مواءمة التوثيق المضمن مع نمط مرجع AutoJs6 API وتوحيد اسم المنتج الحالي وتعريفات متغيرات JavaScript وروابط الأنواع المحلية وتنبيهات الأقسام غير المكتملة وعلامات ترقيم ASCII
 * `تحسين` تحسين تصفح التوثيق دون اتصال من خلال البحث في النص الكامل للعناوين والمحتوى والانتقال مباشرة إلى الأقسام المطابقة
-
-# v1.0.0
-
-###### 2026/07/23
-
-* `ميزة` إصدار إضافة محتوى التوثيق دون اتصال AutoJs6 6.6.4 المستقلة مع اكتشاف العقد الإصدار 1 وحزمة APK universal واحدة
-* `ميزة` تضمين 161 ملف توثيق وبيانات وصفية محلية وإشعارات Apache-2.0 و GPL-3.0 و MIT و OFL-1.1 الكاملة
-* `تحسين` إضافة بوابات JVM و APK للتحقق من بصمة المحتوى القياسية وبيانات العقد وخط أساس الروابط المعطلة المعروفة وحزمة universal الواحدة وغياب `lib/*.so` ومواد الترخيص
-* `تحسين` تسجيل التزام المصدر ومساره بدقة في AutoJs6 لمحتوى التوثيق المنسوخ بايتا مقابل بايت
 
 ##### لمزيد من سجل الإصدارات
 
