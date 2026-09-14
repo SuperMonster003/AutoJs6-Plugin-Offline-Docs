@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10604934
-contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
+totalBytes=10610003
+contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
+sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,8 +116,9 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.1
 
-###### 2026/09/13
+###### 2026/09/14
 
+* `Amélioration` Synchroniser la référence Media et son index pour les services musicaux Media3, la propriété de lecture, la préparation sur un thread de travail, les commandes et les permissions des applications empaquetées
 * `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
 * `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local
 * `Amélioration` Synchroniser les références Media, Device, TTS et Settings avec les conditions audio en arrière-plan d'Android 17, le blocage silencieux, la reprise depuis l'application visible et les limites du processus du moteur TTS

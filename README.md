@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10604934
-contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
+totalBytes=10610003
+contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
+sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,8 +116,9 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.1
 
-###### 2026/09/13
+###### 2026/09/14
 
+* `优化` 同步 Media 文档与搜索索引, 说明 Media3 音乐服务, 脚本播放所有权, 工作线程准备, 通知控制与打包应用权限
 * `优化` 同步 Pangu 参考文档与搜索索引, 覆盖内置 pangu.js 10.1.0, 全局对象, 文本间距处理与间距检查
 * `优化` 同步 HTTP 的 isInsecure / insecure 请求范围, 共享客户端配置及证书信任, CT, ECH 和本地网络权限说明
 * `优化` 同步 Media, Device, TTS 和 Settings 的 Android 17 后台音频运行条件, 静默抑制, 可见界面恢复操作与 TTS 引擎进程边界

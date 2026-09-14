@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10604934
-contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
+totalBytes=10610003
+contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
+sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,8 +116,9 @@ category=offline-docs
 
 # v6.8.1
 
-###### 2026/09/13
+###### 2026/09/14
 
+* `تحسين` مزامنة مرجع Media وفهرس البحث لخدمات موسيقى Media3 وملكية التشغيل والتحضير في خيط عمل وعناصر التحكم وأذونات التطبيقات المحزمة
 * `تحسين` مزامنة مرجع Pangu وفهرس البحث, بما يشمل pangu.js 10.1.0 المضمن والوصول العام وضبط مسافات النص والتحقق منها
 * `تحسين` مزامنة توثيق HTTP لنطاق طلب isInsecure / insecure وإعدادات العميل المشتركة والثقة بالشهادات و CT و ECH وأذونات الشبكة المحلية
 * `تحسين` مزامنة مراجع Media و Device و TTS و Settings مع شروط الصوت في الخلفية على Android 17 والمنع الصامت والاستعادة من واجهة التطبيق الظاهرة وحدود عملية محرك TTS
