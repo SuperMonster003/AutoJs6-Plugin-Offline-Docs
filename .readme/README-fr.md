@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10610003
-contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
+totalBytes=10615957
+contentSha256=08b023de666f31777014efda5e3e00f857ef2d8498a56a787bccd766bd080472
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
+sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ###### 2026/09/14
 
+* `Amélioration` Synchroniser le guide de stockage des applications empaquetées, dont requiresSharedStorage, refus, retour des paramètres et restauration du lanceur
 * `Amélioration` Synchroniser la référence Media et son index pour les services musicaux Media3, la propriété de lecture, la préparation sur un thread de travail, les commandes et les permissions des applications empaquetées
 * `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
 * `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10610003
-contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
+totalBytes=10615957
+contentSha256=08b023de666f31777014efda5e3e00f857ef2d8498a56a787bccd766bd080472
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
+sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ###### 2026/09/14
 
+* `Улучшение` Синхронизация руководства по хранилищу упакованных приложений: requiresSharedStorage, отказ, возврат из настроек и восстановление значка запуска
 * `Улучшение` Синхронизация справки Media и поискового индекса для музыкальных служб Media3, владения воспроизведением, подготовки в рабочем потоке, управления и разрешений упакованных приложений
 * `Улучшение` Синхронизация справочника Pangu и поискового индекса, включая встроенный pangu.js 10.1.0, глобальный доступ, расстановку пробелов и проверку
 * `Улучшение` Синхронизация документации HTTP об области действия isInsecure / insecure, общих настройках клиента, доверии сертификатам, CT, ECH и разрешениях локальной сети

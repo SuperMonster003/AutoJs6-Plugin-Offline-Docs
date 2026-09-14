@@ -8,6 +8,7 @@
 
 ###### 2026/09/14
 
+* `Amélioration` Synchroniser le guide de stockage des applications empaquetées, dont requiresSharedStorage, refus, retour des paramètres et restauration du lanceur
 * `Amélioration` Synchroniser la référence Media et son index pour les services musicaux Media3, la propriété de lecture, la préparation sur un thread de travail, les commandes et les permissions des applications empaquetées
 * `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
 * `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local
