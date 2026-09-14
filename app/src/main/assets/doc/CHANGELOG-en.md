@@ -8,6 +8,7 @@
 
 ###### 2026/09/14
 
+* `Improvement` Synchronize packaged-app storage guidance, including requiresSharedStorage, permission denial, settings return and launcher recovery
 * `Improvement` Synchronize the Media reference and search index for Media3 music services, script playback ownership, worker-thread preparation, notification controls and packaged-app permissions
 * `Improvement` Synchronize the Pangu reference and search index, covering bundled pangu.js 10.1.0, global access, text spacing and spacing checks
 * `Improvement` Synchronize HTTP documentation for request-scoped isInsecure / insecure, shared client configuration, certificate trust, CT, ECH and local network permissions

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10610003
-contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
+totalBytes=10615957
+contentSha256=08b023de666f31777014efda5e3e00f857ef2d8498a56a787bccd766bd080472
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
+sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ###### 2026/09/14
 
+* `改善` requiresSharedStorage, 権限拒否, 設定からの復帰, 起動アイコンの復元を含むパッケージアプリのストレージ案内を同期
 * `改善` Media3 音楽サービス, スクリプトの再生所有権, ワーカースレッドでの準備, 通知操作とパッケージアプリの権限について Media リファレンスと検索索引を同期
 * `改善` Pangu リファレンスと検索インデックスを同期し, 組み込み pangu.js 10.1.0, グローバルアクセス, 文字間隔の調整と確認を説明
 * `改善` HTTP の isInsecure / insecure のリクエスト単位の適用範囲, 共有クライアント設定, 証明書の信頼, CT, ECH とローカルネットワーク権限の説明を同期

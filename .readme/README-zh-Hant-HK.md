@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10610003
-contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
+totalBytes=10615957
+contentSha256=08b023de666f31777014efda5e3e00f857ef2d8498a56a787bccd766bd080472
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
+sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ###### 2026/09/14
 
+* `優化` 同步封裝應用程式儲存空間引導文件, 包括 requiresSharedStorage, 拒絕授權, 設定返回及桌面入口恢復
 * `優化` 同步 Media 文檔與搜尋索引, 說明 Media3 音樂服務, 指令碼播放擁有權, 工作執行緒準備, 通知控制與打包應用程式權限
 * `優化` 同步 Pangu 參考文件與搜尋索引, 涵蓋內置 pangu.js 10.1.0, 全域物件, 文字間距處理與間距檢查
 * `優化` 同步 HTTP 的 isInsecure / insecure 請求範圍, 共用用戶端設定及憑證信任, CT, ECH 和本地網絡權限說明
