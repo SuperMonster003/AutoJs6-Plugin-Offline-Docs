@@ -6,8 +6,9 @@
 
 # v6.8.1
 
-###### 2026/09/13
+###### 2026/09/14
 
+* `Improvement` Synchronize the Media reference and search index for Media3 music services, script playback ownership, worker-thread preparation, notification controls and packaged-app permissions
 * `Improvement` Synchronize the Pangu reference and search index, covering bundled pangu.js 10.1.0, global access, text spacing and spacing checks
 * `Improvement` Synchronize HTTP documentation for request-scoped isInsecure / insecure, shared client configuration, certificate trust, CT, ECH and local network permissions
 * `Improvement` Synchronize the Media, Device, TTS and Settings references with Android 17 background audio conditions, silent suppression, recovery from the visible app and TTS engine process boundaries

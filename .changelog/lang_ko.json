@@ -6,8 +6,9 @@
   "changelog_label_dependency": "의존성",
   "$data": {
     "v6.8.1": {
-      "released_date": "2026/09/13",
+      "released_date": "2026/09/14",
       "improvement": [
+        "Media3 음악 서비스, 스크립트 재생 소유권, 작업 스레드 준비, 알림 제어 및 패키징 앱 권한에 대한 Media 문서와 검색 색인 동기화",
         "Pangu 참조 문서와 검색 인덱스를 동기화하여 내장 pangu.js 10.1.0, 전역 접근, 텍스트 간격 처리 및 검사를 설명",
         "HTTP isInsecure / insecure의 요청별 적용 범위, 공유 클라이언트 설정, 인증서 신뢰, CT, ECH 및 로컬 네트워크 권한 설명 동기화",
         "Media, Device, TTS, Settings 참조에 Android 17 백그라운드 오디오 조건, 알림 없는 차단, 앱이 표시된 상태에서의 복구 및 TTS 엔진 프로세스 범위 반영",

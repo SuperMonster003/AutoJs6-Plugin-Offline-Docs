@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10604934
-contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
+totalBytes=10610003
+contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
+sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,8 +116,9 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.1
 
-###### 2026/09/13
+###### 2026/09/14
 
+* `Улучшение` Синхронизация справки Media и поискового индекса для музыкальных служб Media3, владения воспроизведением, подготовки в рабочем потоке, управления и разрешений упакованных приложений
 * `Улучшение` Синхронизация справочника Pangu и поискового индекса, включая встроенный pangu.js 10.1.0, глобальный доступ, расстановку пробелов и проверку
 * `Улучшение` Синхронизация документации HTTP об области действия isInsecure / insecure, общих настройках клиента, доверии сертификатам, CT, ECH и разрешениях локальной сети
 * `Улучшение` Синхронизация справки Media, Device, TTS и Settings с условиями фонового аудио Android 17, подавлением без ошибки, восстановлением из видимого приложения и границами процесса движка TTS

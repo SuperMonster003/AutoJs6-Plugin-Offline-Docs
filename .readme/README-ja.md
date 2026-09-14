@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10604934
-contentSha256=ccdadcf78f8783e2308a7a8f2e33636059ab5b5fe17964c3f7965f0c3748aff7
+totalBytes=10610003
+contentSha256=a5bf8db715cf70eecad324195ec6cb69aa9c9ecabf385322252667afa11ccd4e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d24cee179b65cf7f10f7ae16eed6880bab5f853
+sourceBaseCommit=04281acace5899943f0b74cf8be8b8226fdcb6f2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,8 +116,9 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v6.8.1
 
-###### 2026/09/13
+###### 2026/09/14
 
+* `改善` Media3 音楽サービス, スクリプトの再生所有権, ワーカースレッドでの準備, 通知操作とパッケージアプリの権限について Media リファレンスと検索索引を同期
 * `改善` Pangu リファレンスと検索インデックスを同期し, 組み込み pangu.js 10.1.0, グローバルアクセス, 文字間隔の調整と確認を説明
 * `改善` HTTP の isInsecure / insecure のリクエスト単位の適用範囲, 共有クライアント設定, 証明書の信頼, CT, ECH とローカルネットワーク権限の説明を同期
 * `改善` Media, Device, TTS, Settings のリファレンスに Android 17 のバックグラウンド音声条件, 通知のない抑制, アプリ表示中の復旧操作, TTS エンジンプロセスの範囲を反映

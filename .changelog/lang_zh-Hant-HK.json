@@ -6,8 +6,9 @@
   "changelog_label_dependency": "依賴",
   "$data": {
     "v6.8.1": {
-      "released_date": "2026/09/13",
+      "released_date": "2026/09/14",
       "improvement": [
+        "同步 Media 文檔與搜尋索引, 說明 Media3 音樂服務, 指令碼播放擁有權, 工作執行緒準備, 通知控制與打包應用程式權限",
         "同步 Pangu 參考文件與搜尋索引, 涵蓋內置 pangu.js 10.1.0, 全域物件, 文字間距處理與間距檢查",
         "同步 HTTP 的 isInsecure / insecure 請求範圍, 共用用戶端設定及憑證信任, CT, ECH 和本地網絡權限說明",
         "同步 Media, Device, TTS 和 Settings 的 Android 17 後台音頻運行條件, 靜默抑制, 可見介面恢復操作與 TTS 引擎進程邊界",
