@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.2
+
+###### 2026/09/15
+
+* `Improvement` Raise compileSdk and targetSdk to 37 (Android 17); the plugin's behavior does not depend on the new target
+
 # v6.8.1
 
 ###### 2026/09/14
@@ -147,15 +153,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Standardize the README layout and Gradle platform version management
 * `Improvement` Updated the MediaInfo reference and offline search with streamNumber, countGet, infoKind and original source paths
 * `Improvement` Build verification rejects accidental native dependencies and produces a JSON report
-
-# v1.0.1
-
-###### 2026/07/25
-
-* `Improvement` Replaced the fixed content fingerprint baseline with content metadata and an inventory generated automatically from the current documentation assets, allowing the assets to be updated directly
-* `Improvement` Generated and synchronized the offline documentation from the official AutoJs6 Markdown sources, keeping the online and offline content aligned
-* `Improvement` Aligned the built-in documentation with the AutoJs6 API reference style and standardized the current product name, JavaScript variable declarations, local type links, incomplete-section notices, and ASCII punctuation
-* `Improvement` Improved offline documentation navigation with full-text search across titles and content and direct jumps to matching sections
 
 ##### For more release history
 

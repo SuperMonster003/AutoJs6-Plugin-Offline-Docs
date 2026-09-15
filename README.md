@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.2
+
+###### 2026/09/15
+
+* `优化` 将 compileSdk 与 targetSdk 提升到 37 (Android 17), 插件行为不受新目标版本影响
+
 # v6.8.1
 
 ###### 2026/09/14
@@ -147,15 +153,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 统一 README 版式与 Gradle 平台版本管理方式
 * `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
 * `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
-
-# v1.0.1
-
-###### 2026/07/25
-
-* `优化` 将固定内容指纹基线改为根据当前文档资产自动生成内容元数据和清单, 使资产可直接更新
-* `优化` 改为从 AutoJs6 官方 Markdown 源生成并同步离线文档, 使在线和离线内容保持一致
-* `优化` 将内置文档统一为 AutoJs6 API 参考风格, 规范当前产品名称, JavaScript 变量声明, 本地类型链接, 待完善章节提示和 ASCII 标点符号
-* `优化` 完善离线文档浏览体验, 支持按标题和全文内容搜索并直接跳转到匹配章节
 
 ##### 更多发行历史可参阅
 

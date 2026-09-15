@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.2
+
+###### 2026/09/15
+
+* `개선` compileSdk 와 targetSdk 를 37 (Android 17) 로 올리며, 플러그인 동작은 새 대상 버전의 영향을 받지 않음
+
 # v6.8.1
 
 ###### 2026/09/14
@@ -147,15 +153,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` README 레이아웃과 Gradle 플랫폼 버전 관리 방식을 통일
 * `개선` MediaInfo 참조 문서와 오프라인 검색에 streamNumber, countGet, infoKind 및 원본 경로 동작을 반영
 * `개선` 빌드 시 의도하지 않은 네이티브 의존성을 거부하고 JSON 보고서 생성
-
-# v1.0.1
-
-###### 2026/07/25
-
-* `개선` 고정 콘텐츠 지문 기준을 현재 문서 자산에서 자동 생성되는 콘텐츠 메타데이터와 인벤토리로 대체하여 자산을 직접 업데이트할 수 있도록 변경
-* `개선` AutoJs6 공식 Markdown 소스에서 오프라인 문서를 생성하고 동기화하여 온라인 및 오프라인 콘텐츠의 일관성 유지
-* `개선` 내장 문서를 AutoJs6 API 참조 형식으로 통일하고, 현재 제품명, JavaScript 변수 선언, 로컬 타입 링크, 미완성 섹션 안내 및 ASCII 문장 부호를 표준화
-* `개선` 제목과 본문을 대상으로 하는 전체 텍스트 검색 및 일치하는 섹션으로 바로 이동하는 기능으로 오프라인 문서 탐색 환경 개선
 
 ##### 더 많은 릴리스 기록
 
