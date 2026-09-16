@@ -4,28 +4,12 @@
 
 ******
 
-# v6.8.2
-
-###### 2026/09/15
-
-* `Improvement` Raise compileSdk and targetSdk to 37 (Android 17); the plugin's behavior does not depend on the new target
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `Improvement` Synchronize packaged-app storage guidance, including requiresSharedStorage, permission denial, settings return and launcher recovery
-* `Improvement` Synchronize the Media reference and search index for Media3 music services, script playback ownership, worker-thread preparation, notification controls and packaged-app permissions
-* `Improvement` Synchronize the Pangu reference and search index, covering bundled pangu.js 10.1.0, global access, text spacing and spacing checks
-* `Improvement` Synchronize HTTP documentation for request-scoped isInsecure / insecure, shared client configuration, certificate trust, CT, ECH and local network permissions
-* `Improvement` Synchronize the Media, Device, TTS and Settings references with Android 17 background audio conditions, silent suppression, recovery from the visible app and TTS engine process boundaries
-* `Improvement` Release packages are checked for a complete signing configuration, exact APK contents and reproducible documentation
-
 # v6.8.0
 
-###### 2026/09/13
+###### 2026/09/16
 
 * `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
+* `Improvement` Synchronize Flow optional steps, bounded loops, chained candidate lookup and clicks, stable collection snapshots and defaults, and update the offline search index
 * `Improvement` Synchronize the runtime local network permission reference and offline search index, covering Android 17 / targetSdk 37 conditions, asynchronous authorization, retries and the raw Socket / MQTT and plugin permission boundaries
 * `Improvement` Synchronize the `device.pageSize` reference and offline search index, documenting bytes, read-only access and the distinction between the runtime environment and native library compatibility
 * `Improvement` Synchronized the OCR reference and offline search index with automatic engine selection, live mode reads, tap resets, per-call options and behavior when no plugin is available
@@ -43,6 +27,23 @@
 * `Improvement` Standardize the README layout and Gradle platform version management
 * `Improvement` Updated the MediaInfo reference and offline search with streamNumber, countGet, infoKind and original source paths
 * `Improvement` Build verification rejects accidental native dependencies and produces a JSON report
+
+# v6.8.2
+
+###### 2026/09/15
+
+* `Improvement` Raise compileSdk and targetSdk to 37 (Android 17); the plugin's behavior does not depend on the new target
+
+# v6.8.1
+
+###### 2026/09/14
+
+* `Improvement` Synchronize packaged-app storage guidance, including requiresSharedStorage, permission denial, settings return and launcher recovery
+* `Improvement` Synchronize the Media reference and search index for Media3 music services, script playback ownership, worker-thread preparation, notification controls and packaged-app permissions
+* `Improvement` Synchronize the Pangu reference and search index, covering bundled pangu.js 10.1.0, global access, text spacing and spacing checks
+* `Improvement` Synchronize HTTP documentation for request-scoped isInsecure / insecure, shared client configuration, certificate trust, CT, ECH and local network permissions
+* `Improvement` Synchronize the Media, Device, TTS and Settings references with Android 17 background audio conditions, silent suppression, recovery from the visible app and TTS engine process boundaries
+* `Improvement` Release packages are checked for a complete signing configuration, exact APK contents and reproducible documentation
 
 # v1.0.1
 

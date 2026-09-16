@@ -4,28 +4,12 @@
 
 ******
 
-# v6.8.2
-
-###### 2026/09/15
-
-* `Mejora` compileSdk y targetSdk suben a 37 (Android 17); el comportamiento del plugin no depende del nuevo objetivo
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `Mejora` Sincronizar la guía de almacenamiento de apps empaquetadas, incluidos requiresSharedStorage, denegación de permisos, regreso de ajustes y recuperación del acceso de inicio
-* `Mejora` Sincronizar la referencia Media y el índice para servicios de música Media3, propiedad de reproducción, preparación en hilos de trabajo, controles y permisos de aplicaciones empaquetadas
-* `Mejora` Sincronización de la referencia Pangu y su índice de búsqueda, que cubre pangu.js 10.1.0 integrado, acceso global, espaciado de texto y comprobación
-* `Mejora` Sincronizar la documentación HTTP sobre el alcance por solicitud de isInsecure / insecure, la configuración compartida del cliente, la confianza en certificados, CT, ECH y los permisos de red local
-* `Mejora` Sincronizar las referencias de Media, Device, TTS y Settings con las condiciones de audio en segundo plano de Android 17, el bloqueo silencioso, la recuperación desde la aplicación visible y los límites del proceso del motor TTS
-* `Mejora` Comprobación de la firma completa, los APK esperados y la documentación reproducible de cada versión
-
 # v6.8.0
 
-###### 2026/09/13
+###### 2026/09/16
 
 * `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar
+* `Mejora` Sincronizar los pasos opcionales de Flow, los bucles acotados, la búsqueda y los clics de candidatos encadenados, las instantáneas estables de colecciones y los valores predeterminados, y actualizar el índice de búsqueda sin conexión
 * `Mejora` Sincronización de la referencia de permisos de red local y el índice sin conexión, con condiciones Android 17 / targetSdk 37, autorización asíncrona, reintentos y límites de Socket / MQTT nativos y permisos de plugins
 * `Mejora` Sincronizar la referencia de `device.pageSize` y el índice de búsqueda sin conexión, documentando los bytes, el acceso de solo lectura y la diferencia entre el entorno de ejecución y la compatibilidad de bibliotecas nativas
 * `Mejora` Sincronización de la referencia de OCR y el índice de búsqueda sin conexión con la selección automática del motor, la lectura del modo en tiempo real, el restablecimiento con tap, las opciones por llamada y el comportamiento sin plugins disponibles
@@ -43,6 +27,23 @@
 * `Mejora` Unificar el diseño del README y la gestión de versiones de la plataforma Gradle
 * `Mejora` La referencia MediaInfo y la búsqueda sin conexión cubren streamNumber, countGet, infoKind y las rutas originales
 * `Mejora` La verificación de compilación rechaza dependencias nativas accidentales y genera un informe JSON
+
+# v6.8.2
+
+###### 2026/09/15
+
+* `Mejora` compileSdk y targetSdk suben a 37 (Android 17); el comportamiento del plugin no depende del nuevo objetivo
+
+# v6.8.1
+
+###### 2026/09/14
+
+* `Mejora` Sincronizar la guía de almacenamiento de apps empaquetadas, incluidos requiresSharedStorage, denegación de permisos, regreso de ajustes y recuperación del acceso de inicio
+* `Mejora` Sincronizar la referencia Media y el índice para servicios de música Media3, propiedad de reproducción, preparación en hilos de trabajo, controles y permisos de aplicaciones empaquetadas
+* `Mejora` Sincronización de la referencia Pangu y su índice de búsqueda, que cubre pangu.js 10.1.0 integrado, acceso global, espaciado de texto y comprobación
+* `Mejora` Sincronizar la documentación HTTP sobre el alcance por solicitud de isInsecure / insecure, la configuración compartida del cliente, la confianza en certificados, CT, ECH y los permisos de red local
+* `Mejora` Sincronizar las referencias de Media, Device, TTS y Settings con las condiciones de audio en segundo plano de Android 17, el bloqueo silencioso, la recuperación desde la aplicación visible y los límites del proceso del motor TTS
+* `Mejora` Comprobación de la firma completa, los APK esperados y la documentación reproducible de cada versión
 
 # v1.0.1
 
