@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10615957
-contentSha256=08b023de666f31777014efda5e3e00f857ef2d8498a56a787bccd766bd080472
+totalBytes=10634684
+contentSha256=1acb438488934ed154351c7ada39e8218fba21bf43075f9fae184c0e471c0a72
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -114,28 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
-# v6.8.2
-
-###### 2026/09/15
-
-* `改善` compileSdk と targetSdk を 37 (Android 17) に引き上げ, プラグインの動作は新しいターゲットの影響を受けない
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `改善` requiresSharedStorage, 権限拒否, 設定からの復帰, 起動アイコンの復元を含むパッケージアプリのストレージ案内を同期
-* `改善` Media3 音楽サービス, スクリプトの再生所有権, ワーカースレッドでの準備, 通知操作とパッケージアプリの権限について Media リファレンスと検索索引を同期
-* `改善` Pangu リファレンスと検索インデックスを同期し, 組み込み pangu.js 10.1.0, グローバルアクセス, 文字間隔の調整と確認を説明
-* `改善` HTTP の isInsecure / insecure のリクエスト単位の適用範囲, 共有クライアント設定, 証明書の信頼, CT, ECH とローカルネットワーク権限の説明を同期
-* `改善` Media, Device, TTS, Settings のリファレンスに Android 17 のバックグラウンド音声条件, 通知のない抑制, アプリ表示中の復旧操作, TTS エンジンプロセスの範囲を反映
-* `改善` リリース署名の設定, APK の構成, ドキュメントの再生成結果を検証
-
 # v6.8.0
 
-###### 2026/09/13
+###### 2026/09/16
 
 * `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
+* `改善` Flow の任意ステップ, 回数と時間を制限したループ, チェーン内の候補検索とクリック, コレクションの安定スナップショットと既定値の説明を同期し, オフライン検索インデックスを更新
 * `改善` ローカルネットワーク権限のリファレンスとオフライン検索索引を同期し, Android 17 / targetSdk 37 の条件, 非同期の許可, 再試行, ネイティブ Socket / MQTT とプラグイン権限の境界を説明
 * `改善` `device.pageSize` のリファレンスとオフライン検索インデックスを同期し, バイト単位, 読み取り専用属性, 実行環境とネイティブライブラリの互換性の違いを説明
 * `改善` OCR リファレンスとオフライン検索インデックスを同期し, エンジンの自動選択, リアルタイムのモード取得, tap によるリセット, 呼び出しごとのオプション, 利用可能なプラグインがない場合の動作を補足
@@ -153,6 +137,23 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` README のレイアウトと Gradle プラットフォームのバージョン管理方式を統一
 * `改善` MediaInfo リファレンスとオフライン検索に streamNumber, countGet, infoKind と元のファイルパスの仕様を反映
 * `改善` 意図しないネイティブ依存関係をビルド時に拒否し, JSON レポートを生成
+
+# v6.8.2
+
+###### 2026/09/15
+
+* `改善` compileSdk と targetSdk を 37 (Android 17) に引き上げ, プラグインの動作は新しいターゲットの影響を受けない
+
+# v6.8.1
+
+###### 2026/09/14
+
+* `改善` requiresSharedStorage, 権限拒否, 設定からの復帰, 起動アイコンの復元を含むパッケージアプリのストレージ案内を同期
+* `改善` Media3 音楽サービス, スクリプトの再生所有権, ワーカースレッドでの準備, 通知操作とパッケージアプリの権限について Media リファレンスと検索索引を同期
+* `改善` Pangu リファレンスと検索インデックスを同期し, 組み込み pangu.js 10.1.0, グローバルアクセス, 文字間隔の調整と確認を説明
+* `改善` HTTP の isInsecure / insecure のリクエスト単位の適用範囲, 共有クライアント設定, 証明書の信頼, CT, ECH とローカルネットワーク権限の説明を同期
+* `改善` Media, Device, TTS, Settings のリファレンスに Android 17 のバックグラウンド音声条件, 通知のない抑制, アプリ表示中の復旧操作, TTS エンジンプロセスの範囲を反映
+* `改善` リリース署名の設定, APK の構成, ドキュメントの再生成結果を検証
 
 ##### その他のリリース履歴
 

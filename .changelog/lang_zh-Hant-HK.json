@@ -5,29 +5,13 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "依賴",
   "$data": {
-    "v6.8.2": {
-      "released_date": "2026/09/15",
-      "improvement": [
-        "將 compileSdk 與 targetSdk 提升到 37 (Android 17), 插件行為不受新目標版本影響"
-      ]
-    },
-    "v6.8.1": {
-      "released_date": "2026/09/14",
-      "improvement": [
-        "同步封裝應用程式儲存空間引導文件, 包括 requiresSharedStorage, 拒絕授權, 設定返回及桌面入口恢復",
-        "同步 Media 文檔與搜尋索引, 說明 Media3 音樂服務, 指令碼播放擁有權, 工作執行緒準備, 通知控制與打包應用程式權限",
-        "同步 Pangu 參考文件與搜尋索引, 涵蓋內置 pangu.js 10.1.0, 全域物件, 文字間距處理與間距檢查",
-        "同步 HTTP 的 isInsecure / insecure 請求範圍, 共用用戶端設定及憑證信任, CT, ECH 和本地網絡權限說明",
-        "同步 Media, Device, TTS 和 Settings 的 Android 17 後台音頻運行條件, 靜默抑制, 可見介面恢復操作與 TTS 引擎進程邊界",
-        "校驗發行簽署設定, 預期 APK 集合與可重現文件"
-      ]
-    },
     "v6.8.0": {
-      "released_date": "2026/09/13",
+      "released_date": "2026/09/16",
       "fix": [
         "離線文件校驗器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱"
       ],
       "improvement": [
+        "同步 Flow 可選步驟, 有界循環, 鏈式候選查找與點擊, 集合穩定快照及預設值說明, 並更新離線搜尋索引",
         "同步執行時本地網絡權限文件及離線搜尋索引, 說明 Android 17 / targetSdk 37 條件, 非同步授權, 重試及原生 Socket / MQTT 和插件權限邊界",
         "同步 `device.pageSize` 參考文件與離線搜尋索引, 說明頁大小的位元組單位, 唯讀屬性及執行環境與原生程式庫相容性的區別",
         "同步 OCR 參考文件與離線搜尋索引, 補充引擎自動選擇, 即時模式讀取, tap 重設, 單次呼叫選項及無可用插件時的行為",
@@ -45,6 +29,23 @@
         "統一 README 版式與 Gradle 平台版本管理方式",
         "MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義",
         "建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告"
+      ]
+    },
+    "v6.8.2": {
+      "released_date": "2026/09/15",
+      "improvement": [
+        "將 compileSdk 與 targetSdk 提升到 37 (Android 17), 插件行為不受新目標版本影響"
+      ]
+    },
+    "v6.8.1": {
+      "released_date": "2026/09/14",
+      "improvement": [
+        "同步封裝應用程式儲存空間引導文件, 包括 requiresSharedStorage, 拒絕授權, 設定返回及桌面入口恢復",
+        "同步 Media 文檔與搜尋索引, 說明 Media3 音樂服務, 指令碼播放擁有權, 工作執行緒準備, 通知控制與打包應用程式權限",
+        "同步 Pangu 參考文件與搜尋索引, 涵蓋內置 pangu.js 10.1.0, 全域物件, 文字間距處理與間距檢查",
+        "同步 HTTP 的 isInsecure / insecure 請求範圍, 共用用戶端設定及憑證信任, CT, ECH 和本地網絡權限說明",
+        "同步 Media, Device, TTS 和 Settings 的 Android 17 後台音頻運行條件, 靜默抑制, 可見介面恢復操作與 TTS 引擎進程邊界",
+        "校驗發行簽署設定, 預期 APK 集合與可重現文件"
       ]
     },
     "v1.0.1": {

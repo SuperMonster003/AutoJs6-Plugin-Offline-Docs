@@ -5,29 +5,13 @@
   "changelog_label_improvement": "优化",
   "changelog_label_dependency": "依赖",
   "$data": {
-    "v6.8.2": {
-      "released_date": "2026/09/15",
-      "improvement": [
-        "将 compileSdk 与 targetSdk 提升到 37 (Android 17), 插件行为不受新目标版本影响"
-      ]
-    },
-    "v6.8.1": {
-      "released_date": "2026/09/14",
-      "improvement": [
-        "同步打包应用存储引导文档, 包括 requiresSharedStorage, 拒绝授权, 设置返回及桌面入口恢复",
-        "同步 Media 文档与搜索索引, 说明 Media3 音乐服务, 脚本播放所有权, 工作线程准备, 通知控制与打包应用权限",
-        "同步 Pangu 参考文档与搜索索引, 覆盖内置 pangu.js 10.1.0, 全局对象, 文本间距处理与间距检查",
-        "同步 HTTP 的 isInsecure / insecure 请求范围, 共享客户端配置及证书信任, CT, ECH 和本地网络权限说明",
-        "同步 Media, Device, TTS 和 Settings 的 Android 17 后台音频运行条件, 静默抑制, 可见界面恢复操作与 TTS 引擎进程边界",
-        "校验发行签名配置, 预期 APK 集合与可复现文档"
-      ]
-    },
     "v6.8.0": {
-      "released_date": "2026/09/13",
+      "released_date": "2026/09/16",
       "fix": [
         "离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称"
       ],
       "improvement": [
+        "同步 Flow 可选步骤, 有界循环, 链式候选查找与点击, 集合稳定快照及默认值说明, 并更新离线搜索索引",
         "同步运行时本地网络权限文档与离线搜索索引, 说明 Android 17 / targetSdk 37 条件, 异步授权, 重试及原生 Socket / MQTT 和插件权限边界",
         "同步 `device.pageSize` 参考文档与离线搜索索引, 说明页大小的字节单位, 只读属性及运行环境与原生库兼容性的区别",
         "同步 OCR 参考文档与离线搜索索引, 补充引擎自动选择, 实时模式读取, tap 重置, 单次调用选项及无可用插件时的行为",
@@ -45,6 +29,23 @@
         "统一 README 版式与 Gradle 平台版本管理方式",
         "MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义",
         "构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告"
+      ]
+    },
+    "v6.8.2": {
+      "released_date": "2026/09/15",
+      "improvement": [
+        "将 compileSdk 与 targetSdk 提升到 37 (Android 17), 插件行为不受新目标版本影响"
+      ]
+    },
+    "v6.8.1": {
+      "released_date": "2026/09/14",
+      "improvement": [
+        "同步打包应用存储引导文档, 包括 requiresSharedStorage, 拒绝授权, 设置返回及桌面入口恢复",
+        "同步 Media 文档与搜索索引, 说明 Media3 音乐服务, 脚本播放所有权, 工作线程准备, 通知控制与打包应用权限",
+        "同步 Pangu 参考文档与搜索索引, 覆盖内置 pangu.js 10.1.0, 全局对象, 文本间距处理与间距检查",
+        "同步 HTTP 的 isInsecure / insecure 请求范围, 共享客户端配置及证书信任, CT, ECH 和本地网络权限说明",
+        "同步 Media, Device, TTS 和 Settings 的 Android 17 后台音频运行条件, 静默抑制, 可见界面恢复操作与 TTS 引擎进程边界",
+        "校验发行签名配置, 预期 APK 集合与可复现文档"
       ]
     },
     "v1.0.1": {

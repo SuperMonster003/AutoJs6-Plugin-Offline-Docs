@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10615957
-contentSha256=08b023de666f31777014efda5e3e00f857ef2d8498a56a787bccd766bd080472
+totalBytes=10634684
+contentSha256=1acb438488934ed154351c7ada39e8218fba21bf43075f9fae184c0e471c0a72
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -114,28 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
-# v6.8.2
-
-###### 2026/09/15
-
-* `개선` compileSdk 와 targetSdk 를 37 (Android 17) 로 올리며, 플러그인 동작은 새 대상 버전의 영향을 받지 않음
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `개선` requiresSharedStorage, 권한 거부, 설정 복귀 및 실행 아이콘 복원을 포함한 패키징 앱의 저장소 안내 문서 동기화
-* `개선` Media3 음악 서비스, 스크립트 재생 소유권, 작업 스레드 준비, 알림 제어 및 패키징 앱 권한에 대한 Media 문서와 검색 색인 동기화
-* `개선` Pangu 참조 문서와 검색 인덱스를 동기화하여 내장 pangu.js 10.1.0, 전역 접근, 텍스트 간격 처리 및 검사를 설명
-* `개선` HTTP isInsecure / insecure의 요청별 적용 범위, 공유 클라이언트 설정, 인증서 신뢰, CT, ECH 및 로컬 네트워크 권한 설명 동기화
-* `개선` Media, Device, TTS, Settings 참조에 Android 17 백그라운드 오디오 조건, 알림 없는 차단, 앱이 표시된 상태에서의 복구 및 TTS 엔진 프로세스 범위 반영
-* `개선` 릴리스 서명 설정, 예상 APK 구성 및 문서 재생성 결과 검증
-
 # v6.8.0
 
-###### 2026/09/13
+###### 2026/09/16
 
 * `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
+* `개선` Flow 선택적 단계, 횟수와 시간이 제한된 반복, 체인 내 후보 검색과 클릭, 컬렉션 안정 스냅샷 및 기본값 설명을 동기화하고 오프라인 검색 인덱스 업데이트
 * `개선` 로컬 네트워크 권한 문서와 오프라인 검색 색인을 동기화하여 Android 17 / targetSdk 37 조건, 비동기 권한 허용, 재시도 및 네이티브 Socket / MQTT 와 플러그인 권한 경계 설명
 * `개선` `device.pageSize` 참조 문서와 오프라인 검색 인덱스를 동기화하고 바이트 단위, 읽기 전용 속성 및 실행 환경과 네이티브 라이브러리 호환성의 차이를 설명
 * `개선` OCR 참조 문서와 오프라인 검색 색인을 동기화하고 엔진 자동 선택, 실시간 모드 읽기, tap 초기화, 호출별 옵션 및 사용 가능한 플러그인이 없을 때의 동작 보완
@@ -153,6 +137,23 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` README 레이아웃과 Gradle 플랫폼 버전 관리 방식을 통일
 * `개선` MediaInfo 참조 문서와 오프라인 검색에 streamNumber, countGet, infoKind 및 원본 경로 동작을 반영
 * `개선` 빌드 시 의도하지 않은 네이티브 의존성을 거부하고 JSON 보고서 생성
+
+# v6.8.2
+
+###### 2026/09/15
+
+* `개선` compileSdk 와 targetSdk 를 37 (Android 17) 로 올리며, 플러그인 동작은 새 대상 버전의 영향을 받지 않음
+
+# v6.8.1
+
+###### 2026/09/14
+
+* `개선` requiresSharedStorage, 권한 거부, 설정 복귀 및 실행 아이콘 복원을 포함한 패키징 앱의 저장소 안내 문서 동기화
+* `개선` Media3 음악 서비스, 스크립트 재생 소유권, 작업 스레드 준비, 알림 제어 및 패키징 앱 권한에 대한 Media 문서와 검색 색인 동기화
+* `개선` Pangu 참조 문서와 검색 인덱스를 동기화하여 내장 pangu.js 10.1.0, 전역 접근, 텍스트 간격 처리 및 검사를 설명
+* `개선` HTTP isInsecure / insecure의 요청별 적용 범위, 공유 클라이언트 설정, 인증서 신뢰, CT, ECH 및 로컬 네트워크 권한 설명 동기화
+* `개선` Media, Device, TTS, Settings 참조에 Android 17 백그라운드 오디오 조건, 알림 없는 차단, 앱이 표시된 상태에서의 복구 및 TTS 엔진 프로세스 범위 반영
+* `개선` 릴리스 서명 설정, 예상 APK 구성 및 문서 재생성 결과 검증
 
 ##### 더 많은 릴리스 기록
 

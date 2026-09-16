@@ -4,28 +4,12 @@
 
 ******
 
-# v6.8.2
-
-###### 2026/09/15
-
-* `Amélioration` compileSdk et targetSdk passent à 37 (Android 17) ; le comportement du plugin ne dépend pas de la nouvelle cible
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `Amélioration` Synchroniser le guide de stockage des applications empaquetées, dont requiresSharedStorage, refus, retour des paramètres et restauration du lanceur
-* `Amélioration` Synchroniser la référence Media et son index pour les services musicaux Media3, la propriété de lecture, la préparation sur un thread de travail, les commandes et les permissions des applications empaquetées
-* `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
-* `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local
-* `Amélioration` Synchroniser les références Media, Device, TTS et Settings avec les conditions audio en arrière-plan d'Android 17, le blocage silencieux, la reprise depuis l'application visible et les limites du processus du moteur TTS
-* `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation
-
 # v6.8.0
 
-###### 2026/09/13
+###### 2026/09/16
 
 * `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
+* `Amélioration` Synchroniser les étapes facultatives Flow, les boucles bornées, la recherche et le clic de candidats en chaîne, les instantanés de collections stables et les valeurs par défaut, et mettre à jour l'index de recherche hors ligne
 * `Amélioration` Synchronisation de la référence des permissions réseau local et de l'index hors ligne, avec les conditions Android 17 / targetSdk 37, l'autorisation asynchrone, les reprises et les limites des Socket / MQTT natifs et des permissions des plugins
 * `Amélioration` Synchroniser la référence de `device.pageSize` et l'index de recherche hors ligne, en précisant l'unité en octets, la lecture seule et la distinction entre environnement d'exécution et compatibilité des bibliothèques natives
 * `Amélioration` Synchronisation de la référence OCR et de l'index de recherche hors ligne avec la sélection automatique du moteur, la lecture du mode en temps réel, les réinitialisations par tap, les options par appel et le comportement sans plugin disponible
@@ -43,6 +27,23 @@
 * `Amélioration` Uniformiser la mise en page du README et la gestion des versions de la plateforme Gradle
 * `Amélioration` La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources
 * `Amélioration` La vérification de compilation rejette les dépendances natives involontaires et produit un rapport JSON
+
+# v6.8.2
+
+###### 2026/09/15
+
+* `Amélioration` compileSdk et targetSdk passent à 37 (Android 17) ; le comportement du plugin ne dépend pas de la nouvelle cible
+
+# v6.8.1
+
+###### 2026/09/14
+
+* `Amélioration` Synchroniser le guide de stockage des applications empaquetées, dont requiresSharedStorage, refus, retour des paramètres et restauration du lanceur
+* `Amélioration` Synchroniser la référence Media et son index pour les services musicaux Media3, la propriété de lecture, la préparation sur un thread de travail, les commandes et les permissions des applications empaquetées
+* `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
+* `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local
+* `Amélioration` Synchroniser les références Media, Device, TTS et Settings avec les conditions audio en arrière-plan d'Android 17, le blocage silencieux, la reprise depuis l'application visible et les limites du processus du moteur TTS
+* `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation
 
 # v1.0.1
 
