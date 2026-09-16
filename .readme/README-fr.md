@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10634684
-contentSha256=1acb438488934ed154351c7ada39e8218fba21bf43075f9fae184c0e471c0a72
+totalBytes=10678085
+contentSha256=984d9c28ef369d21958856b21470a3ec666904c77dac3d51688550a8afd04b69
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -119,6 +119,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/09/16
 
 * `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
+* `Amélioration` Synchronisation des API de clic par coordonnées, de maxAttempts à 0 pour des tentatives illimitées, des piles de tâches Flow, de la sortie console et de la recherche hors ligne
 * `Amélioration` Synchroniser les étapes facultatives Flow, les boucles bornées, la recherche et le clic de candidats en chaîne, les instantanés de collections stables et les valeurs par défaut, et mettre à jour l'index de recherche hors ligne
 * `Amélioration` Synchronisation de la référence des permissions réseau local et de l'index hors ligne, avec les conditions Android 17 / targetSdk 37, l'autorisation asynchrone, les reprises et les limites des Socket / MQTT natifs et des permissions des plugins
 * `Amélioration` Synchroniser la référence de `device.pageSize` et l'index de recherche hors ligne, en précisant l'unité en octets, la lecture seule et la distinction entre environnement d'exécution et compatibilité des bibliothèques natives

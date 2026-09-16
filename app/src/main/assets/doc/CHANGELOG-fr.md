@@ -9,6 +9,7 @@
 ###### 2026/09/16
 
 * `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
+* `Amélioration` Synchronisation des API de clic par coordonnées, de maxAttempts à 0 pour des tentatives illimitées, des piles de tâches Flow, de la sortie console et de la recherche hors ligne
 * `Amélioration` Synchroniser les étapes facultatives Flow, les boucles bornées, la recherche et le clic de candidats en chaîne, les instantanés de collections stables et les valeurs par défaut, et mettre à jour l'index de recherche hors ligne
 * `Amélioration` Synchronisation de la référence des permissions réseau local et de l'index hors ligne, avec les conditions Android 17 / targetSdk 37, l'autorisation asynchrone, les reprises et les limites des Socket / MQTT natifs et des permissions des plugins
 * `Amélioration` Synchroniser la référence de `device.pageSize` et l'index de recherche hors ligne, en précisant l'unité en octets, la lecture seule et la distinction entre environnement d'exécution et compatibilité des bibliothèques natives

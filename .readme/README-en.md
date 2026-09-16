@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=185
-totalBytes=10634684
-contentSha256=1acb438488934ed154351c7ada39e8218fba21bf43075f9fae184c0e471c0a72
+totalBytes=10678085
+contentSha256=984d9c28ef369d21958856b21470a3ec666904c77dac3d51688550a8afd04b69
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -119,6 +119,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/09/16
 
 * `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
+* `Improvement` Synchronize coordinate-click APIs, the maxAttempts default of 0 for unlimited attempts, Flow error task stacks and console output, and the offline search index
 * `Improvement` Synchronize Flow optional steps, bounded loops, chained candidate lookup and clicks, stable collection snapshots and defaults, and update the offline search index
 * `Improvement` Synchronize the runtime local network permission reference and offline search index, covering Android 17 / targetSdk 37 conditions, asynchronous authorization, retries and the raw Socket / MQTT and plugin permission boundaries
 * `Improvement` Synchronize the `device.pageSize` reference and offline search index, documenting bytes, read-only access and the distinction between the runtime environment and native library compatibility
