@@ -6,9 +6,10 @@
   "changelog_label_dependency": "Dépendance",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/09/16",
+      "released_date": "2026/09/19",
       "fix": [
-        "Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu"
+        "Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu",
+        "Avertissements de lecture SDK XML v4 avec AGP 9.1 et contrôles d'alignement natif des APK déclenchés par erreur lors de l'assemblage des tests unitaires JVM, avec les plugins de compilation partagés 1.8.3"
       ],
       "improvement": [
         "Synchronisation des API de clic par coordonnées, de maxAttempts à 0 pour des tentatives illimitées, des piles de tâches Flow, de la sortie console et de la recherche hors ligne",

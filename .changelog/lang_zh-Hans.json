@@ -6,9 +6,10 @@
   "changelog_label_dependency": "依赖",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/09/16",
+      "released_date": "2026/09/19",
       "fix": [
-        "离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称"
+        "离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称",
+        "AGP 9.1 构建时的 SDK XML v4 解析警告及 JVM 单元测试组装任务误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)"
       ],
       "improvement": [
         "同步坐标点击 API, maxAttempts 默认 0 的无限尝试语义, Flow 异常任务栈与控制台输出及离线搜索索引",

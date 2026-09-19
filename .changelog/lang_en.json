@@ -6,9 +6,10 @@
   "changelog_label_dependency": "Dependency",
   "$data": {
     "v6.8.0": {
-      "released_date": "2026/09/16",
+      "released_date": "2026/09/19",
       "fix": [
-        "Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name"
+        "Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name",
+        "SDK XML v4 parsing warnings with AGP 9.1 and APK native alignment checks incorrectly triggered by JVM unit-test assembly tasks, using shared build plugins 1.8.3"
       ],
       "improvement": [
         "Synchronize coordinate-click APIs, the maxAttempts default of 0 for unlimited attempts, Flow error task stacks and console output, and the offline search index",

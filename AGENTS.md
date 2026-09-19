@@ -20,6 +20,6 @@ VERSION_BUILD 构建版本号可能随着 Gradle 构建自增, VERSION_NAME 也�
 - 不要出现任何全角符号, 包括但不限于文档正文内容以及示例代码的注释内容; 指代除外, 例如 `中文的逗号 "," 的 Unicode 是...`.
 ## Shared repository standard (2026-09-13)
 
-Read [the complete repository standard](docs/development/repository-standard.md). It supplements the product-specific instructions above. Use the publicly released platform and native-alignment plugins, currently 1.8.1. Do not use consumer gradle/data overrides or sibling-repository build dependencies.
+Read [the complete repository standard](docs/development/repository-standard.md). It supplements the product-specific instructions above. Use the publicly released platform and native-alignment plugins, currently 1.8.3. Do not use consumer gradle/data overrides or sibling-repository build dependencies.
 
 Inspect status, branch, recent commits and all diffs first. Do not overwrite or include another task's pending documentation, declaration or version changes in a commit. Generated documentation, provenance and public API synchronization require coordination with their owning task. Before each authorized commit set VERSION_BUILD to the current reachable HEAD count plus one, and verify it after committing.
