@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=185
-totalBytes=10678085
-contentSha256=984d9c28ef369d21958856b21470a3ec666904c77dac3d51688550a8afd04b69
+fileCount=190
+totalBytes=11166177
+contentSha256=651bff52e5971a21535b50c541aaeec88dda97db9c7cfa2378d27f21c46387fa
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -139,6 +139,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 统一 README 版式与 Gradle 平台版本管理方式
 * `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
 * `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
+* `优化` 同步邮件 (Mail) 参考文档与离线搜索索引, 覆盖 Angus Mail 插件的 mail 全局对象, MailClient 的收发, 搜索, 附件, 标记, 文件夹与监听方法, MailMessage, MailAccountOptions 与服务商预设, MailSearchQuery 及 MailError 错误代码
 
 # v6.8.2
 

@@ -29,6 +29,7 @@
 * `改善` README のレイアウトと Gradle プラットフォームのバージョン管理方式を統一
 * `改善` MediaInfo リファレンスとオフライン検索に streamNumber, countGet, infoKind と元のファイルパスの仕様を反映
 * `改善` 意図しないネイティブ依存関係をビルド時に拒否し, JSON レポートを生成
+* `改善` メール (Mail) リファレンスとオフライン検索インデックスを同期し, Angus Mail プラグインの mail グローバル, MailClient の送受信, 検索, 添付, フラグ, フォルダーと監視メソッド, MailMessage, MailAccountOptions とプロバイダープリセット, MailSearchQuery および MailError エラーコードを収録
 
 # v6.8.2
 

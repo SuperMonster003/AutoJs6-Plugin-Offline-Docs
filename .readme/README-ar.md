@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=185
-totalBytes=10678085
-contentSha256=984d9c28ef369d21958856b21470a3ec666904c77dac3d51688550a8afd04b69
+fileCount=190
+totalBytes=11166177
+contentSha256=651bff52e5971a21535b50c541aaeec88dda97db9c7cfa2378d27f21c46387fa
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -139,6 +139,7 @@ category=offline-docs
 * `تحسين` توحيد تخطيط README وطريقة إدارة إصدارات منصة Gradle
 * `تحسين` تحديث مرجع MediaInfo والبحث دون اتصال لخيارات streamNumber وcountGet وinfoKind ومسارات الملفات الأصلية
 * `تحسين` التحقق أثناء البناء لمنع إدخال تبعيات أصلية غير مقصودة, مع تقرير JSON
+* `تحسين` مزامنة مرجع البريد (Mail) وفهرس البحث دون اتصال, بما يشمل الكائن العام mail لإضافة Angus Mail, وأساليب MailClient للإرسال والبحث والمرفقات والعلامات والمجلدات والمراقبة, و MailMessage, و MailAccountOptions مع إعدادات مزودي الخدمة المسبقة, و MailSearchQuery ورموز أخطاء MailError
 
 # v6.8.2
 
