@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=190
-totalBytes=11166177
-contentSha256=651bff52e5971a21535b50c541aaeec88dda97db9c7cfa2378d27f21c46387fa
+fileCount=194
+totalBytes=11424887
+contentSha256=563ceebf94d73dbba705b1d3def8bba1aa7d435761092bc754243d567a60f40a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -140,6 +140,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources
 * `Amélioration` La vérification de compilation rejette les dépendances natives involontaires et produit un rapport JSON
 * `Amélioration` Synchronisation de la référence Mail et de l'index de recherche hors ligne, couvrant le global mail du plugin Angus Mail, les méthodes de MailClient pour l'envoi, la recherche, les pièces jointes, les indicateurs, les dossiers et la surveillance, MailMessage, MailAccountOptions avec les préréglages de fournisseur, MailSearchQuery et les codes d'erreur MailError
+* `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne, couvrant le global epub du plugin Readium EPUB Reader, les membres d'EpubBook pour les métadonnées, la table des matières, l'ordre de lecture, l'extraction de texte, l'export de la couverture et des ressources et la recherche plein texte, les événements, commandes et préférences de lecture d'EpubReaderSession, l'objet de position EpubLocator et les codes EpubError
 
 # v6.8.2
 

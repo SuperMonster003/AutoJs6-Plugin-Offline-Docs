@@ -30,6 +30,7 @@
 * `優化` MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義
 * `優化` 建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告
 * `優化` 同步郵件 (Mail) 參考文件與離線搜尋索引, 涵蓋 Angus Mail 外掛的 mail 全域物件, MailClient 的收發, 搜尋, 附件, 標記, 資料夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼
+* `優化` 同步電子書 (EPUB) 參考文件與離線搜尋索引, 涵蓋 Readium EPUB Reader 外掛的 epub 全域物件, EpubBook 的中繼資料, 目錄, 閱讀順序, 正文擷取, 封面與資源匯出及全文搜尋, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置物件及 EpubError 錯誤代碼
 
 # v6.8.2
 

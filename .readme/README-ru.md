@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=190
-totalBytes=11166177
-contentSha256=651bff52e5971a21535b50c541aaeec88dda97db9c7cfa2378d27f21c46387fa
+fileCount=194
+totalBytes=11424887
+contentSha256=563ceebf94d73dbba705b1d3def8bba1aa7d435761092bc754243d567a60f40a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -140,6 +140,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Справочник MediaInfo и автономный поиск охватывают streamNumber, countGet, infoKind и исходные пути файлов
 * `Улучшение` Проверка сборки отклоняет непреднамеренные нативные зависимости и создает отчет JSON
 * `Улучшение` Синхронизирован справочник Mail и офлайн-индекс поиска: глобальный объект mail плагина Angus Mail, методы MailClient для отправки, поиска, вложений, флагов, папок и наблюдения, MailMessage, MailAccountOptions с предустановками провайдеров, MailSearchQuery и коды ошибок MailError
+* `Улучшение` Синхронизирован справочник EPUB и офлайн-индекс поиска: глобальный объект epub плагина Readium EPUB Reader, члены EpubBook для метаданных, оглавления, порядка чтения, извлечения текста, экспорта обложки и ресурсов и полнотекстового поиска, события, методы управления и настройки чтения EpubReaderSession, объект позиции EpubLocator и коды ошибок EpubError
 
 # v6.8.2
 

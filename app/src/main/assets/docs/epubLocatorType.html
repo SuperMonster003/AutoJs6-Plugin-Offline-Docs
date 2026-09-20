@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>安卓 API 级别 (Android API Level) | AutoJs6 文档 - 6.8.0</title>
+    <title>EpubLocator | AutoJs6 文档 - 6.8.0</title>
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/sh.css">
     <link rel="stylesheet" href="plugins/docsify-copy-code@2-styles.css">
     <link rel="stylesheet" href="plugins/zoom-image-styles.css">
-    <link rel="canonical" href="https://nodejs.org/api/apiLevel.html">
+    <link rel="canonical" href="https://nodejs.org/api/epubLocatorType.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="user-scalable=no">
 </head>
-<body class="alt apidoc" id="api-section-apiLevel">
+<body class="alt apidoc" id="api-section-epubLocatorType">
 <div id="content" class="clearfix">
     <div id="column2" class="interior">
         <div id="intro" class="interior">
@@ -138,7 +138,7 @@
 
 <ul>
 <li><a class="nav-scriptingJava" href="scriptingJava.html">Scripting Java - 脚本化 Java</a></li>
-<li><a class="nav-apiLevel active" href="apiLevel.html">Android API Level - 安卓 API 级别</a></li>
+<li><a class="nav-apiLevel" href="apiLevel.html">Android API Level - 安卓 API 级别</a></li>
 <li><a class="nav-colorTable" href="colorTable.html">Color Table - 颜色列表</a></li>
 </ul>
 <div class="line"></div>
@@ -162,7 +162,7 @@
 <li><a class="nav-cryptoKeyType" href="cryptoKeyType.html">CryptoKey</a></li>
 <li><a class="nav-cryptoKeyPairType" href="cryptoKeyPairType.html">CryptoKeyPair</a></li>
 <li><a class="nav-consoleBuildOptionsType" href="consoleBuildOptionsType.html">ConsoleBuildOptions</a></li>
-<li><a class="nav-epubLocatorType" href="epubLocatorType.html">EpubLocator</a></li>
+<li><a class="nav-epubLocatorType active" href="epubLocatorType.html">EpubLocator</a></li>
 <li><a class="nav-httpRequestBuilderOptionsType" href="httpRequestBuilderOptionsType.html">HttpRequestBuilderOptions</a></li>
 <li><a class="nav-httpRequestHeadersType" href="httpRequestHeadersType.html">HttpRequestHeaders</a></li>
 <li><a class="nav-httpResponseBodyType" href="httpResponseBodyType.html">HttpResponseBody</a></li>
@@ -193,7 +193,7 @@
 
     </div>
 
-    <div id="column1" data-id="apiLevel" class="interior">
+    <div id="column1" data-id="epubLocatorType" class="interior">
         <header>
             <h1>AutoJs6 文档 - 6.8.0</h1>
             <div id="gtoc">
@@ -269,336 +269,107 @@
         <div id="toc">
             <h2>目录</h2>
 <ul>
-<li><span class="stability_undefined"><a href="#apilevel_api_android_api_level">安卓 API 级别 (Android API Level)</a></span></li>
+<li><span class="stability_undefined"><a href="#epublocatortype_epublocator">EpubLocator</a></span><ul>
+<li><span class="stability_undefined"><a href="#epublocatortype_epublocator_1">[@] EpubLocator</a></span></li>
+<li><span class="stability_undefined"><a href="#epublocatortype_fields">字段 (Fields)</a></span></li>
+</ul>
+</li>
 </ul>
 
         </div>
 
         <div id="apicontent">
-            <h1>安卓 API 级别 (Android API Level)<span><a class="mark" href="#apilevel_api_android_api_level" id="apilevel_api_android_api_level">#</a></span></h1>
-<p>API 级别 (API Level) 是对 Android 平台版本 (SDK Platforms) 提供的框架 API 修订版进行唯一标识的整数值 (SDK INT).</p>
-<p>Android 平台提供一种框架 API, 应用可利用它与底层 Android 系统进行交互.
-每个 Android 平台版本恰好支持一个 API 级别, 但隐含对所有早期 API 级别的支持.<br>
-Android 平台初始版本提供的是 API 级别 1, 后续版本的 API 级别则依次增加.</p>
-<p>下表列出了各 Android 平台版本所支持的 API 级别:</p>
+            <h1>EpubLocator<span><a class="mark" href="#epublocatortype_epublocator" id="epublocatortype_epublocator">#</a></span></h1>
+<p>EpubLocator 是 Readium 用于描述 EPUB 中一个位置的普通 JavaScript 对象 (Readium <code>Locator</code> 的 JSON 形式). <a href="epubReaderSessionType.html">EpubReaderSession</a> 的 <code>open</code> / <code>progress</code> / <code>bookmark</code> 事件, <a href="epubReaderSessionType.html#epubreadersessiontype_p_locator">session.locator</a>, <a href="epubReaderSessionType.html#epubreadersessiontype_m_bookmarks">session.bookmarks</a> 与 <a href="epubBookType.html#epubbooktype_m_search">EpubBook#search</a> 的命中都携带此对象; 脚本可以把它原样交回 <a href="epubReaderSessionType.html#epubreadersessiontype_m_goto">session.goTo</a>, <a href="epub.html#epub_m_read">epub.read</a> 的 <code>locator</code> 选项或 <a href="epubBookType.html#epubbooktype_m_text">EpubBook#text</a> 的 <code>target</code>, 也可以保存为 JSON 供下次运行使用.</p>
+<pre><code class="lang-js">let session = epub.read(&#39;./books/moby-dick.epub&#39;);
+session.on(&#39;progress&#39;, (e) =&gt; {
+    files.write(&#39;./moby-dick.locator.json&#39;, JSON.stringify(e.locator));
+});
+// 下次运行:
+let saved = JSON.parse(files.read(&#39;./moby-dick.locator.json&#39;));
+epub.read(&#39;./books/moby-dick.epub&#39;, { locator: saved });
+</code></pre>
+<hr>
+<p style="font: bold 2em sans-serif; color: #FF7043">EpubLocator</p>
+
+<hr>
+<h2>[@] EpubLocator<span><a class="mark" href="#epublocatortype_epublocator_1" id="epublocatortype_epublocator_1">#</a></span></h2>
+<p><strong><code>6.8.0</code></strong></p>
+<ul>
+<li>{{<ul>
+<li>href: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>type: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>title?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>locations?: {{<ul>
+<li>fragments?: <a href="dataTypes.html#datatypes_string">string</a>[];</li>
+<li>progression?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>totalProgression?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>position?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>cssSelector?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+</ul>
+</li>
+<li>}};</li>
+<li>text?: {{<ul>
+<li>before?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>highlight?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>after?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+</ul>
+</li>
+<li>}};</li>
+</ul>
+</li>
+<li>}}</li>
+</ul>
+<h2>字段 (Fields)<span><a class="mark" href="#epublocatortype_fields" id="epublocatortype_fields">#</a></span></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">API 级别</th>
-<th style="text-align:left">版本名称 (Version Name)</th>
-<th style="text-align:left">版本代号 (Version Code)</th>
-<th style="text-align:left">版本号 (Version Number)</th>
-<th style="text-align:left">内部代号 (Internal Codename)</th>
-<th style="text-align:left">发行日期</th>
+<th>字段</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">35 (?)</td>
-<td style="text-align:left">Android 15</td>
-<td style="text-align:left">VANILLA_ICE_CREAM</td>
-<td style="text-align:left">15</td>
-<td style="text-align:left">Vanilla Ice Cream</td>
-<td style="text-align:left">Q3, 2024 (?)</td>
+<td><code>href</code></td>
+<td>位置所在资源的出版物相对 href, 与目录, 阅读顺序和搜索结果中的 <code>href</code> 是同一套字符串</td>
 </tr>
 <tr>
-<td style="text-align:left">34</td>
-<td style="text-align:left">Android 14</td>
-<td style="text-align:left">UPSIDE_DOWN_CAKE</td>
-<td style="text-align:left">14</td>
-<td style="text-align:left">Upside Down Cake</td>
-<td style="text-align:left">Oct 4, 2023</td>
+<td><code>type</code></td>
+<td>资源的媒体类型, 如 <code>application/xhtml+xml</code></td>
 </tr>
 <tr>
-<td style="text-align:left">33</td>
-<td style="text-align:left">Android 13</td>
-<td style="text-align:left">TIRAMISU</td>
-<td style="text-align:left">13</td>
-<td style="text-align:left">Tiramisu</td>
-<td style="text-align:left">Aug 15, 2022</td>
+<td><code>title</code></td>
+<td>资源或章节标题, 已知时存在</td>
 </tr>
 <tr>
-<td style="text-align:left">32</td>
-<td style="text-align:left">Android 12L</td>
-<td style="text-align:left">S_V2</td>
-<td style="text-align:left">12.1</td>
-<td style="text-align:left">Snow Cone v2</td>
-<td style="text-align:left">Mar 7, 2022</td>
+<td><code>locations.progression</code></td>
+<td>在该资源内的进度, 0 到 1</td>
 </tr>
 <tr>
-<td style="text-align:left">31</td>
-<td style="text-align:left">Android 12</td>
-<td style="text-align:left">S</td>
-<td style="text-align:left">12</td>
-<td style="text-align:left">Snow Cone</td>
-<td style="text-align:left">Oct 4, 2021</td>
+<td><code>locations.totalProgression</code></td>
+<td>在全书中的进度, 0 到 1</td>
 </tr>
 <tr>
-<td style="text-align:left">30</td>
-<td style="text-align:left">Android 11</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">11</td>
-<td style="text-align:left">Red Velvet Cake</td>
-<td style="text-align:left">Sep 8, 2020</td>
+<td><code>locations.position</code></td>
+<td>合成位置序号 (从 1 起), 与 <a href="epubBookType.html#epubbooktype_p_positions">EpubBook#positions</a> 同一计数</td>
 </tr>
 <tr>
-<td style="text-align:left">29</td>
-<td style="text-align:left">Android 10</td>
-<td style="text-align:left">Q</td>
-<td style="text-align:left">10</td>
-<td style="text-align:left">Quince Tart</td>
-<td style="text-align:left">Sep 3, 2019</td>
+<td><code>locations.cssSelector</code></td>
+<td>定位到元素的 CSS 选择器</td>
 </tr>
 <tr>
-<td style="text-align:left">28</td>
-<td style="text-align:left">Android Pie</td>
-<td style="text-align:left">P</td>
-<td style="text-align:left">9</td>
-<td style="text-align:left">Pistachio Ice Cream</td>
-<td style="text-align:left">Aug 6, 2018</td>
+<td><code>locations.fragments</code></td>
+<td>资源内的片段标识</td>
 </tr>
 <tr>
-<td style="text-align:left">27</td>
-<td style="text-align:left">Android Oreo</td>
-<td style="text-align:left">O_MR1</td>
-<td style="text-align:left">8.1</td>
-<td style="text-align:left">Oatmeal Cookie</td>
-<td style="text-align:left">Dec 5, 2017</td>
-</tr>
-<tr>
-<td style="text-align:left">26</td>
-<td style="text-align:left">Android Oreo</td>
-<td style="text-align:left">O</td>
-<td style="text-align:left">8.0</td>
-<td style="text-align:left">Oatmeal Cookie</td>
-<td style="text-align:left">Aug 21, 2017</td>
-</tr>
-<tr>
-<td style="text-align:left">25</td>
-<td style="text-align:left">Android Nougat</td>
-<td style="text-align:left">N_MR1</td>
-<td style="text-align:left">7.1-7.1.2</td>
-<td style="text-align:left">New York Cheesecake</td>
-<td style="text-align:left">Oct 4, 2016</td>
-</tr>
-<tr>
-<td style="text-align:left">24</td>
-<td style="text-align:left">Android Nougat</td>
-<td style="text-align:left">N</td>
-<td style="text-align:left">7.0</td>
-<td style="text-align:left">New York Cheesecake</td>
-<td style="text-align:left">Aug 22, 2016</td>
-</tr>
-<tr>
-<td style="text-align:left">23</td>
-<td style="text-align:left">Android Marshmallow</td>
-<td style="text-align:left">M</td>
-<td style="text-align:left">6.0-6.0.1</td>
-<td style="text-align:left">Macadamia Nut Cookie</td>
-<td style="text-align:left">Oct 2, 2015</td>
-</tr>
-<tr>
-<td style="text-align:left">22</td>
-<td style="text-align:left">Android Lollipop</td>
-<td style="text-align:left">LOLLIPOP_MR1</td>
-<td style="text-align:left">5.1-5.1.1</td>
-<td style="text-align:left">Lemon Meringue Pie</td>
-<td style="text-align:left">Mar 2, 2015</td>
-</tr>
-<tr>
-<td style="text-align:left">21</td>
-<td style="text-align:left">Android Lollipop</td>
-<td style="text-align:left">LOLLIPOP</td>
-<td style="text-align:left">5.0-5.0.2</td>
-<td style="text-align:left">Lemon Meringue Pie</td>
-<td style="text-align:left">Nov 4, 2014</td>
-</tr>
-<tr>
-<td style="text-align:left">20</td>
-<td style="text-align:left">Android KitKat</td>
-<td style="text-align:left">KITKAT_WATCH</td>
-<td style="text-align:left">4.4W-4.4W.2</td>
-<td style="text-align:left">Key Lime Pie</td>
-<td style="text-align:left">Jun 25, 2014</td>
-</tr>
-<tr>
-<td style="text-align:left">19</td>
-<td style="text-align:left">Android KitKat</td>
-<td style="text-align:left">KITKAT</td>
-<td style="text-align:left">4.4-4.4.4</td>
-<td style="text-align:left">Key Lime Pie</td>
-<td style="text-align:left">Oct 31, 2013</td>
-</tr>
-<tr>
-<td style="text-align:left">18</td>
-<td style="text-align:left">Android Jelly Bean</td>
-<td style="text-align:left">JELLY_BEAN_MR2</td>
-<td style="text-align:left">4.3-4.3.1</td>
-<td style="text-align:left">Jelly Bean</td>
-<td style="text-align:left">Jul 24, 2013</td>
-</tr>
-<tr>
-<td style="text-align:left">17</td>
-<td style="text-align:left">Android Jelly Bean</td>
-<td style="text-align:left">JELLY_BEAN_MR1</td>
-<td style="text-align:left">4.2-4.2.2</td>
-<td style="text-align:left">Jelly Bean</td>
-<td style="text-align:left">Nov 13, 2012</td>
-</tr>
-<tr>
-<td style="text-align:left">16</td>
-<td style="text-align:left">Android Jelly Bean</td>
-<td style="text-align:left">JELLY_BEAN</td>
-<td style="text-align:left">4.1-4.1.2</td>
-<td style="text-align:left">Jelly Bean</td>
-<td style="text-align:left">Jul 9, 2012</td>
-</tr>
-<tr>
-<td style="text-align:left">15</td>
-<td style="text-align:left">Android Ice Cream Sandwich</td>
-<td style="text-align:left">ICE_CREAM_SANDWICH_MR1</td>
-<td style="text-align:left">4.0.3-4.0.4</td>
-<td style="text-align:left">Ice Cream Sandwich</td>
-<td style="text-align:left">Dec 16, 2011</td>
-</tr>
-<tr>
-<td style="text-align:left">14</td>
-<td style="text-align:left">Android Ice Cream Sandwich</td>
-<td style="text-align:left">ICE_CREAM_SANDWICH</td>
-<td style="text-align:left">4.0-4.0.2</td>
-<td style="text-align:left">Ice Cream Sandwich</td>
-<td style="text-align:left">Oct 18, 2011</td>
-</tr>
-<tr>
-<td style="text-align:left">13</td>
-<td style="text-align:left">Android Honeycomb</td>
-<td style="text-align:left">HONEYCOMB_MR2</td>
-<td style="text-align:left">3.2-3.2.6</td>
-<td style="text-align:left">Honeycomb</td>
-<td style="text-align:left">Jul 15, 2011</td>
-</tr>
-<tr>
-<td style="text-align:left">12</td>
-<td style="text-align:left">Android Honeycomb</td>
-<td style="text-align:left">HONEYCOMB_MR1</td>
-<td style="text-align:left">3.1</td>
-<td style="text-align:left">Honeycomb</td>
-<td style="text-align:left">May 10, 2011</td>
-</tr>
-<tr>
-<td style="text-align:left">11</td>
-<td style="text-align:left">Android Honeycomb</td>
-<td style="text-align:left">HONEYCOMB</td>
-<td style="text-align:left">3.0</td>
-<td style="text-align:left">Honeycomb</td>
-<td style="text-align:left">Feb 22, 2011</td>
-</tr>
-<tr>
-<td style="text-align:left">10</td>
-<td style="text-align:left">Android Gingerbread</td>
-<td style="text-align:left">GINGERBREAD_MR1</td>
-<td style="text-align:left">2.3.3-2.3.7</td>
-<td style="text-align:left">Gingerbread</td>
-<td style="text-align:left">Feb 9, 2011</td>
-</tr>
-<tr>
-<td style="text-align:left">9</td>
-<td style="text-align:left">Android Gingerbread</td>
-<td style="text-align:left">GINGERBREAD</td>
-<td style="text-align:left">2.3-2.3.2</td>
-<td style="text-align:left">Gingerbread</td>
-<td style="text-align:left">Dec 6, 2010</td>
-</tr>
-<tr>
-<td style="text-align:left">8</td>
-<td style="text-align:left">Android Froyo</td>
-<td style="text-align:left">FROYO</td>
-<td style="text-align:left">2.2-2.2.3</td>
-<td style="text-align:left">Froyo</td>
-<td style="text-align:left">May 20, 2010</td>
-</tr>
-<tr>
-<td style="text-align:left">7</td>
-<td style="text-align:left">Android Eclair</td>
-<td style="text-align:left">ECLAIR_MR1</td>
-<td style="text-align:left">2.1</td>
-<td style="text-align:left">Eclair</td>
-<td style="text-align:left">Jan 11, 2010</td>
-</tr>
-<tr>
-<td style="text-align:left">6</td>
-<td style="text-align:left">Android Eclair</td>
-<td style="text-align:left">ECLAIR_0_1</td>
-<td style="text-align:left">2.0.1</td>
-<td style="text-align:left">Eclair</td>
-<td style="text-align:left">Dec 3, 2009</td>
-</tr>
-<tr>
-<td style="text-align:left">5</td>
-<td style="text-align:left">Android Eclair</td>
-<td style="text-align:left">ECLAIR</td>
-<td style="text-align:left">2.0</td>
-<td style="text-align:left">Eclair</td>
-<td style="text-align:left">Oct 27, 2009</td>
-</tr>
-<tr>
-<td style="text-align:left">4</td>
-<td style="text-align:left">Android Donut</td>
-<td style="text-align:left">DONUT</td>
-<td style="text-align:left">1.6</td>
-<td style="text-align:left">Donut</td>
-<td style="text-align:left">Sep 15, 2009</td>
-</tr>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:left">Android Cupcake</td>
-<td style="text-align:left">CUPCAKE</td>
-<td style="text-align:left">1.5</td>
-<td style="text-align:left">Cupcake</td>
-<td style="text-align:left">Apr 27, 2009</td>
-</tr>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:left">Android 1.1</td>
-<td style="text-align:left">BASE_1_1</td>
-<td style="text-align:left">1.1</td>
-<td style="text-align:left">Petit Four</td>
-<td style="text-align:left">Feb 9, 2009</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:left">Android 1.0</td>
-<td style="text-align:left">BASE</td>
-<td style="text-align:left">1.0</td>
-<td style="text-align:left">-</td>
-<td style="text-align:left">Sep 23, 2008</td>
+<td><code>text.before</code> / <code>text.highlight</code> / <code>text.after</code></td>
+<td>位置处的上下文文本, 搜索结果与书签的 locator 携带</td>
 </tr>
 </tbody>
 </table>
-<p>文档通常使用以下格式之一表示 API 级别的信息:</p>
-<ul>
-<li>30 (11) [R]</li>
-<li>API 30 (11) [R]</li>
-<li>Android API 30 (11) [R]</li>
-</ul>
-<p>上述示例中,<br>
-<code>30</code> 表示 <code>API 级别</code>,<br>
-<code>11</code> 表示 <code>版本号 (Version Number)</code>,<br>
-<code>R</code> 表示 <code>版本代号 (Version Code)</code>.</p>
-<p>查询当前设备的 API 级别:</p>
-<pre><code class="lang-js">console.log(device.sdkInt); /* e.g. 30 */
+<p>脚本传回插件的 locator 必须带非空 <code>href</code>, 序列化后不超过 16 KiB (否则 <code>LIMIT_EXCEEDED</code>), 且 <code>href</code> 须指向当前书籍中的资源 (否则 <code>RESOURCE_NOT_FOUND</code>); 其余字段按 Readium 的规则解析, 无法解析时 <code>INVALID_ARGUMENT</code>. 从插件收到的 locator 可原样传回. 手工构造时至少给出 <code>href</code>, 可再加 <code>locations.progression</code> 指定资源内的位置:</p>
+<pre><code class="lang-js">session.goTo({ href: &#39;OPS/chapter_003.xhtml&#39;, locations: { progression: 0.5 } });
 </code></pre>
-<p>要求设备 API 级别不低于指定值:</p>
-<pre><code class="lang-js">/* 在 API 级别低于 30 的设备上将抛出异常. */
-runtime.requiresApi(30);
-runtime.requiresApi(util.versionCodes.R); /* 效果同上. */
-</code></pre>
-<blockquote>
-<p>注: AutoJs6 安装及使用需满足的最低 API 级别为 24 (7.0) [N].</p>
-</blockquote>
-<blockquote>
-<p>参阅: <a href="https://en.wikipedia.org/wiki/Android_version_history">Wikipedia (英)</a> / <a href="https://zh.wikipedia.org/wiki/Android%E7%89%88%E6%9C%AC%E5%88%97%E8%A1%A8">Wikipedia (中)</a></p>
-</blockquote>
 
         </div>
     </div>

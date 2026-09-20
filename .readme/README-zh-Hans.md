@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=190
-totalBytes=11166177
-contentSha256=651bff52e5971a21535b50c541aaeec88dda97db9c7cfa2378d27f21c46387fa
+fileCount=194
+totalBytes=11424887
+contentSha256=563ceebf94d73dbba705b1d3def8bba1aa7d435761092bc754243d567a60f40a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -140,6 +140,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
 * `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
 * `优化` 同步邮件 (Mail) 参考文档与离线搜索索引, 覆盖 Angus Mail 插件的 mail 全局对象, MailClient 的收发, 搜索, 附件, 标记, 文件夹与监听方法, MailMessage, MailAccountOptions 与服务商预设, MailSearchQuery 及 MailError 错误代码
+* `优化` 同步电子书 (EPUB) 参考文档与离线搜索索引, 覆盖 Readium EPUB Reader 插件的 epub 全局对象, EpubBook 的元数据, 目录, 阅读顺序, 正文提取, 封面与资源导出及全文搜索, EpubReaderSession 的事件, 控制方法与阅读偏好, EpubLocator 位置对象及 EpubError 错误代码
 
 # v6.8.2
 
