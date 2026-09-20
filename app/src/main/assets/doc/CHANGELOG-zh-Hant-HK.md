@@ -29,6 +29,7 @@
 * `優化` 統一 README 版式與 Gradle 平台版本管理方式
 * `優化` MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義
 * `優化` 建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告
+* `優化` 同步郵件 (Mail) 參考文檔與離線搜索索引, 覆蓋 Angus Mail 插件的 mail 全局對象, MailClient 的收發, 搜索, 附件, 標記, 文件夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼
 
 # v6.8.2
 

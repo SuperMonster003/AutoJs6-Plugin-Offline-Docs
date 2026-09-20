@@ -30,7 +30,8 @@
         "内蔵 runtime リファレンスとオフライン検索インデックスを拡張し, 検証済み mapping/seeds/usage/retrace metadata を出力する 6 つの `loadJarWithR8` オーバーロードとプロトコル 1.1 `retraceR8Stack` API, 来歴の結合, フォールバックしない fail-closed 動作を追加",
         "README のレイアウトと Gradle プラットフォームのバージョン管理方式を統一",
         "MediaInfo リファレンスとオフライン検索に streamNumber, countGet, infoKind と元のファイルパスの仕様を反映",
-        "意図しないネイティブ依存関係をビルド時に拒否し, JSON レポートを生成"
+        "意図しないネイティブ依存関係をビルド時に拒否し, JSON レポートを生成",
+        "メール (Mail) リファレンスとオフライン検索インデックスを同期し, Angus Mail プラグインの mail グローバル, MailClient の送受信, 検索, 添付, フラグ, フォルダーと監視メソッド, MailMessage, MailAccountOptions とプロバイダープリセット, MailSearchQuery および MailError エラーコードを収録"
       ]
     },
     "v6.8.2": {

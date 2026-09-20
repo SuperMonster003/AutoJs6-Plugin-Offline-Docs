@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=185
-totalBytes=10678085
-contentSha256=984d9c28ef369d21958856b21470a3ec666904c77dac3d51688550a8afd04b69
+fileCount=190
+totalBytes=11166177
+contentSha256=651bff52e5971a21535b50c541aaeec88dda97db9c7cfa2378d27f21c46387fa
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -139,6 +139,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` README 레이아웃과 Gradle 플랫폼 버전 관리 방식을 통일
 * `개선` MediaInfo 참조 문서와 오프라인 검색에 streamNumber, countGet, infoKind 및 원본 경로 동작을 반영
 * `개선` 빌드 시 의도하지 않은 네이티브 의존성을 거부하고 JSON 보고서 생성
+* `개선` 메일 (Mail) 참조 문서와 오프라인 검색 색인을 동기화하여 Angus Mail 플러그인의 mail 전역 객체, MailClient 의 송수신, 검색, 첨부, 플래그, 폴더 및 감시 메서드, MailMessage, MailAccountOptions 와 제공자 프리셋, MailSearchQuery 및 MailError 오류 코드를 수록
 
 # v6.8.2
 

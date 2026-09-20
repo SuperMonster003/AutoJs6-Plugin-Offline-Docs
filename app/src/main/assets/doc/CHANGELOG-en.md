@@ -29,6 +29,7 @@
 * `Improvement` Standardize the README layout and Gradle platform version management
 * `Improvement` Updated the MediaInfo reference and offline search with streamNumber, countGet, infoKind and original source paths
 * `Improvement` Build verification rejects accidental native dependencies and produces a JSON report
+* `Improvement` Synchronized the Mail reference and the offline search index, covering the mail global of the Angus Mail plugin, the MailClient methods for sending, searching, attachments, flags, folders and watching, MailMessage, MailAccountOptions with the provider presets, MailSearchQuery and the MailError codes
 
 # v6.8.2
 

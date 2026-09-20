@@ -30,7 +30,8 @@
         "Se amplió la referencia runtime integrada y el índice de búsqueda sin conexión con seis sobrecargas de `loadJarWithR8` para exportar mapping/seeds/usage/retrace metadata verificados y la API `retraceR8Stack` del protocolo 1.1, con vínculo de procedencia y fallo cerrado sin fallback",
         "Unificar el diseño del README y la gestión de versiones de la plataforma Gradle",
         "La referencia MediaInfo y la búsqueda sin conexión cubren streamNumber, countGet, infoKind y las rutas originales",
-        "La verificación de compilación rechaza dependencias nativas accidentales y genera un informe JSON"
+        "La verificación de compilación rechaza dependencias nativas accidentales y genera un informe JSON",
+        "Sincronizada la referencia de Mail y el índice de búsqueda sin conexión, cubriendo el global mail del plugin Angus Mail, los métodos de MailClient para envío, búsqueda, adjuntos, marcas, carpetas y vigilancia, MailMessage, MailAccountOptions con los preajustes de proveedor, MailSearchQuery y los códigos de error de MailError"
       ]
     },
     "v6.8.2": {

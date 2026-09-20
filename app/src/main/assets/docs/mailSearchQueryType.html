@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>OcrOptions | AutoJs6 文档 - 6.8.0</title>
+    <title>MailSearchQuery | AutoJs6 文档 - 6.8.0</title>
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/sh.css">
     <link rel="stylesheet" href="plugins/docsify-copy-code@2-styles.css">
     <link rel="stylesheet" href="plugins/zoom-image-styles.css">
-    <link rel="canonical" href="https://nodejs.org/api/ocrOptionsType.html">
+    <link rel="canonical" href="https://nodejs.org/api/mailSearchQueryType.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="user-scalable=no">
 </head>
-<body class="alt apidoc" id="api-section-ocrOptionsType">
+<body class="alt apidoc" id="api-section-mailSearchQueryType">
 <div id="content" class="clearfix">
     <div id="column2" class="interior">
         <div id="intro" class="interior">
@@ -167,13 +167,13 @@
 <li><a class="nav-injectableWebClientType" href="injectableWebClientType.html">InjectableWebClient</a></li>
 <li><a class="nav-injectableWebViewType" href="injectableWebViewType.html">InjectableWebView</a></li>
 <li><a class="nav-mailAccountOptionsType" href="mailAccountOptionsType.html">MailAccountOptions</a></li>
-<li><a class="nav-mailSearchQueryType" href="mailSearchQueryType.html">MailSearchQuery</a></li>
+<li><a class="nav-mailSearchQueryType active" href="mailSearchQueryType.html">MailSearchQuery</a></li>
 <li><a class="nav-noticeOptionsType" href="noticeOptionsType.html">NoticeOptions</a></li>
 <li><a class="nav-noticeChannelOptionsType" href="noticeChannelOptionsType.html">NoticeChannelOptions</a></li>
 <li><a class="nav-noticePresetConfigurationType" href="noticePresetConfigurationType.html">NoticePresetConfiguration</a></li>
 <li><a class="nav-noticeBuilderType" href="noticeBuilderType.html">NoticeBuilder</a></li>
 <li><a class="nav-okhttp3HttpUrlType" href="okhttp3HttpUrlType.html">Okhttp3HttpUrl</a></li>
-<li><a class="nav-ocrOptionsType active" href="ocrOptionsType.html">OcrOptions</a></li>
+<li><a class="nav-ocrOptionsType" href="ocrOptionsType.html">OcrOptions</a></li>
 <li><a class="nav-okhttp3RequestType" href="okhttp3RequestType.html">Okhttp3Request</a></li>
 <li><a class="nav-opencvPointType" href="opencvPointType.html">OpenCVPoint</a></li>
 <li><a class="nav-opencvRectType" href="opencvRectType.html">OpenCVRect</a></li>
@@ -189,7 +189,7 @@
 
     </div>
 
-    <div id="column1" data-id="ocrOptionsType" class="interior">
+    <div id="column1" data-id="mailSearchQueryType" class="interior">
         <header>
             <h1>AutoJs6 文档 - 6.8.0</h1>
             <div id="gtoc">
@@ -265,41 +265,32 @@
         <div id="toc">
             <h2>目录</h2>
 <ul>
-<li><span class="stability_undefined"><a href="#ocroptionstype_ocroptions">OcrOptions</a></span><ul>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_region">[p?] region</a></span><ul>
-<li><span class="stability_undefined"><a href="#ocroptionstype_number">number[]</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_androidrect">AndroidRect</a></span></li>
-</ul>
-</li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_mode">[p?] mode</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_engineid">[p?] engineId</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_engine">[p?] engine</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_variant">[p?] variant</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_profile">[p?] profile</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_useraw">[p?] useRaw</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_raw">[p?] raw</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_imagequality">[p?] imageQuality</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_imageformat">[p?] imageFormat</a></span><ul>
-<li><span class="stability_undefined"><a href="#ocroptionstype_paddle_rapid_ocr">Paddle 与 Rapid OCR 选项</a></span></li>
-</ul>
-</li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_detlongsize">[p?] detLongSize</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_scorethreshold">[p?] scoreThreshold</a></span><ul>
-<li><span class="stability_undefined"><a href="#ocroptionstype_paddle_ocr">Paddle OCR 选项</a></span></li>
-</ul>
-</li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_cputhreadnum">[p?] cpuThreadNum</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_useslim">[p?] useSlim</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_useopencl">[p?] useOpenCL</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_mergeline">[p?] mergeLine</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_splitwords">[p?] splitWords</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_usewordsegmentation">[p?] useWordSegmentation</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_detlimitsidelen">[p?] detLimitSideLen</a></span><ul>
-<li><span class="stability_undefined"><a href="#ocroptionstype_rapid_ocr">Rapid OCR 选项</a></span></li>
-</ul>
-</li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_maxsidelen">[p?] maxSideLen</a></span></li>
-<li><span class="stability_undefined"><a href="#ocroptionstype_p_boxscorethresh">[p?] boxScoreThresh</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_mailsearchquery">MailSearchQuery</a></span><ul>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_from">[p?] from</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_to">[p?] to</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_cc">[p?] cc</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_bcc">[p?] bcc</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_subject">[p?] subject</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_body">[p?] body</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_text">[p?] text</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_since">[p?] since</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_before">[p?] before</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_sentsince">[p?] sentSince</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_sentbefore">[p?] sentBefore</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_seen">[p?] seen</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_flagged">[p?] flagged</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_answered">[p?] answered</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_draft">[p?] draft</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_deleted">[p?] deleted</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_larger">[p?] larger</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_smaller">[p?] smaller</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_header">[p?] header</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_messageid">[p?] messageId</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_uid">[p?] uid</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_and">[p?] and</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_or">[p?] or</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_p_not">[p?] not</a></span></li>
+<li><span class="stability_undefined"><a href="#mailsearchquerytype_client_fallback">客户端过滤 (Client Fallback)</a></span></li>
 </ul>
 </li>
 </ul>
@@ -307,197 +298,177 @@
         </div>
 
         <div id="apicontent">
-            <h1>OcrOptions<span><a class="mark" href="#ocroptionstype_ocroptions" id="ocroptionstype_ocroptions">#</a></span></h1>
-<p>OcrOptions 是一个代表 OCR 识别选项的接口.</p>
+            <h1>MailSearchQuery<span><a class="mark" href="#mailsearchquerytype_mailsearchquery" id="mailsearchquerytype_mailsearchquery">#</a></span></h1>
+<p>MailSearchQuery 是 <a href="mailClientType.html#mailclienttype_m_search">client.search</a> 与 <a href="mail.html#mail_forwarded_methods">mail.search</a> 接受的查询条件对象.</p>
+<p>同一对象内的多个条件为 &quot;与&quot; 关系; <code>and</code>, <code>or</code>, <code>not</code> 可任意嵌套 (最深 8 层) 组合子条件. 字符串条件为不区分大小写的子串匹配 (IMAP <code>SEARCH</code> 语义), 日期条件按天比较, <code>uid</code> 只能出现在最外层. 未知字段抛出 <code>INVALID_ARGUMENT</code>.</p>
+<p>IMAP 上查询交由服务器执行; 服务器拒绝或不支持时, 按 <code>fallback</code> 选项在客户端过滤. POP3 只能在客户端按信封过滤, <code>body</code>, <code>text</code> 与 <code>uid</code> 条件不可用.</p>
+<pre><code class="lang-js">let hits = client.search({
+    from: &#39;noreply@example.com&#39;,
+    subject: &#39;验证码&#39;,
+    since: &#39;2026-09-01&#39;,
+    seen: false,
+}, { limit: 10 });
+</code></pre>
 <hr>
-<p style="font: bold 2em sans-serif; color: #FF7043">OcrOptions</p>
+<p style="font: bold 2em sans-serif; color: #FF7043">MailSearchQuery</p>
 
 <hr>
-<h3>[p?] region<span><a class="mark" href="#ocroptionstype_p_region" id="ocroptionstype_p_region">#</a></span></h3>
+<h2>[p?] from<span><a class="mark" href="#mailsearchquerytype_p_from" id="mailsearchquerytype_p_from">#</a></span></h2>
 <div class="signature"><ul>
-<li>{ <span class="type"><a href="omniTypes.html#omnitypes_omniregion">OmniRegion</a></span> }</li>
-</ul>
-</div><p>指定 OCR 识别的区域.</p>
-<p>当 <code>region</code> 值为 <code>undefined</code> 时, 表示不指定区域限制.<br>
-当 <code>region</code> 值为 <code>null</code> 时, 表示空区域, 此时 <a href="ocr.html">ocr</a> 模块的相关方法将返回空结果 (如空数组).</p>
-<h4>number[]<span><a class="mark" href="#ocroptionstype_number" id="ocroptionstype_number">#</a></span></h4>
-<p>可使用数组表示区域, 数组中包含 4 个数字:</p>
-<pre><code class="lang-text">[ x, y, w, h ]
-
-x - number - X 坐标 (像素值或百分比)
-y - number - Y 坐标 (像素值或百分比)
-w - number - 区域宽度 (像素值或百分比)
-h - number - 区域高度 (像素值或百分比)
-</code></pre>
-<pre><code class="lang-js">/* 识别本地 testA.png 图像文件中的文本内容, 区域为 [ 0, 0, 150, 300 ]. */
-
-let regionA = [ 0, 0, 150, 300 ];
-ocr(&#39;testA.png&#39;, regionA);
-
-/* 识别本地 testB.png 图像文件中的文本内容, */
-/* 区域为 [ 0, 0, 0.5, 0.8 ], */
-/* 即以 (0, 0) 为起点, 宽为 50% 屏幕宽度, 高为 80% 屏幕高度. */
-
-let regionB = [ 0, 0, 0.5, 0.8 ];
-ocr(&#39;testB.png&#39;, regionB);
-
-/* 识别本地 testC.png 图像文件中的文本内容, */
-/* 区域为 [ 0, 0.2, -1, 0.6 ], */
-/* 即以 (0, 20% 屏幕高度) 为起点, 宽为 100% 屏幕宽度, 高为 60% 屏幕高度. */
-
-let regionC = [ 0, 0.2, -1, 0.8 ];
-ocr(&#39;testC.png&#39;, regionC);
-</code></pre>
-<h4>AndroidRect<span><a class="mark" href="#ocroptionstype_androidrect" id="ocroptionstype_androidrect">#</a></span></h4>
-<p>也可使用 <a href="androidRectType.html">AndroidRect</a> 表示区域:</p>
-<pre><code class="lang-js">/* 识别本地 test.png 图像文件中的文本内容, 区域为文本 &quot;点击开始&quot; 所在的控件矩形. */
-
-let bounds = pickup(&#39;点击开始&#39;, &#39;bounds&#39;); /* bounds 是一个 AndroidRect 实例. */
-ocr(&#39;test.png&#39;, { region: bounds });
-</code></pre>
-<hr>
-<h3>[p?] mode<span><a class="mark" href="#ocroptionstype_p_mode" id="ocroptionstype_p_mode">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
-<li>{ <span class="type"><a href="dataTypes.html#datatypes_ocrmode">OcrMode</a></span> }</li>
-</ul>
-<p>指定本次调用的 OCR 选择方式, 不修改脚本的 <a href="ocr.html#ocr_p_mode">ocr.mode</a>.</p>
-<p>省略此属性时使用脚本当前的选择方式. 显式传入 <code>&quot;auto&quot;</code>, <code>&quot;&quot;</code>, <code>null</code> 或 <code>undefined</code> 时, 本次调用按 ML Kit OCR, Paddle OCR, Rapid OCR 的顺序选择当前可用且符合插件筛选条件的引擎.</p>
-<p><code>ocr.mlkit(...)</code>, <code>ocr.paddle(...)</code> 和 <code>ocr.rapid(...)</code> 使用各自固定的工作模式, 忽略本选项.</p>
-<hr>
-<h3>[p?] engineId<span><a class="mark" href="#ocroptionstype_p_engineid" id="ocroptionstype_p_engineid">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p>指定 OCR 插件引擎标识. 空字符串不会传递给插件.</p>
-<hr>
-<h3>[p?] engine<span><a class="mark" href="#ocroptionstype_p_engine" id="ocroptionstype_p_engine">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
+</div><p>发件人 (地址或显示名) 包含此子串.</p>
+<h2>[p?] to<span><a class="mark" href="#mailsearchquerytype_p_to" id="mailsearchquerytype_p_to">#</a></span></h2>
+<div class="signature"><ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p>指定 OCR 插件引擎名称. 空字符串不会传递给插件.</p>
-<hr>
-<h3>[p?] variant<span><a class="mark" href="#ocroptionstype_p_variant" id="ocroptionstype_p_variant">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
+</div><h2>[p?] cc<span><a class="mark" href="#mailsearchquerytype_p_cc" id="mailsearchquerytype_p_cc">#</a></span></h2>
+<div class="signature"><ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p>指定 OCR 引擎变体.</p>
-<p>Rapid OCR 模式会将 <code>v3</code> 和 <code>v6</code> 分别规范化为 <code>pp-ocrv3</code> 和 <code>pp-ocrv6</code>.</p>
-<hr>
-<h3>[p?] profile<span><a class="mark" href="#ocroptionstype_p_profile" id="ocroptionstype_p_profile">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
+</div><h2>[p?] bcc<span><a class="mark" href="#mailsearchquerytype_p_bcc" id="mailsearchquerytype_p_bcc">#</a></span></h2>
+<div class="signature"><ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p>指定 OCR 插件配置档案. 空字符串不会传递给插件.</p>
-<hr>
-<h3>[p?] useRaw<span><a class="mark" href="#ocroptionstype_p_useraw" id="ocroptionstype_p_useraw">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
-<li>[ <code>true</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</div><p>对应收件人字段包含此子串.</p>
+<h2>[p?] subject<span><a class="mark" href="#mailsearchquerytype_p_subject" id="mailsearchquerytype_p_subject">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p>是否将原始图像直接传递给 OCR 插件.</p>
-<p>此选项仅在 Android API 27 及以上生效.</p>
-<hr>
-<h3>[p?] raw<span><a class="mark" href="#ocroptionstype_p_raw" id="ocroptionstype_p_raw">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
-<li>[ <code>false</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</div><p>主题包含此子串. 非 ASCII 关键字由插件以 <code>CHARSET UTF-8</code> 发送; 部分服务商对非 ASCII 搜索返回空结果或错误, 见 <a href="mailAccountOptionsType.html#mailaccountoptionstype_provider_presets">服务商预设</a> 的说明与 <code>fallback</code> 选项.</p>
+<h2>[p?] body<span><a class="mark" href="#mailsearchquerytype_p_body" id="mailsearchquerytype_p_body">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p><a href="#ocroptionstype_p_useraw">useRaw</a> 的兼容别名. <code>raw</code> 与 <code>useRaw</code> 任一为 <code>true</code> 时启用原始图像传递.</p>
-<hr>
-<h3>[p?] imageQuality<span><a class="mark" href="#ocroptionstype_p_imagequality" id="ocroptionstype_p_imagequality">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
-<li>[ <code>-1</code> ] { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
+</div><p>正文包含此子串. 客户端过滤时需下载候选邮件的正文, 代价较高; POP3 不可用.</p>
+<h2>[p?] text<span><a class="mark" href="#mailsearchquerytype_p_text" id="mailsearchquerytype_p_text">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p>指定传递给 OCR 插件的图像质量. 仅当值大于 <code>0</code> 时传递.</p>
-<hr>
-<h3>[p?] imageFormat<span><a class="mark" href="#ocroptionstype_p_imageformat" id="ocroptionstype_p_imageformat">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
-<ul>
-<li>[ <code>&quot;&quot;</code> ] { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</div><p>主题, 正文, 发件人或收件人任一包含此子串.</p>
+<h2>[p?] since<span><a class="mark" href="#mailsearchquerytype_p_since" id="mailsearchquerytype_p_since">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_date">Date</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-<p>指定传递给 OCR 插件的图像格式. 空字符串不会传递给插件.</p>
-<hr>
-<h2>Paddle 与 Rapid OCR 选项<span><a class="mark" href="#ocroptionstype_paddle_rapid_ocr" id="ocroptionstype_paddle_rapid_ocr">#</a></span></h2>
-<p>以下选项同时适用于 <code>paddle</code> 和 <code>rapid</code> 模式.</p>
-<h3>[p?] detLongSize<span><a class="mark" href="#ocroptionstype_p_detlongsize" id="ocroptionstype_p_detlongsize">#</a></span></h3>
+</div><p>接收日期不早于此日期 (含当天).</p>
+<h2>[p?] before<span><a class="mark" href="#mailsearchquerytype_p_before" id="mailsearchquerytype_p_before">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_date">Date</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>接收日期早于此日期 (不含当天).</p>
+<h2>[p?] sentSince<span><a class="mark" href="#mailsearchquerytype_p_sentsince" id="mailsearchquerytype_p_sentsince">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_date">Date</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><h2>[p?] sentBefore<span><a class="mark" href="#mailsearchquerytype_p_sentbefore" id="mailsearchquerytype_p_sentbefore">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_date">Date</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>按 <code>Date</code> 头 (发送日期) 的对应条件.</p>
+<p>日期接受 JavaScript <code>Date</code>, UTC 毫秒时间戳, 或 ISO-8601 字符串 (<code>&#39;2026-09-01&#39;</code>, <code>&#39;2026-09-01T08:00:00Z&#39;</code>). 无论精度如何, 比较都按天进行, 这是 IMAP 协议的规则.</p>
+<h2>[p?] seen<span><a class="mark" href="#mailsearchquerytype_p_seen" id="mailsearchquerytype_p_seen">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+</div><h2>[p?] flagged<span><a class="mark" href="#mailsearchquerytype_p_flagged" id="mailsearchquerytype_p_flagged">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+</div><h2>[p?] answered<span><a class="mark" href="#mailsearchquerytype_p_answered" id="mailsearchquerytype_p_answered">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+</div><h2>[p?] draft<span><a class="mark" href="#mailsearchquerytype_p_draft" id="mailsearchquerytype_p_draft">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+</div><h2>[p?] deleted<span><a class="mark" href="#mailsearchquerytype_p_deleted" id="mailsearchquerytype_p_deleted">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+</div><p>对应系统标记是否存在. <code>false</code> 表示要求标记不存在 (如 <code>seen: false</code> 为未读), 省略表示不限制.</p>
+<h2>[p?] larger<span><a class="mark" href="#mailsearchquerytype_p_larger" id="mailsearchquerytype_p_larger">#</a></span></h2>
 <div class="signature"><ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
 </ul>
-</div><p>指定文本检测输入图像的长边尺寸.</p>
-<p>Paddle OCR 模式的默认值为 <code>0</code>. Rapid OCR 模式将此值作为 <a href="#ocroptionstype_p_maxsidelen">maxSideLen</a> 的后备值, 最终值小于等于 <code>0</code> 时采用 <code>1024</code>.</p>
-<hr>
-<h3>[p?] scoreThreshold<span><a class="mark" href="#ocroptionstype_p_scorethreshold" id="ocroptionstype_p_scorethreshold">#</a></span></h3>
+</div><p>邮件大小大于此字节数.</p>
+<h2>[p?] smaller<span><a class="mark" href="#mailsearchquerytype_p_smaller" id="mailsearchquerytype_p_smaller">#</a></span></h2>
 <div class="signature"><ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
 </ul>
-</div><p>指定识别结果的置信度阈值.</p>
-<p>Paddle OCR 模式的默认值为 <code>-1</code>. Rapid OCR 模式未指定此选项时采用 <a href="#ocroptionstype_p_boxscorethresh">boxScoreThresh</a> 的值.</p>
-<hr>
-<h2>Paddle OCR 选项<span><a class="mark" href="#ocroptionstype_paddle_ocr" id="ocroptionstype_paddle_ocr">#</a></span></h2>
-<p>以下选项适用于 <code>paddle</code> 模式.</p>
-<h3>[p?] cpuThreadNum<span><a class="mark" href="#ocroptionstype_p_cputhreadnum" id="ocroptionstype_p_cputhreadnum">#</a></span></h3>
+</div><p>邮件大小小于此字节数.</p>
+<h2>[p?] header<span><a class="mark" href="#mailsearchquerytype_p_header" id="mailsearchquerytype_p_header">#</a></span></h2>
 <div class="signature"><ul>
-<li>[ <code>4</code> ] { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> }</li>
 </ul>
-</div><p>指定 OCR 使用的 CPU 线程数.</p>
-<hr>
-<h3>[p?] useSlim<span><a class="mark" href="#ocroptionstype_p_useslim" id="ocroptionstype_p_useslim">#</a></span></h3>
+</div><p>任意邮件头的子串条件, 属性名为头名称, 属性值为子串, 如 <code>{ &#39;X-Mailer&#39;: &#39;Foo&#39;, &#39;List-Id&#39;: &#39;news&#39; }</code>. 多个头之间为 &quot;与&quot; 关系.</p>
+<h2>[p?] messageId<span><a class="mark" href="#mailsearchquerytype_p_messageid" id="mailsearchquerytype_p_messageid">#</a></span></h2>
 <div class="signature"><ul>
-<li>[ <code>true</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
 </ul>
-</div><p>是否使用精简模型.</p>
-<hr>
-<h3>[p?] useOpenCL<span><a class="mark" href="#ocroptionstype_p_useopencl" id="ocroptionstype_p_useopencl">#</a></span></h3>
+</div><p><code>Message-ID</code> 头包含此子串 (可含尖括号). 163 的服务器搜索对近期邮件返回空结果, 需用 <code>fallback: &#39;always&#39;</code>; QQ 会改写外发邮件的 Message-ID, 因此按发送结果中的 <code>messageId</code> 查找不到.</p>
+<h2>[p?] uid<span><a class="mark" href="#mailsearchquerytype_p_uid" id="mailsearchquerytype_p_uid">#</a></span></h2>
 <div class="signature"><ul>
-<li>[ <code>false</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_array">Array</a></span> }</li>
 </ul>
-</div><p>是否启用 OpenCL.</p>
-<hr>
-<h3>[p?] mergeLine<span><a class="mark" href="#ocroptionstype_p_mergeline" id="ocroptionstype_p_mergeline">#</a></span></h3>
+</div><p>限定候选邮件的 UID 集合, 只能写在最外层, 与其他条件为 &quot;与&quot; 关系. 接受单个 UID (<code>4711</code>), 范围字符串 (<code>&#39;1:50&#39;</code>, <code>&#39;100:*&#39;</code>, <code>&#39;1,5,9:12&#39;</code>; <code>*</code> 表示当前最大 UID), 或它们的数组. POP3 不可用.</p>
+<h2>[p?] and<span><a class="mark" href="#mailsearchquerytype_p_and" id="mailsearchquerytype_p_and">#</a></span></h2>
 <div class="signature"><ul>
-<li>[ <code>false</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+<li>{ <span class="type"><a href="mailSearchQueryType.html">MailSearchQuery</a><a href="dataTypes.html#datatypes_array">[]</a></span> }</li>
 </ul>
-</div><p>是否将同一文本行的识别结果合并.</p>
-<p>当 <a href="#ocroptionstype_p_splitwords">splitWords</a> 或 <a href="#ocroptionstype_p_usewordsegmentation">useWordSegmentation</a> 为 <code>true</code> 时, 此选项强制按 <code>false</code> 处理.</p>
-<hr>
-<h3>[p?] splitWords<span><a class="mark" href="#ocroptionstype_p_splitwords" id="ocroptionstype_p_splitwords">#</a></span></h3>
+</div><p>子条件全部成立.</p>
+<h2>[p?] or<span><a class="mark" href="#mailsearchquerytype_p_or" id="mailsearchquerytype_p_or">#</a></span></h2>
 <div class="signature"><ul>
-<li>[ <code>false</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+<li>{ <span class="type"><a href="mailSearchQueryType.html">MailSearchQuery</a><a href="dataTypes.html#datatypes_array">[]</a></span> }</li>
 </ul>
-</div><p>是否保留按词拆分的结果. 当前实现使用此选项关闭 <a href="#ocroptionstype_p_mergeline">mergeLine</a>.</p>
-<hr>
-<h3>[p?] useWordSegmentation<span><a class="mark" href="#ocroptionstype_p_usewordsegmentation" id="ocroptionstype_p_usewordsegmentation">#</a></span></h3>
+</div><p>子条件至少一个成立.</p>
+<h2>[p?] not<span><a class="mark" href="#mailsearchquerytype_p_not" id="mailsearchquerytype_p_not">#</a></span></h2>
 <div class="signature"><ul>
-<li>[ <code>false</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+<li>{ <span class="type"><a href="mailSearchQueryType.html">MailSearchQuery</a></span> }</li>
 </ul>
-</div><p>是否保留分词结果. 当前实现使用此选项关闭 <a href="#ocroptionstype_p_mergeline">mergeLine</a>.</p>
-<hr>
-<h3>[p?] detLimitSideLen<span><a class="mark" href="#ocroptionstype_p_detlimitsidelen" id="ocroptionstype_p_detlimitsidelen">#</a></span></h3>
-<div class="signature"><ul>
-<li>[ <code>0</code> ] { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
-</ul>
-</div><p>指定传递给 Paddle OCR 插件的文本检测边长限制. 仅当值大于 <code>0</code> 时传递.</p>
-<hr>
-<h2>Rapid OCR 选项<span><a class="mark" href="#ocroptionstype_rapid_ocr" id="ocroptionstype_rapid_ocr">#</a></span></h2>
-<p>以下选项适用于 <code>rapid</code> 模式.</p>
-<h3>[p?] maxSideLen<span><a class="mark" href="#ocroptionstype_p_maxsidelen" id="ocroptionstype_p_maxsidelen">#</a></span></h3>
-<div class="signature"><ul>
-<li>[ <code>1024</code> ] { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
-</ul>
-</div><p>指定文本检测输入图像的最大边长.</p>
-<p>未指定时先采用 <a href="#ocroptionstype_p_detlongsize">detLongSize</a> 的值. 最终值小于等于 <code>0</code> 时采用 <code>1024</code>.</p>
-<hr>
-<h3>[p?] boxScoreThresh<span><a class="mark" href="#ocroptionstype_p_boxscorethresh" id="ocroptionstype_p_boxscorethresh">#</a></span></h3>
-<div class="signature"><ul>
-<li>[ <code>0.5</code> ] { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
-</ul>
-</div><p>指定文本框置信度阈值.</p>
+</div><p>子条件不成立.</p>
+<pre><code class="lang-js">// (来自 a 或 b) 且 (主题含 &quot;发票&quot; 或 &quot;invoice&quot;) 且 非已读
+client.search({
+    or: [{ from: &#39;a@example.com&#39; }, { from: &#39;b@example.com&#39; }],
+    and: [{ or: [{ subject: &#39;发票&#39; }, { subject: &#39;invoice&#39; }] }],
+    not: { seen: true },
+});
+
+// 最近 7 天内, 大于 1 MiB 且带 X-Priority 头的邮件
+client.search({
+    since: Date.now() - 7 * 24 * 3600 * 1000,
+    larger: 1024 * 1024,
+    header: { &#39;X-Priority&#39;: &#39;1&#39; },
+});
+
+// 只在 UID 大于 5000 的邮件中查找
+client.search({ uid: &#39;5001:*&#39;, subject: &#39;报表&#39; });
+</code></pre>
+<h2>客户端过滤 (Client Fallback)<span><a class="mark" href="#mailsearchquerytype_client_fallback" id="mailsearchquerytype_client_fallback">#</a></span></h2>
+<p><a href="mailClientType.html#mailclienttype_m_search">client.search</a> 的 <code>fallback</code> 选项决定服务器不执行查询时的处理:</p>
+<table>
+<thead>
+<tr>
+<th>fallback</th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&#39;client&#39;</code> (默认)</td>
+<td>先请求服务器; 服务器拒绝该查询时, 从最新一封开始拉取信封在客户端逐条过滤, 找满 <code>limit</code> 条即停止, 最多扫描 2000 条 (POP3 200 条)</td>
+</tr>
+<tr>
+<td><code>&#39;none&#39;</code></td>
+<td>只请求服务器, 被拒绝时把服务器的错误原样抛出 (通常为 <code>SERVER_ERROR</code>)</td>
+</tr>
+<tr>
+<td><code>&#39;always&#39;</code></td>
+<td>不请求服务器, 直接在客户端过滤. 用于服务器搜索返回空结果而非错误的服务商 (QQ 的中文搜索, 163 对近期邮件的文本搜索)</td>
+</tr>
+</tbody>
+</table>
+<p>结果数组的不可枚举属性 <code>fallback</code> 为 <code>&#39;server&#39;</code> 或 <code>&#39;client&#39;</code>, 说明本次实际采用的方式. 客户端过滤时含 <code>body</code> / <code>text</code> 条件的查询需要下载候选邮件正文, 耗时随扫描数增加; 有 <code>debug: true</code> 时每扫描 25 条输出一次进度.</p>
 
         </div>
     </div>
