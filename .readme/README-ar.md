@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=190
-totalBytes=11166177
-contentSha256=651bff52e5971a21535b50c541aaeec88dda97db9c7cfa2378d27f21c46387fa
+fileCount=194
+totalBytes=11424887
+contentSha256=563ceebf94d73dbba705b1d3def8bba1aa7d435761092bc754243d567a60f40a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -140,6 +140,7 @@ category=offline-docs
 * `تحسين` تحديث مرجع MediaInfo والبحث دون اتصال لخيارات streamNumber وcountGet وinfoKind ومسارات الملفات الأصلية
 * `تحسين` التحقق أثناء البناء لمنع إدخال تبعيات أصلية غير مقصودة, مع تقرير JSON
 * `تحسين` مزامنة مرجع البريد (Mail) وفهرس البحث دون اتصال, بما يشمل الكائن العام mail لإضافة Angus Mail, وأساليب MailClient للإرسال والبحث والمرفقات والعلامات والمجلدات والمراقبة, و MailMessage, و MailAccountOptions مع إعدادات مزودي الخدمة المسبقة, و MailSearchQuery ورموز أخطاء MailError
+* `تحسين` مزامنة مرجع الكتب الإلكترونية (EPUB) وفهرس البحث دون اتصال, بما يشمل الكائن العام epub لإضافة Readium EPUB Reader, وأعضاء EpubBook للبيانات الوصفية وجدول المحتويات وترتيب القراءة واستخراج النص وتصدير الغلاف والموارد والبحث في النص الكامل, وأحداث EpubReaderSession وأساليب التحكم وتفضيلات القراءة, وكائن الموضع EpubLocator ورموز أخطاء EpubError
 
 # v6.8.2
 
