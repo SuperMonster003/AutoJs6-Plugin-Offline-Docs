@@ -118,36 +118,36 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ###### 2026/09/21
 
-* `修复` 离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称
-* `修复` AGP 9.1 构建时的 SDK XML v4 解析警告及 JVM 单元测试组装任务误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
-* `优化` 同步坐标点击 API, maxAttempts 默认 0 的无限尝试语义, Flow 异常任务栈与控制台输出及离线搜索索引
-* `优化` 同步 Flow 可选步骤, 有界循环, 链式候选查找与点击, 集合稳定快照及默认值说明, 并更新离线搜索索引
-* `优化` 同步运行时本地网络权限文档与离线搜索索引, 说明 Android 17 / targetSdk 37 条件, 异步授权, 重试及原生 Socket / MQTT 和插件权限边界
-* `优化` 同步 `device.pageSize` 参考文档与离线搜索索引, 说明页大小的字节单位, 只读属性及运行环境与原生库兼容性的区别
-* `优化` 同步 OCR 参考文档与离线搜索索引, 补充引擎自动选择, 实时模式读取, tap 重置, 单次调用选项及无可用插件时的行为
-* `优化` 同步 MediaInfo 参考文档与离线搜索索引, 补充兼容 `read` 与版本化 `snapshot` 的边界, 插件快照 v1/v2 schema 协商, 轻量 `capabilities` 以及动态 v2 track 和引擎信息
-* `优化` 同步 Pinyin 参考文档与离线搜索索引, 补充仅当前调用生效的 `customDictionary` 自定义读音覆盖, 已完成的 `compare`/`compact`, 以及通过带显式 `pinyin` capability 的 `autojs6:bridge.callAutoJs` 进行 Node.js 访问
-* `优化` 同步 Image Quantization v4 参考文档与离线搜索索引, 新增可配置的像素及工作内存预算, 类型化资源上限诊断, 已计入预算的峰值内存指标, 以及显式请求或脚本退出时的取消机制
-* `优化` 使插件 versionName 与目标 AutoJs6 文档版本保持一致, 并在文档同步成功时将两个项目各自的 build/versionCode 自动增加 1
-* `优化` 更新内置 AutoJs6 6.8.0 文档及离线搜索索引, 补充 YOLO 目标检测 Preview API 的精确提供方配置, 模型配置, 返回类型及稳定错误码
-* `优化` 完善内置 AI 参考文档, 覆盖插件模型发现, 官方与精确组件选择器, 多角色消息历史, 生成参数, 精确用量和流式负载, 以及完整路由示例
-* `优化` 扩充内置 AI 参考文档及离线搜索索引, 补充持久 `ai.session` Conversation API, 固定会话参数, 每轮仅传新提示词的生命周期规则, 能力发现及显式资源释放语义
-* `优化` 扩充内置 AI 参考文档及离线搜索索引, 补充 `structuredJson`/`responseSchema` 原生 JSON Schema 约束输出, 持久会话固定 schema, JSON 文本返回及失败语义
-* `优化` 扩充内置 AI 参考文档及离线搜索索引, 补充显式 CPU/GPU/NPU backend profile, `ai.catalog` 设备可用性及稳定不可用原因, 持久会话固定 backend, GPU 兼容性限制和禁止回退契约
-* `优化` 以统一 `ai.catalog` 目标目录直接替换全部未发布的 AI 列表与配置探测 API, 补齐精确 `target` 路由, 完整响应与会话元数据, 稳定禁止回退错误, 并同步在线/离线资产
-* `优化` 扩充内置 runtime 参考文档及离线搜索索引, 补充用于校验 mapping/seeds/usage/retrace metadata 导出的 6 个 `loadJarWithR8` 重载及协议 1.1 `retraceR8Stack` API, 并说明溯源绑定与失败即终止的禁止回退语义
+* `修复` 离线文档校验将公开方法 callAutoJs 误判为旧版产品名称的问题
+* `修复` AGP 9.1 构建时的 SDK XML v4 解析警告, 以及 JVM 单元测试误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
+* `优化` 同步坐标点击, 无限重试及 Flow 异常诊断文档和搜索索引
+* `优化` 同步 Flow 可选步骤, 循环, 链式查找, 集合快照及默认值文档
+* `优化` 同步 Android 17 本地网络权限文档, 补充授权, 重试及 Socket/MQTT 和插件的权限说明
+* `优化` 同步 device.pageSize 文档, 说明返回值单位及内存页兼容性
+* `优化` 同步 OCR 引擎选择, 模式读取, tap 重置及单次调用选项文档
+* `优化` 同步 MediaInfo read/snapshot/capabilities 文档, 补充 v1/v2 快照及引擎信息
+* `优化` 同步 Pinyin 自定义词典, compare/compact 及 Node.js 桥接文档
+* `优化` 同步 Image Quantization v4 文档, 补充像素及内存预算, 资源诊断和取消机制
+* `优化` 插件版本名跟随目标文档版本, 同步成功后自动更新构建号
+* `优化` 同步 YOLO 预览版接口文档, 补充插件选择, 模型配置, 返回值及错误码
+* `优化` 补充 AI 模型发现, 目标选择, 多角色历史, 生成参数, 用量及流式输出文档
+* `优化` 补充 ai.session 持久会话文档, 包含会话参数, 多轮输入及资源释放
+* `优化` 补充 structuredJson/responseSchema 文档, 包含 JSON Schema 约束, 持久会话及错误处理
+* `优化` 补充 CPU/GPU/NPU 后端选择及 ai.catalog 可用性文档, 说明兼容性和不可用时的行为
+* `优化` AI 文档改用统一的 ai.catalog 目录, 补充目标路由, 响应及会话元数据
+* `优化` 补充 loadJarWithR8 导出及 retraceR8Stack 调用栈还原文档, 说明产物校验及失败行为
 * `优化` 统一 README 版式与 Gradle 平台版本管理方式
 * `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
 * `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
-* `优化` 同步邮件 (Mail) 参考文档与离线搜索索引, 覆盖 Angus Mail 插件的 mail 全局对象, MailClient 的收发, 搜索, 附件, 标记, 文件夹与监听方法, MailMessage, MailAccountOptions 与服务商预设, MailSearchQuery 及 MailError 错误代码
-* `优化` 同步电子书 (EPUB) 参考文档与离线搜索索引, 覆盖 Readium EPUB Reader 插件的 epub 全局对象, EpubBook 的元数据, 目录, 阅读顺序, 正文提取, 封面与资源导出及全文搜索, EpubReaderSession 的事件, 控制方法与阅读偏好, EpubLocator 位置对象及 EpubError 错误代码
-* `优化` 同步电子书 (EPUB) 参考文档与离线搜索索引, 补充 Readium EPUB Reader 插件 1.1.0 的高亮与笔记 (EPUB 契约版本 2): EpubBook#annotations 与便捷层 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的携带位置
+* `优化` 同步 Mail 文档, 覆盖账户, 收发, 搜索, 附件, 标记, 文件夹, 监听及错误码
+* `优化` 同步 EPUB 文档, 覆盖书籍读取, 内容提取, 导出, 搜索及阅读器会话控制
+* `优化` 补充 Readium EPUB Reader 1.1.0 的高亮及笔记文档, 包含 annotations 查询, highlight 事件及位置对象
 
 # v6.8.2
 
 ###### 2026/09/15
 
-* `优化` 将 compileSdk 与 targetSdk 提升到 37 (Android 17), 插件行为不受新目标版本影响
+* `优化` compileSdk/targetSdk 升级至 37 (Android 17)
 
 # v6.8.1
 
@@ -158,7 +158,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 同步 Pangu 参考文档与搜索索引, 覆盖内置 pangu.js 10.1.0, 全局对象, 文本间距处理与间距检查
 * `优化` 同步 HTTP 的 isInsecure / insecure 请求范围, 共享客户端配置及证书信任, CT, ECH 和本地网络权限说明
 * `优化` 同步 Media, Device, TTS 和 Settings 的 Android 17 后台音频运行条件, 静默抑制, 可见界面恢复操作与 TTS 引擎进程边界
-* `优化` 校验发行签名配置, 预期 APK 集合与可复现文档
+* `优化` 完善发行签名, APK 变体及生成文档一致性校验
 
 ##### 更多发行历史可参阅
 
