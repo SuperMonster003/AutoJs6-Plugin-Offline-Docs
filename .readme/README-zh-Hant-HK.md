@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=194
-totalBytes=11424887
-contentSha256=563ceebf94d73dbba705b1d3def8bba1aa7d435761092bc754243d567a60f40a
+totalBytes=11442956
+contentSha256=3831c6a745e0a9a8fbd2f410e6c478e42c7d891b0febb8291fe2c7f2026ec509
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 # v6.8.0
 
-###### 2026/09/19
+###### 2026/09/21
 
 * `修復` 離線文件校驗器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
 * `修復` AGP 9.1 構建時的 SDK XML v4 解析警告及 JVM 單元測試組裝任務誤觸發 APK 原生程式庫對齊檢查的問題 (共用構建外掛 1.8.3)
@@ -141,6 +141,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` 建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告
 * `優化` 同步郵件 (Mail) 參考文檔與離線搜索索引, 覆蓋 Angus Mail 插件的 mail 全局對象, MailClient 的收發, 搜索, 附件, 標記, 文件夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼
 * `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 覆蓋 Readium EPUB Reader 插件的 epub 全局對象, EpubBook 的元數據, 目錄, 閱讀順序, 正文提取, 封面與資源導出及全文搜索, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置對象及 EpubError 錯誤代碼
+* `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 補充 Readium EPUB Reader 插件 1.1.0 的高亮與筆記 (EPUB 契約版本 2): EpubBook#annotations 與便捷層 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的攜帶位置
 
 # v6.8.2
 

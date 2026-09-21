@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=194
-totalBytes=11424887
-contentSha256=563ceebf94d73dbba705b1d3def8bba1aa7d435761092bc754243d567a60f40a
+totalBytes=11442956
+contentSha256=3831c6a745e0a9a8fbd2f410e6c478e42c7d891b0febb8291fe2c7f2026ec509
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -116,7 +116,7 @@ category=offline-docs
 
 # v6.8.0
 
-###### 2026/09/19
+###### 2026/09/21
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
 * `إصلاح` تحذيرات قراءة SDK XML v4 مع AGP 9.1 وتشغيل فحص محاذاة مكتبات APK الأصلية خطأ عند تجميع اختبارات JVM, باستخدام إضافات البناء المشتركة 1.8.3
@@ -141,6 +141,7 @@ category=offline-docs
 * `تحسين` التحقق أثناء البناء لمنع إدخال تبعيات أصلية غير مقصودة, مع تقرير JSON
 * `تحسين` مزامنة مرجع البريد (Mail) وفهرس البحث دون اتصال, بما يشمل الكائن العام mail لإضافة Angus Mail, وأساليب MailClient للإرسال والبحث والمرفقات والعلامات والمجلدات والمراقبة, و MailMessage, و MailAccountOptions مع إعدادات مزودي الخدمة المسبقة, و MailSearchQuery ورموز أخطاء MailError
 * `تحسين` مزامنة مرجع الكتب الإلكترونية (EPUB) وفهرس البحث دون اتصال, بما يشمل الكائن العام epub لإضافة Readium EPUB Reader, وأعضاء EpubBook للبيانات الوصفية وجدول المحتويات وترتيب القراءة واستخراج النص وتصدير الغلاف والموارد والبحث في النص الكامل, وأحداث EpubReaderSession وأساليب التحكم وتفضيلات القراءة, وكائن الموضع EpubLocator ورموز أخطاء EpubError
+* `تحسين` مزامنة مرجع الكتب الإلكترونية (EPUB) وفهرس البحث دون اتصال مع تمييزات وملاحظات إضافة Readium EPUB Reader 1.1.0 (الإصدار 2 من عقد EPUB): EpubBook#annotations وطبقة التيسير epub.annotations, وحدث highlight في EpubReaderSession, ومواضع حمل EpubLocator
 
 # v6.8.2
 

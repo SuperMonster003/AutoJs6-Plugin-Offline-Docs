@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=194
-totalBytes=11424887
-contentSha256=563ceebf94d73dbba705b1d3def8bba1aa7d435761092bc754243d567a60f40a
+totalBytes=11442956
+contentSha256=3831c6a745e0a9a8fbd2f410e6c478e42c7d891b0febb8291fe2c7f2026ec509
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.0
 
-###### 2026/09/19
+###### 2026/09/21
 
 * `Исправление` Валидаторы офлайн-документации больше не принимают публичное имя метода Node bridge `callAutoJs` за устаревшее неполное имя продукта
 * `Исправление` Предупреждения чтения SDK XML v4 с AGP 9.1 и ошибочный запуск проверки выравнивания нативных библиотек APK при сборке модульных тестов JVM, устраненные общими плагинами сборки 1.8.3
@@ -141,6 +141,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Проверка сборки отклоняет непреднамеренные нативные зависимости и создает отчет JSON
 * `Улучшение` Синхронизирован справочник Mail и офлайн-индекс поиска: глобальный объект mail плагина Angus Mail, методы MailClient для отправки, поиска, вложений, флагов, папок и наблюдения, MailMessage, MailAccountOptions с предустановками провайдеров, MailSearchQuery и коды ошибок MailError
 * `Улучшение` Синхронизирован справочник EPUB и офлайн-индекс поиска: глобальный объект epub плагина Readium EPUB Reader, члены EpubBook для метаданных, оглавления, порядка чтения, извлечения текста, экспорта обложки и ресурсов и полнотекстового поиска, события, методы управления и настройки чтения EpubReaderSession, объект позиции EpubLocator и коды ошибок EpubError
+* `Улучшение` Синхронизирован справочник EPUB и офлайн-индекс поиска с выделениями и заметками плагина Readium EPUB Reader 1.1.0 (версия 2 контракта EPUB): EpubBook#annotations и удобный epub.annotations, событие highlight у EpubReaderSession и носители EpubLocator
 
 # v6.8.2
 
