@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/19
+###### 2026/09/21
 
 * `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
 * `수정` 공유 빌드 플러그인 1.8.3을 통해 AGP 9.1의 SDK XML v4 파싱 경고 및 JVM 단위 테스트 조립 작업에서 APK 네이티브 라이브러리 정렬 검사가 잘못 실행되는 문제 해결
@@ -31,6 +31,7 @@
 * `개선` 빌드 시 의도하지 않은 네이티브 의존성을 거부하고 JSON 보고서 생성
 * `개선` 메일 (Mail) 참조 문서와 오프라인 검색 색인을 동기화하여 Angus Mail 플러그인의 mail 전역 객체, MailClient 의 송수신, 검색, 첨부, 플래그, 폴더 및 감시 메서드, MailMessage, MailAccountOptions 와 제공자 프리셋, MailSearchQuery 및 MailError 오류 코드를 수록
 * `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인의 epub 전역 객체, EpubBook 의 메타데이터, 목차, 읽기 순서, 본문 추출, 표지와 리소스 내보내기 및 전문 검색, EpubReaderSession 의 이벤트, 제어 메서드와 읽기 환경설정, EpubLocator 위치 객체 및 EpubError 오류 코드를 수록
+* `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인 1.1.0 의 하이라이트와 메모 (EPUB 계약 버전 2) 를 보강: EpubBook#annotations 와 편의 계층 epub.annotations, EpubReaderSession 의 highlight 이벤트 및 EpubLocator 의 전달 위치
 
 # v6.8.2
 

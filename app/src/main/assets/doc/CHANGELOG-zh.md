@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/19
+###### 2026/09/21
 
 * `修复` 离线文档校验器不再将公开 Node 桥接方法名 `callAutoJs` 误判为旧版裸产品名称
 * `修复` AGP 9.1 构建时的 SDK XML v4 解析警告及 JVM 单元测试组装任务误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
@@ -31,6 +31,7 @@
 * `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
 * `优化` 同步邮件 (Mail) 参考文档与离线搜索索引, 覆盖 Angus Mail 插件的 mail 全局对象, MailClient 的收发, 搜索, 附件, 标记, 文件夹与监听方法, MailMessage, MailAccountOptions 与服务商预设, MailSearchQuery 及 MailError 错误代码
 * `优化` 同步电子书 (EPUB) 参考文档与离线搜索索引, 覆盖 Readium EPUB Reader 插件的 epub 全局对象, EpubBook 的元数据, 目录, 阅读顺序, 正文提取, 封面与资源导出及全文搜索, EpubReaderSession 的事件, 控制方法与阅读偏好, EpubLocator 位置对象及 EpubError 错误代码
+* `优化` 同步电子书 (EPUB) 参考文档与离线搜索索引, 补充 Readium EPUB Reader 插件 1.1.0 的高亮与笔记 (EPUB 契约版本 2): EpubBook#annotations 与便捷层 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的携带位置
 
 # v6.8.2
 

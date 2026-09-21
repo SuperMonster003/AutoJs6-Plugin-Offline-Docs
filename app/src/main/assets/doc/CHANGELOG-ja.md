@@ -6,7 +6,7 @@
 
 # v6.8.0
 
-###### 2026/09/19
+###### 2026/09/21
 
 * `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
 * `修正` 共有ビルドプラグイン 1.8.3 により, AGP 9.1 での SDK XML v4 解析警告と, JVM 単体テストの組み立て時に APK ネイティブライブラリのアラインメント検証が誤って実行される問題
@@ -31,6 +31,7 @@
 * `改善` 意図しないネイティブ依存関係をビルド時に拒否し, JSON レポートを生成
 * `改善` メール (Mail) リファレンスとオフライン検索インデックスを同期し, Angus Mail プラグインの mail グローバル, MailClient の送受信, 検索, 添付, フラグ, フォルダーと監視メソッド, MailMessage, MailAccountOptions とプロバイダープリセット, MailSearchQuery および MailError エラーコードを収録
 * `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグインの epub グローバル, EpubBook のメタデータ, 目次, 読み順, 本文抽出, 表紙とリソースの書き出しおよび全文検索, EpubReaderSession のイベント, 制御メソッドと閲覧設定, EpubLocator 位置オブジェクトおよび EpubError エラーコードを収録
+* `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグイン 1.1.0 のハイライトとノート (EPUB コントラクトバージョン 2) を補完: EpubBook#annotations と簡易層の epub.annotations, EpubReaderSession の highlight イベントおよび EpubLocator の運搬箇所
 
 # v6.8.2
 
