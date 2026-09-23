@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=194
-totalBytes=11442956
-contentSha256=3831c6a745e0a9a8fbd2f410e6c478e42c7d891b0febb8291fe2c7f2026ec509
+totalBytes=11452332
+contentSha256=8195155a736290be14cad1082fe0d2e03a8b98e69acc7dafab9eef458d8adc02
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -116,10 +116,11 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.0
 
-###### 2026/09/21
+###### 2026/09/23
 
 * `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
 * `Correctif` Avertissements de lecture SDK XML v4 avec AGP 9.1 et contrôles d'alignement natif des APK déclenchés par erreur lors de l'assemblage des tests unitaires JVM, avec les plugins de compilation partagés 1.8.3
+* `Amélioration` Synchronisation de ai.agent.result/context, des limites de résultat, des instantanés de contexte et des exemples de scripts enregistrés
 * `Amélioration` Synchronisation des API de clic par coordonnées, de maxAttempts à 0 pour des tentatives illimitées, des piles de tâches Flow, de la sortie console et de la recherche hors ligne
 * `Amélioration` Synchroniser les étapes facultatives Flow, les boucles bornées, la recherche et le clic de candidats en chaîne, les instantanés de collections stables et les valeurs par défaut, et mettre à jour l'index de recherche hors ligne
 * `Amélioration` Synchronisation de la référence des permissions réseau local et de l'index hors ligne, avec les conditions Android 17 / targetSdk 37, l'autorisation asynchrone, les reprises et les limites des Socket / MQTT natifs et des permissions des plugins

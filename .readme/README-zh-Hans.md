@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=194
-totalBytes=11442956
-contentSha256=3831c6a745e0a9a8fbd2f410e6c478e42c7d891b0febb8291fe2c7f2026ec509
+totalBytes=11452332
+contentSha256=8195155a736290be14cad1082fe0d2e03a8b98e69acc7dafab9eef458d8adc02
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -116,10 +116,11 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.0
 
-###### 2026/09/21
+###### 2026/09/23
 
 * `修复` 离线文档校验将公开方法 callAutoJs 误判为旧版产品名称的问题
 * `修复` AGP 9.1 构建时的 SDK XML v4 解析警告, 以及 JVM 单元测试误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
+* `优化` 同步 ai.agent.result/context, 登记脚本结果上限, 上下文快照与执行示例
 * `优化` 同步坐标点击, 无限重试及 Flow 异常诊断文档和搜索索引
 * `优化` 同步 Flow 可选步骤, 循环, 链式查找, 集合快照及默认值文档
 * `优化` 同步 Android 17 本地网络权限文档, 补充授权, 重试及 Socket/MQTT 和插件的权限说明
