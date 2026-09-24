@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11583315
-contentSha256=0b19a5202826e3930e85757937fea9bf3eb089e48708b67dca1ab411a02d5956
+totalBytes=11587454
+contentSha256=4f21f7c19ff896a3e506d9dcb064fc844b832c1f720387c65aef1469d4ad24b7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
+sourceBaseCommit=85f46af5206bf80e79ccb9b68c5f90881f75b050
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 * `修復` 離線文件校驗器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
 * `修復` AGP 9.1 構建時的 SDK XML v4 解析警告及 JVM 單元測試組裝任務誤觸發 APK 原生程式庫對齊檢查的問題 (共用構建外掛 1.8.3)
+* `優化` 同步 Agent 命名預設, 預設值選擇, 模型選擇, 固定上下文合併及工具, 預算, 確認, 腳本目錄和記憶作用域的收緊規則
 * `優化` 同步 ai.agent 任務 API, AgentRun 生命週期, 詢問與確認, 預算, 登記指令碼結果, 三個範例及離線搜尋索引
 * `優化` 同步座標點擊 API, maxAttempts 預設 0 的無限嘗試語義, Flow 異常任務堆疊與主控台輸出及離線搜尋索引
 * `優化` 同步 Flow 可選步驟, 有界循環, 鏈式候選查找與點擊, 集合穩定快照及預設值說明, 並更新離線搜尋索引

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11583315
-contentSha256=0b19a5202826e3930e85757937fea9bf3eb089e48708b67dca1ab411a02d5956
+totalBytes=11587454
+contentSha256=4f21f7c19ff896a3e506d9dcb064fc844b832c1f720387c65aef1469d4ad24b7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
+sourceBaseCommit=85f46af5206bf80e79ccb9b68c5f90881f75b050
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 * `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
 * `修正` 共有ビルドプラグイン 1.8.3 により, AGP 9.1 での SDK XML v4 解析警告と, JVM 単体テストの組み立て時に APK ネイティブライブラリのアラインメント検証が誤って実行される問題
+* `改善` Agent の名前付きプリセット, 既定の選択, モデル選択, 固定コンテキストの結合とツール, 予算, 確認, スクリプトディレクトリ, 記憶の範囲の制限を同期
 * `改善` ai.agent API, AgentRun のライフサイクル, 質問と確認, 予算, 登録スクリプト結果, 3 つの例, オフライン検索索引を同期
 * `改善` 座標クリック API, maxAttempts の既定値 0 による無制限試行, Flow エラーのタスクスタックとコンソール出力, オフライン検索インデックスを同期
 * `改善` Flow の任意ステップ, 回数と時間を制限したループ, チェーン内の候補検索とクリック, コレクションの安定スナップショットと既定値の説明を同期し, オフライン検索インデックスを更新

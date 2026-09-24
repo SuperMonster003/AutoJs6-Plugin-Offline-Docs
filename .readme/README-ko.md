@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11583315
-contentSha256=0b19a5202826e3930e85757937fea9bf3eb089e48708b67dca1ab411a02d5956
+totalBytes=11587454
+contentSha256=4f21f7c19ff896a3e506d9dcb064fc844b832c1f720387c65aef1469d4ad24b7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
+sourceBaseCommit=85f46af5206bf80e79ccb9b68c5f90881f75b050
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 * `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
 * `수정` 공유 빌드 플러그인 1.8.3을 통해 AGP 9.1의 SDK XML v4 파싱 경고 및 JVM 단위 테스트 조립 작업에서 APK 네이티브 라이브러리 정렬 검사가 잘못 실행되는 문제 해결
+* `개선` Agent 이름 있는 프리셋, 기본값과 모델 선택, 고정 문맥 병합 및 도구, 예산, 확인, 스크립트 경로, 메모리 범위 제한 동기화
 * `개선` ai.agent API, AgentRun 수명 주기, 질문과 확인, 예산, 등록 스크립트 결과, 예제 3개 및 오프라인 검색 색인 동기화
 * `개선` 좌표 클릭 API, 무제한 시도를 위한 maxAttempts 기본값 0, Flow 오류 작업 스택과 콘솔 출력 및 오프라인 검색 인덱스 동기화
 * `개선` Flow 선택적 단계, 횟수와 시간이 제한된 반복, 체인 내 후보 검색과 클릭, 컬렉션 안정 스냅샷 및 기본값 설명을 동기화하고 오프라인 검색 인덱스 업데이트

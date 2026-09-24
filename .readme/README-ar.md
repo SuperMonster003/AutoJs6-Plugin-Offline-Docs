@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11583315
-contentSha256=0b19a5202826e3930e85757937fea9bf3eb089e48708b67dca1ab411a02d5956
+totalBytes=11587454
+contentSha256=4f21f7c19ff896a3e506d9dcb064fc844b832c1f720387c65aef1469d4ad24b7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
+sourceBaseCommit=85f46af5206bf80e79ccb9b68c5f90881f75b050
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ category=offline-docs
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
 * `إصلاح` تحذيرات قراءة SDK XML v4 مع AGP 9.1 وتشغيل فحص محاذاة مكتبات APK الأصلية خطأ عند تجميع اختبارات JVM, باستخدام إضافات البناء المشتركة 1.8.3
+* `تحسين` مزامنة إعدادات Agent المسبقة المسماة والاختيار الافتراضي واختيار النموذج ودمج السياق الثابت وحدود الأدوات والميزانيات والتأكيدات ومجلدات السكربت ونطاق الذاكرة
 * `تحسين` مزامنة واجهة ai.agent ودورة حياة AgentRun والإجابات والتأكيدات والميزانيات ونتائج السكربتات وثلاثة أمثلة وفهرس البحث دون اتصال
 * `تحسين` مزامنة واجهات النقر بالإحداثيات والقيمة الافتراضية 0 لـ maxAttempts للمحاولات غير المحدودة ومكدس أخطاء Flow وإخراج وحدة التحكم وفهرس البحث دون اتصال
 * `تحسين` مزامنة خطوات Flow الاختيارية والحلقات المحدودة والبحث عن العناصر المرشحة والنقر عليها ضمن السلاسل ولقطات المجموعات المستقرة والقيم الافتراضية, وتحديث فهرس البحث دون اتصال
