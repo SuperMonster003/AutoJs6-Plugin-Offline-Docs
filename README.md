@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11587454
-contentSha256=4f21f7c19ff896a3e506d9dcb064fc844b832c1f720387c65aef1469d4ad24b7
+totalBytes=11591728
+contentSha256=86dc59d481e1d99d3f8f466735751ba24c2f8927f17f19e4dccdddf3a9c10779
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=85f46af5206bf80e79ccb9b68c5f90881f75b050
+sourceBaseCommit=8155a4f9a8133e619dacae7f00f76662668d7726
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 * `修复` 离线文档校验将公开方法 callAutoJs 误判为旧版产品名称的问题
 * `修复` AGP 9.1 构建时的 SDK XML v4 解析警告, 以及 JVM 单元测试误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
+* `优化` 同步 Agent 偏好记忆, 逐条确认, 作用域查询, JSON 导入/导出及自动注入与记忆工具的区别
 * `优化` 同步 Agent 命名预设, 默认选择, 模型选择, 固定上下文合并及工具, 预算, 确认, 脚本目录和记忆作用域的收紧规则
 * `优化` 同步 ai.agent 任务 API, AgentRun 生命周期, 询问与确认, 预算, 登记脚本结果, 三个示例及离线搜索索引
 * `优化` 同步坐标点击, 无限重试及 Flow 异常诊断文档和搜索索引
