@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11591728
-contentSha256=86dc59d481e1d99d3f8f466735751ba24c2f8927f17f19e4dccdddf3a9c10779
+totalBytes=11594572
+contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8155a4f9a8133e619dacae7f00f76662668d7726
+sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 * `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar
 * `Corrección` Advertencias de lectura de SDK XML v4 con AGP 9.1 y comprobaciones de alineación nativa de APK activadas por error al ensamblar pruebas unitarias JVM, mediante los plugins de compilación compartidos 1.8.3
+* `Mejora` Sincronizar grupos globales, modo prudente, presupuestos y límites del protocolo Agent, con restricciones por perfil y tarea
 * `Mejora` Sincronizar la memoria de preferencias Agent, confirmaciones individuales, consultas por ámbito, importación/exportación JSON y la diferencia entre inyección automática y herramientas de memoria
 * `Mejora` Sincronización de preajustes Agent con nombre, selección predeterminada y de modelo, combinación de contexto fijo y restricciones de herramientas, presupuestos, confirmaciones, carpetas de scripts y memoria
 * `Mejora` Sincronización de API ai.agent, ciclo de vida AgentRun, respuestas y confirmaciones, presupuestos, resultados de scripts, tres ejemplos e índice de búsqueda sin conexión

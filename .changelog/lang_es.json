@@ -12,6 +12,7 @@
         "Advertencias de lectura de SDK XML v4 con AGP 9.1 y comprobaciones de alineación nativa de APK activadas por error al ensamblar pruebas unitarias JVM, mediante los plugins de compilación compartidos 1.8.3"
       ],
       "improvement": [
+        "Sincronizar grupos globales, modo prudente, presupuestos y límites del protocolo Agent, con restricciones por perfil y tarea",
         "Sincronizar la memoria de preferencias Agent, confirmaciones individuales, consultas por ámbito, importación/exportación JSON y la diferencia entre inyección automática y herramientas de memoria",
         "Sincronización de preajustes Agent con nombre, selección predeterminada y de modelo, combinación de contexto fijo y restricciones de herramientas, presupuestos, confirmaciones, carpetas de scripts y memoria",
         "Sincronización de API ai.agent, ciclo de vida AgentRun, respuestas y confirmaciones, presupuestos, resultados de scripts, tres ejemplos e índice de búsqueda sin conexión",

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11591728
-contentSha256=86dc59d481e1d99d3f8f466735751ba24c2f8927f17f19e4dccdddf3a9c10779
+totalBytes=11594572
+contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8155a4f9a8133e619dacae7f00f76662668d7726
+sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 * `修復` 離線文件驗證器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
 * `修復` AGP 9.1 建置時的 SDK XML v4 解析警告及 JVM 單元測試組裝工作誤觸發 APK 原生程式庫對齊檢查的問題 (共用建置外掛 1.8.3)
+* `優化` 同步 Agent 全域工具組, 審慎模式, 預設預算與協定上限, 以及預設和單次任務的收緊規則
 * `優化` 同步 Agent 偏好記憶, 逐項確認, 作用域查詢, JSON 匯入/匯出及自動注入與記憶工具的區別
 * `優化` 同步 Agent 命名預設, 預設值選擇, 模型選擇, 固定上下文合併及工具, 預算, 確認, 腳本目錄和記憶作用域的收緊規則
 * `優化` 同步 ai.agent 任務 API, AgentRun 生命週期, 詢問與確認, 預算, 登記腳本結果, 三個範例及離線搜尋索引

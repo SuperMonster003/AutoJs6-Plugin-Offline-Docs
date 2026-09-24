@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11591728
-contentSha256=86dc59d481e1d99d3f8f466735751ba24c2f8927f17f19e4dccdddf3a9c10779
+totalBytes=11594572
+contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8155a4f9a8133e619dacae7f00f76662668d7726
+sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 * `Исправление` Валидаторы офлайн-документации больше не принимают публичное имя метода Node bridge `callAutoJs` за устаревшее неполное имя продукта
 * `Исправление` Предупреждения чтения SDK XML v4 с AGP 9.1 и ошибочный запуск проверки выравнивания нативных библиотек APK при сборке модульных тестов JVM, устраненные общими плагинами сборки 1.8.3
+* `Улучшение` Синхронизация глобальных групп Agent, осторожного режима, бюджетов и лимитов протокола с ограничениями профилей и отдельных задач
 * `Улучшение` Синхронизация памяти предпочтений Agent, отдельных подтверждений, запросов по области, импорта/экспорта JSON и различий между автоматическим добавлением и инструментами памяти
 * `Улучшение` Синхронизация именованных предустановок Agent, выбора по умолчанию и модели, объединения контекста и ограничений инструментов, бюджета, подтверждений, каталогов скриптов и памяти
 * `Улучшение` Синхронизация API ai.agent, жизненного цикла AgentRun, ответов и подтверждений, бюджетов, результатов скриптов, трех примеров и индекса автономного поиска

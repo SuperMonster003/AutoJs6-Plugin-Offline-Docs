@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11591728
-contentSha256=86dc59d481e1d99d3f8f466735751ba24c2f8927f17f19e4dccdddf3a9c10779
+totalBytes=11594572
+contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8155a4f9a8133e619dacae7f00f76662668d7726
+sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 * `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
 * `修正` 共有ビルドプラグイン 1.8.3 により, AGP 9.1 での SDK XML v4 解析警告と, JVM 単体テストの組み立て時に APK ネイティブライブラリのアラインメント検証が誤って実行される問題
+* `改善` Agent の全体ツール群, 慎重モード, 初期予算とプロトコル上限, プリセットとタスク単位の制限規則を同期
 * `改善` Agent の設定記憶, 個別確認, スコープ内検索, JSON 入出力と自動注入と記憶ツールの違いを同期
 * `改善` Agent の名前付きプリセット, 既定の選択, モデル選択, 固定コンテキストの結合とツール, 予算, 確認, スクリプトディレクトリ, 記憶の範囲の制限を同期
 * `改善` ai.agent API, AgentRun のライフサイクル, 質問と確認, 予算, 登録スクリプト結果, 3 つの例, オフライン検索索引を同期

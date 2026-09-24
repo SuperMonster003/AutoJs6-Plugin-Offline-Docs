@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11591728
-contentSha256=86dc59d481e1d99d3f8f466735751ba24c2f8927f17f19e4dccdddf3a9c10779
+totalBytes=11594572
+contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8155a4f9a8133e619dacae7f00f76662668d7726
+sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ category=offline-docs
 
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم طريقة جسر Node العامة `callAutoJs` اسما قديما مجردا للمنتج
 * `إصلاح` تحذيرات قراءة SDK XML v4 مع AGP 9.1 وتشغيل فحص محاذاة مكتبات APK الأصلية خطأ عند تجميع اختبارات JVM, باستخدام إضافات البناء المشتركة 1.8.3
+* `تحسين` مزامنة مجموعات Agent العامة والوضع الحذر والميزانيات وحدود البروتوكول وقواعد تضييق الإعدادات المسبقة والمهام
 * `تحسين` مزامنة ذاكرة تفضيلات Agent والتأكيد الفردي والاستعلامات حسب النطاق واستيراد وتصدير JSON والفرق بين الإضافة التلقائية وأدوات الذاكرة
 * `تحسين` مزامنة إعدادات Agent المسبقة المسماة والاختيار الافتراضي واختيار النموذج ودمج السياق الثابت وحدود الأدوات والميزانيات والتأكيدات ومجلدات السكربت ونطاق الذاكرة
 * `تحسين` مزامنة واجهة ai.agent ودورة حياة AgentRun والإجابات والتأكيدات والميزانيات ونتائج السكربتات وثلاثة أمثلة وفهرس البحث دون اتصال

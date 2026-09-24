@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11591728
-contentSha256=86dc59d481e1d99d3f8f466735751ba24c2f8927f17f19e4dccdddf3a9c10779
+totalBytes=11594572
+contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8155a4f9a8133e619dacae7f00f76662668d7726
+sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 * `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
 * `Fix` SDK XML v4 parsing warnings with AGP 9.1 and APK native alignment checks incorrectly triggered by JVM unit-test assembly tasks, using shared build plugins 1.8.3
+* `Improvement` Synchronize Agent global tool groups, cautious mode, budget defaults and protocol limits, with preset and per-task narrowing rules
 * `Improvement` Synchronize Agent preference memory, individual confirmation, scoped queries, JSON import/export and the distinction between automatic injection and memory tools
 * `Improvement` Synchronize named Agent presets, default selection, model selection, fixed context merging and tool, budget, confirmation, script-folder and memory-scope restrictions
 * `Improvement` Synchronize ai.agent task APIs, AgentRun lifecycle, input and confirmation, budgets, registered-script results, three examples and the offline search index
