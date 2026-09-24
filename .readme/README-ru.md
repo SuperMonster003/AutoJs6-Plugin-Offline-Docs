@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11583315
-contentSha256=0b19a5202826e3930e85757937fea9bf3eb089e48708b67dca1ab411a02d5956
+totalBytes=11587454
+contentSha256=4f21f7c19ff896a3e506d9dcb064fc844b832c1f720387c65aef1469d4ad24b7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
+sourceBaseCommit=85f46af5206bf80e79ccb9b68c5f90881f75b050
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 * `Исправление` Валидаторы офлайн-документации больше не принимают публичное имя метода Node bridge `callAutoJs` за устаревшее неполное имя продукта
 * `Исправление` Предупреждения чтения SDK XML v4 с AGP 9.1 и ошибочный запуск проверки выравнивания нативных библиотек APK при сборке модульных тестов JVM, устраненные общими плагинами сборки 1.8.3
+* `Улучшение` Синхронизация именованных предустановок Agent, выбора по умолчанию и модели, объединения контекста и ограничений инструментов, бюджета, подтверждений, каталогов скриптов и памяти
 * `Улучшение` Синхронизация API ai.agent, жизненного цикла AgentRun, ответов и подтверждений, бюджетов, результатов скриптов, трех примеров и индекса автономного поиска
 * `Улучшение` Синхронизация API нажатия по координатам, maxAttempts по умолчанию 0 для неограниченных попыток, стеков ошибок Flow, вывода консоли и индекса автономного поиска
 * `Улучшение` Синхронизация необязательных шагов Flow, ограниченных циклов, поиска и нажатия кандидатов в цепочке, стабильных снимков коллекций и значений по умолчанию, обновление индекса офлайн-поиска
