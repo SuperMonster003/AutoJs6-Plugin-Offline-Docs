@@ -12,6 +12,7 @@
         "SDK XML v4 parsing warnings with AGP 9.1 and APK native alignment checks incorrectly triggered by JVM unit-test assembly tasks, using shared build plugins 1.8.3"
       ],
       "improvement": [
+        "Synchronize Agent preference memory, individual confirmation, scoped queries, JSON import/export and the distinction between automatic injection and memory tools",
         "Synchronize named Agent presets, default selection, model selection, fixed context merging and tool, budget, confirmation, script-folder and memory-scope restrictions",
         "Synchronize ai.agent task APIs, AgentRun lifecycle, input and confirmation, budgets, registered-script results, three examples and the offline search index",
         "Synchronize coordinate-click APIs, the maxAttempts default of 0 for unlimited attempts, Flow error task stacks and console output, and the offline search index",
