@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=194
-totalBytes=11452332
-contentSha256=8195155a736290be14cad1082fe0d2e03a8b98e69acc7dafab9eef458d8adc02
+fileCount=199
+totalBytes=11583315
+contentSha256=0b19a5202826e3930e85757937fea9bf3eb089e48708b67dca1ab411a02d5956
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=b20d9601fba77b1f67cb1931f42ca83f0273df6f
 sourcePath=api
@@ -116,11 +116,11 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 # v6.8.0
 
-###### 2026/09/23
+###### 2026/09/24
 
 * `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar
 * `Corrección` Advertencias de lectura de SDK XML v4 con AGP 9.1 y comprobaciones de alineación nativa de APK activadas por error al ensamblar pruebas unitarias JVM, mediante los plugins de compilación compartidos 1.8.3
-* `Mejora` Sincronización de ai.agent.result/context, límites de resultados, instantáneas de contexto y ejemplos de scripts registrados
+* `Mejora` Sincronización de API ai.agent, ciclo de vida AgentRun, respuestas y confirmaciones, presupuestos, resultados de scripts, tres ejemplos e índice de búsqueda sin conexión
 * `Mejora` Sincronizar las API de clic por coordenadas, maxAttempts en 0 para intentos ilimitados, las pilas de errores Flow, la salida de consola y el índice de búsqueda sin conexión
 * `Mejora` Sincronizar los pasos opcionales de Flow, los bucles acotados, la búsqueda y los clics de candidatos encadenados, las instantáneas estables de colecciones y los valores predeterminados, y actualizar el índice de búsqueda sin conexión
 * `Mejora` Sincronización de la referencia de permisos de red local y el índice sin conexión, con condiciones Android 17 / targetSdk 37, autorización asíncrona, reintentos y límites de Socket / MQTT nativos y permisos de plugins
