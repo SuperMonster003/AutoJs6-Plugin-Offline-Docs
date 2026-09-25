@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11594572
-contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
+totalBytes=11597017
+contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
@@ -114,16 +114,24 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
-# v6.8.0
+# v6.8.3
 
-###### 2026/09/24
+###### 2026/09/25
 
-* `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar
-* `Corrección` Advertencias de lectura de SDK XML v4 con AGP 9.1 y comprobaciones de alineación nativa de APK activadas por error al ensamblar pruebas unitarias JVM, mediante los plugins de compilación compartidos 1.8.3
+* `Mejora` Documentar los requisitos de Android y del anfitrión de Agent 1.0.0, el catálogo de modelos de 3-Stone AI y las observaciones de texto/OCR; mantener el contenido en 6.8.0 con una versión independiente del complemento
 * `Mejora` Sincronizar grupos globales, modo prudente, presupuestos y límites del protocolo Agent, con restricciones por perfil y tarea
 * `Mejora` Sincronizar la memoria de preferencias Agent, confirmaciones individuales, consultas por ámbito, importación/exportación JSON y la diferencia entre inyección automática y herramientas de memoria
 * `Mejora` Sincronización de preajustes Agent con nombre, selección predeterminada y de modelo, combinación de contexto fijo y restricciones de herramientas, presupuestos, confirmaciones, carpetas de scripts y memoria
 * `Mejora` Sincronización de API ai.agent, ciclo de vida AgentRun, respuestas y confirmaciones, presupuestos, resultados de scripts, tres ejemplos e índice de búsqueda sin conexión
+* `Mejora` Sincronizada la referencia de EPUB y el índice de búsqueda sin conexión, cubriendo el global epub del plugin Readium EPUB Reader, los miembros de EpubBook para metadatos, índice, orden de lectura, extracción de texto, exportación de portada y recursos y búsqueda de texto completo, los eventos, controles y preferencias de lectura de EpubReaderSession, el objeto de posición EpubLocator y los códigos de EpubError
+* `Mejora` Sincronizada la referencia de EPUB y el índice de búsqueda sin conexión con los resaltados y notas del plugin Readium EPUB Reader 1.1.0 (versión 2 del contrato EPUB): EpubBook#annotations y la capa de conveniencia epub.annotations, el evento highlight de EpubReaderSession y los portadores de EpubLocator
+
+# v6.8.0
+
+###### 2026/09/19
+
+* `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar
+* `Corrección` Advertencias de lectura de SDK XML v4 con AGP 9.1 y comprobaciones de alineación nativa de APK activadas por error al ensamblar pruebas unitarias JVM, mediante los plugins de compilación compartidos 1.8.3
 * `Mejora` Sincronizar las API de clic por coordenadas, maxAttempts en 0 para intentos ilimitados, las pilas de errores Flow, la salida de consola y el índice de búsqueda sin conexión
 * `Mejora` Sincronizar los pasos opcionales de Flow, los bucles acotados, la búsqueda y los clics de candidatos encadenados, las instantáneas estables de colecciones y los valores predeterminados, y actualizar el índice de búsqueda sin conexión
 * `Mejora` Sincronización de la referencia de permisos de red local y el índice sin conexión, con condiciones Android 17 / targetSdk 37, autorización asíncrona, reintentos y límites de Socket / MQTT nativos y permisos de plugins
@@ -144,25 +152,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` La referencia MediaInfo y la búsqueda sin conexión cubren streamNumber, countGet, infoKind y las rutas originales
 * `Mejora` La verificación de compilación rechaza dependencias nativas accidentales y genera un informe JSON
 * `Mejora` Sincronizada la referencia de Mail y el índice de búsqueda sin conexión, cubriendo el global mail del plugin Angus Mail, los métodos de MailClient para envío, búsqueda, adjuntos, marcas, carpetas y vigilancia, MailMessage, MailAccountOptions con los preajustes de proveedor, MailSearchQuery y los códigos de error de MailError
-* `Mejora` Sincronizada la referencia de EPUB y el índice de búsqueda sin conexión, cubriendo el global epub del plugin Readium EPUB Reader, los miembros de EpubBook para metadatos, índice, orden de lectura, extracción de texto, exportación de portada y recursos y búsqueda de texto completo, los eventos, controles y preferencias de lectura de EpubReaderSession, el objeto de posición EpubLocator y los códigos de EpubError
-* `Mejora` Sincronizada la referencia de EPUB y el índice de búsqueda sin conexión con los resaltados y notas del plugin Readium EPUB Reader 1.1.0 (versión 2 del contrato EPUB): EpubBook#annotations y la capa de conveniencia epub.annotations, el evento highlight de EpubReaderSession y los portadores de EpubLocator
 
 # v6.8.2
 
 ###### 2026/09/15
 
 * `Mejora` compileSdk y targetSdk suben a 37 (Android 17); el comportamiento del plugin no depende del nuevo objetivo
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `Mejora` Sincronizar la guía de almacenamiento de apps empaquetadas, incluidos requiresSharedStorage, denegación de permisos, regreso de ajustes y recuperación del acceso de inicio
-* `Mejora` Sincronizar la referencia Media y el índice para servicios de música Media3, propiedad de reproducción, preparación en hilos de trabajo, controles y permisos de aplicaciones empaquetadas
-* `Mejora` Sincronización de la referencia Pangu y su índice de búsqueda, que cubre pangu.js 10.1.0 integrado, acceso global, espaciado de texto y comprobación
-* `Mejora` Sincronizar la documentación HTTP sobre el alcance por solicitud de isInsecure / insecure, la configuración compartida del cliente, la confianza en certificados, CT, ECH y los permisos de red local
-* `Mejora` Sincronizar las referencias de Media, Device, TTS y Settings con las condiciones de audio en segundo plano de Android 17, el bloqueo silencioso, la recuperación desde la aplicación visible y los límites del proceso del motor TTS
-* `Mejora` Comprobación de la firma completa, los APK esperados y la documentación reproducible de cada versión
 
 ##### Para ver más historial de versiones
 

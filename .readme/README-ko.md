@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11594572
-contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
+totalBytes=11597017
+contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
@@ -114,16 +114,24 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
-# v6.8.0
+# v6.8.3
 
-###### 2026/09/24
+###### 2026/09/25
 
-* `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
-* `수정` 공유 빌드 플러그인 1.8.3을 통해 AGP 9.1의 SDK XML v4 파싱 경고 및 JVM 단위 테스트 조립 작업에서 APK 네이티브 라이브러리 정렬 검사가 잘못 실행되는 문제 해결
+* `개선` Agent 1.0.0의 Android 및 호스트 요구 사항, 3-Stone AI 모델 목록과 텍스트/OCR 관찰을 설명하고 문서 콘텐츠 6.8.0과 플러그인 릴리스 버전을 분리
 * `개선` Agent 전역 도구 그룹, 신중 모드, 기본 예산과 프로토콜 상한 및 프리셋과 개별 작업의 제한 규칙 동기화
 * `개선` Agent 환경설정 메모리, 개별 확인, 범위 내 조회, JSON 가져오기/내보내기와 자동 주입 및 메모리 도구의 차이를 동기화
 * `개선` Agent 이름 있는 프리셋, 기본값과 모델 선택, 고정 문맥 병합 및 도구, 예산, 확인, 스크립트 경로, 메모리 범위 제한 동기화
 * `개선` ai.agent API, AgentRun 수명 주기, 질문과 확인, 예산, 등록 스크립트 결과, 예제 3개 및 오프라인 검색 색인 동기화
+* `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인의 epub 전역 객체, EpubBook 의 메타데이터, 목차, 읽기 순서, 본문 추출, 표지와 리소스 내보내기 및 전문 검색, EpubReaderSession 의 이벤트, 제어 메서드와 읽기 환경설정, EpubLocator 위치 객체 및 EpubError 오류 코드를 수록
+* `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인 1.1.0 의 하이라이트와 메모 (EPUB 계약 버전 2) 를 보강: EpubBook#annotations 와 편의 계층 epub.annotations, EpubReaderSession 의 highlight 이벤트 및 EpubLocator 의 전달 위치
+
+# v6.8.0
+
+###### 2026/09/19
+
+* `수정` 오프라인 문서 validator 가 공개 Node bridge method 이름 `callAutoJs` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
+* `수정` 공유 빌드 플러그인 1.8.3을 통해 AGP 9.1의 SDK XML v4 파싱 경고 및 JVM 단위 테스트 조립 작업에서 APK 네이티브 라이브러리 정렬 검사가 잘못 실행되는 문제 해결
 * `개선` 좌표 클릭 API, 무제한 시도를 위한 maxAttempts 기본값 0, Flow 오류 작업 스택과 콘솔 출력 및 오프라인 검색 인덱스 동기화
 * `개선` Flow 선택적 단계, 횟수와 시간이 제한된 반복, 체인 내 후보 검색과 클릭, 컬렉션 안정 스냅샷 및 기본값 설명을 동기화하고 오프라인 검색 인덱스 업데이트
 * `개선` 로컬 네트워크 권한 문서와 오프라인 검색 색인을 동기화하여 Android 17 / targetSdk 37 조건, 비동기 권한 허용, 재시도 및 네이티브 Socket / MQTT 와 플러그인 권한 경계 설명
@@ -144,25 +152,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` MediaInfo 참조 문서와 오프라인 검색에 streamNumber, countGet, infoKind 및 원본 경로 동작을 반영
 * `개선` 빌드 시 의도하지 않은 네이티브 의존성을 거부하고 JSON 보고서 생성
 * `개선` 메일 (Mail) 참조 문서와 오프라인 검색 색인을 동기화하여 Angus Mail 플러그인의 mail 전역 객체, MailClient 의 송수신, 검색, 첨부, 플래그, 폴더 및 감시 메서드, MailMessage, MailAccountOptions 와 제공자 프리셋, MailSearchQuery 및 MailError 오류 코드를 수록
-* `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인의 epub 전역 객체, EpubBook 의 메타데이터, 목차, 읽기 순서, 본문 추출, 표지와 리소스 내보내기 및 전문 검색, EpubReaderSession 의 이벤트, 제어 메서드와 읽기 환경설정, EpubLocator 위치 객체 및 EpubError 오류 코드를 수록
-* `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인 1.1.0 의 하이라이트와 메모 (EPUB 계약 버전 2) 를 보강: EpubBook#annotations 와 편의 계층 epub.annotations, EpubReaderSession 의 highlight 이벤트 및 EpubLocator 의 전달 위치
 
 # v6.8.2
 
 ###### 2026/09/15
 
 * `개선` compileSdk 와 targetSdk 를 37 (Android 17) 로 올리며, 플러그인 동작은 새 대상 버전의 영향을 받지 않음
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `개선` requiresSharedStorage, 권한 거부, 설정 복귀 및 실행 아이콘 복원을 포함한 패키징 앱의 저장소 안내 문서 동기화
-* `개선` Media3 음악 서비스, 스크립트 재생 소유권, 작업 스레드 준비, 알림 제어 및 패키징 앱 권한에 대한 Media 문서와 검색 색인 동기화
-* `개선` Pangu 참조 문서와 검색 인덱스를 동기화하여 내장 pangu.js 10.1.0, 전역 접근, 텍스트 간격 처리 및 검사를 설명
-* `개선` HTTP isInsecure / insecure의 요청별 적용 범위, 공유 클라이언트 설정, 인증서 신뢰, CT, ECH 및 로컬 네트워크 권한 설명 동기화
-* `개선` Media, Device, TTS, Settings 참조에 Android 17 백그라운드 오디오 조건, 알림 없는 차단, 앱이 표시된 상태에서의 복구 및 TTS 엔진 프로세스 범위 반영
-* `개선` 릴리스 서명 설정, 예상 APK 구성 및 문서 재생성 결과 검증
 
 ##### 더 많은 릴리스 기록
 

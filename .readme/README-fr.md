@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11594572
-contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
+totalBytes=11597017
+contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
@@ -114,16 +114,24 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
-# v6.8.0
+# v6.8.3
 
-###### 2026/09/24
+###### 2026/09/25
 
-* `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
-* `Correctif` Avertissements de lecture SDK XML v4 avec AGP 9.1 et contrôles d'alignement natif des APK déclenchés par erreur lors de l'assemblage des tests unitaires JVM, avec les plugins de compilation partagés 1.8.3
+* `Amélioration` Documenter les exigences Android et hôte de Agent 1.0.0, le catalogue de modèles 3-Stone AI et les observations texte/OCR; conserver le contenu en 6.8.0 avec une version distincte du plugin
 * `Amélioration` Synchronisation des groupes globaux, du mode prudent, des budgets et limites du protocole Agent, et des restrictions par profil et tâche
 * `Amélioration` Synchroniser la mémoire des préférences Agent, les confirmations individuelles, les requêtes par portée, les imports/exports JSON et la distinction entre injection automatique et outils de mémoire
 * `Amélioration` Synchronisation des préréglages Agent nommés, des choix par défaut et du modèle, de la fusion du contexte fixe et des restrictions des outils, budgets, confirmations, dossiers de scripts et portées mémoire
 * `Amélioration` Synchronisation des API ai.agent, du cycle de vie AgentRun, des réponses et confirmations, budgets, résultats des scripts, trois exemples et index de recherche hors ligne
+* `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne, couvrant le global epub du plugin Readium EPUB Reader, les membres d'EpubBook pour les métadonnées, la table des matières, l'ordre de lecture, l'extraction de texte, l'export de la couverture et des ressources et la recherche plein texte, les événements, commandes et préférences de lecture d'EpubReaderSession, l'objet de position EpubLocator et les codes EpubError
+* `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne avec les surlignages et notes du plugin Readium EPUB Reader 1.1.0 (contrat EPUB version 2) : EpubBook#annotations et la couche de commodité epub.annotations, l'événement highlight d'EpubReaderSession et les porteurs d'EpubLocator
+
+# v6.8.0
+
+###### 2026/09/19
+
+* `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
+* `Correctif` Avertissements de lecture SDK XML v4 avec AGP 9.1 et contrôles d'alignement natif des APK déclenchés par erreur lors de l'assemblage des tests unitaires JVM, avec les plugins de compilation partagés 1.8.3
 * `Amélioration` Synchronisation des API de clic par coordonnées, de maxAttempts à 0 pour des tentatives illimitées, des piles de tâches Flow, de la sortie console et de la recherche hors ligne
 * `Amélioration` Synchroniser les étapes facultatives Flow, les boucles bornées, la recherche et le clic de candidats en chaîne, les instantanés de collections stables et les valeurs par défaut, et mettre à jour l'index de recherche hors ligne
 * `Amélioration` Synchronisation de la référence des permissions réseau local et de l'index hors ligne, avec les conditions Android 17 / targetSdk 37, l'autorisation asynchrone, les reprises et les limites des Socket / MQTT natifs et des permissions des plugins
@@ -144,25 +152,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources
 * `Amélioration` La vérification de compilation rejette les dépendances natives involontaires et produit un rapport JSON
 * `Amélioration` Synchronisation de la référence Mail et de l'index de recherche hors ligne, couvrant le global mail du plugin Angus Mail, les méthodes de MailClient pour l'envoi, la recherche, les pièces jointes, les indicateurs, les dossiers et la surveillance, MailMessage, MailAccountOptions avec les préréglages de fournisseur, MailSearchQuery et les codes d'erreur MailError
-* `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne, couvrant le global epub du plugin Readium EPUB Reader, les membres d'EpubBook pour les métadonnées, la table des matières, l'ordre de lecture, l'extraction de texte, l'export de la couverture et des ressources et la recherche plein texte, les événements, commandes et préférences de lecture d'EpubReaderSession, l'objet de position EpubLocator et les codes EpubError
-* `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne avec les surlignages et notes du plugin Readium EPUB Reader 1.1.0 (contrat EPUB version 2) : EpubBook#annotations et la couche de commodité epub.annotations, l'événement highlight d'EpubReaderSession et les porteurs d'EpubLocator
 
 # v6.8.2
 
 ###### 2026/09/15
 
 * `Amélioration` compileSdk et targetSdk passent à 37 (Android 17) ; le comportement du plugin ne dépend pas de la nouvelle cible
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `Amélioration` Synchroniser le guide de stockage des applications empaquetées, dont requiresSharedStorage, refus, retour des paramètres et restauration du lanceur
-* `Amélioration` Synchroniser la référence Media et son index pour les services musicaux Media3, la propriété de lecture, la préparation sur un thread de travail, les commandes et les permissions des applications empaquetées
-* `Amélioration` Synchronisation de la référence Pangu et de son index de recherche, couvrant pangu.js 10.1.0 intégré, accès global, espacement du texte et vérification
-* `Amélioration` Synchroniser la documentation HTTP sur la portée par requête de isInsecure / insecure, la configuration partagée du client, la confiance des certificats, CT, ECH et les autorisations du réseau local
-* `Amélioration` Synchroniser les références Media, Device, TTS et Settings avec les conditions audio en arrière-plan d'Android 17, le blocage silencieux, la reprise depuis l'application visible et les limites du processus du moteur TTS
-* `Amélioration` Vérification de la signature complète, des APK attendus et de la reproductibilité de la documentation
 
 ##### Pour plus d'historique des versions
 

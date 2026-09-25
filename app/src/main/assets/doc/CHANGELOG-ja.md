@@ -4,16 +4,24 @@
 
 ******
 
-# v6.8.0
+# v6.8.3
 
-###### 2026/09/24
+###### 2026/09/25
 
-* `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
-* `修正` 共有ビルドプラグイン 1.8.3 により, AGP 9.1 での SDK XML v4 解析警告と, JVM 単体テストの組み立て時に APK ネイティブライブラリのアラインメント検証が誤って実行される問題
+* `改善` Agent 1.0.0 の Android とホストの要件, 3-Stone AI のモデル一覧, テキスト/OCR 観測を説明し, 文書の内容バージョン 6.8.0 とプラグインのリリース番号を分離
 * `改善` Agent の全体ツール群, 慎重モード, 初期予算とプロトコル上限, プリセットとタスク単位の制限規則を同期
 * `改善` Agent の設定記憶, 個別確認, スコープ内検索, JSON 入出力と自動注入と記憶ツールの違いを同期
 * `改善` Agent の名前付きプリセット, 既定の選択, モデル選択, 固定コンテキストの結合とツール, 予算, 確認, スクリプトディレクトリ, 記憶の範囲の制限を同期
 * `改善` ai.agent API, AgentRun のライフサイクル, 質問と確認, 予算, 登録スクリプト結果, 3 つの例, オフライン検索索引を同期
+* `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグインの epub グローバル, EpubBook のメタデータ, 目次, 読み順, 本文抽出, 表紙とリソースの書き出しおよび全文検索, EpubReaderSession のイベント, 制御メソッドと閲覧設定, EpubLocator 位置オブジェクトおよび EpubError エラーコードを収録
+* `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグイン 1.1.0 のハイライトとノート (EPUB コントラクトバージョン 2) を補完: EpubBook#annotations と簡易層の epub.annotations, EpubReaderSession の highlight イベントおよび EpubLocator の運搬箇所
+
+# v6.8.0
+
+###### 2026/09/19
+
+* `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
+* `修正` 共有ビルドプラグイン 1.8.3 により, AGP 9.1 での SDK XML v4 解析警告と, JVM 単体テストの組み立て時に APK ネイティブライブラリのアラインメント検証が誤って実行される問題
 * `改善` 座標クリック API, maxAttempts の既定値 0 による無制限試行, Flow エラーのタスクスタックとコンソール出力, オフライン検索インデックスを同期
 * `改善` Flow の任意ステップ, 回数と時間を制限したループ, チェーン内の候補検索とクリック, コレクションの安定スナップショットと既定値の説明を同期し, オフライン検索インデックスを更新
 * `改善` ローカルネットワーク権限のリファレンスとオフライン検索索引を同期し, Android 17 / targetSdk 37 の条件, 非同期の許可, 再試行, ネイティブ Socket / MQTT とプラグイン権限の境界を説明
@@ -34,8 +42,6 @@
 * `改善` MediaInfo リファレンスとオフライン検索に streamNumber, countGet, infoKind と元のファイルパスの仕様を反映
 * `改善` 意図しないネイティブ依存関係をビルド時に拒否し, JSON レポートを生成
 * `改善` メール (Mail) リファレンスとオフライン検索インデックスを同期し, Angus Mail プラグインの mail グローバル, MailClient の送受信, 検索, 添付, フラグ, フォルダーと監視メソッド, MailMessage, MailAccountOptions とプロバイダープリセット, MailSearchQuery および MailError エラーコードを収録
-* `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグインの epub グローバル, EpubBook のメタデータ, 目次, 読み順, 本文抽出, 表紙とリソースの書き出しおよび全文検索, EpubReaderSession のイベント, 制御メソッドと閲覧設定, EpubLocator 位置オブジェクトおよび EpubError エラーコードを収録
-* `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグイン 1.1.0 のハイライトとノート (EPUB コントラクトバージョン 2) を補完: EpubBook#annotations と簡易層の epub.annotations, EpubReaderSession の highlight イベントおよび EpubLocator の運搬箇所
 
 # v6.8.2
 
