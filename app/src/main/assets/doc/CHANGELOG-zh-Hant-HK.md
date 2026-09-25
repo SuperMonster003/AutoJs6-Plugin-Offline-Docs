@@ -4,16 +4,24 @@
 
 ******
 
-# v6.8.0
+# v6.8.3
 
-###### 2026/09/24
+###### 2026/09/25
 
-* `修復` 離線文件校驗器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
-* `修復` AGP 9.1 構建時的 SDK XML v4 解析警告及 JVM 單元測試組裝任務誤觸發 APK 原生程式庫對齊檢查的問題 (共用構建外掛 1.8.3)
+* `優化` 說明 Agent 1.0.0 的 Android 與宿主要求, 3-Stone AI 模型目錄及文字/OCR 觀察範圍, 文件內容維持 6.8.0 並使用獨立外掛發行版本
 * `優化` 同步 Agent 全域工具組, 審慎模式, 預設預算與協議上限, 以及預設和單次任務的收緊規則
 * `優化` 同步 Agent 偏好記憶, 逐項確認, 作用域查詢, JSON 匯入/匯出及自動注入與記憶工具的區別
 * `優化` 同步 Agent 命名預設, 預設值選擇, 模型選擇, 固定上下文合併及工具, 預算, 確認, 腳本目錄和記憶作用域的收緊規則
 * `優化` 同步 ai.agent 任務 API, AgentRun 生命週期, 詢問與確認, 預算, 登記指令碼結果, 三個範例及離線搜尋索引
+* `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 覆蓋 Readium EPUB Reader 插件的 epub 全局對象, EpubBook 的元數據, 目錄, 閱讀順序, 正文提取, 封面與資源導出及全文搜索, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置對象及 EpubError 錯誤代碼
+* `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 補充 Readium EPUB Reader 插件 1.1.0 的高亮與筆記 (EPUB 契約版本 2): EpubBook#annotations 與便捷層 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的攜帶位置
+
+# v6.8.0
+
+###### 2026/09/19
+
+* `修復` 離線文件校驗器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
+* `修復` AGP 9.1 構建時的 SDK XML v4 解析警告及 JVM 單元測試組裝任務誤觸發 APK 原生程式庫對齊檢查的問題 (共用構建外掛 1.8.3)
 * `優化` 同步座標點擊 API, maxAttempts 預設 0 的無限嘗試語義, Flow 異常任務堆疊與主控台輸出及離線搜尋索引
 * `優化` 同步 Flow 可選步驟, 有界循環, 鏈式候選查找與點擊, 集合穩定快照及預設值說明, 並更新離線搜尋索引
 * `優化` 同步執行時本地網絡權限文件及離線搜尋索引, 說明 Android 17 / targetSdk 37 條件, 非同步授權, 重試及原生 Socket / MQTT 和插件權限邊界
@@ -34,8 +42,6 @@
 * `優化` MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義
 * `優化` 建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告
 * `優化` 同步郵件 (Mail) 參考文檔與離線搜索索引, 覆蓋 Angus Mail 插件的 mail 全局對象, MailClient 的收發, 搜索, 附件, 標記, 文件夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼
-* `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 覆蓋 Readium EPUB Reader 插件的 epub 全局對象, EpubBook 的元數據, 目錄, 閱讀順序, 正文提取, 封面與資源導出及全文搜索, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置對象及 EpubError 錯誤代碼
-* `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 補充 Readium EPUB Reader 插件 1.1.0 的高亮與筆記 (EPUB 契約版本 2): EpubBook#annotations 與便捷層 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的攜帶位置
 
 # v6.8.2
 

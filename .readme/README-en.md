@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11594572
-contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
+totalBytes=11597017
+contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
@@ -114,16 +114,24 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
-# v6.8.0
+# v6.8.3
 
-###### 2026/09/24
+###### 2026/09/25
 
-* `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
-* `Fix` SDK XML v4 parsing warnings with AGP 9.1 and APK native alignment checks incorrectly triggered by JVM unit-test assembly tasks, using shared build plugins 1.8.3
+* `Improvement` Document Agent 1.0.0 Android and host requirements, the 3-Stone AI model catalog and text/OCR observations; keep documentation content at 6.8.0 with an independent plugin release version
 * `Improvement` Synchronize Agent global tool groups, cautious mode, budget defaults and protocol limits, with preset and per-task narrowing rules
 * `Improvement` Synchronize Agent preference memory, individual confirmation, scoped queries, JSON import/export and the distinction between automatic injection and memory tools
 * `Improvement` Synchronize named Agent presets, default selection, model selection, fixed context merging and tool, budget, confirmation, script-folder and memory-scope restrictions
 * `Improvement` Synchronize ai.agent task APIs, AgentRun lifecycle, input and confirmation, budgets, registered-script results, three examples and the offline search index
+* `Improvement` Synchronized the EPUB reference and the offline search index, covering the epub global of the Readium EPUB Reader plugin, the EpubBook members for metadata, table of contents, reading order, text extraction, cover and resource export and full-text search, the EpubReaderSession events, controls and reading preferences, the EpubLocator position object and the EpubError codes
+* `Improvement` Synchronized the EPUB reference and the offline search index with the highlights and notes of the Readium EPUB Reader plugin 1.1.0 (EPUB contract version 2): EpubBook#annotations and the convenience epub.annotations, the EpubReaderSession highlight event and the EpubLocator carriers
+
+# v6.8.0
+
+###### 2026/09/19
+
+* `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
+* `Fix` SDK XML v4 parsing warnings with AGP 9.1 and APK native alignment checks incorrectly triggered by JVM unit-test assembly tasks, using shared build plugins 1.8.3
 * `Improvement` Synchronize coordinate-click APIs, the maxAttempts default of 0 for unlimited attempts, Flow error task stacks and console output, and the offline search index
 * `Improvement` Synchronize Flow optional steps, bounded loops, chained candidate lookup and clicks, stable collection snapshots and defaults, and update the offline search index
 * `Improvement` Synchronize the runtime local network permission reference and offline search index, covering Android 17 / targetSdk 37 conditions, asynchronous authorization, retries and the raw Socket / MQTT and plugin permission boundaries
@@ -144,25 +152,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Updated the MediaInfo reference and offline search with streamNumber, countGet, infoKind and original source paths
 * `Improvement` Build verification rejects accidental native dependencies and produces a JSON report
 * `Improvement` Synchronized the Mail reference and the offline search index, covering the mail global of the Angus Mail plugin, the MailClient methods for sending, searching, attachments, flags, folders and watching, MailMessage, MailAccountOptions with the provider presets, MailSearchQuery and the MailError codes
-* `Improvement` Synchronized the EPUB reference and the offline search index, covering the epub global of the Readium EPUB Reader plugin, the EpubBook members for metadata, table of contents, reading order, text extraction, cover and resource export and full-text search, the EpubReaderSession events, controls and reading preferences, the EpubLocator position object and the EpubError codes
-* `Improvement` Synchronized the EPUB reference and the offline search index with the highlights and notes of the Readium EPUB Reader plugin 1.1.0 (EPUB contract version 2): EpubBook#annotations and the convenience epub.annotations, the EpubReaderSession highlight event and the EpubLocator carriers
 
 # v6.8.2
 
 ###### 2026/09/15
 
 * `Improvement` Raise compileSdk and targetSdk to 37 (Android 17); the plugin's behavior does not depend on the new target
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `Improvement` Synchronize packaged-app storage guidance, including requiresSharedStorage, permission denial, settings return and launcher recovery
-* `Improvement` Synchronize the Media reference and search index for Media3 music services, script playback ownership, worker-thread preparation, notification controls and packaged-app permissions
-* `Improvement` Synchronize the Pangu reference and search index, covering bundled pangu.js 10.1.0, global access, text spacing and spacing checks
-* `Improvement` Synchronize HTTP documentation for request-scoped isInsecure / insecure, shared client configuration, certificate trust, CT, ECH and local network permissions
-* `Improvement` Synchronize the Media, Device, TTS and Settings references with Android 17 background audio conditions, silent suppression, recovery from the visible app and TTS engine process boundaries
-* `Improvement` Release packages are checked for a complete signing configuration, exact APK contents and reproducible documentation
 
 ##### For more release history
 

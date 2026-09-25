@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11594572
-contentSha256=2861378580108b3ecc2bc85ad771659800c1fc4108baeecddf38feab2e8a5a89
+totalBytes=11597017
+contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
 sourcePath=api
@@ -114,16 +114,24 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
-# v6.8.0
+# v6.8.3
 
-###### 2026/09/24
+###### 2026/09/25
 
-* `修复` 离线文档校验将公开方法 callAutoJs 误判为旧版产品名称的问题
-* `修复` AGP 9.1 构建时的 SDK XML v4 解析警告, 以及 JVM 单元测试误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
+* `优化` 说明 Agent 1.0.0 的 Android 与宿主要求, 3-Stone AI 模型目录及文本/OCR 观察范围, 文档内容保持 6.8.0 并使用独立插件发行版本
 * `优化` 同步 Agent 全局工具组, 审慎模式, 默认预算与协议上限, 以及预设和单次任务的收紧规则
 * `优化` 同步 Agent 偏好记忆, 逐条确认, 作用域查询, JSON 导入/导出及自动注入与记忆工具的区别
 * `优化` 同步 Agent 命名预设, 默认选择, 模型选择, 固定上下文合并及工具, 预算, 确认, 脚本目录和记忆作用域的收紧规则
 * `优化` 同步 ai.agent 任务 API, AgentRun 生命周期, 询问与确认, 预算, 登记脚本结果, 三个示例及离线搜索索引
+* `优化` 同步 EPUB 文档, 覆盖书籍读取, 内容提取, 导出, 搜索及阅读器会话控制
+* `优化` 补充 Readium EPUB Reader 1.1.0 的高亮及笔记文档, 包含 annotations 查询, highlight 事件及位置对象
+
+# v6.8.0
+
+###### 2026/09/19
+
+* `修复` 离线文档校验将公开方法 callAutoJs 误判为旧版产品名称的问题
+* `修复` AGP 9.1 构建时的 SDK XML v4 解析警告, 以及 JVM 单元测试误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
 * `优化` 同步坐标点击, 无限重试及 Flow 异常诊断文档和搜索索引
 * `优化` 同步 Flow 可选步骤, 循环, 链式查找, 集合快照及默认值文档
 * `优化` 同步 Android 17 本地网络权限文档, 补充授权, 重试及 Socket/MQTT 和插件的权限说明
@@ -144,25 +152,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
 * `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
 * `优化` 同步 Mail 文档, 覆盖账户, 收发, 搜索, 附件, 标记, 文件夹, 监听及错误码
-* `优化` 同步 EPUB 文档, 覆盖书籍读取, 内容提取, 导出, 搜索及阅读器会话控制
-* `优化` 补充 Readium EPUB Reader 1.1.0 的高亮及笔记文档, 包含 annotations 查询, highlight 事件及位置对象
 
 # v6.8.2
 
 ###### 2026/09/15
 
 * `优化` compileSdk/targetSdk 升级至 37 (Android 17)
-
-# v6.8.1
-
-###### 2026/09/14
-
-* `优化` 同步打包应用存储引导文档, 包括 requiresSharedStorage, 拒绝授权, 设置返回及桌面入口恢复
-* `优化` 同步 Media 文档与搜索索引, 说明 Media3 音乐服务, 脚本播放所有权, 工作线程准备, 通知控制与打包应用权限
-* `优化` 同步 Pangu 参考文档与搜索索引, 覆盖内置 pangu.js 10.1.0, 全局对象, 文本间距处理与间距检查
-* `优化` 同步 HTTP 的 isInsecure / insecure 请求范围, 共享客户端配置及证书信任, CT, ECH 和本地网络权限说明
-* `优化` 同步 Media, Device, TTS 和 Settings 的 Android 17 后台音频运行条件, 静默抑制, 可见界面恢复操作与 TTS 引擎进程边界
-* `优化` 完善发行签名, APK 变体及生成文档一致性校验
 
 ##### 更多发行历史可参阅
 

@@ -5,17 +5,25 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "相依性",
   "$data": {
+    "v6.8.3": {
+      "released_date": "2026/09/25",
+      "improvement": [
+        "說明 Agent 1.0.0 的 Android 與宿主要求, 3-Stone AI 模型目錄及文字/OCR 觀察範圍, 文件內容維持 6.8.0 並使用獨立外掛發行版本",
+        "同步 Agent 全域工具組, 審慎模式, 預設預算與協定上限, 以及預設和單次任務的收緊規則",
+        "同步 Agent 偏好記憶, 逐項確認, 作用域查詢, JSON 匯入/匯出及自動注入與記憶工具的區別",
+        "同步 Agent 命名預設, 預設值選擇, 模型選擇, 固定上下文合併及工具, 預算, 確認, 腳本目錄和記憶作用域的收緊規則",
+        "同步 ai.agent 任務 API, AgentRun 生命週期, 詢問與確認, 預算, 登記腳本結果, 三個範例及離線搜尋索引",
+        "同步電子書 (EPUB) 參考文件與離線搜尋索引, 涵蓋 Readium EPUB Reader 外掛的 epub 全域物件, EpubBook 的中繼資料, 目錄, 閱讀順序, 正文擷取, 封面與資源匯出及全文搜尋, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置物件及 EpubError 錯誤代碼",
+        "同步電子書 (EPUB) 參考文件與離線搜尋索引, 補充 Readium EPUB Reader 外掛 1.1.0 的螢光標示與筆記 (EPUB 契約版本 2): EpubBook#annotations 與便捷層 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的攜帶位置"
+      ]
+    },
     "v6.8.0": {
-      "released_date": "2026/09/24",
+      "released_date": "2026/09/19",
       "fix": [
         "離線文件驗證器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱",
         "AGP 9.1 建置時的 SDK XML v4 解析警告及 JVM 單元測試組裝工作誤觸發 APK 原生程式庫對齊檢查的問題 (共用建置外掛 1.8.3)"
       ],
       "improvement": [
-        "同步 Agent 全域工具組, 審慎模式, 預設預算與協定上限, 以及預設和單次任務的收緊規則",
-        "同步 Agent 偏好記憶, 逐項確認, 作用域查詢, JSON 匯入/匯出及自動注入與記憶工具的區別",
-        "同步 Agent 命名預設, 預設值選擇, 模型選擇, 固定上下文合併及工具, 預算, 確認, 腳本目錄和記憶作用域的收緊規則",
-        "同步 ai.agent 任務 API, AgentRun 生命週期, 詢問與確認, 預算, 登記腳本結果, 三個範例及離線搜尋索引",
         "同步座標點擊 API, maxAttempts 預設 0 的無限嘗試語意, Flow 例外工作堆疊與主控台輸出及離線搜尋索引",
         "同步 Flow 可選步驟, 有界迴圈, 鏈式候選查找與點擊, 集合穩定快照及預設值說明, 並更新離線搜尋索引",
         "同步執行時本機網路權限文件及離線搜尋索引, 說明 Android 17 / targetSdk 37 條件, 非同步授權, 重試及原生 Socket / MQTT 和外掛權限邊界",
@@ -35,9 +43,7 @@
         "統一 README 版式與 Gradle 平台版本管理方式",
         "MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義",
         "建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告",
-        "同步郵件 (Mail) 參考文件與離線搜尋索引, 涵蓋 Angus Mail 外掛的 mail 全域物件, MailClient 的收發, 搜尋, 附件, 標記, 資料夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼",
-        "同步電子書 (EPUB) 參考文件與離線搜尋索引, 涵蓋 Readium EPUB Reader 外掛的 epub 全域物件, EpubBook 的中繼資料, 目錄, 閱讀順序, 正文擷取, 封面與資源匯出及全文搜尋, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置物件及 EpubError 錯誤代碼",
-        "同步電子書 (EPUB) 參考文件與離線搜尋索引, 補充 Readium EPUB Reader 外掛 1.1.0 的螢光標示與筆記 (EPUB 契約版本 2): EpubBook#annotations 與便捷層 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的攜帶位置"
+        "同步郵件 (Mail) 參考文件與離線搜尋索引, 涵蓋 Angus Mail 外掛的 mail 全域物件, MailClient 的收發, 搜尋, 附件, 標記, 資料夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼"
       ]
     },
     "v6.8.2": {
