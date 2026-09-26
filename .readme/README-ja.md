@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11601029
-contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
+totalBytes=11605704
+contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `改善` AI Agent ドキュメント 1.2.0: 選択したローカルまたは外部 MCP サーバーのツールに対応し, サーバーごとにリスクを設定. mcp グループは初期状態で無効
+
 # v6.8.4
 
 ###### 2026/09/26
@@ -131,33 +137,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` ai.agent API, AgentRun のライフサイクル, 質問と確認, 予算, 登録スクリプト結果, 3 つの例, オフライン検索索引を同期
 * `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグインの epub グローバル, EpubBook のメタデータ, 目次, 読み順, 本文抽出, 表紙とリソースの書き出しおよび全文検索, EpubReaderSession のイベント, 制御メソッドと閲覧設定, EpubLocator 位置オブジェクトおよび EpubError エラーコードを収録
 * `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグイン 1.1.0 のハイライトとノート (EPUB コントラクトバージョン 2) を補完: EpubBook#annotations と簡易層の epub.annotations, EpubReaderSession の highlight イベントおよび EpubLocator の運搬箇所
-
-# v6.8.0
-
-###### 2026/09/19
-
-* `修正` オフライン文書 validator は公開 Node bridge method 名 `callAutoJs` を旧製品の裸名称として誤判定しなくなりました
-* `修正` 共有ビルドプラグイン 1.8.3 により, AGP 9.1 での SDK XML v4 解析警告と, JVM 単体テストの組み立て時に APK ネイティブライブラリのアラインメント検証が誤って実行される問題
-* `改善` 座標クリック API, maxAttempts の既定値 0 による無制限試行, Flow エラーのタスクスタックとコンソール出力, オフライン検索インデックスを同期
-* `改善` Flow の任意ステップ, 回数と時間を制限したループ, チェーン内の候補検索とクリック, コレクションの安定スナップショットと既定値の説明を同期し, オフライン検索インデックスを更新
-* `改善` ローカルネットワーク権限のリファレンスとオフライン検索索引を同期し, Android 17 / targetSdk 37 の条件, 非同期の許可, 再試行, ネイティブ Socket / MQTT とプラグイン権限の境界を説明
-* `改善` `device.pageSize` のリファレンスとオフライン検索インデックスを同期し, バイト単位, 読み取り専用属性, 実行環境とネイティブライブラリの互換性の違いを説明
-* `改善` OCR リファレンスとオフライン検索インデックスを同期し, エンジンの自動選択, リアルタイムのモード取得, tap によるリセット, 呼び出しごとのオプション, 利用可能なプラグインがない場合の動作を補足
-* `改善` MediaInfo リファレンスとオフライン検索インデックスを同期し, 従来の `read` とバージョン付き `snapshot` の境界, プラグイン snapshot v1/v2 schema ネゴシエーション, 軽量 `capabilities`, 動的な v2 track とエンジン情報を追加
-* `改善` Pinyin リファレンスとオフライン検索インデックスを同期し, 呼び出し単位の `customDictionary` 読み上書き, 完成した `compare`/`compact`, および明示的な `pinyin` capability を伴う `autojs6:bridge.callAutoJs` 経由の Node.js アクセスを追加
-* `改善` Image Quantization v4 リファレンスとオフライン検索索引を同期し, 設定可能なピクセル数と作業メモリの予算, 型付きリソース上限診断, 計上済みピークメモリ指標, 明示要求またはスクリプト終了時のキャンセルを追加
-* `改善` プラグインの versionName を対象の AutoJs6 ドキュメントバージョンに合わせ, ドキュメント同期成功時に両プロジェクトの build/versionCode をそれぞれ自動で 1 増加
-* `改善` 内蔵 AutoJs6 6.8.0 ドキュメントとオフライン検索インデックスを更新し, YOLO 物体検出 Preview API, 厳密なプロバイダー設定, モデルプロファイル, 結果型, 安定したエラーコードを追加
-* `改善` 内蔵 AI リファレンスを拡充し, プラグインモデル探索, 公式/厳密コンポーネント選択, 複数ロールのメッセージ履歴, 生成パラメータ, 正確な使用量とストリーミングペイロード, 完全なルーティング例に対応
-* `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, 永続 `ai.session` Conversation API, 固定セッション設定, 各ターンで新しいプロンプトだけを渡すライフサイクル規則, 能力探索, 明示的なリソース解放に対応
-* `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, `structuredJson`/`responseSchema` によるネイティブ JSON Schema 制約出力, 永続セッション固定 schema, JSON テキストの戻り値と失敗規則に対応
-* `改善` 内蔵 AI リファレンスとオフライン検索索引を拡充し, 明示的 CPU/GPU/NPU backend profile, `ai.catalog` のデバイス可用性と安定した使用不可理由, 永続セッション固定 backend, GPU 互換性制限, フォールバック禁止契約に対応
-* `改善` 未公開の AI 一覧/設定確認 API を統一 `ai.catalog` ターゲットディレクトリ, `target` による厳密なルーティング, 完全なレスポンス/セッションメタデータ, フォールバックしない安定エラーへ直接置換し, オンライン/オフライン資産を同期
-* `改善` 内蔵 runtime リファレンスとオフライン検索インデックスを拡張し, 検証済み mapping/seeds/usage/retrace metadata を出力する 6 つの `loadJarWithR8` オーバーロードとプロトコル 1.1 `retraceR8Stack` API, 来歴の結合, フォールバックしない fail-closed 動作を追加
-* `改善` README のレイアウトと Gradle プラットフォームのバージョン管理方式を統一
-* `改善` MediaInfo リファレンスとオフライン検索に streamNumber, countGet, infoKind と元のファイルパスの仕様を反映
-* `改善` 意図しないネイティブ依存関係をビルド時に拒否し, JSON レポートを生成
-* `改善` メール (Mail) リファレンスとオフライン検索インデックスを同期し, Angus Mail プラグインの mail グローバル, MailClient の送受信, 検索, 添付, フラグ, フォルダーと監視メソッド, MailMessage, MailAccountOptions とプロバイダープリセット, MailSearchQuery および MailError エラーコードを収録
 
 ##### その他のリリース履歴
 

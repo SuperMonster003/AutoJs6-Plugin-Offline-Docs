@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11601029
-contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
+totalBytes=11605704
+contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `Mejora` Documentación AI Agent 1.2.0: Herramientas MCP de servidores locales o externos seleccionados, con riesgo por servidor y el grupo mcp desactivado inicialmente
+
 # v6.8.4
 
 ###### 2026/09/26
@@ -131,33 +137,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` Sincronización de API ai.agent, ciclo de vida AgentRun, respuestas y confirmaciones, presupuestos, resultados de scripts, tres ejemplos e índice de búsqueda sin conexión
 * `Mejora` Sincronizada la referencia de EPUB y el índice de búsqueda sin conexión, cubriendo el global epub del plugin Readium EPUB Reader, los miembros de EpubBook para metadatos, índice, orden de lectura, extracción de texto, exportación de portada y recursos y búsqueda de texto completo, los eventos, controles y preferencias de lectura de EpubReaderSession, el objeto de posición EpubLocator y los códigos de EpubError
 * `Mejora` Sincronizada la referencia de EPUB y el índice de búsqueda sin conexión con los resaltados y notas del plugin Readium EPUB Reader 1.1.0 (versión 2 del contrato EPUB): EpubBook#annotations y la capa de conveniencia epub.annotations, el evento highlight de EpubReaderSession y los portadores de EpubLocator
-
-# v6.8.0
-
-###### 2026/09/19
-
-* `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre público del método del puente Node `callAutoJs` con un nombre de producto heredado sin calificar
-* `Corrección` Advertencias de lectura de SDK XML v4 con AGP 9.1 y comprobaciones de alineación nativa de APK activadas por error al ensamblar pruebas unitarias JVM, mediante los plugins de compilación compartidos 1.8.3
-* `Mejora` Sincronizar las API de clic por coordenadas, maxAttempts en 0 para intentos ilimitados, las pilas de errores Flow, la salida de consola y el índice de búsqueda sin conexión
-* `Mejora` Sincronizar los pasos opcionales de Flow, los bucles acotados, la búsqueda y los clics de candidatos encadenados, las instantáneas estables de colecciones y los valores predeterminados, y actualizar el índice de búsqueda sin conexión
-* `Mejora` Sincronización de la referencia de permisos de red local y el índice sin conexión, con condiciones Android 17 / targetSdk 37, autorización asíncrona, reintentos y límites de Socket / MQTT nativos y permisos de plugins
-* `Mejora` Sincronizar la referencia de `device.pageSize` y el índice de búsqueda sin conexión, documentando los bytes, el acceso de solo lectura y la diferencia entre el entorno de ejecución y la compatibilidad de bibliotecas nativas
-* `Mejora` Sincronización de la referencia de OCR y el índice de búsqueda sin conexión con la selección automática del motor, la lectura del modo en tiempo real, el restablecimiento con tap, las opciones por llamada y el comportamiento sin plugins disponibles
-* `Mejora` Se sincronizaron la referencia de MediaInfo y el índice de búsqueda sin conexión con el límite entre `read` heredado y `snapshot` versiónado, la negociación de schema v1/v2 del plugin, `capabilities` ligero y metadatos dinámicos de tracks v2 y del motor
-* `Mejora` Se sincronizaron la referencia Pinyin y el índice de búsqueda sin conexión con sustituciones de lectura `customDictionary` por llamada, `compare`/`compact` completados y acceso desde Node.js mediante `autojs6:bridge.callAutoJs` con la capacidad explícita `pinyin`
-* `Mejora` Sincronizada la referencia de Image Quantization v4 y el indice de busqueda sin conexion con presupuestos configurables de pixeles y memoria de trabajo, diagnosticos tipados de limite de recursos, metricas de memoria maxima contabilizada y cancelacion por solicitud explicita o cierre del script
-* `Mejora` Alineó el versionName del plugin con la versión de la documentación de AutoJs6 de destino e incrementó automáticamente en 1 el build/versionCode de cada proyecto tras sincronizar correctamente la documentación
-* `Mejora` Se actualizaron la documentación integrada de AutoJs6 6.8.0 y el índice de búsqueda sin conexión con la API Preview de detección de objetos YOLO, la configuración del proveedor exacto, el perfil del modelo, los tipos de resultado y los códigos de error estables
-* `Mejora` Se completó la referencia de IA integrada con descubrimiento de modelos de plugins, selectores oficiales y de componentes exactos, historial de mensajes multirrol, controles de generación, cargas útiles precisas de uso y streaming, y ejemplos completos de enrutamiento
-* `Mejora` Se amplió la referencia de IA integrada y el índice de búsqueda sin conexión con la API de conversación persistente `ai.session`, controles fijos de sesión, reglas de ciclo de vida de un prompt nuevo por turno, descubrimiento de capacidades y semántica de limpieza explícita
-* `Mejora` Se amplió la referencia de IA integrada y el índice sin conexión con salida restringida por JSON Schema mediante `structuredJson`/`responseSchema`, schema fijo para sesiones persistentes, retorno de texto JSON y reglas de fallo
-* `Mejora` Se ampliaron la referencia de IA integrada y el índice sin conexión con perfiles backend CPU/GPU/NPU explícitos, disponibilidad por dispositivo y razones estables en `ai.catalog`, backend fijo para sesiones persistentes, límites de compatibilidad GPU y contrato sin fallback
-* `Mejora` Se sustituyeron todas las API de listado y comprobación de configuración de IA no publicadas por el directorio unificado de destinos `ai.catalog`, el enrutamiento exacto mediante `target`, metadatos completos de respuestas y sesiones, errores estables sin fallback y recursos en línea/sin conexión sincronizados
-* `Mejora` Se amplió la referencia runtime integrada y el índice de búsqueda sin conexión con seis sobrecargas de `loadJarWithR8` para exportar mapping/seeds/usage/retrace metadata verificados y la API `retraceR8Stack` del protocolo 1.1, con vínculo de procedencia y fallo cerrado sin fallback
-* `Mejora` Unificar el diseño del README y la gestión de versiones de la plataforma Gradle
-* `Mejora` La referencia MediaInfo y la búsqueda sin conexión cubren streamNumber, countGet, infoKind y las rutas originales
-* `Mejora` La verificación de compilación rechaza dependencias nativas accidentales y genera un informe JSON
-* `Mejora` Sincronizada la referencia de Mail y el índice de búsqueda sin conexión, cubriendo el global mail del plugin Angus Mail, los métodos de MailClient para envío, búsqueda, adjuntos, marcas, carpetas y vigilancia, MailMessage, MailAccountOptions con los preajustes de proveedor, MailSearchQuery y los códigos de error de MailError
 
 ##### Para ver más historial de versiones
 

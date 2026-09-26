@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `Amélioration` Documentation AI Agent 1.2.0: Outils MCP de serveurs locaux ou externes choisis, avec un niveau de risque par serveur et le groupe mcp désactivé par défaut
+
 # v6.8.4
 
 ###### 2026/09/26

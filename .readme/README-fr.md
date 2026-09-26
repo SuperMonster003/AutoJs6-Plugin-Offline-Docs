@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11601029
-contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
+totalBytes=11605704
+contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `Amélioration` Documentation AI Agent 1.2.0: Outils MCP de serveurs locaux ou externes choisis, avec un niveau de risque par serveur et le groupe mcp désactivé par défaut
+
 # v6.8.4
 
 ###### 2026/09/26
@@ -131,33 +137,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Synchronisation des API ai.agent, du cycle de vie AgentRun, des réponses et confirmations, budgets, résultats des scripts, trois exemples et index de recherche hors ligne
 * `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne, couvrant le global epub du plugin Readium EPUB Reader, les membres d'EpubBook pour les métadonnées, la table des matières, l'ordre de lecture, l'extraction de texte, l'export de la couverture et des ressources et la recherche plein texte, les événements, commandes et préférences de lecture d'EpubReaderSession, l'objet de position EpubLocator et les codes EpubError
 * `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne avec les surlignages et notes du plugin Readium EPUB Reader 1.1.0 (contrat EPUB version 2) : EpubBook#annotations et la couche de commodité epub.annotations, l'événement highlight d'EpubReaderSession et les porteurs d'EpubLocator
-
-# v6.8.0
-
-###### 2026/09/19
-
-* `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de méthode public du pont Node `callAutoJs` avec un ancien nom de produit nu
-* `Correctif` Avertissements de lecture SDK XML v4 avec AGP 9.1 et contrôles d'alignement natif des APK déclenchés par erreur lors de l'assemblage des tests unitaires JVM, avec les plugins de compilation partagés 1.8.3
-* `Amélioration` Synchronisation des API de clic par coordonnées, de maxAttempts à 0 pour des tentatives illimitées, des piles de tâches Flow, de la sortie console et de la recherche hors ligne
-* `Amélioration` Synchroniser les étapes facultatives Flow, les boucles bornées, la recherche et le clic de candidats en chaîne, les instantanés de collections stables et les valeurs par défaut, et mettre à jour l'index de recherche hors ligne
-* `Amélioration` Synchronisation de la référence des permissions réseau local et de l'index hors ligne, avec les conditions Android 17 / targetSdk 37, l'autorisation asynchrone, les reprises et les limites des Socket / MQTT natifs et des permissions des plugins
-* `Amélioration` Synchroniser la référence de `device.pageSize` et l'index de recherche hors ligne, en précisant l'unité en octets, la lecture seule et la distinction entre environnement d'exécution et compatibilité des bibliothèques natives
-* `Amélioration` Synchronisation de la référence OCR et de l'index de recherche hors ligne avec la sélection automatique du moteur, la lecture du mode en temps réel, les réinitialisations par tap, les options par appel et le comportement sans plugin disponible
-* `Amélioration` Synchronisation de la référence MediaInfo et de l'index de recherche hors ligne avec la frontière entre `read` historique et `snapshot` versionné, la négociation des schémas v1/v2 du plugin, `capabilities` léger et les métadonnées dynamiques des tracks v2 et du moteur
-* `Amélioration` Synchronisation de la référence Pinyin et de l'index de recherche hors ligne avec les substitutions de lecture `customDictionary` limitées à chaque appel, `compare`/`compact` finalisés et l'accès Node.js via `autojs6:bridge.callAutoJs` avec la capacité explicite `pinyin`
-* `Amélioration` Synchronisation de la reference Image Quantization v4 et de l'index de recherche hors ligne avec des budgets configurables de pixels et de memoire de travail, des diagnostics types de limite de ressources, des mesures du pic de memoire comptabilisee et l'annulation sur demande explicite ou arret du script
-* `Amélioration` Alignement du versionName du plugin sur la version cible de la documentation AutoJs6 et incrémentation automatique de 1 du build/versionCode de chaque projet après une synchronisation réussie de la documentation
-* `Amélioration` Mise à jour de la documentation AutoJs6 6.8.0 intégrée et de l'index de recherche hors ligne avec l'API Preview de détection d'objets YOLO, la configuration du fournisseur exact, le profil de modèle, les types de résultat et les codes d'erreur stables
-* `Amélioration` Documentation de référence IA intégrée complétée avec la découverte des modèles de plugins, les sélecteurs officiels et de composants exacts, l'historique des messages multirôle, les paramètres de génération, les charges utiles précises d'utilisation et de streaming, ainsi que des exemples de routage complets
-* `Amélioration` Référence IA intégrée et index de recherche hors ligne étendus avec l'API Conversation persistante `ai.session`, les paramètres de session fixes, les règles de cycle de vie à un nouveau prompt par tour, la découverte des capacités et la libération explicite des ressources
-* `Amélioration` Référence IA intégrée et index hors ligne étendus avec la sortie contrainte par JSON Schema via `structuredJson`/`responseSchema`, un schema fixe pour les sessions persistantes, le retour de texte JSON et les règles d'échec
-* `Amélioration` Référence IA intégrée et index hors ligne étendus avec les profils backend CPU/GPU/NPU explicites, la disponibilité par appareil et les raisons stables dans `ai.catalog`, un backend fixe par session persistante, les limites de compatibilité GPU et le contrat sans repli
-* `Amélioration` Toutes les API non publiées de liste et de détection de configuration IA ont été remplacées par le répertoire unifié de cibles `ai.catalog`, le routage exact par `target`, les métadonnées complètes de réponse et de session, les erreurs stables sans repli et les ressources en ligne/hors ligne synchronisées
-* `Amélioration` Extension de la référence runtime intégrée et de l'index de recherche hors ligne avec six surcharges de `loadJarWithR8` pour l'export vérifié de mapping/seeds/usage/retrace metadata et l'API `retraceR8Stack` du protocole 1.1, avec liaison de provenance et échec fermé sans repli
-* `Amélioration` Uniformiser la mise en page du README et la gestion des versions de la plateforme Gradle
-* `Amélioration` La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources
-* `Amélioration` La vérification de compilation rejette les dépendances natives involontaires et produit un rapport JSON
-* `Amélioration` Synchronisation de la référence Mail et de l'index de recherche hors ligne, couvrant le global mail du plugin Angus Mail, les méthodes de MailClient pour l'envoi, la recherche, les pièces jointes, les indicateurs, les dossiers et la surveillance, MailMessage, MailAccountOptions avec les préréglages de fournisseur, MailSearchQuery et les codes d'erreur MailError
 
 ##### Pour plus d'historique des versions
 

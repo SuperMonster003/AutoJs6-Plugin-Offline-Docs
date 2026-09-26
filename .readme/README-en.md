@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11601029
-contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
+totalBytes=11605704
+contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `Improvement` AI Agent documentation 1.2.0: MCP tools from selected local or external servers, with per-server risk settings and the mcp group disabled by default
+
 # v6.8.4
 
 ###### 2026/09/26
@@ -131,33 +137,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Synchronize ai.agent task APIs, AgentRun lifecycle, input and confirmation, budgets, registered-script results, three examples and the offline search index
 * `Improvement` Synchronized the EPUB reference and the offline search index, covering the epub global of the Readium EPUB Reader plugin, the EpubBook members for metadata, table of contents, reading order, text extraction, cover and resource export and full-text search, the EpubReaderSession events, controls and reading preferences, the EpubLocator position object and the EpubError codes
 * `Improvement` Synchronized the EPUB reference and the offline search index with the highlights and notes of the Readium EPUB Reader plugin 1.1.0 (EPUB contract version 2): EpubBook#annotations and the convenience epub.annotations, the EpubReaderSession highlight event and the EpubLocator carriers
-
-# v6.8.0
-
-###### 2026/09/19
-
-* `Fix` Offline documentation validators no longer treat the public Node bridge method name `callAutoJs` as a legacy bare product name
-* `Fix` SDK XML v4 parsing warnings with AGP 9.1 and APK native alignment checks incorrectly triggered by JVM unit-test assembly tasks, using shared build plugins 1.8.3
-* `Improvement` Synchronize coordinate-click APIs, the maxAttempts default of 0 for unlimited attempts, Flow error task stacks and console output, and the offline search index
-* `Improvement` Synchronize Flow optional steps, bounded loops, chained candidate lookup and clicks, stable collection snapshots and defaults, and update the offline search index
-* `Improvement` Synchronize the runtime local network permission reference and offline search index, covering Android 17 / targetSdk 37 conditions, asynchronous authorization, retries and the raw Socket / MQTT and plugin permission boundaries
-* `Improvement` Synchronize the `device.pageSize` reference and offline search index, documenting bytes, read-only access and the distinction between the runtime environment and native library compatibility
-* `Improvement` Synchronized the OCR reference and offline search index with automatic engine selection, live mode reads, tap resets, per-call options and behavior when no plugin is available
-* `Improvement` Synchronized the MediaInfo reference and offline search index with the legacy `read` versus versioned `snapshot` boundary, plugin snapshot v1/v2 schema negotiation, lightweight `capabilities`, and dynamic v2 track plus engine metadata
-* `Improvement` Synchronized the Pinyin reference and offline search index with per-call `customDictionary` reading overrides, completed `compare`/`compact`, and Node.js access through `autojs6:bridge.callAutoJs` with the explicit `pinyin` capability
-* `Improvement` Synchronized the Image Quantization v4 reference and offline search index with configurable pixel and working-memory budgets, typed resource-limit diagnostics, accounted peak-memory metrics, and cancellation on explicit requests or script shutdown
-* `Improvement` Aligned the plugin versionName with the target AutoJs6 documentation version and automatically incremented each project's build/versionCode by 1 after a successful documentation sync
-* `Improvement` Updated the bundled AutoJs6 6.8.0 documentation and offline search index with the YOLO target-detection Preview API, exact-provider setup, model profile, result types, and stable error codes
-* `Improvement` Completed the bundled AI reference with plugin model discovery, official and exact-component selectors, multi-role message history, generation controls, precise usage and streaming payloads, and complete routing examples
-* `Improvement` Extended the bundled AI reference and offline search index with the persistent `ai.session` Conversation API, fixed session controls, one-prompt-per-turn lifecycle rules, capability discovery, and explicit cleanup semantics
-* `Improvement` Extended the bundled AI reference and offline search index with native JSON Schema constrained output through `structuredJson`/`responseSchema`, fixed persistent-session schemas, JSON text return semantics, and failure behavior
-* `Improvement` Extended the bundled AI reference and offline search index with explicit CPU/GPU/NPU backend profiles, `ai.catalog` per-device availability and stable unavailable reasons, fixed persistent-session backend selection, GPU compatibility limits, and the no-fallback contract
-* `Improvement` Replaced all unpublished AI listing and configuration-probe APIs with the unified `ai.catalog` target directory, exact `target` routing, complete response and session metadata, stable no-fallback failures, and synchronized online/offline assets
-* `Improvement` Extended the bundled runtime reference and offline search index with six `loadJarWithR8` overloads for verified mapping/seeds/usage/retrace-metadata export and the protocol 1.1 `retraceR8Stack` API, including provenance binding and fail-closed no-fallback behavior
-* `Improvement` Standardize the README layout and Gradle platform version management
-* `Improvement` Updated the MediaInfo reference and offline search with streamNumber, countGet, infoKind and original source paths
-* `Improvement` Build verification rejects accidental native dependencies and produces a JSON report
-* `Improvement` Synchronized the Mail reference and the offline search index, covering the mail global of the Angus Mail plugin, the MailClient methods for sending, searching, attachments, flags, folders and watching, MailMessage, MailAccountOptions with the provider presets, MailSearchQuery and the MailError codes
 
 ##### For more release history
 
