@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11597017
-contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
+totalBytes=11601029
+contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
+sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.4
+
+###### 2026/09/26
+
+* `優化` 同步 AI Agent 1.1.0 開發版本的 script_dynamic 工具組, 每份原始碼單獨確認, 私有原始碼記錄及透過系統檔案選擇器儲存登記指令碼的流程
+
 # v6.8.3
 
 ###### 2026/09/25
@@ -152,12 +158,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義
 * `優化` 建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告
 * `優化` 同步郵件 (Mail) 參考文檔與離線搜索索引, 覆蓋 Angus Mail 插件的 mail 全局對象, MailClient 的收發, 搜索, 附件, 標記, 文件夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼
-
-# v6.8.2
-
-###### 2026/09/15
-
-* `優化` 將 compileSdk 與 targetSdk 提升到 37 (Android 17), 插件行為不受新目標版本影響
 
 ##### 更多發行歷史可參閱
 

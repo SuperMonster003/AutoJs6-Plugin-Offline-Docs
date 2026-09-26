@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.4
+
+###### 2026/09/26
+
+* `Improvement` Document the AI Agent 1.1.0 development script_dynamic group, individual source confirmation, private source history and saving registered scripts through the system file picker
+
 # v6.8.3
 
 ###### 2026/09/25

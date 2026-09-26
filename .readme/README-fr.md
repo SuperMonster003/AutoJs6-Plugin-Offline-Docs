@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11597017
-contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
+totalBytes=11601029
+contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
+sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.4
+
+###### 2026/09/26
+
+* `Amélioration` Documente le groupe script_dynamic de la version de développement AI Agent 1.1.0, la confirmation de chaque source, son historique privé et la sauvegarde des scripts enregistrés via le sélecteur de fichiers système
+
 # v6.8.3
 
 ###### 2026/09/25
@@ -152,12 +158,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` La référence MediaInfo et la recherche hors ligne couvrent streamNumber, countGet, infoKind et les chemins des fichiers sources
 * `Amélioration` La vérification de compilation rejette les dépendances natives involontaires et produit un rapport JSON
 * `Amélioration` Synchronisation de la référence Mail et de l'index de recherche hors ligne, couvrant le global mail du plugin Angus Mail, les méthodes de MailClient pour l'envoi, la recherche, les pièces jointes, les indicateurs, les dossiers et la surveillance, MailMessage, MailAccountOptions avec les préréglages de fournisseur, MailSearchQuery et les codes d'erreur MailError
-
-# v6.8.2
-
-###### 2026/09/15
-
-* `Amélioration` compileSdk et targetSdk passent à 37 (Android 17) ; le comportement du plugin ne dépend pas de la nouvelle cible
 
 ##### Pour plus d'historique des versions
 

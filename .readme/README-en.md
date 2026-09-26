@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11597017
-contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
+totalBytes=11601029
+contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
+sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.4
+
+###### 2026/09/26
+
+* `Improvement` Document the AI Agent 1.1.0 development script_dynamic group, individual source confirmation, private source history and saving registered scripts through the system file picker
+
 # v6.8.3
 
 ###### 2026/09/25
@@ -152,12 +158,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Updated the MediaInfo reference and offline search with streamNumber, countGet, infoKind and original source paths
 * `Improvement` Build verification rejects accidental native dependencies and produces a JSON report
 * `Improvement` Synchronized the Mail reference and the offline search index, covering the mail global of the Angus Mail plugin, the MailClient methods for sending, searching, attachments, flags, folders and watching, MailMessage, MailAccountOptions with the provider presets, MailSearchQuery and the MailError codes
-
-# v6.8.2
-
-###### 2026/09/15
-
-* `Improvement` Raise compileSdk and targetSdk to 37 (Android 17); the plugin's behavior does not depend on the new target
 
 ##### For more release history
 

@@ -5,6 +5,12 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "依賴",
   "$data": {
+    "v6.8.4": {
+      "released_date": "2026/09/26",
+      "improvement": [
+        "同步 AI Agent 1.1.0 開發版本的 script_dynamic 工具組, 每份原始碼單獨確認, 私有原始碼記錄及透過系統檔案選擇器儲存登記指令碼的流程"
+      ]
+    },
     "v6.8.3": {
       "released_date": "2026/09/25",
       "improvement": [

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11597017
-contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
+totalBytes=11601029
+contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
+sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.4
+
+###### 2026/09/26
+
+* `개선` AI Agent 1.1.0 개발 버전의 script_dynamic 그룹, 소스별 확인, 비공개 소스 기록 및 시스템 파일 선택기를 통한 등록 스크립트 저장 절차 문서화
+
 # v6.8.3
 
 ###### 2026/09/25
@@ -152,12 +158,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` MediaInfo 참조 문서와 오프라인 검색에 streamNumber, countGet, infoKind 및 원본 경로 동작을 반영
 * `개선` 빌드 시 의도하지 않은 네이티브 의존성을 거부하고 JSON 보고서 생성
 * `개선` 메일 (Mail) 참조 문서와 오프라인 검색 색인을 동기화하여 Angus Mail 플러그인의 mail 전역 객체, MailClient 의 송수신, 검색, 첨부, 플래그, 폴더 및 감시 메서드, MailMessage, MailAccountOptions 와 제공자 프리셋, MailSearchQuery 및 MailError 오류 코드를 수록
-
-# v6.8.2
-
-###### 2026/09/15
-
-* `개선` compileSdk 와 targetSdk 를 37 (Android 17) 로 올리며, 플러그인 동작은 새 대상 버전의 영향을 받지 않음
 
 ##### 더 많은 릴리스 기록
 

@@ -5,6 +5,12 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v6.8.4": {
+      "released_date": "2026/09/26",
+      "improvement": [
+        "AI Agent 1.1.0 開発版の script_dynamic グループ, ソースごとの確認, 非公開のソース履歴とシステムファイル選択画面による登録スクリプト保存を文書化"
+      ]
+    },
     "v6.8.3": {
       "released_date": "2026/09/25",
       "improvement": [
