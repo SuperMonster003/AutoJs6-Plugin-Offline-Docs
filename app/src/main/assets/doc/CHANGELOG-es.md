@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.4
+
+###### 2026/09/26
+
+* `Mejora` Documenta el grupo script_dynamic de AI Agent 1.1.0 en desarrollo, la confirmación individual del código, su historial privado y el guardado de scripts registrados mediante el selector de archivos del sistema
+
 # v6.8.3
 
 ###### 2026/09/25

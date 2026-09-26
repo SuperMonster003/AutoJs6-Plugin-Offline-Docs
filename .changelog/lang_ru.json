@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Улучшение",
   "changelog_label_dependency": "Зависимость",
   "$data": {
+    "v6.8.4": {
+      "released_date": "2026/09/26",
+      "improvement": [
+        "Документация группы script_dynamic в разрабатываемой AI Agent 1.1.0, отдельного подтверждения кода, закрытой истории и сохранения зарегистрированных скриптов через системный выбор файлов"
+      ]
+    },
     "v6.8.3": {
       "released_date": "2026/09/25",
       "improvement": [

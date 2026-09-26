@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11597017
-contentSha256=7c62f38181d82f994c2dac4bde871d9f687cd4e9c40f3330593aa848927fe9d4
+totalBytes=11601029
+contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e9ce36a0dbd175703a04bb554db27eccf97ca652
+sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.4
+
+###### 2026/09/26
+
+* `Улучшение` Документация группы script_dynamic в разрабатываемой AI Agent 1.1.0, отдельного подтверждения кода, закрытой истории и сохранения зарегистрированных скриптов через системный выбор файлов
+
 # v6.8.3
 
 ###### 2026/09/25
@@ -152,12 +158,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Справочник MediaInfo и автономный поиск охватывают streamNumber, countGet, infoKind и исходные пути файлов
 * `Улучшение` Проверка сборки отклоняет непреднамеренные нативные зависимости и создает отчет JSON
 * `Улучшение` Синхронизирован справочник Mail и офлайн-индекс поиска: глобальный объект mail плагина Angus Mail, методы MailClient для отправки, поиска, вложений, флагов, папок и наблюдения, MailMessage, MailAccountOptions с предустановками провайдеров, MailSearchQuery и коды ошибок MailError
-
-# v6.8.2
-
-###### 2026/09/15
-
-* `Улучшение` Подняты compileSdk и targetSdk до 37 (Android 17); поведение плагина не зависит от нового целевого уровня
 
 ##### Больше истории выпусков
 
