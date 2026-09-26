@@ -5,6 +5,12 @@
   "changelog_label_improvement": "개선",
   "changelog_label_dependency": "의존성",
   "$data": {
+    "v6.8.5": {
+      "released_date": "2026/09/26",
+      "improvement": [
+        "AI Agent 문서 1.2.0: 선택한 로컬 또는 외부 MCP 서버 도구와 서버별 위험 설정, 기본적으로 꺼진 mcp 그룹"
+      ]
+    },
     "v6.8.4": {
       "released_date": "2026/09/26",
       "improvement": [

@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `Improvement` AI Agent documentation 1.2.0: MCP tools from selected local or external servers, with per-server risk settings and the mcp group disabled by default
+
 # v6.8.4
 
 ###### 2026/09/26

@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11601029
-contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
+totalBytes=11605704
+contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `優化` AI Agent 文件 1.2.0: 本機或外部 MCP 伺服器的所選工具, 按伺服器設定風險等級, mcp 工具組預設關閉
+
 # v6.8.4
 
 ###### 2026/09/26
@@ -131,33 +137,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` 同步 ai.agent 任務 API, AgentRun 生命週期, 詢問與確認, 預算, 登記指令碼結果, 三個範例及離線搜尋索引
 * `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 覆蓋 Readium EPUB Reader 插件的 epub 全局對象, EpubBook 的元數據, 目錄, 閱讀順序, 正文提取, 封面與資源導出及全文搜索, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置對象及 EpubError 錯誤代碼
 * `優化` 同步電子書 (EPUB) 參考文檔與離線搜索索引, 補充 Readium EPUB Reader 插件 1.1.0 的高亮與筆記 (EPUB 契約版本 2): EpubBook#annotations 與便捷層 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的攜帶位置
-
-# v6.8.0
-
-###### 2026/09/19
-
-* `修復` 離線文件校驗器不再將公開 Node 橋接方法名稱 `callAutoJs` 誤判為舊版裸產品名稱
-* `修復` AGP 9.1 構建時的 SDK XML v4 解析警告及 JVM 單元測試組裝任務誤觸發 APK 原生程式庫對齊檢查的問題 (共用構建外掛 1.8.3)
-* `優化` 同步座標點擊 API, maxAttempts 預設 0 的無限嘗試語義, Flow 異常任務堆疊與主控台輸出及離線搜尋索引
-* `優化` 同步 Flow 可選步驟, 有界循環, 鏈式候選查找與點擊, 集合穩定快照及預設值說明, 並更新離線搜尋索引
-* `優化` 同步執行時本地網絡權限文件及離線搜尋索引, 說明 Android 17 / targetSdk 37 條件, 非同步授權, 重試及原生 Socket / MQTT 和插件權限邊界
-* `優化` 同步 `device.pageSize` 參考文件與離線搜尋索引, 說明頁大小的位元組單位, 唯讀屬性及執行環境與原生程式庫相容性的區別
-* `優化` 同步 OCR 參考文件與離線搜尋索引, 補充引擎自動選擇, 即時模式讀取, tap 重設, 單次呼叫選項及無可用插件時的行為
-* `優化` 同步 MediaInfo 參考文檔與離線搜尋索引, 補充兼容 `read` 與版本化 `snapshot` 的邊界, 插件快照 v1/v2 schema 協商, 輕量 `capabilities` 以及動態 v2 track 和引擎資訊
-* `優化` 同步 Pinyin 參考文件與離線搜尋索引, 補充僅當前調用生效的 `customDictionary` 自訂讀音覆蓋, 已完成的 `compare`/`compact`, 以及透過帶明確 `pinyin` capability 的 `autojs6:bridge.callAutoJs` 進行 Node.js 存取
-* `優化` 同步 Image Quantization v4 參考文件與離線搜尋索引, 新增可配置的像素及工作記憶體預算, 類型化資源上限診斷, 已計入預算的峰值記憶體指標, 以及明確請求或腳本結束時的取消機制
-* `優化` 使插件 versionName 與目標 AutoJs6 文件版本保持一致, 並在文件同步成功時將兩個項目各自的 build/versionCode 自動增加 1
-* `優化` 更新內置 AutoJs6 6.8.0 文檔及離線搜尋索引, 補充 YOLO 物件偵測 Preview API 的精確提供方設定, 模型設定檔, 結果類型及穩定錯誤碼
-* `優化` 完善內置 AI 參考文件, 涵蓋插件模型探索, 官方與精確元件選擇器, 多角色訊息歷史, 生成參數, 精確用量和串流負載, 以及完整路由範例
-* `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充持久 `ai.session` Conversation API, 固定會話參數, 每輪只傳新提示詞的生命週期規則, 能力探索及明確資源釋放語義
-* `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充 `structuredJson`/`responseSchema` 原生 JSON Schema 約束輸出, 持久會話固定 schema, JSON 文字回傳及失敗語義
-* `優化` 擴充內置 AI 參考文件及離線搜尋索引, 補充明確 CPU/GPU/NPU backend profile, `ai.catalog` 裝置可用性及穩定不可用原因, 持久會話固定 backend, GPU 兼容性限制及禁止回退契約
-* `優化` 以統一 `ai.catalog` 目標目錄直接取代全部未發佈嘅 AI 列表同設定探測 API, 補齊精確 `target` 路由, 完整回應同會話元數據, 穩定禁止回退錯誤, 並同步在線/離線資產
-* `優化` 擴充內置 runtime 參考文件同離線搜尋索引, 加入用於驗證 mapping/seeds/usage/retrace metadata 匯出嘅 6 個 `loadJarWithR8` 多載及協議 1.1 `retraceR8Stack` API, 並說明來源綁定同失敗即終止嘅禁止回退語義
-* `優化` 統一 README 版式與 Gradle 平台版本管理方式
-* `優化` MediaInfo 參考文件與離線搜尋同步 streamNumber, countGet, infoKind 和原始檔案路徑語義
-* `優化` 建置階段阻止意外引入原生相依套件, 並輸出 JSON 校驗報告
-* `優化` 同步郵件 (Mail) 參考文檔與離線搜索索引, 覆蓋 Angus Mail 插件的 mail 全局對象, MailClient 的收發, 搜索, 附件, 標記, 文件夾與監聽方法, MailMessage, MailAccountOptions 與服務商預設, MailSearchQuery 及 MailError 錯誤代碼
 
 ##### 更多發行歷史可參閱
 

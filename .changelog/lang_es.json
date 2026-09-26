@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Mejora",
   "changelog_label_dependency": "Dependencia",
   "$data": {
+    "v6.8.5": {
+      "released_date": "2026/09/26",
+      "improvement": [
+        "Documentación AI Agent 1.2.0: Herramientas MCP de servidores locales o externos seleccionados, con riesgo por servidor y el grupo mcp desactivado inicialmente"
+      ]
+    },
     "v6.8.4": {
       "released_date": "2026/09/26",
       "improvement": [

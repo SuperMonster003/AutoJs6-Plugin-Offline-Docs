@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11601029
-contentSha256=e2f0ae9fa59b7e569d8e802ee7af40c107b691e30763eb2892866168f2f0308a
+totalBytes=11605704
+contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.5
+
+###### 2026/09/26
+
+* `优化` AI Agent 文档 1.2.0: 本机或外部 MCP 服务器的选定工具, 按服务器设置风险等级, mcp 工具组默认关闭
+
 # v6.8.4
 
 ###### 2026/09/26
@@ -131,33 +137,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` 同步 ai.agent 任务 API, AgentRun 生命周期, 询问与确认, 预算, 登记脚本结果, 三个示例及离线搜索索引
 * `优化` 同步 EPUB 文档, 覆盖书籍读取, 内容提取, 导出, 搜索及阅读器会话控制
 * `优化` 补充 Readium EPUB Reader 1.1.0 的高亮及笔记文档, 包含 annotations 查询, highlight 事件及位置对象
-
-# v6.8.0
-
-###### 2026/09/19
-
-* `修复` 离线文档校验将公开方法 callAutoJs 误判为旧版产品名称的问题
-* `修复` AGP 9.1 构建时的 SDK XML v4 解析警告, 以及 JVM 单元测试误触发 APK 原生库对齐检查的问题 (共享构建插件 1.8.3)
-* `优化` 同步坐标点击, 无限重试及 Flow 异常诊断文档和搜索索引
-* `优化` 同步 Flow 可选步骤, 循环, 链式查找, 集合快照及默认值文档
-* `优化` 同步 Android 17 本地网络权限文档, 补充授权, 重试及 Socket/MQTT 和插件的权限说明
-* `优化` 同步 device.pageSize 文档, 说明返回值单位及内存页兼容性
-* `优化` 同步 OCR 引擎选择, 模式读取, tap 重置及单次调用选项文档
-* `优化` 同步 MediaInfo read/snapshot/capabilities 文档, 补充 v1/v2 快照及引擎信息
-* `优化` 同步 Pinyin 自定义词典, compare/compact 及 Node.js 桥接文档
-* `优化` 同步 Image Quantization v4 文档, 补充像素及内存预算, 资源诊断和取消机制
-* `优化` 插件版本名跟随目标文档版本, 同步成功后自动更新构建号
-* `优化` 同步 YOLO 预览版接口文档, 补充插件选择, 模型配置, 返回值及错误码
-* `优化` 补充 AI 模型发现, 目标选择, 多角色历史, 生成参数, 用量及流式输出文档
-* `优化` 补充 ai.session 持久会话文档, 包含会话参数, 多轮输入及资源释放
-* `优化` 补充 structuredJson/responseSchema 文档, 包含 JSON Schema 约束, 持久会话及错误处理
-* `优化` 补充 CPU/GPU/NPU 后端选择及 ai.catalog 可用性文档, 说明兼容性和不可用时的行为
-* `优化` AI 文档改用统一的 ai.catalog 目录, 补充目标路由, 响应及会话元数据
-* `优化` 补充 loadJarWithR8 导出及 retraceR8Stack 调用栈还原文档, 说明产物校验及失败行为
-* `优化` 统一 README 版式与 Gradle 平台版本管理方式
-* `优化` MediaInfo 参考文档与离线搜索同步 streamNumber, countGet, infoKind 和原始文件路径语义
-* `优化` 构建阶段阻止意外引入原生依赖, 并输出 JSON 校验报告
-* `优化` 同步 Mail 文档, 覆盖账户, 收发, 搜索, 附件, 标记, 文件夹, 监听及错误码
 
 ##### 更多发行历史可参阅
 
