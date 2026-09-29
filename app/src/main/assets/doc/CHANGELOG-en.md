@@ -6,9 +6,10 @@
 
 # v6.8.5
 
-###### 2026/09/26
+###### 2026/09/29
 
 * `Improvement` AI Agent documentation 1.2.0: MCP tools from selected local or external servers, with per-server risk settings and the mcp group disabled by default
+* `Improvement` Synchronize 3-Stove Agent on-demand connection documentation: Plugin Center as the sole enable switch, automatic first-install enablement with explicit disable choices preserved, worker-thread waits for initial synchronous connections, asynchronous queries, read-only status and no task replay
 
 # v6.8.4
 

@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11605704
-contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
+totalBytes=11610292
+contentSha256=e4f1c4ea100278e791878d9d63941cd4fd18c1b23fd43b8c53ae84e93d7ee4f9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -116,9 +116,10 @@ category=offline-docs
 
 # v6.8.5
 
-###### 2026/09/26
+###### 2026/09/29
 
 * `تحسين` توثيق AI Agent 1.2.0: أدوات MCP المختارة من خوادم محلية أو خارجية مع مستوى خطر لكل خادم ومجموعة mcp معطلة افتراضيا
+* `تحسين` مزامنة توثيق اتصال 3-Stove Agent عند الحاجة: مركز المكونات كمفتاح التفعيل الوحيد والتفعيل الأول التلقائي مع حفظ التعطيل وانتظار الاتصال المتزامن الأول في خيط العمل والاستعلامات غير المتزامنة و status للقراءة فقط وعدم إعادة المهام
 
 # v6.8.4
 

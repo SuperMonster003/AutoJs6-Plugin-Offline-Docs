@@ -6,9 +6,10 @@
   "changelog_label_dependency": "Dependencia",
   "$data": {
     "v6.8.5": {
-      "released_date": "2026/09/26",
+      "released_date": "2026/09/29",
       "improvement": [
-        "Documentación AI Agent 1.2.0: Herramientas MCP de servidores locales o externos seleccionados, con riesgo por servidor y el grupo mcp desactivado inicialmente"
+        "Documentación AI Agent 1.2.0: Herramientas MCP de servidores locales o externos seleccionados, con riesgo por servidor y el grupo mcp desactivado inicialmente",
+        "Documentación de conexión bajo demanda de 3-Stove Agent: centro de plugins como único interruptor, activación inicial automática y desactivaciones respetadas, espera síncrona en un hilo de trabajo, consultas asíncronas, status de solo lectura y sin repetición de tareas"
       ]
     },
     "v6.8.4": {

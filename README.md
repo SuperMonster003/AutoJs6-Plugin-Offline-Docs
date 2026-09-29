@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=199
-totalBytes=11605704
-contentSha256=5d60c61cce1d134871562773370b2138dc9471676557b7a49288673d166c6da6
+totalBytes=11610292
+contentSha256=e4f1c4ea100278e791878d9d63941cd4fd18c1b23fd43b8c53ae84e93d7ee4f9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.5
 
-###### 2026/09/26
+###### 2026/09/29
 
 * `优化` AI Agent 文档 1.2.0: 本机或外部 MCP 服务器的选定工具, 按服务器设置风险等级, mcp 工具组默认关闭
+* `优化` 同步 3-Stove Agent 按需连接文档: 插件中心统一启用, 官方首次安装自动启用并尊重禁用, 同步调用首次连接的工作线程要求, 异步查询, status 只读与任务不重放
 
 # v6.8.4
 

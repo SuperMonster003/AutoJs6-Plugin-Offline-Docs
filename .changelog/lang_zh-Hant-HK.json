@@ -6,9 +6,10 @@
   "changelog_label_dependency": "依賴",
   "$data": {
     "v6.8.5": {
-      "released_date": "2026/09/26",
+      "released_date": "2026/09/29",
       "improvement": [
-        "AI Agent 文件 1.2.0: 本機或外部 MCP 伺服器的所選工具, 按伺服器設定風險等級, mcp 工具組預設關閉"
+        "AI Agent 文件 1.2.0: 本機或外部 MCP 伺服器的所選工具, 按伺服器設定風險等級, mcp 工具組預設關閉",
+        "同步 3-Stove Agent 按需連線文件: 外掛中心統一啟用, 官方首次安裝自動啟用並尊重停用, 同步呼叫首次連線的工作執行緒要求, 非同步查詢, status 唯讀與任務不重播"
       ]
     },
     "v6.8.4": {
