@@ -6,10 +6,11 @@
   "changelog_label_dependency": "Dependency",
   "$data": {
     "v6.8.5": {
-      "released_date": "2026/09/29",
+      "released_date": "2026/10/01",
       "improvement": [
         "AI Agent documentation 1.2.0: MCP tools from selected local or external servers, with per-server risk settings and the mcp group disabled by default",
-        "Synchronize 3-Stove Agent on-demand connection documentation: Plugin Center as the sole enable switch, automatic first-install enablement with explicit disable choices preserved, worker-thread waits for initial synchronous connections, asynchronous queries, read-only status and no task replay"
+        "Synchronize 3-Stove Agent on-demand connection documentation: Plugin Center as the sole enable switch, automatic first-install enablement with explicit disable choices preserved, worker-thread waits for initial synchronous connections, asynchronous queries, read-only status and no task replay",
+        "installer / $installer script API, synchronous and asynchronous installation, session events, source inspection, uninstall and authorizers, including default interaction and cancellation behavior"
       ]
     },
     "v6.8.4": {

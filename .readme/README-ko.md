@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=199
-totalBytes=11610292
-contentSha256=e4f1c4ea100278e791878d9d63941cd4fd18c1b23fd43b8c53ae84e93d7ee4f9
+fileCount=200
+totalBytes=11713370
+contentSha256=032eaf17fb2bad281d4594e91f1e0d5b2ced4c83c85e6b2cb7221d3c0488f8ec
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -116,10 +116,11 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v6.8.5
 
-###### 2026/09/29
+###### 2026/10/01
 
 * `개선` AI Agent 문서 1.2.0: 선택한 로컬 또는 외부 MCP 서버 도구와 서버별 위험 설정, 기본적으로 꺼진 mcp 그룹
 * `개선` 3-Stove Agent 필요 시 연결 문서 동기화: 플러그인 센터의 통합 활성화, 최초 설치 자동 활성화와 비활성화 선택 유지, 최초 동기 연결을 기다리는 작업 스레드, 비동기 조회, 읽기 전용 status와 작업 재실행 금지
+* `개선` installer / $installer 스크립트 API, 동기 및 비동기 설치, 세션 이벤트, 소스 검사, 제거 및 권한 방식, 기본 상호작용과 취소 동작
 
 # v6.8.4
 
