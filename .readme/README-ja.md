@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11726643
-contentSha256=ca114b049bcdba1c2c9c0710d4e829865be00ce7317bf75f54e176b8e9eae800
+totalBytes=11737025
+contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2ada5142efb29bfb03760d4323147e15dd053504
+sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -123,6 +123,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` installer / $installer スクリプト API, 同期および非同期インストール, セッションイベント, ソース検査, アンインストールと認可方式, デフォルトの操作とキャンセルの動作
 * `改善` installer P8: Dhizuku 認可, notification インストール, preferred/persistent の既定モードとプラグイン機能の制限
 * `改善` インストーラーの永続デフォルト条件を明確化: Dhizuku API 26-33, user 0 の Root/system 権限, 自動認証の対象, ローカル設定記録と未確認の書き込み
+* `改善` Installer の高度なオプション, 所有権と DexOpt の観測結果, optimizing 段階, V3 対応確認とローカル署名/ブロックリストの条件
 
 # v6.8.4
 

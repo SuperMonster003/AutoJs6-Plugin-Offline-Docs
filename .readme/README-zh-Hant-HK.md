@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11726643
-contentSha256=ca114b049bcdba1c2c9c0710d4e829865be00ce7317bf75f54e176b8e9eae800
+totalBytes=11737025
+contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2ada5142efb29bfb03760d4323147e15dd053504
+sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -123,6 +123,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` installer / $installer 指令碼介面, 同步與非同步安裝, 工作階段事件, 來源檢查, 解除安裝與授權方式, 包含預設互動和取消語義
 * `優化` installer P8: Dhizuku 授權, notification 安裝, preferred/persistent 預設模式及插件能力限制
 * `優化` 明確安裝器持久預設界限: Dhizuku API 26-33, Root/system 身分與 user 0, 自動授權篩選, 本機配置回執和未確認寫入
+* `優化` Installer 進階安裝選項, 擁有權與 DexOpt 觀察結果, optimizing 階段, V3 能力協商及本機簽章/黑名單界限
 
 # v6.8.4
 

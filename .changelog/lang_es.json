@@ -12,7 +12,8 @@
         "Documentación de conexión bajo demanda de 3-Stove Agent: centro de plugins como único interruptor, activación inicial automática y desactivaciones respetadas, espera síncrona en un hilo de trabajo, consultas asíncronas, status de solo lectura y sin repetición de tareas",
         "API de scripts installer / $installer, instalación síncrona y asíncrona, eventos de sesión, inspección de fuentes, desinstalación y autorizaciones, con interacción predeterminada y cancelación",
         "installer P8: autorización Dhizuku, instalación notification, modos predeterminados preferred/persistent y límites de capacidades del plugin",
-        "Aclarar los valores persistentes del instalador: Dhizuku API 26-33, identidad Root/system en user 0, autorizaciones automáticas admitidas, registros locales y escrituras sin confirmar"
+        "Aclarar los valores persistentes del instalador: Dhizuku API 26-33, identidad Root/system en user 0, autorizaciones automáticas admitidas, registros locales y escrituras sin confirmar",
+        "Opciones avanzadas de Installer, observaciones de propiedad y DexOpt, fase optimizing, negociación V3 y límites de las reglas locales de firma/bloqueo"
       ]
     },
     "v6.8.4": {

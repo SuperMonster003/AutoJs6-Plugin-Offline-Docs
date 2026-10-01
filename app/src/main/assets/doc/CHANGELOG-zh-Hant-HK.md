@@ -13,6 +13,7 @@
 * `優化` installer / $installer 指令碼介面, 同步與非同步安裝, 工作階段事件, 來源檢查, 解除安裝與授權方式, 包含預設互動和取消語義
 * `優化` installer P8: Dhizuku 授權, notification 安裝, preferred/persistent 預設模式及插件能力限制
 * `優化` 明確安裝器持久預設界限: Dhizuku API 26-33, Root/system 身分與 user 0, 自動授權篩選, 本機配置回執和未確認寫入
+* `優化` Installer 進階安裝選項, 擁有權與 DexOpt 觀察結果, optimizing 階段, V3 能力協商及本機簽章/黑名單界限
 
 # v6.8.4
 

@@ -13,6 +13,7 @@
 * `Amélioration` API de script installer / $installer, installation synchrone et asynchrone, événements de session, inspection des sources, désinstallation et autorisations, avec interaction par défaut et annulation
 * `Amélioration` installer P8: autorisation Dhizuku, installation notification, modes par défaut preferred/persistent et limites des capacités du plugin
 * `Amélioration` Préciser les valeurs persistantes de l'installateur: Dhizuku API 26-33, identité Root/system pour user 0, sélection automatique des autorisations, reçus locaux et écritures non confirmées
+* `Amélioration` Options avancées Installer, observations de propriété et DexOpt, étape optimizing, négociation V3 et limites des règles locales de signature/blocage
 
 # v6.8.4
 

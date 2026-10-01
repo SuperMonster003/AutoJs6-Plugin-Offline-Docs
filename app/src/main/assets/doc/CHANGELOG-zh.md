@@ -13,6 +13,7 @@
 * `优化` installer / $installer 脚本接口, 同步与异步安装, 会话事件, 来源检查, 卸载与授权方式, 包含默认交互和取消语义
 * `优化` installer P8: Dhizuku 授权, notification 安装, preferred/persistent 默认模式及插件能力限制
 * `优化` 明确安装器持久默认边界: Dhizuku API 26-33, Root/system 身份与 user 0, 自动授权筛选, 本地配置回执和未确认写入
+* `优化` Installer 高级安装选项, 所有权与 DexOpt 观察结果, optimizing 阶段, V3 能力协商及本地签名/黑名单边界
 
 # v6.8.4
 

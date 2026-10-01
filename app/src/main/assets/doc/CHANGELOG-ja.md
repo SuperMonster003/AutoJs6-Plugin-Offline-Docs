@@ -13,6 +13,7 @@
 * `改善` installer / $installer スクリプト API, 同期および非同期インストール, セッションイベント, ソース検査, アンインストールと認可方式, デフォルトの操作とキャンセルの動作
 * `改善` installer P8: Dhizuku 認可, notification インストール, preferred/persistent の既定モードとプラグイン機能の制限
 * `改善` インストーラーの永続デフォルト条件を明確化: Dhizuku API 26-33, user 0 の Root/system 権限, 自動認証の対象, ローカル設定記録と未確認の書き込み
+* `改善` Installer の高度なオプション, 所有権と DexOpt の観測結果, optimizing 段階, V3 対応確認とローカル署名/ブロックリストの条件
 
 # v6.8.4
 
