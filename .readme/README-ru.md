@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11713370
-contentSha256=032eaf17fb2bad281d4594e91f1e0d5b2ced4c83c85e6b2cb7221d3c0488f8ec
+totalBytes=11721912
+contentSha256=9a11dc5d1a8a6ef9c66d00b274a7bc803936859d01a4803c405097184b543c22
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
+sourceBaseCommit=d5e012e6f0680ceaacc358ce9208aebab3e39c78
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,11 +116,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.5
 
-###### 2026/10/01
+###### 2026/10/02
 
 * `Улучшение` Документация AI Agent 1.2.0: Выбранные инструменты локальных или внешних серверов MCP с отдельным уровнем риска; группа mcp изначально выключена
 * `Улучшение` Документация подключения 3-Stove Agent по запросу: единый переключатель в центре плагинов, автоматическое первое включение с сохранением отключения, ожидание первой синхронной связи в рабочем потоке, асинхронные запросы, status только для чтения и отсутствие повтора задач
 * `Улучшение` Скриптовый API installer / $installer, синхронная и асинхронная установка, события сеанса, проверка источников, удаление и способы авторизации, включая взаимодействие по умолчанию и отмену
+* `Улучшение` installer P8: авторизация Dhizuku, установка notification, режимы по умолчанию preferred/persistent и ограничения возможностей плагина
 
 # v6.8.4
 
