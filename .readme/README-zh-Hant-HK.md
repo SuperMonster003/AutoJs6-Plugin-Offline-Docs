@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11713370
-contentSha256=032eaf17fb2bad281d4594e91f1e0d5b2ced4c83c85e6b2cb7221d3c0488f8ec
+totalBytes=11721912
+contentSha256=9a11dc5d1a8a6ef9c66d00b274a7bc803936859d01a4803c405097184b543c22
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
+sourceBaseCommit=d5e012e6f0680ceaacc358ce9208aebab3e39c78
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,11 +116,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 # v6.8.5
 
-###### 2026/10/01
+###### 2026/10/02
 
 * `優化` AI Agent 文件 1.2.0: 本機或外部 MCP 伺服器的所選工具, 按伺服器設定風險等級, mcp 工具組預設關閉
 * `優化` 同步 3-Stove Agent 按需連線文件: 外掛中心統一啟用, 官方首次安裝自動啟用並尊重停用, 同步呼叫首次連線的工作執行緒要求, 非同步查詢, status 唯讀與任務不重播
 * `優化` installer / $installer 指令碼介面, 同步與非同步安裝, 工作階段事件, 來源檢查, 解除安裝與授權方式, 包含預設互動和取消語義
+* `優化` installer P8: Dhizuku 授權, notification 安裝, preferred/persistent 預設模式及插件能力限制
 
 # v6.8.4
 

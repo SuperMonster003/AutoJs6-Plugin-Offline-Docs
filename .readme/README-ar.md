@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11713370
-contentSha256=032eaf17fb2bad281d4594e91f1e0d5b2ced4c83c85e6b2cb7221d3c0488f8ec
+totalBytes=11721912
+contentSha256=9a11dc5d1a8a6ef9c66d00b274a7bc803936859d01a4803c405097184b543c22
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
+sourceBaseCommit=d5e012e6f0680ceaacc358ce9208aebab3e39c78
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,11 +116,12 @@ category=offline-docs
 
 # v6.8.5
 
-###### 2026/10/01
+###### 2026/10/02
 
 * `تحسين` توثيق AI Agent 1.2.0: أدوات MCP المختارة من خوادم محلية أو خارجية مع مستوى خطر لكل خادم ومجموعة mcp معطلة افتراضيا
 * `تحسين` مزامنة توثيق اتصال 3-Stove Agent عند الحاجة: مركز المكونات كمفتاح التفعيل الوحيد والتفعيل الأول التلقائي مع حفظ التعطيل وانتظار الاتصال المتزامن الأول في خيط العمل والاستعلامات غير المتزامنة و status للقراءة فقط وعدم إعادة المهام
 * `تحسين` واجهة البرامج النصية installer / $installer, التثبيت المتزامن وغير المتزامن, أحداث الجلسة وفحص المصادر والإزالة وطرق التفويض, مع التفاعل الافتراضي وسلوك الإلغاء
+* `تحسين` installer P8: تفويض Dhizuku وتثبيت notification وأوضاع preferred/persistent الافتراضية وحدود إمكانات الملحق
 
 # v6.8.4
 

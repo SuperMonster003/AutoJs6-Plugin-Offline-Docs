@@ -6,11 +6,12 @@
 
 # v6.8.5
 
-###### 2026/10/01
+###### 2026/10/02
 
 * `Improvement` AI Agent documentation 1.2.0: MCP tools from selected local or external servers, with per-server risk settings and the mcp group disabled by default
 * `Improvement` Synchronize 3-Stove Agent on-demand connection documentation: Plugin Center as the sole enable switch, automatic first-install enablement with explicit disable choices preserved, worker-thread waits for initial synchronous connections, asynchronous queries, read-only status and no task replay
 * `Improvement` installer / $installer script API, synchronous and asynchronous installation, session events, source inspection, uninstall and authorizers, including default interaction and cancellation behavior
+* `Improvement` installer P8: Dhizuku authorization, notification installation, preferred/persistent default modes and plugin capability limits
 
 # v6.8.4
 

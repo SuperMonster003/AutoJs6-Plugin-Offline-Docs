@@ -6,11 +6,12 @@
   "changelog_label_dependency": "Dépendance",
   "$data": {
     "v6.8.5": {
-      "released_date": "2026/10/01",
+      "released_date": "2026/10/02",
       "improvement": [
         "Documentation AI Agent 1.2.0: Outils MCP de serveurs locaux ou externes choisis, avec un niveau de risque par serveur et le groupe mcp désactivé par défaut",
         "Synchronisation de la connexion à la demande de 3-Stove Agent: centre de plugins comme unique interrupteur, activation initiale automatique et désactivation respectée, attente synchrone sur un thread de travail, requêtes asynchrones, status en lecture seule et aucune reprise de tâches",
-        "API de script installer / $installer, installation synchrone et asynchrone, événements de session, inspection des sources, désinstallation et autorisations, avec interaction par défaut et annulation"
+        "API de script installer / $installer, installation synchrone et asynchrone, événements de session, inspection des sources, désinstallation et autorisations, avec interaction par défaut et annulation",
+        "installer P8: autorisation Dhizuku, installation notification, modes par défaut preferred/persistent et limites des capacités du plugin"
       ]
     },
     "v6.8.4": {

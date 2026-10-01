@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11713370
-contentSha256=032eaf17fb2bad281d4594e91f1e0d5b2ced4c83c85e6b2cb7221d3c0488f8ec
+totalBytes=11721912
+contentSha256=9a11dc5d1a8a6ef9c66d00b274a7bc803936859d01a4803c405097184b543c22
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
+sourceBaseCommit=d5e012e6f0680ceaacc358ce9208aebab3e39c78
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,11 +116,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 # v6.8.5
 
-###### 2026/10/01
+###### 2026/10/02
 
 * `Improvement` AI Agent documentation 1.2.0: MCP tools from selected local or external servers, with per-server risk settings and the mcp group disabled by default
 * `Improvement` Synchronize 3-Stove Agent on-demand connection documentation: Plugin Center as the sole enable switch, automatic first-install enablement with explicit disable choices preserved, worker-thread waits for initial synchronous connections, asynchronous queries, read-only status and no task replay
 * `Improvement` installer / $installer script API, synchronous and asynchronous installation, session events, source inspection, uninstall and authorizers, including default interaction and cancellation behavior
+* `Improvement` installer P8: Dhizuku authorization, notification installation, preferred/persistent default modes and plugin capability limits
 
 # v6.8.4
 
