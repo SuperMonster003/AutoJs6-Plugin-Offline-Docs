@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11726643
-contentSha256=ca114b049bcdba1c2c9c0710d4e829865be00ce7317bf75f54e176b8e9eae800
+totalBytes=11737025
+contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2ada5142efb29bfb03760d4323147e15dd053504
+sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -123,6 +123,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Скриптовый API installer / $installer, синхронная и асинхронная установка, события сеанса, проверка источников, удаление и способы авторизации, включая взаимодействие по умолчанию и отмену
 * `Улучшение` installer P8: авторизация Dhizuku, установка notification, режимы по умолчанию preferred/persistent и ограничения возможностей плагина
 * `Улучшение` Уточнены постоянные настройки установщика: Dhizuku API 26-33, Root/system для user 0, автоматический выбор доступных разрешений, локальные записи и неподтвержденные изменения
+* `Улучшение` Расширенные параметры Installer, наблюдения владения и DexOpt, этап optimizing, согласование V3 и ограничения локальных правил подписи/блокировки
 
 # v6.8.4
 
