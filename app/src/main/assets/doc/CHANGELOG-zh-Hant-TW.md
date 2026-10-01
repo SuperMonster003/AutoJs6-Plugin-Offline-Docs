@@ -12,6 +12,7 @@
 * `優化` 同步 3-Stove Agent 按需連線文件: 外掛中心統一啟用, 官方首次安裝自動啟用並尊重停用, 同步呼叫首次連線的工作執行緒要求, 非同步查詢, status 唯讀與任務不重播
 * `優化` installer / $installer 指令碼介面, 同步與非同步安裝, 工作階段事件, 來源檢查, 解除安裝與授權方式, 包含預設互動和取消語義
 * `優化` installer P8: Dhizuku 授權, notification 安裝, preferred/persistent 預設模式及外掛能力限制
+* `優化` 明確安裝器持久預設界限: Dhizuku API 26-33, Root/system 身分與 user 0, 自動授權篩選, 本機設定回執和未確認寫入
 
 # v6.8.4
 

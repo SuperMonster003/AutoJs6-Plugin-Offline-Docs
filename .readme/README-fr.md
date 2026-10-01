@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11721912
-contentSha256=9a11dc5d1a8a6ef9c66d00b274a7bc803936859d01a4803c405097184b543c22
+totalBytes=11726643
+contentSha256=ca114b049bcdba1c2c9c0710d4e829865be00ce7317bf75f54e176b8e9eae800
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=d5e012e6f0680ceaacc358ce9208aebab3e39c78
+sourceBaseCommit=2ada5142efb29bfb03760d4323147e15dd053504
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -122,6 +122,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Synchronisation de la connexion à la demande de 3-Stove Agent: centre de plugins comme unique interrupteur, activation initiale automatique et désactivation respectée, attente synchrone sur un thread de travail, requêtes asynchrones, status en lecture seule et aucune reprise de tâches
 * `Amélioration` API de script installer / $installer, installation synchrone et asynchrone, événements de session, inspection des sources, désinstallation et autorisations, avec interaction par défaut et annulation
 * `Amélioration` installer P8: autorisation Dhizuku, installation notification, modes par défaut preferred/persistent et limites des capacités du plugin
+* `Amélioration` Préciser les valeurs persistantes de l'installateur: Dhizuku API 26-33, identité Root/system pour user 0, sélection automatique des autorisations, reçus locaux et écritures non confirmées
 
 # v6.8.4
 

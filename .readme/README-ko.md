@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11721912
-contentSha256=9a11dc5d1a8a6ef9c66d00b274a7bc803936859d01a4803c405097184b543c22
+totalBytes=11726643
+contentSha256=ca114b049bcdba1c2c9c0710d4e829865be00ce7317bf75f54e176b8e9eae800
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=d5e012e6f0680ceaacc358ce9208aebab3e39c78
+sourceBaseCommit=2ada5142efb29bfb03760d4323147e15dd053504
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -122,6 +122,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` 3-Stove Agent 필요 시 연결 문서 동기화: 플러그인 센터의 통합 활성화, 최초 설치 자동 활성화와 비활성화 선택 유지, 최초 동기 연결을 기다리는 작업 스레드, 비동기 조회, 읽기 전용 status와 작업 재실행 금지
 * `개선` installer / $installer 스크립트 API, 동기 및 비동기 설치, 세션 이벤트, 소스 검사, 제거 및 권한 방식, 기본 상호작용과 취소 동작
 * `개선` installer P8: Dhizuku 승인, notification 설치, preferred/persistent 기본 모드 및 플러그인 기능 제한
+* `개선` 설치 관리자의 영구 기본값 조건 명확화: Dhizuku API 26-33, user 0의 Root/system 권한, 자동 권한 선택, 로컬 설정 기록 및 확인되지 않은 쓰기
 
 # v6.8.4
 

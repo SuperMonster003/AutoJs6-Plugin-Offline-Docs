@@ -12,6 +12,7 @@
 * `Mejora` Documentación de conexión bajo demanda de 3-Stove Agent: centro de plugins como único interruptor, activación inicial automática y desactivaciones respetadas, espera síncrona en un hilo de trabajo, consultas asíncronas, status de solo lectura y sin repetición de tareas
 * `Mejora` API de scripts installer / $installer, instalación síncrona y asíncrona, eventos de sesión, inspección de fuentes, desinstalación y autorizaciones, con interacción predeterminada y cancelación
 * `Mejora` installer P8: autorización Dhizuku, instalación notification, modos predeterminados preferred/persistent y límites de capacidades del plugin
+* `Mejora` Aclarar los valores persistentes del instalador: Dhizuku API 26-33, identidad Root/system en user 0, autorizaciones automáticas admitidas, registros locales y escrituras sin confirmar
 
 # v6.8.4
 

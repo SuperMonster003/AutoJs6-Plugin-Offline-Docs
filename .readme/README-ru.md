@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11721912
-contentSha256=9a11dc5d1a8a6ef9c66d00b274a7bc803936859d01a4803c405097184b543c22
+totalBytes=11726643
+contentSha256=ca114b049bcdba1c2c9c0710d4e829865be00ce7317bf75f54e176b8e9eae800
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=d5e012e6f0680ceaacc358ce9208aebab3e39c78
+sourceBaseCommit=2ada5142efb29bfb03760d4323147e15dd053504
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -122,6 +122,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Документация подключения 3-Stove Agent по запросу: единый переключатель в центре плагинов, автоматическое первое включение с сохранением отключения, ожидание первой синхронной связи в рабочем потоке, асинхронные запросы, status только для чтения и отсутствие повтора задач
 * `Улучшение` Скриптовый API installer / $installer, синхронная и асинхронная установка, события сеанса, проверка источников, удаление и способы авторизации, включая взаимодействие по умолчанию и отмену
 * `Улучшение` installer P8: авторизация Dhizuku, установка notification, режимы по умолчанию preferred/persistent и ограничения возможностей плагина
+* `Улучшение` Уточнены постоянные настройки установщика: Dhizuku API 26-33, Root/system для user 0, автоматический выбор доступных разрешений, локальные записи и неподтвержденные изменения
 
 # v6.8.4
 
