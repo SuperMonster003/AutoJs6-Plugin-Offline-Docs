@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=199
-totalBytes=11610292
-contentSha256=e4f1c4ea100278e791878d9d63941cd4fd18c1b23fd43b8c53ae84e93d7ee4f9
+fileCount=200
+totalBytes=11713370
+contentSha256=032eaf17fb2bad281d4594e91f1e0d5b2ced4c83c85e6b2cb7221d3c0488f8ec
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -116,10 +116,11 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.5
 
-###### 2026/09/29
+###### 2026/10/01
 
 * `Amélioration` Documentation AI Agent 1.2.0: Outils MCP de serveurs locaux ou externes choisis, avec un niveau de risque par serveur et le groupe mcp désactivé par défaut
 * `Amélioration` Synchronisation de la connexion à la demande de 3-Stove Agent: centre de plugins comme unique interrupteur, activation initiale automatique et désactivation respectée, attente synchrone sur un thread de travail, requêtes asynchrones, status en lecture seule et aucune reprise de tâches
+* `Amélioration` API de script installer / $installer, installation synchrone et asynchrone, événements de session, inspection des sources, désinstallation et autorisations, avec interaction par défaut et annulation
 
 # v6.8.4
 

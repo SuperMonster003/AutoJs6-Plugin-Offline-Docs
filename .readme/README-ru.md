@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=199
-totalBytes=11610292
-contentSha256=e4f1c4ea100278e791878d9d63941cd4fd18c1b23fd43b8c53ae84e93d7ee4f9
+fileCount=200
+totalBytes=11713370
+contentSha256=032eaf17fb2bad281d4594e91f1e0d5b2ced4c83c85e6b2cb7221d3c0488f8ec
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=f9ed7afe41f2cdf2603dc281323be33869ced6d7
 sourcePath=api
@@ -116,10 +116,11 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.5
 
-###### 2026/09/29
+###### 2026/10/01
 
 * `Улучшение` Документация AI Agent 1.2.0: Выбранные инструменты локальных или внешних серверов MCP с отдельным уровнем риска; группа mcp изначально выключена
 * `Улучшение` Документация подключения 3-Stove Agent по запросу: единый переключатель в центре плагинов, автоматическое первое включение с сохранением отключения, ожидание первой синхронной связи в рабочем потоке, асинхронные запросы, status только для чтения и отсутствие повтора задач
+* `Улучшение` Скриптовый API installer / $installer, синхронная и асинхронная установка, события сеанса, проверка источников, удаление и способы авторизации, включая взаимодействие по умолчанию и отмену
 
 # v6.8.4
 
