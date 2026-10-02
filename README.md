@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11737025
-contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
+totalBytes=11744511
+contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
+sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
+
 # v6.8.5
 
 ###### 2026/10/02
@@ -130,18 +136,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/09/26
 
 * `优化` 同步 AI Agent 1.1.0 开发版本的 script_dynamic 工具组, 每份源码单独确认, 私有源码记录及通过系统文件选择器保存登记脚本的流程
-
-# v6.8.3
-
-###### 2026/09/25
-
-* `优化` 说明 Agent 1.0.0 的 Android 与宿主要求, 3-Stone AI 模型目录及文本/OCR 观察范围, 文档内容保持 6.8.0 并使用独立插件发行版本
-* `优化` 同步 Agent 全局工具组, 审慎模式, 默认预算与协议上限, 以及预设和单次任务的收紧规则
-* `优化` 同步 Agent 偏好记忆, 逐条确认, 作用域查询, JSON 导入/导出及自动注入与记忆工具的区别
-* `优化` 同步 Agent 命名预设, 默认选择, 模型选择, 固定上下文合并及工具, 预算, 确认, 脚本目录和记忆作用域的收紧规则
-* `优化` 同步 ai.agent 任务 API, AgentRun 生命周期, 询问与确认, 预算, 登记脚本结果, 三个示例及离线搜索索引
-* `优化` 同步 EPUB 文档, 覆盖书籍读取, 内容提取, 导出, 搜索及阅读器会话控制
-* `优化` 补充 Readium EPUB Reader 1.1.0 的高亮及笔记文档, 包含 annotations 查询, highlight 事件及位置对象
 
 ##### 更多发行历史可参阅
 

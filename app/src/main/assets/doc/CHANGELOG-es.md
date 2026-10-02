@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `Mejora` Perfiles de Installer por origen/prefijo de paquete, prioridad de opciones explícitas y tres restablecimientos con null, sourceDeleteRequested y conservación de fuentes compartidas del lote; requiere anfitrión 5312+ y plugin compatible
+
 # v6.8.5
 
 ###### 2026/10/02

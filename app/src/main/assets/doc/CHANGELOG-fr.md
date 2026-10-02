@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
+
 # v6.8.5
 
 ###### 2026/10/02

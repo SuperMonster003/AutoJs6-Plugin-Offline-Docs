@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11737025
-contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
+totalBytes=11744511
+contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
+sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `優化` Installer 來源/套件名稱前綴設定檔, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要主程式 5312+ 及外掛對應能力
+
 # v6.8.5
 
 ###### 2026/10/02
@@ -130,18 +136,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/09/26
 
 * `優化` 同步 AI Agent 1.1.0 開發版本的 script_dynamic 工具組, 每份原始碼個別確認, 私有原始碼記錄及透過系統檔案選擇器儲存登記指令碼的流程
-
-# v6.8.3
-
-###### 2026/09/25
-
-* `優化` 說明 Agent 1.0.0 的 Android 與宿主要求, 3-Stone AI 模型目錄及文字/OCR 觀察範圍, 文件內容維持 6.8.0 並使用獨立外掛發行版本
-* `優化` 同步 Agent 全域工具組, 審慎模式, 預設預算與協定上限, 以及預設和單次任務的收緊規則
-* `優化` 同步 Agent 偏好記憶, 逐項確認, 作用域查詢, JSON 匯入/匯出及自動注入與記憶工具的區別
-* `優化` 同步 Agent 命名預設, 預設值選擇, 模型選擇, 固定上下文合併及工具, 預算, 確認, 腳本目錄和記憶作用域的收緊規則
-* `優化` 同步 ai.agent 任務 API, AgentRun 生命週期, 詢問與確認, 預算, 登記腳本結果, 三個範例及離線搜尋索引
-* `優化` 同步電子書 (EPUB) 參考文件與離線搜尋索引, 涵蓋 Readium EPUB Reader 外掛的 epub 全域物件, EpubBook 的中繼資料, 目錄, 閱讀順序, 正文擷取, 封面與資源匯出及全文搜尋, EpubReaderSession 的事件, 控制方法與閱讀偏好, EpubLocator 位置物件及 EpubError 錯誤代碼
-* `優化` 同步電子書 (EPUB) 參考文件與離線搜尋索引, 補充 Readium EPUB Reader 外掛 1.1.0 的螢光標示與筆記 (EPUB 契約版本 2): EpubBook#annotations 與便捷層 epub.annotations, EpubReaderSession 的 highlight 事件及 EpubLocator 的攜帶位置
 
 ##### 更多發行歷史可參閱
 

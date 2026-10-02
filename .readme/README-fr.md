@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11737025
-contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
+totalBytes=11744511
+contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
+sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
+
 # v6.8.5
 
 ###### 2026/10/02
@@ -130,18 +136,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/09/26
 
 * `Amélioration` Documente le groupe script_dynamic de la version de développement AI Agent 1.1.0, la confirmation de chaque source, son historique privé et la sauvegarde des scripts enregistrés via le sélecteur de fichiers système
-
-# v6.8.3
-
-###### 2026/09/25
-
-* `Amélioration` Documenter les exigences Android et hôte de Agent 1.0.0, le catalogue de modèles 3-Stone AI et les observations texte/OCR; conserver le contenu en 6.8.0 avec une version distincte du plugin
-* `Amélioration` Synchronisation des groupes globaux, du mode prudent, des budgets et limites du protocole Agent, et des restrictions par profil et tâche
-* `Amélioration` Synchroniser la mémoire des préférences Agent, les confirmations individuelles, les requêtes par portée, les imports/exports JSON et la distinction entre injection automatique et outils de mémoire
-* `Amélioration` Synchronisation des préréglages Agent nommés, des choix par défaut et du modèle, de la fusion du contexte fixe et des restrictions des outils, budgets, confirmations, dossiers de scripts et portées mémoire
-* `Amélioration` Synchronisation des API ai.agent, du cycle de vie AgentRun, des réponses et confirmations, budgets, résultats des scripts, trois exemples et index de recherche hors ligne
-* `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne, couvrant le global epub du plugin Readium EPUB Reader, les membres d'EpubBook pour les métadonnées, la table des matières, l'ordre de lecture, l'extraction de texte, l'export de la couverture et des ressources et la recherche plein texte, les événements, commandes et préférences de lecture d'EpubReaderSession, l'objet de position EpubLocator et les codes EpubError
-* `Amélioration` Synchronisation de la référence EPUB et de l'index de recherche hors ligne avec les surlignages et notes du plugin Readium EPUB Reader 1.1.0 (contrat EPUB version 2) : EpubBook#annotations et la couche de commodité epub.annotations, l'événement highlight d'EpubReaderSession et les porteurs d'EpubLocator
 
 ##### Pour plus d'historique des versions
 
