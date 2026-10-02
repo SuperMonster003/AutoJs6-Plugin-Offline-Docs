@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11737025
-contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
+totalBytes=11744511
+contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
+sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
+
 # v6.8.5
 
 ###### 2026/10/02
@@ -130,18 +136,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/09/26
 
 * `Improvement` Document the AI Agent 1.1.0 development script_dynamic group, individual source confirmation, private source history and saving registered scripts through the system file picker
-
-# v6.8.3
-
-###### 2026/09/25
-
-* `Improvement` Document Agent 1.0.0 Android and host requirements, the 3-Stone AI model catalog and text/OCR observations; keep documentation content at 6.8.0 with an independent plugin release version
-* `Improvement` Synchronize Agent global tool groups, cautious mode, budget defaults and protocol limits, with preset and per-task narrowing rules
-* `Improvement` Synchronize Agent preference memory, individual confirmation, scoped queries, JSON import/export and the distinction between automatic injection and memory tools
-* `Improvement` Synchronize named Agent presets, default selection, model selection, fixed context merging and tool, budget, confirmation, script-folder and memory-scope restrictions
-* `Improvement` Synchronize ai.agent task APIs, AgentRun lifecycle, input and confirmation, budgets, registered-script results, three examples and the offline search index
-* `Improvement` Synchronized the EPUB reference and the offline search index, covering the epub global of the Readium EPUB Reader plugin, the EpubBook members for metadata, table of contents, reading order, text extraction, cover and resource export and full-text search, the EpubReaderSession events, controls and reading preferences, the EpubLocator position object and the EpubError codes
-* `Improvement` Synchronized the EPUB reference and the offline search index with the highlights and notes of the Readium EPUB Reader plugin 1.1.0 (EPUB contract version 2): EpubBook#annotations and the convenience epub.annotations, the EpubReaderSession highlight event and the EpubLocator carriers
 
 ##### For more release history
 

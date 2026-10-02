@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11737025
-contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
+totalBytes=11744511
+contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
+sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `改善` Installer の起点/パッケージ名プレフィックス別プロファイル, 明示オプションの優先と 3 項目の null リセット, sourceDeleteRequested とバッチ共有ソースの保持. ホスト 5312+ と対応プラグインが必要
+
 # v6.8.5
 
 ###### 2026/10/02
@@ -130,18 +136,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/09/26
 
 * `改善` AI Agent 1.1.0 開発版の script_dynamic グループ, ソースごとの確認, 非公開のソース履歴とシステムファイル選択画面による登録スクリプト保存を文書化
-
-# v6.8.3
-
-###### 2026/09/25
-
-* `改善` Agent 1.0.0 の Android とホストの要件, 3-Stone AI のモデル一覧, テキスト/OCR 観測を説明し, 文書の内容バージョン 6.8.0 とプラグインのリリース番号を分離
-* `改善` Agent の全体ツール群, 慎重モード, 初期予算とプロトコル上限, プリセットとタスク単位の制限規則を同期
-* `改善` Agent の設定記憶, 個別確認, スコープ内検索, JSON 入出力と自動注入と記憶ツールの違いを同期
-* `改善` Agent の名前付きプリセット, 既定の選択, モデル選択, 固定コンテキストの結合とツール, 予算, 確認, スクリプトディレクトリ, 記憶の範囲の制限を同期
-* `改善` ai.agent API, AgentRun のライフサイクル, 質問と確認, 予算, 登録スクリプト結果, 3 つの例, オフライン検索索引を同期
-* `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグインの epub グローバル, EpubBook のメタデータ, 目次, 読み順, 本文抽出, 表紙とリソースの書き出しおよび全文検索, EpubReaderSession のイベント, 制御メソッドと閲覧設定, EpubLocator 位置オブジェクトおよび EpubError エラーコードを収録
-* `改善` 電子書籍 (EPUB) リファレンスとオフライン検索インデックスを同期し, Readium EPUB Reader プラグイン 1.1.0 のハイライトとノート (EPUB コントラクトバージョン 2) を補完: EpubBook#annotations と簡易層の epub.annotations, EpubReaderSession の highlight イベントおよび EpubLocator の運搬箇所
 
 ##### その他のリリース履歴
 

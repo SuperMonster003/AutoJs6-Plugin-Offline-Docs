@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
+
 # v6.8.5
 
 ###### 2026/10/02

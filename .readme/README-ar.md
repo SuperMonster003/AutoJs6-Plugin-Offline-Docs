@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11737025
-contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
+totalBytes=11744511
+contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
+sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
+
 # v6.8.5
 
 ###### 2026/10/02
@@ -130,18 +136,6 @@ category=offline-docs
 ###### 2026/09/26
 
 * `تحسين` توثيق مجموعة script_dynamic في إصدار التطوير AI Agent 1.1.0, وتأكيد كل مصدر على حدة, وسجل المصدر الخاص وحفظ البرامج المسجلة عبر منتقي ملفات النظام
-
-# v6.8.3
-
-###### 2026/09/25
-
-* `تحسين` توثيق متطلبات Android والمضيف في Agent 1.0.0 ودليل نماذج 3-Stone AI وملاحظات النص و OCR, مع إبقاء محتوى التوثيق عند 6.8.0 وإصدار مستقل للإضافة
-* `تحسين` مزامنة مجموعات Agent العامة والوضع الحذر والميزانيات وحدود البروتوكول وقواعد تضييق الإعدادات المسبقة والمهام
-* `تحسين` مزامنة ذاكرة تفضيلات Agent والتأكيد الفردي والاستعلامات حسب النطاق واستيراد وتصدير JSON والفرق بين الإضافة التلقائية وأدوات الذاكرة
-* `تحسين` مزامنة إعدادات Agent المسبقة المسماة والاختيار الافتراضي واختيار النموذج ودمج السياق الثابت وحدود الأدوات والميزانيات والتأكيدات ومجلدات السكربت ونطاق الذاكرة
-* `تحسين` مزامنة واجهة ai.agent ودورة حياة AgentRun والإجابات والتأكيدات والميزانيات ونتائج السكربتات وثلاثة أمثلة وفهرس البحث دون اتصال
-* `تحسين` مزامنة مرجع الكتب الإلكترونية (EPUB) وفهرس البحث دون اتصال, بما يشمل الكائن العام epub لإضافة Readium EPUB Reader, وأعضاء EpubBook للبيانات الوصفية وجدول المحتويات وترتيب القراءة واستخراج النص وتصدير الغلاف والموارد والبحث في النص الكامل, وأحداث EpubReaderSession وأساليب التحكم وتفضيلات القراءة, وكائن الموضع EpubLocator ورموز أخطاء EpubError
-* `تحسين` مزامنة مرجع الكتب الإلكترونية (EPUB) وفهرس البحث دون اتصال مع تمييزات وملاحظات إضافة Readium EPUB Reader 1.1.0 (الإصدار 2 من عقد EPUB): EpubBook#annotations وطبقة التيسير epub.annotations, وحدث highlight في EpubReaderSession, ومواضع حمل EpubLocator
 
 ##### لمزيد من سجل الإصدارات
 

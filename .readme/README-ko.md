@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11737025
-contentSha256=5007ae8d62dfb04a242af4ac6be646b42b3c1a49c12c335c6c492cfe8bb22811
+totalBytes=11744511
+contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=695f21a0b9cec6c60ce94c504cb5b8f4a517bb40
+sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.6
+
+###### 2026/10/02
+
+* `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
+
 # v6.8.5
 
 ###### 2026/10/02
@@ -130,18 +136,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/09/26
 
 * `개선` AI Agent 1.1.0 개발 버전의 script_dynamic 그룹, 소스별 확인, 비공개 소스 기록 및 시스템 파일 선택기를 통한 등록 스크립트 저장 절차 문서화
-
-# v6.8.3
-
-###### 2026/09/25
-
-* `개선` Agent 1.0.0의 Android 및 호스트 요구 사항, 3-Stone AI 모델 목록과 텍스트/OCR 관찰을 설명하고 문서 콘텐츠 6.8.0과 플러그인 릴리스 버전을 분리
-* `개선` Agent 전역 도구 그룹, 신중 모드, 기본 예산과 프로토콜 상한 및 프리셋과 개별 작업의 제한 규칙 동기화
-* `개선` Agent 환경설정 메모리, 개별 확인, 범위 내 조회, JSON 가져오기/내보내기와 자동 주입 및 메모리 도구의 차이를 동기화
-* `개선` Agent 이름 있는 프리셋, 기본값과 모델 선택, 고정 문맥 병합 및 도구, 예산, 확인, 스크립트 경로, 메모리 범위 제한 동기화
-* `개선` ai.agent API, AgentRun 수명 주기, 질문과 확인, 예산, 등록 스크립트 결과, 예제 3개 및 오프라인 검색 색인 동기화
-* `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인의 epub 전역 객체, EpubBook 의 메타데이터, 목차, 읽기 순서, 본문 추출, 표지와 리소스 내보내기 및 전문 검색, EpubReaderSession 의 이벤트, 제어 메서드와 읽기 환경설정, EpubLocator 위치 객체 및 EpubError 오류 코드를 수록
-* `개선` 전자책 (EPUB) 참조 문서와 오프라인 검색 색인을 동기화하여 Readium EPUB Reader 플러그인 1.1.0 의 하이라이트와 메모 (EPUB 계약 버전 2) 를 보강: EpubBook#annotations 와 편의 계층 epub.annotations, EpubReaderSession 의 highlight 이벤트 및 EpubLocator 의 전달 위치
 
 ##### 더 많은 릴리스 기록
 
