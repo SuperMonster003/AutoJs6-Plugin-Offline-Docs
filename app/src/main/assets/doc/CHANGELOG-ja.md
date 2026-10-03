@@ -6,9 +6,10 @@
 
 # v6.8.6
 
-###### 2026/10/02
+###### 2026/10/03
 
 * `改善` Installer の起点/パッケージ名プレフィックス別プロファイル, 明示オプションの優先と 3 項目の null リセット, sourceDeleteRequested とバッチ共有ソースの保持. ホスト 5312+ と対応プラグインが必要
+* `改善` セレクター minDepth/maxDepth/minIndexInParent/maxIndexInParent のメソッド説明とオフライン検索インデックス
 
 # v6.8.5
 

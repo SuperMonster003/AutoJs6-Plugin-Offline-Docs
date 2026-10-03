@@ -6,9 +6,10 @@
   "changelog_label_dependency": "تبعية",
   "$data": {
     "v6.8.6": {
-      "released_date": "2026/10/02",
+      "released_date": "2026/10/03",
       "improvement": [
-        "ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق"
+        "ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق",
+        "توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال"
       ]
     },
     "v6.8.5": {
