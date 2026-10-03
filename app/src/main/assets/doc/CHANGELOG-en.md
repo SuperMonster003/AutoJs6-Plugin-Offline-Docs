@@ -6,9 +6,10 @@
 
 # v6.8.6
 
-###### 2026/10/02
+###### 2026/10/03
 
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
+* `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
 
 # v6.8.5
 

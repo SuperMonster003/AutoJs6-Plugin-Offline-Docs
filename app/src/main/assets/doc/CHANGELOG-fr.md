@@ -6,9 +6,10 @@
 
 # v6.8.6
 
-###### 2026/10/02
+###### 2026/10/03
 
 * `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
+* `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
 
 # v6.8.5
 

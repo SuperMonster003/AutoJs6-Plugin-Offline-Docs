@@ -6,9 +6,10 @@
   "changelog_label_dependency": "Dependency",
   "$data": {
     "v6.8.6": {
-      "released_date": "2026/10/02",
+      "released_date": "2026/10/03",
       "improvement": [
-        "Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support"
+        "Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support",
+        "Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods"
       ]
     },
     "v6.8.5": {

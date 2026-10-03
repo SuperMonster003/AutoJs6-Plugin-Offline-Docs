@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=200
-totalBytes=11744511
-contentSha256=65786402628484d27bb4b59f23646f90477f0306c171ff70b2b99ea3f8ac7ec9
+totalBytes=11753669
+contentSha256=bdbcac941156b5c53638a9c8ced4938fd96777b45ca1e44db1bd1ae509143012
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6bdbdad6aed8d89b854b3489a80ac0a6c7cdf481
+sourceBaseCommit=c20ba294d956ebdf506047f4c8a6c527277e3b49
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.6
 
-###### 2026/10/02
+###### 2026/10/03
 
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
+* `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
 
 # v6.8.5
 

@@ -6,9 +6,10 @@
 
 # v6.8.6
 
-###### 2026/10/02
+###### 2026/10/03
 
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
+* `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
 
 # v6.8.5
 
