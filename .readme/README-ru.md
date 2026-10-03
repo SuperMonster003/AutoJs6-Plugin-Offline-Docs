@@ -65,7 +65,7 @@ fileCount=200
 totalBytes=11753669
 contentSha256=bdbcac941156b5c53638a9c8ced4938fd96777b45ca1e44db1bd1ae509143012
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c20ba294d956ebdf506047f4c8a6c527277e3b49
+sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
+* `Улучшение` Полный справочник API Compose UI: узлы и состояние, модификаторы, темы, сеансы и плавающие окна, свойства и события компонентов, потоки, доступность и упакованные приложения
 
 # v6.8.5
 

@@ -65,7 +65,7 @@ fileCount=200
 totalBytes=11753669
 contentSha256=bdbcac941156b5c53638a9c8ced4938fd96777b45ca1e44db1bd1ae509143012
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c20ba294d956ebdf506047f4c8a6c527277e3b49
+sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ category=offline-docs
 
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
 * `تحسين` توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال
+* `تحسين` مرجع API كامل لـ Compose UI: العقد والحالة والمعدلات والسمات والجلسات والنوافذ العائمة, خصائص المكونات وأحداثها, قواعد سلاسل التنفيذ, إمكانية الوصول والتطبيقات المجمعة
 
 # v6.8.5
 

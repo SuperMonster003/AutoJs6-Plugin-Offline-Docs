@@ -65,7 +65,7 @@ fileCount=200
 totalBytes=11753669
 contentSha256=bdbcac941156b5c53638a9c8ced4938fd96777b45ca1e44db1bd1ae509143012
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c20ba294d956ebdf506047f4c8a6c527277e3b49
+sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,6 +120,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 * `優化` Installer 來源/套件名稱前綴配置, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要宿主 5312+ 及插件對應能力
 * `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
+* `優化` Compose UI 完整 API 參考: 節點與狀態, Modifier, 主題, 會話與懸浮窗, 組件屬性和事件, 執行緒規則, 無障礙與打包應用
 
 # v6.8.5
 

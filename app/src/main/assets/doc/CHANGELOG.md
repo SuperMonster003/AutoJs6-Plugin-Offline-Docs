@@ -10,6 +10,7 @@
 
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
+* `优化` Compose UI 完整 API 参考: 节点与状态, Modifier, 主题, 会话与悬浮窗, 组件属性和事件, 线程规则, 无障碍与打包应用
 
 # v6.8.5
 
