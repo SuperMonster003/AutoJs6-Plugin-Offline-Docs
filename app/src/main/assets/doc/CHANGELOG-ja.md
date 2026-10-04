@@ -12,6 +12,7 @@
 * `改善` セレクター minDepth/maxDepth/minIndexInParent/maxIndexInParent のメソッド説明とオフライン検索インデックス
 * `改善` Compose UI の完全な API リファレンス: ノードと状態, Modifier, テーマ, セッションとフローティングウィンドウ, コンポーネントのプロパティとイベント, スレッド, アクセシビリティ, パッケージ化アプリ
 * `改善` Compose UI TSX: TSX は `<compose.Column>`, `<compose:Text>`, ノードファクトリへの参照, Fragment, スロットとリアクティブなコールバックに対応. 同じツリーで Compose と従来の XML ノードを混在させることはできません
+* `改善` プラグインセンターのアイコンに Icon Studio で調整したサイズ, 位置, 明暗の図稿と円形背景を適用し, 再生成可能な原稿とパラメーターを保持
 
 # v6.8.5
 

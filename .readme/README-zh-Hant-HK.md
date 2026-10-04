@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=208
-totalBytes=12399989
-contentSha256=8d1e785c3ddf186118ccd5de252b1b7140e2f6962be8ed17ea6ed19d058b7bfd
+totalBytes=12415848
+contentSha256=df7c35f9fd87a9b48e51f732070c040e67c76f754fd445f52c22472d88512105
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
+sourceBaseCommit=4c3e29201574b308e79700e4d7e0693b7713e565
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -122,6 +122,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
 * `優化` Compose UI 完整 API 參考: 節點與狀態, Modifier, 主題, 會話與懸浮窗, 組件屬性和事件, 執行緒規則, 無障礙與打包應用
 * `優化` Compose UI TSX: TSX 支援 `<compose.Column>`, `<compose:Text>`, 節點工廠參照, Fragment, 插槽及響應式回呼; 同一棵樹不能混用 Compose 與舊 XML 節點
+* `優化` 外掛程式中心圖示採用統一工作台調整後的尺寸, 位置, 明暗圖稿與圓形底色, 保留可重建原稿和參數
 
 # v6.8.5
 

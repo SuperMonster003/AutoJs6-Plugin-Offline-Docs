@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=208
-totalBytes=12399989
-contentSha256=8d1e785c3ddf186118ccd5de252b1b7140e2f6962be8ed17ea6ed19d058b7bfd
+totalBytes=12415848
+contentSha256=df7c35f9fd87a9b48e51f732070c040e67c76f754fd445f52c22472d88512105
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
+sourceBaseCommit=4c3e29201574b308e79700e4d7e0693b7713e565
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -122,6 +122,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` 선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인
 * `개선` Compose UI 전체 API 참조: 노드와 상태, Modifier, 테마, 세션과 플로팅 창, 컴포넌트 속성과 이벤트, 스레드 규칙, 접근성 및 패키지 앱
 * `개선` Compose UI TSX: TSX는 `<compose.Column>`, `<compose:Text>`, 노드 팩토리 참조, Fragment, 슬롯 및 반응형 콜백을 지원합니다. 하나의 트리에서 Compose와 기존 XML 노드를 혼합할 수 없습니다
+* `개선` 플러그인 센터 아이콘에 Icon Studio에서 조정한 크기, 위치, 밝은 이미지와 어두운 이미지 및 원형 배경을 적용하고 재생성 가능한 원본과 매개변수를 유지
 
 # v6.8.5
 

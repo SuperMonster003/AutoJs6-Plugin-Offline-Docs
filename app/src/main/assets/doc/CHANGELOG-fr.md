@@ -12,6 +12,7 @@
 * `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Amélioration` Référence complète de l'API Compose UI: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées
 * `Amélioration` Compose UI TSX: TSX prend en charge `<compose.Column>`, `<compose:Text>`, les références aux fabriques de noeuds, les fragments, les emplacements et les rappels réactifs; un même arbre ne peut pas mélanger Compose et les anciens noeuds XML
+* `Amélioration` Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire
 
 # v6.8.5
 

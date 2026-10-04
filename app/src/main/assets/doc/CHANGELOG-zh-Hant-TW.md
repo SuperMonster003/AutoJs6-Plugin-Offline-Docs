@@ -12,6 +12,7 @@
 * `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
 * `優化` Compose UI 完整 API 參考: 節點與狀態, Modifier, 主題, 工作階段與浮動視窗, 元件屬性和事件, 執行緒規則, 無障礙與封裝應用程式
 * `優化` Compose UI TSX: TSX 支援 `<compose.Column>`, `<compose:Text>`, 節點工廠參照, Fragment, 插槽及響應式回呼; 同一棵樹不能混用 Compose 與舊 XML 節點
+* `優化` 外掛程式中心圖示採用統一工作台調整後的尺寸, 位置, 明暗圖稿與圓形底色, 保留可重建原稿和參數
 
 # v6.8.5
 
