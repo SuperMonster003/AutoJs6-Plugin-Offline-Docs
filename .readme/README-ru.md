@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=208
-totalBytes=12399989
-contentSha256=8d1e785c3ddf186118ccd5de252b1b7140e2f6962be8ed17ea6ed19d058b7bfd
+totalBytes=12415848
+contentSha256=df7c35f9fd87a9b48e51f732070c040e67c76f754fd445f52c22472d88512105
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
+sourceBaseCommit=4c3e29201574b308e79700e4d7e0693b7713e565
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -122,6 +122,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Улучшение` Полный справочник API Compose UI: узлы и состояние, модификаторы, темы, сеансы и плавающие окна, свойства и события компонентов, потоки, доступность и упакованные приложения
 * `Улучшение` Compose UI TSX: TSX поддерживает `<compose.Column>`, `<compose:Text>`, ссылки на фабрики узлов, фрагменты, слоты и реактивные обработчики; одно дерево не может смешивать Compose и прежние XML-узлы
+* `Улучшение` Значки центра плагинов используют размеры, положение, светлые и тёмные изображения и круглые фоны, настроенные в Icon Studio, сохраняя исходники и параметры для воспроизведения
 
 # v6.8.5
 
