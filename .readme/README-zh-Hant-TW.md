@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=200
-totalBytes=11753669
-contentSha256=bdbcac941156b5c53638a9c8ced4938fd96777b45ca1e44db1bd1ae509143012
+fileCount=208
+totalBytes=12399989
+contentSha256=8d1e785c3ddf186118ccd5de252b1b7140e2f6962be8ed17ea6ed19d058b7bfd
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
 sourcePath=api
@@ -116,11 +116,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 # v6.8.6
 
-###### 2026/10/03
+###### 2026/10/04
 
 * `優化` Installer 來源/套件名稱前綴設定檔, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要主程式 5312+ 及外掛對應能力
 * `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
 * `優化` Compose UI 完整 API 參考: 節點與狀態, Modifier, 主題, 工作階段與浮動視窗, 元件屬性和事件, 執行緒規則, 無障礙與封裝應用程式
+* `優化` Compose UI TSX: TSX 支援 `<compose.Column>`, `<compose:Text>`, 節點工廠參照, Fragment, 插槽及響應式回呼; 同一棵樹不能混用 Compose 與舊 XML 節點
 
 # v6.8.5
 

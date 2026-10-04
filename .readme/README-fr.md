@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=200
-totalBytes=11753669
-contentSha256=bdbcac941156b5c53638a9c8ced4938fd96777b45ca1e44db1bd1ae509143012
+fileCount=208
+totalBytes=12399989
+contentSha256=8d1e785c3ddf186118ccd5de252b1b7140e2f6962be8ed17ea6ed19d058b7bfd
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
 sourcePath=api
@@ -116,11 +116,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.6
 
-###### 2026/10/03
+###### 2026/10/04
 
 * `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
 * `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Amélioration` Référence complète de l'API Compose UI: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées
+* `Amélioration` Compose UI TSX: TSX prend en charge `<compose.Column>`, `<compose:Text>`, les références aux fabriques de noeuds, les fragments, les emplacements et les rappels réactifs; un même arbre ne peut pas mélanger Compose et les anciens noeuds XML
 
 # v6.8.5
 

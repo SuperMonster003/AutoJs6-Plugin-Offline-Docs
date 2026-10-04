@@ -6,11 +6,12 @@
 
 # v6.8.6
 
-###### 2026/10/03
+###### 2026/10/04
 
 * `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
 * `개선` 선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인
 * `개선` Compose UI 전체 API 참조: 노드와 상태, Modifier, 테마, 세션과 플로팅 창, 컴포넌트 속성과 이벤트, 스레드 규칙, 접근성 및 패키지 앱
+* `개선` Compose UI TSX: TSX는 `<compose.Column>`, `<compose:Text>`, 노드 팩토리 참조, Fragment, 슬롯 및 반응형 콜백을 지원합니다. 하나의 트리에서 Compose와 기존 XML 노드를 혼합할 수 없습니다
 
 # v6.8.5
 
