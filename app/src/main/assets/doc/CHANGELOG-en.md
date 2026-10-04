@@ -6,11 +6,12 @@
 
 # v6.8.6
 
-###### 2026/10/03
+###### 2026/10/04
 
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
 * `Improvement` Complete Compose UI API reference: nodes and state, modifiers, themes, sessions and floating windows, component properties and events, threading, accessibility and packaged applications
+* `Improvement` Compose UI TSX: TSX supports `<compose.Column>`, `<compose:Text>`, references to node factories, fragments, slots and reactive callbacks; a single tree cannot mix Compose and legacy XML nodes
 
 # v6.8.5
 

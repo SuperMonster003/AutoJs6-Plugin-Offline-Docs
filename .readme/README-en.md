@@ -61,9 +61,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=200
-totalBytes=11753669
-contentSha256=bdbcac941156b5c53638a9c8ced4938fd96777b45ca1e44db1bd1ae509143012
+fileCount=208
+totalBytes=12399989
+contentSha256=8d1e785c3ddf186118ccd5de252b1b7140e2f6962be8ed17ea6ed19d058b7bfd
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=2832a4d13edec60e4c4d126b20bb7599352746ca
 sourcePath=api
@@ -116,11 +116,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 # v6.8.6
 
-###### 2026/10/03
+###### 2026/10/04
 
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
 * `Improvement` Complete Compose UI API reference: nodes and state, modifiers, themes, sessions and floating windows, component properties and events, threading, accessibility and packaged applications
+* `Improvement` Compose UI TSX: TSX supports `<compose.Column>`, `<compose:Text>`, references to node factories, fragments, slots and reactive callbacks; a single tree cannot mix Compose and legacy XML nodes
 
 # v6.8.5
 
