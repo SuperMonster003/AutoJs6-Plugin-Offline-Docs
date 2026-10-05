@@ -6,13 +6,14 @@
   "changelog_label_dependency": "Dépendance",
   "$data": {
     "v6.8.6": {
-      "released_date": "2026/10/04",
+      "released_date": "2026/10/05",
       "improvement": [
         "Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis",
         "Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent",
         "Référence complète de l'API Compose UI: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées",
         "Compose UI TSX: TSX prend en charge `<compose.Column>`, `<compose:Text>`, les références aux fabriques de noeuds, les fragments, les emplacements et les rappels réactifs; un même arbre ne peut pas mélanger Compose et les anciens noeuds XML",
-        "Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire"
+        "Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire",
+        "Les icônes des informations d'application Android utilisent les illustrations et les fonds clairs et sombres d'Icon Studio, en conservant les images transparentes du centre de plugins et les choix du lanceur"
       ]
     },
     "v6.8.5": {

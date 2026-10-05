@@ -6,13 +6,14 @@
 
 # v6.8.6
 
-###### 2026/10/04
+###### 2026/10/05
 
 * `Mejora` Perfiles de Installer por origen/prefijo de paquete, prioridad de opciones explícitas y tres restablecimientos con null, sourceDeleteRequested y conservación de fuentes compartidas del lote; requiere anfitrión 5312+ y plugin compatible
 * `Mejora` Documentación y entradas de búsqueda sin conexión para los métodos de selector minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Mejora` Referencia completa de la API Compose UI: nodos y estado, modificadores, temas, sesiones y ventanas flotantes, propiedades y eventos de componentes, hilos, accesibilidad y aplicaciones empaquetadas
 * `Mejora` Compose UI TSX: TSX admite `<compose.Column>`, `<compose:Text>`, referencias a fábricas de nodos, fragmentos, slots y callbacks reactivos; un mismo árbol no puede mezclar Compose y nodos XML existentes
 * `Mejora` Los iconos del centro de plugins usan los tamaños, posiciones, imágenes claras y oscuras y fondos circulares ajustados en Icon Studio, conservando fuentes y parámetros reproducibles
+* `Mejora` Los iconos de información de la aplicación de Android comparten las imágenes y los fondos claros y oscuros de Icon Studio, conservando las imágenes transparentes del centro de plugins y las opciones del lanzador
 
 # v6.8.5
 
