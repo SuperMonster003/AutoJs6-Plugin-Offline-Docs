@@ -18,7 +18,7 @@
 * `优化` Android 系统应用信息图标与图标工作台共用图稿和亮暗底色, 保留插件中心透明图稿及现有启动器选项
 * `优化` Compose UI: XML `<compose>` 容器与 compose.attach 可在 UI 页面或旧悬浮窗内嵌入独立 Compose 会话; compose.AndroidView 可承载现有 Android View 或同步工厂返回的 View
 * `优化` Compose UI 参考文档补充独立对话框和底部弹层, 包含取消规则, 悬浮窗权限与会话生命周期
-* `优化` Compose UI V2 组件参考, 包含受控状态, 事件, 使用条件和兼容性
+* `优化` Compose UI V2 组件参考, 包含受控状态, 事件, 焦点与滚动命令, 使用条件和兼容性
 
 # v6.8.5
 

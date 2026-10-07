@@ -18,7 +18,7 @@
 * `Mejora` Los iconos de información de la aplicación de Android comparten las imágenes y los fondos claros y oscuros de Icon Studio, conservando las imágenes transparentes del centro de plugins y las opciones del lanzador
 * `Mejora` Compose UI: Los contenedores XML `<compose>` y compose.attach integran sesiones Compose independientes en páginas UI o ventanas flotantes existentes; compose.AndroidView muestra una View Android existente o devuelta por una fábrica síncrona
 * `Mejora` La referencia de Compose UI cubre diálogos independientes y paneles inferiores, reglas de cancelación, permiso de superposición y ciclo de vida de las sesiones
-* `Mejora` Referencia de componentes Compose UI V2: estado controlado, eventos, requisitos y compatibilidad
+* `Mejora` Referencia de componentes Compose UI V2 con estado controlado, eventos, comandos de foco y desplazamiento, requisitos y compatibilidad
 
 # v6.8.5
 

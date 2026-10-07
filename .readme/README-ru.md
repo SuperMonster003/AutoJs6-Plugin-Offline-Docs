@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12825763
-contentSha256=68b8616ffa6968035a00986abe615bd5a22742a34f81bd0ec2524ce601b9093d
+totalBytes=12828821
+contentSha256=5d25acbe9843240538c5e46a3816634a3cdf49ed2182a66ee052291a88893ce4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2ddcf8aa80ec55ad8031a1f04ece01e1ee6764b9
+sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -128,7 +128,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Значки в сведениях о приложении Android используют изображения и светлый и тёмный фон Icon Studio, сохраняя прозрачные изображения центра плагинов и существующие варианты значков лаунчера
 * `Улучшение` Compose UI: XML-контейнеры `<compose>` и compose.attach встраивают независимые сеансы Compose в UI-страницы или прежние плавающие окна; compose.AndroidView отображает готовый Android View либо результат синхронной фабрики
 * `Улучшение` Справочник Compose UI описывает независимые диалоги и нижние панели, правила отмены, разрешение наложения и жизненный цикл сеансов
-* `Улучшение` Справочник компонентов Compose UI V2: управляемое состояние, события, требования и совместимость
+* `Улучшение` Справочник компонентов Compose UI V2 с управляемым состоянием, событиями, командами фокуса и прокрутки, требованиями и совместимостью
 
 # v6.8.5
 

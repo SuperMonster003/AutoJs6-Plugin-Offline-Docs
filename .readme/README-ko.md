@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12825763
-contentSha256=68b8616ffa6968035a00986abe615bd5a22742a34f81bd0ec2524ce601b9093d
+totalBytes=12828821
+contentSha256=5d25acbe9843240538c5e46a3816634a3cdf49ed2182a66ee052291a88893ce4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2ddcf8aa80ec55ad8031a1f04ece01e1ee6764b9
+sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -128,7 +128,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` Android 앱 정보 아이콘에 Icon Studio의 그림과 밝은 배경 및 어두운 배경을 사용하고 플러그인 센터의 투명 그림과 기존 런처 옵션을 유지
 * `개선` Compose UI: XML `<compose>` 컨테이너와 compose.attach로 UI 페이지나 기존 플로팅 창에 독립적인 Compose 세션을 삽입합니다. compose.AndroidView는 기존 Android View 또는 동기 팩토리가 반환하는 View를 표시합니다
 * `개선` Compose UI 참고 문서에 독립 대화상자와 하단 시트, 취소 규칙, 오버레이 권한 및 세션 수명 주기 설명 추가
-* `개선` Compose UI V2 구성요소 참조: 제어 상태, 이벤트, 요구 사항 및 호환성
+* `개선` Compose UI V2 구성요소 참조 문서에 제어 상태, 이벤트, 포커스 및 스크롤 명령, 사용 조건과 호환성 포함
 
 # v6.8.5
 

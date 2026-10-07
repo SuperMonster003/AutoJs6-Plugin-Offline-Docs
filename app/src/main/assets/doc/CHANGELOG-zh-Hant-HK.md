@@ -18,7 +18,7 @@
 * `優化` Android 系統應用程式資訊圖示與圖示工作台共用圖稿及明暗底色, 保留外掛程式中心透明圖稿與現有啟動器選項
 * `優化` Compose UI: XML `<compose>` 容器與 compose.attach 可在 UI 頁面或舊懸浮窗內嵌入獨立 Compose 工作階段; compose.AndroidView 可承載現有 Android View 或同步工廠傳回的 View
 * `優化` Compose UI 參考文件補充獨立對話框和底部面板, 包含取消規則, 懸浮視窗權限與工作階段生命週期
-* `優化` Compose UI V2 元件參考, 包含受控狀態, 事件, 使用條件和相容性
+* `優化` Compose UI V2 元件參考, 包含受控狀態, 事件, 焦點與捲動命令, 使用條件和相容性
 
 # v6.8.5
 

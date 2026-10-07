@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12825763
-contentSha256=68b8616ffa6968035a00986abe615bd5a22742a34f81bd0ec2524ce601b9093d
+totalBytes=12828821
+contentSha256=5d25acbe9843240538c5e46a3816634a3cdf49ed2182a66ee052291a88893ce4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2ddcf8aa80ec55ad8031a1f04ece01e1ee6764b9
+sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -128,7 +128,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Android App info icons share Icon Studio artwork and light/dark backgrounds while preserving transparent Plugin Center artwork and existing launcher choices
 * `Improvement` Compose UI: XML `<compose>` containers and compose.attach embed independent Compose sessions in UI pages or legacy floating windows; compose.AndroidView embeds an existing Android View or one returned by a synchronous factory
 * `Improvement` Compose UI reference covers independent dialogs and bottom sheets, cancellation rules, overlay permission and session lifecycle
-* `Improvement` Compose UI V2 component reference covering controlled state, events, requirements and compatibility
+* `Improvement` Compose UI V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility
 
 # v6.8.5
 

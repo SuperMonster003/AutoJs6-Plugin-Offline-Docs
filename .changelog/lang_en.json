@@ -18,7 +18,7 @@
         "Android App info icons share Icon Studio artwork and light/dark backgrounds while preserving transparent Plugin Center artwork and existing launcher choices",
         "Compose UI: XML `<compose>` containers and compose.attach embed independent Compose sessions in UI pages or legacy floating windows; compose.AndroidView embeds an existing Android View or one returned by a synchronous factory",
         "Compose UI reference covers independent dialogs and bottom sheets, cancellation rules, overlay permission and session lifecycle",
-        "Compose UI V2 component reference covering controlled state, events, requirements and compatibility"
+        "Compose UI V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility"
       ]
     },
     "v6.8.5": {

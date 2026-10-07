@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12825763
-contentSha256=68b8616ffa6968035a00986abe615bd5a22742a34f81bd0ec2524ce601b9093d
+totalBytes=12828821
+contentSha256=5d25acbe9843240538c5e46a3816634a3cdf49ed2182a66ee052291a88893ce4
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2ddcf8aa80ec55ad8031a1f04ece01e1ee6764b9
+sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -128,7 +128,7 @@ category=offline-docs
 * `تحسين` تستخدم أيقونات معلومات التطبيق في Android صور Icon Studio وخلفياته الفاتحة والداكنة مع الحفاظ على الصور الشفافة في مركز الملحقات وخيارات المشغل الحالية
 * `تحسين` Compose UI: تدمج حاويات XML `<compose>` و compose.attach جلسات Compose مستقلة في صفحات UI أو النوافذ العائمة الحالية. يعرض compose.AndroidView عنصرا جاهزا من Android View أو عنصرا تعيده دالة إنشاء متزامنة
 * `تحسين` يتناول مرجع Compose UI الحوارات المستقلة واللوحات السفلية وقواعد الإلغاء وإذن التراكب ودورة حياة الجلسات
-* `تحسين` مرجع مكونات Compose UI V2: الحالة المتحكم بها والأحداث والمتطلبات والتوافق
+* `تحسين` مرجع مكونات Compose UI V2 يغطي الحالة المتحكم بها والأحداث وأوامر التركيز والتمرير ومتطلبات الاستخدام والتوافق
 
 # v6.8.5
 
