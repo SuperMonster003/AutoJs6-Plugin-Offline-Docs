@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12735581
-contentSha256=2549c9fedcd5048e767271dcb0465e9ca492ecdc21b4216936d7abe1a741ae84
+totalBytes=12825763
+contentSha256=68b8616ffa6968035a00986abe615bd5a22742a34f81bd0ec2524ce601b9093d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e830d58076fdc0a715f65efd787bcf907c07d5d2
+sourceBaseCommit=2ddcf8aa80ec55ad8031a1f04ece01e1ee6764b9
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -128,6 +128,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` Android 系統應用程式資訊圖示與圖示工作台共用圖稿及明暗底色, 保留外掛程式中心透明圖稿與現有啟動器選項
 * `優化` Compose UI: XML `<compose>` 容器與 compose.attach 可在 UI 頁面或舊懸浮窗內嵌入獨立 Compose 工作階段; compose.AndroidView 可承載現有 Android View 或同步工廠傳回的 View
 * `優化` Compose UI 參考文件補充獨立對話框和底部面板, 包含取消規則, 懸浮視窗權限與工作階段生命週期
+* `優化` Compose UI V2 元件參考, 包含受控狀態, 事件, 使用條件和相容性
 
 # v6.8.5
 

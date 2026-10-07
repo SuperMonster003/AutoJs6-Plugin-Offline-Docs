@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12735581
-contentSha256=2549c9fedcd5048e767271dcb0465e9ca492ecdc21b4216936d7abe1a741ae84
+totalBytes=12825763
+contentSha256=68b8616ffa6968035a00986abe615bd5a22742a34f81bd0ec2524ce601b9093d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e830d58076fdc0a715f65efd787bcf907c07d5d2
+sourceBaseCommit=2ddcf8aa80ec55ad8031a1f04ece01e1ee6764b9
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -128,6 +128,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` Android のアプリ情報アイコンに Icon Studio と共通の図案と明暗の背景色を使用し, プラグインセンターの透明な図案と既存のランチャー設定を維持
 * `改善` Compose UI: XML `<compose>` コンテナと compose.attach は UI ページや既存のフローティングウィンドウに独立した Compose セッションを埋め込みます. compose.AndroidView は既存の Android View または同期ファクトリが返す View を表示します
 * `改善` Compose UI リファレンスに独立ダイアログとボトムシート, 終了の規則, オーバーレイ権限, セッションのライフサイクルを追加
+* `改善` Compose UI V2 コンポーネントのリファレンス: 制御状態, イベント, 使用条件, 互換性
 
 # v6.8.5
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12735581
-contentSha256=2549c9fedcd5048e767271dcb0465e9ca492ecdc21b4216936d7abe1a741ae84
+totalBytes=12825763
+contentSha256=68b8616ffa6968035a00986abe615bd5a22742a34f81bd0ec2524ce601b9093d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e830d58076fdc0a715f65efd787bcf907c07d5d2
+sourceBaseCommit=2ddcf8aa80ec55ad8031a1f04ece01e1ee6764b9
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -128,6 +128,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Les icônes des informations d'application Android utilisent les illustrations et les fonds clairs et sombres d'Icon Studio, en conservant les images transparentes du centre de plugins et les choix du lanceur
 * `Amélioration` Compose UI: Les conteneurs XML `<compose>` et compose.attach intègrent des sessions Compose indépendantes dans les pages UI ou les fenêtres flottantes existantes; compose.AndroidView affiche une View Android existante ou renvoyée par une fabrique synchrone
 * `Amélioration` La référence Compose UI couvre les dialogues indépendants et panneaux inférieurs, les règles de fermeture, la permission de superposition et le cycle de vie des sessions
+* `Amélioration` Référence des composants Compose UI V2: état contrôlé, événements, prérequis et compatibilité
 
 # v6.8.5
 
