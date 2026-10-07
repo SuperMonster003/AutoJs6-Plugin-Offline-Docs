@@ -6,12 +6,14 @@
 
 # v6.8.6
 
-###### 2026/10/05
+###### 2026/10/07
 
 * `優化` Installer 來源/套件名稱前綴配置, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要宿主 5312+ 及插件對應能力
 * `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
 * `優化` Compose UI 完整 API 參考: 節點與狀態, Modifier, 主題, 會話與懸浮窗, 組件屬性和事件, 執行緒規則, 無障礙與打包應用
 * `優化` Compose UI TSX: TSX 支援 `<compose.Column>`, `<compose:Text>`, 節點工廠參照, Fragment, 插槽及響應式回呼; 同一棵樹不能混用 Compose 與舊 XML 節點
+* `優化` Terminal 模組參考: 3-Shell Terminal 插件的同步與異步會話, 輸出事件, npm 腳本, 權限與生命週期, 以及 TerminalSession, TerminalOpenOptions 與 TerminalError 類型
+* `優化` colors 模組參考: OKLab/OKLCH 轉換, 對比度調整, 和諧色, 色階, 衍生配色, 夜間對應色, 色覺缺陷模擬, 圖像主要顏色提取, oklab 顏色檢測算法及 colors.theme 主題色控制
 * `優化` 外掛程式中心圖示採用統一工作台調整後的尺寸, 位置, 明暗圖稿與圓形底色, 保留可重建原稿和參數
 * `優化` Android 系統應用程式資訊圖示與圖示工作台共用圖稿及明暗底色, 保留外掛程式中心透明圖稿與現有啟動器選項
 

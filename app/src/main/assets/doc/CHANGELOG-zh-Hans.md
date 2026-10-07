@@ -6,12 +6,14 @@
 
 # v6.8.6
 
-###### 2026/10/05
+###### 2026/10/07
 
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
 * `优化` Compose UI 完整 API 参考: 节点与状态, Modifier, 主题, 会话与悬浮窗, 组件属性和事件, 线程规则, 无障碍与打包应用
 * `优化` Compose UI TSX: TSX 支持 `<compose.Column>`, `<compose:Text>`, 节点工厂引用, Fragment, 插槽及响应式回调; 同一棵树不能混用 Compose 与旧 XML 节点
+* `优化` Terminal 模块参考: 3-Shell Terminal 插件的同步与异步会话, 输出事件, npm 脚本, 权限与生命周期, 以及 TerminalSession, TerminalOpenOptions 与 TerminalError 类型
+* `优化` colors 模块参考: OKLab/OKLCH 转换, 对比度调整, 和谐色, 色阶, 派生配色, 夜间对应色, 色觉缺陷模拟, 图像主要颜色提取, oklab 颜色检测算法及 colors.theme 主题色控制
 * `优化` 插件中心图标采用统一工作台调整后的尺寸, 位置, 亮暗图稿与圆形底色, 保留可重建原稿和参数
 * `优化` Android 系统应用信息图标与图标工作台共用图稿和亮暗底色, 保留插件中心透明图稿及现有启动器选项
 

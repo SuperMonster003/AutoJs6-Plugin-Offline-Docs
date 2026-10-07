@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=208
-totalBytes=12415848
-contentSha256=df7c35f9fd87a9b48e51f732070c040e67c76f754fd445f52c22472d88512105
+fileCount=212
+totalBytes=12690408
+contentSha256=23fd19ddced92ce0ed9aefa712855cbe0d393849bf4a0eaa7ad63028b39df095
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=4c3e29201574b308e79700e4d7e0693b7713e565
+sourceBaseCommit=4a87cb1540a99c06f41d26553435e647d16a0b16
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,12 +116,14 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.6
 
-###### 2026/10/05
+###### 2026/10/07
 
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Улучшение` Полный справочник API Compose UI: узлы и состояние, модификаторы, темы, сеансы и плавающие окна, свойства и события компонентов, потоки, доступность и упакованные приложения
 * `Улучшение` Compose UI TSX: TSX поддерживает `<compose.Column>`, `<compose:Text>`, ссылки на фабрики узлов, фрагменты, слоты и реактивные обработчики; одно дерево не может смешивать Compose и прежние XML-узлы
+* `Улучшение` Справочник модуля Terminal: синхронные и асинхронные сеансы плагина 3-Shell Terminal, события вывода, npm-скрипты, разрешения и жизненный цикл, а также типы TerminalSession, TerminalOpenOptions и TerminalError
+* `Улучшение` Справочник модуля colors: преобразования OKLab/OKLCH, подбор контрастности, гармоничные цвета, тоновые шкалы, производные цвета, ночные варианты, имитация нарушений цветового зрения, основные цвета изображения, алгоритм обнаружения oklab и управление цветом темы через colors.theme
 * `Улучшение` Значки центра плагинов используют размеры, положение, светлые и тёмные изображения и круглые фоны, настроенные в Icon Studio, сохраняя исходники и параметры для воспроизведения
 * `Улучшение` Значки в сведениях о приложении Android используют изображения и светлый и тёмный фон Icon Studio, сохраняя прозрачные изображения центра плагинов и существующие варианты значков лаунчера
 

@@ -6,12 +6,14 @@
 
 # v6.8.6
 
-###### 2026/10/05
+###### 2026/10/07
 
 * `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
 * `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Amélioration` Référence complète de l'API Compose UI: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées
 * `Amélioration` Compose UI TSX: TSX prend en charge `<compose.Column>`, `<compose:Text>`, les références aux fabriques de noeuds, les fragments, les emplacements et les rappels réactifs; un même arbre ne peut pas mélanger Compose et les anciens noeuds XML
+* `Amélioration` Référence du module Terminal: sessions synchrones et asynchrones du plugin 3-Shell Terminal, événements de sortie, scripts npm, autorisations et cycle de vie, ainsi que les types TerminalSession, TerminalOpenOptions et TerminalError
+* `Amélioration` Référence du module colors: conversions OKLab/OKLCH, ajustement du contraste, harmonies, gammes de tons, couleurs dérivées, variantes de nuit, simulation des déficiences de la vision des couleurs, couleurs dominantes d'une image, algorithme de détection oklab et contrôle de la couleur du thème avec colors.theme
 * `Amélioration` Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire
 * `Amélioration` Les icônes des informations d'application Android utilisent les illustrations et les fonds clairs et sombres d'Icon Studio, en conservant les images transparentes du centre de plugins et les choix du lanceur
 

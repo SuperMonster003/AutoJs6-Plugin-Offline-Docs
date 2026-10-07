@@ -91,6 +91,7 @@
 <li><a class="nav-storages" href="storages.html">Storages - 存储</a></li>
 <li><a class="nav-sysprops" href="sysprops.html">Sysprops - 系统属性</a></li>
 <li><a class="nav-tasks" href="tasks.html">Tasks - 任务</a></li>
+<li><a class="nav-terminal" href="terminal.html">Terminal - 终端</a></li>
 <li><a class="nav-threads" href="threads.html">Threads - 线程</a></li>
 <li><a class="nav-timers" href="timers.html">Timers - 定时器</a></li>
 <li><a class="nav-toast" href="toast.html">Toast - 消息浮动框</a></li>
@@ -197,7 +198,12 @@
 
 <ul>
 <li><a class="nav-http-project-autojs6-com" href="http://project.autojs6.com">GitHub - 应用项目地址</a></li>
-<li><a class="nav-http-docs-project-autojs6-com" href="http://docs-project.autojs6.com">GitHub - 文档项目地址</a></li>
+<li><p><a class="nav-http-docs-project-autojs6-com" href="http://docs-project.autojs6.com">GitHub - 文档项目地址</a></p>
+</li>
+<li><p><a class="nav-terminalSessionType" href="terminalSessionType.html">TerminalSession - 终端会话</a></p>
+</li>
+<li><a class="nav-terminalOpenOptionsType" href="terminalOpenOptionsType.html">TerminalOpenOptions - 终端选项</a></li>
+<li><a class="nav-terminalErrorType" href="terminalErrorType.html">TerminalError - 终端错误</a></li>
 </ul>
 
     </div>
@@ -383,6 +389,7 @@
 <li><span class="stability_undefined"><a href="#datatypes_rgb_3">加权 RGB 距离检测</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_h">H 距离检测</a></span></li>
 <li><span class="stability_undefined"><a href="#datatypes_hs">HS 距离检测</a></span></li>
+<li><span class="stability_undefined"><a href="#datatypes_oklab">OKLab 距离检测</a></span></li>
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#datatypes_range">Range</a></span></li>
@@ -1770,6 +1777,15 @@ colors.toHsla(&#39;blue-grey&#39;)[3]; /* A 分量为 1. */
     <img src="images/hs-distance-color-detection.png" alt="hs-distance-color-detection" width="695">
 </picture>
 
+<h3>OKLab 距离检测<span><a class="mark" href="#datatypes_oklab" id="datatypes_oklab">#</a></span></h3>
+<p>参数名称: <code>oklab</code></p>
+<p>自 AutoJs6 6.8.0 起可用.</p>
+<p>计算 <a href="https://bottosson.github.io/posts/oklab/">OKLab</a> 色彩空间中两点间的欧氏距离, 并乘以 <code>255</code>, 使黑色与白色的距离为 <code>255</code>, 与 <a href="glossaries.html#glossaries_20">颜色匹配阈值</a> 的量纲一致.</p>
+<p>OKLab 是感知均匀的色彩空间, 此距离更接近人眼感受到的颜色差异, 但计算开销高于其他算法.</p>
+<pre><code class="lang-js">colors.distance(&#39;black&#39;, &#39;white&#39;, &#39;oklab&#39;); /* 约为 255. */
+colors.distance(&#39;red&#39;, &#39;#FE0000&#39;, &#39;oklab&#39;); /* 约为 0.51. */
+colors.isSimilar(&#39;orange&#39;, &#39;dark-orange&#39;, 16, &#39;oklab&#39;); // true
+</code></pre>
 <h2>Range<span><a class="mark" href="#datatypes_range" id="datatypes_range">#</a></span></h2>
 <p>表示一个数字的数值范围.</p>
 <table>

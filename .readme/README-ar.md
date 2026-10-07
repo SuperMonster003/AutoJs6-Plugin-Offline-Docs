@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=208
-totalBytes=12415848
-contentSha256=df7c35f9fd87a9b48e51f732070c040e67c76f754fd445f52c22472d88512105
+fileCount=212
+totalBytes=12690408
+contentSha256=23fd19ddced92ce0ed9aefa712855cbe0d393849bf4a0eaa7ad63028b39df095
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=4c3e29201574b308e79700e4d7e0693b7713e565
+sourceBaseCommit=4a87cb1540a99c06f41d26553435e647d16a0b16
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,12 +116,14 @@ category=offline-docs
 
 # v6.8.6
 
-###### 2026/10/05
+###### 2026/10/07
 
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
 * `تحسين` توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال
 * `تحسين` مرجع API كامل لـ Compose UI: العقد والحالة والمعدلات والسمات والجلسات والنوافذ العائمة, خصائص المكونات وأحداثها, قواعد سلاسل التنفيذ, إمكانية الوصول والتطبيقات المجمعة
 * `تحسين` Compose UI TSX: يدعم TSX الصيغ `<compose.Column>` و `<compose:Text>` ومراجع مصانع العقد و Fragment والخانات والاستدعاءات التفاعلية. لا يمكن خلط عقد Compose وعقد XML القديمة في شجرة واحدة
+* `تحسين` مرجع وحدة Terminal: الجلسات المتزامنة وغير المتزامنة لملحق 3-Shell Terminal وأحداث المخرجات وسكربتات npm والأذونات ودورة الحياة, إضافة إلى الأنواع TerminalSession و TerminalOpenOptions و TerminalError
+* `تحسين` مرجع وحدة colors: تحويلات OKLab/OKLCH وضبط التباين والألوان المتناسقة والتدرجات اللونية والألوان المشتقة والمقابلات الليلية ومحاكاة قصور رؤية الألوان واستخراج الألوان الرئيسية للصورة وخوارزمية الكشف oklab والتحكم في لون السمة عبر colors.theme
 * `تحسين` تستخدم أيقونات مركز الملحقات الأحجام والمواضع والصور الفاتحة والداكنة والخلفيات الدائرية المعدلة في Icon Studio مع الاحتفاظ بالمصادر والمعلمات لإعادة إنتاجها
 * `تحسين` تستخدم أيقونات معلومات التطبيق في Android صور Icon Studio وخلفياته الفاتحة والداكنة مع الحفاظ على الصور الشفافة في مركز الملحقات وخيارات المشغل الحالية
 
