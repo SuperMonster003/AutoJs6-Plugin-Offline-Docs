@@ -16,6 +16,7 @@
 * `Amélioration` Référence du module colors: conversions OKLab/OKLCH, ajustement du contraste, harmonies, gammes de tons, couleurs dérivées, variantes de nuit, simulation des déficiences de la vision des couleurs, couleurs dominantes d'une image, algorithme de détection oklab et contrôle de la couleur du thème avec colors.theme
 * `Amélioration` Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire
 * `Amélioration` Les icônes des informations d'application Android utilisent les illustrations et les fonds clairs et sombres d'Icon Studio, en conservant les images transparentes du centre de plugins et les choix du lanceur
+* `Amélioration` Compose UI: Les conteneurs XML `<compose>` et compose.attach intègrent des sessions Compose indépendantes dans les pages UI ou les fenêtres flottantes existantes; compose.AndroidView affiche une View Android existante ou renvoyée par une fabrique synchrone
 
 # v6.8.5
 

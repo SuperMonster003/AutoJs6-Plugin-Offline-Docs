@@ -15,7 +15,8 @@
         "Referencia del módulo Terminal: sesiones síncronas y asíncronas del plugin 3-Shell Terminal, eventos de salida, scripts npm, permisos y ciclo de vida, además de los tipos TerminalSession, TerminalOpenOptions y TerminalError",
         "Referencia del módulo colors: conversión OKLab/OKLCH, ajuste de contraste, armonías, escalas tonales, colores derivados, variantes nocturnas, simulación de deficiencias de la visión del color, colores dominantes de una imagen, algoritmo de detección oklab y control del color del tema con colors.theme",
         "Los iconos del centro de plugins usan los tamaños, posiciones, imágenes claras y oscuras y fondos circulares ajustados en Icon Studio, conservando fuentes y parámetros reproducibles",
-        "Los iconos de información de la aplicación de Android comparten las imágenes y los fondos claros y oscuros de Icon Studio, conservando las imágenes transparentes del centro de plugins y las opciones del lanzador"
+        "Los iconos de información de la aplicación de Android comparten las imágenes y los fondos claros y oscuros de Icon Studio, conservando las imágenes transparentes del centro de plugins y las opciones del lanzador",
+        "Compose UI: Los contenedores XML `<compose>` y compose.attach integran sesiones Compose independientes en páginas UI o ventanas flotantes existentes; compose.AndroidView muestra una View Android existente o devuelta por una fábrica síncrona"
       ]
     },
     "v6.8.5": {
