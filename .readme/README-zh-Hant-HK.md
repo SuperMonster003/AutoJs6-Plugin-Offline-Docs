@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12895568
-contentSha256=db49d988a055162013ce4d39bf59e5a1343e49648199f4602db2828561fbf90e
+totalBytes=12899614
+contentSha256=59974bf5fad9442a208577ddd113e9c3958331e1e7a73b86161ac017d482577e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
@@ -131,6 +131,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` Compose UI V2 元件參考, 包含受控狀態, 事件, 焦點與捲動命令, 使用條件和相容性
 * `優化` 裝置模組參考文件: device.getAndroidId 支援 useSystemId 布林參數, 在 Android 8.0+ 上透過 Shizuku/Root 取得執行應用所屬 Android 使用者的系統值, 權限或讀取失敗時拋出異常, 舊系統忽略此參數
 * `優化` AutoJs4 執行時參考文件: AutoJs4 Runtime 插件的用途, 安裝與獨立權限, 檔案管理器 "使用 AutoJs4 執行" 對 .js / .auto 檔案及項目資料夾的入口, 日誌回傳與任務停止, 執行限制及差異反饋方式
+* `優化` AutoJs4 執行時參考文件: 補充 "使用 AutoJs4 執行並對照" 的對照模式, 說明兩次執行流程, 起止行與前綴的剔除規則, 結果頁的摘要與差異標記, issue 模板複製以及 120 秒逾時
 
 # v6.8.5
 

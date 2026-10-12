@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12895568
-contentSha256=db49d988a055162013ce4d39bf59e5a1343e49648199f4602db2828561fbf90e
+totalBytes=12899614
+contentSha256=59974bf5fad9442a208577ddd113e9c3958331e1e7a73b86161ac017d482577e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
@@ -131,6 +131,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` Compose UI V2 구성요소 참조 문서에 제어 상태, 이벤트, 포커스 및 스크롤 명령, 사용 조건과 호환성 포함
 * `개선` device API 참고 문서: device.getAndroidId가 useSystemId 불리언 매개변수를 지원하며, Android 8.0+에서 Shizuku/Root로 앱이 실행되는 Android 사용자의 시스템 값을 읽음. 권한 또는 읽기 실패 시 예외를 발생시키고 이전 시스템에서는 매개변수를 무시
 * `개선` AutoJs4 런타임 참고 문서: AutoJs4 Runtime 플러그인의 용도, 설치와 독립 권한, 파일 관리자의 "AutoJs4로 실행" 항목으로 .js / .auto 파일과 프로젝트 폴더를 실행하는 입구, 로그 전달과 작업 중지, 실행 제한 및 차이 보고 방법
+* `개선` AutoJs4 런타임 참고 문서: "AutoJs4로 실행하고 비교" 비교 모드를 추가하여 두 번의 실행 흐름, 시작과 종료 행 및 접두사 제거 규칙, 결과 페이지의 요약과 차이 표시, issue 템플릿 복사 및 120초 제한 시간을 설명
 
 # v6.8.5
 

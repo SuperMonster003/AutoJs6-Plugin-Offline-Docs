@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12895568
-contentSha256=db49d988a055162013ce4d39bf59e5a1343e49648199f4602db2828561fbf90e
+totalBytes=12899614
+contentSha256=59974bf5fad9442a208577ddd113e9c3958331e1e7a73b86161ac017d482577e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
@@ -131,6 +131,7 @@ category=offline-docs
 * `تحسين` مرجع مكونات Compose UI V2 يغطي الحالة المتحكم بها والأحداث وأوامر التركيز والتمرير ومتطلبات الاستخدام والتوافق
 * `تحسين` مرجع واجهة device: تقبل device.getAndroidId المعامل المنطقي useSystemId لقراءة قيمة النظام لمستخدم Android الذي يشغل التطبيق عبر Shizuku/Root على Android 8.0+, وتطرح استثناء عند فشل الإذن أو القراءة, وتتجاهل المعامل على الأنظمة الأقدم
 * `تحسين` مرجع AutoJs4 Runtime: الغرض من إضافة AutoJs4 Runtime, التثبيت وأذوناتها المستقلة, مدخل "تشغيل باستخدام AutoJs4" في مدير الملفات لملفات .js / .auto ومجلدات المشاريع, إعادة توجيه السجل وإيقاف المهام, حدود التشغيل وطريقة الإبلاغ عن الاختلافات
+* `تحسين` مرجع AutoJs4 Runtime: وضع المقارنة "التشغيل باستخدام AutoJs4 والمقارنة", مع التشغيلين, إزالة سطور البداية والنهاية والبادئة, ملخص صفحة النتيجة وعلامات الاختلاف, نسخ قالب issue ومهلة 120 ثانية
 
 # v6.8.5
 

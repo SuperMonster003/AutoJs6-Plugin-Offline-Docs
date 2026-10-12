@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12895568
-contentSha256=db49d988a055162013ce4d39bf59e5a1343e49648199f4602db2828561fbf90e
+totalBytes=12899614
+contentSha256=59974bf5fad9442a208577ddd113e9c3958331e1e7a73b86161ac017d482577e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
@@ -131,6 +131,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Справочник компонентов Compose UI V2 с управляемым состоянием, событиями, командами фокуса и прокрутки, требованиями и совместимостью
 * `Улучшение` Справочник API device: device.getAndroidId принимает логический параметр useSystemId для чтения системного значения пользователя Android приложения через Shizuku/Root на Android 8.0+, вызывает исключение при ошибке доступа или чтения и игнорирует параметр на старых системах
 * `Улучшение` Справочник AutoJs4 Runtime: назначение плагина AutoJs4 Runtime, установка и его отдельные разрешения, пункт "Запустить в AutoJs4" файлового менеджера для файлов .js / .auto и папок проектов, пересылка журнала и остановка задач, ограничения выполнения и порядок сообщения о различиях
+* `Улучшение` Справочник AutoJs4 Runtime: режим сравнения "Запустить в AutoJs4 и сравнить": два запуска, удаление служебных строк и префикса, сводка и маркеры различий на странице результата, копирование шаблона issue и тайм-аут 120 секунд
 
 # v6.8.5
 
