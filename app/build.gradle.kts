@@ -55,7 +55,7 @@ val externalMdnTypeLink = Regex(
     RegexOption.IGNORE_CASE,
 )
 // `callAutoJs` is the public Node bridge API name, not a legacy product name.
-val bareLegacyAutoJsName = Regex("""(?<!call)AutoJs(?!6|Pro|-Docs)""")
+val bareLegacyAutoJsName = Regex("""(?<!call)AutoJs(?!6|4|Pro|-Docs)""")
 val codeBlock = Regex(
     """<pre><code([^>]*)>(.*?)</code></pre>""",
     setOf(RegexOption.DOT_MATCHES_ALL),

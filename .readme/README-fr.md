@@ -130,6 +130,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` La référence Compose UI couvre les dialogues indépendants et panneaux inférieurs, les règles de fermeture, la permission de superposition et le cycle de vie des sessions
 * `Amélioration` Référence des composants Compose UI V2 avec état contrôlé, événements, commandes de focus et de défilement, conditions d'utilisation et compatibilité
 * `Amélioration` Référence de l'API device: device.getAndroidId accepte le booléen useSystemId pour lire la valeur système de l'utilisateur Android de l'application via Shizuku/Root sous Android 8.0+, lève une exception en cas d'échec d'autorisation ou de lecture et ignore ce paramètre sur les anciens systèmes
+* `Amélioration` Référence AutoJs4 Runtime: objet du plugin AutoJs4 Runtime, installation et permissions distinctes, l'entrée "Exécuter avec AutoJs4" du gestionnaire de fichiers pour les fichiers .js / .auto et les dossiers de projet, transfert des journaux et arrêt des tâches, limites d'exécution et procédure de signalement des différences
 
 # v6.8.5
 

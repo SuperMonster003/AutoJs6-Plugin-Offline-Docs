@@ -20,6 +20,7 @@
 * `Mejora` La referencia de Compose UI cubre diálogos independientes y paneles inferiores, reglas de cancelación, permiso de superposición y ciclo de vida de las sesiones
 * `Mejora` Referencia de componentes Compose UI V2 con estado controlado, eventos, comandos de foco y desplazamiento, requisitos y compatibilidad
 * `Mejora` Referencia de la API device: device.getAndroidId acepta el booleano useSystemId para leer el valor del sistema del usuario Android de la aplicación mediante Shizuku/Root en Android 8.0+, lanza una excepción si falla el permiso o la lectura e ignora el parámetro en sistemas anteriores
+* `Mejora` Referencia de AutoJs4 Runtime: finalidad del plugin AutoJs4 Runtime, instalación y sus permisos independientes, la entrada "Ejecutar con AutoJs4" del gestor de archivos para archivos .js / .auto y carpetas de proyecto, reenvío de registros y detención de tareas, límites de ejecución y cómo informar diferencias
 
 # v6.8.5
 

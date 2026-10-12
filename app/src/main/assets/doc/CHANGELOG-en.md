@@ -20,6 +20,7 @@
 * `Improvement` Compose UI reference covers independent dialogs and bottom sheets, cancellation rules, overlay permission and session lifecycle
 * `Improvement` Compose UI V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility
 * `Improvement` Device API reference: device.getAndroidId accepts a useSystemId boolean to read the system value for the app's Android user through Shizuku/Root on Android 8.0+, throws on permission or read failure, and ignores the flag on older systems
+* `Improvement` AutoJs4 Runtime reference: purpose of the AutoJs4 Runtime plugin, installation and its separate permissions, the file manager "Run with AutoJs4" entry for .js / .auto files and project folders, log forwarding and task stopping, runtime limits and how to report differences
 
 # v6.8.5
 
