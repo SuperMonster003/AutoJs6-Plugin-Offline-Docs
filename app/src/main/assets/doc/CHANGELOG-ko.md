@@ -10,15 +10,15 @@
 
 * `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
 * `개선` 선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인
-* `개선` Compose UI 전체 API 참조: 노드와 상태, Modifier, 테마, 세션과 플로팅 창, 컴포넌트 속성과 이벤트, 스레드 규칙, 접근성 및 패키지 앱
-* `개선` Compose UI TSX: TSX는 `<compose.Column>`, `<compose:Text>`, 노드 팩토리 참조, Fragment, 슬롯 및 반응형 콜백을 지원합니다. 하나의 트리에서 Compose와 기존 XML 노드를 혼합할 수 없습니다
+* `개선` 3-Block Compose 전체 API 참조: 노드와 상태, Modifier, 테마, 세션과 플로팅 창, 컴포넌트 속성과 이벤트, 스레드 규칙, 접근성 및 패키지 앱
+* `개선` 3-Block Compose TSX: TSX는 `<compose.Column>`, `<compose:Text>`, 노드 팩토리 참조, Fragment, 슬롯 및 반응형 콜백을 지원합니다. 하나의 트리에서 Compose와 기존 XML 노드를 혼합할 수 없습니다
 * `개선` Terminal 모듈 참조: 3-Shell Terminal 플러그인의 동기 및 비동기 세션, 출력 이벤트, npm 스크립트, 권한과 수명 주기, 그리고 TerminalSession, TerminalOpenOptions, TerminalError 형식
 * `개선` colors 모듈 참조: OKLab/OKLCH 변환, 대비 조정, 조화색, 색조 단계, 파생 색상, 야간 대응색, 색각 이상 시뮬레이션, 이미지 주요 색상 추출, oklab 색상 감지 알고리즘 및 colors.theme 테마 색상 제어
 * `개선` 플러그인 센터 아이콘에 Icon Studio에서 조정한 크기, 위치, 밝은 이미지와 어두운 이미지 및 원형 배경을 적용하고 재생성 가능한 원본과 매개변수를 유지
 * `개선` Android 앱 정보 아이콘에 Icon Studio의 그림과 밝은 배경 및 어두운 배경을 사용하고 플러그인 센터의 투명 그림과 기존 런처 옵션을 유지
-* `개선` Compose UI: XML `<compose>` 컨테이너와 compose.attach로 UI 페이지나 기존 플로팅 창에 독립적인 Compose 세션을 삽입합니다. compose.AndroidView는 기존 Android View 또는 동기 팩토리가 반환하는 View를 표시합니다
-* `개선` Compose UI 참고 문서에 독립 대화상자와 하단 시트, 취소 규칙, 오버레이 권한 및 세션 수명 주기 설명 추가
-* `개선` Compose UI V2 구성요소 참조 문서에 제어 상태, 이벤트, 포커스 및 스크롤 명령, 사용 조건과 호환성 포함
+* `개선` 3-Block Compose: XML `<compose>` 컨테이너와 compose.attach로 UI 페이지나 기존 플로팅 창에 독립적인 Compose 세션을 삽입합니다. compose.AndroidView는 기존 Android View 또는 동기 팩토리가 반환하는 View를 표시합니다
+* `개선` 3-Block Compose 참고 문서에 독립 대화상자와 하단 시트, 취소 규칙, 오버레이 권한 및 세션 수명 주기 설명 추가
+* `개선` 3-Block Compose V2 구성요소 참조 문서에 제어 상태, 이벤트, 포커스 및 스크롤 명령, 사용 조건과 호환성 포함
 * `개선` device API 참고 문서: device.getAndroidId가 useSystemId 불리언 매개변수를 지원하며, Android 8.0+에서 Shizuku/Root로 앱이 실행되는 Android 사용자의 시스템 값을 읽음. 권한 또는 읽기 실패 시 예외를 발생시키고 이전 시스템에서는 매개변수를 무시
 * `개선` AutoJs4 런타임 참고 문서: AutoJs4 Runtime 플러그인의 용도, 설치와 독립 권한, 파일 관리자의 "AutoJs4로 실행" 항목으로 .js / .auto 파일과 프로젝트 폴더를 실행하는 입구, 로그 전달과 작업 중지, 실행 제한 및 차이 보고 방법
 * `개선` AutoJs4 런타임 참고 문서: "AutoJs4로 실행하고 비교" 비교 모드를 추가하여 두 번의 실행 흐름, 시작과 종료 행 및 접두사 제거 규칙, 결과 페이지의 요약과 차이 표시, issue 템플릿 복사 및 120초 제한 시간을 설명

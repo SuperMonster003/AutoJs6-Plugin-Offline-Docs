@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12905521
-contentSha256=8a575fedb341c2e83cd08c4adc24521af1d7fede01f4e7f77fc699af8f185167
+totalBytes=12906522
+contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
+sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,15 +120,15 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 * `改善` Installer の起点/パッケージ名プレフィックス別プロファイル, 明示オプションの優先と 3 項目の null リセット, sourceDeleteRequested とバッチ共有ソースの保持. ホスト 5312+ と対応プラグインが必要
 * `改善` セレクター minDepth/maxDepth/minIndexInParent/maxIndexInParent のメソッド説明とオフライン検索インデックス
-* `改善` Compose UI の完全な API リファレンス: ノードと状態, Modifier, テーマ, セッションとフローティングウィンドウ, コンポーネントのプロパティとイベント, スレッド, アクセシビリティ, パッケージ化アプリ
-* `改善` Compose UI TSX: TSX は `<compose.Column>`, `<compose:Text>`, ノードファクトリへの参照, Fragment, スロットとリアクティブなコールバックに対応. 同じツリーで Compose と従来の XML ノードを混在させることはできません
+* `改善` 3-Block Compose の完全な API リファレンス: ノードと状態, Modifier, テーマ, セッションとフローティングウィンドウ, コンポーネントのプロパティとイベント, スレッド, アクセシビリティ, パッケージ化アプリ
+* `改善` 3-Block Compose TSX: TSX は `<compose.Column>`, `<compose:Text>`, ノードファクトリへの参照, Fragment, スロットとリアクティブなコールバックに対応. 同じツリーで Compose と従来の XML ノードを混在させることはできません
 * `改善` Terminal モジュールのリファレンス: 3-Shell Terminal プラグインの同期/非同期セッション, 出力イベント, npm スクリプト, 権限とライフサイクル, および TerminalSession, TerminalOpenOptions, TerminalError 型
 * `改善` colors モジュールのリファレンス: OKLab/OKLCH 変換, コントラスト調整, 調和色, 色階, 派生配色, 夜間の対応色, 色覚特性のシミュレーション, 画像の主要色の抽出, oklab 色検出アルゴリズム, colors.theme によるテーマカラー制御
 * `改善` プラグインセンターのアイコンに Icon Studio で調整したサイズ, 位置, 明暗の図稿と円形背景を適用し, 再生成可能な原稿とパラメーターを保持
 * `改善` Android のアプリ情報アイコンに Icon Studio と共通の図案と明暗の背景色を使用し, プラグインセンターの透明な図案と既存のランチャー設定を維持
-* `改善` Compose UI: XML `<compose>` コンテナと compose.attach は UI ページや既存のフローティングウィンドウに独立した Compose セッションを埋め込みます. compose.AndroidView は既存の Android View または同期ファクトリが返す View を表示します
-* `改善` Compose UI リファレンスに独立ダイアログとボトムシート, 終了の規則, オーバーレイ権限, セッションのライフサイクルを追加
-* `改善` Compose UI V2 コンポーネントリファレンスで制御状態, イベント, フォーカスとスクロールのコマンド, 利用条件と互換性を説明
+* `改善` 3-Block Compose: XML `<compose>` コンテナと compose.attach は UI ページや既存のフローティングウィンドウに独立した Compose セッションを埋め込みます. compose.AndroidView は既存の Android View または同期ファクトリが返す View を表示します
+* `改善` 3-Block Compose リファレンスに独立ダイアログとボトムシート, 終了の規則, オーバーレイ権限, セッションのライフサイクルを追加
+* `改善` 3-Block Compose V2 コンポーネントリファレンスで制御状態, イベント, フォーカスとスクロールのコマンド, 利用条件と互換性を説明
 * `改善` device API リファレンス: device.getAndroidId が useSystemId 真偽値引数に対応し, Android 8.0+ では Shizuku/Root を通じてアプリの Android ユーザーのシステム値を取得. 権限または読み取りの失敗時は例外を送出し, 旧システムでは引数を無視
 * `改善` AutoJs4 ランタイムリファレンス: AutoJs4 Runtime プラグインの用途, インストールと独立した権限, ファイルマネージャーの "AutoJs4 で実行" による .js / .auto ファイルとプロジェクトフォルダーの実行入口, ログ転送とタスク停止, 実行制限, 差異の報告方法
 * `改善` AutoJs4 ランタイムリファレンス: "AutoJs4 で実行して比較" の比較モードを追加し, 2 回の実行の流れ, 開始と終了の行および接頭辞の除去規則, 結果ページの概要と差分マーカー, issue テンプレートのコピー, 120 秒のタイムアウトを説明

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12905521
-contentSha256=8a575fedb341c2e83cd08c4adc24521af1d7fede01f4e7f77fc699af8f185167
+totalBytes=12906522
+contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
+sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,15 +120,15 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 * `優化` Installer 來源/套件名稱前綴設定檔, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要主程式 5312+ 及外掛對應能力
 * `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
-* `優化` Compose UI 完整 API 參考: 節點與狀態, Modifier, 主題, 工作階段與浮動視窗, 元件屬性和事件, 執行緒規則, 無障礙與封裝應用程式
-* `優化` Compose UI TSX: TSX 支援 `<compose.Column>`, `<compose:Text>`, 節點工廠參照, Fragment, 插槽及響應式回呼; 同一棵樹不能混用 Compose 與舊 XML 節點
+* `優化` 3-Block Compose 完整 API 參考: 節點與狀態, Modifier, 主題, 工作階段與浮動視窗, 元件屬性和事件, 執行緒規則, 無障礙與封裝應用程式
+* `優化` 3-Block Compose TSX: TSX 支援 `<compose.Column>`, `<compose:Text>`, 節點工廠參照, Fragment, 插槽及響應式回呼; 同一棵樹不能混用 Compose 與舊 XML 節點
 * `優化` Terminal 模組參考: 3-Shell Terminal 外掛的同步與非同步工作階段, 輸出事件, npm 指令碼, 權限與生命週期, 以及 TerminalSession, TerminalOpenOptions 與 TerminalError 型別
 * `優化` colors 模組參考: OKLab/OKLCH 轉換, 對比度調整, 和諧色, 色階, 衍生配色, 夜間對應色, 色覺缺陷模擬, 圖片主要顏色擷取, oklab 顏色偵測演算法及 colors.theme 主題色控制
 * `優化` 外掛程式中心圖示採用統一工作台調整後的尺寸, 位置, 明暗圖稿與圓形底色, 保留可重建原稿和參數
 * `優化` Android 系統應用程式資訊圖示與圖示工作台共用圖稿及明暗底色, 保留外掛程式中心透明圖稿與現有啟動器選項
-* `優化` Compose UI: XML `<compose>` 容器與 compose.attach 可在 UI 頁面或舊浮動視窗內嵌入獨立 Compose 工作階段; compose.AndroidView 可承載現有 Android View 或同步工廠傳回的 View
-* `優化` Compose UI 參考文件補充獨立對話框和底部面板, 包含取消規則, 懸浮視窗權限與工作階段生命週期
-* `優化` Compose UI V2 元件參考, 包含受控狀態, 事件, 焦點與捲動命令, 使用條件和相容性
+* `優化` 3-Block Compose: XML `<compose>` 容器與 compose.attach 可在 UI 頁面或舊浮動視窗內嵌入獨立 Compose 工作階段; compose.AndroidView 可承載現有 Android View 或同步工廠傳回的 View
+* `優化` 3-Block Compose 參考文件補充獨立對話框和底部面板, 包含取消規則, 懸浮視窗權限與工作階段生命週期
+* `優化` 3-Block Compose V2 元件參考, 包含受控狀態, 事件, 焦點與捲動命令, 使用條件和相容性
 * `優化` 裝置模組參考文件: device.getAndroidId 支援 useSystemId 布林參數, 在 Android 8.0+ 上透過 Shizuku/Root 取得執行應用所屬 Android 使用者的系統值, 權限或讀取失敗時擲出例外, 舊系統忽略此參數
 * `優化` AutoJs4 執行時參考文件: AutoJs4 Runtime 外掛的用途, 安裝與獨立權限, 檔案管理器 "使用 AutoJs4 執行" 對 .js / .auto 檔案及專案資料夾的入口, 日誌回傳與任務停止, 執行限制及差異回饋方式
 * `優化` AutoJs4 執行時參考文件: 補充 "使用 AutoJs4 執行並對照" 的對照模式, 說明兩次執行流程, 起止行與前綴的剔除規則, 結果頁的摘要與差異標記, issue 範本複製以及 120 秒逾時

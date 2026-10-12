@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12905521
-contentSha256=8a575fedb341c2e83cd08c4adc24521af1d7fede01f4e7f77fc699af8f185167
+totalBytes=12906522
+contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
+sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,15 +120,15 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
-* `Improvement` Complete Compose UI API reference: nodes and state, modifiers, themes, sessions and floating windows, component properties and events, threading, accessibility and packaged applications
-* `Improvement` Compose UI TSX: TSX supports `<compose.Column>`, `<compose:Text>`, references to node factories, fragments, slots and reactive callbacks; a single tree cannot mix Compose and legacy XML nodes
+* `Improvement` Complete 3-Block Compose API reference: nodes and state, modifiers, themes, sessions and floating windows, component properties and events, threading, accessibility and packaged applications
+* `Improvement` 3-Block Compose TSX: TSX supports `<compose.Column>`, `<compose:Text>`, references to node factories, fragments, slots and reactive callbacks; a single tree cannot mix Compose and legacy XML nodes
 * `Improvement` Terminal module reference: synchronous and asynchronous sessions of the 3-Shell Terminal plugin, output events, npm scripts, permissions and lifecycle, plus the TerminalSession, TerminalOpenOptions and TerminalError types
 * `Improvement` colors module reference: OKLab/OKLCH conversion, contrast adjustment, harmonies, tonal scales, derived colors, night variants, color vision deficiency simulation, dominant image colors, the oklab detection algorithm and colors.theme theme color control
 * `Improvement` Plugin Center icons use the sizes, positions, light and dark artwork, and circular backgrounds adjusted in Icon Studio, retaining reproducible sources and parameters
 * `Improvement` Android App info icons share Icon Studio artwork and light/dark backgrounds while preserving transparent Plugin Center artwork and existing launcher choices
-* `Improvement` Compose UI: XML `<compose>` containers and compose.attach embed independent Compose sessions in UI pages or legacy floating windows; compose.AndroidView embeds an existing Android View or one returned by a synchronous factory
-* `Improvement` Compose UI reference covers independent dialogs and bottom sheets, cancellation rules, overlay permission and session lifecycle
-* `Improvement` Compose UI V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility
+* `Improvement` 3-Block Compose: XML `<compose>` containers and compose.attach embed independent Compose sessions in UI pages or legacy floating windows; compose.AndroidView embeds an existing Android View or one returned by a synchronous factory
+* `Improvement` 3-Block Compose reference covers independent dialogs and bottom sheets, cancellation rules, overlay permission and session lifecycle
+* `Improvement` 3-Block Compose V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility
 * `Improvement` Device API reference: device.getAndroidId accepts a useSystemId boolean to read the system value for the app's Android user through Shizuku/Root on Android 8.0+, throws on permission or read failure, and ignores the flag on older systems
 * `Improvement` AutoJs4 Runtime reference: purpose of the AutoJs4 Runtime plugin, installation and its separate permissions, the file manager "Run with AutoJs4" entry for .js / .auto files and project folders, log forwarding and task stopping, runtime limits and how to report differences
 * `Improvement` AutoJs4 Runtime reference: comparison mode of "Run with AutoJs4 and compare", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout

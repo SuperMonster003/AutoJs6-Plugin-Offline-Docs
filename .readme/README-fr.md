@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12905521
-contentSha256=8a575fedb341c2e83cd08c4adc24521af1d7fede01f4e7f77fc699af8f185167
+totalBytes=12906522
+contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
+sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -120,15 +120,15 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 * `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
 * `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
-* `Amélioration` Référence complète de l'API Compose UI: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées
-* `Amélioration` Compose UI TSX: TSX prend en charge `<compose.Column>`, `<compose:Text>`, les références aux fabriques de noeuds, les fragments, les emplacements et les rappels réactifs; un même arbre ne peut pas mélanger Compose et les anciens noeuds XML
+* `Amélioration` Référence complète de l'API 3-Block Compose: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées
+* `Amélioration` 3-Block Compose TSX: TSX prend en charge `<compose.Column>`, `<compose:Text>`, les références aux fabriques de noeuds, les fragments, les emplacements et les rappels réactifs; un même arbre ne peut pas mélanger Compose et les anciens noeuds XML
 * `Amélioration` Référence du module Terminal: sessions synchrones et asynchrones du plugin 3-Shell Terminal, événements de sortie, scripts npm, autorisations et cycle de vie, ainsi que les types TerminalSession, TerminalOpenOptions et TerminalError
 * `Amélioration` Référence du module colors: conversions OKLab/OKLCH, ajustement du contraste, harmonies, gammes de tons, couleurs dérivées, variantes de nuit, simulation des déficiences de la vision des couleurs, couleurs dominantes d'une image, algorithme de détection oklab et contrôle de la couleur du thème avec colors.theme
 * `Amélioration` Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire
 * `Amélioration` Les icônes des informations d'application Android utilisent les illustrations et les fonds clairs et sombres d'Icon Studio, en conservant les images transparentes du centre de plugins et les choix du lanceur
-* `Amélioration` Compose UI: Les conteneurs XML `<compose>` et compose.attach intègrent des sessions Compose indépendantes dans les pages UI ou les fenêtres flottantes existantes; compose.AndroidView affiche une View Android existante ou renvoyée par une fabrique synchrone
-* `Amélioration` La référence Compose UI couvre les dialogues indépendants et panneaux inférieurs, les règles de fermeture, la permission de superposition et le cycle de vie des sessions
-* `Amélioration` Référence des composants Compose UI V2 avec état contrôlé, événements, commandes de focus et de défilement, conditions d'utilisation et compatibilité
+* `Amélioration` 3-Block Compose: Les conteneurs XML `<compose>` et compose.attach intègrent des sessions Compose indépendantes dans les pages UI ou les fenêtres flottantes existantes; compose.AndroidView affiche une View Android existante ou renvoyée par une fabrique synchrone
+* `Amélioration` La référence 3-Block Compose couvre les dialogues indépendants et panneaux inférieurs, les règles de fermeture, la permission de superposition et le cycle de vie des sessions
+* `Amélioration` Référence des composants 3-Block Compose V2 avec état contrôlé, événements, commandes de focus et de défilement, conditions d'utilisation et compatibilité
 * `Amélioration` Référence de l'API device: device.getAndroidId accepte le booléen useSystemId pour lire la valeur système de l'utilisateur Android de l'application via Shizuku/Root sous Android 8.0+, lève une exception en cas d'échec d'autorisation ou de lecture et ignore ce paramètre sur les anciens systèmes
 * `Amélioration` Référence AutoJs4 Runtime: objet du plugin AutoJs4 Runtime, installation et permissions distinctes, l'entrée "Exécuter avec AutoJs4" du gestionnaire de fichiers pour les fichiers .js / .auto et les dossiers de projet, transfert des journaux et arrêt des tâches, limites d'exécution et procédure de signalement des différences
 * `Amélioration` Référence AutoJs4 Runtime: mode de comparaison "Exécuter avec AutoJs4 et comparer", avec les deux exécutions, les lignes de cadrage et le préfixe retirés, le résumé et les marqueurs de différence de la page de résultat, la copie du modèle d'issue et le délai de 120 secondes
