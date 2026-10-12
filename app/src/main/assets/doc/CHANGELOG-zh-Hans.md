@@ -6,7 +6,7 @@
 
 # v6.8.6
 
-###### 2026/10/07
+###### 2026/10/12
 
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
@@ -19,6 +19,7 @@
 * `优化` Compose UI: XML `<compose>` 容器与 compose.attach 可在 UI 页面或旧悬浮窗内嵌入独立 Compose 会话; compose.AndroidView 可承载现有 Android View 或同步工厂返回的 View
 * `优化` Compose UI 参考文档补充独立对话框和底部弹层, 包含取消规则, 悬浮窗权限与会话生命周期
 * `优化` Compose UI V2 组件参考, 包含受控状态, 事件, 焦点与滚动命令, 使用条件和兼容性
+* `优化` 设备模块参考文档: device.getAndroidId 支持 useSystemId 布尔参数, 在 Android 8.0+ 上通过 Shizuku/Root 获取运行应用所属 Android 用户的系统值, 权限或读取失败时抛出异常, 旧系统忽略此参数
 
 # v6.8.5
 

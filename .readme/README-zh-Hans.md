@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12838225
-contentSha256=42183c5fbb312510290f52a33a97f40e5286dfa747b8268c6e3f98e6f204b36e
+totalBytes=12843715
+contentSha256=7b60475d106e63386738cefdfaca05c9503404ed77a4e6e930b1f3c5e08ec6a6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
+sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.6
 
-###### 2026/10/07
+###### 2026/10/12
 
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
@@ -129,6 +129,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` Compose UI: XML `<compose>` 容器与 compose.attach 可在 UI 页面或旧悬浮窗内嵌入独立 Compose 会话; compose.AndroidView 可承载现有 Android View 或同步工厂返回的 View
 * `优化` Compose UI 参考文档补充独立对话框和底部弹层, 包含取消规则, 悬浮窗权限与会话生命周期
 * `优化` Compose UI V2 组件参考, 包含受控状态, 事件, 焦点与滚动命令, 使用条件和兼容性
+* `优化` 设备模块参考文档: device.getAndroidId 支持 useSystemId 布尔参数, 在 Android 8.0+ 上通过 Shizuku/Root 获取运行应用所属 Android 用户的系统值, 权限或读取失败时抛出异常, 旧系统忽略此参数
 
 # v6.8.5
 

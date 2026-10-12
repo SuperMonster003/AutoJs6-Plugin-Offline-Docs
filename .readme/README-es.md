@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12838225
-contentSha256=42183c5fbb312510290f52a33a97f40e5286dfa747b8268c6e3f98e6f204b36e
+totalBytes=12843715
+contentSha256=7b60475d106e63386738cefdfaca05c9503404ed77a4e6e930b1f3c5e08ec6a6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
+sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 # v6.8.6
 
-###### 2026/10/07
+###### 2026/10/12
 
 * `Mejora` Perfiles de Installer por origen/prefijo de paquete, prioridad de opciones explícitas y tres restablecimientos con null, sourceDeleteRequested y conservación de fuentes compartidas del lote; requiere anfitrión 5312+ y plugin compatible
 * `Mejora` Documentación y entradas de búsqueda sin conexión para los métodos de selector minDepth/maxDepth/minIndexInParent/maxIndexInParent
@@ -129,6 +129,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` Compose UI: Los contenedores XML `<compose>` y compose.attach integran sesiones Compose independientes en páginas UI o ventanas flotantes existentes; compose.AndroidView muestra una View Android existente o devuelta por una fábrica síncrona
 * `Mejora` La referencia de Compose UI cubre diálogos independientes y paneles inferiores, reglas de cancelación, permiso de superposición y ciclo de vida de las sesiones
 * `Mejora` Referencia de componentes Compose UI V2 con estado controlado, eventos, comandos de foco y desplazamiento, requisitos y compatibilidad
+* `Mejora` Referencia de la API device: device.getAndroidId acepta el booleano useSystemId para leer el valor del sistema del usuario Android de la aplicación mediante Shizuku/Root en Android 8.0+, lanza una excepción si falla el permiso o la lectura e ignora el parámetro en sistemas anteriores
 
 # v6.8.5
 

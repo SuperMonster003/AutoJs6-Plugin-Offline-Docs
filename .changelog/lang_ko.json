@@ -6,7 +6,7 @@
   "changelog_label_dependency": "의존성",
   "$data": {
     "v6.8.6": {
-      "released_date": "2026/10/07",
+      "released_date": "2026/10/12",
       "improvement": [
         "Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요",
         "선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인",
@@ -18,7 +18,8 @@
         "Android 앱 정보 아이콘에 Icon Studio의 그림과 밝은 배경 및 어두운 배경을 사용하고 플러그인 센터의 투명 그림과 기존 런처 옵션을 유지",
         "Compose UI: XML `<compose>` 컨테이너와 compose.attach로 UI 페이지나 기존 플로팅 창에 독립적인 Compose 세션을 삽입합니다. compose.AndroidView는 기존 Android View 또는 동기 팩토리가 반환하는 View를 표시합니다",
         "Compose UI 참고 문서에 독립 대화상자와 하단 시트, 취소 규칙, 오버레이 권한 및 세션 수명 주기 설명 추가",
-        "Compose UI V2 구성요소 참조 문서에 제어 상태, 이벤트, 포커스 및 스크롤 명령, 사용 조건과 호환성 포함"
+        "Compose UI V2 구성요소 참조 문서에 제어 상태, 이벤트, 포커스 및 스크롤 명령, 사용 조건과 호환성 포함",
+        "device API 참고 문서: device.getAndroidId가 useSystemId 불리언 매개변수를 지원하며, Android 8.0+에서 Shizuku/Root로 앱이 실행되는 Android 사용자의 시스템 값을 읽음. 권한 또는 읽기 실패 시 예외를 발생시키고 이전 시스템에서는 매개변수를 무시"
       ]
     },
     "v6.8.5": {

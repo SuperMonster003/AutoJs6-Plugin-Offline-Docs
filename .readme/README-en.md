@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12838225
-contentSha256=42183c5fbb312510290f52a33a97f40e5286dfa747b8268c6e3f98e6f204b36e
+totalBytes=12843715
+contentSha256=7b60475d106e63386738cefdfaca05c9503404ed77a4e6e930b1f3c5e08ec6a6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
+sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 # v6.8.6
 
-###### 2026/10/07
+###### 2026/10/12
 
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
@@ -129,6 +129,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Compose UI: XML `<compose>` containers and compose.attach embed independent Compose sessions in UI pages or legacy floating windows; compose.AndroidView embeds an existing Android View or one returned by a synchronous factory
 * `Improvement` Compose UI reference covers independent dialogs and bottom sheets, cancellation rules, overlay permission and session lifecycle
 * `Improvement` Compose UI V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility
+* `Improvement` Device API reference: device.getAndroidId accepts a useSystemId boolean to read the system value for the app's Android user through Shizuku/Root on Android 8.0+, throws on permission or read failure, and ignores the flag on older systems
 
 # v6.8.5
 

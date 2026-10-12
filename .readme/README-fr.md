@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12838225
-contentSha256=42183c5fbb312510290f52a33a97f40e5286dfa747b8268c6e3f98e6f204b36e
+totalBytes=12843715
+contentSha256=7b60475d106e63386738cefdfaca05c9503404ed77a4e6e930b1f3c5e08ec6a6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
+sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.6
 
-###### 2026/10/07
+###### 2026/10/12
 
 * `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
 * `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
@@ -129,6 +129,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Compose UI: Les conteneurs XML `<compose>` et compose.attach intègrent des sessions Compose indépendantes dans les pages UI ou les fenêtres flottantes existantes; compose.AndroidView affiche une View Android existante ou renvoyée par une fabrique synchrone
 * `Amélioration` La référence Compose UI couvre les dialogues indépendants et panneaux inférieurs, les règles de fermeture, la permission de superposition et le cycle de vie des sessions
 * `Amélioration` Référence des composants Compose UI V2 avec état contrôlé, événements, commandes de focus et de défilement, conditions d'utilisation et compatibilité
+* `Amélioration` Référence de l'API device: device.getAndroidId accepte le booléen useSystemId pour lire la valeur système de l'utilisateur Android de l'application via Shizuku/Root sous Android 8.0+, lève une exception en cas d'échec d'autorisation ou de lecture et ignore ce paramètre sur les anciens systèmes
 
 # v6.8.5
 

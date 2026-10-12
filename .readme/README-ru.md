@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12838225
-contentSha256=42183c5fbb312510290f52a33a97f40e5286dfa747b8268c6e3f98e6f204b36e
+totalBytes=12843715
+contentSha256=7b60475d106e63386738cefdfaca05c9503404ed77a4e6e930b1f3c5e08ec6a6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
+sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.6
 
-###### 2026/10/07
+###### 2026/10/12
 
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
@@ -129,6 +129,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Compose UI: XML-контейнеры `<compose>` и compose.attach встраивают независимые сеансы Compose в UI-страницы или прежние плавающие окна; compose.AndroidView отображает готовый Android View либо результат синхронной фабрики
 * `Улучшение` Справочник Compose UI описывает независимые диалоги и нижние панели, правила отмены, разрешение наложения и жизненный цикл сеансов
 * `Улучшение` Справочник компонентов Compose UI V2 с управляемым состоянием, событиями, командами фокуса и прокрутки, требованиями и совместимостью
+* `Улучшение` Справочник API device: device.getAndroidId принимает логический параметр useSystemId для чтения системного значения пользователя Android приложения через Shizuku/Root на Android 8.0+, вызывает исключение при ошибке доступа или чтения и игнорирует параметр на старых системах
 
 # v6.8.5
 

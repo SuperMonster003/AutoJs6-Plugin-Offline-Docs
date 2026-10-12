@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=212
-totalBytes=12838225
-contentSha256=42183c5fbb312510290f52a33a97f40e5286dfa747b8268c6e3f98e6f204b36e
+totalBytes=12843715
+contentSha256=7b60475d106e63386738cefdfaca05c9503404ed77a4e6e930b1f3c5e08ec6a6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=479d8f1651bcf4f6b8f82b3fbe35838451c6dbfc
+sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ category=offline-docs
 
 # v6.8.6
 
-###### 2026/10/07
+###### 2026/10/12
 
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
 * `تحسين` توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال
@@ -129,6 +129,7 @@ category=offline-docs
 * `تحسين` Compose UI: تدمج حاويات XML `<compose>` و compose.attach جلسات Compose مستقلة في صفحات UI أو النوافذ العائمة الحالية. يعرض compose.AndroidView عنصرا جاهزا من Android View أو عنصرا تعيده دالة إنشاء متزامنة
 * `تحسين` يتناول مرجع Compose UI الحوارات المستقلة واللوحات السفلية وقواعد الإلغاء وإذن التراكب ودورة حياة الجلسات
 * `تحسين` مرجع مكونات Compose UI V2 يغطي الحالة المتحكم بها والأحداث وأوامر التركيز والتمرير ومتطلبات الاستخدام والتوافق
+* `تحسين` مرجع واجهة device: تقبل device.getAndroidId المعامل المنطقي useSystemId لقراءة قيمة النظام لمستخدم Android الذي يشغل التطبيق عبر Shizuku/Root على Android 8.0+, وتطرح استثناء عند فشل الإذن أو القراءة, وتتجاهل المعامل على الأنظمة الأقدم
 
 # v6.8.5
 
