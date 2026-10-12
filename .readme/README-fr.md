@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12899614
-contentSha256=59974bf5fad9442a208577ddd113e9c3958331e1e7a73b86161ac017d482577e
+totalBytes=12905521
+contentSha256=8a575fedb341c2e83cd08c4adc24521af1d7fede01f4e7f77fc699af8f185167
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
@@ -132,6 +132,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Référence de l'API device: device.getAndroidId accepte le booléen useSystemId pour lire la valeur système de l'utilisateur Android de l'application via Shizuku/Root sous Android 8.0+, lève une exception en cas d'échec d'autorisation ou de lecture et ignore ce paramètre sur les anciens systèmes
 * `Amélioration` Référence AutoJs4 Runtime: objet du plugin AutoJs4 Runtime, installation et permissions distinctes, l'entrée "Exécuter avec AutoJs4" du gestionnaire de fichiers pour les fichiers .js / .auto et les dossiers de projet, transfert des journaux et arrêt des tâches, limites d'exécution et procédure de signalement des différences
 * `Amélioration` Référence AutoJs4 Runtime: mode de comparaison "Exécuter avec AutoJs4 et comparer", avec les deux exécutions, les lignes de cadrage et le préfixe retirés, le résumé et les marqueurs de différence de la page de résultat, la copie du modèle d'issue et le délai de 120 secondes
+* `Amélioration` Référence AutoJs4 Runtime: nouvelle section "Classes de compatibilité com.stardust" expliquant comment les noms de classe préfixés com.stardust sont associés aux implémentations AutoJs6 (association complète, partielle et plus fournie), l'effet des associations renommées sur le nom global d'importClass, et le fait que Class.forName n'est pas concerné
 
 # v6.8.5
 

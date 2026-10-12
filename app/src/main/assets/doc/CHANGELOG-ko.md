@@ -22,6 +22,7 @@
 * `개선` device API 참고 문서: device.getAndroidId가 useSystemId 불리언 매개변수를 지원하며, Android 8.0+에서 Shizuku/Root로 앱이 실행되는 Android 사용자의 시스템 값을 읽음. 권한 또는 읽기 실패 시 예외를 발생시키고 이전 시스템에서는 매개변수를 무시
 * `개선` AutoJs4 런타임 참고 문서: AutoJs4 Runtime 플러그인의 용도, 설치와 독립 권한, 파일 관리자의 "AutoJs4로 실행" 항목으로 .js / .auto 파일과 프로젝트 폴더를 실행하는 입구, 로그 전달과 작업 중지, 실행 제한 및 차이 보고 방법
 * `개선` AutoJs4 런타임 참고 문서: "AutoJs4로 실행하고 비교" 비교 모드를 추가하여 두 번의 실행 흐름, 시작과 종료 행 및 접두사 제거 규칙, 결과 페이지의 요약과 차이 표시, issue 템플릿 복사 및 120초 제한 시간을 설명
+* `개선` AutoJs4 런타임 참고 문서: "com.stardust 호환 클래스" 절을 추가하여 com.stardust 접두사 클래스 이름이 AutoJs6 구현에 어떻게 매핑되는지 (완전 매핑, 부분 매핑, 더 이상 제공하지 않음), 이름이 바뀐 매핑이 importClass 전역 이름에 미치는 영향, Class.forName은 매핑 대상이 아님을 설명
 
 # v6.8.5
 

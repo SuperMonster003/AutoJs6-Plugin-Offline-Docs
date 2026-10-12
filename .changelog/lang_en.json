@@ -21,7 +21,8 @@
         "Compose UI V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility",
         "Device API reference: device.getAndroidId accepts a useSystemId boolean to read the system value for the app's Android user through Shizuku/Root on Android 8.0+, throws on permission or read failure, and ignores the flag on older systems",
         "AutoJs4 Runtime reference: purpose of the AutoJs4 Runtime plugin, installation and its separate permissions, the file manager \"Run with AutoJs4\" entry for .js / .auto files and project folders, log forwarding and task stopping, runtime limits and how to report differences",
-        "AutoJs4 Runtime reference: comparison mode of \"Run with AutoJs4 and compare\", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout"
+        "AutoJs4 Runtime reference: comparison mode of \"Run with AutoJs4 and compare\", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout",
+        "AutoJs4 Runtime reference: new \"com.stardust compatibility classes\" section explaining how com.stardust class names map to the AutoJs6 implementations (fully mapped, partially mapped and no longer provided), how renamed mappings affect the importClass global name, and that Class.forName is not affected"
       ]
     },
     "v6.8.5": {

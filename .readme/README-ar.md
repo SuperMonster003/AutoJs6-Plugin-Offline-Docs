@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=213
-totalBytes=12899614
-contentSha256=59974bf5fad9442a208577ddd113e9c3958331e1e7a73b86161ac017d482577e
+totalBytes=12905521
+contentSha256=8a575fedb341c2e83cd08c4adc24521af1d7fede01f4e7f77fc699af8f185167
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=0e015ad0eefe6dab44ee163267558246851e4035
 sourcePath=api
@@ -132,6 +132,7 @@ category=offline-docs
 * `تحسين` مرجع واجهة device: تقبل device.getAndroidId المعامل المنطقي useSystemId لقراءة قيمة النظام لمستخدم Android الذي يشغل التطبيق عبر Shizuku/Root على Android 8.0+, وتطرح استثناء عند فشل الإذن أو القراءة, وتتجاهل المعامل على الأنظمة الأقدم
 * `تحسين` مرجع AutoJs4 Runtime: الغرض من إضافة AutoJs4 Runtime, التثبيت وأذوناتها المستقلة, مدخل "تشغيل باستخدام AutoJs4" في مدير الملفات لملفات .js / .auto ومجلدات المشاريع, إعادة توجيه السجل وإيقاف المهام, حدود التشغيل وطريقة الإبلاغ عن الاختلافات
 * `تحسين` مرجع AutoJs4 Runtime: وضع المقارنة "التشغيل باستخدام AutoJs4 والمقارنة", مع التشغيلين, إزالة سطور البداية والنهاية والبادئة, ملخص صفحة النتيجة وعلامات الاختلاف, نسخ قالب issue ومهلة 120 ثانية
+* `تحسين` مرجع AutoJs4 Runtime: قسم جديد "فئات التوافق com.stardust" يشرح كيف تُربط أسماء الفئات ذات البادئة com.stardust بتطبيقات AutoJs6 (ربط كامل, ربط جزئي, ولم تعد متاحة), وتأثير الربط بأسماء مختلفة على الاسم العام في importClass, وأن Class.forName لا يتأثر بالربط
 
 # v6.8.5
 
