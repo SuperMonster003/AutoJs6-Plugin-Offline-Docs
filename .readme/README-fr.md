@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=12989560
-contentSha256=2ab65027bd4bceaadb009440e82ca3408c7f3a97e10d69fe293a56ac7d1ba3a5
+totalBytes=12998606
+contentSha256=7783a93debcfcd5cd89bed239201e492212a468bf84511177f3088d61a519408
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=bdf76d61d6a7d6128cae57d4d73bd6b393e0ec0a
+sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -133,7 +133,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Référence AutoJs4 Runtime: objet du plugin AutoJs4 Runtime, installation et permissions distinctes, l'entrée "Exécuter avec AutoJs4" du gestionnaire de fichiers pour les fichiers .js / .auto et les dossiers de projet, transfert des journaux et arrêt des tâches, limites d'exécution et procédure de signalement des différences
 * `Amélioration` Référence AutoJs4 Runtime: mode de comparaison "Exécuter avec AutoJs4 et comparer", avec les deux exécutions, les lignes de cadrage et le préfixe retirés, le résumé et les marqueurs de différence de la page de résultat, la copie du modèle d'issue et le délai de 120 secondes
 * `Amélioration` Référence AutoJs4 Runtime: nouvelle section "Classes de compatibilité com.stardust" expliquant comment les noms de classe préfixés com.stardust sont associés aux implémentations AutoJs6 (association complète, partielle et plus fournie), l'effet des associations renommées sur le nom global d'importClass, et le fait que Class.forName n'est pas concerné
-* `Amélioration` Référence du Concepteur 3-Block Compose: points d'entrée et fichiers de projet du concepteur visuel intégré au plugin, le canevas / plan / propriétés / état / palette de composants de l'éditeur, sa disposition en portrait et en paysage et ses brouillons, le sous-ensemble de script reconnu et les règles d'aller-retour, le passage bidirectionnel avec l'éditeur AutoJs6, la réécriture vers la source importée et sa réimportation, l'état d'aperçu et l'aperçu interactif avec leurs différences par rapport à une vraie exécution, les projets TSX (analysés par TypeScript Engine, en lecture seule sans lui), et les limites actuelles
+* `Amélioration` Référence du Concepteur 3-Block Compose: points d'entrée et fichiers de projet du concepteur visuel intégré au plugin, le canevas / plan / propriétés / état / palette de composants de l'éditeur, sa disposition en portrait et en paysage et ses brouillons, le sous-ensemble de script reconnu et les règles d'aller-retour, le passage bidirectionnel avec l'éditeur AutoJs6, la réécriture vers la source importée et sa réimportation, l'état d'aperçu et l'aperçu interactif avec leurs différences par rapport à une vraie exécution, les projets TSX (analysés par TypeScript Engine, en lecture seule sans lui), l'exécution du script d'un projet JavaScript dans le bac à sable de l'aperçu interactif avec sa console (Android 8.0 ou ultérieur), et les limites actuelles
 
 # v6.8.5
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=12989560
-contentSha256=2ab65027bd4bceaadb009440e82ca3408c7f3a97e10d69fe293a56ac7d1ba3a5
+totalBytes=12998606
+contentSha256=7783a93debcfcd5cd89bed239201e492212a468bf84511177f3088d61a519408
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=bdf76d61d6a7d6128cae57d4d73bd6b393e0ec0a
+sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -133,7 +133,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` AutoJs4 執行時參考文件: AutoJs4 Runtime 插件的用途, 安裝與獨立權限, 檔案管理器 "使用 AutoJs4 執行" 對 .js / .auto 檔案及項目資料夾的入口, 日誌回傳與任務停止, 執行限制及差異反饋方式
 * `優化` AutoJs4 執行時參考文件: 補充 "使用 AutoJs4 執行並對照" 的對照模式, 說明兩次執行流程, 起止行與前綴的剔除規則, 結果頁的摘要與差異標記, issue 模板複製以及 120 秒逾時
 * `優化` AutoJs4 執行時參考文件: 補充 "com.stardust 兼容類" 小節, 說明 com.stardust 前綴的類名如何映射到 AutoJs6 的實現 (完整映射, 部分映射與不再提供三類), 改名映射對 importClass 全局名的影響, 以及 Class.forName 不受映射影響
-* `優化` 3-Block Compose 設計器參考文檔: 插件內置可視化設計器的入口與工程檔案, 編輯頁的畫布 / 大綱 / 屬性 / 狀態 / 組件面板, 橫豎屏版面與草稿, 可識別的腳本子集與往返規則, 與 AutoJs6 編輯器的雙向交接, 匯入來源的寫回與重新匯入, 預覽狀態與互動預覽及其與實際運行的差異, TSX 工程 (經 TypeScript Engine 解析, 缺少時唯讀打開), 以及當前限制
+* `優化` 3-Block Compose 設計器參考文檔: 插件內置可視化設計器的入口與工程檔案, 編輯頁的畫布 / 大綱 / 屬性 / 狀態 / 組件面板, 橫豎屏版面與草稿, 可識別的腳本子集與往返規則, 與 AutoJs6 編輯器的雙向交接, 匯入來源的寫回與重新匯入, 預覽狀態與互動預覽及其與實際運行的差異, TSX 工程 (經 TypeScript Engine 解析, 缺少時唯讀打開), 互動預覽中在沙盒運行 JavaScript 工程的腳本與控制台 (Android 8.0 或更高版本), 以及當前限制
 
 # v6.8.5
 
