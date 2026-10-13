@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=12967181
-contentSha256=057e51c3f7d26769882f2aaa0f60769ca6030bf7c5ab32b160e52f2fab5b5770
+totalBytes=12968147
+contentSha256=f7a889c0d9d47cf80ddffd7ba9b3e6004474142fc8187c663b384fca91493da6
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=8538de3dbf972bdebe0eacd27d7d7108703039ad
+sourceBaseCommit=13952534f9507c6bb9aad23cad0a95fa347d0561
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -133,7 +133,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` AutoJs4 Runtime reference: purpose of the AutoJs4 Runtime plugin, installation and its separate permissions, the file manager "Run with AutoJs4" entry for .js / .auto files and project folders, log forwarding and task stopping, runtime limits and how to report differences
 * `Improvement` AutoJs4 Runtime reference: comparison mode of "Run with AutoJs4 and compare", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout
 * `Improvement` AutoJs4 Runtime reference: new "com.stardust compatibility classes" section explaining how com.stardust class names map to the AutoJs6 implementations (fully mapped, partially mapped and no longer provided), how renamed mappings affect the importClass global name, and that Class.forName is not affected
-* `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / component palette and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, and current limitations
+* `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / component palette, its portrait and landscape layouts and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, and current limitations
 
 # v6.8.5
 
