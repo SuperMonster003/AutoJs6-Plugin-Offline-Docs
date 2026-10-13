@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=12968147
-contentSha256=f7a889c0d9d47cf80ddffd7ba9b3e6004474142fc8187c663b384fca91493da6
+totalBytes=12979352
+contentSha256=6ecab135bd3d4f22251cbf0db57c9ab97a9accb92c026ebede8e9f3475aa6ca5
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=13952534f9507c6bb9aad23cad0a95fa347d0561
+sourceBaseCommit=1e8894d8c3e6dcd3519ee7e3a835125455e585cb
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -133,7 +133,7 @@ category=offline-docs
 * `تحسين` مرجع AutoJs4 Runtime: الغرض من إضافة AutoJs4 Runtime, التثبيت وأذوناتها المستقلة, مدخل "تشغيل باستخدام AutoJs4" في مدير الملفات لملفات .js / .auto ومجلدات المشاريع, إعادة توجيه السجل وإيقاف المهام, حدود التشغيل وطريقة الإبلاغ عن الاختلافات
 * `تحسين` مرجع AutoJs4 Runtime: وضع المقارنة "التشغيل باستخدام AutoJs4 والمقارنة", مع التشغيلين, إزالة سطور البداية والنهاية والبادئة, ملخص صفحة النتيجة وعلامات الاختلاف, نسخ قالب issue ومهلة 120 ثانية
 * `تحسين` مرجع AutoJs4 Runtime: قسم جديد "فئات التوافق com.stardust" يشرح كيف تُربط أسماء الفئات ذات البادئة com.stardust بتطبيقات AutoJs6 (ربط كامل, ربط جزئي, ولم تعد متاحة), وتأثير الربط بأسماء مختلفة على الاسم العام في importClass, وأن Class.forName لا يتأثر بالربط
-* `تحسين` مرجع مصمم 3-Block Compose: مداخل المصمم المرئي المدمج في المكون الإضافي وملفات مشاريعه, ولوحة الرسم / المخطط / الخصائص / لوحة المكونات في شاشة التحرير وتخطيطها العمودي والأفقي والمسودات, ومجموعة السكربت الفرعية المعترف بها وقواعد الذهاب والإياب, والتسليم ثنائي الاتجاه مع محرر AutoJs6, والقيود الحالية
+* `تحسين` مرجع مصمم 3-Block Compose: مداخل المصمم المرئي المدمج في المكون الإضافي وملفات مشاريعه, ولوحة الرسم / المخطط / الخصائص / الحالة / لوحة المكونات في شاشة التحرير وتخطيطها العمودي والأفقي والمسودات, ومجموعة السكربت الفرعية المعترف بها وقواعد الذهاب والإياب, والتسليم ثنائي الاتجاه مع محرر AutoJs6, والكتابة إلى المصدر المستورد وإعادة الاستيراد منه, وحالة المعاينة والمعاينة التفاعلية واختلافها عن التشغيل الحقيقي, والقيود الحالية
 
 # v6.8.5
 

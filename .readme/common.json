@@ -16,7 +16,7 @@
   "entry_point": "index.html",
   "inventory_file": "offline-docs-inventory-v1.txt",
   "source_repository": "SuperMonster003/AutoJs6-Documentation",
-  "source_base_commit": "13952534f9507c6bb9aad23cad0a95fa347d0561",
+  "source_base_commit": "1e8894d8c3e6dcd3519ee7e3a835125455e585cb",
   "source_path": "api",
   "source_generator": "generator/auto-generate-for-autojs6.bat"
 }
