@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=213
-totalBytes=12906522
-contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
+fileCount=214
+totalBytes=12967181
+contentSha256=057e51c3f7d26769882f2aaa0f60769ca6030bf7c5ab32b160e52f2fab5b5770
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
+sourceBaseCommit=8538de3dbf972bdebe0eacd27d7d7108703039ad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 # v6.8.6
 
-###### 2026/10/12
+###### 2026/10/13
 
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
@@ -133,6 +133,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` AutoJs4 Runtime reference: purpose of the AutoJs4 Runtime plugin, installation and its separate permissions, the file manager "Run with AutoJs4" entry for .js / .auto files and project folders, log forwarding and task stopping, runtime limits and how to report differences
 * `Improvement` AutoJs4 Runtime reference: comparison mode of "Run with AutoJs4 and compare", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout
 * `Improvement` AutoJs4 Runtime reference: new "com.stardust compatibility classes" section explaining how com.stardust class names map to the AutoJs6 implementations (fully mapped, partially mapped and no longer provided), how renamed mappings affect the importClass global name, and that Class.forName is not affected
+* `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / component palette and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, and current limitations
 
 # v6.8.5
 

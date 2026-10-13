@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=213
-totalBytes=12906522
-contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
+fileCount=214
+totalBytes=12967181
+contentSha256=057e51c3f7d26769882f2aaa0f60769ca6030bf7c5ab32b160e52f2fab5b5770
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
+sourceBaseCommit=8538de3dbf972bdebe0eacd27d7d7108703039ad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.6
 
-###### 2026/10/12
+###### 2026/10/13
 
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
@@ -133,6 +133,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` AutoJs4 运行时参考文档: AutoJs4 Runtime 插件的用途, 安装与独立权限, 文件管理器 "使用 AutoJs4 运行" 对 .js / .auto 文件及项目文件夹的入口, 日志回传与任务停止, 运行限制及差异反馈方式
 * `优化` AutoJs4 运行时参考文档: 补充 "使用 AutoJs4 运行并对照" 的对照模式, 说明两次运行流程, 起止行与前缀的剔除规则, 结果页的摘要与差异标记, issue 模板复制以及 120 秒超时
 * `优化` AutoJs4 运行时参考文档: 补充 "com.stardust 兼容类" 小节, 说明 com.stardust 前缀的类名如何映射到 AutoJs6 的实现 (完整映射, 部分映射与不再提供三类), 改名映射对 importClass 全局名的影响, 以及 Class.forName 不受映射影响
+* `优化` 3-Block Compose 设计器参考文档: 插件内置可视化设计器的入口与工程文件, 编辑页的画布 / 大纲 / 属性 / 组件面板与草稿, 可识别的脚本子集与往返规则, 与 AutoJs6 编辑器的双向交接以及当前限制
 
 # v6.8.5
 

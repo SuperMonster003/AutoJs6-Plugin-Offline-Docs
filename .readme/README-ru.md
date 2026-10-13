@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=213
-totalBytes=12906522
-contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
+fileCount=214
+totalBytes=12967181
+contentSha256=057e51c3f7d26769882f2aaa0f60769ca6030bf7c5ab32b160e52f2fab5b5770
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
+sourceBaseCommit=8538de3dbf972bdebe0eacd27d7d7108703039ad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.6
 
-###### 2026/10/12
+###### 2026/10/13
 
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
@@ -133,6 +133,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` Справочник AutoJs4 Runtime: назначение плагина AutoJs4 Runtime, установка и его отдельные разрешения, пункт "Запустить в AutoJs4" файлового менеджера для файлов .js / .auto и папок проектов, пересылка журнала и остановка задач, ограничения выполнения и порядок сообщения о различиях
 * `Улучшение` Справочник AutoJs4 Runtime: режим сравнения "Запустить в AutoJs4 и сравнить": два запуска, удаление служебных строк и префикса, сводка и маркеры различий на странице результата, копирование шаблона issue и тайм-аут 120 секунд
 * `Улучшение` Справочник AutoJs4 Runtime: добавлен раздел "Классы совместимости com.stardust" о том, как имена классов с префиксом com.stardust сопоставляются реализациям AutoJs6 (полное сопоставление, частичное и больше не предоставляемые), как переименованные сопоставления влияют на глобальное имя importClass и что Class.forName сопоставление не затрагивает
+* `Улучшение` Справка по дизайнеру 3-Block Compose: точки входа и файлы проектов встроенного в плагин визуального дизайнера, холст / структура / свойства / палитра компонентов и черновики редактора, распознаваемое подмножество скрипта и правила обратимого преобразования, двусторонняя передача с редактором AutoJs6 и текущие ограничения
 
 # v6.8.5
 

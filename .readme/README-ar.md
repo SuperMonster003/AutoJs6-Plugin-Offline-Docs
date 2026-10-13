@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=213
-totalBytes=12906522
-contentSha256=2153cf1658bb3a2e8c4491d3a671b24b734539a91c5ea92dab84dcb2335da9cb
+fileCount=214
+totalBytes=12967181
+contentSha256=057e51c3f7d26769882f2aaa0f60769ca6030bf7c5ab32b160e52f2fab5b5770
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b3f5f1c0c9fbc206c6159a90af05c512826e01e9
+sourceBaseCommit=8538de3dbf972bdebe0eacd27d7d7108703039ad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ category=offline-docs
 
 # v6.8.6
 
-###### 2026/10/12
+###### 2026/10/13
 
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
 * `تحسين` توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال
@@ -133,6 +133,7 @@ category=offline-docs
 * `تحسين` مرجع AutoJs4 Runtime: الغرض من إضافة AutoJs4 Runtime, التثبيت وأذوناتها المستقلة, مدخل "تشغيل باستخدام AutoJs4" في مدير الملفات لملفات .js / .auto ومجلدات المشاريع, إعادة توجيه السجل وإيقاف المهام, حدود التشغيل وطريقة الإبلاغ عن الاختلافات
 * `تحسين` مرجع AutoJs4 Runtime: وضع المقارنة "التشغيل باستخدام AutoJs4 والمقارنة", مع التشغيلين, إزالة سطور البداية والنهاية والبادئة, ملخص صفحة النتيجة وعلامات الاختلاف, نسخ قالب issue ومهلة 120 ثانية
 * `تحسين` مرجع AutoJs4 Runtime: قسم جديد "فئات التوافق com.stardust" يشرح كيف تُربط أسماء الفئات ذات البادئة com.stardust بتطبيقات AutoJs6 (ربط كامل, ربط جزئي, ولم تعد متاحة), وتأثير الربط بأسماء مختلفة على الاسم العام في importClass, وأن Class.forName لا يتأثر بالربط
+* `تحسين` مرجع مصمم 3-Block Compose: مداخل المصمم المرئي المدمج في المكون الإضافي وملفات مشاريعه, ولوحة الرسم / المخطط / الخصائص / لوحة المكونات والمسودات في شاشة التحرير, ومجموعة السكربت الفرعية المعترف بها وقواعد الذهاب والإياب, والتسليم ثنائي الاتجاه مع محرر AutoJs6, والقيود الحالية
 
 # v6.8.5
 
