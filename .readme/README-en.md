@@ -65,7 +65,7 @@ fileCount=214
 totalBytes=13034300
 contentSha256=09d9a611e5082783cd0c7f1c1496cb4ac8b9ad1b13d5debabf73654d6e189279
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
+sourceBaseCommit=6689e3035ac6aac32f866d5b244f3b3e682b0034
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ###### 2026/10/15
 
+* `Fix` README documentation source commit differing from the packaged provenance record
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
 * `Improvement` Complete 3-Block Compose API reference: nodes and state, modifiers, themes, sessions and floating windows, component properties and events, threading, accessibility and packaged applications

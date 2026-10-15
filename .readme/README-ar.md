@@ -65,7 +65,7 @@ fileCount=214
 totalBytes=13034300
 contentSha256=09d9a611e5082783cd0c7f1c1496cb4ac8b9ad1b13d5debabf73654d6e189279
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
+sourceBaseCommit=6689e3035ac6aac32f866d5b244f3b3e682b0034
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ category=offline-docs
 
 ###### 2026/10/15
 
+* `إصلاح` عدم تطابق معرف مصدر الوثائق في README مع سجل المصدر المضمن في الحزمة
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
 * `تحسين` توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال
 * `تحسين` مرجع API كامل لـ 3-Block Compose: العقد والحالة والمعدلات والسمات والجلسات والنوافذ العائمة, خصائص المكونات وأحداثها, قواعد سلاسل التنفيذ, إمكانية الوصول والتطبيقات المجمعة

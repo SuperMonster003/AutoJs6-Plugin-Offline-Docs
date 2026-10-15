@@ -65,7 +65,7 @@ fileCount=214
 totalBytes=13034300
 contentSha256=09d9a611e5082783cd0c7f1c1496cb4ac8b9ad1b13d5debabf73654d6e189279
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
+sourceBaseCommit=6689e3035ac6aac32f866d5b244f3b3e682b0034
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ###### 2026/10/15
 
+* `修复` README 中的文档来源提交与实际打包来源记录不一致的问题
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
 * `优化` 3-Block Compose 完整 API 参考: 节点与状态, Modifier, 主题, 会话与悬浮窗, 组件属性和事件, 线程规则, 无障碍与打包应用

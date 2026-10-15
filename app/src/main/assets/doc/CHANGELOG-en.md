@@ -8,6 +8,7 @@
 
 ###### 2026/10/15
 
+* `Fix` README documentation source commit differing from the packaged provenance record
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
 * `Improvement` Complete 3-Block Compose API reference: nodes and state, modifiers, themes, sessions and floating windows, component properties and events, threading, accessibility and packaged applications

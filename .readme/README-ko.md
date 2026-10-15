@@ -65,7 +65,7 @@ fileCount=214
 totalBytes=13034300
 contentSha256=09d9a611e5082783cd0c7f1c1496cb4ac8b9ad1b13d5debabf73654d6e189279
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
+sourceBaseCommit=6689e3035ac6aac32f866d5b244f3b3e682b0034
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ###### 2026/10/15
 
+* `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
 * `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
 * `개선` 선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인
 * `개선` 3-Block Compose 전체 API 참조: 노드와 상태, Modifier, 테마, 세션과 플로팅 창, 컴포넌트 속성과 이벤트, 스레드 규칙, 접근성 및 패키지 앱

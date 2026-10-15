@@ -65,7 +65,7 @@ fileCount=214
 totalBytes=13034300
 contentSha256=09d9a611e5082783cd0c7f1c1496cb4ac8b9ad1b13d5debabf73654d6e189279
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
+sourceBaseCommit=6689e3035ac6aac32f866d5b244f3b3e682b0034
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -118,6 +118,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ###### 2026/10/15
 
+* `Исправление` Несоответствие исходного коммита документации в README записи происхождения в пакете
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Улучшение` Полный справочник API 3-Block Compose: узлы и состояние, модификаторы, темы, сеансы и плавающие окна, свойства и события компонентов, потоки, доступность и упакованные приложения

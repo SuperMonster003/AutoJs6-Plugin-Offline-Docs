@@ -8,6 +8,7 @@
 
 ###### 2026/10/15
 
+* `Correctif` Le commit source de la documentation indique dans le README pouvait differer de la provenance du contenu inclus
 * `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
 * `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Amélioration` Référence complète de l'API 3-Block Compose: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées

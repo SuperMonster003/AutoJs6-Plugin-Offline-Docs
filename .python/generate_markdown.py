@@ -154,6 +154,26 @@ def offline_docs_content_metadata() -> dict:
     }
 
 
+def offline_docs_source_metadata(root: Path = ROOT) -> dict:
+    """Use the same source revision for the repository and packaged documentation."""
+    paths = (
+        root / "SOURCE_PROVENANCE.md",
+        root / "app/src/main/assets/licenses/docs/SOURCE_PROVENANCE.md",
+    )
+    revisions = []
+    for path in paths:
+        match = re.search(
+            r"(?m)^- Source base commit: `([0-9a-f]{40})`$",
+            path.read_text(encoding="utf-8"),
+        )
+        if match is None:
+            raise ValueError(f"Invalid documentation source commit: {path}")
+        revisions.append(match.group(1))
+    if revisions[0] != revisions[1]:
+        raise ValueError("Repository and packaged documentation source commits differ")
+    return {"source_base_commit": revisions[0]}
+
+
 def load_template(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     validate_symbols(text, path.relative_to(ROOT))
@@ -200,6 +220,7 @@ def changelog_version_name() -> str:
 def load_languages():
     common = load_json(README_DIR / "common.json")
     common.update(offline_docs_content_metadata())
+    common.update(offline_docs_source_metadata())
     languages = {}
     changelogs = {}
     expected_version = changelog_version_name()
