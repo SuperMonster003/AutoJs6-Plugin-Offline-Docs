@@ -26,6 +26,7 @@
 * `優化` AutoJs4 執行時參考文件: 補充 "com.stardust 相容類別" 小節, 說明 com.stardust 前綴的類別名稱如何對應到 AutoJs6 的實作 (完整對應, 部分對應與不再提供三類), 改名對應對 importClass 全域名稱的影響, 以及 Class.forName 不受對應影響
 * `優化` 3-Block Compose 設計器參考文件: 外掛內建視覺化設計器的入口與專案檔案, 編輯頁的畫布 / 大綱 / 屬性 / 狀態 / 元件面板, 直橫向版面與草稿, 可識別的指令碼子集與往返規則, 與 AutoJs6 編輯器的雙向交接, 匯入來源的寫回與重新匯入, 預覽狀態與互動預覽及其與實際執行的差異, TSX 專案 (經 TypeScript Engine 解析, 缺少時唯讀開啟), 互動預覽中在沙盒執行 JavaScript 專案的指令碼與主控台 (Android 8.0 或更新版本), UI (XML) 專案 (1.6.0 起: 原樣編輯 ui 模式指令碼的 XML 佈局, 畫布由 AutoJs6 的預覽服務繪製, 事件樣板與繫結值面板), 以及目前限制
 * `優化` [API 參考](https://docs.autojs6.com/#/documentation) 補齊 Files 與 RootAutomator 成員, 色彩結果容器, WebView 上下文和選用參數多載, 校正位元組附加與滑動參數, 同步座標縮放說明, 說明 setScaleBases 失敗時不修改或占用基數, 以及基數 setter 的整數轉換規則
+* `優化` 相簿 (Gallery) 模組參考: 3-Maple Image 外掛提供的 gallery 物件, 包括選圖, 檢視器工作階段, 編輯與無介面轉換, 檔案由 AutoJs6 讀寫的邊界, 相片存取權限與錯誤代碼, 以及 GalleryViewSession 型別
 
 # v6.8.5
 

@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=214
-totalBytes=13061773
-contentSha256=588d173ee1f35a124434cc79da12085c8e0d9b6c0473476329ec7d5b8bccba58
+fileCount=216
+totalBytes=13197372
+contentSha256=54afc084a89967d6cb83a8544a3f4b0c7e925e46dfd46f4b7d5db9462541d28c
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=a248aa4ac7eaf566cf17f4c9c6aac1ba24be0166
+sourceBaseCommit=e3e6ffe48f0485626a0e458ed496dc5af2579d54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -136,6 +136,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 * `優化` AutoJs4 執行時參考文件: 補充 "com.stardust 相容類別" 小節, 說明 com.stardust 前綴的類別名稱如何對應到 AutoJs6 的實作 (完整對應, 部分對應與不再提供三類), 改名對應對 importClass 全域名稱的影響, 以及 Class.forName 不受對應影響
 * `優化` 3-Block Compose 設計器參考文件: 外掛內建視覺化設計器的入口與專案檔案, 編輯頁的畫布 / 大綱 / 屬性 / 狀態 / 元件面板, 直橫向版面與草稿, 可識別的指令碼子集與往返規則, 與 AutoJs6 編輯器的雙向交接, 匯入來源的寫回與重新匯入, 預覽狀態與互動預覽及其與實際執行的差異, TSX 專案 (經 TypeScript Engine 解析, 缺少時唯讀開啟), 互動預覽中在沙盒執行 JavaScript 專案的指令碼與主控台 (Android 8.0 或更新版本), UI (XML) 專案 (1.6.0 起: 原樣編輯 ui 模式指令碼的 XML 佈局, 畫布由 AutoJs6 的預覽服務繪製, 事件樣板與繫結值面板), 以及目前限制
 * `優化` [API 參考](https://docs.autojs6.com/#/documentation) 補齊 Files 與 RootAutomator 成員, 色彩結果容器, WebView 上下文和選用參數多載, 校正位元組附加與滑動參數, 同步座標縮放說明, 說明 setScaleBases 失敗時不修改或占用基數, 以及基數 setter 的整數轉換規則
+* `優化` 相簿 (Gallery) 模組參考: 3-Maple Image 外掛提供的 gallery 物件, 包括選圖, 檢視器工作階段, 編輯與無介面轉換, 檔案由 AutoJs6 讀寫的邊界, 相片存取權限與錯誤代碼, 以及 GalleryViewSession 型別
 
 # v6.8.5
 

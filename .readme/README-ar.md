@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=214
-totalBytes=13061773
-contentSha256=588d173ee1f35a124434cc79da12085c8e0d9b6c0473476329ec7d5b8bccba58
+fileCount=216
+totalBytes=13197372
+contentSha256=54afc084a89967d6cb83a8544a3f4b0c7e925e46dfd46f4b7d5db9462541d28c
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=a248aa4ac7eaf566cf17f4c9c6aac1ba24be0166
+sourceBaseCommit=e3e6ffe48f0485626a0e458ed496dc5af2579d54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -136,6 +136,7 @@ category=offline-docs
 * `تحسين` مرجع AutoJs4 Runtime: قسم جديد "فئات التوافق com.stardust" يشرح كيف تُربط أسماء الفئات ذات البادئة com.stardust بتطبيقات AutoJs6 (ربط كامل, ربط جزئي, ولم تعد متاحة), وتأثير الربط بأسماء مختلفة على الاسم العام في importClass, وأن Class.forName لا يتأثر بالربط
 * `تحسين` مرجع مصمم 3-Block Compose: مداخل المصمم المرئي المدمج في المكون الإضافي وملفات مشاريعه, ولوحة الرسم / المخطط / الخصائص / الحالة / لوحة المكونات في شاشة التحرير وتخطيطها العمودي والأفقي والمسودات, ومجموعة السكربت الفرعية المعترف بها وقواعد الذهاب والإياب, والتسليم ثنائي الاتجاه مع محرر AutoJs6, والكتابة إلى المصدر المستورد وإعادة الاستيراد منه, وحالة المعاينة والمعاينة التفاعلية واختلافها عن التشغيل الحقيقي, ومشاريع TSX (يحللها TypeScript Engine, وللقراءة فقط بدونه), وتشغيل سكربت مشروع JavaScript في البيئة المعزولة للمعاينة التفاعلية مع وحدة التحكم (Android 8.0 أو أحدث), ومشاريع UI (XML) (منذ 1.6.0: تحرير تخطيطات XML لسكربتات وضع ui في مكانها, ولوحة يرسمها خدمة المعاينة في AutoJs6, وقوالب المعالجات ولوحة الروابط), والقيود الحالية
 * `تحسين` [مرجع API](https://docs.autojs6.com/#/documentation): استكمال أعضاء Files و RootAutomator ومصفوفات نتائج الألوان وسياقات WebView والصيغ ذات المعاملات الاختيارية, وتصحيح معاملات إلحاق البايتات والسحب ووصف تحجيم الإحداثيات, مع توضيح أن فشل setScaleBases لا يغير قيم الأساس ولا يستهلك فرصة تعيينها وقواعد التحويل إلى أعداد صحيحة في دوال تعيين الأساس
+* `تحسين` مرجع وحدة Gallery: كائن gallery الذي يوفره ملحق 3-Maple Image (محدد الصور وجلسات العارض والتحرير والتحويل دون واجهة), وحدود الملفات التي يقرؤها ويكتبها AutoJs6, والوصول إلى الصور ورموز الأخطاء ونوع GalleryViewSession
 
 # v6.8.5
 

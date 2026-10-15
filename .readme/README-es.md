@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=214
-totalBytes=13061773
-contentSha256=588d173ee1f35a124434cc79da12085c8e0d9b6c0473476329ec7d5b8bccba58
+fileCount=216
+totalBytes=13197372
+contentSha256=54afc084a89967d6cb83a8544a3f4b0c7e925e46dfd46f4b7d5db9462541d28c
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=a248aa4ac7eaf566cf17f4c9c6aac1ba24be0166
+sourceBaseCommit=e3e6ffe48f0485626a0e458ed496dc5af2579d54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -136,6 +136,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` Referencia de AutoJs4 Runtime: nueva sección "Clases de compatibilidad com.stardust" que explica cómo los nombres de clase con prefijo com.stardust se asignan a las implementaciones de AutoJs6 (asignación completa, parcial y ya no disponibles), cómo las asignaciones renombradas afectan al nombre global de importClass y que Class.forName no se ve afectado
 * `Mejora` Referencia del Diseñador de 3-Block Compose: entradas y archivos de proyecto del diseñador visual integrado en el complemento, el lienzo / esquema / propiedades / estado / paleta de componentes del editor, su disposición en vertical y en horizontal y sus borradores, el subconjunto de script reconocido y las reglas de ida y vuelta, el traspaso bidireccional con el editor de AutoJs6, la escritura de vuelta en el origen importado y su reimportación, el estado de vista previa y la vista previa interactiva con sus diferencias respecto a una ejecución real, los proyectos TSX (analizados por TypeScript Engine, en solo lectura sin él), la ejecución del script de un proyecto JavaScript en el entorno aislado de la vista previa interactiva con su consola (Android 8.0 o posterior), los proyectos UI (XML) (desde 1.6.0: edición en el sitio de los diseños XML de los scripts en modo ui, un lienzo dibujado por el servicio de vista previa de AutoJs6, esqueletos de controladores y el panel de enlaces), y las limitaciones actuales
 * `Mejora` [Referencia de API](https://docs.autojs6.com/#/documentation): miembros faltantes de Files y RootAutomator, matrices de resultados de color, contextos WebView y sobrecargas opcionales, con correcciones en los parametros de anexado de bytes, deslizamiento y escalado de coordenadas; explica que las llamadas fallidas a setScaleBases no cambian ni consumen las bases y documenta la conversión a enteros de los setters de bases
+* `Mejora` Referencia del módulo Gallery: el objeto gallery del plugin 3-Maple Image (selector, sesiones del visor, edición y conversión sin interfaz), el límite de archivos que lee y escribe AutoJs6, el acceso a las fotos, los códigos de error y el tipo GalleryViewSession
 
 # v6.8.5
 

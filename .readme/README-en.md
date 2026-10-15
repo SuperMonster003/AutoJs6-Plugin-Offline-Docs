@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=214
-totalBytes=13061773
-contentSha256=588d173ee1f35a124434cc79da12085c8e0d9b6c0473476329ec7d5b8bccba58
+fileCount=216
+totalBytes=13197372
+contentSha256=54afc084a89967d6cb83a8544a3f4b0c7e925e46dfd46f4b7d5db9462541d28c
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=a248aa4ac7eaf566cf17f4c9c6aac1ba24be0166
+sourceBaseCommit=e3e6ffe48f0485626a0e458ed496dc5af2579d54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -136,6 +136,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` AutoJs4 Runtime reference: new "com.stardust compatibility classes" section explaining how com.stardust class names map to the AutoJs6 implementations (fully mapped, partially mapped and no longer provided), how renamed mappings affect the importClass global name, and that Class.forName is not affected
 * `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / state / component palette, its portrait and landscape layouts and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, writing back to and re-importing from an imported source, preview state and the interactive preview with how they differ from a real run, TSX projects (parsed by TypeScript Engine, read-only without it), running a JavaScript project's script in the interactive preview's sandbox with its console (Android 8.0 or later), UI (XML) projects (since 1.6.0: editing the XML layouts of ui mode scripts in place, a canvas drawn by the AutoJs6 preview service, handler stubs and the bindings panel), and current limitations
 * `Improvement` [API reference](https://docs.autojs6.com/#/documentation) covers missing Files and RootAutomator members, color result arrays, WebView contexts and optional overloads, and corrects byte append, swipe parameters and coordinate scaling descriptions; explains that failed setScaleBases calls neither change nor consume scale bases, and documents integer conversion by the base setters
+* `Improvement` Gallery module reference: the gallery object provided by the 3-Maple Image plugin, covering the picker, viewer sessions, editing and headless conversion, the host-owned file boundary, photo access and error codes, plus the GalleryViewSession type
 
 # v6.8.5
 
