@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13204816
-contentSha256=103f51901f82914df4cf3616d5be932b64b64f51abf8b940ab4f810125c2935d
+totalBytes=13277573
+contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=26e53cde02f9e427c027919ccae438def3b28878
+sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -137,6 +137,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` 3-Block Compose デザイナーのリファレンス: プラグイン内蔵のビジュアルデザイナーの入口とプロジェクトファイル, 編集画面のキャンバス / アウトライン / プロパティ / 状態 / コンポーネントパレット, 縦向きと横向きのレイアウト, 下書き, 認識されるスクリプトのサブセットと往復のルール, AutoJs6 エディターとの双方向の受け渡し, インポート元への書き戻しと再インポート, プレビュー状態と操作プレビューおよび実際の実行との違い, TSX プロジェクト (TypeScript Engine で解析, ない場合は読み取り専用), 操作プレビューのサンドボックスでの JavaScript プロジェクトのスクリプト実行とコンソール (Android 8.0 以降), UI (XML) プロジェクト (1.6.0 以降: ui モードスクリプトの XML レイアウトのその場編集, AutoJs6 のプレビューサービスが描画するキャンバス, ハンドラーのスタブとバインディングパネル), 現在の制限; 1.7.0 以降は UI (XML) プロジェクトのインタラクティブプレビューで AutoJs6 がスクリプト全体を実際に実行し (Android 13 以降), プレビューでの UI スクリプト実行に関する節 (条件, 停止規則, コンソール, 実際の実行との差異) を追加
 * `改善` [API リファレンス](https://docs.autojs6.com/#/documentation): Files と RootAutomator の不足メンバー, 色の結果配列, WebView コンテキストと省略可能な引数のオーバーロードを補完し, バイト追記とスワイプの引数, 座標スケーリングの説明を修正, setScaleBases の失敗時に基準値を変更せず設定機会も消費しないことと, 基準値 setter の整数変換規則を説明
 * `改善` ギャラリー (Gallery) モジュールのリファレンス: 3-Maple Image プラグインが提供する gallery オブジェクト (画像選択, ビューアセッション, 編集, UI なしの変換), AutoJs6 がファイルを読み書きする境界, 写真へのアクセス権限, エラーコード, GalleryViewSession 型
+* `改善` files.batchRename リファレンス: Batch Rename プラグインが提供する一括リネーム. プランのプレビューと項目ごとの除外, 実行, 元に戻す操作とバッチ履歴, オプションと置換変数, 競合ポリシー, 結果オブジェクトとエラーコード
 
 # v6.8.5
 

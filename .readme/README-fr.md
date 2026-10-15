@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13204816
-contentSha256=103f51901f82914df4cf3616d5be932b64b64f51abf8b940ab4f810125c2935d
+totalBytes=13277573
+contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=26e53cde02f9e427c027919ccae438def3b28878
+sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -137,6 +137,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Référence du Concepteur 3-Block Compose: points d'entrée et fichiers de projet du concepteur visuel intégré au plugin, le canevas / plan / propriétés / état / palette de composants de l'éditeur, sa disposition en portrait et en paysage et ses brouillons, le sous-ensemble de script reconnu et les règles d'aller-retour, le passage bidirectionnel avec l'éditeur AutoJs6, la réécriture vers la source importée et sa réimportation, l'état d'aperçu et l'aperçu interactif avec leurs différences par rapport à une vraie exécution, les projets TSX (analysés par TypeScript Engine, en lecture seule sans lui), l'exécution du script d'un projet JavaScript dans le bac à sable de l'aperçu interactif avec sa console (Android 8.0 ou ultérieur), les projets UI (XML) (depuis 1.6.0: édition sur place des mises en page XML des scripts en mode ui, un canevas dessiné par le service d'aperçu d'AutoJs6, les gabarits de gestionnaires et le panneau des liaisons), et les limites actuelles; à partir de 1.7.0, l'aperçu interactif des projets UI (XML) fait exécuter tout le script par AutoJs6 pour de vrai (Android 13 et ultérieur), avec une nouvelle section sur l'exécution des scripts UI dans l'aperçu: conditions, règles d'arrêt, console et différences avec une exécution réelle
 * `Amélioration` [Reference API](https://docs.autojs6.com/#/documentation): membres Files et RootAutomator manquants, tableaux de resultat des couleurs, contextes WebView et surcharges optionnelles, avec correction des parametres d'ajout d'octets, de balayage et des explications de mise a l'echelle des coordonnees; précise que les appels setScaleBases en échec ne modifient ni ne réservent les bases, et décrit la conversion en entier des setters de base
 * `Amélioration` Référence du module Gallery: l'objet gallery fourni par le plugin 3-Maple Image (sélecteur, sessions de visionneuse, édition et conversion sans interface), la limite des fichiers lus et écrits par AutoJs6, l'accès aux photos, les codes d'erreur et le type GalleryViewSession
+* `Amélioration` Référence de files.batchRename: renommage par lots fourni par le plugin Batch Rename, avec aperçu du plan et exclusion par élément, application, annulation et historique des lots, options et variables de remplacement, politiques de conflit, objets de résultat et codes d'erreur
 
 # v6.8.5
 

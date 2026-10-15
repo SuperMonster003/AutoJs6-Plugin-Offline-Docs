@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13204816
-contentSha256=103f51901f82914df4cf3616d5be932b64b64f51abf8b940ab4f810125c2935d
+totalBytes=13277573
+contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=26e53cde02f9e427c027919ccae438def3b28878
+sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -137,6 +137,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 * `優化` 3-Block Compose 設計器參考文件: 外掛內建視覺化設計器的入口與專案檔案, 編輯頁的畫布 / 大綱 / 屬性 / 狀態 / 元件面板, 直橫向版面與草稿, 可識別的指令碼子集與往返規則, 與 AutoJs6 編輯器的雙向交接, 匯入來源的寫回與重新匯入, 預覽狀態與互動預覽及其與實際執行的差異, TSX 專案 (經 TypeScript Engine 解析, 缺少時唯讀開啟), 互動預覽中在沙盒執行 JavaScript 專案的指令碼與主控台 (Android 8.0 或更新版本), UI (XML) 專案 (1.6.0 起: 原樣編輯 ui 模式指令碼的 XML 佈局, 畫布由 AutoJs6 的預覽服務繪製, 事件樣板與繫結值面板), 以及目前限制; 1.7.0 起 UI (XML) 專案的互動預覽由 AutoJs6 真實執行整份指令碼 (Android 13 起), 新增 "在預覽中執行 UI 指令碼" 小節說明條件, 停止規則, 主控台與和真實執行的差異
 * `優化` [API 參考](https://docs.autojs6.com/#/documentation) 補齊 Files 與 RootAutomator 成員, 色彩結果容器, WebView 上下文和選用參數多載, 校正位元組附加與滑動參數, 同步座標縮放說明, 說明 setScaleBases 失敗時不修改或占用基數, 以及基數 setter 的整數轉換規則
 * `優化` 相簿 (Gallery) 模組參考: 3-Maple Image 外掛提供的 gallery 物件, 包括選圖, 檢視器工作階段, 編輯與無介面轉換, 檔案由 AutoJs6 讀寫的邊界, 相片存取權限與錯誤代碼, 以及 GalleryViewSession 型別
+* `優化` files.batchRename 參考: Batch Rename 外掛提供的批次重新命名, 包括方案預覽與逐項排除, 執行, 復原與歷史批次, 選項與替換變數, 衝突策略, 結果物件及錯誤代碼
 
 # v6.8.5
 

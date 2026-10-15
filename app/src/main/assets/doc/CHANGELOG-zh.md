@@ -27,6 +27,7 @@
 * `优化` 3-Block Compose 设计器参考文档: 插件内置可视化设计器的入口与工程文件, 编辑页的画布 / 大纲 / 属性 / 状态 / 组件面板, 横竖屏布局与草稿, 可识别的脚本子集与往返规则, 与 AutoJs6 编辑器的双向交接, 导入来源的写回与重新导入, 预览状态与交互预览及其与真实运行的差异, TSX 工程 (经 TypeScript Engine 解析, 缺少时只读打开), 交互预览中在沙箱运行 JavaScript 工程的脚本与控制台 (Android 8.0 或更高版本), UI (XML) 工程 (1.6.0 起: 原样编辑 ui 模式脚本的 XML 布局, 画布由 AutoJs6 的预览服务绘制, 事件桩与绑定值面板), 以及当前限制; 1.7.0 起 UI (XML) 工程的交互预览由 AutoJs6 真实运行整份脚本 (Android 13 起), 新增 "在预览中运行 UI 脚本" 小节说明条件, 停止规则, 控制台与和真实运行的差异
 * `优化` [API 参考](https://docs.autojs6.com/#/documentation) 补齐 Files 与 RootAutomator 成员, 颜色结果容器, WebView 上下文和可选参数重载, 校正字节追加与滑动参数, 同步坐标缩放说明, 说明 setScaleBases 失败时不修改或占用基数, 以及基数 setter 的整数转换规则
 * `优化` 相册 (Gallery) 模块参考: 3-Maple Image 插件提供的 gallery 对象, 包括选图, 查看器会话, 编辑与无界面转换, 文件由 AutoJs6 读写的边界, 照片访问权限与错误代码, 以及 GalleryViewSession 类型
+* `优化` files.batchRename 参考: Batch Rename 插件提供的批量重命名, 包括方案预览与逐项排除, 执行, 撤销与历史批次, 选项与替换变量, 冲突策略, 结果对象及错误代码
 
 # v6.8.5
 
