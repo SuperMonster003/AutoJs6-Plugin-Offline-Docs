@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=13040277
-contentSha256=5e184ea29ac3b163731b6af13df00b91582ce316b49c981086814326d7cfe78b
+totalBytes=13061773
+contentSha256=588d173ee1f35a124434cc79da12085c8e0d9b6c0473476329ec7d5b8bccba58
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=68d8428c9a5601ab742eb1f9cd1d09630c1c990a
+sourceBaseCommit=a248aa4ac7eaf566cf17f4c9c6aac1ba24be0166
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -134,7 +134,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` AutoJs4 运行时参考文档: AutoJs4 Runtime 插件的用途, 安装与独立权限, 文件管理器 "使用 AutoJs4 运行" 对 .js / .auto 文件及项目文件夹的入口, 日志回传与任务停止, 运行限制及差异反馈方式
 * `优化` AutoJs4 运行时参考文档: 补充 "使用 AutoJs4 运行并对照" 的对照模式, 说明两次运行流程, 起止行与前缀的剔除规则, 结果页的摘要与差异标记, issue 模板复制以及 120 秒超时
 * `优化` AutoJs4 运行时参考文档: 补充 "com.stardust 兼容类" 小节, 说明 com.stardust 前缀的类名如何映射到 AutoJs6 的实现 (完整映射, 部分映射与不再提供三类), 改名映射对 importClass 全局名的影响, 以及 Class.forName 不受映射影响
-* `优化` 3-Block Compose 设计器参考文档: 插件内置可视化设计器的入口与工程文件, 编辑页的画布 / 大纲 / 属性 / 状态 / 组件面板, 横竖屏布局与草稿, 可识别的脚本子集与往返规则, 与 AutoJs6 编辑器的双向交接, 导入来源的写回与重新导入, 预览状态与交互预览及其与真实运行的差异, TSX 工程 (经 TypeScript Engine 解析, 缺少时只读打开), 交互预览中在沙箱运行 JavaScript 工程的脚本与控制台 (Android 8.0 或更高版本), 以及当前限制
+* `优化` 3-Block Compose 设计器参考文档: 插件内置可视化设计器的入口与工程文件, 编辑页的画布 / 大纲 / 属性 / 状态 / 组件面板, 横竖屏布局与草稿, 可识别的脚本子集与往返规则, 与 AutoJs6 编辑器的双向交接, 导入来源的写回与重新导入, 预览状态与交互预览及其与真实运行的差异, TSX 工程 (经 TypeScript Engine 解析, 缺少时只读打开), 交互预览中在沙箱运行 JavaScript 工程的脚本与控制台 (Android 8.0 或更高版本), UI (XML) 工程 (1.6.0 起: 原样编辑 ui 模式脚本的 XML 布局, 画布由 AutoJs6 的预览服务绘制, 事件桩与绑定值面板), 以及当前限制
 * `优化` [API 参考](https://docs.autojs6.com/#/documentation) 补齐 Files 与 RootAutomator 成员, 颜色结果容器, WebView 上下文和可选参数重载, 校正字节追加与滑动参数, 同步坐标缩放说明, 说明 setScaleBases 失败时不修改或占用基数, 以及基数 setter 的整数转换规则
 
 # v6.8.5

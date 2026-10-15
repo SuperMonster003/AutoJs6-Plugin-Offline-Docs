@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=13040277
-contentSha256=5e184ea29ac3b163731b6af13df00b91582ce316b49c981086814326d7cfe78b
+totalBytes=13061773
+contentSha256=588d173ee1f35a124434cc79da12085c8e0d9b6c0473476329ec7d5b8bccba58
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=68d8428c9a5601ab742eb1f9cd1d09630c1c990a
+sourceBaseCommit=a248aa4ac7eaf566cf17f4c9c6aac1ba24be0166
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -134,7 +134,7 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` Referencia de AutoJs4 Runtime: finalidad del plugin AutoJs4 Runtime, instalación y sus permisos independientes, la entrada "Ejecutar con AutoJs4" del gestor de archivos para archivos .js / .auto y carpetas de proyecto, reenvío de registros y detención de tareas, límites de ejecución y cómo informar diferencias
 * `Mejora` Referencia de AutoJs4 Runtime: modo de comparación "Ejecutar con AutoJs4 y comparar", con las dos ejecuciones, las líneas de inicio y fin y el prefijo omitidos, el resumen y las marcas de diferencia de la página de resultados, la copia de la plantilla de issue y el tiempo límite de 120 segundos
 * `Mejora` Referencia de AutoJs4 Runtime: nueva sección "Clases de compatibilidad com.stardust" que explica cómo los nombres de clase con prefijo com.stardust se asignan a las implementaciones de AutoJs6 (asignación completa, parcial y ya no disponibles), cómo las asignaciones renombradas afectan al nombre global de importClass y que Class.forName no se ve afectado
-* `Mejora` Referencia del Diseñador de 3-Block Compose: entradas y archivos de proyecto del diseñador visual integrado en el complemento, el lienzo / esquema / propiedades / estado / paleta de componentes del editor, su disposición en vertical y en horizontal y sus borradores, el subconjunto de script reconocido y las reglas de ida y vuelta, el traspaso bidireccional con el editor de AutoJs6, la escritura de vuelta en el origen importado y su reimportación, el estado de vista previa y la vista previa interactiva con sus diferencias respecto a una ejecución real, los proyectos TSX (analizados por TypeScript Engine, en solo lectura sin él), la ejecución del script de un proyecto JavaScript en el entorno aislado de la vista previa interactiva con su consola (Android 8.0 o posterior), y las limitaciones actuales
+* `Mejora` Referencia del Diseñador de 3-Block Compose: entradas y archivos de proyecto del diseñador visual integrado en el complemento, el lienzo / esquema / propiedades / estado / paleta de componentes del editor, su disposición en vertical y en horizontal y sus borradores, el subconjunto de script reconocido y las reglas de ida y vuelta, el traspaso bidireccional con el editor de AutoJs6, la escritura de vuelta en el origen importado y su reimportación, el estado de vista previa y la vista previa interactiva con sus diferencias respecto a una ejecución real, los proyectos TSX (analizados por TypeScript Engine, en solo lectura sin él), la ejecución del script de un proyecto JavaScript en el entorno aislado de la vista previa interactiva con su consola (Android 8.0 o posterior), los proyectos UI (XML) (desde 1.6.0: edición en el sitio de los diseños XML de los scripts en modo ui, un lienzo dibujado por el servicio de vista previa de AutoJs6, esqueletos de controladores y el panel de enlaces), y las limitaciones actuales
 * `Mejora` [Referencia de API](https://docs.autojs6.com/#/documentation): miembros faltantes de Files y RootAutomator, matrices de resultados de color, contextos WebView y sobrecargas opcionales, con correcciones en los parametros de anexado de bytes, deslizamiento y escalado de coordenadas; explica que las llamadas fallidas a setScaleBases no cambian ni consumen las bases y documenta la conversión a enteros de los setters de bases
 
 # v6.8.5
