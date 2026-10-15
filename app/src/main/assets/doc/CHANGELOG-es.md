@@ -6,7 +6,7 @@
 
 # v6.8.6
 
-###### 2026/10/13
+###### 2026/10/15
 
 * `Mejora` Perfiles de Installer por origen/prefijo de paquete, prioridad de opciones explícitas y tres restablecimientos con null, sourceDeleteRequested y conservación de fuentes compartidas del lote; requiere anfitrión 5312+ y plugin compatible
 * `Mejora` Documentación y entradas de búsqueda sin conexión para los métodos de selector minDepth/maxDepth/minIndexInParent/maxIndexInParent
@@ -24,6 +24,7 @@
 * `Mejora` Referencia de AutoJs4 Runtime: modo de comparación "Ejecutar con AutoJs4 y comparar", con las dos ejecuciones, las líneas de inicio y fin y el prefijo omitidos, el resumen y las marcas de diferencia de la página de resultados, la copia de la plantilla de issue y el tiempo límite de 120 segundos
 * `Mejora` Referencia de AutoJs4 Runtime: nueva sección "Clases de compatibilidad com.stardust" que explica cómo los nombres de clase con prefijo com.stardust se asignan a las implementaciones de AutoJs6 (asignación completa, parcial y ya no disponibles), cómo las asignaciones renombradas afectan al nombre global de importClass y que Class.forName no se ve afectado
 * `Mejora` Referencia del Diseñador de 3-Block Compose: entradas y archivos de proyecto del diseñador visual integrado en el complemento, el lienzo / esquema / propiedades / estado / paleta de componentes del editor, su disposición en vertical y en horizontal y sus borradores, el subconjunto de script reconocido y las reglas de ida y vuelta, el traspaso bidireccional con el editor de AutoJs6, la escritura de vuelta en el origen importado y su reimportación, el estado de vista previa y la vista previa interactiva con sus diferencias respecto a una ejecución real, los proyectos TSX (analizados por TypeScript Engine, en solo lectura sin él), la ejecución del script de un proyecto JavaScript en el entorno aislado de la vista previa interactiva con su consola (Android 8.0 o posterior), y las limitaciones actuales
+* `Mejora` [Referencia de API](https://docs.autojs6.com/#/documentation): miembros faltantes de Files y RootAutomator, matrices de resultados de color, contextos WebView y sobrecargas opcionales, con correcciones en los parametros de anexado de bytes, deslizamiento y escalado de coordenadas
 
 # v6.8.5
 

@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=12998606
-contentSha256=7783a93debcfcd5cd89bed239201e492212a468bf84511177f3088d61a519408
+totalBytes=13034300
+contentSha256=09d9a611e5082783cd0c7f1c1496cb4ac8b9ad1b13d5debabf73654d6e189279
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
 sourcePath=api
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v6.8.6
 
-###### 2026/10/13
+###### 2026/10/15
 
 * `改善` Installer の起点/パッケージ名プレフィックス別プロファイル, 明示オプションの優先と 3 項目の null リセット, sourceDeleteRequested とバッチ共有ソースの保持. ホスト 5312+ と対応プラグインが必要
 * `改善` セレクター minDepth/maxDepth/minIndexInParent/maxIndexInParent のメソッド説明とオフライン検索インデックス
@@ -134,6 +134,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` AutoJs4 ランタイムリファレンス: "AutoJs4 で実行して比較" の比較モードを追加し, 2 回の実行の流れ, 開始と終了の行および接頭辞の除去規則, 結果ページの概要と差分マーカー, issue テンプレートのコピー, 120 秒のタイムアウトを説明
 * `改善` AutoJs4 ランタイムリファレンス: "com.stardust 互換クラス" 節を追加し, com.stardust 接頭辞のクラス名が AutoJs6 の実装にどう対応付けられるか (完全対応, 部分対応, 提供終了の 3 種), 改名対応が importClass のグローバル名に与える影響, Class.forName が対応付けの対象外であることを説明
 * `改善` 3-Block Compose デザイナーのリファレンス: プラグイン内蔵のビジュアルデザイナーの入口とプロジェクトファイル, 編集画面のキャンバス / アウトライン / プロパティ / 状態 / コンポーネントパレット, 縦向きと横向きのレイアウト, 下書き, 認識されるスクリプトのサブセットと往復のルール, AutoJs6 エディターとの双方向の受け渡し, インポート元への書き戻しと再インポート, プレビュー状態と操作プレビューおよび実際の実行との違い, TSX プロジェクト (TypeScript Engine で解析, ない場合は読み取り専用), 操作プレビューのサンドボックスでの JavaScript プロジェクトのスクリプト実行とコンソール (Android 8.0 以降), 現在の制限
+* `改善` [API リファレンス](https://docs.autojs6.com/#/documentation): Files と RootAutomator の不足メンバー, 色の結果配列, WebView コンテキストと省略可能な引数のオーバーロードを補完し, バイト追記とスワイプの引数, 座標スケーリングの説明を修正
 
 # v6.8.5
 

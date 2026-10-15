@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=12998606
-contentSha256=7783a93debcfcd5cd89bed239201e492212a468bf84511177f3088d61a519408
+totalBytes=13034300
+contentSha256=09d9a611e5082783cd0c7f1c1496cb4ac8b9ad1b13d5debabf73654d6e189279
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=34def8e5ba6e206985b335c62c821cf59c012123
 sourcePath=api
@@ -116,7 +116,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.6
 
-###### 2026/10/13
+###### 2026/10/15
 
 * `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
 * `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
@@ -134,6 +134,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Référence AutoJs4 Runtime: mode de comparaison "Exécuter avec AutoJs4 et comparer", avec les deux exécutions, les lignes de cadrage et le préfixe retirés, le résumé et les marqueurs de différence de la page de résultat, la copie du modèle d'issue et le délai de 120 secondes
 * `Amélioration` Référence AutoJs4 Runtime: nouvelle section "Classes de compatibilité com.stardust" expliquant comment les noms de classe préfixés com.stardust sont associés aux implémentations AutoJs6 (association complète, partielle et plus fournie), l'effet des associations renommées sur le nom global d'importClass, et le fait que Class.forName n'est pas concerné
 * `Amélioration` Référence du Concepteur 3-Block Compose: points d'entrée et fichiers de projet du concepteur visuel intégré au plugin, le canevas / plan / propriétés / état / palette de composants de l'éditeur, sa disposition en portrait et en paysage et ses brouillons, le sous-ensemble de script reconnu et les règles d'aller-retour, le passage bidirectionnel avec l'éditeur AutoJs6, la réécriture vers la source importée et sa réimportation, l'état d'aperçu et l'aperçu interactif avec leurs différences par rapport à une vraie exécution, les projets TSX (analysés par TypeScript Engine, en lecture seule sans lui), l'exécution du script d'un projet JavaScript dans le bac à sable de l'aperçu interactif avec sa console (Android 8.0 ou ultérieur), et les limites actuelles
+* `Amélioration` [Reference API](https://docs.autojs6.com/#/documentation): membres Files et RootAutomator manquants, tableaux de resultat des couleurs, contextes WebView et surcharges optionnelles, avec correction des parametres d'ajout d'octets, de balayage et des explications de mise a l'echelle des coordonnees
 
 # v6.8.5
 

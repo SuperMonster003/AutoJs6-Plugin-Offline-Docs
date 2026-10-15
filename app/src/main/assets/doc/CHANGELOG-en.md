@@ -6,7 +6,7 @@
 
 # v6.8.6
 
-###### 2026/10/13
+###### 2026/10/15
 
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
 * `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
@@ -24,6 +24,7 @@
 * `Improvement` AutoJs4 Runtime reference: comparison mode of "Run with AutoJs4 and compare", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout
 * `Improvement` AutoJs4 Runtime reference: new "com.stardust compatibility classes" section explaining how com.stardust class names map to the AutoJs6 implementations (fully mapped, partially mapped and no longer provided), how renamed mappings affect the importClass global name, and that Class.forName is not affected
 * `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / state / component palette, its portrait and landscape layouts and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, writing back to and re-importing from an imported source, preview state and the interactive preview with how they differ from a real run, TSX projects (parsed by TypeScript Engine, read-only without it), running a JavaScript project's script in the interactive preview's sandbox with its console (Android 8.0 or later), and current limitations
+* `Improvement` [API reference](https://docs.autojs6.com/#/documentation) covers missing Files and RootAutomator members, color result arrays, WebView contexts and optional overloads, and corrects byte append, swipe parameters and coordinate scaling descriptions
 
 # v6.8.5
 
