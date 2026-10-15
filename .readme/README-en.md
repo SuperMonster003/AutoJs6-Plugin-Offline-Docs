@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13197372
-contentSha256=54afc084a89967d6cb83a8544a3f4b0c7e925e46dfd46f4b7d5db9462541d28c
+totalBytes=13204816
+contentSha256=103f51901f82914df4cf3616d5be932b64b64f51abf8b940ab4f810125c2935d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=e3e6ffe48f0485626a0e458ed496dc5af2579d54
+sourceBaseCommit=26e53cde02f9e427c027919ccae438def3b28878
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -134,7 +134,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` AutoJs4 Runtime reference: purpose of the AutoJs4 Runtime plugin, installation and its separate permissions, the file manager "Run with AutoJs4" entry for .js / .auto files and project folders, log forwarding and task stopping, runtime limits and how to report differences
 * `Improvement` AutoJs4 Runtime reference: comparison mode of "Run with AutoJs4 and compare", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout
 * `Improvement` AutoJs4 Runtime reference: new "com.stardust compatibility classes" section explaining how com.stardust class names map to the AutoJs6 implementations (fully mapped, partially mapped and no longer provided), how renamed mappings affect the importClass global name, and that Class.forName is not affected
-* `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / state / component palette, its portrait and landscape layouts and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, writing back to and re-importing from an imported source, preview state and the interactive preview with how they differ from a real run, TSX projects (parsed by TypeScript Engine, read-only without it), running a JavaScript project's script in the interactive preview's sandbox with its console (Android 8.0 or later), UI (XML) projects (since 1.6.0: editing the XML layouts of ui mode scripts in place, a canvas drawn by the AutoJs6 preview service, handler stubs and the bindings panel), and current limitations
+* `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / state / component palette, its portrait and landscape layouts and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, writing back to and re-importing from an imported source, preview state and the interactive preview with how they differ from a real run, TSX projects (parsed by TypeScript Engine, read-only without it), running a JavaScript project's script in the interactive preview's sandbox with its console (Android 8.0 or later), UI (XML) projects (since 1.6.0: editing the XML layouts of ui mode scripts in place, a canvas drawn by the AutoJs6 preview service, handler stubs and the bindings panel), and current limitations; from 1.7.0 the interactive preview of UI (XML) projects has AutoJs6 run the whole script for real (Android 13 and later), with a new section on running UI scripts in the preview: conditions, stop rules, the console and the differences from a real run
 * `Improvement` [API reference](https://docs.autojs6.com/#/documentation) covers missing Files and RootAutomator members, color result arrays, WebView contexts and optional overloads, and corrects byte append, swipe parameters and coordinate scaling descriptions; explains that failed setScaleBases calls neither change nor consume scale bases, and documents integer conversion by the base setters
 * `Improvement` Gallery module reference: the gallery object provided by the 3-Maple Image plugin, covering the picker, viewer sessions, editing and headless conversion, the host-owned file boundary, photo access and error codes, plus the GalleryViewSession type
 
