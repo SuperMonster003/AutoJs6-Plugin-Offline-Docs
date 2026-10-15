@@ -25,7 +25,7 @@
 * `優化` AutoJs4 執行時參考文件: 補充 "使用 AutoJs4 執行並對照" 的對照模式, 說明兩次執行流程, 起止行與前綴的剔除規則, 結果頁的摘要與差異標記, issue 模板複製以及 120 秒逾時
 * `優化` AutoJs4 執行時參考文件: 補充 "com.stardust 兼容類" 小節, 說明 com.stardust 前綴的類名如何映射到 AutoJs6 的實現 (完整映射, 部分映射與不再提供三類), 改名映射對 importClass 全局名的影響, 以及 Class.forName 不受映射影響
 * `優化` 3-Block Compose 設計器參考文檔: 插件內置可視化設計器的入口與工程檔案, 編輯頁的畫布 / 大綱 / 屬性 / 狀態 / 組件面板, 橫豎屏版面與草稿, 可識別的腳本子集與往返規則, 與 AutoJs6 編輯器的雙向交接, 匯入來源的寫回與重新匯入, 預覽狀態與互動預覽及其與實際運行的差異, TSX 工程 (經 TypeScript Engine 解析, 缺少時唯讀打開), 互動預覽中在沙盒運行 JavaScript 工程的腳本與控制台 (Android 8.0 或更高版本), 以及當前限制
-* `優化` [API 參考](https://docs.autojs6.com/#/documentation) 補齊 Files 與 RootAutomator 成員, 色彩結果容器, WebView 上下文和可選參數多載, 校正位元組附加與滑動參數, 同步座標縮放說明
+* `優化` [API 參考](https://docs.autojs6.com/#/documentation) 補齊 Files 與 RootAutomator 成員, 色彩結果容器, WebView 上下文和可選參數多載, 校正位元組附加與滑動參數, 同步座標縮放說明, 說明 setScaleBases 失敗時不修改或佔用基數, 以及基數 setter 的整數轉換規則
 
 # v6.8.5
 

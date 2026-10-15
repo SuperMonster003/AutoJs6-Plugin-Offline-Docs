@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=214
-totalBytes=13035960
-contentSha256=5ba31a4542e63c7274abedd4edd34c5ec3f65829b7616bb8306caa6d4b414c0a
+totalBytes=13040277
+contentSha256=5e184ea29ac3b163731b6af13df00b91582ce316b49c981086814326d7cfe78b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=0a4b3a720ac1946708cae73d40880db83a7963e4
+sourceBaseCommit=68d8428c9a5601ab742eb1f9cd1d09630c1c990a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -135,7 +135,7 @@ category=offline-docs
 * `تحسين` مرجع AutoJs4 Runtime: وضع المقارنة "التشغيل باستخدام AutoJs4 والمقارنة", مع التشغيلين, إزالة سطور البداية والنهاية والبادئة, ملخص صفحة النتيجة وعلامات الاختلاف, نسخ قالب issue ومهلة 120 ثانية
 * `تحسين` مرجع AutoJs4 Runtime: قسم جديد "فئات التوافق com.stardust" يشرح كيف تُربط أسماء الفئات ذات البادئة com.stardust بتطبيقات AutoJs6 (ربط كامل, ربط جزئي, ولم تعد متاحة), وتأثير الربط بأسماء مختلفة على الاسم العام في importClass, وأن Class.forName لا يتأثر بالربط
 * `تحسين` مرجع مصمم 3-Block Compose: مداخل المصمم المرئي المدمج في المكون الإضافي وملفات مشاريعه, ولوحة الرسم / المخطط / الخصائص / الحالة / لوحة المكونات في شاشة التحرير وتخطيطها العمودي والأفقي والمسودات, ومجموعة السكربت الفرعية المعترف بها وقواعد الذهاب والإياب, والتسليم ثنائي الاتجاه مع محرر AutoJs6, والكتابة إلى المصدر المستورد وإعادة الاستيراد منه, وحالة المعاينة والمعاينة التفاعلية واختلافها عن التشغيل الحقيقي, ومشاريع TSX (يحللها TypeScript Engine, وللقراءة فقط بدونه), وتشغيل سكربت مشروع JavaScript في البيئة المعزولة للمعاينة التفاعلية مع وحدة التحكم (Android 8.0 أو أحدث), والقيود الحالية
-* `تحسين` [مرجع API](https://docs.autojs6.com/#/documentation): استكمال أعضاء Files و RootAutomator ومصفوفات نتائج الألوان وسياقات WebView والصيغ ذات المعاملات الاختيارية, وتصحيح معاملات إلحاق البايتات والسحب ووصف تحجيم الإحداثيات
+* `تحسين` [مرجع API](https://docs.autojs6.com/#/documentation): استكمال أعضاء Files و RootAutomator ومصفوفات نتائج الألوان وسياقات WebView والصيغ ذات المعاملات الاختيارية, وتصحيح معاملات إلحاق البايتات والسحب ووصف تحجيم الإحداثيات, مع توضيح أن فشل setScaleBases لا يغير قيم الأساس ولا يستهلك فرصة تعيينها وقواعد التحويل إلى أعداد صحيحة في دوال تعيين الأساس
 
 # v6.8.5
 
