@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=216
-totalBytes=13299023
-contentSha256=686d1b83d9f9d5edb5cccf0cf27a4c651990bd89c7f39484f0c7e0c0ba533185
+fileCount=217
+totalBytes=13682199
+contentSha256=05f3c1c40602692562097cc0332e68cafa7a8b4f928e668df716a93afe9186c8
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c381a59b465c9193d34cc6dace9b386b04a5d4db
+sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -134,7 +134,8 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` AutoJs4 ランタイムリファレンス: AutoJs4 Runtime プラグインの用途, インストールと独立した権限, ファイルマネージャーの "AutoJs4 で実行" による .js / .auto ファイルとプロジェクトフォルダーの実行入口, ログ転送とタスク停止, 実行制限, 差異の報告方法
 * `改善` AutoJs4 ランタイムリファレンス: "AutoJs4 で実行して比較" の比較モードを追加し, 2 回の実行の流れ, 開始と終了の行および接頭辞の除去規則, 結果ページの概要と差分マーカー, issue テンプレートのコピー, 120 秒のタイムアウトを説明
 * `改善` AutoJs4 ランタイムリファレンス: "com.stardust 互換クラス" 節を追加し, com.stardust 接頭辞のクラス名が AutoJs6 の実装にどう対応付けられるか (完全対応, 部分対応, 提供終了の 3 種), 改名対応が importClass のグローバル名に与える影響, Class.forName が対応付けの対象外であることを説明
-* `改善` 3-Block Compose デザイナーのリファレンス: プラグイン内蔵のビジュアルデザイナーの入口とプロジェクトファイル, 編集画面のキャンバス / アウトライン / プロパティ / 状態 / コンポーネントパレット, 縦向きと横向きのレイアウト, 下書き, 認識されるスクリプトのサブセットと往復のルール, AutoJs6 エディターとの双方向の受け渡し, インポート元への書き戻しと再インポート, プレビュー状態と操作プレビューおよび実際の実行との違い, TSX プロジェクト (TypeScript Engine で解析, ない場合は読み取り専用), 操作プレビューのサンドボックスでの JavaScript プロジェクトのスクリプト実行とコンソール (Android 8.0 以降), UI (XML) プロジェクト (1.6.0 以降: ui モードスクリプトの XML レイアウトのその場編集, AutoJs6 のプレビューサービスが描画するキャンバス, ハンドラーのスタブとバインディングパネル), 現在の制限; 1.7.0 以降は UI (XML) プロジェクトのインタラクティブプレビューで AutoJs6 がスクリプト全体を実際に実行し (Android 13 以降), プレビューでの UI スクリプト実行に関する節 (条件, 停止規則, コンソール, 実際の実行との差異) を追加
+* `改善` 3-Block Compose デザイナーのリファレンス: プラグイン内蔵のビジュアルデザイナーの入口とプロジェクトファイル, 編集画面のキャンバス / アウトライン / プロパティ / 状態 / コンポーネントパレット, 縦向きと横向きのレイアウト, 下書き, 認識されるスクリプトのサブセットと往復のルール, AutoJs6 エディターとの双方向の受け渡し, インポート元への書き戻しと再インポート, プレビュー状態と操作プレビューおよび実際の実行との違い, TSX プロジェクト (TypeScript Engine で解析, ない場合は読み取り専用), 操作プレビューのサンドボックスでの JavaScript プロジェクトのスクリプト実行とコンソール (Android 8.0 以降), UI (XML) プロジェクト (1.6.0 以降: ui モードスクリプトの XML レイアウトのその場編集, AutoJs6 のプレビューサービスが描画するキャンバス, ハンドラーのスタブとバインディングパネル), 現在の制限; 1.7.0 以降は UI (XML) プロジェクトのインタラクティブプレビューで AutoJs6 がスクリプト全体を実際に実行し (Android 13 以降), プレビューでの UI スクリプト実行に関する節 (条件, 停止規則, コンソール, 実際の実行との差異) を追加; 1.8.0 から "プレビューの差異" (プレビューと AutoJs6 での実行で動作が異なる書き方) と "XML ファイルとフォルダープロジェクト" (リテラルのパスで参照する XML レイアウトファイル, XML ファイルとして保存 / 新規 XML ファイル, project.json を含むフォルダープロジェクト, zip のインポート / エクスポート, AutoJs6 での実行とインポート, 外部ドキュメントのフォルダーへのアクセス, プレビューでのプロジェクトファイル, Android XML の編集と検査) の 2 節を追加
+* `改善` Android XML 属性リファレンス: ネイティブ Android XML の UI レイアウトで各 View クラスが設定できる / できない android: / app: 属性, 値の形式, 列挙とフラグの名前, 初出の API レベルと設定方法, 各親レイアウトが受け付けるレイアウトパラメーター. ユーザーインターフェースのリファレンスにプロジェクトのリソース (res/ フォルダー, 修飾子フォルダー, vector ドローアブル) を追加
 * `改善` [API リファレンス](https://docs.autojs6.com/#/documentation): Files と RootAutomator の不足メンバー, 色の結果配列, WebView コンテキストと省略可能な引数のオーバーロードを補完し, バイト追記とスワイプの引数, 座標スケーリングの説明を修正, setScaleBases の失敗時に基準値を変更せず設定機会も消費しないことと, 基準値 setter の整数変換規則を説明
 * `改善` ギャラリー (Gallery) モジュールのリファレンス: 3-Maple Image プラグインが提供する gallery オブジェクト (画像選択, ビューアセッション, 編集, UI なしの変換), AutoJs6 がファイルを読み書きする境界, 写真へのアクセス権限, エラーコード, GalleryViewSession 型
 * `改善` files.batchRename リファレンス: Batch Rename プラグインが提供する一括リネーム. プランのプレビューと項目ごとの除外, 実行, 元に戻す操作とバッチ履歴, オプションと置換変数, 競合ポリシー, 結果オブジェクトとエラーコード

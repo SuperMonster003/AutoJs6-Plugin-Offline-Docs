@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=216
-totalBytes=13299023
-contentSha256=686d1b83d9f9d5edb5cccf0cf27a4c651990bd89c7f39484f0c7e0c0ba533185
+fileCount=217
+totalBytes=13682199
+contentSha256=05f3c1c40602692562097cc0332e68cafa7a8b4f928e668df716a93afe9186c8
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c381a59b465c9193d34cc6dace9b386b04a5d4db
+sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -134,7 +134,8 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` AutoJs4 运行时参考文档: AutoJs4 Runtime 插件的用途, 安装与独立权限, 文件管理器 "使用 AutoJs4 运行" 对 .js / .auto 文件及项目文件夹的入口, 日志回传与任务停止, 运行限制及差异反馈方式
 * `优化` AutoJs4 运行时参考文档: 补充 "使用 AutoJs4 运行并对照" 的对照模式, 说明两次运行流程, 起止行与前缀的剔除规则, 结果页的摘要与差异标记, issue 模板复制以及 120 秒超时
 * `优化` AutoJs4 运行时参考文档: 补充 "com.stardust 兼容类" 小节, 说明 com.stardust 前缀的类名如何映射到 AutoJs6 的实现 (完整映射, 部分映射与不再提供三类), 改名映射对 importClass 全局名的影响, 以及 Class.forName 不受映射影响
-* `优化` 3-Block Compose 设计器参考文档: 插件内置可视化设计器的入口与工程文件, 编辑页的画布 / 大纲 / 属性 / 状态 / 组件面板, 横竖屏布局与草稿, 可识别的脚本子集与往返规则, 与 AutoJs6 编辑器的双向交接, 导入来源的写回与重新导入, 预览状态与交互预览及其与真实运行的差异, TSX 工程 (经 TypeScript Engine 解析, 缺少时只读打开), 交互预览中在沙箱运行 JavaScript 工程的脚本与控制台 (Android 8.0 或更高版本), UI (XML) 工程 (1.6.0 起: 原样编辑 ui 模式脚本的 XML 布局, 画布由 AutoJs6 的预览服务绘制, 事件桩与绑定值面板), 以及当前限制; 1.7.0 起 UI (XML) 工程的交互预览由 AutoJs6 真实运行整份脚本 (Android 13 起), 新增 "在预览中运行 UI 脚本" 小节说明条件, 停止规则, 控制台与和真实运行的差异
+* `优化` 3-Block Compose 设计器参考文档: 插件内置可视化设计器的入口与工程文件, 编辑页的画布 / 大纲 / 属性 / 状态 / 组件面板, 横竖屏布局与草稿, 可识别的脚本子集与往返规则, 与 AutoJs6 编辑器的双向交接, 导入来源的写回与重新导入, 预览状态与交互预览及其与真实运行的差异, TSX 工程 (经 TypeScript Engine 解析, 缺少时只读打开), 交互预览中在沙箱运行 JavaScript 工程的脚本与控制台 (Android 8.0 或更高版本), UI (XML) 工程 (1.6.0 起: 原样编辑 ui 模式脚本的 XML 布局, 画布由 AutoJs6 的预览服务绘制, 事件桩与绑定值面板), 以及当前限制; 1.7.0 起 UI (XML) 工程的交互预览由 AutoJs6 真实运行整份脚本 (Android 13 起), 新增 "在预览中运行 UI 脚本" 小节说明条件, 停止规则, 控制台与和真实运行的差异; 1.8.0 起新增 "预览差异" 一节 (在预览中与在 AutoJs6 中运行行为不同的写法) 与 "XML 文件与文件夹工程" 一节 (以字面量路径引用的 XML 布局文件, 存为 / 新建 XML 文件, 文件夹工程与 project.json, zip 导入导出, 交给 AutoJs6 运行与导入, 外部文档的文件夹授权, 预览中的工程文件, Android 原生 XML 的编辑与检查)
+* `优化` Android XML 属性参考: UI 原生 Android XML 布局中每个 View 类可设置与不能设置的 android: / app: 属性, 取值格式, 枚举与标志名, 起始 API 与设置方式, 以及各父布局接受的布局参数; 用户界面参考补充工程资源 (res/ 目录, 限定符目录与 vector 矢量图)
 * `优化` [API 参考](https://docs.autojs6.com/#/documentation) 补齐 Files 与 RootAutomator 成员, 颜色结果容器, WebView 上下文和可选参数重载, 校正字节追加与滑动参数, 同步坐标缩放说明, 说明 setScaleBases 失败时不修改或占用基数, 以及基数 setter 的整数转换规则
 * `优化` 相册 (Gallery) 模块参考: 3-Maple Image 插件提供的 gallery 对象, 包括选图, 查看器会话, 编辑与无界面转换, 文件由 AutoJs6 读写的边界, 照片访问权限与错误代码, 以及 GalleryViewSession 类型
 * `优化` files.batchRename 参考: Batch Rename 插件提供的批量重命名, 包括方案预览与逐项排除, 执行, 撤销与历史批次, 选项与替换变量, 冲突策略, 结果对象及错误代码
