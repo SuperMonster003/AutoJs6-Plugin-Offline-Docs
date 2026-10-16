@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13277573
-contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
+totalBytes=13299023
+contentSha256=686d1b83d9f9d5edb5cccf0cf27a4c651990bd89c7f39484f0c7e0c0ba533185
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
+sourceBaseCommit=c381a59b465c9193d34cc6dace9b386b04a5d4db
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -138,6 +138,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` [Справочник API](https://docs.autojs6.com/#/documentation): недостающие методы Files и RootAutomator, массивы результатов цвета, контексты WebView и необязательные перегрузки, а также исправления параметров добавления байтов, свайпа и описаний масштабирования координат; описаны сохранение значений и возможности установки баз при ошибке setScaleBases и правила преобразования аргументов сеттеров баз в целые числа
 * `Улучшение` Справочник модуля Gallery: объект gallery плагина 3-Maple Image (выбор изображений, сеансы просмотрщика, редактирование и преобразование без интерфейса), граница файлов, которые читает и записывает AutoJs6, доступ к фото, коды ошибок и тип GalleryViewSession
 * `Улучшение` Справочник files.batchRename: пакетное переименование, которое предоставляет плагин Batch Rename: предпросмотр плана и исключение отдельных элементов, применение, отмена и история пакетов, параметры и переменные замены, политики конфликтов, объекты результатов и коды ошибок
+* `Улучшение` Справка по plugins.tools: инструменты, которые описывают сами плагины AutoJs6, включая списки инструментов и поставщиков, синхронные и асинхронные вызовы, аргументы-изображения и файлы, выходные файлы, объекты результата и ошибки
 
 # v6.8.5
 

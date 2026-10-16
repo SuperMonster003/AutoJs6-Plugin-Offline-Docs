@@ -28,6 +28,7 @@
 * `优化` [API 参考](https://docs.autojs6.com/#/documentation) 补齐 Files 与 RootAutomator 成员, 颜色结果容器, WebView 上下文和可选参数重载, 校正字节追加与滑动参数, 同步坐标缩放说明, 说明 setScaleBases 失败时不修改或占用基数, 以及基数 setter 的整数转换规则
 * `优化` 相册 (Gallery) 模块参考: 3-Maple Image 插件提供的 gallery 对象, 包括选图, 查看器会话, 编辑与无界面转换, 文件由 AutoJs6 读写的边界, 照片访问权限与错误代码, 以及 GalleryViewSession 类型
 * `优化` files.batchRename 参考: Batch Rename 插件提供的批量重命名, 包括方案预览与逐项排除, 执行, 撤销与历史批次, 选项与替换变量, 冲突策略, 结果对象及错误代码
+* `优化` plugins.tools 参考: AutoJs6 插件自描述的工具, 包括列出工具与提供者, 同步与异步调用, 图片 / 文件参数与输出文件, 结果对象及错误
 
 # v6.8.5
 

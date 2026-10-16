@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13277573
-contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
+totalBytes=13299023
+contentSha256=686d1b83d9f9d5edb5cccf0cf27a4c651990bd89c7f39484f0c7e0c0ba533185
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
+sourceBaseCommit=c381a59b465c9193d34cc6dace9b386b04a5d4db
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -138,6 +138,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` [API reference](https://docs.autojs6.com/#/documentation) covers missing Files and RootAutomator members, color result arrays, WebView contexts and optional overloads, and corrects byte append, swipe parameters and coordinate scaling descriptions; explains that failed setScaleBases calls neither change nor consume scale bases, and documents integer conversion by the base setters
 * `Improvement` Gallery module reference: the gallery object provided by the 3-Maple Image plugin, covering the picker, viewer sessions, editing and headless conversion, the host-owned file boundary, photo access and error codes, plus the GalleryViewSession type
 * `Improvement` files.batchRename reference: batch renaming provided by the Batch Rename plugin, covering plan preview and per-item exclusion, applying, undo and batch history, options and replacement variables, conflict policies, result objects and error codes
+* `Improvement` plugins.tools reference: the tools AutoJs6 plugins describe themselves, including listing tools and providers, synchronous and asynchronous calls, image / file arguments and output files, result objects and errors
 
 # v6.8.5
 

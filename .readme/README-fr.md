@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13277573
-contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
+totalBytes=13299023
+contentSha256=686d1b83d9f9d5edb5cccf0cf27a4c651990bd89c7f39484f0c7e0c0ba533185
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
+sourceBaseCommit=c381a59b465c9193d34cc6dace9b386b04a5d4db
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -138,6 +138,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` [Reference API](https://docs.autojs6.com/#/documentation): membres Files et RootAutomator manquants, tableaux de resultat des couleurs, contextes WebView et surcharges optionnelles, avec correction des parametres d'ajout d'octets, de balayage et des explications de mise a l'echelle des coordonnees; précise que les appels setScaleBases en échec ne modifient ni ne réservent les bases, et décrit la conversion en entier des setters de base
 * `Amélioration` Référence du module Gallery: l'objet gallery fourni par le plugin 3-Maple Image (sélecteur, sessions de visionneuse, édition et conversion sans interface), la limite des fichiers lus et écrits par AutoJs6, l'accès aux photos, les codes d'erreur et le type GalleryViewSession
 * `Amélioration` Référence de files.batchRename: renommage par lots fourni par le plugin Batch Rename, avec aperçu du plan et exclusion par élément, application, annulation et historique des lots, options et variables de remplacement, politiques de conflit, objets de résultat et codes d'erreur
+* `Amélioration` Référence plugins.tools: les outils que les plugins AutoJs6 décrivent eux-mêmes, avec la liste des outils et des fournisseurs, les appels synchrones et asynchrones, les arguments image / fichier et les fichiers de sortie, les objets de résultat et les erreurs
 
 # v6.8.5
 

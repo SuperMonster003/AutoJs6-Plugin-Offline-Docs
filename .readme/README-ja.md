@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13277573
-contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
+totalBytes=13299023
+contentSha256=686d1b83d9f9d5edb5cccf0cf27a4c651990bd89c7f39484f0c7e0c0ba533185
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
+sourceBaseCommit=c381a59b465c9193d34cc6dace9b386b04a5d4db
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -138,6 +138,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` [API リファレンス](https://docs.autojs6.com/#/documentation): Files と RootAutomator の不足メンバー, 色の結果配列, WebView コンテキストと省略可能な引数のオーバーロードを補完し, バイト追記とスワイプの引数, 座標スケーリングの説明を修正, setScaleBases の失敗時に基準値を変更せず設定機会も消費しないことと, 基準値 setter の整数変換規則を説明
 * `改善` ギャラリー (Gallery) モジュールのリファレンス: 3-Maple Image プラグインが提供する gallery オブジェクト (画像選択, ビューアセッション, 編集, UI なしの変換), AutoJs6 がファイルを読み書きする境界, 写真へのアクセス権限, エラーコード, GalleryViewSession 型
 * `改善` files.batchRename リファレンス: Batch Rename プラグインが提供する一括リネーム. プランのプレビューと項目ごとの除外, 実行, 元に戻す操作とバッチ履歴, オプションと置換変数, 競合ポリシー, 結果オブジェクトとエラーコード
+* `改善` plugins.tools リファレンス: AutoJs6 プラグインが自ら記述するツール. ツールとプロバイダーの一覧, 同期と非同期の呼び出し, 画像 / ファイル引数と出力ファイル, 結果オブジェクトとエラーを含む
 
 # v6.8.5
 

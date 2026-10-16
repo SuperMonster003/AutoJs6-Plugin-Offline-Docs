@@ -28,6 +28,7 @@
 * `Improvement` [API reference](https://docs.autojs6.com/#/documentation) covers missing Files and RootAutomator members, color result arrays, WebView contexts and optional overloads, and corrects byte append, swipe parameters and coordinate scaling descriptions; explains that failed setScaleBases calls neither change nor consume scale bases, and documents integer conversion by the base setters
 * `Improvement` Gallery module reference: the gallery object provided by the 3-Maple Image plugin, covering the picker, viewer sessions, editing and headless conversion, the host-owned file boundary, photo access and error codes, plus the GalleryViewSession type
 * `Improvement` files.batchRename reference: batch renaming provided by the Batch Rename plugin, covering plan preview and per-item exclusion, applying, undo and batch history, options and replacement variables, conflict policies, result objects and error codes
+* `Improvement` plugins.tools reference: the tools AutoJs6 plugins describe themselves, including listing tools and providers, synchronous and asynchronous calls, image / file arguments and output files, result objects and errors
 
 # v6.8.5
 

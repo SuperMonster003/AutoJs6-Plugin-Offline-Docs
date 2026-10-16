@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=216
-totalBytes=13277573
-contentSha256=cfebb0216048caf6645971e373b937f05017530bdc5281f50060e8c46deb1e31
+totalBytes=13299023
+contentSha256=686d1b83d9f9d5edb5cccf0cf27a4c651990bd89c7f39484f0c7e0c0ba533185
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=62f55d88843db5a5a38d529de887b756a1d085f0
+sourceBaseCommit=c381a59b465c9193d34cc6dace9b386b04a5d4db
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -138,6 +138,7 @@ category=offline-docs
 * `تحسين` [مرجع API](https://docs.autojs6.com/#/documentation): استكمال أعضاء Files و RootAutomator ومصفوفات نتائج الألوان وسياقات WebView والصيغ ذات المعاملات الاختيارية, وتصحيح معاملات إلحاق البايتات والسحب ووصف تحجيم الإحداثيات, مع توضيح أن فشل setScaleBases لا يغير قيم الأساس ولا يستهلك فرصة تعيينها وقواعد التحويل إلى أعداد صحيحة في دوال تعيين الأساس
 * `تحسين` مرجع وحدة Gallery: كائن gallery الذي يوفره ملحق 3-Maple Image (محدد الصور وجلسات العارض والتحرير والتحويل دون واجهة), وحدود الملفات التي يقرؤها ويكتبها AutoJs6, والوصول إلى الصور ورموز الأخطاء ونوع GalleryViewSession
 * `تحسين` مرجع files.batchRename: إعادة التسمية الدفعية التي يوفرها المكون الإضافي Batch Rename, بما في ذلك معاينة الخطة واستبعاد العناصر فرديا والتنفيذ والتراجع وسجل الدفعات والخيارات ومتغيرات الاستبدال وسياسات التعارض وكائنات النتائج ورموز الأخطاء
+* `تحسين` مرجع plugins.tools: الأدوات التي تصفها إضافات AutoJs6 بنفسها, بما في ذلك سرد الأدوات والموفرين, والاستدعاء المتزامن وغير المتزامن, ووسائط الصور / الملفات وملفات الإخراج, وكائنات النتائج والأخطاء
 
 # v6.8.5
 

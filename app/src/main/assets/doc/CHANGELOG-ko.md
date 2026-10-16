@@ -28,6 +28,7 @@
 * `개선` [API 참조](https://docs.autojs6.com/#/documentation): 누락된 Files 및 RootAutomator 멤버, 색상 결과 배열, WebView 컨텍스트와 선택적 인수 오버로드를 보완하고 바이트 추가 및 스와이프 인수와 좌표 배율 설명을 수정, setScaleBases 실패 시 기준값과 설정 가능 상태가 유지되는 동작 및 기준값 setter의 정수 변환 규칙 설명
 * `개선` 갤러리 (Gallery) 모듈 참조: 3-Maple Image 플러그인이 제공하는 gallery 객체 (이미지 선택, 뷰어 세션, 편집, UI 없는 변환), AutoJs6 가 파일을 읽고 쓰는 경계, 사진 접근 권한, 오류 코드 및 GalleryViewSession 형식
 * `개선` files.batchRename 참조: Batch Rename 플러그인이 제공하는 일괄 이름 바꾸기. 계획 미리 보기와 항목별 제외, 실행, 실행 취소와 배치 기록, 옵션과 치환 변수, 충돌 정책, 결과 객체와 오류 코드
+* `개선` plugins.tools 참조: AutoJs6 플러그인이 스스로 설명하는 도구. 도구와 제공자 목록, 동기 및 비동기 호출, 이미지 / 파일 인수와 출력 파일, 결과 객체와 오류 포함
 
 # v6.8.5
 

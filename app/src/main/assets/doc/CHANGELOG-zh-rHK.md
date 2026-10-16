@@ -28,6 +28,7 @@
 * `優化` [API 參考](https://docs.autojs6.com/#/documentation) 補齊 Files 與 RootAutomator 成員, 色彩結果容器, WebView 上下文和可選參數多載, 校正位元組附加與滑動參數, 同步座標縮放說明, 說明 setScaleBases 失敗時不修改或佔用基數, 以及基數 setter 的整數轉換規則
 * `優化` 相簿 (Gallery) 模組參考: 3-Maple Image 插件提供的 gallery 物件, 包括選圖, 檢視器會話, 編輯與無介面轉換, 檔案由 AutoJs6 讀寫的邊界, 相片存取權限與錯誤代碼, 以及 GalleryViewSession 類型
 * `優化` files.batchRename 參考: Batch Rename 插件提供的批量重新命名, 包括方案預覽與逐項排除, 執行, 復原與歷史批次, 選項與替換變數, 衝突策略, 結果物件及錯誤代碼
+* `優化` plugins.tools 參考: AutoJs6 插件自我描述的工具, 包括列出工具與提供者, 同步與異步調用, 圖片 / 文件參數與輸出文件, 結果物件及錯誤
 
 # v6.8.5
 

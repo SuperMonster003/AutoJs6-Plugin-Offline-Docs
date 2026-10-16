@@ -28,6 +28,7 @@
 * `Mejora` [Referencia de API](https://docs.autojs6.com/#/documentation): miembros faltantes de Files y RootAutomator, matrices de resultados de color, contextos WebView y sobrecargas opcionales, con correcciones en los parametros de anexado de bytes, deslizamiento y escalado de coordenadas; explica que las llamadas fallidas a setScaleBases no cambian ni consumen las bases y documenta la conversión a enteros de los setters de bases
 * `Mejora` Referencia del módulo Gallery: el objeto gallery del plugin 3-Maple Image (selector, sesiones del visor, edición y conversión sin interfaz), el límite de archivos que lee y escribe AutoJs6, el acceso a las fotos, los códigos de error y el tipo GalleryViewSession
 * `Mejora` Referencia de files.batchRename: renombrado por lotes del plugin Batch Rename, con vista previa del plan y exclusión por elemento, aplicación, deshacer e historial de lotes, opciones y variables de reemplazo, políticas de conflicto, objetos de resultado y códigos de error
+* `Mejora` Referencia de plugins.tools: las herramientas que describen los propios plugins de AutoJs6, con la lista de herramientas y proveedores, las llamadas síncronas y asíncronas, los argumentos de imagen / archivo y los archivos de salida, los objetos de resultado y los errores
 
 # v6.8.5
 
