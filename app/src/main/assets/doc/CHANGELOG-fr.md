@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `Correctif` Le commit source de la documentation indique dans le README pouvait differer de la provenance du contenu inclus
+* `Amélioration` Bun screenRecorder produit des MP4 H.264 avec audio AAC du microphone, des applications ou mixé et captures pendant la vidéo, avec autorisations audio distinctes et nettoyage après annulation (API documentation)
 * `Amélioration` Bun screenRecorder enregistre des vidéos écran H.264 MP4 sans son avec autorisation distincte, dimensions fixes, finalisation explicite et nettoyage après annulation (API documentation)
 * `Amélioration` Les Workers Node.js proposent pinyin, pinyin4j, les commandes de console et les coordonnées, avec état parent partagé et flux natifs conservés (API documentation)
 * `Amélioration` Documentation des API pour le consentement de capture Bun et les modules OpenCC/images des Workers Node.js

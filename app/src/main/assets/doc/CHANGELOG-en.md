@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `Fix` README documentation source commit differing from the packaged provenance record
+* `Improvement` Bun screenRecorder writes H.264 MP4 with optional microphone, app-playback or mixed AAC audio and screenshots during recording, with independent audio grants and cancellation cleanup (API documentation)
 * `Improvement` Bun screenRecorder records silent H.264 MP4 files with a separate opt-in grant, fixed output dimensions, explicit finalization and cancellation cleanup (API documentation)
 * `Improvement` Node.js Workers support pinyin, pinyin4j, console controls and coordinate conversion, sharing the parent execution while retaining native output streams (API documentation)
 * `Improvement` Runtime API documentation for Bun screen capture consent and Node.js Worker OpenCC/image modules

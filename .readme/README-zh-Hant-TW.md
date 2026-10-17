@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13883437
-contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
+totalBytes=13889970
+contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
+sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/10/17
 
 * `修復` README 中的文件來源提交與實際封裝來源記錄不一致的問題
+* `優化` Bun screenRecorder 支援 H.264 MP4 螢幕錄製, 可選麥克風/應用程式播放/混合 AAC 音軌及錄製期間擷取畫面, 包含獨立音訊授權和取消清理 (API documentation)
 * `優化` Bun screenRecorder 支援無聲 H.264 MP4 螢幕錄製檔案, 獨立授權, 固定輸出尺寸, 明確完成及取消清理 (API documentation)
 * `優化` Node.js Worker 支援 pinyin, pinyin4j, 主控台視窗和座標換算, 共用父執行狀態並保留原生輸出串流 (API documentation)
 * `優化` 執行環境 API 文件, 包含 Bun 螢幕擷取授權及 Node.js Worker 的 OpenCC/影像模組

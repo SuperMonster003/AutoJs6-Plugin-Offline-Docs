@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13883437
-contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
+totalBytes=13889970
+contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
+sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/17
 
 * `Correctif` Le commit source de la documentation indique dans le README pouvait differer de la provenance du contenu inclus
+* `Amélioration` Bun screenRecorder produit des MP4 H.264 avec audio AAC du microphone, des applications ou mixé et captures pendant la vidéo, avec autorisations audio distinctes et nettoyage après annulation (API documentation)
 * `Amélioration` Bun screenRecorder enregistre des vidéos écran H.264 MP4 sans son avec autorisation distincte, dimensions fixes, finalisation explicite et nettoyage après annulation (API documentation)
 * `Amélioration` Les Workers Node.js proposent pinyin, pinyin4j, les commandes de console et les coordonnées, avec état parent partagé et flux natifs conservés (API documentation)
 * `Amélioration` Documentation des API pour le consentement de capture Bun et les modules OpenCC/images des Workers Node.js

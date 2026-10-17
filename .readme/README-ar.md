@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13883437
-contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
+totalBytes=13889970
+contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
+sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ category=offline-docs
 ###### 2026/10/17
 
 * `إصلاح` عدم تطابق معرف مصدر الوثائق في README مع سجل المصدر المضمن في الحزمة
+* `تحسين` يحفظ Bun screenRecorder ملفات H.264 MP4 مع صوت AAC اختياري من الميكروفون أو التطبيقات أو مزيجهما ولقطات أثناء التسجيل, مع أذونات صوت مستقلة وتنظيف عند الإلغاء (API documentation)
 * `تحسين` يسجل Bun screenRecorder الشاشة في ملفات H.264 MP4 بدون صوت مع إذن مستقل وأبعاد ثابتة وإنهاء صريح وتنظيف عند الإلغاء (API documentation)
 * `تحسين` تدعم Workers في Node.js وحدات pinyin و pinyin4j والتحكم في وحدة التحكم وتحويل الإحداثيات مع مشاركة حالة التنفيذ والإبقاء على تدفقات الإخراج الأصلية (API documentation)
 * `تحسين` وثائق API لموافقة التقاط الشاشة في Bun ووحدات OpenCC والصور في Workers في Node.js

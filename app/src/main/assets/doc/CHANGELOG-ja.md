@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `修正` README の文書ソースコミットがパッケージ内の出典記録と一致しない問題
+* `改善` Bun screenRecorder が H.264 MP4 録画, マイク/アプリ再生/ミックスの AAC 音声と録画中の画面取得に対応し, 個別の音声許可とキャンセル時の削除を提供 (API documentation)
 * `改善` Bun screenRecorder が個別許可, 固定寸法, 明示的な終了処理とキャンセル時の削除を備えた音声なし H.264 MP4 画面録画に対応 (API documentation)
 * `改善` Node.js Worker が pinyin, pinyin4j, コンソール操作と座標変換に対応し, 親の実行状態を共有しながらネイティブ出力を維持 (API documentation)
 * `改善` Bun の画面キャプチャ許可と Node.js Worker の OpenCC/画像モジュールに関するランタイム API 文書

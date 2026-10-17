@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13883437
-contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
+totalBytes=13889970
+contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
+sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/17
 
 * `修正` README の文書ソースコミットがパッケージ内の出典記録と一致しない問題
+* `改善` Bun screenRecorder が H.264 MP4 録画, マイク/アプリ再生/ミックスの AAC 音声と録画中の画面取得に対応し, 個別の音声許可とキャンセル時の削除を提供 (API documentation)
 * `改善` Bun screenRecorder が個別許可, 固定寸法, 明示的な終了処理とキャンセル時の削除を備えた音声なし H.264 MP4 画面録画に対応 (API documentation)
 * `改善` Node.js Worker が pinyin, pinyin4j, コンソール操作と座標変換に対応し, 親の実行状態を共有しながらネイティブ出力を維持 (API documentation)
 * `改善` Bun の画面キャプチャ許可と Node.js Worker の OpenCC/画像モジュールに関するランタイム API 文書
