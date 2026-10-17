@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.9
+
+###### 2026/10/18
+
+* `Función` Node.js/Bun UI y Compose admiten diseños nativos, componentes de datos, estado reactivo y eventos, con permisos independientes y cierre automático
+
 # v6.8.8
 
 ###### 2026/10/17

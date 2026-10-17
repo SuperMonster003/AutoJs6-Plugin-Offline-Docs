@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13916002
-contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
+totalBytes=13927234
+contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
+sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.9
+
+###### 2026/10/18
+
+* `Feature` Node.js/Bun UI and Compose support native layouts, data components, reactive state and window events, with independent grants and automatic window cleanup
+
 # v6.8.8
 
 ###### 2026/10/17
@@ -127,40 +133,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/17
 
 * `Feature` Node.js main thread and Workers support H.264 MP4 recording with microphone, playback or mixed AAC audio, concurrent screenshots and cleanup of unsaved Worker recordings (API / TypeScript / Ace)
-
-# v6.8.6
-
-###### 2026/10/17
-
-* `Fix` README documentation source commit differing from the packaged provenance record
-* `Improvement` Bun screenRecorder writes H.264 MP4 with optional microphone, app-playback or mixed AAC audio and screenshots during recording, with independent audio grants and cancellation cleanup (API documentation)
-* `Improvement` Bun screenRecorder records silent H.264 MP4 files with a separate opt-in grant, fixed output dimensions, explicit finalization and cancellation cleanup (API documentation)
-* `Improvement` Node.js Workers support pinyin, pinyin4j, console controls and coordinate conversion, sharing the parent execution while retaining native output streams (API documentation)
-* `Improvement` Runtime API documentation for Bun screen capture consent and Node.js Worker OpenCC/image modules
-* `Improvement` Node.js and Bun OpenCC and image API reference, including asynchronous handles, pixel formats, permissions and transport limits
-* `Improvement` Rhino speech API reference: recognition, wake and dictation sessions, voice activity, synthesis and speech.models management
-* `Improvement` Node.js and Bun runtime API guide covering asynchronous pinyin, console controls, screen coordinates and editor declaration boundaries
-* `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support
-* `Improvement` Documentation and offline search entries for the minDepth/maxDepth/minIndexInParent/maxIndexInParent selector methods
-* `Improvement` Complete 3-Block Compose API reference: nodes and state, modifiers, themes, sessions and floating windows, component properties and events, threading, accessibility and packaged applications
-* `Improvement` 3-Block Compose TSX: TSX supports `<compose.Column>`, `<compose:Text>`, references to node factories, fragments, slots and reactive callbacks; a single tree cannot mix Compose and legacy XML nodes
-* `Improvement` Terminal module reference: synchronous and asynchronous sessions of the 3-Shell Terminal plugin, output events, npm scripts, permissions and lifecycle, plus the TerminalSession, TerminalOpenOptions and TerminalError types
-* `Improvement` colors module reference: OKLab/OKLCH conversion, contrast adjustment, harmonies, tonal scales, derived colors, night variants, color vision deficiency simulation, dominant image colors, the oklab detection algorithm and colors.theme theme color control
-* `Improvement` Plugin Center icons use the sizes, positions, light and dark artwork, and circular backgrounds adjusted in Icon Studio, retaining reproducible sources and parameters
-* `Improvement` Android App info icons share Icon Studio artwork and light/dark backgrounds while preserving transparent Plugin Center artwork and existing launcher choices
-* `Improvement` 3-Block Compose: XML `<compose>` containers and compose.attach embed independent Compose sessions in UI pages or legacy floating windows; compose.AndroidView embeds an existing Android View or one returned by a synchronous factory
-* `Improvement` 3-Block Compose reference covers independent dialogs and bottom sheets, cancellation rules, overlay permission and session lifecycle
-* `Improvement` 3-Block Compose V2 component reference covering controlled state, events, focus and scrolling commands, requirements and compatibility
-* `Improvement` Device API reference: device.getAndroidId accepts a useSystemId boolean to read the system value for the app's Android user through Shizuku/Root on Android 8.0+, throws on permission or read failure, and ignores the flag on older systems
-* `Improvement` AutoJs4 Runtime reference: purpose of the AutoJs4 Runtime plugin, installation and its separate permissions, the file manager "Run with AutoJs4" entry for .js / .auto files and project folders, log forwarding and task stopping, runtime limits and how to report differences
-* `Improvement` AutoJs4 Runtime reference: comparison mode of "Run with AutoJs4 and compare", covering the two runs, the stripped framing lines and prefix, the summary and diff markers of the result page, the issue template copy and the 120-second timeout
-* `Improvement` AutoJs4 Runtime reference: new "com.stardust compatibility classes" section explaining how com.stardust class names map to the AutoJs6 implementations (fully mapped, partially mapped and no longer provided), how renamed mappings affect the importClass global name, and that Class.forName is not affected
-* `Improvement` 3-Block Compose Designer reference: entries and project files of the visual designer built into the plugin, the editor's canvas / outline / properties / state / component palette, its portrait and landscape layouts and drafts, the recognized script subset and round-trip rules, the two-way hand-over with the AutoJs6 editor, writing back to and re-importing from an imported source, preview state and the interactive preview with how they differ from a real run, TSX projects (parsed by TypeScript Engine, read-only without it), running a JavaScript project's script in the interactive preview's sandbox with its console (Android 8.0 or later), UI (XML) projects (since 1.6.0: editing the XML layouts of ui mode scripts in place, a canvas drawn by the AutoJs6 preview service, handler stubs and the bindings panel), and current limitations; from 1.7.0 the interactive preview of UI (XML) projects has AutoJs6 run the whole script for real (Android 13 and later), with a new section on running UI scripts in the preview: conditions, stop rules, the console and the differences from a real run; from 1.8.0 two new sections: "Preview Differences" (lines that behave differently in the preview than in AutoJs6) and "XML files and folder projects" (XML layout files referenced by literal paths, Save as / New XML file, folder projects with a project.json, zip import and export, handing them to AutoJs6 to run or import, the folder grant of external documents, the project's files in previews, editing and checking Android XML)
-* `Improvement` Android XML attributes reference: for native Android XML UI layouts, the android: / app: attributes each View class can and cannot set, their value formats, enum and flag names, first API level and how they are set, and the layout parameters each parent takes; the user interface reference adds project resources (the res/ folder, qualifier folders and vector drawables)
-* `Improvement` [API reference](https://docs.autojs6.com/#/documentation) covers missing Files and RootAutomator members, color result arrays, WebView contexts and optional overloads, and corrects byte append, swipe parameters and coordinate scaling descriptions; explains that failed setScaleBases calls neither change nor consume scale bases, and documents integer conversion by the base setters
-* `Improvement` Gallery module reference: the gallery object provided by the 3-Maple Image plugin, covering the picker, viewer sessions, editing and headless conversion, the host-owned file boundary, photo access and error codes, plus the GalleryViewSession type
-* `Improvement` files.batchRename reference: batch renaming provided by the Batch Rename plugin, covering plan preview and per-item exclusion, applying, undo and batch history, options and replacement variables, conflict policies, result objects and error codes
-* `Improvement` plugins.tools reference: the tools AutoJs6 plugins describe themselves, including listing tools and providers, synchronous and asynchronous calls, image / file arguments and output files, result objects and errors
 
 ##### For more release history
 

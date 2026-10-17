@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13916002
-contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
+totalBytes=13927234
+contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
+sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.9
+
+###### 2026/10/18
+
+* `기능` Node.js/Bun UI 및 Compose에서 기본 레이아웃, 데이터 구성 요소, 반응형 상태, 창 이벤트, 개별 권한 및 자동 창 정리 지원
+
 # v6.8.8
 
 ###### 2026/10/17
@@ -127,40 +133,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/17
 
 * `기능` Node.js 메인 스레드와 Worker에서 H.264 MP4 화면 녹화, 마이크/재생/혼합 AAC 오디오, 녹화 중 동시 스크린샷 및 Worker의 미저장 녹화 정리 지원 (API / TypeScript / Ace)
-
-# v6.8.6
-
-###### 2026/10/17
-
-* `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
-* `개선` Bun screenRecorder에서 H.264 MP4 녹화, 선택적 마이크/앱 재생/혼합 AAC 오디오 및 녹화 중 화면 캡처 지원, 별도 오디오 허용과 취소 정리 포함 (API documentation)
-* `개선` Bun screenRecorder에서 별도 허용, 고정 출력 크기, 명시적 마무리 및 취소 정리를 갖춘 무음 H.264 MP4 화면 녹화 지원 (API documentation)
-* `개선` Node.js Worker에서 pinyin, pinyin4j, 콘솔 창 및 좌표 변환 지원, 부모 실행 상태 공유와 네이티브 출력 스트림 유지 (API documentation)
-* `개선` Bun 화면 캡처 승인 및 Node.js Worker OpenCC/이미지 모듈에 대한 런타임 API 문서
-* `개선` Node.js와 Bun의 OpenCC 및 이미지 API 문서, 비동기 핸들, 픽셀 형식, 권한과 전송 한도 포함
-* `개선` Rhino speech API 참조: 인식, 깨우기와 받아쓰기 세션, 음성 활동 감지, 합성 및 speech.models 관리
-* `개선` 비동기 병음, 콘솔 제어, 화면 좌표 및 편집기 선언 범위를 설명하는 Node.js와 Bun 런타임 API 안내
-* `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
-* `개선` 선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인
-* `개선` 3-Block Compose 전체 API 참조: 노드와 상태, Modifier, 테마, 세션과 플로팅 창, 컴포넌트 속성과 이벤트, 스레드 규칙, 접근성 및 패키지 앱
-* `개선` 3-Block Compose TSX: TSX는 `<compose.Column>`, `<compose:Text>`, 노드 팩토리 참조, Fragment, 슬롯 및 반응형 콜백을 지원합니다. 하나의 트리에서 Compose와 기존 XML 노드를 혼합할 수 없습니다
-* `개선` Terminal 모듈 참조: 3-Shell Terminal 플러그인의 동기 및 비동기 세션, 출력 이벤트, npm 스크립트, 권한과 수명 주기, 그리고 TerminalSession, TerminalOpenOptions, TerminalError 형식
-* `개선` colors 모듈 참조: OKLab/OKLCH 변환, 대비 조정, 조화색, 색조 단계, 파생 색상, 야간 대응색, 색각 이상 시뮬레이션, 이미지 주요 색상 추출, oklab 색상 감지 알고리즘 및 colors.theme 테마 색상 제어
-* `개선` 플러그인 센터 아이콘에 Icon Studio에서 조정한 크기, 위치, 밝은 이미지와 어두운 이미지 및 원형 배경을 적용하고 재생성 가능한 원본과 매개변수를 유지
-* `개선` Android 앱 정보 아이콘에 Icon Studio의 그림과 밝은 배경 및 어두운 배경을 사용하고 플러그인 센터의 투명 그림과 기존 런처 옵션을 유지
-* `개선` 3-Block Compose: XML `<compose>` 컨테이너와 compose.attach로 UI 페이지나 기존 플로팅 창에 독립적인 Compose 세션을 삽입합니다. compose.AndroidView는 기존 Android View 또는 동기 팩토리가 반환하는 View를 표시합니다
-* `개선` 3-Block Compose 참고 문서에 독립 대화상자와 하단 시트, 취소 규칙, 오버레이 권한 및 세션 수명 주기 설명 추가
-* `개선` 3-Block Compose V2 구성요소 참조 문서에 제어 상태, 이벤트, 포커스 및 스크롤 명령, 사용 조건과 호환성 포함
-* `개선` device API 참고 문서: device.getAndroidId가 useSystemId 불리언 매개변수를 지원하며, Android 8.0+에서 Shizuku/Root로 앱이 실행되는 Android 사용자의 시스템 값을 읽음. 권한 또는 읽기 실패 시 예외를 발생시키고 이전 시스템에서는 매개변수를 무시
-* `개선` AutoJs4 런타임 참고 문서: AutoJs4 Runtime 플러그인의 용도, 설치와 독립 권한, 파일 관리자의 "AutoJs4로 실행" 항목으로 .js / .auto 파일과 프로젝트 폴더를 실행하는 입구, 로그 전달과 작업 중지, 실행 제한 및 차이 보고 방법
-* `개선` AutoJs4 런타임 참고 문서: "AutoJs4로 실행하고 비교" 비교 모드를 추가하여 두 번의 실행 흐름, 시작과 종료 행 및 접두사 제거 규칙, 결과 페이지의 요약과 차이 표시, issue 템플릿 복사 및 120초 제한 시간을 설명
-* `개선` AutoJs4 런타임 참고 문서: "com.stardust 호환 클래스" 절을 추가하여 com.stardust 접두사 클래스 이름이 AutoJs6 구현에 어떻게 매핑되는지 (완전 매핑, 부분 매핑, 더 이상 제공하지 않음), 이름이 바뀐 매핑이 importClass 전역 이름에 미치는 영향, Class.forName은 매핑 대상이 아님을 설명
-* `개선` 3-Block Compose 디자이너 참조 문서: 플러그인에 내장된 비주얼 디자이너의 진입점과 프로젝트 파일, 편집 화면의 캔버스 / 개요 / 속성 / 상태 / 구성요소 팔레트, 세로 및 가로 화면 배치와 초안, 인식되는 스크립트 하위 집합과 왕복 규칙, AutoJs6 편집기와의 양방향 전달, 가져온 원본에 다시 쓰기와 다시 가져오기, 미리보기 상태와 조작 미리보기 및 실제 실행과의 차이, TSX 프로젝트 (TypeScript Engine 으로 분석, 없으면 읽기 전용), 조작 미리보기 샌드박스에서의 JavaScript 프로젝트 스크립트 실행과 콘솔 (Android 8.0 이상), UI (XML) 프로젝트 (1.6.0 부터: ui 모드 스크립트 XML 레이아웃의 제자리 편집, AutoJs6 미리보기 서비스가 그리는 캔버스, 핸들러 스텁과 바인딩 패널), 현재 제한 사항; 1.7.0 부터 UI (XML) 프로젝트의 대화형 미리보기에서 AutoJs6 가 스크립트 전체를 실제로 실행하며 (Android 13 이상), 미리보기에서 UI 스크립트 실행에 관한 절 (조건, 중지 규칙, 콘솔, 실제 실행과의 차이) 을 추가; 1.8.0 부터 "미리보기 차이" (미리보기와 AutoJs6 실행에서 동작이 다른 코드) 와 "XML 파일과 폴더 프로젝트" (리터럴 경로로 참조하는 XML 레이아웃 파일, XML 파일로 저장 / 새 XML 파일, project.json 이 있는 폴더 프로젝트, zip 가져오기와 내보내기, AutoJs6 에서 실행과 가져오기, 외부 문서의 폴더 접근, 미리보기의 프로젝트 파일, Android XML 편집과 검사) 두 절 추가
-* `개선` Android XML 속성 참조: 네이티브 Android XML UI 레이아웃에서 각 View 클래스가 설정할 수 있거나 없는 android: / app: 속성, 값 형식, 열거와 플래그 이름, 처음 지원 API 와 설정 방식, 각 부모 레이아웃이 받는 레이아웃 매개변수; 사용자 인터페이스 참조에 프로젝트 리소스 (res/ 폴더, 한정자 폴더와 vector 드로어블) 추가
-* `개선` [API 참조](https://docs.autojs6.com/#/documentation): 누락된 Files 및 RootAutomator 멤버, 색상 결과 배열, WebView 컨텍스트와 선택적 인수 오버로드를 보완하고 바이트 추가 및 스와이프 인수와 좌표 배율 설명을 수정, setScaleBases 실패 시 기준값과 설정 가능 상태가 유지되는 동작 및 기준값 setter의 정수 변환 규칙 설명
-* `개선` 갤러리 (Gallery) 모듈 참조: 3-Maple Image 플러그인이 제공하는 gallery 객체 (이미지 선택, 뷰어 세션, 편집, UI 없는 변환), AutoJs6 가 파일을 읽고 쓰는 경계, 사진 접근 권한, 오류 코드 및 GalleryViewSession 형식
-* `개선` files.batchRename 참조: Batch Rename 플러그인이 제공하는 일괄 이름 바꾸기. 계획 미리 보기와 항목별 제외, 실행, 실행 취소와 배치 기록, 옵션과 치환 변수, 충돌 정책, 결과 객체와 오류 코드
-* `개선` plugins.tools 참조: AutoJs6 플러그인이 스스로 설명하는 도구. 도구와 제공자 목록, 동기 및 비동기 호출, 이미지 / 파일 인수와 출력 파일, 결과 객체와 오류 포함
 
 ##### 더 많은 릴리스 기록
 

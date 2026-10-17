@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.9
+
+###### 2026/10/18
+
+* `Feature` Node.js/Bun UI and Compose support native layouts, data components, reactive state and window events, with independent grants and automatic window cleanup
+
 # v6.8.8
 
 ###### 2026/10/17

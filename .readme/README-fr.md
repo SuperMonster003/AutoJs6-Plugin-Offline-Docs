@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13916002
-contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
+totalBytes=13927234
+contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
+sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.9
+
+###### 2026/10/18
+
+* `Fonctionnalité` Node.js/Bun UI et Compose prennent en charge les interfaces natives, composants de données, états réactifs et événements, avec autorisations distinctes et fermeture automatique
+
 # v6.8.8
 
 ###### 2026/10/17
@@ -127,40 +133,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/17
 
 * `Fonctionnalité` Le thread principal Node.js et les Workers prennent en charge la capture H.264 MP4 avec audio AAC du microphone, de lecture ou mixte, les captures simultanees et la suppression des enregistrements Worker non sauvegardes (API / TypeScript / Ace)
-
-# v6.8.6
-
-###### 2026/10/17
-
-* `Correctif` Le commit source de la documentation indique dans le README pouvait differer de la provenance du contenu inclus
-* `Amélioration` Bun screenRecorder produit des MP4 H.264 avec audio AAC du microphone, des applications ou mixé et captures pendant la vidéo, avec autorisations audio distinctes et nettoyage après annulation (API documentation)
-* `Amélioration` Bun screenRecorder enregistre des vidéos écran H.264 MP4 sans son avec autorisation distincte, dimensions fixes, finalisation explicite et nettoyage après annulation (API documentation)
-* `Amélioration` Les Workers Node.js proposent pinyin, pinyin4j, les commandes de console et les coordonnées, avec état parent partagé et flux natifs conservés (API documentation)
-* `Amélioration` Documentation des API pour le consentement de capture Bun et les modules OpenCC/images des Workers Node.js
-* `Amélioration` Référence OpenCC et images de Node.js et Bun, avec handles asynchrones, formats de pixels, autorisations et limites de transfert
-* `Amélioration` Référence speech de Rhino: reconnaissance, sessions de réveil et dictée, détection vocale, synthèse et gestion speech.models
-* `Amélioration` Guide des API Node.js et Bun: pinyin asynchrone, commandes de console, coordonnees et limites des declarations de l'editeur
-* `Amélioration` Profils Installer par source/préfixe de paquet, priorité des options explicites et trois réinitialisations nullables, sourceDeleteRequested et conservation des sources partagées du lot; hôte 5312+ et plugin compatible requis
-* `Amélioration` Documentation et entrées de recherche hors ligne pour les méthodes de sélecteur minDepth/maxDepth/minIndexInParent/maxIndexInParent
-* `Amélioration` Référence complète de l'API 3-Block Compose: noeuds et états, modificateurs, thèmes, sessions et fenêtres flottantes, propriétés et événements des composants, threads, accessibilité et applications empaquetées
-* `Amélioration` 3-Block Compose TSX: TSX prend en charge `<compose.Column>`, `<compose:Text>`, les références aux fabriques de noeuds, les fragments, les emplacements et les rappels réactifs; un même arbre ne peut pas mélanger Compose et les anciens noeuds XML
-* `Amélioration` Référence du module Terminal: sessions synchrones et asynchrones du plugin 3-Shell Terminal, événements de sortie, scripts npm, autorisations et cycle de vie, ainsi que les types TerminalSession, TerminalOpenOptions et TerminalError
-* `Amélioration` Référence du module colors: conversions OKLab/OKLCH, ajustement du contraste, harmonies, gammes de tons, couleurs dérivées, variantes de nuit, simulation des déficiences de la vision des couleurs, couleurs dominantes d'une image, algorithme de détection oklab et contrôle de la couleur du thème avec colors.theme
-* `Amélioration` Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire
-* `Amélioration` Les icônes des informations d'application Android utilisent les illustrations et les fonds clairs et sombres d'Icon Studio, en conservant les images transparentes du centre de plugins et les choix du lanceur
-* `Amélioration` 3-Block Compose: Les conteneurs XML `<compose>` et compose.attach intègrent des sessions Compose indépendantes dans les pages UI ou les fenêtres flottantes existantes; compose.AndroidView affiche une View Android existante ou renvoyée par une fabrique synchrone
-* `Amélioration` La référence 3-Block Compose couvre les dialogues indépendants et panneaux inférieurs, les règles de fermeture, la permission de superposition et le cycle de vie des sessions
-* `Amélioration` Référence des composants 3-Block Compose V2 avec état contrôlé, événements, commandes de focus et de défilement, conditions d'utilisation et compatibilité
-* `Amélioration` Référence de l'API device: device.getAndroidId accepte le booléen useSystemId pour lire la valeur système de l'utilisateur Android de l'application via Shizuku/Root sous Android 8.0+, lève une exception en cas d'échec d'autorisation ou de lecture et ignore ce paramètre sur les anciens systèmes
-* `Amélioration` Référence AutoJs4 Runtime: objet du plugin AutoJs4 Runtime, installation et permissions distinctes, l'entrée "Exécuter avec AutoJs4" du gestionnaire de fichiers pour les fichiers .js / .auto et les dossiers de projet, transfert des journaux et arrêt des tâches, limites d'exécution et procédure de signalement des différences
-* `Amélioration` Référence AutoJs4 Runtime: mode de comparaison "Exécuter avec AutoJs4 et comparer", avec les deux exécutions, les lignes de cadrage et le préfixe retirés, le résumé et les marqueurs de différence de la page de résultat, la copie du modèle d'issue et le délai de 120 secondes
-* `Amélioration` Référence AutoJs4 Runtime: nouvelle section "Classes de compatibilité com.stardust" expliquant comment les noms de classe préfixés com.stardust sont associés aux implémentations AutoJs6 (association complète, partielle et plus fournie), l'effet des associations renommées sur le nom global d'importClass, et le fait que Class.forName n'est pas concerné
-* `Amélioration` Référence du Concepteur 3-Block Compose: points d'entrée et fichiers de projet du concepteur visuel intégré au plugin, le canevas / plan / propriétés / état / palette de composants de l'éditeur, sa disposition en portrait et en paysage et ses brouillons, le sous-ensemble de script reconnu et les règles d'aller-retour, le passage bidirectionnel avec l'éditeur AutoJs6, la réécriture vers la source importée et sa réimportation, l'état d'aperçu et l'aperçu interactif avec leurs différences par rapport à une vraie exécution, les projets TSX (analysés par TypeScript Engine, en lecture seule sans lui), l'exécution du script d'un projet JavaScript dans le bac à sable de l'aperçu interactif avec sa console (Android 8.0 ou ultérieur), les projets UI (XML) (depuis 1.6.0: édition sur place des mises en page XML des scripts en mode ui, un canevas dessiné par le service d'aperçu d'AutoJs6, les gabarits de gestionnaires et le panneau des liaisons), et les limites actuelles; à partir de 1.7.0, l'aperçu interactif des projets UI (XML) fait exécuter tout le script par AutoJs6 pour de vrai (Android 13 et ultérieur), avec une nouvelle section sur l'exécution des scripts UI dans l'aperçu: conditions, règles d'arrêt, console et différences avec une exécution réelle; à partir de 1.8.0, deux nouvelles sections: "Différences d'aperçu" (les lignes qui se comportent autrement dans l'aperçu que dans AutoJs6) et "Fichiers XML et projets dossier" (fichiers de mise en page XML référencés par des chemins littéraux, Enregistrer comme / Nouveau fichier XML, projets dossier avec project.json, import et export zip, transmission à AutoJs6 pour exécution ou import, accès au dossier des documents externes, fichiers du projet dans les aperçus, modification et vérification du XML Android)
-* `Amélioration` Référence des attributs XML Android: pour les mises en page UI en XML Android natif, les attributs android: / app: que chaque classe View peut ou ne peut pas définir, leurs formats de valeur, noms d'énumération et de drapeaux, niveau d'API initial et mode de définition, ainsi que les paramètres de mise en page acceptés par chaque parent; la référence de l'interface utilisateur ajoute les ressources du projet (dossier res/, dossiers à qualificateurs et vector drawables)
-* `Amélioration` [Reference API](https://docs.autojs6.com/#/documentation): membres Files et RootAutomator manquants, tableaux de resultat des couleurs, contextes WebView et surcharges optionnelles, avec correction des parametres d'ajout d'octets, de balayage et des explications de mise a l'echelle des coordonnees; précise que les appels setScaleBases en échec ne modifient ni ne réservent les bases, et décrit la conversion en entier des setters de base
-* `Amélioration` Référence du module Gallery: l'objet gallery fourni par le plugin 3-Maple Image (sélecteur, sessions de visionneuse, édition et conversion sans interface), la limite des fichiers lus et écrits par AutoJs6, l'accès aux photos, les codes d'erreur et le type GalleryViewSession
-* `Amélioration` Référence de files.batchRename: renommage par lots fourni par le plugin Batch Rename, avec aperçu du plan et exclusion par élément, application, annulation et historique des lots, options et variables de remplacement, politiques de conflit, objets de résultat et codes d'erreur
-* `Amélioration` Référence plugins.tools: les outils que les plugins AutoJs6 décrivent eux-mêmes, avec la liste des outils et des fournisseurs, les appels synchrones et asynchrones, les arguments image / fichier et les fichiers de sortie, les objets de résultat et les erreurs
 
 ##### Pour plus d'historique des versions
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13916002
-contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
+totalBytes=13927234
+contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
+sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.9
+
+###### 2026/10/18
+
+* `新增` Node.js/Bun UI 與 Compose 支援原生版面配置, 資料元件, 響應式狀態及視窗事件, 提供獨立授權與視窗自動清理
+
 # v6.8.8
 
 ###### 2026/10/17
@@ -127,40 +133,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/10/17
 
 * `新增` Node.js 主執行緒與 Worker 支援 H.264 MP4 螢幕錄影, 麥克風/播放/混合 AAC 音訊, 錄製期間並行截圖及 Worker 未儲存錄影清理 (API / TypeScript / Ace)
-
-# v6.8.6
-
-###### 2026/10/17
-
-* `修復` README 中的文件來源提交與實際封裝來源記錄不一致的問題
-* `優化` Bun screenRecorder 支援 H.264 MP4 螢幕錄製, 可選麥克風/應用程式播放/混合 AAC 音軌及錄製期間擷取畫面, 包含獨立音訊授權和取消清理 (API documentation)
-* `優化` Bun screenRecorder 支援無聲 H.264 MP4 螢幕錄製檔案, 獨立授權, 固定輸出尺寸, 明確完成及取消清理 (API documentation)
-* `優化` Node.js Worker 支援 pinyin, pinyin4j, 主控台視窗和座標換算, 共用父執行狀態並保留原生輸出串流 (API documentation)
-* `優化` 執行環境 API 文件, 包含 Bun 螢幕擷取授權及 Node.js Worker 的 OpenCC/影像模組
-* `優化` Node.js 和 Bun 的 OpenCC 與影像 API 文件, 包含非同步控制代碼, 像素格式, 權限和傳輸上限
-* `優化` Rhino speech API 參考: 辨識, 喚醒與聽寫工作階段, 語音活動偵測, 合成及 speech.models 模型管理
-* `優化` Node.js 和 Bun 執行階段 API 指南, 涵蓋非同步拼音, 主控台, 座標換算與編輯器宣告邊界
-* `優化` Installer 來源/套件名稱前綴設定檔, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要主程式 5312+ 及外掛對應能力
-* `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
-* `優化` 3-Block Compose 完整 API 參考: 節點與狀態, Modifier, 主題, 工作階段與浮動視窗, 元件屬性和事件, 執行緒規則, 無障礙與封裝應用程式
-* `優化` 3-Block Compose TSX: TSX 支援 `<compose.Column>`, `<compose:Text>`, 節點工廠參照, Fragment, 插槽及響應式回呼; 同一棵樹不能混用 Compose 與舊 XML 節點
-* `優化` Terminal 模組參考: 3-Shell Terminal 外掛的同步與非同步工作階段, 輸出事件, npm 指令碼, 權限與生命週期, 以及 TerminalSession, TerminalOpenOptions 與 TerminalError 型別
-* `優化` colors 模組參考: OKLab/OKLCH 轉換, 對比度調整, 和諧色, 色階, 衍生配色, 夜間對應色, 色覺缺陷模擬, 圖片主要顏色擷取, oklab 顏色偵測演算法及 colors.theme 主題色控制
-* `優化` 外掛程式中心圖示採用統一工作台調整後的尺寸, 位置, 明暗圖稿與圓形底色, 保留可重建原稿和參數
-* `優化` Android 系統應用程式資訊圖示與圖示工作台共用圖稿及明暗底色, 保留外掛程式中心透明圖稿與現有啟動器選項
-* `優化` 3-Block Compose: XML `<compose>` 容器與 compose.attach 可在 UI 頁面或舊浮動視窗內嵌入獨立 Compose 工作階段; compose.AndroidView 可承載現有 Android View 或同步工廠傳回的 View
-* `優化` 3-Block Compose 參考文件補充獨立對話框和底部面板, 包含取消規則, 懸浮視窗權限與工作階段生命週期
-* `優化` 3-Block Compose V2 元件參考, 包含受控狀態, 事件, 焦點與捲動命令, 使用條件和相容性
-* `優化` 裝置模組參考文件: device.getAndroidId 支援 useSystemId 布林參數, 在 Android 8.0+ 上透過 Shizuku/Root 取得執行應用所屬 Android 使用者的系統值, 權限或讀取失敗時擲出例外, 舊系統忽略此參數
-* `優化` AutoJs4 執行時參考文件: AutoJs4 Runtime 外掛的用途, 安裝與獨立權限, 檔案管理器 "使用 AutoJs4 執行" 對 .js / .auto 檔案及專案資料夾的入口, 日誌回傳與任務停止, 執行限制及差異回饋方式
-* `優化` AutoJs4 執行時參考文件: 補充 "使用 AutoJs4 執行並對照" 的對照模式, 說明兩次執行流程, 起止行與前綴的剔除規則, 結果頁的摘要與差異標記, issue 範本複製以及 120 秒逾時
-* `優化` AutoJs4 執行時參考文件: 補充 "com.stardust 相容類別" 小節, 說明 com.stardust 前綴的類別名稱如何對應到 AutoJs6 的實作 (完整對應, 部分對應與不再提供三類), 改名對應對 importClass 全域名稱的影響, 以及 Class.forName 不受對應影響
-* `優化` 3-Block Compose 設計器參考文件: 外掛內建視覺化設計器的入口與專案檔案, 編輯頁的畫布 / 大綱 / 屬性 / 狀態 / 元件面板, 直橫向版面與草稿, 可識別的指令碼子集與往返規則, 與 AutoJs6 編輯器的雙向交接, 匯入來源的寫回與重新匯入, 預覽狀態與互動預覽及其與實際執行的差異, TSX 專案 (經 TypeScript Engine 解析, 缺少時唯讀開啟), 互動預覽中在沙盒執行 JavaScript 專案的指令碼與主控台 (Android 8.0 或更新版本), UI (XML) 專案 (1.6.0 起: 原樣編輯 ui 模式指令碼的 XML 佈局, 畫布由 AutoJs6 的預覽服務繪製, 事件樣板與繫結值面板), 以及目前限制; 1.7.0 起 UI (XML) 專案的互動預覽由 AutoJs6 真實執行整份指令碼 (Android 13 起), 新增 "在預覽中執行 UI 指令碼" 小節說明條件, 停止規則, 主控台與和真實執行的差異; 1.8.0 起新增 "預覽差異" 一節 (在預覽中與在 AutoJs6 中執行行為不同的寫法) 與 "XML 檔案與資料夾專案" 一節 (以字面量路徑參照的 XML 佈局檔案, 存為 / 新增 XML 檔案, 資料夾專案與 project.json, zip 匯入匯出, 交給 AutoJs6 執行與匯入, 外部文件的資料夾授權, 預覽中的專案檔案, Android 原生 XML 的編輯與檢查)
-* `優化` Android XML 屬性參考: UI 原生 Android XML 佈局中每個 View 類別可設定與不能設定的 android: / app: 屬性, 取值格式, 列舉與旗標名稱, 起始 API 與設定方式, 以及各父佈局接受的佈局參數; 使用者介面參考補充專案資源 (res/ 目錄, 限定詞目錄與 vector 向量圖)
-* `優化` [API 參考](https://docs.autojs6.com/#/documentation) 補齊 Files 與 RootAutomator 成員, 色彩結果容器, WebView 上下文和選用參數多載, 校正位元組附加與滑動參數, 同步座標縮放說明, 說明 setScaleBases 失敗時不修改或占用基數, 以及基數 setter 的整數轉換規則
-* `優化` 相簿 (Gallery) 模組參考: 3-Maple Image 外掛提供的 gallery 物件, 包括選圖, 檢視器工作階段, 編輯與無介面轉換, 檔案由 AutoJs6 讀寫的邊界, 相片存取權限與錯誤代碼, 以及 GalleryViewSession 型別
-* `優化` files.batchRename 參考: Batch Rename 外掛提供的批次重新命名, 包括方案預覽與逐項排除, 執行, 復原與歷史批次, 選項與替換變數, 衝突策略, 結果物件及錯誤代碼
-* `優化` plugins.tools 參考: AutoJs6 外掛自我描述的工具, 包括列出工具與提供者, 同步與非同步呼叫, 圖片 / 檔案參數與輸出檔案, 結果物件及錯誤
 
 ##### 更多發行歷史可參閱
 
