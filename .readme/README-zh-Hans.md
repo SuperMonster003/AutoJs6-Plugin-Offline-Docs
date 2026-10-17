@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=218
-totalBytes=13780672
-contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
+fileCount=219
+totalBytes=13846415
+contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
+sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/17
 
 * `修复` README 中的文档来源提交与实际打包来源记录不一致的问题
+* `优化` Rhino speech API 参考: 识别, 唤醒与听写会话, 语音活动检测, 合成及 speech.models 模型管理
 * `优化` Node.js 和 Bun 运行时 API 指南, 覆盖异步拼音, 控制台, 坐标换算与编辑器声明边界
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引

@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=218
-totalBytes=13780672
-contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
+fileCount=219
+totalBytes=13846415
+contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
+sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/17
 
 * `修正` README の文書ソースコミットがパッケージ内の出典記録と一致しない問題
+* `改善` Rhino speech API リファレンス: 認識, ウェイクワードと音声入力セッション, 音声区間検出, 合成と speech.models の管理
 * `改善` Node.js と Bun の実行環境 API ガイド. 非同期ピンイン, コンソール, 座標変換とエディター型宣言の範囲を説明
 * `改善` Installer の起点/パッケージ名プレフィックス別プロファイル, 明示オプションの優先と 3 項目の null リセット, sourceDeleteRequested とバッチ共有ソースの保持. ホスト 5312+ と対応プラグインが必要
 * `改善` セレクター minDepth/maxDepth/minIndexInParent/maxIndexInParent のメソッド説明とオフライン検索インデックス

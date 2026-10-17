@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=218
-totalBytes=13780672
-contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
+fileCount=219
+totalBytes=13846415
+contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
+sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ category=offline-docs
 ###### 2026/10/17
 
 * `إصلاح` عدم تطابق معرف مصدر الوثائق في README مع سجل المصدر المضمن في الحزمة
+* `تحسين` مرجع speech في Rhino: التعرف وجلسات التنبيه والإملاء واكتشاف الصوت والتوليف وإدارة speech.models
 * `تحسين` دليل واجهات Node.js وBun الذي يشمل بينيين غير المتزامن ووحدة التحكم والإحداثيات وحدود تعريفات المحرر
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
 * `تحسين` توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال

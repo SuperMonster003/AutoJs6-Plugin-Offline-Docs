@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=218
-totalBytes=13780672
-contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
+fileCount=219
+totalBytes=13846415
+contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
+sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/17
 
 * `Исправление` Несоответствие исходного коммита документации в README записи происхождения в пакете
+* `Улучшение` Справочник speech для Rhino: распознавание, сеансы активации и диктовки, обнаружение речи, синтез и управление speech.models
 * `Улучшение` Руководство по API Node.js и Bun: асинхронный пиньинь, консоль, координаты и границы объявлений редактора
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent

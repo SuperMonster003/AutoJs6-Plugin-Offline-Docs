@@ -11,6 +11,7 @@
         "README 中的文件來源提交與實際封裝來源記錄不一致的問題"
       ],
       "improvement": [
+        "Rhino speech API 參考: 辨識, 喚醒與聽寫工作階段, 語音活動偵測, 合成及 speech.models 模型管理",
         "Node.js 和 Bun 執行階段 API 指南, 涵蓋非同步拼音, 主控台, 座標換算與編輯器宣告邊界",
         "Installer 來源/套件名稱前綴設定檔, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要主程式 5312+ 及外掛對應能力",
         "選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引",

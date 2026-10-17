@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `修正` README の文書ソースコミットがパッケージ内の出典記録と一致しない問題
+* `改善` Rhino speech API リファレンス: 認識, ウェイクワードと音声入力セッション, 音声区間検出, 合成と speech.models の管理
 * `改善` Node.js と Bun の実行環境 API ガイド. 非同期ピンイン, コンソール, 座標変換とエディター型宣言の範囲を説明
 * `改善` Installer の起点/パッケージ名プレフィックス別プロファイル, 明示オプションの優先と 3 項目の null リセット, sourceDeleteRequested とバッチ共有ソースの保持. ホスト 5312+ と対応プラグインが必要
 * `改善` セレクター minDepth/maxDepth/minIndexInParent/maxIndexInParent のメソッド説明とオフライン検索インデックス

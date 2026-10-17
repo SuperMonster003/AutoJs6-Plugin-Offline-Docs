@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=218
-totalBytes=13780672
-contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
+fileCount=219
+totalBytes=13846415
+contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
+sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/17
 
 * `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
+* `개선` Rhino speech API 참조: 인식, 깨우기와 받아쓰기 세션, 음성 활동 감지, 합성 및 speech.models 관리
 * `개선` 비동기 병음, 콘솔 제어, 화면 좌표 및 편집기 선언 범위를 설명하는 Node.js와 Bun 런타임 API 안내
 * `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
 * `개선` 선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인
