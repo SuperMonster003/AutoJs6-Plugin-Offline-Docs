@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13927234
-contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
+totalBytes=13939149
+contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
+sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `ميزة` يدعم Node.js/Bun مقابض View الخاصة بالتنفيذ ومصانع AndroidView غير المتزامنة وحاويات XML Compose مع تنظيف Worker والتطبيقات المعبأة
+
 # v6.8.9
 
 ###### 2026/10/18
@@ -127,12 +133,6 @@ category=offline-docs
 * `ميزة` يدعم Node.js/Bun images المرشحات المتقدمة وتحويل الألوان والبحث متعدد الألوان والدوائر ومقاييس التشابه وتحميل URL
 * `ميزة` يدعم Node.js/Bun images استخراج ومطابقة SIFT/ORB مع إحداثيات المشهد وهندسة ObjectFrame ومقابض Mat/الميزات الخاصة بكل تنفيذ
 * `ميزة` يدعم Node.js/Bun images تكميم PNG والضغط مع مقاييس الجودة/الذاكرة والنتائج الثنائية والإخراج عبر واصف ملف
-
-# v6.8.7
-
-###### 2026/10/17
-
-* `ميزة` يدعم خيط Node.js الرئيسي وWorkers تسجيل H.264 MP4 مع صوت AAC من الميكروفون او التشغيل او المزج, ولقطات متزامنة وتنظيف تسجيلات Worker غير المحفوظة (API / TypeScript / Ace)
 
 ##### لمزيد من سجل الإصدارات
 

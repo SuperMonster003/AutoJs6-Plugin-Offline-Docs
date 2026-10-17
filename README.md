@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13927234
-contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
+totalBytes=13939149
+contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
+sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `新增` Node.js/Bun 支持执行所属 View 句柄, 异步 AndroidView 工厂与 XML Compose 容器挂载, 同步支持 Worker 清理及打包应用
+
 # v6.8.9
 
 ###### 2026/10/18
@@ -127,12 +133,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `新增` Node.js/Bun images 支持高级滤镜, 颜色空间转换, 多点找色, 圆检测, 相似度指标及 URL 载入
 * `新增` Node.js/Bun images 支持 SIFT/ORB 特征提取与匹配, 返回场景坐标和 ObjectFrame 几何信息, 并管理执行内的 Mat/特征句柄
 * `新增` Node.js/Bun images 支持 PNG 量化和压缩, 提供质量/内存度量, 二进制结果及文件描述符输出
-
-# v6.8.7
-
-###### 2026/10/17
-
-* `新增` Node.js 主线程与 Worker 支持 H.264 MP4 录屏, 麦克风/播放/混合 AAC 音频, 录制期间并行截图及 Worker 未保存录屏清理 (API / TypeScript / Ace)
 
 ##### 更多发行历史可参阅
 

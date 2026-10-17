@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13927234
-contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
+totalBytes=13939149
+contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
+sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `Fonctionnalité` Node.js/Bun prennent en charge les handles View propres à une exécution, les fabriques AndroidView asynchrones, les conteneurs XML Compose, la fermeture des Workers et les applications empaquetées
+
 # v6.8.9
 
 ###### 2026/10/18
@@ -127,12 +133,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Fonctionnalité` Node.js/Bun images prend en charge les filtres avancés, la conversion des couleurs, les recherches multicolores, les cercles, les mesures de similarité et les URL
 * `Fonctionnalité` Node.js/Bun images prend en charge SIFT/ORB avec coordonnées de scène, géométrie ObjectFrame et handles Mat/caractéristiques propres à chaque exécution
 * `Fonctionnalité` Node.js/Bun images prend en charge la quantification PNG et la compression avec mesures de qualité/mémoire, résultats binaires et sortie par descripteur de fichier
-
-# v6.8.7
-
-###### 2026/10/17
-
-* `Fonctionnalité` Le thread principal Node.js et les Workers prennent en charge la capture H.264 MP4 avec audio AAC du microphone, de lecture ou mixte, les captures simultanees et la suppression des enregistrements Worker non sauvegardes (API / TypeScript / Ace)
 
 ##### Pour plus d'historique des versions
 

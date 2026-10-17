@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13927234
-contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
+totalBytes=13939149
+contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
+sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `Función` Node.js/Bun admiten identificadores View de cada ejecución, fábricas AndroidView asíncronas, contenedores XML Compose, limpieza de Workers y aplicaciones empaquetadas
+
 # v6.8.9
 
 ###### 2026/10/18
@@ -127,12 +133,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Función` Node.js/Bun images admite filtros avanzados, conversión de color, búsquedas multicolor, círculos, métricas de similitud y carga de URL
 * `Función` Node.js/Bun images admite extracción y coincidencia SIFT/ORB con coordenadas de escena, geometría ObjectFrame y handles Mat/características por ejecución
 * `Función` Node.js/Bun images admite cuantización PNG y compresión con métricas de calidad/memoria, resultados binarios y salida mediante descriptor de archivo
-
-# v6.8.7
-
-###### 2026/10/17
-
-* `Función` El hilo principal de Node.js y los Workers admiten grabacion H.264 MP4 con audio AAC de microfono, reproduccion o mixto, capturas simultaneas y limpieza de grabaciones Worker sin guardar (API / TypeScript / Ace)
 
 ##### Para ver más historial de versiones
 

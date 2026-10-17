@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13927234
-contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
+totalBytes=13939149
+contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
+sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `Функция` Node.js/Bun поддерживают дескрипторы View в пределах выполнения, асинхронные фабрики AndroidView, контейнеры XML Compose, очистку Workers и упакованные приложения
+
 # v6.8.9
 
 ###### 2026/10/18
@@ -127,12 +133,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Функция` Node.js/Bun images поддерживает расширенные фильтры, преобразование цвета, поиск нескольких цветов, окружности, метрики сходства и загрузку URL
 * `Функция` Node.js/Bun images поддерживает SIFT/ORB с координатами сцены, геометрией ObjectFrame и дескрипторами Mat/признаков в пределах выполнения
 * `Функция` Node.js/Bun images поддерживает квантование PNG и сжатие с метриками качества/памяти, двоичными результатами и выводом через файловый дескриптор
-
-# v6.8.7
-
-###### 2026/10/17
-
-* `Функция` Основной поток Node.js и Workers поддерживают запись H.264 MP4 со звуком AAC микрофона, воспроизведения или их смеси, параллельные снимки экрана и удаление несохраненных записей Worker (API / TypeScript / Ace)
 
 ##### Больше истории выпусков
 

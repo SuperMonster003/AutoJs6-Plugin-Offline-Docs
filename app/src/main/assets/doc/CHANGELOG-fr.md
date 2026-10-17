@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `Fonctionnalité` Node.js/Bun prennent en charge les handles View propres à une exécution, les fabriques AndroidView asynchrones, les conteneurs XML Compose, la fermeture des Workers et les applications empaquetées
+
 # v6.8.9
 
 ###### 2026/10/18

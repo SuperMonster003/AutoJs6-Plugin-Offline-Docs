@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13927234
-contentSha256=ffd92a31dde510cba10288d0f786e312b8dac8a3f4db1e14d23351c3b83daf53
+totalBytes=13939149
+contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7e4cef59327a3534e9f3f1dc16de3b3d23059edd
+sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `機能` Node.js/Bun が実行に属する View ハンドル, 非同期 AndroidView ファクトリー, XML Compose コンテナへの接続, Worker 終了時の解放とパッケージ化アプリに対応
+
 # v6.8.9
 
 ###### 2026/10/18
@@ -127,12 +133,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `機能` Node.js/Bun images が高度なフィルター, 色空間変換, 複数色検索, 円検出, 類似度指標と URL 読み込みに対応
 * `機能` Node.js/Bun images が SIFT/ORB 特徴抽出と照合, シーン座標と ObjectFrame の幾何情報, 実行単位の Mat/特徴ハンドル管理に対応
 * `機能` Node.js/Bun images が PNG 量子化と圧縮, 品質/メモリ指標, バイナリ結果とファイル記述子への出力に対応
-
-# v6.8.7
-
-###### 2026/10/17
-
-* `機能` Node.js のメインスレッドと Worker が H.264 MP4 画面録画, マイク/再生/ミックス AAC 音声, 録画中のスクリーンショット, Worker の未保存録画の破棄に対応 (API / TypeScript / Ace)
 
 ##### その他のリリース履歴
 

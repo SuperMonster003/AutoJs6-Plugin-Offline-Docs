@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.10
+
+###### 2026/10/18
+
+* `Función` Node.js/Bun admiten identificadores View de cada ejecución, fábricas AndroidView asíncronas, contenedores XML Compose, limpieza de Workers y aplicaciones empaquetadas
+
 # v6.8.9
 
 ###### 2026/10/18
