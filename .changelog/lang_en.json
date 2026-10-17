@@ -11,6 +11,7 @@
         "README documentation source commit differing from the packaged provenance record"
       ],
       "improvement": [
+        "Node.js and Bun OpenCC and image API reference, including asynchronous handles, pixel formats, permissions and transport limits",
         "Rhino speech API reference: recognition, wake and dictation sessions, voice activity, synthesis and speech.models management",
         "Node.js and Bun runtime API guide covering asynchronous pinyin, console controls, screen coordinates and editor declaration boundaries",
         "Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support",

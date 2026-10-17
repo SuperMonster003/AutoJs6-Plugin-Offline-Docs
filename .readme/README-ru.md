@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13846415
-contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
+totalBytes=13863938
+contentSha256=9a2eb8eb3a03a6b035326d8ebaec2ccf94b31592a0a9fec98ce1ce072c7715de
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
+sourceBaseCommit=b05ef5adfeeb14f2717eab1136bb5859aa299492
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/17
 
 * `Исправление` Несоответствие исходного коммита документации в README записи происхождения в пакете
+* `Улучшение` Справка по OpenCC и изображениям Node.js и Bun, включая асинхронные дескрипторы, форматы пикселей, разрешения и ограничения передачи
 * `Улучшение` Справочник speech для Rhino: распознавание, сеансы активации и диктовки, обнаружение речи, синтез и управление speech.models
 * `Улучшение` Руководство по API Node.js и Bun: асинхронный пиньинь, консоль, координаты и границы объявлений редактора
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин

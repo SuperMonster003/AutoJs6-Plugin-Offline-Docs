@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `Fix` README documentation source commit differing from the packaged provenance record
+* `Improvement` Node.js and Bun OpenCC and image API reference, including asynchronous handles, pixel formats, permissions and transport limits
 * `Improvement` Rhino speech API reference: recognition, wake and dictation sessions, voice activity, synthesis and speech.models management
 * `Improvement` Node.js and Bun runtime API guide covering asynchronous pinyin, console controls, screen coordinates and editor declaration boundaries
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support

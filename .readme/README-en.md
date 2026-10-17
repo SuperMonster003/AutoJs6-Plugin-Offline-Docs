@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13846415
-contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
+totalBytes=13863938
+contentSha256=9a2eb8eb3a03a6b035326d8ebaec2ccf94b31592a0a9fec98ce1ce072c7715de
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
+sourceBaseCommit=b05ef5adfeeb14f2717eab1136bb5859aa299492
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/17
 
 * `Fix` README documentation source commit differing from the packaged provenance record
+* `Improvement` Node.js and Bun OpenCC and image API reference, including asynchronous handles, pixel formats, permissions and transport limits
 * `Improvement` Rhino speech API reference: recognition, wake and dictation sessions, voice activity, synthesis and speech.models management
 * `Improvement` Node.js and Bun runtime API guide covering asynchronous pinyin, console controls, screen coordinates and editor declaration boundaries
 * `Improvement` Installer source/package-prefix profiles, explicit-option precedence and three nullable resets, sourceDeleteRequested and shared batch-source retention; requires host 5312+ and matching plugin support

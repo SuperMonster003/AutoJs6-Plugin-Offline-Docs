@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13846415
-contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
+totalBytes=13863938
+contentSha256=9a2eb8eb3a03a6b035326d8ebaec2ccf94b31592a0a9fec98ce1ce072c7715de
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
+sourceBaseCommit=b05ef5adfeeb14f2717eab1136bb5859aa299492
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ category=offline-docs
 ###### 2026/10/17
 
 * `إصلاح` عدم تطابق معرف مصدر الوثائق في README مع سجل المصدر المضمن في الحزمة
+* `تحسين` مرجع OpenCC والصور في Node.js و Bun, بما يشمل المقابض غير المتزامنة وتنسيقات البكسل والأذونات وحدود النقل
 * `تحسين` مرجع speech في Rhino: التعرف وجلسات التنبيه والإملاء واكتشاف الصوت والتوليف وإدارة speech.models
 * `تحسين` دليل واجهات Node.js وBun الذي يشمل بينيين غير المتزامن ووحدة التحكم والإحداثيات وحدود تعريفات المحرر
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق

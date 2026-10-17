@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13846415
-contentSha256=da914cb790ea798071fc91d02e643fa8f84b03b67cfeab7f978e7e23c8f550df
+totalBytes=13863938
+contentSha256=9a2eb8eb3a03a6b035326d8ebaec2ccf94b31592a0a9fec98ce1ce072c7715de
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=3b2a80f1e4c463c2ad0ba6d82f1715b8a72dcaad
+sourceBaseCommit=b05ef5adfeeb14f2717eab1136bb5859aa299492
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/17
 
 * `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
+* `개선` Node.js와 Bun의 OpenCC 및 이미지 API 문서, 비동기 핸들, 픽셀 형식, 권한과 전송 한도 포함
 * `개선` Rhino speech API 참조: 인식, 깨우기와 받아쓰기 세션, 음성 활동 감지, 합성 및 speech.models 관리
 * `개선` 비동기 병음, 콘솔 제어, 화면 좌표 및 편집기 선언 범위를 설명하는 Node.js와 Bun 런타임 API 안내
 * `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
