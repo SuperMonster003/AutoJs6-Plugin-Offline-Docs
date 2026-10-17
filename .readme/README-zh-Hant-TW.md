@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=217
-totalBytes=13721551
-contentSha256=42a5c5166efc4964277b7644b53143945d6c0c3c99fbc03dcd610b2e0530a8c7
+fileCount=218
+totalBytes=13780672
+contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
+sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 # v6.8.6
 
-###### 2026/10/15
+###### 2026/10/17
 
 * `修復` README 中的文件來源提交與實際封裝來源記錄不一致的問題
+* `優化` Node.js 和 Bun 執行階段 API 指南, 涵蓋非同步拼音, 主控台, 座標換算與編輯器宣告邊界
 * `優化` Installer 來源/套件名稱前綴設定檔, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要主程式 5312+ 及外掛對應能力
 * `優化` 選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引
 * `優化` 3-Block Compose 完整 API 參考: 節點與狀態, Modifier, 主題, 工作階段與浮動視窗, 元件屬性和事件, 執行緒規則, 無障礙與封裝應用程式

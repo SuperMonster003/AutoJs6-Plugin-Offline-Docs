@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=217
-totalBytes=13721551
-contentSha256=42a5c5166efc4964277b7644b53143945d6c0c3c99fbc03dcd610b2e0530a8c7
+fileCount=218
+totalBytes=13780672
+contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
+sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ category=offline-docs
 
 # v6.8.6
 
-###### 2026/10/15
+###### 2026/10/17
 
 * `إصلاح` عدم تطابق معرف مصدر الوثائق في README مع سجل المصدر المضمن في الحزمة
+* `تحسين` دليل واجهات Node.js وBun الذي يشمل بينيين غير المتزامن ووحدة التحكم والإحداثيات وحدود تعريفات المحرر
 * `تحسين` ملفات إعداد Installer حسب المصدر/بادئة الحزمة, أولوية الخيارات الصريحة وثلاثة حقول تقبل null لإعادة الضبط, sourceDeleteRequested وحفظ مصادر الدفعة المشتركة; يتطلب المضيف 5312+ ودعم الملحق
 * `تحسين` توثيق طرق المحدد minDepth/maxDepth/minIndexInParent/maxIndexInParent وفهرس البحث دون اتصال
 * `تحسين` مرجع API كامل لـ 3-Block Compose: العقد والحالة والمعدلات والسمات والجلسات والنوافذ العائمة, خصائص المكونات وأحداثها, قواعد سلاسل التنفيذ, إمكانية الوصول والتطبيقات المجمعة

@@ -6,9 +6,10 @@
 
 # v6.8.6
 
-###### 2026/10/15
+###### 2026/10/17
 
 * `Corrección` El commit de origen de la documentacion del README podia diferir del registro de procedencia incluido
+* `Mejora` Guia de las API de Node.js y Bun: pinyin asincrono, controles de consola, coordenadas y limites de las declaraciones del editor
 * `Mejora` Perfiles de Installer por origen/prefijo de paquete, prioridad de opciones explícitas y tres restablecimientos con null, sourceDeleteRequested y conservación de fuentes compartidas del lote; requiere anfitrión 5312+ y plugin compatible
 * `Mejora` Documentación y entradas de búsqueda sin conexión para los métodos de selector minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Mejora` Referencia completa de la API 3-Block Compose: nodos y estado, modificadores, temas, sesiones y ventanas flotantes, propiedades y eventos de componentes, hilos, accesibilidad y aplicaciones empaquetadas

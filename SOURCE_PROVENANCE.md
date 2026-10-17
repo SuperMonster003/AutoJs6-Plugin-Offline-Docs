@@ -1,7 +1,7 @@
 # Source provenance
 
 - Source repository: `SuperMonster003/AutoJs6-Documentation`
-- Source base commit: `dc2739222bc4b97a8c833af87f455a980229bcbc`
+- Source base commit: `ce2123fac26ff7fd3cfd6d4975ae987420f45472`
 - Source path: `api`
 - Source generator: `generator/auto-generate-for-autojs6.bat`
 - Documentation version: `6.8.0`

@@ -6,11 +6,12 @@
   "changelog_label_dependency": "依賴",
   "$data": {
     "v6.8.6": {
-      "released_date": "2026/10/15",
+      "released_date": "2026/10/17",
       "fix": [
         "README 中的文件來源提交與實際封裝來源記錄不一致的問題"
       ],
       "improvement": [
+        "Node.js 和 Bun 執行階段 API 指南, 涵蓋非同步拼音, 控制台, 座標換算與編輯器聲明邊界",
         "Installer 來源/套件名稱前綴配置, 明確指定的選項優先與三個可空重設欄位, sourceDeleteRequested 及批次共用來源保留, 需要宿主 5312+ 及插件對應能力",
         "選擇器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法說明與離線搜尋索引",
         "3-Block Compose 完整 API 參考: 節點與狀態, Modifier, 主題, 會話與懸浮窗, 組件屬性和事件, 執行緒規則, 無障礙與打包應用",

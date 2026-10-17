@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=217
-totalBytes=13721551
-contentSha256=42a5c5166efc4964277b7644b53143945d6c0c3c99fbc03dcd610b2e0530a8c7
+fileCount=218
+totalBytes=13780672
+contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
+sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.6
 
-###### 2026/10/15
+###### 2026/10/17
 
 * `Исправление` Несоответствие исходного коммита документации в README записи происхождения в пакете
+* `Улучшение` Руководство по API Node.js и Bun: асинхронный пиньинь, консоль, координаты и границы объявлений редактора
 * `Улучшение` Профили Installer по источнику/префиксу пакета, приоритет явных параметров и три сброса через null, sourceDeleteRequested и сохранение общих источников пакета операций; нужен хост 5312+ и совместимый плагин
 * `Улучшение` Документация и записи офлайн-поиска для методов селектора minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Улучшение` Полный справочник API 3-Block Compose: узлы и состояние, модификаторы, темы, сеансы и плавающие окна, свойства и события компонентов, потоки, доступность и упакованные приложения

@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=217
-totalBytes=13721551
-contentSha256=42a5c5166efc4964277b7644b53143945d6c0c3c99fbc03dcd610b2e0530a8c7
+fileCount=218
+totalBytes=13780672
+contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
+sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.6
 
-###### 2026/10/15
+###### 2026/10/17
 
 * `修复` README 中的文档来源提交与实际打包来源记录不一致的问题
+* `优化` Node.js 和 Bun 运行时 API 指南, 覆盖异步拼音, 控制台, 坐标换算与编辑器声明边界
 * `优化` Installer 来源/包名前缀配置, 显式选项优先与三个可空重置字段, sourceDeleteRequested 及批量共享来源保留, 需要宿主 5312+ 和插件对应能力
 * `优化` 选择器 minDepth/maxDepth/minIndexInParent/maxIndexInParent 的方法说明与离线搜索索引
 * `优化` 3-Block Compose 完整 API 参考: 节点与状态, Modifier, 主题, 会话与悬浮窗, 组件属性和事件, 线程规则, 无障碍与打包应用

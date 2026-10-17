@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=217
-totalBytes=13721551
-contentSha256=42a5c5166efc4964277b7644b53143945d6c0c3c99fbc03dcd610b2e0530a8c7
+fileCount=218
+totalBytes=13780672
+contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
+sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 # v6.8.6
 
-###### 2026/10/15
+###### 2026/10/17
 
 * `Corrección` El commit de origen de la documentacion del README podia diferir del registro de procedencia incluido
+* `Mejora` Guia de las API de Node.js y Bun: pinyin asincrono, controles de consola, coordenadas y limites de las declaraciones del editor
 * `Mejora` Perfiles de Installer por origen/prefijo de paquete, prioridad de opciones explícitas y tres restablecimientos con null, sourceDeleteRequested y conservación de fuentes compartidas del lote; requiere anfitrión 5312+ y plugin compatible
 * `Mejora` Documentación y entradas de búsqueda sin conexión para los métodos de selector minDepth/maxDepth/minIndexInParent/maxIndexInParent
 * `Mejora` Referencia completa de la API 3-Block Compose: nodos y estado, modificadores, temas, sesiones y ventanas flotantes, propiedades y eventos de componentes, hilos, accesibilidad y aplicaciones empaquetadas

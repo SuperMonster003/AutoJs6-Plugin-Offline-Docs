@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=217
-totalBytes=13721551
-contentSha256=42a5c5166efc4964277b7644b53143945d6c0c3c99fbc03dcd610b2e0530a8c7
+fileCount=218
+totalBytes=13780672
+contentSha256=f0a819e704446a72c1395b7ae6172c6f34dea5d49727515fc0035e9c03331f0a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dc2739222bc4b97a8c833af87f455a980229bcbc
+sourceBaseCommit=ce2123fac26ff7fd3cfd6d4975ae987420f45472
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 # v6.8.6
 
-###### 2026/10/15
+###### 2026/10/17
 
 * `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
+* `개선` 비동기 병음, 콘솔 제어, 화면 좌표 및 편집기 선언 범위를 설명하는 Node.js와 Bun 런타임 API 안내
 * `개선` Installer 출처/패키지 접두사별 프로필, 명시적 옵션 우선 및 세 가지 null 재설정, sourceDeleteRequested와 일괄 공유 소스 보존. 호스트 5312+ 및 호환 플러그인 필요
 * `개선` 선택자 minDepth/maxDepth/minIndexInParent/maxIndexInParent 메서드 설명 및 오프라인 검색 색인
 * `개선` 3-Block Compose 전체 API 참조: 노드와 상태, Modifier, 테마, 세션과 플로팅 창, 컴포넌트 속성과 이벤트, 스레드 규칙, 접근성 및 패키지 앱

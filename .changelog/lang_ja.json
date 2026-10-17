@@ -6,11 +6,12 @@
   "changelog_label_dependency": "依存関係",
   "$data": {
     "v6.8.6": {
-      "released_date": "2026/10/15",
+      "released_date": "2026/10/17",
       "fix": [
         "README の文書ソースコミットがパッケージ内の出典記録と一致しない問題"
       ],
       "improvement": [
+        "Node.js と Bun の実行環境 API ガイド. 非同期ピンイン, コンソール, 座標変換とエディター型宣言の範囲を説明",
         "Installer の起点/パッケージ名プレフィックス別プロファイル, 明示オプションの優先と 3 項目の null リセット, sourceDeleteRequested とバッチ共有ソースの保持. ホスト 5312+ と対応プラグインが必要",
         "セレクター minDepth/maxDepth/minIndexInParent/maxIndexInParent のメソッド説明とオフライン検索インデックス",
         "3-Block Compose の完全な API リファレンス: ノードと状態, Modifier, テーマ, セッションとフローティングウィンドウ, コンポーネントのプロパティとイベント, スレッド, アクセシビリティ, パッケージ化アプリ",
