@@ -9,6 +9,8 @@
 ###### 2026/10/17
 
 * `Fix` README documentation source commit differing from the packaged provenance record
+* `Improvement` Bun screenRecorder records silent H.264 MP4 files with a separate opt-in grant, fixed output dimensions, explicit finalization and cancellation cleanup (API documentation)
+* `Improvement` Node.js Workers support pinyin, pinyin4j, console controls and coordinate conversion, sharing the parent execution while retaining native output streams (API documentation)
 * `Improvement` Runtime API documentation for Bun screen capture consent and Node.js Worker OpenCC/image modules
 * `Improvement` Node.js and Bun OpenCC and image API reference, including asynchronous handles, pixel formats, permissions and transport limits
 * `Improvement` Rhino speech API reference: recognition, wake and dictation sessions, voice activity, synthesis and speech.models management

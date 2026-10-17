@@ -11,6 +11,8 @@
         "README の文書ソースコミットがパッケージ内の出典記録と一致しない問題"
       ],
       "improvement": [
+        "Bun screenRecorder が個別許可, 固定寸法, 明示的な終了処理とキャンセル時の削除を備えた音声なし H.264 MP4 画面録画に対応 (API documentation)",
+        "Node.js Worker が pinyin, pinyin4j, コンソール操作と座標変換に対応し, 親の実行状態を共有しながらネイティブ出力を維持 (API documentation)",
         "Bun の画面キャプチャ許可と Node.js Worker の OpenCC/画像モジュールに関するランタイム API 文書",
         "Node.js と Bun の OpenCC と画像 API の説明に非同期ハンドル, ピクセル形式, 権限と転送上限を追加",
         "Rhino speech API リファレンス: 認識, ウェイクワードと音声入力セッション, 音声区間検出, 合成と speech.models の管理",

@@ -9,6 +9,8 @@
 ###### 2026/10/17
 
 * `Correctif` Le commit source de la documentation indique dans le README pouvait differer de la provenance du contenu inclus
+* `Amélioration` Bun screenRecorder enregistre des vidéos écran H.264 MP4 sans son avec autorisation distincte, dimensions fixes, finalisation explicite et nettoyage après annulation (API documentation)
+* `Amélioration` Les Workers Node.js proposent pinyin, pinyin4j, les commandes de console et les coordonnées, avec état parent partagé et flux natifs conservés (API documentation)
 * `Amélioration` Documentation des API pour le consentement de capture Bun et les modules OpenCC/images des Workers Node.js
 * `Amélioration` Référence OpenCC et images de Node.js et Bun, avec handles asynchrones, formats de pixels, autorisations et limites de transfert
 * `Amélioration` Référence speech de Rhino: reconnaissance, sessions de réveil et dictée, détection vocale, synthèse et gestion speech.models

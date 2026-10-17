@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13872950
-contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
+totalBytes=13883437
+contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
+sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,8 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/17
 
 * `Corrección` El commit de origen de la documentacion del README podia diferir del registro de procedencia incluido
+* `Mejora` Bun screenRecorder graba vídeos de pantalla H.264 MP4 sin audio con permiso independiente, dimensiones fijas, finalización explícita y limpieza al cancelar (API documentation)
+* `Mejora` Los Workers de Node.js ofrecen pinyin, pinyin4j, controles de consola y coordenadas, compartiendo el estado padre y conservando los flujos nativos (API documentation)
 * `Mejora` Documentación de API para el consentimiento de captura de Bun y los módulos OpenCC/imágenes de Workers Node.js
 * `Mejora` Referencia de OpenCC e imágenes de Node.js y Bun, con identificadores asíncronos, formatos de píxel, permisos y límites de transferencia
 * `Mejora` Referencia speech de Rhino: reconocimiento, sesiones de activación y dictado, detección de voz, síntesis y gestión speech.models

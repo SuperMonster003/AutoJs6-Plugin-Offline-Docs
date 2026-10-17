@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13872950
-contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
+totalBytes=13883437
+contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
+sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,8 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/17
 
 * `Исправление` Несоответствие исходного коммита документации в README записи происхождения в пакете
+* `Улучшение` Bun screenRecorder записывает экран в H.264 MP4 без звука с отдельным разрешением, фиксированным размером, явным завершением и очисткой при отмене (API documentation)
+* `Улучшение` Worker Node.js поддерживают pinyin, pinyin4j, управление консолью и координаты с общим состоянием выполнения и собственными потоками вывода (API documentation)
 * `Улучшение` Документация API согласия на захват экрана Bun и модулей OpenCC/изображений Worker Node.js
 * `Улучшение` Справка по OpenCC и изображениям Node.js и Bun, включая асинхронные дескрипторы, форматы пикселей, разрешения и ограничения передачи
 * `Улучшение` Справочник speech для Rhino: распознавание, сеансы активации и диктовки, обнаружение речи, синтез и управление speech.models

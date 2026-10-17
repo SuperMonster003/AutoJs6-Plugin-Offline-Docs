@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13872950
-contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
+totalBytes=13883437
+contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
+sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,8 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/17
 
 * `修正` README の文書ソースコミットがパッケージ内の出典記録と一致しない問題
+* `改善` Bun screenRecorder が個別許可, 固定寸法, 明示的な終了処理とキャンセル時の削除を備えた音声なし H.264 MP4 画面録画に対応 (API documentation)
+* `改善` Node.js Worker が pinyin, pinyin4j, コンソール操作と座標変換に対応し, 親の実行状態を共有しながらネイティブ出力を維持 (API documentation)
 * `改善` Bun の画面キャプチャ許可と Node.js Worker の OpenCC/画像モジュールに関するランタイム API 文書
 * `改善` Node.js と Bun の OpenCC と画像 API の説明に非同期ハンドル, ピクセル形式, 権限と転送上限を追加
 * `改善` Rhino speech API リファレンス: 認識, ウェイクワードと音声入力セッション, 音声区間検出, 合成と speech.models の管理

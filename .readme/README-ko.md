@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13872950
-contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
+totalBytes=13883437
+contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
+sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,8 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/17
 
 * `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
+* `개선` Bun screenRecorder에서 별도 허용, 고정 출력 크기, 명시적 마무리 및 취소 정리를 갖춘 무음 H.264 MP4 화면 녹화 지원 (API documentation)
+* `개선` Node.js Worker에서 pinyin, pinyin4j, 콘솔 창 및 좌표 변환 지원, 부모 실행 상태 공유와 네이티브 출력 스트림 유지 (API documentation)
 * `개선` Bun 화면 캡처 승인 및 Node.js Worker OpenCC/이미지 모듈에 대한 런타임 API 문서
 * `개선` Node.js와 Bun의 OpenCC 및 이미지 API 문서, 비동기 핸들, 픽셀 형식, 권한과 전송 한도 포함
 * `개선` Rhino speech API 참조: 인식, 깨우기와 받아쓰기 세션, 음성 활동 감지, 합성 및 speech.models 관리

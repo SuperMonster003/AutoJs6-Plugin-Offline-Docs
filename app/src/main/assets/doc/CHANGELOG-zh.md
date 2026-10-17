@@ -9,6 +9,8 @@
 ###### 2026/10/17
 
 * `修复` README 中的文档来源提交与实际打包来源记录不一致的问题
+* `优化` Bun screenRecorder 支持无声 H.264 MP4 录屏文件, 独立授权, 固定输出尺寸, 显式收尾及取消清理 (API documentation)
+* `优化` Node.js Worker 支持 pinyin, pinyin4j, 控制台窗口和坐标换算, 共享父执行状态并保留原生输出流 (API documentation)
 * `优化` 运行时 API 文档, 包含 Bun 截图授权及 Node.js Worker 的 OpenCC/图像模块
 * `优化` Node.js 和 Bun 的 OpenCC 与图像 API 文档, 包含异步句柄, 像素格式, 权限和传输上限
 * `优化` Rhino speech API 参考: 识别, 唤醒与听写会话, 语音活动检测, 合成及 speech.models 模型管理

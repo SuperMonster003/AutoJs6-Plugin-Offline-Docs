@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13872950
-contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
+totalBytes=13883437
+contentSha256=e087bce5da38e8150b6345d81faa1e32893fdd6cf22b4060a4e5c8df7c1d7bae
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
+sourceBaseCommit=51d19eb2335fb0276ebd4d486dbc790261528dd2
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,8 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 ###### 2026/10/17
 
 * `修復` README 中的文件來源提交與實際封裝來源記錄不一致的問題
+* `優化` Bun screenRecorder 支援無聲 H.264 MP4 螢幕錄製檔案, 獨立授權, 固定輸出尺寸, 明確完成及取消清理 (API documentation)
+* `優化` Node.js Worker 支援 pinyin, pinyin4j, 控制台視窗和座標換算, 共用父執行狀態並保留原生輸出串流 (API documentation)
 * `優化` 運行時 API 文件, 包含 Bun 螢幕擷取授權及 Node.js Worker 的 OpenCC/圖像模組
 * `優化` Node.js 和 Bun 的 OpenCC 與圖像 API 文件, 包含非同步句柄, 像素格式, 權限和傳輸上限
 * `優化` Rhino speech API 參考: 識別, 喚醒與聽寫會話, 語音活動檢測, 合成及 speech.models 模型管理
