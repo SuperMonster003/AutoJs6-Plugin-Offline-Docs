@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13889970
-contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
+totalBytes=13898912
+contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `新增` Node.js 主线程与 Worker 支持 H.264 MP4 录屏, 麦克风/播放/混合 AAC 音频, 录制期间并行截图及 Worker 未保存录屏清理 (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17
@@ -158,12 +164,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `优化` installer P8: Dhizuku 授权, notification 安装, preferred/persistent 默认模式及插件能力限制
 * `优化` 明确安装器持久默认边界: Dhizuku API 26-33, Root/system 身份与 user 0, 自动授权筛选, 本地配置回执和未确认写入
 * `优化` Installer 高级安装选项, 所有权与 DexOpt 观察结果, optimizing 阶段, V3 能力协商及本地签名/黑名单边界
-
-# v6.8.4
-
-###### 2026/09/26
-
-* `优化` 同步 AI Agent 1.1.0 开发版本的 script_dynamic 工具组, 每份源码单独确认, 私有源码记录及通过系统文件选择器保存登记脚本的流程
 
 ##### 更多发行历史可参阅
 

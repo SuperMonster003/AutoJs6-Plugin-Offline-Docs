@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13889970
-contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
+totalBytes=13898912
+contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `ميزة` يدعم خيط Node.js الرئيسي وWorkers تسجيل H.264 MP4 مع صوت AAC من الميكروفون او التشغيل او المزج, ولقطات متزامنة وتنظيف تسجيلات Worker غير المحفوظة (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17
@@ -158,12 +164,6 @@ category=offline-docs
 * `تحسين` installer P8: تفويض Dhizuku وتثبيت notification وأوضاع preferred/persistent الافتراضية وحدود إمكانات الملحق
 * `تحسين` توضيح الإعدادات الدائمة للمثبت: Dhizuku API 26-33, وهوية Root/system للمستخدم user 0, واختيار التفويض التلقائي, وسجلات الإعداد المحلية والكتابات غير المؤكدة
 * `تحسين` خيارات Installer المتقدمة ونتائج رصد الملكية و DexOpt ومرحلة optimizing والتفاوض على V3 وحدود سياسات التوقيع والحظر المحلية
-
-# v6.8.4
-
-###### 2026/09/26
-
-* `تحسين` توثيق مجموعة script_dynamic في إصدار التطوير AI Agent 1.1.0, وتأكيد كل مصدر على حدة, وسجل المصدر الخاص وحفظ البرامج المسجلة عبر منتقي ملفات النظام
 
 ##### لمزيد من سجل الإصدارات
 

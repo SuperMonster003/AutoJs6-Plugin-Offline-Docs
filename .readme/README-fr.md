@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13889970
-contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
+totalBytes=13898912
+contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `Fonctionnalité` Le thread principal Node.js et les Workers prennent en charge la capture H.264 MP4 avec audio AAC du microphone, de lecture ou mixte, les captures simultanees et la suppression des enregistrements Worker non sauvegardes (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17
@@ -158,12 +164,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` installer P8: autorisation Dhizuku, installation notification, modes par défaut preferred/persistent et limites des capacités du plugin
 * `Amélioration` Préciser les valeurs persistantes de l'installateur: Dhizuku API 26-33, identité Root/system pour user 0, sélection automatique des autorisations, reçus locaux et écritures non confirmées
 * `Amélioration` Options avancées Installer, observations de propriété et DexOpt, étape optimizing, négociation V3 et limites des règles locales de signature/blocage
-
-# v6.8.4
-
-###### 2026/09/26
-
-* `Amélioration` Documente le groupe script_dynamic de la version de développement AI Agent 1.1.0, la confirmation de chaque source, son historique privé et la sauvegarde des scripts enregistrés via le sélecteur de fichiers système
 
 ##### Pour plus d'historique des versions
 

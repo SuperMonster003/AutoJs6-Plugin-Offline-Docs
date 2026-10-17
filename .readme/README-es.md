@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13889970
-contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
+totalBytes=13898912
+contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `Función` El hilo principal de Node.js y los Workers admiten grabacion H.264 MP4 con audio AAC de microfono, reproduccion o mixto, capturas simultaneas y limpieza de grabaciones Worker sin guardar (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17
@@ -158,12 +164,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Mejora` installer P8: autorización Dhizuku, instalación notification, modos predeterminados preferred/persistent y límites de capacidades del plugin
 * `Mejora` Aclarar los valores persistentes del instalador: Dhizuku API 26-33, identidad Root/system en user 0, autorizaciones automáticas admitidas, registros locales y escrituras sin confirmar
 * `Mejora` Opciones avanzadas de Installer, observaciones de propiedad y DexOpt, fase optimizing, negociación V3 y límites de las reglas locales de firma/bloqueo
-
-# v6.8.4
-
-###### 2026/09/26
-
-* `Mejora` Documenta el grupo script_dynamic de AI Agent 1.1.0 en desarrollo, la confirmación individual del código, su historial privado y el guardado de scripts registrados mediante el selector de archivos del sistema
 
 ##### Para ver más historial de versiones
 

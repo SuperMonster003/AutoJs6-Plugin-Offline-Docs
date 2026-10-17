@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13889970
-contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
+totalBytes=13898912
+contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `Feature` Node.js main thread and Workers support H.264 MP4 recording with microphone, playback or mixed AAC audio, concurrent screenshots and cleanup of unsaved Worker recordings (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17
@@ -158,12 +164,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` installer P8: Dhizuku authorization, notification installation, preferred/persistent default modes and plugin capability limits
 * `Improvement` Clarify persistent installer defaults: Dhizuku API 26-33, Root/system identity in user 0, eligible automatic authorizers, local configuration receipts and unconfirmed writes
 * `Improvement` Installer advanced options, ownership and DexOpt observations, optimizing stage, V3 negotiation and local signature/blacklist policy boundaries
-
-# v6.8.4
-
-###### 2026/09/26
-
-* `Improvement` Document the AI Agent 1.1.0 development script_dynamic group, individual source confirmation, private source history and saving registered scripts through the system file picker
 
 ##### For more release history
 

@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `Feature` Node.js main thread and Workers support H.264 MP4 recording with microphone, playback or mixed AAC audio, concurrent screenshots and cleanup of unsaved Worker recordings (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17

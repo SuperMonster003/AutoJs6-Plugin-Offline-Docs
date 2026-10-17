@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13889970
-contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
+totalBytes=13898912
+contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `Функция` Основной поток Node.js и Workers поддерживают запись H.264 MP4 со звуком AAC микрофона, воспроизведения или их смеси, параллельные снимки экрана и удаление несохраненных записей Worker (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17
@@ -158,12 +164,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 * `Улучшение` installer P8: авторизация Dhizuku, установка notification, режимы по умолчанию preferred/persistent и ограничения возможностей плагина
 * `Улучшение` Уточнены постоянные настройки установщика: Dhizuku API 26-33, Root/system для user 0, автоматический выбор доступных разрешений, локальные записи и неподтвержденные изменения
 * `Улучшение` Расширенные параметры Installer, наблюдения владения и DexOpt, этап optimizing, согласование V3 и ограничения локальных правил подписи/блокировки
-
-# v6.8.4
-
-###### 2026/09/26
-
-* `Улучшение` Документация группы script_dynamic в разрабатываемой AI Agent 1.1.0, отдельного подтверждения кода, закрытой истории и сохранения зарегистрированных скриптов через системный выбор файлов
 
 ##### Больше истории выпусков
 

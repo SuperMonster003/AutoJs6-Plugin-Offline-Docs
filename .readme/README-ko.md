@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13889970
-contentSha256=2087fb369f7eef204ae6618684f74cdf81ed8b501a726dcd63f49595967452e7
+totalBytes=13898912
+contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.7
+
+###### 2026/10/17
+
+* `기능` Node.js 메인 스레드와 Worker에서 H.264 MP4 화면 녹화, 마이크/재생/혼합 AAC 오디오, 녹화 중 동시 스크린샷 및 Worker의 미저장 녹화 정리 지원 (API / TypeScript / Ace)
+
 # v6.8.6
 
 ###### 2026/10/17
@@ -158,12 +164,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` installer P8: Dhizuku 승인, notification 설치, preferred/persistent 기본 모드 및 플러그인 기능 제한
 * `개선` 설치 관리자의 영구 기본값 조건 명확화: Dhizuku API 26-33, user 0의 Root/system 권한, 자동 권한 선택, 로컬 설정 기록 및 확인되지 않은 쓰기
 * `개선` Installer 고급 옵션, 소유권과 DexOpt 관찰 결과, optimizing 단계, V3 지원 확인 및 로컬 서명/차단 목록 조건
-
-# v6.8.4
-
-###### 2026/09/26
-
-* `개선` AI Agent 1.1.0 개발 버전의 script_dynamic 그룹, 소스별 확인, 비공개 소스 기록 및 시스템 파일 선택기를 통한 등록 스크립트 저장 절차 문서화
 
 ##### 더 많은 릴리스 기록
 
