@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13898912
-contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
+totalBytes=13916002
+contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
+sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,14 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.8
+
+###### 2026/10/17
+
+* `Fonctionnalité` Node.js/Bun images prend en charge les filtres avancés, la conversion des couleurs, les recherches multicolores, les cercles, les mesures de similarité et les URL
+* `Fonctionnalité` Node.js/Bun images prend en charge SIFT/ORB avec coordonnées de scène, géométrie ObjectFrame et handles Mat/caractéristiques propres à chaque exécution
+* `Fonctionnalité` Node.js/Bun images prend en charge la quantification PNG et la compression avec mesures de qualité/mémoire, résultats binaires et sortie par descripteur de fichier
+
 # v6.8.7
 
 ###### 2026/10/17
@@ -153,17 +161,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Amélioration` Référence du module Gallery: l'objet gallery fourni par le plugin 3-Maple Image (sélecteur, sessions de visionneuse, édition et conversion sans interface), la limite des fichiers lus et écrits par AutoJs6, l'accès aux photos, les codes d'erreur et le type GalleryViewSession
 * `Amélioration` Référence de files.batchRename: renommage par lots fourni par le plugin Batch Rename, avec aperçu du plan et exclusion par élément, application, annulation et historique des lots, options et variables de remplacement, politiques de conflit, objets de résultat et codes d'erreur
 * `Amélioration` Référence plugins.tools: les outils que les plugins AutoJs6 décrivent eux-mêmes, avec la liste des outils et des fournisseurs, les appels synchrones et asynchrones, les arguments image / fichier et les fichiers de sortie, les objets de résultat et les erreurs
-
-# v6.8.5
-
-###### 2026/10/02
-
-* `Amélioration` Documentation AI Agent 1.2.0: Outils MCP de serveurs locaux ou externes choisis, avec un niveau de risque par serveur et le groupe mcp désactivé par défaut
-* `Amélioration` Synchronisation de la connexion à la demande de 3-Stove Agent: centre de plugins comme unique interrupteur, activation initiale automatique et désactivation respectée, attente synchrone sur un thread de travail, requêtes asynchrones, status en lecture seule et aucune reprise de tâches
-* `Amélioration` API de script installer / $installer, installation synchrone et asynchrone, événements de session, inspection des sources, désinstallation et autorisations, avec interaction par défaut et annulation
-* `Amélioration` installer P8: autorisation Dhizuku, installation notification, modes par défaut preferred/persistent et limites des capacités du plugin
-* `Amélioration` Préciser les valeurs persistantes de l'installateur: Dhizuku API 26-33, identité Root/system pour user 0, sélection automatique des autorisations, reçus locaux et écritures non confirmées
-* `Amélioration` Options avancées Installer, observations de propriété et DexOpt, étape optimizing, négociation V3 et limites des règles locales de signature/blocage
 
 ##### Pour plus d'historique des versions
 

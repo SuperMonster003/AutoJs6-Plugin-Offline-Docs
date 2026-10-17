@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13898912
-contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
+totalBytes=13916002
+contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
+sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,14 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.8
+
+###### 2026/10/17
+
+* `Feature` Node.js/Bun images supports advanced filters, color conversion, multi-color searches, circles, similarity metrics and URL loading
+* `Feature` Node.js/Bun images supports SIFT/ORB extraction and matching with scene coordinates, ObjectFrame geometry and execution-owned Mat/feature handles
+* `Feature` Node.js/Bun images supports PNG quantization and compression with quality/memory metrics, binary results and descriptor-backed file output
+
 # v6.8.7
 
 ###### 2026/10/17
@@ -153,17 +161,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Improvement` Gallery module reference: the gallery object provided by the 3-Maple Image plugin, covering the picker, viewer sessions, editing and headless conversion, the host-owned file boundary, photo access and error codes, plus the GalleryViewSession type
 * `Improvement` files.batchRename reference: batch renaming provided by the Batch Rename plugin, covering plan preview and per-item exclusion, applying, undo and batch history, options and replacement variables, conflict policies, result objects and error codes
 * `Improvement` plugins.tools reference: the tools AutoJs6 plugins describe themselves, including listing tools and providers, synchronous and asynchronous calls, image / file arguments and output files, result objects and errors
-
-# v6.8.5
-
-###### 2026/10/02
-
-* `Improvement` AI Agent documentation 1.2.0: MCP tools from selected local or external servers, with per-server risk settings and the mcp group disabled by default
-* `Improvement` Synchronize 3-Stove Agent on-demand connection documentation: Plugin Center as the sole enable switch, automatic first-install enablement with explicit disable choices preserved, worker-thread waits for initial synchronous connections, asynchronous queries, read-only status and no task replay
-* `Improvement` installer / $installer script API, synchronous and asynchronous installation, session events, source inspection, uninstall and authorizers, including default interaction and cancellation behavior
-* `Improvement` installer P8: Dhizuku authorization, notification installation, preferred/persistent default modes and plugin capability limits
-* `Improvement` Clarify persistent installer defaults: Dhizuku API 26-33, Root/system identity in user 0, eligible automatic authorizers, local configuration receipts and unconfirmed writes
-* `Improvement` Installer advanced options, ownership and DexOpt observations, optimizing stage, V3 negotiation and local signature/blacklist policy boundaries
 
 ##### For more release history
 

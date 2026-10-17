@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13898912
-contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
+totalBytes=13916002
+contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
+sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,14 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.8
+
+###### 2026/10/17
+
+* `기능` Node.js/Bun images에서 고급 필터, 색 공간 변환, 다중 색상 검색, 원 검출, 유사도 지표 및 URL 로드 지원
+* `기능` Node.js/Bun images에서 SIFT/ORB 특징 추출과 매칭, 장면 좌표와 ObjectFrame 기하 정보 및 실행별 Mat/특징 핸들 관리 지원
+* `기능` Node.js/Bun images에서 PNG 양자화와 압축, 품질/메모리 지표, 바이너리 결과 및 파일 디스크립터 출력 지원
+
 # v6.8.7
 
 ###### 2026/10/17
@@ -153,17 +161,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `개선` 갤러리 (Gallery) 모듈 참조: 3-Maple Image 플러그인이 제공하는 gallery 객체 (이미지 선택, 뷰어 세션, 편집, UI 없는 변환), AutoJs6 가 파일을 읽고 쓰는 경계, 사진 접근 권한, 오류 코드 및 GalleryViewSession 형식
 * `개선` files.batchRename 참조: Batch Rename 플러그인이 제공하는 일괄 이름 바꾸기. 계획 미리 보기와 항목별 제외, 실행, 실행 취소와 배치 기록, 옵션과 치환 변수, 충돌 정책, 결과 객체와 오류 코드
 * `개선` plugins.tools 참조: AutoJs6 플러그인이 스스로 설명하는 도구. 도구와 제공자 목록, 동기 및 비동기 호출, 이미지 / 파일 인수와 출력 파일, 결과 객체와 오류 포함
-
-# v6.8.5
-
-###### 2026/10/02
-
-* `개선` AI Agent 문서 1.2.0: 선택한 로컬 또는 외부 MCP 서버 도구와 서버별 위험 설정, 기본적으로 꺼진 mcp 그룹
-* `개선` 3-Stove Agent 필요 시 연결 문서 동기화: 플러그인 센터의 통합 활성화, 최초 설치 자동 활성화와 비활성화 선택 유지, 최초 동기 연결을 기다리는 작업 스레드, 비동기 조회, 읽기 전용 status와 작업 재실행 금지
-* `개선` installer / $installer 스크립트 API, 동기 및 비동기 설치, 세션 이벤트, 소스 검사, 제거 및 권한 방식, 기본 상호작용과 취소 동작
-* `개선` installer P8: Dhizuku 승인, notification 설치, preferred/persistent 기본 모드 및 플러그인 기능 제한
-* `개선` 설치 관리자의 영구 기본값 조건 명확화: Dhizuku API 26-33, user 0의 Root/system 권한, 자동 권한 선택, 로컬 설정 기록 및 확인되지 않은 쓰기
-* `개선` Installer 고급 옵션, 소유권과 DexOpt 관찰 결과, optimizing 단계, V3 지원 확인 및 로컬 서명/차단 목록 조건
 
 ##### 더 많은 릴리스 기록
 

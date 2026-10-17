@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13898912
-contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
+totalBytes=13916002
+contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
+sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,14 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.8
+
+###### 2026/10/17
+
+* `新增` Node.js/Bun images 支援進階濾鏡, 色彩空間轉換, 多點找色, 圓形偵測, 相似度指標及 URL 載入
+* `新增` Node.js/Bun images 支援 SIFT/ORB 特徵擷取與比對, 返回場景座標和 ObjectFrame 幾何資訊, 並管理執行內的 Mat/特徵控制代碼
+* `新增` Node.js/Bun images 支援 PNG 量化和壓縮, 提供品質/記憶體度量, 二進位結果及檔案描述元輸出
+
 # v6.8.7
 
 ###### 2026/10/17
@@ -153,17 +161,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 * `優化` 相簿 (Gallery) 模組參考: 3-Maple Image 插件提供的 gallery 物件, 包括選圖, 檢視器會話, 編輯與無介面轉換, 檔案由 AutoJs6 讀寫的邊界, 相片存取權限與錯誤代碼, 以及 GalleryViewSession 類型
 * `優化` files.batchRename 參考: Batch Rename 插件提供的批量重新命名, 包括方案預覽與逐項排除, 執行, 復原與歷史批次, 選項與替換變數, 衝突策略, 結果物件及錯誤代碼
 * `優化` plugins.tools 參考: AutoJs6 插件自我描述的工具, 包括列出工具與提供者, 同步與異步調用, 圖片 / 文件參數與輸出文件, 結果物件及錯誤
-
-# v6.8.5
-
-###### 2026/10/02
-
-* `優化` AI Agent 文件 1.2.0: 本機或外部 MCP 伺服器的所選工具, 按伺服器設定風險等級, mcp 工具組預設關閉
-* `優化` 同步 3-Stove Agent 按需連線文件: 外掛中心統一啟用, 官方首次安裝自動啟用並尊重停用, 同步呼叫首次連線的工作執行緒要求, 非同步查詢, status 唯讀與任務不重播
-* `優化` installer / $installer 指令碼介面, 同步與非同步安裝, 工作階段事件, 來源檢查, 解除安裝與授權方式, 包含預設互動和取消語義
-* `優化` installer P8: Dhizuku 授權, notification 安裝, preferred/persistent 預設模式及插件能力限制
-* `優化` 明確安裝器持久預設界限: Dhizuku API 26-33, Root/system 身分與 user 0, 自動授權篩選, 本機配置回執和未確認寫入
-* `優化` Installer 進階安裝選項, 擁有權與 DexOpt 觀察結果, optimizing 階段, V3 能力協商及本機簽章/黑名單界限
 
 ##### 更多發行歷史可參閱
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13898912
-contentSha256=be57eaec05204b219d53b14e3d321be242179a503106b95386b48ae72f01069a
+totalBytes=13916002
+contentSha256=359a9fd29824cc4af0cedd2facaa87ca059d8da879907d504522d9ef4717d638
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5b4a4543b7adf66cb0f5944162a4d179aa26c28e
+sourceBaseCommit=bd95e545c7fa02dfabbc2ba8d13a3917d2d32a85
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,14 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.8
+
+###### 2026/10/17
+
+* `機能` Node.js/Bun images が高度なフィルター, 色空間変換, 複数色検索, 円検出, 類似度指標と URL 読み込みに対応
+* `機能` Node.js/Bun images が SIFT/ORB 特徴抽出と照合, シーン座標と ObjectFrame の幾何情報, 実行単位の Mat/特徴ハンドル管理に対応
+* `機能` Node.js/Bun images が PNG 量子化と圧縮, 品質/メモリ指標, バイナリ結果とファイル記述子への出力に対応
+
 # v6.8.7
 
 ###### 2026/10/17
@@ -153,17 +161,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 * `改善` ギャラリー (Gallery) モジュールのリファレンス: 3-Maple Image プラグインが提供する gallery オブジェクト (画像選択, ビューアセッション, 編集, UI なしの変換), AutoJs6 がファイルを読み書きする境界, 写真へのアクセス権限, エラーコード, GalleryViewSession 型
 * `改善` files.batchRename リファレンス: Batch Rename プラグインが提供する一括リネーム. プランのプレビューと項目ごとの除外, 実行, 元に戻す操作とバッチ履歴, オプションと置換変数, 競合ポリシー, 結果オブジェクトとエラーコード
 * `改善` plugins.tools リファレンス: AutoJs6 プラグインが自ら記述するツール. ツールとプロバイダーの一覧, 同期と非同期の呼び出し, 画像 / ファイル引数と出力ファイル, 結果オブジェクトとエラーを含む
-
-# v6.8.5
-
-###### 2026/10/02
-
-* `改善` AI Agent ドキュメント 1.2.0: 選択したローカルまたは外部 MCP サーバーのツールに対応し, サーバーごとにリスクを設定. mcp グループは初期状態で無効
-* `改善` 3-Stove Agent の必要時接続の文書を同期: プラグインセンターでの一元的な有効化, 初回インストール時の自動有効化と無効設定の維持, 初回同期接続を待つ作業スレッド, 非同期クエリ, 読み取り専用 status とタスクを再実行しない動作
-* `改善` installer / $installer スクリプト API, 同期および非同期インストール, セッションイベント, ソース検査, アンインストールと認可方式, デフォルトの操作とキャンセルの動作
-* `改善` installer P8: Dhizuku 認可, notification インストール, preferred/persistent の既定モードとプラグイン機能の制限
-* `改善` インストーラーの永続デフォルト条件を明確化: Dhizuku API 26-33, user 0 の Root/system 権限, 自動認証の対象, ローカル設定記録と未確認の書き込み
-* `改善` Installer の高度なオプション, 所有権と DexOpt の観測結果, optimizing 段階, V3 対応確認とローカル署名/ブロックリストの条件
 
 ##### その他のリリース履歴
 
