@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13863938
-contentSha256=9a2eb8eb3a03a6b035326d8ebaec2ccf94b31592a0a9fec98ce1ce072c7715de
+totalBytes=13872950
+contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b05ef5adfeeb14f2717eab1136bb5859aa299492
+sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/17
 
 * `修复` README 中的文档来源提交与实际打包来源记录不一致的问题
+* `优化` 运行时 API 文档, 包含 Bun 截图授权及 Node.js Worker 的 OpenCC/图像模块
 * `优化` Node.js 和 Bun 的 OpenCC 与图像 API 文档, 包含异步句柄, 像素格式, 权限和传输上限
 * `优化` Rhino speech API 参考: 识别, 唤醒与听写会话, 语音活动检测, 合成及 speech.models 模型管理
 * `优化` Node.js 和 Bun 运行时 API 指南, 覆盖异步拼音, 控制台, 坐标换算与编辑器声明边界

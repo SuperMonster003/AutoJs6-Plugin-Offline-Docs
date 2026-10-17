@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
+* `개선` Bun 화면 캡처 승인 및 Node.js Worker OpenCC/이미지 모듈에 대한 런타임 API 문서
 * `개선` Node.js와 Bun의 OpenCC 및 이미지 API 문서, 비동기 핸들, 픽셀 형식, 권한과 전송 한도 포함
 * `개선` Rhino speech API 참조: 인식, 깨우기와 받아쓰기 세션, 음성 활동 감지, 합성 및 speech.models 관리
 * `개선` 비동기 병음, 콘솔 제어, 화면 좌표 및 편집기 선언 범위를 설명하는 Node.js와 Bun 런타임 API 안내

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13863938
-contentSha256=9a2eb8eb3a03a6b035326d8ebaec2ccf94b31592a0a9fec98ce1ce072c7715de
+totalBytes=13872950
+contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b05ef5adfeeb14f2717eab1136bb5859aa299492
+sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/17
 
 * `Исправление` Несоответствие исходного коммита документации в README записи происхождения в пакете
+* `Улучшение` Документация API согласия на захват экрана Bun и модулей OpenCC/изображений Worker Node.js
 * `Улучшение` Справка по OpenCC и изображениям Node.js и Bun, включая асинхронные дескрипторы, форматы пикселей, разрешения и ограничения передачи
 * `Улучшение` Справочник speech для Rhino: распознавание, сеансы активации и диктовки, обнаружение речи, синтез и управление speech.models
 * `Улучшение` Руководство по API Node.js и Bun: асинхронный пиньинь, консоль, координаты и границы объявлений редактора

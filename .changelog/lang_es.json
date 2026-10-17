@@ -11,6 +11,7 @@
         "El commit de origen de la documentacion del README podia diferir del registro de procedencia incluido"
       ],
       "improvement": [
+        "Documentación de API para el consentimiento de captura de Bun y los módulos OpenCC/imágenes de Workers Node.js",
         "Referencia de OpenCC e imágenes de Node.js y Bun, con identificadores asíncronos, formatos de píxel, permisos y límites de transferencia",
         "Referencia speech de Rhino: reconocimiento, sesiones de activación y dictado, detección de voz, síntesis y gestión speech.models",
         "Guia de las API de Node.js y Bun: pinyin asincrono, controles de consola, coordenadas y limites de las declaraciones del editor",

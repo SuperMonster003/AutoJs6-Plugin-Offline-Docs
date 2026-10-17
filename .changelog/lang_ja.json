@@ -11,6 +11,7 @@
         "README の文書ソースコミットがパッケージ内の出典記録と一致しない問題"
       ],
       "improvement": [
+        "Bun の画面キャプチャ許可と Node.js Worker の OpenCC/画像モジュールに関するランタイム API 文書",
         "Node.js と Bun の OpenCC と画像 API の説明に非同期ハンドル, ピクセル形式, 権限と転送上限を追加",
         "Rhino speech API リファレンス: 認識, ウェイクワードと音声入力セッション, 音声区間検出, 合成と speech.models の管理",
         "Node.js と Bun の実行環境 API ガイド. 非同期ピンイン, コンソール, 座標変換とエディター型宣言の範囲を説明",

@@ -11,6 +11,7 @@
         "README documentation source commit differing from the packaged provenance record"
       ],
       "improvement": [
+        "Runtime API documentation for Bun screen capture consent and Node.js Worker OpenCC/image modules",
         "Node.js and Bun OpenCC and image API reference, including asynchronous handles, pixel formats, permissions and transport limits",
         "Rhino speech API reference: recognition, wake and dictation sessions, voice activity, synthesis and speech.models management",
         "Node.js and Bun runtime API guide covering asynchronous pinyin, console controls, screen coordinates and editor declaration boundaries",

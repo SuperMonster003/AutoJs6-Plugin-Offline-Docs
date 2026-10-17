@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `Corrección` El commit de origen de la documentacion del README podia diferir del registro de procedencia incluido
+* `Mejora` Documentación de API para el consentimiento de captura de Bun y los módulos OpenCC/imágenes de Workers Node.js
 * `Mejora` Referencia de OpenCC e imágenes de Node.js y Bun, con identificadores asíncronos, formatos de píxel, permisos y límites de transferencia
 * `Mejora` Referencia speech de Rhino: reconocimiento, sesiones de activación y dictado, detección de voz, síntesis y gestión speech.models
 * `Mejora` Guia de las API de Node.js y Bun: pinyin asincrono, controles de consola, coordenadas y limites de las declaraciones del editor

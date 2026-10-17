@@ -9,6 +9,7 @@
 ###### 2026/10/17
 
 * `修復` README 中的文件來源提交與實際封裝來源記錄不一致的問題
+* `優化` 執行環境 API 文件, 包含 Bun 螢幕擷取授權及 Node.js Worker 的 OpenCC/影像模組
 * `優化` Node.js 和 Bun 的 OpenCC 與影像 API 文件, 包含非同步控制代碼, 像素格式, 權限和傳輸上限
 * `優化` Rhino speech API 參考: 辨識, 喚醒與聽寫工作階段, 語音活動偵測, 合成及 speech.models 模型管理
 * `優化` Node.js 和 Bun 執行階段 API 指南, 涵蓋非同步拼音, 主控台, 座標換算與編輯器宣告邊界

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13863938
-contentSha256=9a2eb8eb3a03a6b035326d8ebaec2ccf94b31592a0a9fec98ce1ce072c7715de
+totalBytes=13872950
+contentSha256=36e84e4afcc33b89ca6148d4dbefd511982fee59dde3bf33c9694806ed08f873
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b05ef5adfeeb14f2717eab1136bb5859aa299492
+sourceBaseCommit=98dd3b1208aec9901b05208fa8b9763956c4d5ba
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/17
 
 * `수정` README 문서 소스 커밋이 패키지의 출처 기록과 일치하지 않는 문제
+* `개선` Bun 화면 캡처 승인 및 Node.js Worker OpenCC/이미지 모듈에 대한 런타임 API 문서
 * `개선` Node.js와 Bun의 OpenCC 및 이미지 API 문서, 비동기 핸들, 픽셀 형식, 권한과 전송 한도 포함
 * `개선` Rhino speech API 참조: 인식, 깨우기와 받아쓰기 세션, 음성 활동 감지, 합성 및 speech.models 관리
 * `개선` 비동기 병음, 콘솔 제어, 화면 좌표 및 편집기 선언 범위를 설명하는 Node.js와 Bun 런타임 API 안내
