@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13939149
-contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
+totalBytes=13954079
+contentSha256=c8a6064d59eef771238acce00f2f0cdd01a0ebd5d556feaa6042327ef3d1790f
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
+sourceBaseCommit=dd41cbad1c8087d4fa61facbf861d5e4ddc5248f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.11
+
+###### 2026/10/18
+
+* `ميزة` يدعم Node.js/Bun نماذج وتخطيطات XML الشائعة وخصائص View غير المتزامنة مع الإسناد المرتب والتعافي من الأخطاء و Worker
+
 # v6.8.10
 
 ###### 2026/10/18
@@ -125,14 +131,6 @@ category=offline-docs
 ###### 2026/10/18
 
 * `ميزة` يدعم Node.js/Bun UI و Compose التخطيطات الأصلية ومكونات البيانات والحالة التفاعلية وأحداث النوافذ مع أذونات مستقلة وإغلاق تلقائي للنوافذ
-
-# v6.8.8
-
-###### 2026/10/17
-
-* `ميزة` يدعم Node.js/Bun images المرشحات المتقدمة وتحويل الألوان والبحث متعدد الألوان والدوائر ومقاييس التشابه وتحميل URL
-* `ميزة` يدعم Node.js/Bun images استخراج ومطابقة SIFT/ORB مع إحداثيات المشهد وهندسة ObjectFrame ومقابض Mat/الميزات الخاصة بكل تنفيذ
-* `ميزة` يدعم Node.js/Bun images تكميم PNG والضغط مع مقاييس الجودة/الذاكرة والنتائج الثنائية والإخراج عبر واصف ملف
 
 ##### لمزيد من سجل الإصدارات
 

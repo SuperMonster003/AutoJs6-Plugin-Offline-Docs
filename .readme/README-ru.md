@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13939149
-contentSha256=bcd15c347d9391314fa7006681718b6ec15826dc126d91fdc51a96198a8d448d
+totalBytes=13954079
+contentSha256=c8a6064d59eef771238acce00f2f0cdd01a0ebd5d556feaa6042327ef3d1790f
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=58b1789b40787a83de74c7c02eb71c3a8c88f58b
+sourceBaseCommit=dd41cbad1c8087d4fa61facbf861d5e4ddc5248f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.11
+
+###### 2026/10/18
+
+* `Функция` Node.js/Bun поддерживают стандартные XML-формы и макеты, асинхронные свойства View, последовательные присваивания, восстановление после ошибок и Workers
+
 # v6.8.10
 
 ###### 2026/10/18
@@ -125,14 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/18
 
 * `Функция` Node.js/Bun UI и Compose поддерживают нативные макеты, компоненты данных, реактивное состояние и события с отдельными разрешениями и автоматическим закрытием окон
-
-# v6.8.8
-
-###### 2026/10/17
-
-* `Функция` Node.js/Bun images поддерживает расширенные фильтры, преобразование цвета, поиск нескольких цветов, окружности, метрики сходства и загрузку URL
-* `Функция` Node.js/Bun images поддерживает SIFT/ORB с координатами сцены, геометрией ObjectFrame и дескрипторами Mat/признаков в пределах выполнения
-* `Функция` Node.js/Bun images поддерживает квантование PNG и сжатие с метриками качества/памяти, двоичными результатами и выводом через файловый дескриптор
 
 ##### Больше истории выпусков
 
