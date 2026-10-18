@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.16
+
+###### 2026/10/18
+
+* `Feature` WebView getUserMedia/MediaRecorder streaming audio and video, awaited page Promises, explicit Android media permission requests and Worker lifecycle support
+
 # v6.8.15
 
 ###### 2026/10/18

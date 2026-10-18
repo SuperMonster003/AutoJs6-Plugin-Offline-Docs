@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.16
+
+###### 2026/10/18
+
+* `Función` Audio y video en directo con WebView getUserMedia/MediaRecorder, espera de Promise de pagina, solicitudes explicitas de permisos multimedia Android y ciclo de vida de Worker
+
 # v6.8.15
 
 ###### 2026/10/18

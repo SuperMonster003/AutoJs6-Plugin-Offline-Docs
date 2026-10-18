@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14017589
-contentSha256=8f4a1ce9e655d251dfa53e92852cf48a1eac9cd13c1dce09fbaa5c123516f6de
+totalBytes=14035401
+contentSha256=544137f7cd7f0b6725a88073132b30fd0bba2f683953c30cb76a167f5d2e7eeb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=19213eb5aeb3845a65f6bcb7c3e352b24022ac97
+sourceBaseCommit=6d23c2584c72589d768dd40fe08fef689bb20a06
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.16
+
+###### 2026/10/18
+
+* `ميزة` بث الصوت والفيديو عبر WebView getUserMedia/MediaRecorder, وانتظار Promise للصفحة, وطلب أذونات الوسائط في Android صراحة, وإدارة دورة حياة Worker
+
 # v6.8.15
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ category=offline-docs
 ###### 2026/10/18
 
 * `ميزة` Node.js/Bun: التقاط صور WebView بالحجم الكامل واختيار الملفات والمجلدات وقراءة بايتات المستندات وتنزيل blob/data إلى المواقع المختارة
-
-# v6.8.13
-
-###### 2026/10/18
-
-* `ميزة` Node.js/Bun: تنزيلات HTTP(S) في WebView واختيار ملفات النظام واستدعاءات WebViewClient/WebChromeClient غير المتزامنة مع قواعد التنقل والموارد الأصلية
 
 ##### لمزيد من سجل الإصدارات
 
