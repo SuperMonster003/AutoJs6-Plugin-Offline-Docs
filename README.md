@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14007677
-contentSha256=c473f1439ce976d892a3da7ec2ae4b28e7a7f60369ef2969962fbde543381438
+totalBytes=14017589
+contentSha256=8f4a1ce9e655d251dfa53e92852cf48a1eac9cd13c1dce09fbaa5c123516f6de
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=93df3029f53a180307a43203cf99a3bf60688bc3
+sourceBaseCommit=19213eb5aeb3845a65f6bcb7c3e352b24022ac97
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.15
+
+###### 2026/10/18
+
+* `新增` Node.js/Bun: WebView 视频拍摄与前台 AAC/M4A 录音, 支持媒体参数, 可配置选择等待时限和临时文件清理
+
 # v6.8.14
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/18
 
 * `新增` Node.js/Bun: WebView HTTP(S) 下载, 系统文件选择及异步 WebViewClient/WebChromeClient 回调, 支持原生导航和资源规则
-
-# v6.8.12
-
-###### 2026/10/18
-
-* `新增` Node.js/Bun: WebView 页面加载与 JavaScript 返回值, Drawer 侧栏, Toolbar 导航与菜单, ViewPager 页面及异步原生事件
 
 ##### 更多发行历史可参阅
 

@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.15
+
+###### 2026/10/18
+
+* `Feature` Node.js/Bun: WebView video capture and foreground AAC/M4A audio recording, with media options, configurable chooser deadlines and temporary-file cleanup
+
 # v6.8.14
 
 ###### 2026/10/18

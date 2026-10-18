@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14007677
-contentSha256=c473f1439ce976d892a3da7ec2ae4b28e7a7f60369ef2969962fbde543381438
+totalBytes=14017589
+contentSha256=8f4a1ce9e655d251dfa53e92852cf48a1eac9cd13c1dce09fbaa5c123516f6de
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=93df3029f53a180307a43203cf99a3bf60688bc3
+sourceBaseCommit=19213eb5aeb3845a65f6bcb7c3e352b24022ac97
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.15
+
+###### 2026/10/18
+
+* `Функция` Node.js/Bun: Съёмка видео WebView и запись AAC/M4A на переднем плане, настройки медиа, время ожидания выбора и очистка временных файлов
+
 # v6.8.14
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/18
 
 * `Функция` Node.js/Bun: Загрузки HTTP(S) в WebView, системный выбор файлов и асинхронные вызовы WebViewClient/WebChromeClient с правилами навигации и ресурсов
-
-# v6.8.12
-
-###### 2026/10/18
-
-* `Функция` Node.js/Bun: Загрузка WebView и результаты JavaScript, панели Drawer, навигация и меню Toolbar, страницы ViewPager и асинхронные события
 
 ##### Больше истории выпусков
 

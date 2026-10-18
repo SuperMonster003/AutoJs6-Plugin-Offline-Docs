@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.15
+
+###### 2026/10/18
+
+* `Función` Node.js/Bun: Captura de vídeo WebView y audio AAC/M4A en primer plano, con opciones multimedia, plazos configurables y limpieza de archivos temporales
+
 # v6.8.14
 
 ###### 2026/10/18

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14007677
-contentSha256=c473f1439ce976d892a3da7ec2ae4b28e7a7f60369ef2969962fbde543381438
+totalBytes=14017589
+contentSha256=8f4a1ce9e655d251dfa53e92852cf48a1eac9cd13c1dce09fbaa5c123516f6de
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=93df3029f53a180307a43203cf99a3bf60688bc3
+sourceBaseCommit=19213eb5aeb3845a65f6bcb7c3e352b24022ac97
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.15
+
+###### 2026/10/18
+
+* `기능` Node.js/Bun: WebView 동영상 촬영과 전면 AAC/M4A 오디오 녹음, 미디어 옵션, 선택 대기 시간 설정 및 임시 파일 정리
+
 # v6.8.14
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/18
 
 * `기능` Node.js/Bun: WebView HTTP(S) 다운로드, 시스템 파일 선택, 비동기 WebViewClient/WebChromeClient 콜백 및 네이티브 탐색과 리소스 규칙
-
-# v6.8.12
-
-###### 2026/10/18
-
-* `기능` Node.js/Bun: WebView 페이지 로딩과 JavaScript 반환값, Drawer 패널, Toolbar 탐색과 메뉴, ViewPager 페이지 및 비동기 네이티브 이벤트
 
 ##### 더 많은 릴리스 기록
 
