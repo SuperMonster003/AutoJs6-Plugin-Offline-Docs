@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.14
+
+###### 2026/10/18
+
+* `Fonctionnalité` Node.js/Bun: Capture photo WebView en pleine résolution, sélection de fichiers et dossiers, lecture des octets et téléchargements blob/data vers les emplacements choisis
+
 # v6.8.13
 
 ###### 2026/10/18

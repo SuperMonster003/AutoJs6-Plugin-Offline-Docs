@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.14
+
+###### 2026/10/18
+
+* `Feature` Node.js/Bun: WebView full-size camera capture, save and directory selection, document byte reads, and streamed blob/data downloads with selected output locations
+
 # v6.8.13
 
 ###### 2026/10/18

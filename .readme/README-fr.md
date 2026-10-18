@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13991797
-contentSha256=e3b74d646b690b4e5d0f35b95abc998adce631596627e567e35ed2d94c6730eb
+totalBytes=14007677
+contentSha256=c473f1439ce976d892a3da7ec2ae4b28e7a7f60369ef2969962fbde543381438
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=d22f9699876051bda271ae7880e3e316bc11f7b6
+sourceBaseCommit=93df3029f53a180307a43203cf99a3bf60688bc3
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.14
+
+###### 2026/10/18
+
+* `Fonctionnalité` Node.js/Bun: Capture photo WebView en pleine résolution, sélection de fichiers et dossiers, lecture des octets et téléchargements blob/data vers les emplacements choisis
+
 # v6.8.13
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/18
 
 * `Fonctionnalité` Node.js/Bun: Chargement WebView et résultats JavaScript, panneaux Drawer, navigation et menus Toolbar, pages ViewPager et événements natifs asynchrones
-
-# v6.8.11
-
-###### 2026/10/18
-
-* `Fonctionnalité` Node.js/Bun prennent en charge les formulaires et interfaces XML courants, les propriétés View asynchrones, les affectations ordonnées, la reprise après erreur et les Workers
 
 ##### Pour plus d'historique des versions
 
