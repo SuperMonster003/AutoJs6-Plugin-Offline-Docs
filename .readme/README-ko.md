@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13971609
-contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
+totalBytes=13991797
+contentSha256=e3b74d646b690b4e5d0f35b95abc998adce631596627e567e35ed2d94c6730eb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
+sourceBaseCommit=d22f9699876051bda271ae7880e3e316bc11f7b6
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.13
+
+###### 2026/10/18
+
+* `기능` Node.js/Bun: WebView HTTP(S) 다운로드, 시스템 파일 선택, 비동기 WebViewClient/WebChromeClient 콜백 및 네이티브 탐색과 리소스 규칙
+
 # v6.8.12
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/18
 
 * `기능` Node.js/Bun에서 일반 XML 양식과 레이아웃, 네이티브 View 비동기 속성, 순차 대입, 오류 복구 및 Worker 호출 지원
-
-# v6.8.10
-
-###### 2026/10/18
-
-* `기능` Node.js/Bun에서 실행 소유 View 핸들, 비동기 AndroidView 팩터리, XML Compose 컨테이너 연결, Worker 종료 시 정리 및 패키징 앱 지원
 
 ##### 더 많은 릴리스 기록
 

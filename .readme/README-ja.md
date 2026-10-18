@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13971609
-contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
+totalBytes=13991797
+contentSha256=e3b74d646b690b4e5d0f35b95abc998adce631596627e567e35ed2d94c6730eb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
+sourceBaseCommit=d22f9699876051bda271ae7880e3e316bc11f7b6
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.13
+
+###### 2026/10/18
+
+* `機能` Node.js/Bun: WebView の HTTP(S) ダウンロード, システムファイル選択, 非同期 WebViewClient/WebChromeClient コールバックとネイティブのナビゲーションおよびリソース規則
+
 # v6.8.12
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/18
 
 * `機能` Node.js/Bun が一般的な XML フォームとレイアウト, ネイティブ View の非同期プロパティ操作, 順序付き代入, エラー復旧と Worker 呼び出しに対応
-
-# v6.8.10
-
-###### 2026/10/18
-
-* `機能` Node.js/Bun が実行に属する View ハンドル, 非同期 AndroidView ファクトリー, XML Compose コンテナへの接続, Worker 終了時の解放とパッケージ化アプリに対応
 
 ##### その他のリリース履歴
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13971609
-contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
+totalBytes=13991797
+contentSha256=e3b74d646b690b4e5d0f35b95abc998adce631596627e567e35ed2d94c6730eb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
+sourceBaseCommit=d22f9699876051bda271ae7880e3e316bc11f7b6
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.13
+
+###### 2026/10/18
+
+* `新增` Node.js/Bun: WebView HTTP(S) 下載, 系統檔案選擇及非同步 WebViewClient/WebChromeClient 回調, 支援原生導覽和資源規則
+
 # v6.8.12
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 ###### 2026/10/18
 
 * `新增` Node.js/Bun 支援常用 XML 表單與佈局組件及原生 View 非同步屬性代理, 包含順序賦值, 錯誤恢復與 Worker 呼叫
-
-# v6.8.10
-
-###### 2026/10/18
-
-* `新增` Node.js/Bun 支援執行所屬 View 控制代碼, 非同步 AndroidView 工廠與 XML Compose 容器掛載, 同步支援 Worker 清理及打包應用
 
 ##### 更多發行歷史可參閱
 

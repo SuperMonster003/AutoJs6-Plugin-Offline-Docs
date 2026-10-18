@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13971609
-contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
+totalBytes=13991797
+contentSha256=e3b74d646b690b4e5d0f35b95abc998adce631596627e567e35ed2d94c6730eb
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
+sourceBaseCommit=d22f9699876051bda271ae7880e3e316bc11f7b6
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.13
+
+###### 2026/10/18
+
+* `Функция` Node.js/Bun: Загрузки HTTP(S) в WebView, системный выбор файлов и асинхронные вызовы WebViewClient/WebChromeClient с правилами навигации и ресурсов
+
 # v6.8.12
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/18
 
 * `Функция` Node.js/Bun поддерживают стандартные XML-формы и макеты, асинхронные свойства View, последовательные присваивания, восстановление после ошибок и Workers
-
-# v6.8.10
-
-###### 2026/10/18
-
-* `Функция` Node.js/Bun поддерживают дескрипторы View в пределах выполнения, асинхронные фабрики AndroidView, контейнеры XML Compose, очистку Workers и упакованные приложения
 
 ##### Больше истории выпусков
 

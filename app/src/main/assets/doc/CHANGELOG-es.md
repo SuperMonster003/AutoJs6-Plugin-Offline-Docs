@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.13
+
+###### 2026/10/18
+
+* `Función` Node.js/Bun: Descargas HTTP(S) de WebView, selección de archivos del sistema y callbacks asíncronos WebViewClient/WebChromeClient con reglas nativas de navegación y recursos
+
 # v6.8.12
 
 ###### 2026/10/18
