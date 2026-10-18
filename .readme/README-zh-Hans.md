@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14058208
-contentSha256=675da0de4c6cceaa434a6ae5e08b7084825129a44157d488bed5469dcf10ce3e
+totalBytes=14074525
+contentSha256=0a4e9e6819cdb62187a7bb0eb159fae656ee60e41f1eeb113e49c8d97c572f2b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.18
+
+###### 2026/10/19
+
+* `新增` Bun 无障碍, 应用操作与剪贴板 API 对齐 Node.js 对应接口, 支持独立授权和打包应用
+
 # v6.8.17
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/18
 
 * `新增` WebView getUserMedia/MediaRecorder 流式音视频, 支持等待网页 Promise, 显式申请 Android 媒体权限及 Worker 生命周期管理
-
-# v6.8.15
-
-###### 2026/10/18
-
-* `新增` Node.js/Bun: WebView 视频拍摄与前台 AAC/M4A 录音, 支持媒体参数, 可配置选择等待时限和临时文件清理
 
 ##### 更多发行历史可参阅
 

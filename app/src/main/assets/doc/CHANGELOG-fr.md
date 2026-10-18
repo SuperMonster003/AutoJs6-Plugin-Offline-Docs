@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.18
+
+###### 2026/10/19
+
+* `Fonctionnalité` API Bun pour accessibilité, applications et presse-papiers alignées sur Node.js, avec autorisations distinctes et applications empaquetées
+
 # v6.8.17
 
 ###### 2026/10/18

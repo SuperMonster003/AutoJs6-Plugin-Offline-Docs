@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14058208
-contentSha256=675da0de4c6cceaa434a6ae5e08b7084825129a44157d488bed5469dcf10ce3e
+totalBytes=14074525
+contentSha256=0a4e9e6819cdb62187a7bb0eb159fae656ee60e41f1eeb113e49c8d97c572f2b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
 sourcePath=api
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.18
+
+###### 2026/10/19
+
+* `ميزة` واجهات Bun لإمكانية الوصول وعمليات التطبيقات والحافظة متوافقة مع Node.js مع أذونات مستقلة ودعم التطبيقات المحزمة
+
 # v6.8.17
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ category=offline-docs
 ###### 2026/10/18
 
 * `ميزة` بث الصوت والفيديو عبر WebView getUserMedia/MediaRecorder, وانتظار Promise للصفحة, وطلب أذونات الوسائط في Android صراحة, وإدارة دورة حياة Worker
-
-# v6.8.15
-
-###### 2026/10/18
-
-* `ميزة` Node.js/Bun: التقاط فيديو WebView وتسجيل AAC/M4A في الواجهة الأمامية مع خيارات الوسائط ومهلة اختيار قابلة للضبط وتنظيف الملفات المؤقتة
 
 ##### لمزيد من سجل الإصدارات
 
