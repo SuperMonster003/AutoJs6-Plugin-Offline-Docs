@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.12
+
+###### 2026/10/18
+
+* `기능` Node.js/Bun: WebView 페이지 로딩과 JavaScript 반환값, Drawer 패널, Toolbar 탐색과 메뉴, ViewPager 페이지 및 비동기 네이티브 이벤트
+
 # v6.8.11
 
 ###### 2026/10/18

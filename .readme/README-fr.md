@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13954079
-contentSha256=c8a6064d59eef771238acce00f2f0cdd01a0ebd5d556feaa6042327ef3d1790f
+totalBytes=13971609
+contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dd41cbad1c8087d4fa61facbf861d5e4ddc5248f
+sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.12
+
+###### 2026/10/18
+
+* `Fonctionnalité` Node.js/Bun: Chargement WebView et résultats JavaScript, panneaux Drawer, navigation et menus Toolbar, pages ViewPager et événements natifs asynchrones
+
 # v6.8.11
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/18
 
 * `Fonctionnalité` Node.js/Bun prennent en charge les handles View propres à une exécution, les fabriques AndroidView asynchrones, les conteneurs XML Compose, la fermeture des Workers et les applications empaquetées
-
-# v6.8.9
-
-###### 2026/10/18
-
-* `Fonctionnalité` Node.js/Bun UI et Compose prennent en charge les interfaces natives, composants de données, états réactifs et événements, avec autorisations distinctes et fermeture automatique
 
 ##### Pour plus d'historique des versions
 

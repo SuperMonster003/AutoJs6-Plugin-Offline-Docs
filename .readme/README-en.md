@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13954079
-contentSha256=c8a6064d59eef771238acce00f2f0cdd01a0ebd5d556feaa6042327ef3d1790f
+totalBytes=13971609
+contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dd41cbad1c8087d4fa61facbf861d5e4ddc5248f
+sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.12
+
+###### 2026/10/18
+
+* `Feature` Node.js/Bun: WebView page loading and JavaScript results, Drawer panels, Toolbar navigation and menus, and ViewPager pages with asynchronous native events
+
 # v6.8.11
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/18
 
 * `Feature` Node.js/Bun support execution-owned View handles, asynchronous AndroidView factories and XML Compose container attachments, with Worker cleanup and packaged application support
-
-# v6.8.9
-
-###### 2026/10/18
-
-* `Feature` Node.js/Bun UI and Compose support native layouts, data components, reactive state and window events, with independent grants and automatic window cleanup
 
 ##### For more release history
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13954079
-contentSha256=c8a6064d59eef771238acce00f2f0cdd01a0ebd5d556feaa6042327ef3d1790f
+totalBytes=13971609
+contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dd41cbad1c8087d4fa61facbf861d5e4ddc5248f
+sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.12
+
+###### 2026/10/18
+
+* `新增` Node.js/Bun: WebView 页面加载与 JavaScript 返回值, Drawer 侧栏, Toolbar 导航与菜单, ViewPager 页面及异步原生事件
+
 # v6.8.11
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/18
 
 * `新增` Node.js/Bun 支持执行所属 View 句柄, 异步 AndroidView 工厂与 XML Compose 容器挂载, 同步支持 Worker 清理及打包应用
-
-# v6.8.9
-
-###### 2026/10/18
-
-* `新增` Node.js/Bun UI 与 Compose 支持原生布局, 数据组件, 响应式状态及窗口事件, 提供独立授权与窗口自动清理
 
 ##### 更多发行历史可参阅
 

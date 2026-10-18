@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.12
+
+###### 2026/10/18
+
+* `新增` Node.js/Bun: WebView 頁面載入與 JavaScript 回傳值, Drawer 側欄, Toolbar 導覽與選單, ViewPager 頁面及非同步原生事件
+
 # v6.8.11
 
 ###### 2026/10/18

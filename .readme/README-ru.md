@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=13954079
-contentSha256=c8a6064d59eef771238acce00f2f0cdd01a0ebd5d556feaa6042327ef3d1790f
+totalBytes=13971609
+contentSha256=129a8cd404321c1b93e00021d9025671ff315a23a8c701f9cf3cc6465d50b078
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dd41cbad1c8087d4fa61facbf861d5e4ddc5248f
+sourceBaseCommit=311c2e5ad933fc7c884edbc230f7e01c1812dbd0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.12
+
+###### 2026/10/18
+
+* `Функция` Node.js/Bun: Загрузка WebView и результаты JavaScript, панели Drawer, навигация и меню Toolbar, страницы ViewPager и асинхронные события
+
 # v6.8.11
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/18
 
 * `Функция` Node.js/Bun поддерживают дескрипторы View в пределах выполнения, асинхронные фабрики AndroidView, контейнеры XML Compose, очистку Workers и упакованные приложения
-
-# v6.8.9
-
-###### 2026/10/18
-
-* `Функция` Node.js/Bun UI и Compose поддерживают нативные макеты, компоненты данных, реактивное состояние и события с отдельными разрешениями и автоматическим закрытием окон
 
 ##### Больше истории выпусков
 
