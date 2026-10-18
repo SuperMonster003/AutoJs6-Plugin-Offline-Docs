@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14035401
-contentSha256=544137f7cd7f0b6725a88073132b30fd0bba2f683953c30cb76a167f5d2e7eeb
+totalBytes=14058208
+contentSha256=675da0de4c6cceaa434a6ae5e08b7084825129a44157d488bed5469dcf10ce3e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d23c2584c72589d768dd40fe08fef689bb20a06
+sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.17
+
+###### 2026/10/18
+
+* `Feature` WebView screen sharing adapter, foreground-service audio capture and native background camera recording in Node.js/Bun, including Node Workers
+
 # v6.8.16
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/18
 
 * `Feature` Node.js/Bun: WebView video capture and foreground AAC/M4A audio recording, with media options, configurable chooser deadlines and temporary-file cleanup
-
-# v6.8.14
-
-###### 2026/10/18
-
-* `Feature` Node.js/Bun: WebView full-size camera capture, save and directory selection, document byte reads, and streamed blob/data downloads with selected output locations
 
 ##### For more release history
 

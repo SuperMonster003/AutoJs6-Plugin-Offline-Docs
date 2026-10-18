@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14035401
-contentSha256=544137f7cd7f0b6725a88073132b30fd0bba2f683953c30cb76a167f5d2e7eeb
+totalBytes=14058208
+contentSha256=675da0de4c6cceaa434a6ae5e08b7084825129a44157d488bed5469dcf10ce3e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d23c2584c72589d768dd40fe08fef689bb20a06
+sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.17
+
+###### 2026/10/18
+
+* `Функция` Адаптер демонстрации экрана WebView, запись звука через foreground service и нативная фоновая запись камеры для Node.js/Bun и Node Worker
+
 # v6.8.16
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/18
 
 * `Функция` Node.js/Bun: Съёмка видео WebView и запись AAC/M4A на переднем плане, настройки медиа, время ожидания выбора и очистка временных файлов
-
-# v6.8.14
-
-###### 2026/10/18
-
-* `Функция` Node.js/Bun: Полноразмерные фото WebView, выбор файлов и каталогов, чтение байтов документов и потоковая загрузка blob/data в выбранное место
 
 ##### Больше истории выпусков
 

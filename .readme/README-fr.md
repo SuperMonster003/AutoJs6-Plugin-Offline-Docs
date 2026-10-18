@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14035401
-contentSha256=544137f7cd7f0b6725a88073132b30fd0bba2f683953c30cb76a167f5d2e7eeb
+totalBytes=14058208
+contentSha256=675da0de4c6cceaa434a6ae5e08b7084825129a44157d488bed5469dcf10ce3e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d23c2584c72589d768dd40fe08fef689bb20a06
+sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.17
+
+###### 2026/10/18
+
+* `Fonctionnalité` Adaptateur de partage ecran WebView, capture audio par service de premier plan et enregistrement camera natif en arriere-plan pour Node.js/Bun et Node Worker
+
 # v6.8.16
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/18
 
 * `Fonctionnalité` Node.js/Bun: Capture vidéo WebView et enregistrement audio AAC/M4A au premier plan, avec options média, délais configurables et nettoyage des fichiers temporaires
-
-# v6.8.14
-
-###### 2026/10/18
-
-* `Fonctionnalité` Node.js/Bun: Capture photo WebView en pleine résolution, sélection de fichiers et dossiers, lecture des octets et téléchargements blob/data vers les emplacements choisis
 
 ##### Pour plus d'historique des versions
 

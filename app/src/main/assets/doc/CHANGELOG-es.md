@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.17
+
+###### 2026/10/18
+
+* `Función` Adaptador para compartir pantalla WebView, captura de audio mediante servicio en primer plano y grabacion de camara nativa en segundo plano para Node.js/Bun y Node Worker
+
 # v6.8.16
 
 ###### 2026/10/18

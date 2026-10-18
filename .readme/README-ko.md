@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=219
-totalBytes=14035401
-contentSha256=544137f7cd7f0b6725a88073132b30fd0bba2f683953c30cb76a167f5d2e7eeb
+totalBytes=14058208
+contentSha256=675da0de4c6cceaa434a6ae5e08b7084825129a44157d488bed5469dcf10ce3e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=6d23c2584c72589d768dd40fe08fef689bb20a06
+sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.17
+
+###### 2026/10/18
+
+* `기능` Node.js/Bun WebView 화면 공유 어댑터, 포그라운드 서비스 녹음 및 네이티브 백그라운드 카메라 녹화, Node Worker 지원
+
 # v6.8.16
 
 ###### 2026/10/18
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/18
 
 * `기능` Node.js/Bun: WebView 동영상 촬영과 전면 AAC/M4A 오디오 녹음, 미디어 옵션, 선택 대기 시간 설정 및 임시 파일 정리
-
-# v6.8.14
-
-###### 2026/10/18
-
-* `기능` Node.js/Bun: WebView 원본 크기 사진 촬영, 저장 및 디렉터리 선택, 문서 바이트 읽기, blob/data 분할 다운로드와 선택한 위치로 출력
 
 ##### 더 많은 릴리스 기록
 
