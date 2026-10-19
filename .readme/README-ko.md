@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14305796
-contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
+totalBytes=14324696
+contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
+sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.29
+
+###### 2026/10/20
+
+* `기능` Node.js/Bun/Worker의 Java 콜백, 하위 클래스 생성 및 JAR/DEX 로드로 Promise 반환값, 부모 클래스 호출 및 실행 종료 정리 지원
+
 # v6.8.28
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/19
 
 * `기능` AutoJs6 스크립트의 스트리밍 Shell API, shell.spawn 및 shizuku.spawn이 반환하는 ShellProcess, Auto.js Pro 호환 파이프 Shell 및 $shell.setDefaultOptions 포함
-
-# v6.8.26
-
-###### 2026/10/19
-
-* `기능` Node.js, Bun 및 Worker의 Android 객체 도우미, Paint, ColorStateList, 테마 색상 및 FileProvider URI 지원
-* `기능` Node.js 및 Bun의 영구 달력 및 IntentTask API, 일간, 주간, 월간, 연간, 일회성, 카운트다운 및 브로드캐스트 작업 지원
 
 ##### 더 많은 릴리스 기록
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14305796
-contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
+totalBytes=14324696
+contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
+sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.29
+
+###### 2026/10/20
+
+* `Функция` Обратные вызовы Java, создание подклассов и загрузка JAR/DEX для Node.js, Bun и Workers с результатами Promise, вызовами суперкласса и очисткой при завершении
+
 # v6.8.28
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/19
 
 * `Функция` Потоковые API Shell для скриптов AutoJs6, включая ShellProcess из shell.spawn и shizuku.spawn, совместимый с Auto.js Pro Shell с каналами и $shell.setDefaultOptions
-
-# v6.8.26
-
-###### 2026/10/19
-
-* `Функция` Объекты Android для Node.js, Bun и Workers, включая Paint, ColorStateList, цвета темы и URI FileProvider
-* `Функция` Постоянные календарные задачи и IntentTask для Node.js и Bun, включая ежедневные, еженедельные, ежемесячные, ежегодные, разовые, отложенные и широковещательные задачи
 
 ##### Больше истории выпусков
 

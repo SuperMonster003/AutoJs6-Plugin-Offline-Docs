@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14305796
-contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
+totalBytes=14324696
+contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
+sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.29
+
+###### 2026/10/20
+
+* `機能` Node.js/Bun/Worker の Java コールバック, サブクラス生成と JAR/DEX 読み込みで Promise の戻り値, 親クラス呼び出しと終了時の解放に対応
+
 # v6.8.28
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/19
 
 * `機能` AutoJs6 スクリプトのストリーム Shell API, shell.spawn と shizuku.spawn が返す ShellProcess, Auto.js Pro 互換のパイプ型 Shell と $shell.setDefaultOptions を含む
-
-# v6.8.26
-
-###### 2026/10/19
-
-* `機能` Node.js, Bun と Worker の Android オブジェクトヘルパー, Paint, ColorStateList, テーマ色と FileProvider URI
-* `機能` Node.js と Bun の永続的なカレンダーと IntentTask API, 毎日, 毎週, 毎月, 毎年, 単発, カウントダウンとブロードキャストのタスク
 
 ##### その他のリリース履歴
 

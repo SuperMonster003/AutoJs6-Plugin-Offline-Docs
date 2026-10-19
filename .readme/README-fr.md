@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14305796
-contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
+totalBytes=14324696
+contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
+sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.29
+
+###### 2026/10/20
+
+* `Fonctionnalité` Callbacks Java, sous-classes générées et chargement JAR/DEX pour Node.js, Bun et Workers, avec retours Promise, appels de la superclasse et libération en fin de session
+
 # v6.8.28
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/19
 
 * `Fonctionnalité` API Shell avec flux pour les scripts AutoJs6, dont ShellProcess renvoyé par shell.spawn et shizuku.spawn, le Shell avec tubes compatible Auto.js Pro et $shell.setDefaultOptions
-
-# v6.8.26
-
-###### 2026/10/19
-
-* `Fonctionnalité` Objets Android pour Node.js, Bun et les Workers, avec Paint, ColorStateList, couleurs du thème et URI FileProvider
-* `Fonctionnalité` API persistantes de calendrier et IntentTask pour Node.js et Bun, avec tâches quotidiennes, hebdomadaires, mensuelles, annuelles, ponctuelles, différées et de diffusion
 
 ##### Pour plus d'historique des versions
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14305796
-contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
+totalBytes=14324696
+contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
+sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.29
+
+###### 2026/10/20
+
+* `新增` Node.js/Bun/Worker 的 Java 回調代理, 子類別產生和 JAR/DEX 載入, 支援 Promise 回傳值, 父類別呼叫及執行結束清理
+
 # v6.8.28
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 ###### 2026/10/19
 
 * `新增` AutoJs6 腳本的串流 Shell API, 包括 shell.spawn 與 shizuku.spawn 返回的 ShellProcess, 兼容 Auto.js Pro 的管道 Shell 及 $shell.setDefaultOptions
-
-# v6.8.26
-
-###### 2026/10/19
-
-* `新增` Node.js/Bun 的 Android 物件輔助介面及 Worker 封裝, 支援 Paint, ColorStateList, 主題色和 FileProvider URI
-* `新增` Node.js/Bun 的持久日曆與 IntentTask API, 支援每日, 每週, 每月, 每年, 單次, 倒數計時和廣播任務
 
 ##### 更多發行歷史可參閱
 
