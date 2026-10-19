@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `優化` 語音 (Speech) 模組參考: 3-Macaw Speech 外掛提供的 speech 物件, 包括麥克風聽寫, 檔案與 PCM 辨識, 語音活動偵測, 喚醒詞, 語音合成與模型管理, 模型目錄與授權, 背景收音與喚醒工作階段的暫時接管, 錯誤代碼與上限, 數位助理, 系統語音輸入, 系統語音辨識服務與 VOICE_COMMAND 入口契約, 以及 SpeechSession, SpeechWakeSession, SpeechRecognitionResult 與 SpeechModelInfo 型別
+* `優化` TTS 參考: 3-Macaw Speech 引擎的語音名稱, 語言可用性與 speech.speak 的語音選擇規則; 外掛參考: 提供指令碼模組的外掛清單
+
 # v6.8.29
 
 ###### 2026/10/20

@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `優化` 語音 (Speech) 模組參考: 3-Macaw Speech 外掛提供的 speech 物件, 包括麥克風聽寫, 檔案與 PCM 辨識, 語音活動偵測, 喚醒詞, 語音合成與模型管理, 模型目錄與授權, 背景收音與喚醒工作階段的暫時接管, 錯誤代碼與上限, 數位助理, 系統語音輸入, 系統語音辨識服務與 VOICE_COMMAND 入口契約, 以及 SpeechSession, SpeechWakeSession, SpeechRecognitionResult 與 SpeechModelInfo 型別
+* `優化` TTS 參考: 3-Macaw Speech 引擎的語音名稱, 語言可用性與 speech.speak 的語音選擇規則; 外掛參考: 提供指令碼模組的外掛清單
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/10/20
 
 * `新增` Node.js/Bun/Worker 的 Java/Android 物件互操作, 支援公開建構函式和成員, 陣列, 精確 long 值, 明確多載及應用程式 Context 控制代碼
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `新增` AutoJs6 指令碼的串流 Shell API, 包括 shell.spawn 與 shizuku.spawn 傳回的 ShellProcess, 相容 Auto.js Pro 的管道 Shell 及 $shell.setDefaultOptions
 
 ##### 更多發行歷史可參閱
 

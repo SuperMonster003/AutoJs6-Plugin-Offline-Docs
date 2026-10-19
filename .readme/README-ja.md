@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `改善` 音声 (Speech) モジュールのリファレンス: 3-Macaw Speech プラグインが提供する speech オブジェクト (マイクによる口述入力, ファイルと PCM の認識, 音声区間検出, ウェイクワード, 音声合成, モデル管理), モデルカタログとライセンス, バックグラウンド録音とウェイクセッションの一時的な引き継ぎ, エラーコードと上限, デジタルアシスタント, システムの音声入力, システムの音声認識サービス, VOICE_COMMAND エントリの契約, SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 型
+* `改善` TTS リファレンス: 3-Macaw Speech エンジンの音声名, 言語の可用性, speech.speak の音声選択規則; プラグインのリファレンス: スクリプトモジュールを提供するプラグインの一覧
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/20
 
 * `機能` Node.js/Bun/Worker の Java/Android 相互運用で公開コンストラクターとメンバー, 配列, 正確な long 値, 明示的なオーバーロードとアプリの Context ハンドルに対応
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `機能` AutoJs6 スクリプトのストリーム Shell API, shell.spawn と shizuku.spawn が返す ShellProcess, Auto.js Pro 互換のパイプ型 Shell と $shell.setDefaultOptions を含む
 
 ##### その他のリリース履歴
 

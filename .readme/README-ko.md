@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `개선` 음성 (Speech) 모듈 참조: 3-Macaw Speech 플러그인이 제공하는 speech 객체 (마이크 받아쓰기, 파일과 PCM 인식, 음성 활동 감지, 호출어, 음성 합성, 모델 관리), 모델 카탈로그와 라이선스, 백그라운드 녹음과 호출어 세션의 일시적 마이크 인계, 오류 코드와 상한, 디지털 어시스턴트, 시스템 음성 입력, 시스템 음성 인식 서비스, VOICE_COMMAND 진입점 계약 및 SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 형식
+* `개선` TTS 참조: 3-Macaw Speech 엔진의 음성 이름, 언어 사용 가능 여부, speech.speak 의 음성 선택 규칙; 플러그인 참조: 스크립트 모듈을 제공하는 플러그인 목록
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/20
 
 * `기능` Node.js/Bun/Worker의 Java/Android 상호 운용으로 공개 생성자와 멤버, 배열, 정확한 long 값, 명시적 오버로드 및 앱 Context 핸들 지원
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `기능` AutoJs6 스크립트의 스트리밍 Shell API, shell.spawn 및 shizuku.spawn이 반환하는 ShellProcess, Auto.js Pro 호환 파이프 Shell 및 $shell.setDefaultOptions 포함
 
 ##### 더 많은 릴리스 기록
 

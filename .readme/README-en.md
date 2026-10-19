@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `Improvement` Speech module reference: the speech object provided by the 3-Macaw Speech plugin, covering microphone dictation, file and PCM recognition, voice activity detection, wake words, speech synthesis and model management, the model catalog and licenses, background recording and the temporary takeover of wake sessions, error codes and limits, the digital assistant, system voice input, the system speech recognition service and the VOICE_COMMAND entry contract, plus the SpeechSession, SpeechWakeSession, SpeechRecognitionResult and SpeechModelInfo types
+* `Improvement` TTS reference: voice names, language availability and the speech.speak voice selection rules of the 3-Macaw Speech engine; Plugins reference: the list of plugins that provide script modules
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/20
 
 * `Feature` Java/Android object interop for Node.js, Bun and Workers, including public constructors and members, arrays, exact long values, explicit overloads and application Context handles
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `Feature` Streaming Shell APIs for AutoJs6 scripts, including ShellProcess returned by shell.spawn and shizuku.spawn, the Auto.js Pro compatible pipe-based Shell and $shell.setDefaultOptions
 
 ##### For more release history
 

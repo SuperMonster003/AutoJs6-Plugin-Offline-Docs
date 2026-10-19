@@ -5,6 +5,13 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v6.8.30": {
+      "released_date": "2026/10/20",
+      "improvement": [
+        "音声 (Speech) モジュールのリファレンス: 3-Macaw Speech プラグインが提供する speech オブジェクト (マイクによる口述入力, ファイルと PCM の認識, 音声区間検出, ウェイクワード, 音声合成, モデル管理), モデルカタログとライセンス, バックグラウンド録音とウェイクセッションの一時的な引き継ぎ, エラーコードと上限, デジタルアシスタント, システムの音声入力, システムの音声認識サービス, VOICE_COMMAND エントリの契約, SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 型",
+        "TTS リファレンス: 3-Macaw Speech エンジンの音声名, 言語の可用性, speech.speak の音声選択規則; プラグインのリファレンス: スクリプトモジュールを提供するプラグインの一覧"
+      ]
+    },
     "v6.8.29": {
       "released_date": "2026/10/20",
       "feature": [

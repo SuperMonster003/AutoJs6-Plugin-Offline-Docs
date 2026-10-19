@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `Amélioration` Référence du module Speech: l'objet speech fourni par le plugin 3-Macaw Speech (dictée au microphone, reconnaissance de fichiers et de PCM, détection d'activité vocale, mots d'activation, synthèse vocale et gestion des modèles), le catalogue des modèles et leurs licences, l'enregistrement en arrière-plan et la cession temporaire du microphone par les sessions d'activation, les codes d'erreur et les limites, l'assistant numérique, la saisie vocale du système, le service de reconnaissance vocale du système, le contrat de l'entrée VOICE_COMMAND et les types SpeechSession, SpeechWakeSession, SpeechRecognitionResult et SpeechModelInfo
+* `Amélioration` Référence TTS: noms de voix, disponibilité des langues et règles de choix de voix de speech.speak pour le moteur 3-Macaw Speech; référence Plugins: liste des plugins qui fournissent des modules de script
+
 # v6.8.29
 
 ###### 2026/10/20

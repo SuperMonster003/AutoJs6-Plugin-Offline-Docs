@@ -5,6 +5,13 @@
   "changelog_label_improvement": "개선",
   "changelog_label_dependency": "의존성",
   "$data": {
+    "v6.8.30": {
+      "released_date": "2026/10/20",
+      "improvement": [
+        "음성 (Speech) 모듈 참조: 3-Macaw Speech 플러그인이 제공하는 speech 객체 (마이크 받아쓰기, 파일과 PCM 인식, 음성 활동 감지, 호출어, 음성 합성, 모델 관리), 모델 카탈로그와 라이선스, 백그라운드 녹음과 호출어 세션의 일시적 마이크 인계, 오류 코드와 상한, 디지털 어시스턴트, 시스템 음성 입력, 시스템 음성 인식 서비스, VOICE_COMMAND 진입점 계약 및 SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 형식",
+        "TTS 참조: 3-Macaw Speech 엔진의 음성 이름, 언어 사용 가능 여부, speech.speak 의 음성 선택 규칙; 플러그인 참조: 스크립트 모듈을 제공하는 플러그인 목록"
+      ]
+    },
     "v6.8.29": {
       "released_date": "2026/10/20",
       "feature": [

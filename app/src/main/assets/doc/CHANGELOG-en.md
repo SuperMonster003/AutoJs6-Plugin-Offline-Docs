@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `Improvement` Speech module reference: the speech object provided by the 3-Macaw Speech plugin, covering microphone dictation, file and PCM recognition, voice activity detection, wake words, speech synthesis and model management, the model catalog and licenses, background recording and the temporary takeover of wake sessions, error codes and limits, the digital assistant, system voice input, the system speech recognition service and the VOICE_COMMAND entry contract, plus the SpeechSession, SpeechWakeSession, SpeechRecognitionResult and SpeechModelInfo types
+* `Improvement` TTS reference: voice names, language availability and the speech.speak voice selection rules of the 3-Macaw Speech engine; Plugins reference: the list of plugins that provide script modules
+
 # v6.8.29
 
 ###### 2026/10/20

@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `优化` 语音 (Speech) 模块参考: 3-Macaw Speech 插件提供的 speech 对象, 包括麦克风听写, 文件与 PCM 识别, 语音活动检测, 唤醒词, 语音合成与模型管理, 模型目录与许可, 后台收音与唤醒会话的临时接管, 错误代码与上限, 数字助理, 系统语音输入, 系统语音识别服务与 VOICE_COMMAND 入口契约, 以及 SpeechSession, SpeechWakeSession, SpeechRecognitionResult 与 SpeechModelInfo 类型
+* `优化` TTS 参考: 3-Macaw Speech 引擎的语音名称, 语言可用性与 speech.speak 的语音选择规则; 插件参考: 提供脚本模块的插件列表
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/20
 
 * `新增` Node.js/Bun/Worker 的 Java/Android 对象互操作, 支持公开构造器和成员, 数组, 精确 long 值, 显式重载及应用 Context 句柄
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `新增` AutoJs6 脚本的流式 Shell API, 包括 shell.spawn 与 shizuku.spawn 返回的 ShellProcess, 兼容 Auto.js Pro 的管道 Shell 及 $shell.setDefaultOptions
 
 ##### 更多发行历史可参阅
 

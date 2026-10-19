@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `Mejora` Referencia del módulo Speech: el objeto speech del plugin 3-Macaw Speech (dictado por micrófono, reconocimiento de archivos y PCM, detección de actividad de voz, palabras de activación, síntesis de voz y gestión de modelos), el catálogo de modelos y sus licencias, la grabación en segundo plano y la cesión temporal del micrófono por las sesiones de activación, los códigos de error y los límites, el asistente digital, la entrada de voz del sistema, el servicio de reconocimiento de voz del sistema, el contrato de la entrada VOICE_COMMAND y los tipos SpeechSession, SpeechWakeSession, SpeechRecognitionResult y SpeechModelInfo
+* `Mejora` Referencia de TTS: nombres de voz, disponibilidad de idiomas y reglas de selección de voz de speech.speak para el motor 3-Macaw Speech; referencia de Plugins: lista de plugins que proporcionan módulos de script
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/20
 
 * `Función` Interoperabilidad Java/Android para Node.js, Bun y Workers, con constructores y miembros públicos, matrices, valores long exactos, sobrecargas explícitas y referencias Context
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `Función` API de Shell con flujos para scripts de AutoJs6, incluidos ShellProcess devuelto por shell.spawn y shizuku.spawn, Shell con tuberías compatible con Auto.js Pro y $shell.setDefaultOptions
 
 ##### Para ver más historial de versiones
 

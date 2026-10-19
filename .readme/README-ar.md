@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ category=offline-docs
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `تحسين` مرجع وحدة Speech: كائن speech الذي يوفره ملحق 3-Macaw Speech (الإملاء من الميكروفون والتعرف على الملفات وبيانات PCM واكتشاف النشاط الصوتي وكلمات التنبيه وتركيب الكلام وإدارة النماذج), وكتالوج النماذج وتراخيصها, والتسجيل في الخلفية وتنازل جلسات التنبيه المؤقت عن الميكروفون, ورموز الأخطاء والحدود, والمساعد الرقمي والإدخال الصوتي للنظام وخدمة التعرف على الكلام في النظام وعقد مدخل VOICE_COMMAND, وأنواع SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo
+* `تحسين` مرجع TTS: أسماء الأصوات وتوفر اللغات وقواعد اختيار الصوت في speech.speak لمحرك 3-Macaw Speech; مرجع Plugins: قائمة الملحقات التي توفر وحدات البرامج النصية
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ category=offline-docs
 ###### 2026/10/20
 
 * `ميزة` تكامل Java/Android في Node.js وBun وWorkers مع المنشئات والأعضاء العامة والمصفوفات وقيم long الدقيقة والتحميل الزائد الصريح ومراجع Context للتطبيق
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `ميزة` واجهات Shell المتدفقة لسكربتات AutoJs6, تشمل ShellProcess الذي تعيده shell.spawn و shizuku.spawn و Shell ذات الأنابيب المتوافقة مع Auto.js Pro و $shell.setDefaultOptions
 
 ##### لمزيد من سجل الإصدارات
 

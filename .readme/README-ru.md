@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `Улучшение` Справочник модуля Speech: объект speech плагина 3-Macaw Speech (диктовка с микрофона, распознавание файлов и PCM, обнаружение речевой активности, слова активации, синтез речи и управление моделями), каталог моделей и лицензии, запись в фоне и временная передача микрофона от сеансов активации, коды ошибок и ограничения, цифровой ассистент, системный голосовой ввод, системная служба распознавания речи, контракт точки входа VOICE_COMMAND и типы SpeechSession, SpeechWakeSession, SpeechRecognitionResult и SpeechModelInfo
+* `Улучшение` Справочник TTS: имена голосов, доступность языков и правила выбора голоса speech.speak для движка 3-Macaw Speech; справочник Plugins: список плагинов, предоставляющих модули скриптов
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/20
 
 * `Функция` Взаимодействие Java/Android для Node.js, Bun и Workers: открытые конструкторы и члены, массивы, точные значения long, явные перегрузки и ссылки Context приложения
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `Функция` Потоковые API Shell для скриптов AutoJs6, включая ShellProcess из shell.spawn и shizuku.spawn, совместимый с Auto.js Pro Shell с каналами и $shell.setDefaultOptions
 
 ##### Больше истории выпусков
 

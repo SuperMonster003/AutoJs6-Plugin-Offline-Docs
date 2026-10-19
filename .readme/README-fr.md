@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=220
-totalBytes=14324696
-contentSha256=99c55c1ad78865db5933cf78afc4ed5796d6164bb7e2116f433362f7300b1d26
+fileCount=224
+totalBytes=14656340
+contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=20bc81da984d8559d8a91e2fff0111bd3a51637f
+sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `Amélioration` Référence du module Speech: l'objet speech fourni par le plugin 3-Macaw Speech (dictée au microphone, reconnaissance de fichiers et de PCM, détection d'activité vocale, mots d'activation, synthèse vocale et gestion des modèles), le catalogue des modèles et leurs licences, l'enregistrement en arrière-plan et la cession temporaire du microphone par les sessions d'activation, les codes d'erreur et les limites, l'assistant numérique, la saisie vocale du système, le service de reconnaissance vocale du système, le contrat de l'entrée VOICE_COMMAND et les types SpeechSession, SpeechWakeSession, SpeechRecognitionResult et SpeechModelInfo
+* `Amélioration` Référence TTS: noms de voix, disponibilité des langues et règles de choix de voix de speech.speak pour le moteur 3-Macaw Speech; référence Plugins: liste des plugins qui fournissent des modules de script
+
 # v6.8.29
 
 ###### 2026/10/20
@@ -125,12 +132,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/20
 
 * `Fonctionnalité` Interopérabilité Java/Android pour Node.js, Bun et Workers, avec constructeurs et membres publics, tableaux, valeurs long exactes, surcharges explicites et handles Context
-
-# v6.8.27
-
-###### 2026/10/19
-
-* `Fonctionnalité` API Shell avec flux pour les scripts AutoJs6, dont ShellProcess renvoyé par shell.spawn et shizuku.spawn, le Shell avec tubes compatible Auto.js Pro et $shell.setDefaultOptions
 
 ##### Pour plus d'historique des versions
 

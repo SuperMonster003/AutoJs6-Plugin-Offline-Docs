@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.30
+
+###### 2026/10/20
+
+* `优化` 语音 (Speech) 模块参考: 3-Macaw Speech 插件提供的 speech 对象, 包括麦克风听写, 文件与 PCM 识别, 语音活动检测, 唤醒词, 语音合成与模型管理, 模型目录与许可, 后台收音与唤醒会话的临时接管, 错误代码与上限, 数字助理, 系统语音输入, 系统语音识别服务与 VOICE_COMMAND 入口契约, 以及 SpeechSession, SpeechWakeSession, SpeechRecognitionResult 与 SpeechModelInfo 类型
+* `优化` TTS 参考: 3-Macaw Speech 引擎的语音名称, 语言可用性与 speech.speak 的语音选择规则; 插件参考: 提供脚本模块的插件列表
+
 # v6.8.29
 
 ###### 2026/10/20
