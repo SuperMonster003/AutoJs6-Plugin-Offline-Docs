@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14209043
-contentSha256=e04b9ef1d3e43052c6d982249cefd8e538acd0bc30ddfa910382ad888dc79f6f
+totalBytes=14218716
+contentSha256=fb427a787d6d79175f2a390e00519840969947abf07923c20e6402d1e2df852b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=09d3a488e03444d84bafcd51eb5ac970e83919bc
+sourceBaseCommit=7840c32f9e353002de9b54e6a52082e51f14a3a3
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.21
+
+###### 2026/10/19
+
+* `기능` Bun 및 Node.js Worker 센서 샘플링과 구독 API, 취소 및 리스너 자동 해제
+
 # v6.8.20
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/19
 
 * `기능` Bun 파일 및 영구 저장소 API, 별도의 호스트 파일 권한과 Node.js 저장소 공유 지원
-
-# v6.8.18
-
-###### 2026/10/19
-
-* `기능` Bun 접근성, 앱 작업 및 클립보드 API를 Node.js 인터페이스에 맞추고 개별 권한과 패키징 앱 지원
 
 ##### 더 많은 릴리스 기록
 

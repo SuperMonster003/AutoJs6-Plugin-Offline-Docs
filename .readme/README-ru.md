@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14209043
-contentSha256=e04b9ef1d3e43052c6d982249cefd8e538acd0bc30ddfa910382ad888dc79f6f
+totalBytes=14218716
+contentSha256=fb427a787d6d79175f2a390e00519840969947abf07923c20e6402d1e2df852b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=09d3a488e03444d84bafcd51eb5ac970e83919bc
+sourceBaseCommit=7840c32f9e353002de9b54e6a52082e51f14a3a3
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.21
+
+###### 2026/10/19
+
+* `Функция` Измерения и подписки датчиков для Bun и Workers Node.js с отменой и автоматическим освобождением слушателей
+
 # v6.8.20
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/19
 
 * `Функция` API файлов и постоянного хранилища Bun с отдельными разрешениями и общим хранилищем Node.js
-
-# v6.8.18
-
-###### 2026/10/19
-
-* `Функция` API доступности, операций с приложениями и буфера обмена Bun согласованы с Node.js, с отдельными разрешениями и поддержкой упакованных приложений
 
 ##### Больше истории выпусков
 

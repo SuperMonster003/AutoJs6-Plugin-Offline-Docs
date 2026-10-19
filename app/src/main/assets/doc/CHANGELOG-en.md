@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.21
+
+###### 2026/10/19
+
+* `Feature` Sensor sampling and subscriptions for Bun and Node.js Workers with cancellation and automatic listener cleanup
+
 # v6.8.20
 
 ###### 2026/10/19
