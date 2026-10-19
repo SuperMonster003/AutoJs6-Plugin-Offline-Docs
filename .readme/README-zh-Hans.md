@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14240197
-contentSha256=2d3798406e994b89d7e7b7f4f427f254488e38f9ce19d9033ada1e7870f28c13
+totalBytes=14254571
+contentSha256=8192de713242503fd8e929209c5a1eef10bb5ed6ae39c877eaa091a29c58d9a7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=ee88dfcc93222cf80911f9982ac973c0df205e82
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.24
+
+###### 2026/10/19
+
+* `新增` Bun 与 Node.js Worker 的宿主事件和通知 API, 支持独立订阅与通知清理
+
 # v6.8.23
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/19
 
 * `修复` shell/shizuku 进程接口的类型声明与补全缺漏, 包含事件参数及管道 Shell 构造器
-
-# v6.8.21
-
-###### 2026/10/19
-
-* `新增` Bun 与 Node.js Worker 的传感器采样及订阅 API, 支持取消和监听器自动释放
 
 ##### 更多发行历史可参阅
 

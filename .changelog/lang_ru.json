@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Улучшение",
   "changelog_label_dependency": "Зависимость",
   "$data": {
+    "v6.8.24": {
+      "released_date": "2026/10/19",
+      "feature": [
+        "События и уведомления хоста для Bun и Node.js Workers с независимой очисткой подписок и уведомлений"
+      ]
+    },
     "v6.8.23": {
       "released_date": "2026/10/19",
       "feature": [

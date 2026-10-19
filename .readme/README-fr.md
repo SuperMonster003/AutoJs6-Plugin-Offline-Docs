@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14240197
-contentSha256=2d3798406e994b89d7e7b7f4f427f254488e38f9ce19d9033ada1e7870f28c13
+totalBytes=14254571
+contentSha256=8192de713242503fd8e929209c5a1eef10bb5ed6ae39c877eaa091a29c58d9a7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=ee88dfcc93222cf80911f9982ac973c0df205e82
 sourcePath=api
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.24
+
+###### 2026/10/19
+
+* `Fonctionnalité` Événements et notifications hôtes pour Bun et les Workers Node.js, avec nettoyage indépendant des abonnements et notifications
+
 # v6.8.23
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/19
 
 * `Correctif` Déclarations et complétions manquantes des processus shell/shizuku, dont les paramètres des événements et les constructeurs Shell avec tubes
-
-# v6.8.21
-
-###### 2026/10/19
-
-* `Fonctionnalité` Mesures et abonnements aux capteurs pour Bun et les Workers Node.js, avec annulation et libération automatique des écouteurs
 
 ##### Pour plus d'historique des versions
 
