@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=219
-totalBytes=14074525
-contentSha256=0a4e9e6819cdb62187a7bb0eb159fae656ee60e41f1eeb113e49c8d97c572f2b
+fileCount=220
+totalBytes=14195521
+contentSha256=cfff322310bf3e1850e6876abc375b0bb72a51cc0c6fffb0da06ac6e686ec623
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
+sourceBaseCommit=65951ff9e23bdf4de2f07da65bb3dd2225c1b650
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.19
+
+###### 2026/10/19
+
+* `기능` Bun 파일 및 영구 저장소 API, 별도의 호스트 파일 권한과 Node.js 저장소 공유 지원
+
 # v6.8.18
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/18
 
 * `기능` Node.js/Bun WebView 화면 공유 어댑터, 포그라운드 서비스 녹음 및 네이티브 백그라운드 카메라 녹화, Node Worker 지원
-
-# v6.8.16
-
-###### 2026/10/18
-
-* `기능` WebView getUserMedia/MediaRecorder 오디오 및 비디오 스트리밍, 페이지 Promise 대기, 명시적 Android 미디어 권한 요청 및 Worker 수명 주기 관리
 
 ##### 더 많은 릴리스 기록
 

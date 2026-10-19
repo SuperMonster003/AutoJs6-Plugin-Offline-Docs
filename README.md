@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=219
-totalBytes=14074525
-contentSha256=0a4e9e6819cdb62187a7bb0eb159fae656ee60e41f1eeb113e49c8d97c572f2b
+fileCount=220
+totalBytes=14195521
+contentSha256=cfff322310bf3e1850e6876abc375b0bb72a51cc0c6fffb0da06ac6e686ec623
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
+sourceBaseCommit=65951ff9e23bdf4de2f07da65bb3dd2225c1b650
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.19
+
+###### 2026/10/19
+
+* `新增` Bun 文件与持久化存储 API, 支持独立授权的宿主文件读写及 Node.js 存储互通
+
 # v6.8.18
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/18
 
 * `新增` Node.js/Bun 的 WebView 屏幕共享适配, 前台服务后台录音及原生后台摄像头录像, 包括 Node Worker 封装
-
-# v6.8.16
-
-###### 2026/10/18
-
-* `新增` WebView getUserMedia/MediaRecorder 流式音视频, 支持等待网页 Promise, 显式申请 Android 媒体权限及 Worker 生命周期管理
 
 ##### 更多发行历史可参阅
 

@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=219
-totalBytes=14074525
-contentSha256=0a4e9e6819cdb62187a7bb0eb159fae656ee60e41f1eeb113e49c8d97c572f2b
+fileCount=220
+totalBytes=14195521
+contentSha256=cfff322310bf3e1850e6876abc375b0bb72a51cc0c6fffb0da06ac6e686ec623
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
+sourceBaseCommit=65951ff9e23bdf4de2f07da65bb3dd2225c1b650
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.19
+
+###### 2026/10/19
+
+* `Fonctionnalité` API Bun de fichiers et de stockage persistant, avec autorisations distinctes et stockage partagé avec Node.js
+
 # v6.8.18
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/18
 
 * `Fonctionnalité` Adaptateur de partage ecran WebView, capture audio par service de premier plan et enregistrement camera natif en arriere-plan pour Node.js/Bun et Node Worker
-
-# v6.8.16
-
-###### 2026/10/18
-
-* `Fonctionnalité` Flux audio et video WebView getUserMedia/MediaRecorder, attente des Promise de page, demandes explicites de permissions multimedia Android et cycle de vie des Worker
 
 ##### Pour plus d'historique des versions
 

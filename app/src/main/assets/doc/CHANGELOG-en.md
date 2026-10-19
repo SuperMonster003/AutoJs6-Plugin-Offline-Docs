@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.19
+
+###### 2026/10/19
+
+* `Feature` Bun file and persistent storage APIs with separate host-file grants and shared Node.js storage
+
 # v6.8.18
 
 ###### 2026/10/19

@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=219
-totalBytes=14074525
-contentSha256=0a4e9e6819cdb62187a7bb0eb159fae656ee60e41f1eeb113e49c8d97c572f2b
+fileCount=220
+totalBytes=14195521
+contentSha256=cfff322310bf3e1850e6876abc375b0bb72a51cc0c6fffb0da06ac6e686ec623
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=89a7719a3a6ff7ea4b241cd1eb6779b7796d5a54
+sourceBaseCommit=65951ff9e23bdf4de2f07da65bb3dd2225c1b650
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.19
+
+###### 2026/10/19
+
+* `Feature` Bun file and persistent storage APIs with separate host-file grants and shared Node.js storage
+
 # v6.8.18
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/18
 
 * `Feature` WebView screen sharing adapter, foreground-service audio capture and native background camera recording in Node.js/Bun, including Node Workers
-
-# v6.8.16
-
-###### 2026/10/18
-
-* `Feature` WebView getUserMedia/MediaRecorder streaming audio and video, awaited page Promises, explicit Android media permission requests and Worker lifecycle support
 
 ##### For more release history
 
