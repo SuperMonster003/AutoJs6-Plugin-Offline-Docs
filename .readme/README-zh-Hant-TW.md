@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14221214
-contentSha256=c04287e30c504e5b71aed98e6bfbe6ef9b2bf10633343181b8acdfc3c56122d8
+totalBytes=14240197
+contentSha256=2d3798406e994b89d7e7b7f4f427f254488e38f9ce19d9033ada1e7870f28c13
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7b79ee8fe6a92569ccc1f5b8723678867cd3cd40
+sourceBaseCommit=ee88dfcc93222cf80911f9982ac973c0df205e82
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.23
+
+###### 2026/10/19
+
+* `新增` Bun, Node.js 及 Worker 的宿主 Shell API, 支援串流輸入輸出, Shizuku 授權與程序清理
+
 # v6.8.22
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/10/19
 
 * `新增` Bun 與 Node.js Worker 的感測器取樣及訂閱 API, 支援取消和監聽器自動釋放
-
-# v6.8.20
-
-###### 2026/10/19
-
-* `新增` Node.js Worker 與 Bun 的 database/sqlite API, 支援參數化查詢, 交易和資料庫持久化
 
 ##### 更多發行歷史可參閱
 

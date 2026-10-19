@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14221214
-contentSha256=c04287e30c504e5b71aed98e6bfbe6ef9b2bf10633343181b8acdfc3c56122d8
+totalBytes=14240197
+contentSha256=2d3798406e994b89d7e7b7f4f427f254488e38f9ce19d9033ada1e7870f28c13
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7b79ee8fe6a92569ccc1f5b8723678867cd3cd40
+sourceBaseCommit=ee88dfcc93222cf80911f9982ac973c0df205e82
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.23
+
+###### 2026/10/19
+
+* `Función` Shell del anfitrión con flujos, autorización Shizuku y limpieza de procesos para Bun, Node.js y Workers
+
 # v6.8.22
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/19
 
 * `Función` Muestras y suscripciones de sensores para Bun y Workers de Node.js, con cancelación y liberación automática de escuchas
-
-# v6.8.20
-
-###### 2026/10/19
-
-* `Función` API database/sqlite del anfitrión para Bun y Workers de Node.js, con consultas parametrizadas, transacciones y persistencia
 
 ##### Para ver más historial de versiones
 
