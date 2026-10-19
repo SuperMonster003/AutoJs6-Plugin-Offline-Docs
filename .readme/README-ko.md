@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14195521
-contentSha256=cfff322310bf3e1850e6876abc375b0bb72a51cc0c6fffb0da06ac6e686ec623
+totalBytes=14209043
+contentSha256=e04b9ef1d3e43052c6d982249cefd8e538acd0bc30ddfa910382ad888dc79f6f
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=65951ff9e23bdf4de2f07da65bb3dd2225c1b650
+sourceBaseCommit=09d3a488e03444d84bafcd51eb5ac970e83919bc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.20
+
+###### 2026/10/19
+
+* `기능` Node.js Worker 및 Bun의 database/sqlite API, 매개변수 쿼리, 트랜잭션 및 데이터베이스 영속성 지원
+
 # v6.8.19
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/19
 
 * `기능` Bun 접근성, 앱 작업 및 클립보드 API를 Node.js 인터페이스에 맞추고 개별 권한과 패키징 앱 지원
-
-# v6.8.17
-
-###### 2026/10/18
-
-* `기능` Node.js/Bun WebView 화면 공유 어댑터, 포그라운드 서비스 녹음 및 네이티브 백그라운드 카메라 녹화, Node Worker 지원
 
 ##### 더 많은 릴리스 기록
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14195521
-contentSha256=cfff322310bf3e1850e6876abc375b0bb72a51cc0c6fffb0da06ac6e686ec623
+totalBytes=14209043
+contentSha256=e04b9ef1d3e43052c6d982249cefd8e538acd0bc30ddfa910382ad888dc79f6f
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=65951ff9e23bdf4de2f07da65bb3dd2225c1b650
+sourceBaseCommit=09d3a488e03444d84bafcd51eb5ac970e83919bc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.20
+
+###### 2026/10/19
+
+* `ميزة` واجهات database/sqlite للمضيف في Bun وWorkers من Node.js مع استعلامات بمعاملات ومعاملات ذرية وتخزين دائم
+
 # v6.8.19
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ category=offline-docs
 ###### 2026/10/19
 
 * `ميزة` واجهات Bun لإمكانية الوصول وعمليات التطبيقات والحافظة متوافقة مع Node.js مع أذونات مستقلة ودعم التطبيقات المحزمة
-
-# v6.8.17
-
-###### 2026/10/18
-
-* `ميزة` مهايئ مشاركة شاشة WebView وتسجيل الصوت عبر خدمة أمامية وتسجيل الكاميرا الأصلي في الخلفية في Node.js/Bun مع دعم Node Worker
 
 ##### لمزيد من سجل الإصدارات
 

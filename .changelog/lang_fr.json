@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Amélioration",
   "changelog_label_dependency": "Dépendance",
   "$data": {
+    "v6.8.20": {
+      "released_date": "2026/10/19",
+      "feature": [
+        "API hôtes database/sqlite pour Bun et les Workers Node.js, avec requêtes paramétrées, transactions et persistance"
+      ]
+    },
     "v6.8.19": {
       "released_date": "2026/10/19",
       "feature": [

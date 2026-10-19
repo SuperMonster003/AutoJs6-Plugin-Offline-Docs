@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14195521
-contentSha256=cfff322310bf3e1850e6876abc375b0bb72a51cc0c6fffb0da06ac6e686ec623
+totalBytes=14209043
+contentSha256=e04b9ef1d3e43052c6d982249cefd8e538acd0bc30ddfa910382ad888dc79f6f
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=65951ff9e23bdf4de2f07da65bb3dd2225c1b650
+sourceBaseCommit=09d3a488e03444d84bafcd51eb5ac970e83919bc
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.20
+
+###### 2026/10/19
+
+* `Fonctionnalité` API hôtes database/sqlite pour Bun et les Workers Node.js, avec requêtes paramétrées, transactions et persistance
+
 # v6.8.19
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/19
 
 * `Fonctionnalité` API Bun pour accessibilité, applications et presse-papiers alignées sur Node.js, avec autorisations distinctes et applications empaquetées
-
-# v6.8.17
-
-###### 2026/10/18
-
-* `Fonctionnalité` Adaptateur de partage ecran WebView, capture audio par service de premier plan et enregistrement camera natif en arriere-plan pour Node.js/Bun et Node Worker
 
 ##### Pour plus d'historique des versions
 
