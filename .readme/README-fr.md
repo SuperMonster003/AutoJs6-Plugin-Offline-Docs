@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14268992
-contentSha256=03c88a4ba9b332f2f35993a1c5c2847c0d5159042e1cb743aa5b59ba4f04c71a
+totalBytes=14291215
+contentSha256=2a8265ebeabcbc0602c7b5d203f0edf01257b32b681fad2183d8a02b91285f8f
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c87563910897f1c2cd207a52a281c1343c029b7a
+sourceBaseCommit=5e6c986a1361098a17353ad28f80a6d13f279f0a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.26
+
+###### 2026/10/19
+
+* `Fonctionnalité` Objets Android pour Node.js, Bun et les Workers, avec Paint, ColorStateList, couleurs du thème et URI FileProvider
+* `Fonctionnalité` API persistantes de calendrier et IntentTask pour Node.js et Bun, avec tâches quotidiennes, hebdomadaires, mensuelles, annuelles, ponctuelles, différées et de diffusion
+
 # v6.8.25
 
 ###### 2026/10/19
@@ -125,12 +132,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/19
 
 * `Fonctionnalité` Événements et notifications hôtes pour Bun et les Workers Node.js, avec nettoyage indépendant des abonnements et notifications
-
-# v6.8.23
-
-###### 2026/10/19
-
-* `Fonctionnalité` Shell hôte avec flux, autorisation Shizuku et nettoyage des processus pour Bun, Node.js et les Workers
 
 ##### Pour plus d'historique des versions
 

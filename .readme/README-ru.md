@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14268992
-contentSha256=03c88a4ba9b332f2f35993a1c5c2847c0d5159042e1cb743aa5b59ba4f04c71a
+totalBytes=14291215
+contentSha256=2a8265ebeabcbc0602c7b5d203f0edf01257b32b681fad2183d8a02b91285f8f
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c87563910897f1c2cd207a52a281c1343c029b7a
+sourceBaseCommit=5e6c986a1361098a17353ad28f80a6d13f279f0a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.26
+
+###### 2026/10/19
+
+* `Функция` Объекты Android для Node.js, Bun и Workers, включая Paint, ColorStateList, цвета темы и URI FileProvider
+* `Функция` Постоянные календарные задачи и IntentTask для Node.js и Bun, включая ежедневные, еженедельные, ежемесячные, ежегодные, разовые, отложенные и широковещательные задачи
+
 # v6.8.25
 
 ###### 2026/10/19
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/19
 
 * `Функция` События и уведомления хоста для Bun и Node.js Workers с независимой очисткой подписок и уведомлений
-
-# v6.8.23
-
-###### 2026/10/19
-
-* `Функция` Shell хоста с потоковым вводом и выводом, разрешением Shizuku и очисткой процессов для Bun, Node.js и Workers
 
 ##### Больше истории выпусков
 

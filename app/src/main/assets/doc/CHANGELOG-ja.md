@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.26
+
+###### 2026/10/19
+
+* `機能` Node.js, Bun と Worker の Android オブジェクトヘルパー, Paint, ColorStateList, テーマ色と FileProvider URI
+* `機能` Node.js と Bun の永続的なカレンダーと IntentTask API, 毎日, 毎週, 毎月, 毎年, 単発, カウントダウンとブロードキャストのタスク
+
 # v6.8.25
 
 ###### 2026/10/19
