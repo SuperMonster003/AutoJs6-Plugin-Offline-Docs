@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14254571
-contentSha256=8192de713242503fd8e929209c5a1eef10bb5ed6ae39c877eaa091a29c58d9a7
+totalBytes=14268992
+contentSha256=03c88a4ba9b332f2f35993a1c5c2847c0d5159042e1cb743aa5b59ba4f04c71a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ee88dfcc93222cf80911f9982ac973c0df205e82
+sourceBaseCommit=c87563910897f1c2cd207a52a281c1343c029b7a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.25
+
+###### 2026/10/19
+
+* `新增` Bun 與 Node.js Worker 的裝置控制及對話方塊 API, 支援亮度, 音量和獨立視窗清理
+
 # v6.8.24
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/10/19
 
 * `新增` Bun, Node.js 及 Worker 的宿主 Shell API, 支援串流輸入輸出, Shizuku 授權與程序清理
-
-# v6.8.22
-
-###### 2026/10/19
-
-* `修復` shell/shizuku 程序介面的型別宣告與補全遺漏, 包含事件參數及管道 Shell 建構式
 
 ##### 更多發行歷史可參閱
 

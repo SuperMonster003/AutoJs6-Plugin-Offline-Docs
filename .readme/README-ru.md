@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14254571
-contentSha256=8192de713242503fd8e929209c5a1eef10bb5ed6ae39c877eaa091a29c58d9a7
+totalBytes=14268992
+contentSha256=03c88a4ba9b332f2f35993a1c5c2847c0d5159042e1cb743aa5b59ba4f04c71a
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=ee88dfcc93222cf80911f9982ac973c0df205e82
+sourceBaseCommit=c87563910897f1c2cd207a52a281c1343c029b7a
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.25
+
+###### 2026/10/19
+
+* `Функция` Управление устройством и диалоги для Bun и Node.js Workers с яркостью, громкостью и независимой очисткой окон
+
 # v6.8.24
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/19
 
 * `Функция` Shell хоста с потоковым вводом и выводом, разрешением Shizuku и очисткой процессов для Bun, Node.js и Workers
-
-# v6.8.22
-
-###### 2026/10/19
-
-* `Исправление` Недостающие объявления типов и дополнения процессов shell/shizuku, включая параметры событий и конструкторы Shell с каналами
 
 ##### Больше истории выпусков
 
