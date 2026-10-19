@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Amélioration",
   "changelog_label_dependency": "Dépendance",
   "$data": {
+    "v6.8.28": {
+      "released_date": "2026/10/20",
+      "feature": [
+        "Interopérabilité Java/Android pour Node.js, Bun et Workers, avec constructeurs et membres publics, tableaux, valeurs long exactes, surcharges explicites et handles Context"
+      ]
+    },
     "v6.8.27": {
       "released_date": "2026/10/19",
       "feature": [

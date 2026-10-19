@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14291215
-contentSha256=2a8265ebeabcbc0602c7b5d203f0edf01257b32b681fad2183d8a02b91285f8f
+totalBytes=14305796
+contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5e6c986a1361098a17353ad28f80a6d13f279f0a
+sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.28
+
+###### 2026/10/20
+
+* `新增` Node.js/Bun/Worker 的 Java/Android 对象互操作, 支持公开构造器和成员, 数组, 精确 long 值, 显式重载及应用 Context 句柄
+
 # v6.8.27
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 * `新增` Node.js/Bun 的 Android 对象辅助接口及 Worker 封装, 支持 Paint, ColorStateList, 主题色和 FileProvider URI
 * `新增` Node.js/Bun 的持久日历与 IntentTask API, 支持每日, 每周, 每月, 每年, 一次性, 倒计时和广播任务
-
-# v6.8.25
-
-###### 2026/10/19
-
-* `新增` Bun 与 Node.js Worker 的设备控制和对话框 API, 支持亮度, 音量和独立窗口清理
 
 ##### 更多发行历史可参阅
 

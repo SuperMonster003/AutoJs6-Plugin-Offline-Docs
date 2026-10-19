@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14291215
-contentSha256=2a8265ebeabcbc0602c7b5d203f0edf01257b32b681fad2183d8a02b91285f8f
+totalBytes=14305796
+contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5e6c986a1361098a17353ad28f80a6d13f279f0a
+sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.28
+
+###### 2026/10/20
+
+* `Feature` Java/Android object interop for Node.js, Bun and Workers, including public constructors and members, arrays, exact long values, explicit overloads and application Context handles
+
 # v6.8.27
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 * `Feature` Android object helpers for Node.js, Bun and Workers, including Paint, ColorStateList, theme colors and FileProvider URIs
 * `Feature` Persistent calendar and IntentTask APIs for Node.js and Bun, with daily, weekly, monthly, yearly, one-shot, countdown and broadcast tasks
-
-# v6.8.25
-
-###### 2026/10/19
-
-* `Feature` Device controls and dialogs for Bun and Node.js Workers, including brightness, volume and independent window cleanup
 
 ##### For more release history
 

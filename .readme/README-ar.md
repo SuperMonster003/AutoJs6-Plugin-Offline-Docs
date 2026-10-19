@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14291215
-contentSha256=2a8265ebeabcbc0602c7b5d203f0edf01257b32b681fad2183d8a02b91285f8f
+totalBytes=14305796
+contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5e6c986a1361098a17353ad28f80a6d13f279f0a
+sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.28
+
+###### 2026/10/20
+
+* `ميزة` تكامل Java/Android في Node.js وBun وWorkers مع المنشئات والأعضاء العامة والمصفوفات وقيم long الدقيقة والتحميل الزائد الصريح ومراجع Context للتطبيق
+
 # v6.8.27
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ category=offline-docs
 
 * `ميزة` مساعدات كائنات Android في Node.js وBun وWorkers مع Paint وColorStateList وألوان السمة وURI FileProvider
 * `ميزة` واجهات التقويم وIntentTask الدائمة في Node.js وBun للمهام اليومية والأسبوعية والشهرية والسنوية والفردية والتنازلية ومهام البث
-
-# v6.8.25
-
-###### 2026/10/19
-
-* `ميزة` التحكم بالجهاز ومربعات الحوار في Bun وNode.js Workers مع السطوع والصوت والتنظيف المستقل للنوافذ
 
 ##### لمزيد من سجل الإصدارات
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14291215
-contentSha256=2a8265ebeabcbc0602c7b5d203f0edf01257b32b681fad2183d8a02b91285f8f
+totalBytes=14305796
+contentSha256=7658cf06055542b81713b711e6308dfc39657bda9e25893f9e9933bccc174cc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5e6c986a1361098a17353ad28f80a6d13f279f0a
+sourceBaseCommit=ffc49a0819c3a5f1bc4b6034126cbbc091d98152
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.28
+
+###### 2026/10/20
+
+* `Fonctionnalité` Interopérabilité Java/Android pour Node.js, Bun et Workers, avec constructeurs et membres publics, tableaux, valeurs long exactes, surcharges explicites et handles Context
+
 # v6.8.27
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 * `Fonctionnalité` Objets Android pour Node.js, Bun et les Workers, avec Paint, ColorStateList, couleurs du thème et URI FileProvider
 * `Fonctionnalité` API persistantes de calendrier et IntentTask pour Node.js et Bun, avec tâches quotidiennes, hebdomadaires, mensuelles, annuelles, ponctuelles, différées et de diffusion
-
-# v6.8.25
-
-###### 2026/10/19
-
-* `Fonctionnalité` Commandes de périphérique et dialogues pour Bun et les Workers Node.js, avec luminosité, volume et nettoyage indépendant des fenêtres
 
 ##### Pour plus d'historique des versions
 

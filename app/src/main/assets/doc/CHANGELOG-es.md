@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.28
+
+###### 2026/10/20
+
+* `Función` Interoperabilidad Java/Android para Node.js, Bun y Workers, con constructores y miembros públicos, matrices, valores long exactos, sobrecargas explícitas y referencias Context
+
 # v6.8.27
 
 ###### 2026/10/19
