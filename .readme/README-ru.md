@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14218716
-contentSha256=fb427a787d6d79175f2a390e00519840969947abf07923c20e6402d1e2df852b
+totalBytes=14221214
+contentSha256=c04287e30c504e5b71aed98e6bfbe6ef9b2bf10633343181b8acdfc3c56122d8
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7840c32f9e353002de9b54e6a52082e51f14a3a3
+sourceBaseCommit=7b79ee8fe6a92569ccc1f5b8723678867cd3cd40
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.22
+
+###### 2026/10/19
+
+* `Исправление` Недостающие объявления типов и дополнения процессов shell/shizuku, включая параметры событий и конструкторы Shell с каналами
+
 # v6.8.21
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/19
 
 * `Функция` API database/sqlite хоста для Bun и Workers Node.js с параметризованными запросами, транзакциями и сохранением данных
-
-# v6.8.19
-
-###### 2026/10/19
-
-* `Функция` API файлов и постоянного хранилища Bun с отдельными разрешениями и общим хранилищем Node.js
 
 ##### Больше истории выпусков
 

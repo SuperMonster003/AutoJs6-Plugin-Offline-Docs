@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14218716
-contentSha256=fb427a787d6d79175f2a390e00519840969947abf07923c20e6402d1e2df852b
+totalBytes=14221214
+contentSha256=c04287e30c504e5b71aed98e6bfbe6ef9b2bf10633343181b8acdfc3c56122d8
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7840c32f9e353002de9b54e6a52082e51f14a3a3
+sourceBaseCommit=7b79ee8fe6a92569ccc1f5b8723678867cd3cd40
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.22
+
+###### 2026/10/19
+
+* `Correctif` Déclarations et complétions manquantes des processus shell/shizuku, dont les paramètres des événements et les constructeurs Shell avec tubes
+
 # v6.8.21
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/19
 
 * `Fonctionnalité` API hôtes database/sqlite pour Bun et les Workers Node.js, avec requêtes paramétrées, transactions et persistance
-
-# v6.8.19
-
-###### 2026/10/19
-
-* `Fonctionnalité` API Bun de fichiers et de stockage persistant, avec autorisations distinctes et stockage partagé avec Node.js
 
 ##### Pour plus d'historique des versions
 

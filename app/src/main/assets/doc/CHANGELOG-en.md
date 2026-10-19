@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.22
+
+###### 2026/10/19
+
+* `Fix` Missing shell/shizuku process declarations and completions, including event parameters and pipe-based Shell constructors
+
 # v6.8.21
 
 ###### 2026/10/19

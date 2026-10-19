@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14218716
-contentSha256=fb427a787d6d79175f2a390e00519840969947abf07923c20e6402d1e2df852b
+totalBytes=14221214
+contentSha256=c04287e30c504e5b71aed98e6bfbe6ef9b2bf10633343181b8acdfc3c56122d8
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7840c32f9e353002de9b54e6a52082e51f14a3a3
+sourceBaseCommit=7b79ee8fe6a92569ccc1f5b8723678867cd3cd40
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.22
+
+###### 2026/10/19
+
+* `수정` shell/shizuku 프로세스 타입 선언과 자동 완성 누락, 이벤트 인수 및 파이프 Shell 생성자 포함
+
 # v6.8.21
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/19
 
 * `기능` Node.js Worker 및 Bun의 database/sqlite API, 매개변수 쿼리, 트랜잭션 및 데이터베이스 영속성 지원
-
-# v6.8.19
-
-###### 2026/10/19
-
-* `기능` Bun 파일 및 영구 저장소 API, 별도의 호스트 파일 권한과 Node.js 저장소 공유 지원
 
 ##### 더 많은 릴리스 기록
 

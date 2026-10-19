@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.22
+
+###### 2026/10/19
+
+* `Corrección` Declaraciones y autocompletado ausentes de procesos shell/shizuku, incluidos eventos y constructores Shell con tuberías
+
 # v6.8.21
 
 ###### 2026/10/19

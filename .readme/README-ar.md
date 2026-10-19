@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=220
-totalBytes=14218716
-contentSha256=fb427a787d6d79175f2a390e00519840969947abf07923c20e6402d1e2df852b
+totalBytes=14221214
+contentSha256=c04287e30c504e5b71aed98e6bfbe6ef9b2bf10633343181b8acdfc3c56122d8
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7840c32f9e353002de9b54e6a52082e51f14a3a3
+sourceBaseCommit=7b79ee8fe6a92569ccc1f5b8723678867cd3cd40
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.22
+
+###### 2026/10/19
+
+* `إصلاح` إكمال تعريفات أنواع عمليات shell/shizuku واقتراحاتها بما يشمل معاملات الأحداث ومنشئات Shell ذات الأنابيب
+
 # v6.8.21
 
 ###### 2026/10/19
@@ -125,12 +131,6 @@ category=offline-docs
 ###### 2026/10/19
 
 * `ميزة` واجهات database/sqlite للمضيف في Bun وWorkers من Node.js مع استعلامات بمعاملات ومعاملات ذرية وتخزين دائم
-
-# v6.8.19
-
-###### 2026/10/19
-
-* `ميزة` واجهات Bun للملفات والتخزين الدائم مع أذونات مستقلة وبيانات تخزين مشتركة مع Node.js
 
 ##### لمزيد من سجل الإصدارات
 

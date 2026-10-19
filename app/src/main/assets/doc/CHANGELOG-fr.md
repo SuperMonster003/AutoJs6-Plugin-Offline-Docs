@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.22
+
+###### 2026/10/19
+
+* `Correctif` Déclarations et complétions manquantes des processus shell/shizuku, dont les paramètres des événements et les constructeurs Shell avec tubes
+
 # v6.8.21
 
 ###### 2026/10/19
