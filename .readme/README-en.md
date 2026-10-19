@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `Feature` Streaming Shell APIs for AutoJs6 scripts, including ShellProcess returned by shell.spawn and shizuku.spawn, the Auto.js Pro compatible pipe-based Shell and $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/19
 
 * `Feature` Device controls and dialogs for Bun and Node.js Workers, including brightness, volume and independent window cleanup
-
-# v6.8.24
-
-###### 2026/10/19
-
-* `Feature` Host event observers and notifications for Bun and Node.js Workers, with independent subscription and notification cleanup
 
 ##### For more release history
 

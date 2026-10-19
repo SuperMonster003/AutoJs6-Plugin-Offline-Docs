@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Amélioration",
   "changelog_label_dependency": "Dépendance",
   "$data": {
+    "v6.8.27": {
+      "released_date": "2026/10/19",
+      "feature": [
+        "API Shell avec flux pour les scripts AutoJs6, dont ShellProcess renvoyé par shell.spawn et shizuku.spawn, le Shell avec tubes compatible Auto.js Pro et $shell.setDefaultOptions"
+      ]
+    },
     "v6.8.26": {
       "released_date": "2026/10/19",
       "feature": [

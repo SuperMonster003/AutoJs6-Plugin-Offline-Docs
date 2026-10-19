@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `Fonctionnalité` API Shell avec flux pour les scripts AutoJs6, dont ShellProcess renvoyé par shell.spawn et shizuku.spawn, le Shell avec tubes compatible Auto.js Pro et $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/19
 
 * `Fonctionnalité` Commandes de périphérique et dialogues pour Bun et les Workers Node.js, avec luminosité, volume et nettoyage indépendant des fenêtres
-
-# v6.8.24
-
-###### 2026/10/19
-
-* `Fonctionnalité` Événements et notifications hôtes pour Bun et les Workers Node.js, avec nettoyage indépendant des abonnements et notifications
 
 ##### Pour plus d'historique des versions
 

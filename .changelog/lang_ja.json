@@ -5,6 +5,12 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v6.8.27": {
+      "released_date": "2026/10/19",
+      "feature": [
+        "AutoJs6 スクリプトのストリーム Shell API, shell.spawn と shizuku.spawn が返す ShellProcess, Auto.js Pro 互換のパイプ型 Shell と $shell.setDefaultOptions を含む"
+      ]
+    },
     "v6.8.26": {
       "released_date": "2026/10/19",
       "feature": [

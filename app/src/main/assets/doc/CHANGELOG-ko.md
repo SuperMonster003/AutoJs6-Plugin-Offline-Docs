@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `기능` AutoJs6 스크립트의 스트리밍 Shell API, shell.spawn 및 shizuku.spawn이 반환하는 ShellProcess, Auto.js Pro 호환 파이프 Shell 및 $shell.setDefaultOptions 포함
+
 # v6.8.26
 
 ###### 2026/10/19

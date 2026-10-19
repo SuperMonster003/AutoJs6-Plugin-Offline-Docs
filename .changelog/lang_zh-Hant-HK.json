@@ -5,6 +5,12 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "依賴",
   "$data": {
+    "v6.8.27": {
+      "released_date": "2026/10/19",
+      "feature": [
+        "AutoJs6 腳本的串流 Shell API, 包括 shell.spawn 與 shizuku.spawn 返回的 ShellProcess, 兼容 Auto.js Pro 的管道 Shell 及 $shell.setDefaultOptions"
+      ]
+    },
     "v6.8.26": {
       "released_date": "2026/10/19",
       "feature": [

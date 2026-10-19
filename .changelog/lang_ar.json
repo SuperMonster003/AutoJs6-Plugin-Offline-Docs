@@ -5,6 +5,12 @@
   "changelog_label_improvement": "تحسين",
   "changelog_label_dependency": "تبعية",
   "$data": {
+    "v6.8.27": {
+      "released_date": "2026/10/19",
+      "feature": [
+        "واجهات Shell المتدفقة لسكربتات AutoJs6, تشمل ShellProcess الذي تعيده shell.spawn و shizuku.spawn و Shell ذات الأنابيب المتوافقة مع Auto.js Pro و $shell.setDefaultOptions"
+      ]
+    },
     "v6.8.26": {
       "released_date": "2026/10/19",
       "feature": [

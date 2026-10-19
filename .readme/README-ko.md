@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `기능` AutoJs6 스크립트의 스트리밍 Shell API, shell.spawn 및 shizuku.spawn이 반환하는 ShellProcess, Auto.js Pro 호환 파이프 Shell 및 $shell.setDefaultOptions 포함
+
 # v6.8.26
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/19
 
 * `기능` Bun 및 Node.js Worker의 기기 제어와 대화상자 API, 밝기, 음량 및 독립 창 정리
-
-# v6.8.24
-
-###### 2026/10/19
-
-* `기능` Bun 및 Node.js Worker의 호스트 이벤트 및 알림 API, 독립 구독과 알림 정리
 
 ##### 더 많은 릴리스 기록
 

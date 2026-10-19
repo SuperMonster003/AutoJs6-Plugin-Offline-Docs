@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `Feature` Streaming Shell APIs for AutoJs6 scripts, including ShellProcess returned by shell.spawn and shizuku.spawn, the Auto.js Pro compatible pipe-based Shell and $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19

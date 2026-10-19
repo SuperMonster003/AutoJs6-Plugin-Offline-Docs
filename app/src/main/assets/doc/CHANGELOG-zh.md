@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `新增` AutoJs6 脚本的流式 Shell API, 包括 shell.spawn 与 shizuku.spawn 返回的 ShellProcess, 兼容 Auto.js Pro 的管道 Shell 及 $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19

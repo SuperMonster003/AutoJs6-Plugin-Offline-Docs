@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `Función` API de Shell con flujos para scripts de AutoJs6, incluidos ShellProcess devuelto por shell.spawn y shizuku.spawn, Shell con tuberías compatible con Auto.js Pro y $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19

@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `Функция` Потоковые API Shell для скриптов AutoJs6, включая ShellProcess из shell.spawn и shizuku.spawn, совместимый с Auto.js Pro Shell с каналами и $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/19
 
 * `Функция` Управление устройством и диалоги для Bun и Node.js Workers с яркостью, громкостью и независимой очисткой окон
-
-# v6.8.24
-
-###### 2026/10/19
-
-* `Функция` События и уведомления хоста для Bun и Node.js Workers с независимой очисткой подписок и уведомлений
 
 ##### Больше истории выпусков
 

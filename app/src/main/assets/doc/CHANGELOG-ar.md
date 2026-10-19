@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `ميزة` واجهات Shell المتدفقة لسكربتات AutoJs6, تشمل ShellProcess الذي تعيده shell.spawn و shizuku.spawn و Shell ذات الأنابيب المتوافقة مع Auto.js Pro و $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19

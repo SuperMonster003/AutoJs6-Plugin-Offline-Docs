@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `新增` AutoJs6 指令碼的串流 Shell API, 包括 shell.spawn 與 shizuku.spawn 傳回的 ShellProcess, 相容 Auto.js Pro 的管道 Shell 及 $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/10/19
 
 * `新增` Bun 與 Node.js Worker 的裝置控制及對話方塊 API, 支援亮度, 音量和獨立視窗清理
-
-# v6.8.24
-
-###### 2026/10/19
-
-* `新增` Bun 與 Node.js Worker 的宿主事件及通知 API, 支援獨立訂閱與通知清理
 
 ##### 更多發行歷史可參閱
 

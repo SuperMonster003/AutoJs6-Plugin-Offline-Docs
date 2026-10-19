@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.27
+
+###### 2026/10/19
+
+* `新增` AutoJs6 指令碼的串流 Shell API, 包括 shell.spawn 與 shizuku.spawn 傳回的 ShellProcess, 相容 Auto.js Pro 的管道 Shell 及 $shell.setDefaultOptions
+
 # v6.8.26
 
 ###### 2026/10/19
