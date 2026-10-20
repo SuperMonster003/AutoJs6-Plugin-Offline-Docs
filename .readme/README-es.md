@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14691761
-contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
+totalBytes=14712355
+contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
+sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `Mejora` Documentación - Node.js/Bun/Worker: Lectura de EPUB, exportación de recursos, búsqueda y sesiones del lector con eventos
+
 # v6.8.32
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/20
 
 * `Función` API de síntesis de voz para Node.js, Bun y Workers con consultas de motores y voces, lectura, silencio, archivos de audio y eventos de tareas
-
-# v6.8.30
-
-###### 2026/10/20
-
-* `Mejora` Referencia del módulo Speech: el objeto speech del plugin 3-Macaw Speech (dictado por micrófono, reconocimiento de archivos y PCM, detección de actividad de voz, palabras de activación, síntesis de voz y gestión de modelos), el catálogo de modelos y sus licencias, la grabación en segundo plano y la cesión temporal del micrófono por las sesiones de activación, los códigos de error y los límites, el asistente digital, la entrada de voz del sistema, el servicio de reconocimiento de voz del sistema, el contrato de la entrada VOICE_COMMAND y los tipos SpeechSession, SpeechWakeSession, SpeechRecognitionResult y SpeechModelInfo
-* `Mejora` Referencia de TTS: nombres de voz, disponibilidad de idiomas y reglas de selección de voz de speech.speak para el motor 3-Macaw Speech; referencia de Plugins: lista de plugins que proporcionan módulos de script
 
 ##### Para ver más historial de versiones
 

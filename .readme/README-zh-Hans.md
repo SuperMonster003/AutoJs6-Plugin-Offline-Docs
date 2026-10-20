@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14691761
-contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
+totalBytes=14712355
+contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
+sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `优化` 文档 - Node.js/Bun/Worker: EPUB 书籍读取, 资源导出, 搜索及带事件的阅读器会话
+
 # v6.8.32
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/20
 
 * `新增` Node.js/Bun/Worker 的文字转语音接口, 支持引擎与音色查询, 朗读, 静音任务, 音频文件合成和任务事件
-
-# v6.8.30
-
-###### 2026/10/20
-
-* `优化` 语音 (Speech) 模块参考: 3-Macaw Speech 插件提供的 speech 对象, 包括麦克风听写, 文件与 PCM 识别, 语音活动检测, 唤醒词, 语音合成与模型管理, 模型目录与许可, 后台收音与唤醒会话的临时接管, 错误代码与上限, 数字助理, 系统语音输入, 系统语音识别服务与 VOICE_COMMAND 入口契约, 以及 SpeechSession, SpeechWakeSession, SpeechRecognitionResult 与 SpeechModelInfo 类型
-* `优化` TTS 参考: 3-Macaw Speech 引擎的语音名称, 语言可用性与 speech.speak 的语音选择规则; 插件参考: 提供脚本模块的插件列表
 
 ##### 更多发行历史可参阅
 

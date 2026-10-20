@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `Amélioration` Documentation - Node.js/Bun/Worker: Lecture EPUB, export des ressources, recherche et sessions du lecteur avec événements
+
 # v6.8.32
 
 ###### 2026/10/20

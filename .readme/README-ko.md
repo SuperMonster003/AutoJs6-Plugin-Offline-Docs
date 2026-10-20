@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14691761
-contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
+totalBytes=14712355
+contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
+sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `개선` 문서 - Node.js/Bun/Worker: EPUB 도서 읽기, 리소스 내보내기, 검색 및 이벤트를 지원하는 리더 세션
+
 # v6.8.32
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/20
 
 * `기능` Node.js/Bun/Worker의 음성 합성 API로 엔진과 음성 조회, 읽기, 무음, 오디오 파일 합성 및 작업 이벤트 지원
-
-# v6.8.30
-
-###### 2026/10/20
-
-* `개선` 음성 (Speech) 모듈 참조: 3-Macaw Speech 플러그인이 제공하는 speech 객체 (마이크 받아쓰기, 파일과 PCM 인식, 음성 활동 감지, 호출어, 음성 합성, 모델 관리), 모델 카탈로그와 라이선스, 백그라운드 녹음과 호출어 세션의 일시적 마이크 인계, 오류 코드와 상한, 디지털 어시스턴트, 시스템 음성 입력, 시스템 음성 인식 서비스, VOICE_COMMAND 진입점 계약 및 SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 형식
-* `개선` TTS 참조: 3-Macaw Speech 엔진의 음성 이름, 언어 사용 가능 여부, speech.speak 의 음성 선택 규칙; 플러그인 참조: 스크립트 모듈을 제공하는 플러그인 목록
 
 ##### 더 많은 릴리스 기록
 

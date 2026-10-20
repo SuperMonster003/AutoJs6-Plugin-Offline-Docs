@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Улучшение",
   "changelog_label_dependency": "Зависимость",
   "$data": {
+    "v6.8.33": {
+      "released_date": "2026/10/21",
+      "improvement": [
+        "Документация - Node.js/Bun/Worker: Чтение EPUB, экспорт ресурсов, поиск и сеансы чтения с событиями"
+      ]
+    },
     "v6.8.32": {
       "released_date": "2026/10/20",
       "feature": [

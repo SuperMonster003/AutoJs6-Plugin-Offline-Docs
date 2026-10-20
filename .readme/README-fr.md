@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14691761
-contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
+totalBytes=14712355
+contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
+sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `Amélioration` Documentation - Node.js/Bun/Worker: Lecture EPUB, export des ressources, recherche et sessions du lecteur avec événements
+
 # v6.8.32
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/20
 
 * `Fonctionnalité` API de synthèse vocale pour Node.js, Bun et Workers avec requêtes des moteurs et voix, lecture, silence, fichiers audio et événements des tâches
-
-# v6.8.30
-
-###### 2026/10/20
-
-* `Amélioration` Référence du module Speech: l'objet speech fourni par le plugin 3-Macaw Speech (dictée au microphone, reconnaissance de fichiers et de PCM, détection d'activité vocale, mots d'activation, synthèse vocale et gestion des modèles), le catalogue des modèles et leurs licences, l'enregistrement en arrière-plan et la cession temporaire du microphone par les sessions d'activation, les codes d'erreur et les limites, l'assistant numérique, la saisie vocale du système, le service de reconnaissance vocale du système, le contrat de l'entrée VOICE_COMMAND et les types SpeechSession, SpeechWakeSession, SpeechRecognitionResult et SpeechModelInfo
-* `Amélioration` Référence TTS: noms de voix, disponibilité des langues et règles de choix de voix de speech.speak pour le moteur 3-Macaw Speech; référence Plugins: liste des plugins qui fournissent des modules de script
 
 ##### Pour plus d'historique des versions
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14691761
-contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
+totalBytes=14712355
+contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
+sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `改善` ドキュメント - Node.js/Bun/Worker: EPUB 書籍の読み込み, リソース出力, 検索とイベント付きリーダーセッション
+
 # v6.8.32
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/20
 
 * `機能` Node.js/Bun/Worker の音声合成 API でエンジンと音声の照会, 読み上げ, 無音, 音声ファイル合成とタスクイベントに対応
-
-# v6.8.30
-
-###### 2026/10/20
-
-* `改善` 音声 (Speech) モジュールのリファレンス: 3-Macaw Speech プラグインが提供する speech オブジェクト (マイクによる口述入力, ファイルと PCM の認識, 音声区間検出, ウェイクワード, 音声合成, モデル管理), モデルカタログとライセンス, バックグラウンド録音とウェイクセッションの一時的な引き継ぎ, エラーコードと上限, デジタルアシスタント, システムの音声入力, システムの音声認識サービス, VOICE_COMMAND エントリの契約, SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 型
-* `改善` TTS リファレンス: 3-Macaw Speech エンジンの音声名, 言語の可用性, speech.speak の音声選択規則; プラグインのリファレンス: スクリプトモジュールを提供するプラグインの一覧
 
 ##### その他のリリース履歴
 

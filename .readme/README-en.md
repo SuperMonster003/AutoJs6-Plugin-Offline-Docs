@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14691761
-contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
+totalBytes=14712355
+contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
+sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `Improvement` Documentation - Node.js/Bun/Worker: EPUB book reading, resource export, search and reader sessions with events
+
 # v6.8.32
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/20
 
 * `Feature` Text-to-speech APIs for Node.js, Bun and Workers, with engine and voice queries, speech, silence, audio file synthesis and task events
-
-# v6.8.30
-
-###### 2026/10/20
-
-* `Improvement` Speech module reference: the speech object provided by the 3-Macaw Speech plugin, covering microphone dictation, file and PCM recognition, voice activity detection, wake words, speech synthesis and model management, the model catalog and licenses, background recording and the temporary takeover of wake sessions, error codes and limits, the digital assistant, system voice input, the system speech recognition service and the VOICE_COMMAND entry contract, plus the SpeechSession, SpeechWakeSession, SpeechRecognitionResult and SpeechModelInfo types
-* `Improvement` TTS reference: voice names, language availability and the speech.speak voice selection rules of the 3-Macaw Speech engine; Plugins reference: the list of plugins that provide script modules
 
 ##### For more release history
 

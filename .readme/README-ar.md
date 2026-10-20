@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14691761
-contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
+totalBytes=14712355
+contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
+sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.33
+
+###### 2026/10/21
+
+* `تحسين` الوثائق - Node.js/Bun/Worker: قراءة كتب EPUB وتصدير الموارد والبحث وجلسات القارئ مع الأحداث
+
 # v6.8.32
 
 ###### 2026/10/20
@@ -125,13 +131,6 @@ category=offline-docs
 ###### 2026/10/20
 
 * `ميزة` واجهات تحويل النص إلى كلام في Node.js وBun وWorkers مع استعلامات المحركات والأصوات والنطق والصمت وملفات الصوت وأحداث المهام
-
-# v6.8.30
-
-###### 2026/10/20
-
-* `تحسين` مرجع وحدة Speech: كائن speech الذي يوفره ملحق 3-Macaw Speech (الإملاء من الميكروفون والتعرف على الملفات وبيانات PCM واكتشاف النشاط الصوتي وكلمات التنبيه وتركيب الكلام وإدارة النماذج), وكتالوج النماذج وتراخيصها, والتسجيل في الخلفية وتنازل جلسات التنبيه المؤقت عن الميكروفون, ورموز الأخطاء والحدود, والمساعد الرقمي والإدخال الصوتي للنظام وخدمة التعرف على الكلام في النظام وعقد مدخل VOICE_COMMAND, وأنواع SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo
-* `تحسين` مرجع TTS: أسماء الأصوات وتوفر اللغات وقواعد اختيار الصوت في speech.speak لمحرك 3-Macaw Speech; مرجع Plugins: قائمة الملحقات التي توفر وحدات البرامج النصية
 
 ##### لمزيد من سجل الإصدارات
 
