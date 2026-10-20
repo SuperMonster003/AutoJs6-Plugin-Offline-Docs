@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14671632
-contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
+totalBytes=14691761
+contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
+sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `Función` API speech de reconocimiento y gestión de modelos para Node.js, Bun y Workers con WAV/PCM, dictado y activación por voz, instalación/importación, síntesis y cancelación
+
 # v6.8.31
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 * `Mejora` Referencia del módulo Speech: el objeto speech del plugin 3-Macaw Speech (dictado por micrófono, reconocimiento de archivos y PCM, detección de actividad de voz, palabras de activación, síntesis de voz y gestión de modelos), el catálogo de modelos y sus licencias, la grabación en segundo plano y la cesión temporal del micrófono por las sesiones de activación, los códigos de error y los límites, el asistente digital, la entrada de voz del sistema, el servicio de reconocimiento de voz del sistema, el contrato de la entrada VOICE_COMMAND y los tipos SpeechSession, SpeechWakeSession, SpeechRecognitionResult y SpeechModelInfo
 * `Mejora` Referencia de TTS: nombres de voz, disponibilidad de idiomas y reglas de selección de voz de speech.speak para el motor 3-Macaw Speech; referencia de Plugins: lista de plugins que proporcionan módulos de script
-
-# v6.8.29
-
-###### 2026/10/20
-
-* `Función` Callbacks Java, subclases generadas y carga de JAR/DEX para Node.js, Bun y Workers, con resultados Promise, llamadas a la superclase y limpieza al terminar
 
 ##### Para ver más historial de versiones
 

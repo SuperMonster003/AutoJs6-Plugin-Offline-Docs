@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14671632
-contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
+totalBytes=14691761
+contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
+sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `ميزة` واجهات speech للتعرف على الكلام وإدارة النماذج في Node.js وBun وWorkers مع WAV/PCM والإملاء وكلمات التنبيه وتثبيت النماذج واستيرادها والتوليف والتنظيف عند الإلغاء
+
 # v6.8.31
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ category=offline-docs
 
 * `تحسين` مرجع وحدة Speech: كائن speech الذي يوفره ملحق 3-Macaw Speech (الإملاء من الميكروفون والتعرف على الملفات وبيانات PCM واكتشاف النشاط الصوتي وكلمات التنبيه وتركيب الكلام وإدارة النماذج), وكتالوج النماذج وتراخيصها, والتسجيل في الخلفية وتنازل جلسات التنبيه المؤقت عن الميكروفون, ورموز الأخطاء والحدود, والمساعد الرقمي والإدخال الصوتي للنظام وخدمة التعرف على الكلام في النظام وعقد مدخل VOICE_COMMAND, وأنواع SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo
 * `تحسين` مرجع TTS: أسماء الأصوات وتوفر اللغات وقواعد اختيار الصوت في speech.speak لمحرك 3-Macaw Speech; مرجع Plugins: قائمة الملحقات التي توفر وحدات البرامج النصية
-
-# v6.8.29
-
-###### 2026/10/20
-
-* `ميزة` ردود نداء Java وإنشاء الأصناف الفرعية وتحميل JAR/DEX في Node.js وBun وWorkers مع نتائج Promise واستدعاءات الصنف الأب والتنظيف عند انتهاء التنفيذ
 
 ##### لمزيد من سجل الإصدارات
 

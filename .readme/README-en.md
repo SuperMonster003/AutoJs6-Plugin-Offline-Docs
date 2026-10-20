@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14671632
-contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
+totalBytes=14691761
+contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
+sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `Feature` Speech recognition and model management APIs for Node.js, Bun and Workers, with WAV/PCM, dictation and wake sessions, model installation/import, synthesis and cancellation cleanup
+
 # v6.8.31
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 * `Improvement` Speech module reference: the speech object provided by the 3-Macaw Speech plugin, covering microphone dictation, file and PCM recognition, voice activity detection, wake words, speech synthesis and model management, the model catalog and licenses, background recording and the temporary takeover of wake sessions, error codes and limits, the digital assistant, system voice input, the system speech recognition service and the VOICE_COMMAND entry contract, plus the SpeechSession, SpeechWakeSession, SpeechRecognitionResult and SpeechModelInfo types
 * `Improvement` TTS reference: voice names, language availability and the speech.speak voice selection rules of the 3-Macaw Speech engine; Plugins reference: the list of plugins that provide script modules
-
-# v6.8.29
-
-###### 2026/10/20
-
-* `Feature` Java callbacks, generated subclasses and JAR/DEX loading for Node.js, Bun and Workers, with Promise results, superclass calls and execution cleanup
 
 ##### For more release history
 

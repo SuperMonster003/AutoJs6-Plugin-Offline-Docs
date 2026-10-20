@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14671632
-contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
+totalBytes=14691761
+contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
+sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `기능` Node.js/Bun/Worker의 speech 음성 인식 및 모델 관리 API로 WAV/PCM, 받아쓰기와 호출어 세션, 모델 설치와 가져오기, 음성 합성 및 취소 시 정리 지원
+
 # v6.8.31
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 * `개선` 음성 (Speech) 모듈 참조: 3-Macaw Speech 플러그인이 제공하는 speech 객체 (마이크 받아쓰기, 파일과 PCM 인식, 음성 활동 감지, 호출어, 음성 합성, 모델 관리), 모델 카탈로그와 라이선스, 백그라운드 녹음과 호출어 세션의 일시적 마이크 인계, 오류 코드와 상한, 디지털 어시스턴트, 시스템 음성 입력, 시스템 음성 인식 서비스, VOICE_COMMAND 진입점 계약 및 SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 형식
 * `개선` TTS 참조: 3-Macaw Speech 엔진의 음성 이름, 언어 사용 가능 여부, speech.speak 의 음성 선택 규칙; 플러그인 참조: 스크립트 모듈을 제공하는 플러그인 목록
-
-# v6.8.29
-
-###### 2026/10/20
-
-* `기능` Node.js/Bun/Worker의 Java 콜백, 하위 클래스 생성 및 JAR/DEX 로드로 Promise 반환값, 부모 클래스 호출 및 실행 종료 정리 지원
 
 ##### 더 많은 릴리스 기록
 

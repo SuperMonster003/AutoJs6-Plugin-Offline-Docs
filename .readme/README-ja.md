@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14671632
-contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
+totalBytes=14691761
+contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
+sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `機能` Node.js/Bun/Worker の speech 音声認識とモデル管理 API で WAV/PCM, 書き起こしとウェイクワードのセッション, モデルのインストールとインポート, 音声合成とキャンセル時の解放に対応
+
 # v6.8.31
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 * `改善` 音声 (Speech) モジュールのリファレンス: 3-Macaw Speech プラグインが提供する speech オブジェクト (マイクによる口述入力, ファイルと PCM の認識, 音声区間検出, ウェイクワード, 音声合成, モデル管理), モデルカタログとライセンス, バックグラウンド録音とウェイクセッションの一時的な引き継ぎ, エラーコードと上限, デジタルアシスタント, システムの音声入力, システムの音声認識サービス, VOICE_COMMAND エントリの契約, SpeechSession, SpeechWakeSession, SpeechRecognitionResult, SpeechModelInfo 型
 * `改善` TTS リファレンス: 3-Macaw Speech エンジンの音声名, 言語の可用性, speech.speak の音声選択規則; プラグインのリファレンス: スクリプトモジュールを提供するプラグインの一覧
-
-# v6.8.29
-
-###### 2026/10/20
-
-* `機能` Node.js/Bun/Worker の Java コールバック, サブクラス生成と JAR/DEX 読み込みで Promise の戻り値, 親クラス呼び出しと終了時の解放に対応
 
 ##### その他のリリース履歴
 

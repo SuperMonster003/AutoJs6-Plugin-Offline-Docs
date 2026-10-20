@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14671632
-contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
+totalBytes=14691761
+contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
+sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `Fonctionnalité` API speech de reconnaissance vocale et de gestion des modèles pour Node.js, Bun et Workers avec WAV/PCM, dictée et activation vocale, installation/importation, synthèse et annulation
+
 # v6.8.31
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 * `Amélioration` Référence du module Speech: l'objet speech fourni par le plugin 3-Macaw Speech (dictée au microphone, reconnaissance de fichiers et de PCM, détection d'activité vocale, mots d'activation, synthèse vocale et gestion des modèles), le catalogue des modèles et leurs licences, l'enregistrement en arrière-plan et la cession temporaire du microphone par les sessions d'activation, les codes d'erreur et les limites, l'assistant numérique, la saisie vocale du système, le service de reconnaissance vocale du système, le contrat de l'entrée VOICE_COMMAND et les types SpeechSession, SpeechWakeSession, SpeechRecognitionResult et SpeechModelInfo
 * `Amélioration` Référence TTS: noms de voix, disponibilité des langues et règles de choix de voix de speech.speak pour le moteur 3-Macaw Speech; référence Plugins: liste des plugins qui fournissent des modules de script
-
-# v6.8.29
-
-###### 2026/10/20
-
-* `Fonctionnalité` Callbacks Java, sous-classes générées et chargement JAR/DEX pour Node.js, Bun et Workers, avec retours Promise, appels de la superclasse et libération en fin de session
 
 ##### Pour plus d'historique des versions
 

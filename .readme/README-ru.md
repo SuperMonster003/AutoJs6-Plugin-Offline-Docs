@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14671632
-contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
+totalBytes=14691761
+contentSha256=3a614c029773036bde0f0c9a8a56bf0d325d9805df2bfc6ab33a7966a8252663
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
+sourceBaseCommit=90ca57c07495a459db49b744126664a9ecc2d525
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `Функция` API speech для Node.js, Bun и Workers: распознавание WAV/PCM, диктовка и ключевые слова, установка и импорт моделей, синтез и освобождение ресурсов при отмене
+
 # v6.8.31
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 * `Улучшение` Справочник модуля Speech: объект speech плагина 3-Macaw Speech (диктовка с микрофона, распознавание файлов и PCM, обнаружение речевой активности, слова активации, синтез речи и управление моделями), каталог моделей и лицензии, запись в фоне и временная передача микрофона от сеансов активации, коды ошибок и ограничения, цифровой ассистент, системный голосовой ввод, системная служба распознавания речи, контракт точки входа VOICE_COMMAND и типы SpeechSession, SpeechWakeSession, SpeechRecognitionResult и SpeechModelInfo
 * `Улучшение` Справочник TTS: имена голосов, доступность языков и правила выбора голоса speech.speak для движка 3-Macaw Speech; справочник Plugins: список плагинов, предоставляющих модули скриптов
-
-# v6.8.29
-
-###### 2026/10/20
-
-* `Функция` Обратные вызовы Java, создание подклассов и загрузка JAR/DEX для Node.js, Bun и Workers с результатами Promise, вызовами суперкласса и очисткой при завершении
 
 ##### Больше истории выпусков
 

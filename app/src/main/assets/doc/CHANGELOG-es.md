@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.32
+
+###### 2026/10/20
+
+* `Función` API speech de reconocimiento y gestión de modelos para Node.js, Bun y Workers con WAV/PCM, dictado y activación por voz, instalación/importación, síntesis y cancelación
+
 # v6.8.31
 
 ###### 2026/10/20
