@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14656340
-contentSha256=58646e33561bbffeb214da819d71025a45ac80a51d511a600db4e22e7ab7c000
+totalBytes=14671632
+contentSha256=f84a8a7e28a83da3846903d51032ab810a1cd76df0822019df7ab08804e0e3da
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=3fce20aa80d58c35f760f3fc02eb9f018335f808
+sourceBaseCommit=b4fb6998449a86dc32a43191166ce53611999ab0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.31
+
+###### 2026/10/20
+
+* `ميزة` واجهات تحويل النص إلى كلام في Node.js وBun وWorkers مع استعلامات المحركات والأصوات والنطق والصمت وملفات الصوت وأحداث المهام
+
 # v6.8.30
 
 ###### 2026/10/20
@@ -126,12 +132,6 @@ category=offline-docs
 ###### 2026/10/20
 
 * `ميزة` ردود نداء Java وإنشاء الأصناف الفرعية وتحميل JAR/DEX في Node.js وBun وWorkers مع نتائج Promise واستدعاءات الصنف الأب والتنظيف عند انتهاء التنفيذ
-
-# v6.8.28
-
-###### 2026/10/20
-
-* `ميزة` تكامل Java/Android في Node.js وBun وWorkers مع المنشئات والأعضاء العامة والمصفوفات وقيم long الدقيقة والتحميل الزائد الصريح ومراجع Context للتطبيق
 
 ##### لمزيد من سجل الإصدارات
 
