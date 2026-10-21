@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `新增` 記憶體 (Memory), 說明指令碼讀取 AutoJs6 處理程序記憶體診斷資料的 memory 模組: 記憶體快照, 強制回收, 已結束未回收的指令碼執行時, hprof 堆積傾印 (正式版本需開啟 "允許指令碼匯出 hprof") 與 LeakCanary 監視 (Documentation)
+* `優化` WebSocket 補全 exitOnClose 的說明: 指令碼結束時只處理該指令碼自己的連線, 呼叫過 exitOnClose 的連線正常關閉, 其餘連線立即中斷 (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21

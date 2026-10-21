@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=224
-totalBytes=14778526
-contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
+fileCount=225
+totalBytes=14835354
+contentSha256=4bff60c17b28a5176849b85394928ee7500a679653a62a0e0c7ca795364cc0d1
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
+sourceBaseCommit=b0801644fd838ce34f04f1b6153bcd3df302d7c0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `Функция` Memory описывает модуль memory для чтения в скриптах диагностики памяти процесса AutoJs6: снимки памяти, принудительная сборка мусора, завершенные, но не освобожденные среды выполнения скриптов, дампы кучи hprof (в release-сборках требуется "Разрешить скриптам экспорт hprof") и наблюдение LeakCanary (Documentation)
+* `Улучшение` WebSocket: дополнено описание exitOnClose: при завершении скрипта обрабатываются только его собственные соединения, отмеченные exitOnClose закрываются штатно, остальные разрываются сразу (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/21
 
 * `Функция` Асинхронные цепочки flow и ожидание условий/стабильности для Node.js, Bun и Worker с отменой ветвей, повтором шагов и снимками интерфейса хоста
-
-# v6.8.34
-
-###### 2026/10/21
-
-* `Улучшение` Документация: Подключение почтовых аккаунтов, операции с письмами, вложения и наблюдение за почтой с отменой и очисткой при выходе Worker
 
 ##### Больше истории выпусков
 

@@ -5,6 +5,15 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v6.8.37": {
+      "released_date": "2026/10/21",
+      "feature": [
+        "Memory に, スクリプトから AutoJs6 プロセスのメモリ診断データを読み取る memory モジュールを追加し, メモリスナップショット, 強制ガベージコレクション, 終了後も回収されていないスクリプトのランタイム, hprof ヒープダンプ (release ビルドでは \"スクリプトによる hprof のエクスポートを許可\" が必要) と LeakCanary による監視を説明 (Documentation)"
+      ],
+      "improvement": [
+        "WebSocket の exitOnClose の説明を補完: スクリプト終了時はそのスクリプト自身の接続だけを処理し, exitOnClose を呼び出した接続は正常に閉じ, それ以外の接続は直ちに切断 (Documentation)"
+      ]
+    },
     "v6.8.36": {
       "released_date": "2026/10/21",
       "feature": [

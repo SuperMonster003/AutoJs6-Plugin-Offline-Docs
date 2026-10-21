@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `기능` Memory에서 스크립트가 AutoJs6 프로세스의 메모리 진단 데이터를 읽는 memory 모듈을 설명: 메모리 스냅샷, 강제 가비지 컬렉션, 종료 후 회수되지 않은 스크립트 런타임, hprof 힙 덤프 (release 빌드에서는 "스크립트의 hprof 내보내기 허용" 필요) 와 LeakCanary 감시 (Documentation)
+* `개선` WebSocket의 exitOnClose 설명 보완: 스크립트가 끝나면 그 스크립트의 연결만 처리하며, exitOnClose 를 호출한 연결은 정상적으로 닫고 나머지 연결은 즉시 끊음 (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21

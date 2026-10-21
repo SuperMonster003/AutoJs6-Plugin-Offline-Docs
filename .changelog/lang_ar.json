@@ -5,6 +5,15 @@
   "changelog_label_improvement": "تحسين",
   "changelog_label_dependency": "تبعية",
   "$data": {
+    "v6.8.37": {
+      "released_date": "2026/10/21",
+      "feature": [
+        "Memory يشرح وحدة memory لقراءة تشخيص ذاكرة عملية AutoJs6 من البرامج النصية: لقطات الذاكرة, وجمع البيانات المهملة القسري, وبيئات تشغيل البرامج النصية المنتهية غير المحررة, وتفريغات الكومة hprof (تتطلب إصدارات release تفعيل \"السماح للبرامج النصية بتصدير hprof\") ومراقبة LeakCanary (Documentation)"
+      ],
+      "improvement": [
+        "WebSocket يكمل شرح exitOnClose: عند انتهاء البرنامج النصي تعالج اتصالاته فقط, وتغلق الاتصالات المعلمة بـ exitOnClose بشكل طبيعي وتقطع الاتصالات الأخرى فورا (Documentation)"
+      ]
+    },
     "v6.8.36": {
       "released_date": "2026/10/21",
       "feature": [

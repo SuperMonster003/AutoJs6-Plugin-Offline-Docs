@@ -5,6 +5,15 @@
   "changelog_label_improvement": "Mejora",
   "changelog_label_dependency": "Dependencia",
   "$data": {
+    "v6.8.37": {
+      "released_date": "2026/10/21",
+      "feature": [
+        "Memory describe el módulo memory para leer en los scripts el diagnóstico de memoria del proceso AutoJs6: instantáneas de memoria, recolección de basura forzada, entornos de ejecución de scripts finalizados pero no liberados, volcados del heap hprof (las compilaciones release requieren \"Permitir que los scripts exporten hprof\") y vigilancia con LeakCanary (Documentation)"
+      ],
+      "improvement": [
+        "WebSocket completa exitOnClose: al terminar un script solo se tratan sus propias conexiones, las marcadas con exitOnClose se cierran de forma ordenada y las demás se cortan de inmediato (Documentation)"
+      ]
+    },
     "v6.8.36": {
       "released_date": "2026/10/21",
       "feature": [

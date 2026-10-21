@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=224
-totalBytes=14778526
-contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
+fileCount=225
+totalBytes=14835354
+contentSha256=4bff60c17b28a5176849b85394928ee7500a679653a62a0e0c7ca795364cc0d1
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
+sourceBaseCommit=b0801644fd838ce34f04f1b6153bcd3df302d7c0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `기능` Memory에서 스크립트가 AutoJs6 프로세스의 메모리 진단 데이터를 읽는 memory 모듈을 설명: 메모리 스냅샷, 강제 가비지 컬렉션, 종료 후 회수되지 않은 스크립트 런타임, hprof 힙 덤프 (release 빌드에서는 "스크립트의 hprof 내보내기 허용" 필요) 와 LeakCanary 감시 (Documentation)
+* `개선` WebSocket의 exitOnClose 설명 보완: 스크립트가 끝나면 그 스크립트의 연결만 처리하며, exitOnClose 를 호출한 연결은 정상적으로 닫고 나머지 연결은 즉시 끊음 (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/21
 
 * `기능` Node.js, Bun, Worker의 flow 비동기 체인 및 조건/안정성 대기, 분기 취소, 단계 재시도, 호스트 화면 스냅샷 지원
-
-# v6.8.34
-
-###### 2026/10/21
-
-* `개선` 문서 동기화: 메일 계정 연결, 메시지 작업, 첨부 파일 및 메일함 감시, 취소와 Worker 종료 시 정리
 
 ##### 더 많은 릴리스 기록
 

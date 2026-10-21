@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=224
-totalBytes=14778526
-contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
+fileCount=225
+totalBytes=14835354
+contentSha256=4bff60c17b28a5176849b85394928ee7500a679653a62a0e0c7ca795364cc0d1
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
+sourceBaseCommit=b0801644fd838ce34f04f1b6153bcd3df302d7c0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `新增` 記憶體 (Memory), 説明腳本讀取 AutoJs6 進程記憶體診斷數據的 memory 模組: 記憶體快照, 強制回收, 已結束未回收的腳本運行時, hprof 堆轉儲 (正式版本需開啟 "允許腳本匯出 hprof") 與 LeakCanary 監視 (Documentation)
+* `優化` WebSocket 補全 exitOnClose 的説明: 腳本結束時只處理該腳本自己的連接, 調用過 exitOnClose 的連接優雅關閉, 其餘連接立即斷開 (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21
@@ -125,12 +132,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 ###### 2026/10/21
 
 * `新增` Node.js, Bun 及 Worker 的 flow 非同步鏈與條件/穩定性等待, 支援分支取消, 單步驟重試及宿主介面快照
-
-# v6.8.34
-
-###### 2026/10/21
-
-* `優化` 文件同步: 郵件帳戶連線, 郵件操作, 附件與郵箱監聽, 支援取消及 Worker 結束清理
 
 ##### 更多發行歷史可參閱
 

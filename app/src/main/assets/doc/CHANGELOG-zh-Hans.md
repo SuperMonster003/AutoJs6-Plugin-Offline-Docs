@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `新增` 内存 (Memory), 说明脚本读取 AutoJs6 进程内存诊断数据的 memory 模块: 内存快照, 强制回收, 已结束未回收的脚本运行时, hprof 堆转储 (正式版本需开启 "允许脚本导出 hprof") 与 LeakCanary 监视 (Documentation)
+* `优化` WebSocket 补全 exitOnClose 的说明: 脚本结束时只处理该脚本自己的连接, 调用过 exitOnClose 的连接优雅关闭, 其余连接立即断开 (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21

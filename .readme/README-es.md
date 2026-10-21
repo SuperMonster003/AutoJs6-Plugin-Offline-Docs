@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=224
-totalBytes=14778526
-contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
+fileCount=225
+totalBytes=14835354
+contentSha256=4bff60c17b28a5176849b85394928ee7500a679653a62a0e0c7ca795364cc0d1
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
+sourceBaseCommit=b0801644fd838ce34f04f1b6153bcd3df302d7c0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `Función` Memory describe el módulo memory para leer en los scripts el diagnóstico de memoria del proceso AutoJs6: instantáneas de memoria, recolección de basura forzada, entornos de ejecución de scripts finalizados pero no liberados, volcados del heap hprof (las compilaciones release requieren "Permitir que los scripts exporten hprof") y vigilancia con LeakCanary (Documentation)
+* `Mejora` WebSocket completa exitOnClose: al terminar un script solo se tratan sus propias conexiones, las marcadas con exitOnClose se cierran de forma ordenada y las demás se cortan de inmediato (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21
@@ -125,12 +132,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/21
 
 * `Función` Cadenas asíncronas flow y esperas de condición/estabilidad para Node.js, Bun y Workers, con cancelación de ramas, reintentos por paso e instantáneas de la interfaz del anfitrión
-
-# v6.8.34
-
-###### 2026/10/21
-
-* `Mejora` Documentación: Conexiones de correo, mensajes, adjuntos y vigilancia de buzones, con cancelación y limpieza de Workers
 
 ##### Para ver más historial de versiones
 

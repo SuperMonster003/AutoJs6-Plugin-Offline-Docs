@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `Función` Memory describe el módulo memory para leer en los scripts el diagnóstico de memoria del proceso AutoJs6: instantáneas de memoria, recolección de basura forzada, entornos de ejecución de scripts finalizados pero no liberados, volcados del heap hprof (las compilaciones release requieren "Permitir que los scripts exporten hprof") y vigilancia con LeakCanary (Documentation)
+* `Mejora` WebSocket completa exitOnClose: al terminar un script solo se tratan sus propias conexiones, las marcadas con exitOnClose se cierran de forma ordenada y las demás se cortan de inmediato (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21

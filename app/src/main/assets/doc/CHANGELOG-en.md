@@ -4,6 +4,13 @@
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `Feature` Memory describes the memory module for reading the memory diagnostics of the AutoJs6 process in scripts: memory snapshots, forced garbage collection, finished but unreclaimed script runtimes, hprof heap dumps (release builds need "Allow scripts to export hprof") and LeakCanary watching (Documentation)
+* `Improvement` WebSocket completes exitOnClose: when a script ends only its own connections are handled, those marked with exitOnClose close gracefully and the others are cut off at once (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21

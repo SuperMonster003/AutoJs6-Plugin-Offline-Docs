@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=224
-totalBytes=14778526
-contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
+fileCount=225
+totalBytes=14835354
+contentSha256=4bff60c17b28a5176849b85394928ee7500a679653a62a0e0c7ca795364cc0d1
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
+sourceBaseCommit=b0801644fd838ce34f04f1b6153bcd3df302d7c0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,13 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.37
+
+###### 2026/10/21
+
+* `Feature` Memory describes the memory module for reading the memory diagnostics of the AutoJs6 process in scripts: memory snapshots, forced garbage collection, finished but unreclaimed script runtimes, hprof heap dumps (release builds need "Allow scripts to export hprof") and LeakCanary watching (Documentation)
+* `Improvement` WebSocket completes exitOnClose: when a script ends only its own connections are handled, those marked with exitOnClose close gracefully and the others are cut off at once (Documentation)
+
 # v6.8.36
 
 ###### 2026/10/21
@@ -125,12 +132,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/21
 
 * `Feature` Flow asynchronous chains and condition/stability waits for Node.js, Bun and Workers, with branch cancellation, step retries and host UI snapshots
-
-# v6.8.34
-
-###### 2026/10/21
-
-* `Improvement` Documentation: Mail account connections, message operations, attachments and mailbox watches, with cancellation and Worker cleanup
 
 ##### For more release history
 
