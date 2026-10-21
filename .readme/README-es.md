@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14751854
-contentSha256=3f87abd3c9eb29b8976e9be0ac874e6d646a7194d5910c9afa288e15e9ae8bbd
+totalBytes=14778526
+contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2a499dac3e8b63ce623135db5290b9754832f05f
+sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.36
+
+###### 2026/10/21
+
+* `Función` Clics avanzados, desplazamiento, entrada, recopilación de listas y espera de eventos reales de Flow para Node.js, Bun y Workers, con suscripciones listas, validación de instantáneas y cancelación (Documentation)
+
 # v6.8.35
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/21
 
 * `Mejora` Documentación: Conexiones de correo, mensajes, adjuntos y vigilancia de buzones, con cancelación y limpieza de Workers
-
-# v6.8.33
-
-###### 2026/10/21
-
-* `Mejora` Documentación - Node.js/Bun/Worker: Lectura de EPUB, exportación de recursos, búsqueda y sesiones del lector con eventos
 
 ##### Para ver más historial de versiones
 

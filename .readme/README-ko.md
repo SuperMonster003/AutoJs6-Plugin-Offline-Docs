@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14751854
-contentSha256=3f87abd3c9eb29b8976e9be0ac874e6d646a7194d5910c9afa288e15e9ae8bbd
+totalBytes=14778526
+contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2a499dac3e8b63ce623135db5290b9754832f05f
+sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.36
+
+###### 2026/10/21
+
+* `기능` Node.js, Bun 및 Worker의 Flow 고급 클릭, 스크롤, 입력, 목록 수집 및 실제 이벤트 대기, 구독 준비, 스냅샷 검증 및 취소 지원 (Documentation)
+
 # v6.8.35
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/21
 
 * `개선` 문서 동기화: 메일 계정 연결, 메시지 작업, 첨부 파일 및 메일함 감시, 취소와 Worker 종료 시 정리
-
-# v6.8.33
-
-###### 2026/10/21
-
-* `개선` 문서 - Node.js/Bun/Worker: EPUB 도서 읽기, 리소스 내보내기, 검색 및 이벤트를 지원하는 리더 세션
 
 ##### 더 많은 릴리스 기록
 

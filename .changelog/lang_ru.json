@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Улучшение",
   "changelog_label_dependency": "Зависимость",
   "$data": {
+    "v6.8.36": {
+      "released_date": "2026/10/21",
+      "feature": [
+        "Расширенные нажатия, прокрутка, ввод, сбор списков и ожидание реальных событий Flow для Node.js, Bun и Workers, с готовностью подписки, проверкой снимков и отменой (Documentation)"
+      ]
+    },
     "v6.8.35": {
       "released_date": "2026/10/21",
       "feature": [

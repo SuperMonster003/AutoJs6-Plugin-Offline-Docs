@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14751854
-contentSha256=3f87abd3c9eb29b8976e9be0ac874e6d646a7194d5910c9afa288e15e9ae8bbd
+totalBytes=14778526
+contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2a499dac3e8b63ce623135db5290b9754832f05f
+sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.36
+
+###### 2026/10/21
+
+* `Feature` Flow advanced clicks, scrolling, text entry, list collection and real event waits for Node.js, Bun and Workers, with subscription readiness, snapshot validation and cancellation (Documentation)
+
 # v6.8.35
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/21
 
 * `Improvement` Documentation: Mail account connections, message operations, attachments and mailbox watches, with cancellation and Worker cleanup
-
-# v6.8.33
-
-###### 2026/10/21
-
-* `Improvement` Documentation - Node.js/Bun/Worker: EPUB book reading, resource export, search and reader sessions with events
 
 ##### For more release history
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14751854
-contentSha256=3f87abd3c9eb29b8976e9be0ac874e6d646a7194d5910c9afa288e15e9ae8bbd
+totalBytes=14778526
+contentSha256=4969b0280864e95898fd4ea6529ae52ef51e94bbce2a5507d4a1975d1bb3dfc7
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=2a499dac3e8b63ce623135db5290b9754832f05f
+sourceBaseCommit=7bba5bfdb0a4ef84ddbc8d52b09d19f8aea9df77
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.36
+
+###### 2026/10/21
+
+* `新增` Node.js, Bun 及 Worker 的 Flow 高级点击, 滚动, 输入, 列表采集与真实事件等待, 支持监听就绪, 快照校验和取消 (Documentation)
+
 # v6.8.35
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/21
 
 * `优化` 文档同步: 邮件账户连接, 邮件操作, 附件与邮箱监听, 支持取消及 Worker 退出清理
-
-# v6.8.33
-
-###### 2026/10/21
-
-* `优化` 文档 - Node.js/Bun/Worker: EPUB 书籍读取, 资源导出, 搜索及带事件的阅读器会话
 
 ##### 更多发行历史可参阅
 

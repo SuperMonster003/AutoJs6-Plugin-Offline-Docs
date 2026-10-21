@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.36
+
+###### 2026/10/21
+
+* `Feature` Flow advanced clicks, scrolling, text entry, list collection and real event waits for Node.js, Bun and Workers, with subscription readiness, snapshot validation and cancellation (Documentation)
+
 # v6.8.35
 
 ###### 2026/10/21
