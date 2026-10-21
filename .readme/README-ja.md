@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14838489
-contentSha256=a7f9b85729e8353ae601d9278877299379bcd6b460b4604790c66be0bfd4801c
+totalBytes=14853887
+contentSha256=f9113bcc34a03e707d190c7542a10bc9673d8c80d125bb4b9874a296f6b6dc89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.38
+
+###### 2026/10/21
+
+* `機能` Node.js, Bun と Worker の Flow within/scope による検索範囲の継承, コンパス移動と結果の射影, および press/swipe/gesture/gestures のオーバーロード
+
 # v6.8.37
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/21
 
 * `機能` Node.js, Bun と Worker の Flow 高度なクリック, スクロール, 入力, リスト収集と実際のイベント待機, 監視準備完了, スナップショット検証とキャンセルに対応 (Documentation)
-
-# v6.8.35
-
-###### 2026/10/21
-
-* `機能` Node.js, Bun, Worker 向けの flow 非同期チェーンと条件/安定性待機, 分岐のキャンセル, ステップの再試行, ホスト画面のスナップショットに対応
 
 ##### その他のリリース履歴
 

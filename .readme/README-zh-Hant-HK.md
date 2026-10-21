@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14838489
-contentSha256=a7f9b85729e8353ae601d9278877299379bcd6b460b4604790c66be0bfd4801c
+totalBytes=14853887
+contentSha256=f9113bcc34a03e707d190c7542a10bc9673d8c80d125bb4b9874a296f6b6dc89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.38
+
+###### 2026/10/21
+
+* `新增` Node.js, Bun 與 Worker 的 Flow within/scope 範圍繼承, 羅盤導航和結果投影, 以及 press/swipe/gesture/gestures 手勢重載
+
 # v6.8.37
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 ###### 2026/10/21
 
 * `新增` Node.js, Bun 及 Worker 的 Flow 進階點擊, 捲動, 輸入, 清單擷取與真實事件等待, 支援監聽就緒, 快照驗證和取消 (Documentation)
-
-# v6.8.35
-
-###### 2026/10/21
-
-* `新增` Node.js, Bun 及 Worker 的 flow 非同步鏈與條件/穩定性等待, 支援分支取消, 單步驟重試及宿主介面快照
 
 ##### 更多發行歷史可參閱
 

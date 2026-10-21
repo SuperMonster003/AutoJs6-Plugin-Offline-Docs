@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14838489
-contentSha256=a7f9b85729e8353ae601d9278877299379bcd6b460b4604790c66be0bfd4801c
+totalBytes=14853887
+contentSha256=f9113bcc34a03e707d190c7542a10bc9673d8c80d125bb4b9874a296f6b6dc89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.38
+
+###### 2026/10/21
+
+* `Функция` Flow within/scope для Node.js, Bun и Worker: наследование корня поиска, навигация по компасу, типизированные проекции и перегрузки press/swipe/gesture/gestures
+
 # v6.8.37
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/21
 
 * `Функция` Расширенные нажатия, прокрутка, ввод, сбор списков и ожидание реальных событий Flow для Node.js, Bun и Workers, с готовностью подписки, проверкой снимков и отменой (Documentation)
-
-# v6.8.35
-
-###### 2026/10/21
-
-* `Функция` Асинхронные цепочки flow и ожидание условий/стабильности для Node.js, Bun и Worker с отменой ветвей, повтором шагов и снимками интерфейса хоста
 
 ##### Больше истории выпусков
 

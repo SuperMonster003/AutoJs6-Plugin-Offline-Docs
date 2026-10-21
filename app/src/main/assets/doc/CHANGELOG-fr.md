@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.38
+
+###### 2026/10/21
+
+* `Fonctionnalité` Flow within/scope pour Node.js, Bun et les Workers, avec racines de recherche héritées, navigation par boussole, projections typées et surcharges press/swipe/gesture/gestures
+
 # v6.8.37
 
 ###### 2026/10/21

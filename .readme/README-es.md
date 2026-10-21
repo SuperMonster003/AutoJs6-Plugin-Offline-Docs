@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14838489
-contentSha256=a7f9b85729e8353ae601d9278877299379bcd6b460b4604790c66be0bfd4801c
+totalBytes=14853887
+contentSha256=f9113bcc34a03e707d190c7542a10bc9673d8c80d125bb4b9874a296f6b6dc89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.38
+
+###### 2026/10/21
+
+* `Función` Flow within/scope para Node.js, Bun y Workers, con raíces de búsqueda heredadas, navegación por brújula, proyecciones tipadas y sobrecargas press/swipe/gesture/gestures
+
 # v6.8.37
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/21
 
 * `Función` Clics avanzados, desplazamiento, entrada, recopilación de listas y espera de eventos reales de Flow para Node.js, Bun y Workers, con suscripciones listas, validación de instantáneas y cancelación (Documentation)
-
-# v6.8.35
-
-###### 2026/10/21
-
-* `Función` Cadenas asíncronas flow y esperas de condición/estabilidad para Node.js, Bun y Workers, con cancelación de ramas, reintentos por paso e instantáneas de la interfaz del anfitrión
 
 ##### Para ver más historial de versiones
 

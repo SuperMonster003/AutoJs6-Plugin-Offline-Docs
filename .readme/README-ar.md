@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14838489
-contentSha256=a7f9b85729e8353ae601d9278877299379bcd6b460b4604790c66be0bfd4801c
+totalBytes=14853887
+contentSha256=f9113bcc34a03e707d190c7542a10bc9673d8c80d125bb4b9874a296f6b6dc89
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.38
+
+###### 2026/10/21
+
+* `ميزة` Flow within/scope في Node.js وBun وWorker مع وراثة جذور البحث والتنقل بالبوصلة وإسقاط النتائج ودعم صيغ press/swipe/gesture/gestures
+
 # v6.8.37
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ category=offline-docs
 ###### 2026/10/21
 
 * `ميزة` نقرات Flow المتقدمة والتمرير والإدخال وجمع القوائم وانتظار الأحداث الفعلية في Node.js وBun وWorkers, مع جاهزية الاشتراك والتحقق من اللقطات والإلغاء (Documentation)
-
-# v6.8.35
-
-###### 2026/10/21
-
-* `ميزة` سلاسل flow غير المتزامنة وانتظار الشروط والاستقرار في Node.js وBun وWorker, مع إلغاء الفروع وإعادة محاولة الخطوات ولقطات واجهة المضيف
 
 ##### لمزيد من سجل الإصدارات
 
