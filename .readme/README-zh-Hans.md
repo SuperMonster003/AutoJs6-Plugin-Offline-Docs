@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14869358
-contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
+totalBytes=14870622
+contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -118,7 +118,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ###### 2026/10/22
 
-* `新增` Node.js, Bun 和 Worker 的 AI 文本生成, 流式结果, 模型目录与持久会话, 支持取消及打包应用的 Android 访问授权
+* `新增` Node.js, Bun 和 Worker 的 AI 文本生成, 流式结果, 模型目录与持久会话, 支持取消及 3-Stone AI 对打包应用的逐应用授权
 
 # v6.8.38
 

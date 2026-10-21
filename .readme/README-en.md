@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14869358
-contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
+totalBytes=14870622
+contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -118,7 +118,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ###### 2026/10/22
 
-* `Feature` AI text generation, streaming, model catalog and persistent sessions for Node.js, Bun and Workers, with cancellation and Android authorization for packaged apps
+* `Feature` AI text generation, streaming, model catalog and persistent sessions for Node.js, Bun and Workers, with cancellation and per-app consent in 3-Stone AI for packaged apps
 
 # v6.8.38
 
