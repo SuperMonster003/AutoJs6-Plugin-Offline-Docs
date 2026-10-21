@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14712355
-contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
+totalBytes=14729948
+contentSha256=6e8efba65701f84a4c87a4992f0b8333893ff70546a78f9607086b75ba68faba
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
+sourceBaseCommit=9e90f4a1351eccca243bed8a9bb07507c477f1b0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.34
+
+###### 2026/10/21
+
+* `تحسين` التوثيق: اتصالات حسابات البريد وعمليات الرسائل والمرفقات ومراقبة البريد مع الإلغاء والتنظيف عند خروج Worker
+
 # v6.8.33
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ category=offline-docs
 ###### 2026/10/20
 
 * `ميزة` واجهات speech للتعرف على الكلام وإدارة النماذج في Node.js وBun وWorkers مع WAV/PCM والإملاء وكلمات التنبيه وتثبيت النماذج واستيرادها والتوليف والتنظيف عند الإلغاء
-
-# v6.8.31
-
-###### 2026/10/20
-
-* `ميزة` واجهات تحويل النص إلى كلام في Node.js وBun وWorkers مع استعلامات المحركات والأصوات والنطق والصمت وملفات الصوت وأحداث المهام
 
 ##### لمزيد من سجل الإصدارات
 

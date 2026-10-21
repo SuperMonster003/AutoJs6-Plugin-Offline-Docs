@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.34
+
+###### 2026/10/21
+
+* `Amélioration` Documentation: Connexions aux comptes mail, messages, pièces jointes et surveillance des boîtes, avec annulation et nettoyage des Workers
+
 # v6.8.33
 
 ###### 2026/10/21

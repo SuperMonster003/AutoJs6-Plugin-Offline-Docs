@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.34
+
+###### 2026/10/21
+
+* `Improvement` Documentation: Mail account connections, message operations, attachments and mailbox watches, with cancellation and Worker cleanup
+
 # v6.8.33
 
 ###### 2026/10/21

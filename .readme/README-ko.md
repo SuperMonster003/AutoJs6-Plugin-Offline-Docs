@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14712355
-contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
+totalBytes=14729948
+contentSha256=6e8efba65701f84a4c87a4992f0b8333893ff70546a78f9607086b75ba68faba
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
+sourceBaseCommit=9e90f4a1351eccca243bed8a9bb07507c477f1b0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.34
+
+###### 2026/10/21
+
+* `개선` 문서 동기화: 메일 계정 연결, 메시지 작업, 첨부 파일 및 메일함 감시, 취소와 Worker 종료 시 정리
+
 # v6.8.33
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/20
 
 * `기능` Node.js/Bun/Worker의 speech 음성 인식 및 모델 관리 API로 WAV/PCM, 받아쓰기와 호출어 세션, 모델 설치와 가져오기, 음성 합성 및 취소 시 정리 지원
-
-# v6.8.31
-
-###### 2026/10/20
-
-* `기능` Node.js/Bun/Worker의 음성 합성 API로 엔진과 음성 조회, 읽기, 무음, 오디오 파일 합성 및 작업 이벤트 지원
 
 ##### 더 많은 릴리스 기록
 

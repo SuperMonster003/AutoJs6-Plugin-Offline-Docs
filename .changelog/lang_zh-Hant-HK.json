@@ -5,6 +5,12 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "依賴",
   "$data": {
+    "v6.8.34": {
+      "released_date": "2026/10/21",
+      "improvement": [
+        "文件同步: 郵件帳戶連線, 郵件操作, 附件與郵箱監聽, 支援取消及 Worker 結束清理"
+      ]
+    },
     "v6.8.33": {
       "released_date": "2026/10/21",
       "improvement": [

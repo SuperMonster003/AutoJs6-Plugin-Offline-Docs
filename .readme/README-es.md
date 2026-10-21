@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14712355
-contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
+totalBytes=14729948
+contentSha256=6e8efba65701f84a4c87a4992f0b8333893ff70546a78f9607086b75ba68faba
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
+sourceBaseCommit=9e90f4a1351eccca243bed8a9bb07507c477f1b0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.34
+
+###### 2026/10/21
+
+* `Mejora` Documentación: Conexiones de correo, mensajes, adjuntos y vigilancia de buzones, con cancelación y limpieza de Workers
+
 # v6.8.33
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/20
 
 * `Función` API speech de reconocimiento y gestión de modelos para Node.js, Bun y Workers con WAV/PCM, dictado y activación por voz, instalación/importación, síntesis y cancelación
-
-# v6.8.31
-
-###### 2026/10/20
-
-* `Función` API de síntesis de voz para Node.js, Bun y Workers con consultas de motores y voces, lectura, silencio, archivos de audio y eventos de tareas
 
 ##### Para ver más historial de versiones
 

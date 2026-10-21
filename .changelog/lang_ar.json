@@ -5,6 +5,12 @@
   "changelog_label_improvement": "تحسين",
   "changelog_label_dependency": "تبعية",
   "$data": {
+    "v6.8.34": {
+      "released_date": "2026/10/21",
+      "improvement": [
+        "التوثيق: اتصالات حسابات البريد وعمليات الرسائل والمرفقات ومراقبة البريد مع الإلغاء والتنظيف عند خروج Worker"
+      ]
+    },
     "v6.8.33": {
       "released_date": "2026/10/21",
       "improvement": [

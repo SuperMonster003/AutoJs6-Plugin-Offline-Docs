@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14712355
-contentSha256=58dada23bb0e542832bf75b89f26cb4ebdcc1c9451c39d856f98e6e7045852a3
+totalBytes=14729948
+contentSha256=6e8efba65701f84a4c87a4992f0b8333893ff70546a78f9607086b75ba68faba
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=7b8645ccf4b1d2c0fef1259b21247975f569721b
+sourceBaseCommit=9e90f4a1351eccca243bed8a9bb07507c477f1b0
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.34
+
+###### 2026/10/21
+
+* `优化` 文档同步: 邮件账户连接, 邮件操作, 附件与邮箱监听, 支持取消及 Worker 退出清理
+
 # v6.8.33
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/20
 
 * `新增` Node.js/Bun/Worker 的 speech 语音识别与模型管理接口, 支持 WAV/PCM, 听写与唤醒会话, 模型安装/导入, 语音合成和取消清理
-
-# v6.8.31
-
-###### 2026/10/20
-
-* `新增` Node.js/Bun/Worker 的文字转语音接口, 支持引擎与音色查询, 朗读, 静音任务, 音频文件合成和任务事件
 
 ##### 更多发行历史可参阅
 
