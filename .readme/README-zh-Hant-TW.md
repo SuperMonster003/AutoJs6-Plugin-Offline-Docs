@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14731033
-contentSha256=c20fc72c8ddd177abe28ce18079873891f90f49187d258d84aa25356de825e7b
+totalBytes=14751530
+contentSha256=8bdfccbfe7d545f248dcb224b849664d70755f0e83738f95c39213e951f44d08
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=06e2881d4ea0ff39ceed09a7af83d9c3626fb1c5
+sourceBaseCommit=5db202e07466222d6d40394c4a28e0884958802b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 
 ******
 
+# v6.8.35
+
+###### 2026/10/21
+
+* `新增` Node.js, Bun 及 Worker 的 flow 非同步鏈與條件/穩定性等待, 支援分支取消, 單一步驟重試及宿主介面快照
+
 # v6.8.34
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發布 PluginInfo. 主�
 ###### 2026/10/21
 
 * `優化` 文件 - Node.js/Bun/Worker: EPUB 書籍讀取, 資源匯出, 搜尋及含事件的閱讀器工作階段
-
-# v6.8.32
-
-###### 2026/10/20
-
-* `新增` Node.js/Bun/Worker 的 speech 語音辨識與模型管理介面, 支援 WAV/PCM, 聽寫與喚醒工作階段, 模型安裝/匯入, 語音合成及取消清理
 
 ##### 更多發行歷史可參閱
 

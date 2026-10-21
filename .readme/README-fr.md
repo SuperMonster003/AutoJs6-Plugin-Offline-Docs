@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14731033
-contentSha256=c20fc72c8ddd177abe28ce18079873891f90f49187d258d84aa25356de825e7b
+totalBytes=14751530
+contentSha256=8bdfccbfe7d545f248dcb224b849664d70755f0e83738f95c39213e951f44d08
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=06e2881d4ea0ff39ceed09a7af83d9c3626fb1c5
+sourceBaseCommit=5db202e07466222d6d40394c4a28e0884958802b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.35
+
+###### 2026/10/21
+
+* `Fonctionnalité` Chaînes asynchrones flow et attentes de condition/stabilité pour Node.js, Bun et Workers, avec annulation des branches, reprise des étapes et instantanés de l'interface hôte
+
 # v6.8.34
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/21
 
 * `Amélioration` Documentation - Node.js/Bun/Worker: Lecture EPUB, export des ressources, recherche et sessions du lecteur avec événements
-
-# v6.8.32
-
-###### 2026/10/20
-
-* `Fonctionnalité` API speech de reconnaissance vocale et de gestion des modèles pour Node.js, Bun et Workers avec WAV/PCM, dictée et activation vocale, installation/importation, synthèse et annulation
 
 ##### Pour plus d'historique des versions
 

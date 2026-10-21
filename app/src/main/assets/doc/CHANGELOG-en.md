@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.35
+
+###### 2026/10/21
+
+* `Feature` Flow asynchronous chains and condition/stability waits for Node.js, Bun and Workers, with branch cancellation, step retries and host UI snapshots
+
 # v6.8.34
 
 ###### 2026/10/21

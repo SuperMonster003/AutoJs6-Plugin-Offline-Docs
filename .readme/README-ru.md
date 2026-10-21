@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=224
-totalBytes=14731033
-contentSha256=c20fc72c8ddd177abe28ce18079873891f90f49187d258d84aa25356de825e7b
+totalBytes=14751530
+contentSha256=8bdfccbfe7d545f248dcb224b849664d70755f0e83738f95c39213e951f44d08
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=06e2881d4ea0ff39ceed09a7af83d9c3626fb1c5
+sourceBaseCommit=5db202e07466222d6d40394c4a28e0884958802b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.35
+
+###### 2026/10/21
+
+* `Функция` Асинхронные цепочки flow и ожидание условий/стабильности для Node.js, Bun и Worker с отменой ветвей, повтором шагов и снимками интерфейса хоста
+
 # v6.8.34
 
 ###### 2026/10/21
@@ -125,12 +131,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 ###### 2026/10/21
 
 * `Улучшение` Документация - Node.js/Bun/Worker: Чтение EPUB, экспорт ресурсов, поиск и сеансы чтения с событиями
-
-# v6.8.32
-
-###### 2026/10/20
-
-* `Функция` API speech для Node.js, Bun и Workers: распознавание WAV/PCM, диктовка и ключевые слова, установка и импорт моделей, синтез и освобождение ресурсов при отмене
 
 ##### Больше истории выпусков
 
