@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14854627
-contentSha256=c5ec258da7dbeedebece949a1fa993349f1c2466f434cb8de9cd25af5f57a820
+totalBytes=14869358
+contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.39
+
+###### 2026/10/22
+
+* `機能` Node.js, Bun と Worker の AI テキスト生成, ストリーミング, モデル一覧と永続セッション, キャンセルとパッケージアプリの Android アクセス許可に対応
+
 # v6.8.38
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 * `機能` Memory に, スクリプトから AutoJs6 プロセスのメモリ診断データを読み取る memory モジュールを追加し, メモリスナップショット, 強制ガベージコレクション, 終了後も回収されていないスクリプトのランタイム, hprof ヒープダンプ (release ビルドでは "スクリプトによる hprof のエクスポートを許可" が必要) と LeakCanary による監視を説明 (Documentation)
 * `改善` WebSocket の exitOnClose の説明を補完: スクリプト終了時はそのスクリプト自身の接続だけを処理し, exitOnClose を呼び出した接続は正常に閉じ, それ以外の接続は直ちに切断 (Documentation)
-
-# v6.8.36
-
-###### 2026/10/21
-
-* `機能` Node.js, Bun と Worker の Flow 高度なクリック, スクロール, 入力, リスト収集と実際のイベント待機, 監視準備完了, スナップショット検証とキャンセルに対応 (Documentation)
 
 ##### その他のリリース履歴
 

@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14854627
-contentSha256=c5ec258da7dbeedebece949a1fa993349f1c2466f434cb8de9cd25af5f57a820
+totalBytes=14869358
+contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.39
+
+###### 2026/10/22
+
+* `Función` Generación de texto con IA, transmisión, catálogo de modelos y sesiones persistentes para Node.js, Bun y Workers, con cancelación y autorización Android de aplicaciones empaquetadas
+
 # v6.8.38
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 * `Función` Memory describe el módulo memory para leer en los scripts el diagnóstico de memoria del proceso AutoJs6: instantáneas de memoria, recolección de basura forzada, entornos de ejecución de scripts finalizados pero no liberados, volcados del heap hprof (las compilaciones release requieren "Permitir que los scripts exporten hprof") y vigilancia con LeakCanary (Documentation)
 * `Mejora` WebSocket completa exitOnClose: al terminar un script solo se tratan sus propias conexiones, las marcadas con exitOnClose se cierran de forma ordenada y las demás se cortan de inmediato (Documentation)
-
-# v6.8.36
-
-###### 2026/10/21
-
-* `Función` Clics avanzados, desplazamiento, entrada, recopilación de listas y espera de eventos reales de Flow para Node.js, Bun y Workers, con suscripciones listas, validación de instantáneas y cancelación (Documentation)
 
 ##### Para ver más historial de versiones
 

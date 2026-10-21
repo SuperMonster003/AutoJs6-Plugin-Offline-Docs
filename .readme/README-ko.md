@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14854627
-contentSha256=c5ec258da7dbeedebece949a1fa993349f1c2466f434cb8de9cd25af5f57a820
+totalBytes=14869358
+contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.39
+
+###### 2026/10/22
+
+* `기능` Node.js, Bun 및 Worker의 AI 텍스트 생성, 스트리밍, 모델 목록 및 영구 세션, 취소와 패키지 앱의 Android 접근 권한 지원
+
 # v6.8.38
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 * `기능` Memory에서 스크립트가 AutoJs6 프로세스의 메모리 진단 데이터를 읽는 memory 모듈을 설명: 메모리 스냅샷, 강제 가비지 컬렉션, 종료 후 회수되지 않은 스크립트 런타임, hprof 힙 덤프 (release 빌드에서는 "스크립트의 hprof 내보내기 허용" 필요) 와 LeakCanary 감시 (Documentation)
 * `개선` WebSocket의 exitOnClose 설명 보완: 스크립트가 끝나면 그 스크립트의 연결만 처리하며, exitOnClose 를 호출한 연결은 정상적으로 닫고 나머지 연결은 즉시 끊음 (Documentation)
-
-# v6.8.36
-
-###### 2026/10/21
-
-* `기능` Node.js, Bun 및 Worker의 Flow 고급 클릭, 스크롤, 입력, 목록 수집 및 실제 이벤트 대기, 구독 준비, 스냅샷 검증 및 취소 지원 (Documentation)
 
 ##### 더 많은 릴리스 기록
 

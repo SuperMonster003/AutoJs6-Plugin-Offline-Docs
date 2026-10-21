@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.39
+
+###### 2026/10/22
+
+* `Fonctionnalité` Génération de texte IA, flux, catalogue de modèles et sessions persistantes pour Node.js, Bun et Workers, avec annulation et autorisation Android des applications générées
+
 # v6.8.38
 
 ###### 2026/10/21

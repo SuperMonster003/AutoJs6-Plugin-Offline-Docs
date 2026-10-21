@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14854627
-contentSha256=c5ec258da7dbeedebece949a1fa993349f1c2466f434cb8de9cd25af5f57a820
+totalBytes=14869358
+contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.39
+
+###### 2026/10/22
+
+* `新增` Node.js, Bun 和 Worker 的 AI 文本生成, 流式结果, 模型目录与持久会话, 支持取消及打包应用的 Android 访问授权
+
 # v6.8.38
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 * `新增` 内存 (Memory), 说明脚本读取 AutoJs6 进程内存诊断数据的 memory 模块: 内存快照, 强制回收, 已结束未回收的脚本运行时, hprof 堆转储 (正式版本需开启 "允许脚本导出 hprof") 与 LeakCanary 监视 (Documentation)
 * `优化` WebSocket 补全 exitOnClose 的说明: 脚本结束时只处理该脚本自己的连接, 调用过 exitOnClose 的连接优雅关闭, 其余连接立即断开 (Documentation)
-
-# v6.8.36
-
-###### 2026/10/21
-
-* `新增` Node.js, Bun 及 Worker 的 Flow 高级点击, 滚动, 输入, 列表采集与真实事件等待, 支持监听就绪, 快照校验和取消 (Documentation)
 
 ##### 更多发行历史可参阅
 

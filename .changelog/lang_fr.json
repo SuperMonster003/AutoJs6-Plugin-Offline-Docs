@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Amélioration",
   "changelog_label_dependency": "Dépendance",
   "$data": {
+    "v6.8.39": {
+      "released_date": "2026/10/22",
+      "feature": [
+        "Génération de texte IA, flux, catalogue de modèles et sessions persistantes pour Node.js, Bun et Workers, avec annulation et autorisation Android des applications générées"
+      ]
+    },
     "v6.8.38": {
       "released_date": "2026/10/21",
       "feature": [

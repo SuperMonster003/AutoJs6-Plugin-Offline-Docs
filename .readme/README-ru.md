@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14854627
-contentSha256=c5ec258da7dbeedebece949a1fa993349f1c2466f434cb8de9cd25af5f57a820
+totalBytes=14869358
+contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 ******
 
+# v6.8.39
+
+###### 2026/10/22
+
+* `Функция` Генерация текста ИИ, потоковые ответы, каталог моделей и постоянные сеансы для Node.js, Bun и Workers, с отменой и разрешением Android для собранных приложений
+
 # v6.8.38
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 * `Функция` Memory описывает модуль memory для чтения в скриптах диагностики памяти процесса AutoJs6: снимки памяти, принудительная сборка мусора, завершенные, но не освобожденные среды выполнения скриптов, дампы кучи hprof (в release-сборках требуется "Разрешить скриптам экспорт hprof") и наблюдение LeakCanary (Documentation)
 * `Улучшение` WebSocket: дополнено описание exitOnClose: при завершении скрипта обрабатываются только его собственные соединения, отмеченные exitOnClose закрываются штатно, остальные разрываются сразу (Documentation)
-
-# v6.8.36
-
-###### 2026/10/21
-
-* `Функция` Расширенные нажатия, прокрутка, ввод, сбор списков и ожидание реальных событий Flow для Node.js, Bun и Workers, с готовностью подписки, проверкой снимков и отменой (Documentation)
 
 ##### Больше истории выпусков
 

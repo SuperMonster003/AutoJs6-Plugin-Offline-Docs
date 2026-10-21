@@ -62,8 +62,8 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14854627
-contentSha256=c5ec258da7dbeedebece949a1fa993349f1c2466f434cb8de9cd25af5f57a820
+totalBytes=14869358
+contentSha256=fca363c09255b1069db3f494323a0975d2b32c94329e930ff2f8bf30b2891d3b
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
 sourcePath=api
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.39
+
+###### 2026/10/22
+
+* `ميزة` توليد النصوص والبث وفهرس النماذج والجلسات المستمرة في Node.js وBun وWorkers, مع الإلغاء وإذن Android للتطبيقات المجمعة
+
 # v6.8.38
 
 ###### 2026/10/21
@@ -126,12 +132,6 @@ category=offline-docs
 
 * `ميزة` Memory يشرح وحدة memory لقراءة تشخيص ذاكرة عملية AutoJs6 من البرامج النصية: لقطات الذاكرة, وجمع البيانات المهملة القسري, وبيئات تشغيل البرامج النصية المنتهية غير المحررة, وتفريغات الكومة hprof (تتطلب إصدارات release تفعيل "السماح للبرامج النصية بتصدير hprof") ومراقبة LeakCanary (Documentation)
 * `تحسين` WebSocket يكمل شرح exitOnClose: عند انتهاء البرنامج النصي تعالج اتصالاته فقط, وتغلق الاتصالات المعلمة بـ exitOnClose بشكل طبيعي وتقطع الاتصالات الأخرى فورا (Documentation)
-
-# v6.8.36
-
-###### 2026/10/21
-
-* `ميزة` نقرات Flow المتقدمة والتمرير والإدخال وجمع القوائم وانتظار الأحداث الفعلية في Node.js وBun وWorkers, مع جاهزية الاشتراك والتحقق من اللقطات والإلغاء (Documentation)
 
 ##### لمزيد من سجل الإصدارات
 
