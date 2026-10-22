@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14870622
-contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
+totalBytes=14891342
+contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
+sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `Fonctionnalité` Documentation API: Contrôle des tâches ai.agent, événements et contexte/résultats des scripts enregistrés pour Node.js, Bun et Workers, avec autorisation explicite des applications empaquetées
+
 # v6.8.39
 
 ###### 2026/10/22
@@ -125,13 +131,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/21
 
 * `Fonctionnalité` Flow within/scope pour Node.js, Bun et les Workers, avec racines de recherche héritées, navigation par boussole, projections typées et surcharges press/swipe/gesture/gestures
-
-# v6.8.37
-
-###### 2026/10/21
-
-* `Fonctionnalité` Memory décrit le module memory qui permet aux scripts de lire les diagnostics mémoire du processus AutoJs6: instantanés de la mémoire, ramasse-miettes forcé, environnements d'exécution de scripts terminés mais non libérés, vidages du tas hprof (les versions release exigent "Autoriser les scripts à exporter un hprof") et surveillance LeakCanary (Documentation)
-* `Amélioration` WebSocket complète exitOnClose: à la fin d'un script, seules ses propres connexions sont traitées, celles marquées par exitOnClose se ferment proprement et les autres sont coupées immédiatement (Documentation)
 
 ##### Pour plus d'historique des versions
 

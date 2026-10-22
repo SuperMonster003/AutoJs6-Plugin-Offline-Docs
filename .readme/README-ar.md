@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14870622
-contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
+totalBytes=14891342
+contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
+sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ category=offline-docs
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `ميزة` توثيق API: التحكم في مهام ai.agent والأحداث وسياق ونتائج النصوص المسجلة في Node.js وBun وWorker, مع تفويض صريح للتطبيقات المحزمة
+
 # v6.8.39
 
 ###### 2026/10/22
@@ -125,13 +131,6 @@ category=offline-docs
 ###### 2026/10/21
 
 * `ميزة` Flow within/scope في Node.js وBun وWorker مع وراثة جذور البحث والتنقل بالبوصلة وإسقاط النتائج ودعم صيغ press/swipe/gesture/gestures
-
-# v6.8.37
-
-###### 2026/10/21
-
-* `ميزة` Memory يشرح وحدة memory لقراءة تشخيص ذاكرة عملية AutoJs6 من البرامج النصية: لقطات الذاكرة, وجمع البيانات المهملة القسري, وبيئات تشغيل البرامج النصية المنتهية غير المحررة, وتفريغات الكومة hprof (تتطلب إصدارات release تفعيل "السماح للبرامج النصية بتصدير hprof") ومراقبة LeakCanary (Documentation)
-* `تحسين` WebSocket يكمل شرح exitOnClose: عند انتهاء البرنامج النصي تعالج اتصالاته فقط, وتغلق الاتصالات المعلمة بـ exitOnClose بشكل طبيعي وتقطع الاتصالات الأخرى فورا (Documentation)
 
 ##### لمزيد من سجل الإصدارات
 

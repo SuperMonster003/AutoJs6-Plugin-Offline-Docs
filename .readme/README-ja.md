@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14870622
-contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
+totalBytes=14891342
+contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
+sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `機能` API ドキュメント: Node.js/Bun/Worker の ai.agent タスク制御とイベント, 登録済みスクリプトのコンテキストと結果, パッケージ化アプリの明示的な認可
+
 # v6.8.39
 
 ###### 2026/10/22
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/21
 
 * `機能` Node.js, Bun と Worker の Flow within/scope による検索範囲の継承, コンパス移動と結果の射影, および press/swipe/gesture/gestures のオーバーロード
-
-# v6.8.37
-
-###### 2026/10/21
-
-* `機能` Memory に, スクリプトから AutoJs6 プロセスのメモリ診断データを読み取る memory モジュールを追加し, メモリスナップショット, 強制ガベージコレクション, 終了後も回収されていないスクリプトのランタイム, hprof ヒープダンプ (release ビルドでは "スクリプトによる hprof のエクスポートを許可" が必要) と LeakCanary による監視を説明 (Documentation)
-* `改善` WebSocket の exitOnClose の説明を補完: スクリプト終了時はそのスクリプト自身の接続だけを処理し, exitOnClose を呼び出した接続は正常に閉じ, それ以外の接続は直ちに切断 (Documentation)
 
 ##### その他のリリース履歴
 

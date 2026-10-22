@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `Fonctionnalité` Documentation API: Contrôle des tâches ai.agent, événements et contexte/résultats des scripts enregistrés pour Node.js, Bun et Workers, avec autorisation explicite des applications empaquetées
+
 # v6.8.39
 
 ###### 2026/10/22

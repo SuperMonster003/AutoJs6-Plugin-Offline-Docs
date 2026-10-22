@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14870622
-contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
+totalBytes=14891342
+contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
+sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `기능` API 문서: Node.js/Bun/Worker의 ai.agent 작업 제어와 이벤트, 등록된 스크립트의 컨텍스트와 결과, 패키징된 앱의 명시적 승인
+
 # v6.8.39
 
 ###### 2026/10/22
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/21
 
 * `기능` Node.js, Bun 및 Worker의 Flow within/scope 검색 범위 상속, 나침반 탐색 및 결과 투영과 press/swipe/gesture/gestures 오버로드
-
-# v6.8.37
-
-###### 2026/10/21
-
-* `기능` Memory에서 스크립트가 AutoJs6 프로세스의 메모리 진단 데이터를 읽는 memory 모듈을 설명: 메모리 스냅샷, 강제 가비지 컬렉션, 종료 후 회수되지 않은 스크립트 런타임, hprof 힙 덤프 (release 빌드에서는 "스크립트의 hprof 내보내기 허용" 필요) 와 LeakCanary 감시 (Documentation)
-* `개선` WebSocket의 exitOnClose 설명 보완: 스크립트가 끝나면 그 스크립트의 연결만 처리하며, exitOnClose 를 호출한 연결은 정상적으로 닫고 나머지 연결은 즉시 끊음 (Documentation)
 
 ##### 더 많은 릴리스 기록
 

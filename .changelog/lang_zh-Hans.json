@@ -5,6 +5,12 @@
   "changelog_label_improvement": "优化",
   "changelog_label_dependency": "依赖",
   "$data": {
+    "v6.8.40": {
+      "released_date": "2026/10/22",
+      "feature": [
+        "API 文档: Node.js/Bun/Worker 的 ai.agent 任务控制与事件, 注册脚本上下文和结果回传, 以及打包应用的独立授权"
+      ]
+    },
     "v6.8.39": {
       "released_date": "2026/10/22",
       "feature": [

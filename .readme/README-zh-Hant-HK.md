@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14870622
-contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
+totalBytes=14891342
+contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
+sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `新增` API 文件: Node.js/Bun/Worker 的 ai.agent 任務控制與事件, 登記指令碼上下文和結果回傳, 以及打包應用程式的獨立授權
+
 # v6.8.39
 
 ###### 2026/10/22
@@ -125,13 +131,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 ###### 2026/10/21
 
 * `新增` Node.js, Bun 與 Worker 的 Flow within/scope 範圍繼承, 羅盤導航和結果投影, 以及 press/swipe/gesture/gestures 手勢重載
-
-# v6.8.37
-
-###### 2026/10/21
-
-* `新增` 記憶體 (Memory), 説明腳本讀取 AutoJs6 進程記憶體診斷數據的 memory 模組: 記憶體快照, 強制回收, 已結束未回收的腳本運行時, hprof 堆轉儲 (正式版本需開啟 "允許腳本匯出 hprof") 與 LeakCanary 監視 (Documentation)
-* `優化` WebSocket 補全 exitOnClose 的説明: 腳本結束時只處理該腳本自己的連接, 調用過 exitOnClose 的連接優雅關閉, 其餘連接立即斷開 (Documentation)
 
 ##### 更多發行歷史可參閱
 

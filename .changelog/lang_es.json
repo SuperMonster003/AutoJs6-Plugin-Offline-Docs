@@ -5,6 +5,12 @@
   "changelog_label_improvement": "Mejora",
   "changelog_label_dependency": "Dependencia",
   "$data": {
+    "v6.8.40": {
+      "released_date": "2026/10/22",
+      "feature": [
+        "Documentación de API: Control de tareas ai.agent, eventos y contexto/resultados de scripts registrados para Node.js, Bun y Workers, con autorización explícita para las aplicaciones empaquetadas"
+      ]
+    },
     "v6.8.39": {
       "released_date": "2026/10/22",
       "feature": [

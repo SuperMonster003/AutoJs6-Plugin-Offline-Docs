@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `Feature` API documentation: ai.agent task controls, events and registered-script context/results for Node.js, Bun and Workers, with explicit authorization for packaged applications
+
 # v6.8.39
 
 ###### 2026/10/22

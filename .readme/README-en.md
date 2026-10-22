@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14870622
-contentSha256=98531b46c1d5f2e5f6b1d2e243274e14a0673a28ba8fee07957b14f028160d95
+totalBytes=14891342
+contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=dea42f1322760b824383661c5f0eb1e9900c5dae
+sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.40
+
+###### 2026/10/22
+
+* `Feature` API documentation: ai.agent task controls, events and registered-script context/results for Node.js, Bun and Workers, with explicit authorization for packaged applications
+
 # v6.8.39
 
 ###### 2026/10/22
@@ -125,13 +131,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/21
 
 * `Feature` Flow within/scope with inherited search roots, compass navigation and typed result projections, plus press/swipe/gesture/gestures overloads for Node.js, Bun and Workers
-
-# v6.8.37
-
-###### 2026/10/21
-
-* `Feature` Memory describes the memory module for reading the memory diagnostics of the AutoJs6 process in scripts: memory snapshots, forced garbage collection, finished but unreclaimed script runtimes, hprof heap dumps (release builds need "Allow scripts to export hprof") and LeakCanary watching (Documentation)
-* `Improvement` WebSocket completes exitOnClose: when a script ends only its own connections are handled, those marked with exitOnClose close gracefully and the others are cut off at once (Documentation)
 
 ##### For more release history
 
