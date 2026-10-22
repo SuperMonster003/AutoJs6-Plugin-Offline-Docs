@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14891342
-contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
+totalBytes=14931743
+contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
+sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 ###### 2026/10/22
 
 * `新增` API 文档: Node.js/Bun/Worker 的 ai.agent 任务控制与事件, 注册脚本上下文和结果回传, 以及打包应用的独立授权
+* `优化` 3-Block Compose 设计器参考文档: 1.9.0 起新增 "交互预览的新能力" 一节 (对话框, 返回键, 暂停与恢复, 状态栏与导航栏颜色, 主线程占用上限), "TSX 的 UI 工程" 一节 (在 .tsx 脚本中编辑 JSX 布局, 事件桩的写法, 在交互预览中运行 TSX) 与 "<compose> 容器的联动编辑" 一节 (在画布上直接编辑经 compose.attach 挂上的 Compose 界面, 一步新建容器); "预览差异" 表按 AutoJs6 是否包含预览契约 v4 分为两列
 
 # v6.8.39
 

@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14891342
-contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
+totalBytes=14931743
+contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
+sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 ###### 2026/10/22
 
 * `機能` API ドキュメント: Node.js/Bun/Worker の ai.agent タスク制御とイベント, 登録済みスクリプトのコンテキストと結果, パッケージ化アプリの明示的な認可
+* `改善` 3-Block Compose デザイナーのリファレンス: 1.9.0 から "インタラクティブプレビューの新機能" (ダイアログ, 戻るキー, 一時停止と再開, ステータスバーとナビゲーションバーの色, メインスレッド占有の上限), "TSX の UI プロジェクト" (.tsx スクリプト内の JSX レイアウトの編集, イベントスタブの書き方, インタラクティブプレビューでの TSX の実行), "<compose> コンテナーの連動編集" (compose.attach で取り付けた Compose インターフェースをキャンバス上で直接編集, コンテナーを一度に追加) の 3 節を追加し, "プレビューの差異" の表をプレビュー契約 v4 を含む AutoJs6 とそれ以前の 2 列に分けました
 
 # v6.8.39
 

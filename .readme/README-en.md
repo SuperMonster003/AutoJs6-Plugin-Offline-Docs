@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14891342
-contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
+totalBytes=14931743
+contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
+sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/22
 
 * `Feature` API documentation: ai.agent task controls, events and registered-script context/results for Node.js, Bun and Workers, with explicit authorization for packaged applications
+* `Improvement` 3-Block Compose Designer reference: from 1.9.0 three new sections: "New in the interactive preview" (dialogs, the Back key, pause and resume, status bar and navigation bar colors, the main thread busy limit), "TSX UI projects" (editing JSX layouts in .tsx scripts, how event stubs are written, running TSX in the interactive preview) and "Linked editing of <compose> containers" (editing Compose interfaces attached with compose.attach directly on the canvas, adding a container in one step); the "Preview Differences" table now has separate columns for AutoJs6 builds with and without preview contract v4
 
 # v6.8.39
 

@@ -9,6 +9,9 @@
       "released_date": "2026/10/22",
       "feature": [
         "Documentation API: Contrôle des tâches ai.agent, événements et contexte/résultats des scripts enregistrés pour Node.js, Bun et Workers, avec autorisation explicite des applications empaquetées"
+      ],
+      "improvement": [
+        "Référence du Concepteur 3-Block Compose: à partir de 1.9.0, trois nouvelles sections: \"Nouveautés de l'aperçu interactif\" (boîtes de dialogue, touche Retour, pause et reprise, couleurs de la barre d'état et de la barre de navigation, limite d'occupation du thread principal), \"Projets UI en TSX\" (modification des mises en page JSX dans les scripts .tsx, écriture des gabarits d'événements, exécution de TSX dans l'aperçu interactif) et \"Modification liée des conteneurs <compose>\" (modification directe sur le canevas des interfaces Compose rattachées par compose.attach, ajout d'un conteneur en une étape); le tableau \"Différences d'aperçu\" a désormais des colonnes distinctes pour les versions d'AutoJs6 avec et sans le contrat d'aperçu v4"
       ]
     },
     "v6.8.39": {

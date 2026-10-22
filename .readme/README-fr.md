@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14891342
-contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
+totalBytes=14931743
+contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
+sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 ###### 2026/10/22
 
 * `Fonctionnalité` Documentation API: Contrôle des tâches ai.agent, événements et contexte/résultats des scripts enregistrés pour Node.js, Bun et Workers, avec autorisation explicite des applications empaquetées
+* `Amélioration` Référence du Concepteur 3-Block Compose: à partir de 1.9.0, trois nouvelles sections: "Nouveautés de l'aperçu interactif" (boîtes de dialogue, touche Retour, pause et reprise, couleurs de la barre d'état et de la barre de navigation, limite d'occupation du thread principal), "Projets UI en TSX" (modification des mises en page JSX dans les scripts .tsx, écriture des gabarits d'événements, exécution de TSX dans l'aperçu interactif) et "Modification liée des conteneurs <compose>" (modification directe sur le canevas des interfaces Compose rattachées par compose.attach, ajout d'un conteneur en une étape); le tableau "Différences d'aperçu" a désormais des colonnes distinctes pour les versions d'AutoJs6 avec et sans le contrat d'aperçu v4
 
 # v6.8.39
 

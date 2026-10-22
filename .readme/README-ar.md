@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14891342
-contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
+totalBytes=14931743
+contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
+sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ category=offline-docs
 ###### 2026/10/22
 
 * `ميزة` توثيق API: التحكم في مهام ai.agent والأحداث وسياق ونتائج النصوص المسجلة في Node.js وBun وWorker, مع تفويض صريح للتطبيقات المحزمة
+* `تحسين` مرجع مصمم 3-Block Compose: ابتداء من 1.9.0 ثلاثة أقسام جديدة: "الجديد في المعاينة التفاعلية" (مربعات الحوار ومفتاح الرجوع والإيقاف المؤقت والاستئناف وألوان شريط الحالة وشريط التنقل وحد انشغال الخيط الرئيسي) و "مشاريع UI المكتوبة بـ TSX" (تحرير تخطيطات JSX في سكربتات .tsx وطريقة كتابة قوالب الأحداث وتشغيل TSX في المعاينة التفاعلية) و "التحرير المرتبط لحاويات <compose>" (تحرير واجهات Compose المرفقة عبر compose.attach مباشرة على اللوحة وإضافة حاوية بخطوة واحدة); وصار لجدول "فروق المعاينة" عمودان منفصلان لبناءات AutoJs6 التي تتضمن عقد المعاينة v4 والتي لا تتضمنه
 
 # v6.8.39
 

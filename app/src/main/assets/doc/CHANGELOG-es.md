@@ -9,6 +9,7 @@
 ###### 2026/10/22
 
 * `Función` Documentación de API: Control de tareas ai.agent, eventos y contexto/resultados de scripts registrados para Node.js, Bun y Workers, con autorización explícita para las aplicaciones empaquetadas
+* `Mejora` Referencia del Diseñador de 3-Block Compose: desde 1.9.0, tres secciones nuevas: "Novedades de la vista previa interactiva" (diálogos, la tecla Atrás, pausa y reanudación, colores de la barra de estado y de navegación, límite de ocupación del hilo principal), "Proyectos UI en TSX" (edición de diseños JSX en scripts .tsx, cómo se escriben los esqueletos de eventos, ejecución de TSX en la vista previa interactiva) y "Edición vinculada de contenedores <compose>" (edición directa en el lienzo de las interfaces Compose acopladas con compose.attach, creación de un contenedor en un paso); la tabla "Diferencias de vista previa" tiene ahora columnas separadas para las versiones de AutoJs6 con y sin el contrato de vista previa v4
 
 # v6.8.39
 

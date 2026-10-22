@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=225
-totalBytes=14891342
-contentSha256=d3b66593d89aa7c02a173a0c05d3571cb7fd4bace254efc08b9ef3150c70b91e
+totalBytes=14931743
+contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=c4999573cda259001c21d3f6324bb2894778fd3b
+sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -119,6 +119,7 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/22
 
 * `기능` API 문서: Node.js/Bun/Worker의 ai.agent 작업 제어와 이벤트, 등록된 스크립트의 컨텍스트와 결과, 패키징된 앱의 명시적 승인
+* `개선` 3-Block Compose 디자이너 참조 문서: 1.9.0 부터 "대화형 미리보기의 새 기능" (대화상자, 뒤로 키, 일시 중지와 재개, 상태 표시줄과 내비게이션 바 색상, 메인 스레드 점유 한도), "TSX 의 UI 프로젝트" (.tsx 스크립트 안의 JSX 레이아웃 편집, 이벤트 스텁 작성 방식, 대화형 미리보기에서 TSX 실행), "<compose> 컨테이너의 연동 편집" (compose.attach 로 붙인 Compose 인터페이스를 캔버스에서 바로 편집, 컨테이너를 한 번에 추가) 세 절을 추가하고, "미리보기 차이" 표를 미리보기 계약 v4 를 포함한 AutoJs6 와 그 이전 두 열로 나눔
 
 # v6.8.39
 
