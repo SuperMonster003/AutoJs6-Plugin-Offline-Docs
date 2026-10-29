@@ -530,7 +530,8 @@ def validate(text: str, path: Path) -> None:
         raise ValueError(f"External MDN type link in {relative}")
     # `callAutoJs` is the public Node bridge API name, not a legacy product name;
     # `AutoJs4` is the baseline project (SuperMonster003/AutoJs4) embedded by the AutoJs4 Runtime plugin.
-    if re.search(r"(?<!call)AutoJs(?!6|4|Pro|-Docs)", text):
+    # `AutoJsJvmEntry` is the entry interface of the Java and Kotlin Runtime plugins (JVM Entry API).
+    if re.search(r"(?<!call)AutoJs(?!6|4|Pro|-Docs|JvmEntry)", text):
         raise ValueError(f"Legacy bare AutoJs product name in {relative}")
     if 'packageName: &quot;org.autojs.autojs&quot;' in text:
         raise ValueError(f"Legacy current-product package name in {relative}")
