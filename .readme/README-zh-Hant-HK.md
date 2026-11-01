@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=225
-totalBytes=14931743
-contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
+fileCount=232
+totalBytes=16347663
+contentSha256=985e6d305f30cd9c1710bb68a831db1d116a1171d570740ccfab25ae2002c068
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
+sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 # v6.8.40
 
-###### 2026/10/22
+###### 2026/11/01
 
 * `新增` API 文件: Node.js/Bun/Worker 的 ai.agent 任務控制與事件, 登記指令碼上下文和結果回傳, 以及打包應用程式的獨立授權
+* `修復` 離線文件校驗器不再將 Java/Kotlin Runtime 插件的入口介面名稱 `AutoJsJvmEntry` 誤判為舊版裸產品名稱
 * `優化` 3-Block Compose 設計器參考文檔: 1.9.0 起新增 "互動預覽的新能力" 一節 (對話框, 返回鍵, 暫停與恢復, 狀態欄與導航欄顏色, 主線程佔用上限), "TSX 的 UI 工程" 一節 (在 .tsx 腳本中編輯 JSX 佈局, 事件樁的寫法, 在互動預覽中運行 TSX) 與 "<compose> 容器的聯動編輯" 一節 (在畫布上直接編輯經 compose.attach 掛上的 Compose 界面, 一步新建容器); "預覽差異" 表按 AutoJs6 是否包含預覽契約 v4 分為兩欄
 
 # v6.8.39

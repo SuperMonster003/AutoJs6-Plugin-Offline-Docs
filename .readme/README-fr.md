@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=225
-totalBytes=14931743
-contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
+fileCount=232
+totalBytes=16347663
+contentSha256=985e6d305f30cd9c1710bb68a831db1d116a1171d570740ccfab25ae2002c068
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
+sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.40
 
-###### 2026/10/22
+###### 2026/11/01
 
 * `Fonctionnalité` Documentation API: Contrôle des tâches ai.agent, événements et contexte/résultats des scripts enregistrés pour Node.js, Bun et Workers, avec autorisation explicite des applications empaquetées
+* `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de l'interface d'entrée `AutoJsJvmEntry` des plugins Java et Kotlin Runtime avec un ancien nom de produit nu
 * `Amélioration` Référence du Concepteur 3-Block Compose: à partir de 1.9.0, trois nouvelles sections: "Nouveautés de l'aperçu interactif" (boîtes de dialogue, touche Retour, pause et reprise, couleurs de la barre d'état et de la barre de navigation, limite d'occupation du thread principal), "Projets UI en TSX" (modification des mises en page JSX dans les scripts .tsx, écriture des gabarits d'événements, exécution de TSX dans l'aperçu interactif) et "Modification liée des conteneurs <compose>" (modification directe sur le canevas des interfaces Compose rattachées par compose.attach, ajout d'un conteneur en une étape); le tableau "Différences d'aperçu" a désormais des colonnes distinctes pour les versions d'AutoJs6 avec et sans le contrat d'aperçu v4
 
 # v6.8.39

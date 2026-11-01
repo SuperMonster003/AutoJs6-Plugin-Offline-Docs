@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=225
-totalBytes=14931743
-contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
+fileCount=232
+totalBytes=16347663
+contentSha256=985e6d305f30cd9c1710bb68a831db1d116a1171d570740ccfab25ae2002c068
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
+sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService は IPluginInfoProvider を通じて PluginInfo を
 
 # v6.8.40
 
-###### 2026/10/22
+###### 2026/11/01
 
 * `機能` API ドキュメント: Node.js/Bun/Worker の ai.agent タスク制御とイベント, 登録済みスクリプトのコンテキストと結果, パッケージ化アプリの明示的な認可
+* `修正` オフライン文書 validator は Java/Kotlin Runtime プラグインのエントリ interface 名 `AutoJsJvmEntry` を旧製品の裸名称として誤判定しなくなりました
 * `改善` 3-Block Compose デザイナーのリファレンス: 1.9.0 から "インタラクティブプレビューの新機能" (ダイアログ, 戻るキー, 一時停止と再開, ステータスバーとナビゲーションバーの色, メインスレッド占有の上限), "TSX の UI プロジェクト" (.tsx スクリプト内の JSX レイアウトの編集, イベントスタブの書き方, インタラクティブプレビューでの TSX の実行), "<compose> コンテナーの連動編集" (compose.attach で取り付けた Compose インターフェースをキャンバス上で直接編集, コンテナーを一度に追加) の 3 節を追加し, "プレビューの差異" の表をプレビュー契約 v4 を含む AutoJs6 とそれ以前の 2 列に分けました
 
 # v6.8.39

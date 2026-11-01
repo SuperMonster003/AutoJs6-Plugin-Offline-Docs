@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=225
-totalBytes=14931743
-contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
+fileCount=232
+totalBytes=16347663
+contentSha256=985e6d305f30cd9c1710bb68a831db1d116a1171d570740ccfab25ae2002c068
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
+sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ category=offline-docs
 
 # v6.8.40
 
-###### 2026/10/22
+###### 2026/11/01
 
 * `ميزة` توثيق API: التحكم في مهام ai.agent والأحداث وسياق ونتائج النصوص المسجلة في Node.js وBun وWorker, مع تفويض صريح للتطبيقات المحزمة
+* `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم واجهة الدخول `AutoJsJvmEntry` لإضافات Java و Kotlin Runtime اسما قديما مجردا للمنتج
 * `تحسين` مرجع مصمم 3-Block Compose: ابتداء من 1.9.0 ثلاثة أقسام جديدة: "الجديد في المعاينة التفاعلية" (مربعات الحوار ومفتاح الرجوع والإيقاف المؤقت والاستئناف وألوان شريط الحالة وشريط التنقل وحد انشغال الخيط الرئيسي) و "مشاريع UI المكتوبة بـ TSX" (تحرير تخطيطات JSX في سكربتات .tsx وطريقة كتابة قوالب الأحداث وتشغيل TSX في المعاينة التفاعلية) و "التحرير المرتبط لحاويات <compose>" (تحرير واجهات Compose المرفقة عبر compose.attach مباشرة على اللوحة وإضافة حاوية بخطوة واحدة); وصار لجدول "فروق المعاينة" عمودان منفصلان لبناءات AutoJs6 التي تتضمن عقد المعاينة v4 والتي لا تتضمنه
 
 # v6.8.39

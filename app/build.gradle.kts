@@ -54,8 +54,9 @@ val externalMdnTypeLink = Regex(
         """(?=[^>]*\bclass\s*=\s*(['"])[^'"]*\btype\b[^'"]*\2)[^>]*>""",
     RegexOption.IGNORE_CASE,
 )
-// `callAutoJs` is the public Node bridge API name, not a legacy product name.
-val bareLegacyAutoJsName = Regex("""(?<!call)AutoJs(?!6|4|Pro|-Docs)""")
+// `callAutoJs` is the public Node bridge API name, not a legacy product name; `AutoJsJvmEntry` is the entry interface of the
+// Java and Kotlin Runtime plugins (JVM Entry API). Keep in step with `.python/normalize_offline_docs.py`.
+val bareLegacyAutoJsName = Regex("""(?<!call)AutoJs(?!6|4|Pro|-Docs|JvmEntry)""")
 val codeBlock = Regex(
     """<pre><code([^>]*)>(.*?)</code></pre>""",
     setOf(RegexOption.DOT_MATCHES_ALL),

@@ -6,9 +6,10 @@
 
 # v6.8.40
 
-###### 2026/10/22
+###### 2026/11/01
 
 * `Feature` API documentation: ai.agent task controls, events and registered-script context/results for Node.js, Bun and Workers, with explicit authorization for packaged applications
+* `Fix` Offline documentation validators no longer treat the entry interface name `AutoJsJvmEntry` of the Java and Kotlin Runtime plugins as a legacy bare product name
 * `Improvement` 3-Block Compose Designer reference: from 1.9.0 three new sections: "New in the interactive preview" (dialogs, the Back key, pause and resume, status bar and navigation bar colors, the main thread busy limit), "TSX UI projects" (editing JSX layouts in .tsx scripts, how event stubs are written, running TSX in the interactive preview) and "Linked editing of <compose> containers" (editing Compose interfaces attached with compose.attach directly on the canvas, adding a container in one step); the "Preview Differences" table now has separate columns for AutoJs6 builds with and without preview contract v4
 
 # v6.8.39

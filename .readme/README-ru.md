@@ -61,11 +61,11 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=225
-totalBytes=14931743
-contentSha256=79e6ac3e2fc1755b5d13c97e33669832f12966c53c5bc0a8031af961eefc09d3
+fileCount=232
+totalBytes=16347663
+contentSha256=985e6d305f30cd9c1710bb68a831db1d116a1171d570740ccfab25ae2002c068
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=5c182458b9ae4c201ec4326b978dc6b47fd014ec
+sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,9 +116,10 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.40
 
-###### 2026/10/22
+###### 2026/11/01
 
 * `Функция` Документация API: Управление задачами ai.agent, события и контекст/результаты зарегистрированных скриптов для Node.js, Bun и Workers с явной авторизацией упакованных приложений
+* `Исправление` Валидаторы офлайн-документации больше не принимают имя входного интерфейса `AutoJsJvmEntry` плагинов Java и Kotlin Runtime за устаревшее неполное имя продукта
 * `Улучшение` Справка по дизайнеру 3-Block Compose: с 1.9.0 три новых раздела: "Новое в интерактивном предпросмотре" (диалоги, кнопка Назад, пауза и возобновление, цвета строки состояния и панели навигации, предел занятости главного потока), "UI-проекты на TSX" (правка JSX-макетов в скриптах .tsx, как пишутся заготовки событий, запуск TSX в интерактивном предпросмотре) и "Связанная правка контейнеров <compose>" (правка прямо на холсте интерфейсов Compose, подключенных через compose.attach, добавление контейнера за один шаг); в таблице "Различия предпросмотра" теперь отдельные столбцы для сборок AutoJs6 с контрактом предпросмотра v4 и без него
 
 # v6.8.39
