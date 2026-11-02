@@ -6,7 +6,7 @@
   "changelog_label_dependency": "تبعية",
   "$data": {
     "v6.8.40": {
-      "released_date": "2026/11/01",
+      "released_date": "2026/11/02",
       "feature": [
         "توثيق API: التحكم في مهام ai.agent والأحداث وسياق ونتائج النصوص المسجلة في Node.js وBun وWorker, مع تفويض صريح للتطبيقات المحزمة"
       ],

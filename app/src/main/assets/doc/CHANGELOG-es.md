@@ -6,7 +6,7 @@
 
 # v6.8.40
 
-###### 2026/11/01
+###### 2026/11/02
 
 * `Función` Documentación de API: Control de tareas ai.agent, eventos y contexto/resultados de scripts registrados para Node.js, Bun y Workers, con autorización explícita para las aplicaciones empaquetadas
 * `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre de la interfaz de entrada `AutoJsJvmEntry` de los plugins Java y Kotlin Runtime con un nombre de producto heredado sin calificar

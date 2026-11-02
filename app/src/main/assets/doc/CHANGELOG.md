@@ -6,7 +6,7 @@
 
 # v6.8.40
 
-###### 2026/11/01
+###### 2026/11/02
 
 * `新增` API 文档: Node.js/Bun/Worker 的 ai.agent 任务控制与事件, 注册脚本上下文和结果回传, 以及打包应用的独立授权
 * `修复` 离线文档校验将 Java/Kotlin Runtime 插件的入口接口 AutoJsJvmEntry 误判为旧版产品名称的问题

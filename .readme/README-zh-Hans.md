@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=245
-totalBytes=18037356
-contentSha256=40e223c46d34765fc91c6a56a60c5bbad6635f2bcba0b4665e5d4287f0eff06b
+totalBytes=18039005
+contentSha256=e05d9b7b1677a0fc831dbc9c031b1f7038ce3403ee199ba11eaf4c1046ee6cc0
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
+sourceBaseCommit=78f6c85920961cc7018916ce230b499c0188d010
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 # v6.8.40
 
-###### 2026/11/01
+###### 2026/11/02
 
 * `新增` API 文档: Node.js/Bun/Worker 的 ai.agent 任务控制与事件, 注册脚本上下文和结果回传, 以及打包应用的独立授权
 * `修复` 离线文档校验将 Java/Kotlin Runtime 插件的入口接口 AutoJsJvmEntry 误判为旧版产品名称的问题

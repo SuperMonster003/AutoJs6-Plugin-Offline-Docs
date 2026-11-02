@@ -6,7 +6,7 @@
   "changelog_label_dependency": "Dependency",
   "$data": {
     "v6.8.40": {
-      "released_date": "2026/11/01",
+      "released_date": "2026/11/02",
       "feature": [
         "API documentation: ai.agent task controls, events and registered-script context/results for Node.js, Bun and Workers, with explicit authorization for packaged applications"
       ],

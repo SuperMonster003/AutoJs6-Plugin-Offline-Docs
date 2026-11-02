@@ -6,7 +6,7 @@
 
 # v6.8.40
 
-###### 2026/11/01
+###### 2026/11/02
 
 * `기능` API 문서: Node.js/Bun/Worker의 ai.agent 작업 제어와 이벤트, 등록된 스크립트의 컨텍스트와 결과, 패키징된 앱의 명시적 승인
 * `수정` 오프라인 문서 validator 가 Java/Kotlin Runtime 플러그인의 진입 interface 이름 `AutoJsJvmEntry` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다

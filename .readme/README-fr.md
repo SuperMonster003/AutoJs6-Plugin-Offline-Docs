@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=245
-totalBytes=18037356
-contentSha256=40e223c46d34765fc91c6a56a60c5bbad6635f2bcba0b4665e5d4287f0eff06b
+totalBytes=18039005
+contentSha256=e05d9b7b1677a0fc831dbc9c031b1f7038ce3403ee199ba11eaf4c1046ee6cc0
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
+sourceBaseCommit=78f6c85920961cc7018916ce230b499c0188d010
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 # v6.8.40
 
-###### 2026/11/01
+###### 2026/11/02
 
 * `Fonctionnalité` Documentation API: Contrôle des tâches ai.agent, événements et contexte/résultats des scripts enregistrés pour Node.js, Bun et Workers, avec autorisation explicite des applications empaquetées
 * `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de l'interface d'entrée `AutoJsJvmEntry` des plugins Java et Kotlin Runtime avec un ancien nom de produit nu

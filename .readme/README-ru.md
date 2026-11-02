@@ -62,10 +62,10 @@ assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
 fileCount=245
-totalBytes=18037356
-contentSha256=40e223c46d34765fc91c6a56a60c5bbad6635f2bcba0b4665e5d4287f0eff06b
+totalBytes=18039005
+contentSha256=e05d9b7b1677a0fc831dbc9c031b1f7038ce3403ee199ba11eaf4c1046ee6cc0
 sourceRepository=SuperMonster003/AutoJs6-Documentation
-sourceBaseCommit=d163293c66712bd97d861659954f99b390f2601d
+sourceBaseCommit=78f6c85920961cc7018916ce230b499c0188d010
 sourcePath=api
 sourceGenerator=generator/auto-generate-for-autojs6.bat
 discovery=org.autojs.plugin.INFO|org.autojs.plugin.OFFLINE_DOCS
@@ -116,7 +116,7 @@ OfflineDocsPluginInfoService публикует PluginInfo через IPluginInf
 
 # v6.8.40
 
-###### 2026/11/01
+###### 2026/11/02
 
 * `Функция` Документация API: Управление задачами ai.agent, события и контекст/результаты зарегистрированных скриптов для Node.js, Bun и Workers с явной авторизацией упакованных приложений
 * `Исправление` Валидаторы офлайн-документации больше не принимают имя входного интерфейса `AutoJsJvmEntry` плагинов Java и Kotlin Runtime за устаревшее неполное имя продукта

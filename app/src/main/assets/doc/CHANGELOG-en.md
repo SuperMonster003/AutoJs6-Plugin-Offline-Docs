@@ -6,7 +6,7 @@
 
 # v6.8.40
 
-###### 2026/11/01
+###### 2026/11/02
 
 * `Feature` API documentation: ai.agent task controls, events and registered-script context/results for Node.js, Bun and Workers, with explicit authorization for packaged applications
 * `Fix` Offline documentation validators no longer treat the entry interface name `AutoJsJvmEntry` of the Java and Kotlin Runtime plugins as a legacy bare product name
