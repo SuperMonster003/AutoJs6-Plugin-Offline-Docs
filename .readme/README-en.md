@@ -114,6 +114,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.41
+
+###### 2026/11/04
+
+* `Improvement` Bundled documentation includes the async/await page and its navigation links, with related API documentation synchronized
+
 # v6.8.40
 
 ###### 2026/11/02
@@ -127,12 +133,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 ###### 2026/10/22
 
 * `Feature` AI text generation, streaming, model catalog and persistent sessions for Node.js, Bun and Workers, with cancellation and per-app consent in 3-Stone AI for packaged apps
-
-# v6.8.38
-
-###### 2026/10/21
-
-* `Feature` Flow within/scope with inherited search roots, compass navigation and typed result projections, plus press/swipe/gesture/gestures overloads for Node.js, Bun and Workers
 
 ##### For more release history
 

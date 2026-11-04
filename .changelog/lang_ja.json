@@ -5,6 +5,12 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v6.8.41": {
+      "released_date": "2026/11/04",
+      "improvement": [
+        "同梱ドキュメントに async/await のページとナビゲーションを追加し, 関連する API の説明を同期"
+      ]
+    },
     "v6.8.40": {
       "released_date": "2026/11/02",
       "feature": [

@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.41
+
+###### 2026/11/04
+
+* `Improvement` Bundled documentation includes the async/await page and its navigation links, with related API documentation synchronized
+
 # v6.8.40
 
 ###### 2026/11/02

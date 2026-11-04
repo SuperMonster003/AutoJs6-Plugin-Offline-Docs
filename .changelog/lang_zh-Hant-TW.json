@@ -5,6 +5,12 @@
   "changelog_label_improvement": "優化",
   "changelog_label_dependency": "相依性",
   "$data": {
+    "v6.8.41": {
+      "released_date": "2026/11/04",
+      "improvement": [
+        "離線文件補充 async/await 頁面及導覽入口, 並同步相關 API 說明"
+      ]
+    },
     "v6.8.40": {
       "released_date": "2026/11/02",
       "feature": [

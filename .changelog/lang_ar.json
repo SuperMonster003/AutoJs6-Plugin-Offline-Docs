@@ -5,6 +5,12 @@
   "changelog_label_improvement": "تحسين",
   "changelog_label_dependency": "تبعية",
   "$data": {
+    "v6.8.41": {
+      "released_date": "2026/11/04",
+      "improvement": [
+        "تتضمن الوثائق المرفقة صفحة async/await وروابط التنقل إليها مع مزامنة شرح واجهات API ذات الصلة"
+      ]
+    },
     "v6.8.40": {
       "released_date": "2026/11/02",
       "feature": [

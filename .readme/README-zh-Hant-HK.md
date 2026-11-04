@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 
 ******
 
+# v6.8.41
+
+###### 2026/11/04
+
+* `優化` 離線文件補充 async/await 頁面及導覽入口, 並同步相關 API 說明
+
 # v6.8.40
 
 ###### 2026/11/02
@@ -127,12 +133,6 @@ OfflineDocsPluginInfoService 透過 IPluginInfoProvider 發佈 PluginInfo. 宿�
 ###### 2026/10/22
 
 * `新增` Node.js, Bun 與 Worker 的 AI 文字生成, 串流結果, 模型目錄及持續工作階段, 支援取消與 3-Stone AI 對打包應用程式的個別授權
-
-# v6.8.38
-
-###### 2026/10/21
-
-* `新增` Node.js, Bun 與 Worker 的 Flow within/scope 範圍繼承, 羅盤導航和結果投影, 以及 press/swipe/gesture/gestures 手勢重載
 
 ##### 更多發行歷史可參閱
 

@@ -5,6 +5,12 @@
   "changelog_label_improvement": "개선",
   "changelog_label_dependency": "의존성",
   "$data": {
+    "v6.8.41": {
+      "released_date": "2026/11/04",
+      "improvement": [
+        "오프라인 문서에 async/await 페이지와 탐색 링크를 포함하고 관련 API 설명을 동기화"
+      ]
+    },
     "v6.8.40": {
       "released_date": "2026/11/02",
       "feature": [

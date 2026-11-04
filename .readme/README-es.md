@@ -114,6 +114,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.41
+
+###### 2026/11/04
+
+* `Mejora` La documentación incluida incorpora la página async/await y sus enlaces de navegación, y sincroniza las descripciones de las API relacionadas
+
 # v6.8.40
 
 ###### 2026/11/02
@@ -127,12 +133,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 ###### 2026/10/22
 
 * `Función` Generación de texto con IA, transmisión, catálogo de modelos y sesiones persistentes para Node.js, Bun y Workers, con cancelación y consentimiento por aplicación en 3-Stone AI
-
-# v6.8.38
-
-###### 2026/10/21
-
-* `Función` Flow within/scope para Node.js, Bun y Workers, con raíces de búsqueda heredadas, navegación por brújula, proyecciones tipadas y sobrecargas press/swipe/gesture/gestures
 
 ##### Para ver más historial de versiones
 

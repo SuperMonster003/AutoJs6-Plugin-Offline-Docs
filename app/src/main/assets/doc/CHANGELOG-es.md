@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.41
+
+###### 2026/11/04
+
+* `Mejora` La documentación incluida incorpora la página async/await y sus enlaces de navegación, y sincroniza las descripciones de las API relacionadas
+
 # v6.8.40
 
 ###### 2026/11/02

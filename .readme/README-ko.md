@@ -114,6 +114,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.41
+
+###### 2026/11/04
+
+* `개선` 오프라인 문서에 async/await 페이지와 탐색 링크를 포함하고 관련 API 설명을 동기화
+
 # v6.8.40
 
 ###### 2026/11/02
@@ -127,12 +133,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 ###### 2026/10/22
 
 * `기능` Node.js, Bun 및 Worker의 AI 텍스트 생성, 스트리밍, 모델 목록 및 영구 세션, 취소와 3-Stone AI의 패키지 앱별 접근 승인 지원
-
-# v6.8.38
-
-###### 2026/10/21
-
-* `기능` Node.js, Bun 및 Worker의 Flow within/scope 검색 범위 상속, 나침반 탐색 및 결과 투영과 press/swipe/gesture/gestures 오버로드
 
 ##### 더 많은 릴리스 기록
 
