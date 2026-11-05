@@ -550,7 +550,7 @@ console.log(result.categories.join(&#39;, &#39;));
 <tr>
 <td>3-Stove Agent</td>
 <td>1.4.0 及以上</td>
-<td>智能体设置, 插件外观与 MCP 服务器配置. 导入不会开启 &quot;完全访问&quot;, 该项计为跳过</td>
+<td>智能体设置, 插件外观与 MCP 服务器配置. 导入不会开启 &quot;完全访问&quot;, 该项计为跳过; &quot;撤销上次导入&quot; 恢复导入前本机的 &quot;完全访问&quot;</td>
 <td>任一 MCP 服务器配置含令牌时</td>
 </tr>
 </tbody>
@@ -613,6 +613,7 @@ class SettingsTransferProvider : PluginSettingsTransferProvider() {
 <ul>
 <li><code>exportSettings(request)</code> 返回 <code>Exported(settings, entries, sensitive)</code>. <code>settings</code> 为设置的 JSON 对象, <code>entries</code> 为导出向导中显示的条目数, <code>sensitive</code> 参阅 <a href="#settings_2">敏感设置</a>. 只导出用户选择的设置, 不包含缓存, 本机记录, 下载的文件, 模型与历史记录. <code>request.purpose</code> 为 <code>export</code> (导出) 或 <code>backup</code> (备份), 两者应返回相同的内容.</li>
 <li><code>importSettings(settings, source, request)</code> 返回 <code>Imported(written, skipped, restartNeeded)</code>. 导入应当宽松: 只写入认识且有效的条目, 其余计入 <code>skipped</code>; 文档未提及的设置保持原值; 一次写入全部条目, 同一文档重复导入的结果相同. <code>source</code> 提供导出该文档的插件版本 (<code>versionCode</code>, <code>versionName</code>), 用于迁移旧版本的设置. 部分设置需要重启插件后生效时, 将 <code>restartNeeded</code> 设为 <code>true</code>.</li>
+<li>自 common-plugin-api 1.1.1 起, 导入时 <code>request.purpose</code> 为 <code>import</code> (导入归档) 或 <code>undo</code> (&quot;撤销上次导入&quot;, 交还的是本机在那次导入之前的备份), <code>request.isUndo</code> 在后者时为 <code>true</code>; AutoJs6 6.8.0 不传该值, 视为 <code>import</code>. 只允许在本机设置的条目 (例如用户在本机授予的权限) 可在导入归档时跳过, 在撤销时接受. 使用 1.1.0 的插件不区分两者.</li>
 <li>覆写 <code>restartProcessAfterImport</code> 为 <code>true</code> 时 (默认为 <code>false</code>), 导入结果的 <code>restartNeeded</code> 为 <code>true</code> 时插件进程在返回结果约 500 毫秒后退出, 插件有界面在前台时不退出; 下次调用或绑定时插件重新启动.</li>
 <li>抛出 <code>PluginSettingsTransferException</code> 可返回指定的错误码, 例如插件正在迁移自身数据时返回 <code>BUSY</code>, 导出向导将该插件显示为正忙.</li>
 </ul>

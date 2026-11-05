@@ -722,7 +722,55 @@ run.result.then((result) =&gt; console.log(result.status, result.summary), conso
 <div class="signature"><ul>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 当前链路状态快照</li>
 </ul>
-</div><p>包含 <code>state</code>, <code>queuedCount</code>, 可选 <code>runningRunId</code> 与 <code>errorCode</code>. <code>state</code> 为 <code>detached</code>, <code>attaching</code>, <code>attached</code>, <code>host_unavailable</code> 或 <code>failed</code>. 同步读取不会尝试启用或连接插件.</p>
+</div><p>包含 <code>state</code>, <code>queuedCount</code>, 可选 <code>runningRunId</code>, <code>errorCode</code> 与 <code>reason</code>. <code>state</code> 为 <code>detached</code>, <code>attaching</code>, <code>attached</code>, <code>host_unavailable</code> 或 <code>failed</code>. 同步读取不会尝试启用或连接插件.</p>
+<p><code>errorCode</code> 为 <code>PLUGIN_UNAVAILABLE</code> 时, AutoJs6 6.8.1 起附带 <code>reason</code>, 说明最近一次连接未能建立的原因:</p>
+<table>
+<thead>
+<tr>
+<th>reason</th>
+<th>含义</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NOT_INSTALLED</code></td>
+<td>未安装 3-Stove Agent</td>
+<td>在插件中心安装</td>
+</tr>
+<tr>
+<td><code>NOT_TRUSTED</code></td>
+<td>插件未授权, 或签名未被确认</td>
+<td>在插件中心授权; 签名未被识别时在 3-Stove Agent 中打开 AutoJs6 以确认</td>
+</tr>
+<tr>
+<td><code>DISABLED</code></td>
+<td>插件在插件中心被关闭, 或应用在系统设置中被停用</td>
+<td>在插件中心启用, 并检查系统设置</td>
+</tr>
+<tr>
+<td><code>NOT_ACTIVATED</code></td>
+<td>插件处于停止状态 (例如安装后从未打开)</td>
+<td>打开一次 3-Stove Agent</td>
+</tr>
+<tr>
+<td><code>INCOMPATIBLE</code></td>
+<td>插件与当前 AutoJs6 版本不兼容</td>
+<td>将两者都更新到最新版本</td>
+</tr>
+<tr>
+<td><code>NO_RESPONSE</code></td>
+<td>插件服务无法绑定, 或连接期间插件进程退出</td>
+<td>在系统设置中允许 3-Stove Agent 自启动和后台运行, 然后重试</td>
+</tr>
+<tr>
+<td><code>REQUEST_DROPPED</code></td>
+<td>插件发来的连接请求未通过身份校验, 或脚本目录设置无效</td>
+<td>将 3-Stove Agent 更新到最新版本后重试</td>
+</tr>
+</tbody>
+</table>
+<p>插件恢复可用后 <code>reason</code> 随之清除; <code>state</code> 为 <code>failed</code> 时保留到下一次连接. 未列出的取值按缺失处理. 同一原因也会在插件发来的连接请求未完成时写入全局日志.</p>
 <h3>ai.agent.result(value)<span><a class="mark" href="#ai_ai_agent_result_value" id="ai_ai_agent_result_value">#</a></span></h3>
 <div class="signature"><ul>
 <li><strong>value</strong> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a></span> } - 可经 <code>JSON.stringify</code> 序列化为 JSON 的结果</li>
