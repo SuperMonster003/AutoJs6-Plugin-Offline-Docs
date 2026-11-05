@@ -372,15 +372,15 @@ typeof Packages.java === &#39;object&#39;; // true
 </blockquote>
 <p>顶层方法 <code>importPackage</code> 及 <code>importClass</code> 可以像 <code>import</code> 语句一样导入包或类.</p>
 <pre><code class="lang-js">importPackage(java.io);
-typeof File === &#39;object&#39;; // true
+typeof File === &#39;function&#39;; // true
 </code></pre>
 <p>上述示例相当于 Java 的导入声明语句 <code>import java.io.*;</code></p>
 <pre><code class="lang-js">importClass(java.io.File);
-typeof File === &#39;object&#39;; // true
+typeof File === &#39;function&#39;; // true
 </code></pre>
 <p>上述示例相当于 Java 的导入声明语句 <code>import java.io.File;</code></p>
 <pre><code class="lang-js">const File = java.io.File;
-typeof File === &#39;object&#39;; // true
+typeof File === &#39;function&#39;; // true
 </code></pre>
 <p>上述示例也可使用解构赋值方式导入 File 类: <code>const {File} = java.io;</code></p>
 <blockquote>

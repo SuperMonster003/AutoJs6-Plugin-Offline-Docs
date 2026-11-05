@@ -684,7 +684,7 @@ let client = mail.connect({ provider: preset.id, address: &#39;someone@foxmail.c
 <ul>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 插件设置页保存的账户</li>
 </ul>
-<p>每项包含 <code>alias</code>, <code>address</code>, <code>user</code>, <code>name</code>, <code>provider</code>, <code>auth</code>, <code>receive</code>, <code>imap</code>, <code>pop3</code>, <code>smtp</code>, <code>default</code> 与 <code>updatedAt</code>, 不包含任何凭据. 在插件设置页经浏览器以 Google / Microsoft 账号登录的账户 (Angus Mail 1.2.0) 另有 <code>oauth</code> 对象 (<code>provider</code> 为 <code>google</code> 或 <code>microsoft</code>, <code>authorizedAt</code> 与 <code>expiresAt</code> 为 UTC 毫秒, <code>needsReauth</code> 为 true 时表示刷新被拒, 需在插件设置页重新登录), 其 <code>auth</code> 为 <code>xoauth2</code>, 访问令牌由插件自行续期, 令牌本身不会出现在这里. 保存的账户无法解析时只包含 <code>alias</code> 与 <code>error</code>. 字段含义见 <a href="mailAccountOptionsType.html#mailaccountoptionstype_saved_accounts">MailAccountOptions</a>.</p>
+<p>每项包含 <code>alias</code>, <code>address</code>, <code>user</code>, <code>name</code>, <code>provider</code>, <code>auth</code>, <code>receive</code>, <code>imap</code>, <code>pop3</code>, <code>smtp</code>, <code>default</code> 与 <code>updatedAt</code>, 不包含任何凭据. 在插件设置页经浏览器以 Google / Microsoft 账号登录的账户 (3-Stamp Mail 1.2.0) 另有 <code>oauth</code> 对象 (<code>provider</code> 为 <code>google</code> 或 <code>microsoft</code>, <code>authorizedAt</code> 与 <code>expiresAt</code> 为 UTC 毫秒, <code>needsReauth</code> 为 true 时表示刷新被拒, 需在插件设置页重新登录), 其 <code>auth</code> 为 <code>xoauth2</code>, 访问令牌由插件自行续期, 令牌本身不会出现在这里. 保存的账户无法解析时只包含 <code>alias</code> 与 <code>error</code>. 字段含义见 <a href="mailAccountOptionsType.html#mailaccountoptionstype_saved_accounts">MailAccountOptions</a>.</p>
 <h3>mail.accounts.has(alias)<span><a class="mark" href="#mail_mail_accounts_has_alias" id="mail_mail_accounts_has_alias">#</a></span></h3>
 <p><strong><code>6.8.0</code></strong></p>
 <ul>
@@ -1530,7 +1530,7 @@ setTimeout(() =&gt; {
 }, 10 * 60 * 1000);
 </code></pre>
 <h3>邮件到达时运行脚本 (Run a Script on Mail Arrival)<span><a class="mark" href="#mail_run_a_script_on_mail_arrival" id="mail_run_a_script_on_mail_arrival">#</a></span></h3>
-<p>Angus Mail 插件 1.1.0 起 (需要携带邮件契约版本 2 的 AutoJs6 构建), 插件设置页的 &quot;守望&quot; 页面可以在没有脚本运行时为已保存账户保持 IMAP IDLE 或轮询连接 (前台服务), 并在新邮件到达时唤醒 AutoJs6 的定时任务 &quot;邮件到达时&quot; (长按脚本 &gt; 定时任务 &gt; 广播触发 &gt; 邮件到达时, 选择守望并可选填写发件人 / 主题过滤). 被启动的脚本通过 <code>engines.myEngine().execArgv.mail</code> 读取该事件: <code>triggerId</code> (守望名), <code>alias</code> (已保存账户的别名), <code>address</code>, <code>folder</code>, <code>message</code> (新邮件的信封, <code>bodyLoaded</code> 为 false) 与 <code>receivedAt</code> (插件看到该邮件的 UTC 毫秒). 同一封邮件只启动一次, 同一任务每 3 秒至多启动一次 (连续到达时以最后一封为准).</p>
+<p>3-Stamp Mail 插件 1.1.0 起 (需要携带邮件契约版本 2 的 AutoJs6 构建), 插件设置页的 &quot;守望&quot; 页面可以在没有脚本运行时为已保存账户保持 IMAP IDLE 或轮询连接 (前台服务), 并在新邮件到达时唤醒 AutoJs6 的定时任务 &quot;邮件到达时&quot; (长按脚本 &gt; 定时任务 &gt; 广播触发 &gt; 邮件到达时, 选择守望并可选填写发件人 / 主题过滤). 被启动的脚本通过 <code>engines.myEngine().execArgv.mail</code> 读取该事件: <code>triggerId</code> (守望名), <code>alias</code> (已保存账户的别名), <code>address</code>, <code>folder</code>, <code>message</code> (新邮件的信封, <code>bodyLoaded</code> 为 false) 与 <code>receivedAt</code> (插件看到该邮件的 UTC 毫秒). 同一封邮件只启动一次, 同一任务每 3 秒至多启动一次 (连续到达时以最后一封为准).</p>
 <pre><code class="lang-js">let argv = engines.myEngine().execArgv;
 if (!argv.mail) {
     console.log(&#39;不是由邮件到达任务启动&#39;);
