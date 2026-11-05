@@ -320,12 +320,13 @@
 <li><span class="stability_undefined"><a href="#plugins_plugins">插件 (Plugins)</a></span><ul>
 <li><span class="stability_undefined"><a href="#plugins">应用插件</a></span><ul>
 <li><span class="stability_undefined"><a href="#plugins_1">提供脚本模块的插件</a></span></li>
+<li><span class="stability_undefined"><a href="#plugins_2">插件设置迁移</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#plugins_2">项目插件</a></span></li>
-<li><span class="stability_undefined"><a href="#plugins_3">内置扩展插件</a></span></li>
-<li><span class="stability_undefined"><a href="#plugins_4">插件工具</a></span><ul>
-<li><span class="stability_undefined"><a href="#plugins_5">官方插件工具表</a></span></li>
+<li><span class="stability_undefined"><a href="#plugins_3">项目插件</a></span></li>
+<li><span class="stability_undefined"><a href="#plugins_4">内置扩展插件</a></span></li>
+<li><span class="stability_undefined"><a href="#plugins_5">插件工具</a></span><ul>
+<li><span class="stability_undefined"><a href="#plugins_6">官方插件工具表</a></span></li>
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#plugins_m_load">[m] load</a></span><ul>
@@ -477,7 +478,7 @@
 <p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
 <!-- runtime-support:end -->
 <p>在 AutoJs6 中, 插件分为 [ 应用插件 / 项目插件 / 内置扩展插件 ].</p>
-<p>plugins 模块主要用于插件及扩展模块的加载并使其功能生效. <a href="#plugins_4">plugins.tools</a> 用于调用 AutoJs6 插件自描述的工具.</p>
+<p>plugins 模块主要用于插件及扩展模块的加载并使其功能生效. <a href="#plugins_5">plugins.tools</a> 用于调用 AutoJs6 插件自描述的工具.</p>
 <h2>应用插件<span><a class="mark" href="#plugins" id="plugins">#</a></span></h2>
 <p>应用插件通常是一个由开发者编写的可安装的 APK 文件, 安装插件后可由 AutoJs6 通过 <a href="#plugins_m_load">plugins.load</a> 方法加载并使用插件.</p>
 <p>应用插件的使用步骤:</p>
@@ -567,7 +568,9 @@ exp.test(&#39;hello&#39;);
 <p>自 AutoJs6 6.8.1 起, Pinyin4j 插件 (1.4.0 及以上) 与 Java Libraries 插件 (1.0.0 及以上) 还导出 Java 包: 安装并启用后, 脚本可以照原名使用 Pinyin4j, Apache Commons Lang3, Apache Commons IO 与 Jackson 的 Java 类, 详见 <a href="scriptingJava.html#scriptingjava_java_2">官方插件导出的 Java 包</a>.</p>
 <p><a href="autojs4Runtime.html">AutoJs4 Runtime</a> 插件不提供脚本模块, 它为文件管理器增加 &quot;使用 AutoJs4 运行&quot; 入口.</p>
 <p>语言运行时插件让 AutoJs6 运行其他语言的脚本文件, 它们给脚本的 API 见各自页面: <a href="pythonRuntime.html">Python 运行时</a> (<code>.py</code>, <code>autojs6</code> 包), <a href="javaRuntime.html">Java 运行时</a> (<code>.java</code>) 与 <a href="kotlinRuntime.html">Kotlin 运行时</a> (<code>.kt</code>, JVM Entry API), <a href="luaRuntime.html">Lua 运行时</a> (<code>.lua</code>, <code>autojs</code> 模块).</p>
-<h2>项目插件<span><a class="mark" href="#plugins_2" id="plugins_2">#</a></span></h2>
+<h3>插件设置迁移<span><a class="mark" href="#plugins_2" id="plugins_2">#</a></span></h3>
+<p>自 AutoJs6 6.8.1 起, 声明支持设置迁移的官方插件, 其设置随 设置 &gt; 配置 &gt; &quot;管理 AutoJs6 设置&quot; 一同导出与导入, 首批为 3-Macaw Speech 1.5.0, MCP Server 1.3.0 与 3-Stove Agent 1.4.0 及以上版本. 迁移的范围, 敏感设置的处理, 以及插件如何以 common-plugin-api 1.1.0 声明并实现迁移, 参阅 <a href="settings.html#settings">插件设置迁移</a>.</p>
+<h2>项目插件<span><a class="mark" href="#plugins_3" id="plugins_3">#</a></span></h2>
 <p>项目插件是依附于项目的一组 JavaScript 模块, 它们位于项目根目录的 <code>plugins</code> 文件夹中, 由 AutoJs6 通过 <a href="#plugins_m_load">plugins.load</a> 方法加载并使用.</p>
 <p>例如项目结构 (部分) 如下:</p>
 <pre><code class="lang-text">┌ modules ┬ moduleA.js
@@ -581,7 +584,7 @@ exp.test(&#39;hello&#39;);
 <pre><code class="lang-js">plugins.load(&#39;pluginA&#39;);
 plugins.load(&#39;pluginA.js&#39;); /* 同上. */
 </code></pre>
-<h2>内置扩展插件<span><a class="mark" href="#plugins_3" id="plugins_3">#</a></span></h2>
+<h2>内置扩展插件<span><a class="mark" href="#plugins_4" id="plugins_4">#</a></span></h2>
 <p>内置扩展插件相当于内置的项目插件, 它们是内置于 AutoJs6 软件中的, 可通过调用 <a href="#plugins_m_extend">plugins.extend</a> 等方法选择性地启用部分或全部内置扩展插件, 也称作内置扩展模块.</p>
 <p>加载方式:</p>
 <pre><code class="lang-js">/* 启用 Array 内置扩展插件. */
@@ -596,7 +599,7 @@ plugins.extendAll();
 <li><a href="numberx.html">Numberx - Number 扩展</a></li>
 <li><a href="mathx.html">Mathx - Math 扩展</a></li>
 </ul>
-<h2>插件工具<span><a class="mark" href="#plugins_4" id="plugins_4">#</a></span></h2>
+<h2>插件工具<span><a class="mark" href="#plugins_5" id="plugins_5">#</a></span></h2>
 <p>部分 AutoJs6 插件会声明自己提供的工具 (名称, 说明, 参数格式与风险等级), 例如中文转换或目标检测. AutoJs6 汇总这些工具, 脚本通过 <a href="#plugins_m_tools_list">plugins.tools.list</a> 查看, 通过 <a href="#plugins_m_tools_call">plugins.tools.call</a> 调用; MCP Server 等插件也经同一途径使用它们.</p>
 <ul>
 <li>工具名称为 <code>&lt;插件短名&gt;_&lt;工具名&gt;</code>, 例如 <code>opencc_convert</code>.</li>
@@ -611,7 +614,7 @@ tools.forEach(t =&gt; console.log(t.name, &#39;-&#39;, t.description));
 let answer = plugins.tools.call(&#39;opencc_convert&#39;, { text: &#39;汉字&#39;, config: &#39;s2t&#39; });
 console.log(answer.result);
 </code></pre>
-<h3>官方插件工具表<span><a class="mark" href="#plugins_5" id="plugins_5">#</a></span></h3>
+<h3>官方插件工具表<span><a class="mark" href="#plugins_6" id="plugins_6">#</a></span></h3>
 <p>下表列出官方插件提供的工具. 插件会随版本增减工具, 设备上实际可用的工具以 <a href="#plugins_m_tools_list">plugins.tools.list</a> 的返回为准; 参数的取值范围, 长度上限与英文说明见返回对象的 <code>inputSchema</code>, 结果字段的类型见 <code>outputSchema</code>.</p>
 <ul>
 <li>最低插件版本: 首个提供该工具的插件版本.</li>
@@ -784,7 +787,7 @@ plugins.load(&#39;org.autojs.autojs.plugin.demo&#39;);
 <li><strong>packageName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 项目插件名称</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a></span> }</li>
 </ul>
-<p>加载 <a href="#plugins_2">项目插件</a>.</p>
+<p>加载 <a href="#plugins_3">项目插件</a>.</p>
 <h2>[m+] extend<span><a class="mark" href="#plugins_m_extend" id="plugins_m_extend">#</a></span></h2>
 <h3>extend(...moduleNames)<span><a class="mark" href="#plugins_extend_modulenames" id="plugins_extend_modulenames">#</a></span></h3>
 <p><strong><code>6.2.0</code></strong></p>
@@ -792,7 +795,7 @@ plugins.load(&#39;org.autojs.autojs.plugin.demo&#39;);
 <li><strong>moduleNames</strong> { <span class="type"><a href="documentation.html#documentation_9">...</a><a href="dataTypes.html#datatypes_extendmodulesnames">ExtendModulesNames</a><a href="documentation.html#documentation_9">[]</a></span> } - 内置扩展插件名称</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
 </ul>
-<p>加载指定的 <a href="#plugins_3">内置扩展插件</a>.</p>
+<p>加载指定的 <a href="#plugins_4">内置扩展插件</a>.</p>
 <pre><code class="lang-js">/* 启用 Array 内置扩展插件. */
 plugins.extend(&#39;Arrayx&#39;);
 
@@ -824,7 +827,7 @@ plugins.extendAll();
 <ul>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
 </ul>
-<p>加载所有的 <a href="#plugins_3">内置扩展插件</a>.</p>
+<p>加载所有的 <a href="#plugins_4">内置扩展插件</a>.</p>
 <pre><code class="lang-js">plugins.extendAll();
 </code></pre>
 <p>如需在所有脚本均自动加载所有内置扩展插件, 而无需每次使用 <code>plugins.extendAll()</code>, 可对 AutoJs6 进行如下设置:</p>
@@ -837,7 +840,7 @@ plugins.extendAll();
 <li><strong>moduleNames</strong> { <span class="type"><a href="documentation.html#documentation_9">...</a><a href="dataTypes.html#datatypes_extendmodulesnames">ExtendModulesNames</a><a href="documentation.html#documentation_9">[]</a></span> } - 内置扩展插件名称</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
 </ul>
-<p>加载所有的 <a href="#plugins_3">内置扩展插件</a>, 但排除指定的插件.</p>
+<p>加载所有的 <a href="#plugins_4">内置扩展插件</a>, 但排除指定的插件.</p>
 <pre><code class="lang-js">plugins.extendAllBut(&#39;Mathx&#39;); /* 加载除 Math 外的全部内置扩展插件. */
 </code></pre>
 <h2>[m] tools.list<span><a class="mark" href="#plugins_m_tools_list" id="plugins_m_tools_list">#</a></span></h2>
@@ -846,7 +849,7 @@ plugins.extendAll();
 <ul>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a><a href="dataTypes.html#datatypes_array">[]</a></span> }</li>
 </ul>
-<p>返回当前可用的 <a href="#plugins_4">插件工具</a>. 每个元素包含:</p>
+<p>返回当前可用的 <a href="#plugins_5">插件工具</a>. 每个元素包含:</p>
 <ul>
 <li><strong>name</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 工具名称 (<code>&lt;插件短名&gt;_&lt;工具名&gt;</code>)</li>
 <li><strong>description</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 工具说明 (英文, 由插件作者撰写)</li>
@@ -882,7 +885,7 @@ plugins.extendAll();
 </li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> }</li>
 </ul>
-<p>调用一个 <a href="#plugins_4">插件工具</a> 并等待结果. 返回对象包含:</p>
+<p>调用一个 <a href="#plugins_5">插件工具</a> 并等待结果. 返回对象包含:</p>
 <ul>
 <li><strong>result</strong> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a></span> } - 工具返回的结果</li>
 <li><strong>text</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 结果的简短文字说明 (可能不存在)</li>

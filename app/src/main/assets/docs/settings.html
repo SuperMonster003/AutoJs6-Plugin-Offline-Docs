@@ -334,7 +334,13 @@
 <li><span class="stability_undefined"><a href="#settings_categories">categories()</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#settings">设置键兼容别名</a></span></li>
+<li><span class="stability_undefined"><a href="#settings">插件设置迁移</a></span><ul>
+<li><span class="stability_undefined"><a href="#settings_1">支持设置迁移的插件</a></span></li>
+<li><span class="stability_undefined"><a href="#settings_2">敏感设置</a></span></li>
+<li><span class="stability_undefined"><a href="#settings_3">插件接入</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#settings_4">设置键兼容别名</a></span></li>
 </ul>
 </li>
 </ul>
@@ -479,7 +485,140 @@ console.log(result.categories.join(&#39;, &#39;));
     .filter(c =&gt; c.entries &gt; 0 &amp;&amp; !c.sensitive)
     .forEach(c =&gt; console.log(`${c.id} (${c.kind}): ${c.title}, ${c.entries} 项`));
 </code></pre>
-<h2>设置键兼容别名<span><a class="mark" href="#settings" id="settings">#</a></span></h2>
+<h2>插件设置迁移<span><a class="mark" href="#settings" id="settings">#</a></span></h2>
+<p><strong><code>6.8.1</code></strong></p>
+<p>自 AutoJs6 6.8.1 起, 设置 &gt; 配置 &gt; &quot;管理 AutoJs6 设置&quot; 的导出与导入同样迁移官方插件的设置. 插件同时满足以下条件时参与迁移, 不满足的插件不会被调用:</p>
+<ul>
+<li>插件为官方插件, 且已在插件中心启用</li>
+<li>插件声明支持设置迁移 (参阅 <a href="#settings_3">插件接入</a>)</li>
+</ul>
+<p>插件的设置保存在设置归档的 <code>plugins/&lt;包名&gt;/settings.json</code> 中 (含敏感内容时加密保存, 参阅 <a href="#settings_2">敏感设置</a>). AutoJs6 不修改插件给出的内容, 导入时交还插件自身导入. 各操作对插件设置的处理如下:</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>插件设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>导出向导</td>
+<td>在应用设置分类之后的 &quot;官方插件&quot; 分组中列出, 显示条目数. 默认勾选, 含敏感内容的插件除外. 插件 10 秒内未响应或调用失败时显示为不可用, 不能勾选</td>
+</tr>
+<tr>
+<td><a href="#settings_m_export">settings.export</a></td>
+<td>只导出 <code>categories</code> 中明确请求的 <code>plugin:&lt;包名&gt;</code>, 不导出含敏感内容的插件</td>
+</tr>
+<tr>
+<td>周期备份</td>
+<td>包含全部参与迁移的插件, 含敏感内容的插件除外</td>
+</tr>
+<tr>
+<td>导入前的备份</td>
+<td>包含参与迁移的插件, 供 &quot;撤销上次导入&quot; 恢复插件原有的设置. 导入过程中经插件中心安装或启用的插件不在其中</td>
+</tr>
+<tr>
+<td>修改设置, 导入, 重置或撤销后的自动备份</td>
+<td>不包含插件</td>
+</tr>
+</tbody>
+</table>
+<p>导入的归档含有本机未安装或未启用的插件时, 导入向导为其增加 &quot;安装插件&quot; 或 &quot;启用插件&quot; 一项, 经插件中心安装或启用后继续导入该插件的设置; 未安装或未启用即返回时, 该插件的设置不导入. 结果页按插件列出写入与跳过的条目数. 插件表示部分设置需要重启插件后生效时, 结果页给出提示; AutoJs6 不会重启插件, 由插件自行处理. AutoJs6 6.8.0 导入此类归档时略过插件设置, 其余分类照常导入.</p>
+<h3>支持设置迁移的插件<span><a class="mark" href="#settings_1" id="settings_1">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>插件</th>
+<th>插件版本</th>
+<th>迁移的设置</th>
+<th>含敏感内容的情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3-Macaw Speech</td>
+<td>1.5.0 及以上</td>
+<td>语音, 触发方式, 常驻唤醒, 外观与更新检查的设置. 不含模型, 已登记的说话人, 常驻唤醒等组件的开关与本机记录</td>
+<td>从不</td>
+</tr>
+<tr>
+<td>MCP Server</td>
+<td>1.3.0 及以上</td>
+<td>服务配置 (端口, 监听范围等), 工具分组开关, 访问令牌与已配对的客户端. 导入改变了正在运行的服务的监听设置时, 插件自行重启后生效</td>
+<td>有访问令牌或已配对的客户端时</td>
+</tr>
+<tr>
+<td>3-Stove Agent</td>
+<td>1.4.0 及以上</td>
+<td>智能体设置, 插件外观与 MCP 服务器配置. 导入不会开启 &quot;完全访问&quot;, 该项计为跳过</td>
+<td>任一 MCP 服务器配置含令牌时</td>
+</tr>
+</tbody>
+</table>
+<h3>敏感设置<span><a class="mark" href="#settings_2" id="settings_2">#</a></span></h3>
+<p>插件导出的设置含有令牌, 密码, API 密钥或配对密钥等机密时, 应将其标记为敏感 (sensitive). 对于敏感的插件设置, AutoJs6:</p>
+<ul>
+<li>在归档中与 &quot;凭据与授权&quot; 分类一样加密保存: 使用本机密钥加密, 导出时设置了 &quot;插件密钥密码&quot; 则同时用该密码加密. 未设置密码时只能在导出它的设备上的 AutoJs6 中导入; 设置了密码时, 在其他设备上输入该密码即可导入</li>
+<li>在导出向导中默认不勾选, 勾选时显示与 &quot;凭据与授权&quot; 分类相同的警告</li>
+<li>不允许脚本导出: <a href="#settings_m_categories">settings.categories</a> 中其 <code>sensitive</code> 为 <code>true</code>, <a href="#settings_m_export">settings.export</a> 将其以 <code>reason: &#39;sensitive&#39;</code> 记入 <code>skipped</code></li>
+<li>不写入周期备份</li>
+</ul>
+<p>插件也可以不导出机密并标记为不敏感, 此时设置以未加密的 JSON 保存.</p>
+<h3>插件接入<span><a class="mark" href="#settings_3" id="settings_3">#</a></span></h3>
+<p>本节面向官方插件的开发者. 插件经 Android ContentProvider 的 <code>call</code> 方法与 AutoJs6 交换设置, 完整的契约 (请求与结果的键, 文档格式, 错误码, 版本规则与大小上限) 参阅 <a href="https://github.com/SuperMonster003/AutoJs6/blob/master/docs/dev/plugin-settings-transfer-protocol-v1.md">插件设置迁移协议 V1</a>.</p>
+<p>添加插件开发库 common-plugin-api 1.1.0 或以上版本:</p>
+<pre><code class="lang-kotlin">dependencies {
+    implementation(&quot;io.github.supermonster003:autojs6-common-plugin-api:1.1.0&quot;)
+}
+</code></pre>
+<p>继承 <code>PluginSettingsTransferProvider</code> 并实现导出与导入. 设置保存在 SharedPreferences 中时, 可直接使用 <code>SharedPreferencesSettingsTransfer</code>:</p>
+<pre><code class="lang-kotlin">import android.content.Context
+import org.autojs.plugin.common.api.PluginSettingsTransferProvider
+import org.autojs.plugin.common.api.SharedPreferencesSettingsTransfer
+import org.autojs.plugin.common.api.SharedPreferencesSettingsTransfer.Key
+import org.json.JSONObject
+
+class SettingsTransferProvider : PluginSettingsTransferProvider() {
+
+    private val transfer by lazy {
+        val preferences = requireNotNull(context).getSharedPreferences(&quot;settings&quot;, Context.MODE_PRIVATE)
+        SharedPreferencesSettingsTransfer(
+            SharedPreferencesSettingsTransfer.Store(
+                name = &quot;settings&quot;,
+                preferences = preferences,
+                keys = listOf(Key.string(&quot;key_sample_mode&quot;), Key.int(&quot;key_sample_limit&quot;), Key.string(&quot;key_sample_token&quot;)),
+                sensitiveKeys = setOf(&quot;key_sample_token&quot;),
+            ),
+        )
+    }
+
+    override fun exportSettings(request: Request) = transfer.exportSettings()
+
+    override fun importSettings(settings: JSONObject, source: Source, request: Request) = transfer.importSettings(settings)
+}
+</code></pre>
+<p>在 <code>AndroidManifest.xml</code> 的 <code>application</code> 中声明 provider 与协议版本. provider 的授权名必须为 <code>&lt;包名&gt;.autojs6.settings</code>, 并受 <code>org.autojs.permission.PLUGIN</code> 权限保护:</p>
+<pre><code class="lang-xml">&lt;application&gt;
+    &lt;provider
+        android:name=&quot;.SettingsTransferProvider&quot;
+        android:authorities=&quot;${applicationId}.autojs6.settings&quot;
+        android:exported=&quot;true&quot;
+        android:permission=&quot;org.autojs.permission.PLUGIN&quot; /&gt;
+    &lt;meta-data
+        android:name=&quot;org.autojs.plugin.contract.SETTINGS_TRANSFER&quot;
+        android:value=&quot;1&quot; /&gt;
+&lt;/application&gt;
+</code></pre>
+<p><code>PluginSettingsTransferProvider</code> 在调用插件的实现之前检查调用方: 调用方须持有 <code>org.autojs.permission.PLUGIN</code> 权限, 否则抛出 SecurityException (provider 的 <code>android:permission</code> 属性不约束 <code>call</code>). 它还检查协议版本与 256 KiB 的文档大小上限, 并将异常转换为契约的错误码. 两个方法在插件的 Binder 线程中执行, 须在 10 秒内返回, 且不能显示界面.</p>
+<ul>
+<li><code>exportSettings(request)</code> 返回 <code>Exported(settings, entries, sensitive)</code>. <code>settings</code> 为设置的 JSON 对象, <code>entries</code> 为导出向导中显示的条目数, <code>sensitive</code> 参阅 <a href="#settings_2">敏感设置</a>. 只导出用户选择的设置, 不包含缓存, 本机记录, 下载的文件, 模型与历史记录. <code>request.purpose</code> 为 <code>export</code> (导出) 或 <code>backup</code> (备份), 两者应返回相同的内容.</li>
+<li><code>importSettings(settings, source, request)</code> 返回 <code>Imported(written, skipped, restartNeeded)</code>. 导入应当宽松: 只写入认识且有效的条目, 其余计入 <code>skipped</code>; 文档未提及的设置保持原值; 一次写入全部条目, 同一文档重复导入的结果相同. <code>source</code> 提供导出该文档的插件版本 (<code>versionCode</code>, <code>versionName</code>), 用于迁移旧版本的设置. 部分设置需要重启插件后生效时, 将 <code>restartNeeded</code> 设为 <code>true</code>.</li>
+<li>覆写 <code>restartProcessAfterImport</code> 为 <code>true</code> 时 (默认为 <code>false</code>), 导入结果的 <code>restartNeeded</code> 为 <code>true</code> 时插件进程在返回结果约 500 毫秒后退出, 插件有界面在前台时不退出; 下次调用或绑定时插件重新启动.</li>
+<li>抛出 <code>PluginSettingsTransferException</code> 可返回指定的错误码, 例如插件正在迁移自身数据时返回 <code>BUSY</code>, 导出向导将该插件显示为正忙.</li>
+</ul>
+<p><code>SharedPreferencesSettingsTransfer</code> 由一个或多个 <code>Store</code> 构成, 每个 <code>Store</code> 对应一个 SharedPreferences 文件, 列出参与迁移的键及其类型 (<code>Key.bool</code>, <code>Key.int</code>, <code>Key.long</code>, <code>Key.float</code>, <code>Key.string</code>, <code>Key.stringSet</code> 与 <code>Key.json</code>). 导出只写出有值且类型相符的键; 导入跳过未知的文件与键, 类型不符或无效的值, 每个文件只提交一次. <code>sensitiveKeys</code> 中的键有值时, 导出的设置标记为敏感.</p>
+<p>AutoJs6 6.8.0 及更早的版本不会调用该 provider, 因此支持设置迁移不需要提高插件要求的 AutoJs6 最低版本.</p>
+<h2>设置键兼容别名<span><a class="mark" href="#settings_4" id="settings_4">#</a></span></h2>
 <p>下表中的每一组名称指向同一项 AutoJs6 设置.</p>
 <table>
 <thead>
