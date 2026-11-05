@@ -399,6 +399,7 @@
 <p>pinyin4j 模块用于将中文转换为拼音字符串, 查询逐 Unicode 码点的全部读音, 并控制分隔符, 大小写, 声调和 <code>v</code> 字符格式.</p>
 <p>此模块自 AutoJs6 6.6.1 起提供. <code>pinyin4j</code> 与 <code>$pinyin4j</code> 指向同一个可调用模块对象.</p>
 <p>自 AutoJs6 6.8.0 起, pinyin4j 转换由外置 Pinyin4j 插件提供. 调用转换方法前, 必须安装并启用与当前 AutoJs6 版本兼容的 Pinyin4j 插件. 未发现可用插件引擎时, 调用将抛出异常.</p>
+<p>自 AutoJs6 6.8.1 起, Pinyin4j 插件 1.4.0 及以上版本还导出 Java 包 <code>net.sourceforge.pinyin4j</code>, 脚本可以直接使用 <code>net.sourceforge.pinyin4j.PinyinHelper</code> 等原库的 Java 类, 详见 <a href="scriptingJava.html#scriptingjava_java_2">官方插件导出的 Java 包</a>.</p>
 <p>Node.js Runtime 的公开 <code>pinyin4j</code> 模块通过宿主调用相同插件能力, 返回 Promise. Bun 使用显式客户端, 详见 <a href="runtimeApis.html">运行时 API</a>.</p>
 <hr>
 <p style="font: bold 2em sans-serif; color: #FF7043">pinyin4j</p>
