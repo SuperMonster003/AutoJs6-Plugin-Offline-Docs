@@ -404,7 +404,7 @@
 <p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
 <!-- runtime-support:end -->
 <p>memory 模块用于在脚本中读取 AutoJs6 进程自身的内存诊断数据, 包括 Java 堆与原生堆用量, 存活的脚本引擎, 已结束但尚未被回收的脚本运行时与插件引擎桥接会话, 未释放的图像与脚本线程等, 以便检查脚本反复运行后内存是否持续增长.</p>
-<p>数据来源与 AutoJs6 &quot;设置 &gt; 关于 &gt; 开发者选项 &gt; 内存诊断&quot; 页面相同. 此模块只读取诊断数据, 不提供释放其他脚本资源的能力.</p>
+<p>数据来源与 AutoJs6 &quot;设置 &gt; 开发者 &gt; 开发者选项 &gt; 内存诊断&quot; 页面相同 (AutoJs6 6.8.1 之前, 开发者选项需在 &quot;关于&quot; 页面长按应用图标打开). 此模块只读取诊断数据, 不提供释放其他脚本资源的能力.</p>
 <p><code>memory</code> 与 <code>$memory</code> 指向同一个模块对象.</p>
 <blockquote>
 <p>注: 读取设备整体的内存信息 (总内存, 可用内存) 请使用 <a href="device.html#device_m_gettotalmem">device.getTotalMem</a> 与 <a href="device.html#device_m_getavailmem">device.getAvailMem</a>.</p>
