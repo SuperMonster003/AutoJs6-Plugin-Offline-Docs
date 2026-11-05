@@ -419,13 +419,13 @@ settings.setEnabled(&#39;stable_mode&#39;, !previous);
 <p><strong><code>6.8.0</code></strong> <strong><code>Non-UI</code></strong></p>
 <ul>
 <li><strong>[ path ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 归档文件或文件夹的路径, 相对路径按脚本工作目录解析 (与 <a href="files.html#files_m_path">files.path</a> 相同); 省略时写入 AutoJs6 工作路径下的 <code>backups/settings/</code> 文件夹</li>
-<li><strong>[ categories ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a>[]</span> } - 分类 id 或分类 id 数组, 可由 <a href="#settings_m_categories">categories</a> 获取; 省略时为导出向导默认勾选的分类</li>
+<li><strong>[ categories ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a>[]</span> } - 分类 id 或分类 id 数组, 可由 <a href="#settings_m_categories">categories</a> 获取, 插件分类为 <code>plugin:&lt;包名&gt;</code>; 省略时为导出向导默认勾选的分类 (不含插件)</li>
 <li><ins><strong>returns</strong></ins> {{<ul>
 <li>path: <a href="dataTypes.html#datatypes_string">string</a> - 写入的归档文件的绝对路径;</li>
-<li>categories: <a href="dataTypes.html#datatypes_string">string</a>[] - 写入归档的分类 id, 按设置页顺序排列;</li>
+<li>categories: <a href="dataTypes.html#datatypes_string">string</a>[] - 写入归档的分类 id, 设置与数据分类按设置页顺序排列, 插件分类按包名排在其后;</li>
 <li>entries: <a href="dataTypes.html#datatypes_number">number</a> - 写入的条目总数;</li>
 <li>unexportable: <a href="dataTypes.html#datatypes_number">number</a> - 无法写入归档而被略去的设置值数量;</li>
-<li>skipped: {{ id: <a href="dataTypes.html#datatypes_string">string</a>; reason: <code>&#39;sensitive&#39;</code> | <code>&#39;empty&#39;</code> }}[] - 请求了但未写入的分类及原因;</li>
+<li>skipped: {{ id: <a href="dataTypes.html#datatypes_string">string</a>; reason: <code>&#39;sensitive&#39;</code> | <code>&#39;empty&#39;</code> | <code>&#39;unavailable&#39;</code> }}[] - 请求了但未写入的分类及原因;</li>
 </ul>
 </li>
 <li>}} - 导出结果</li>
@@ -434,11 +434,12 @@ settings.setEnabled(&#39;stable_mode&#39;, !previous);
 <p><code>path</code> 以 <code>/</code> 结尾或为已存在的文件夹时, 归档写入该文件夹, 文件名为 <code>autojs6-settings-&lt;yyyyMMdd-HHmmss&gt;.zip</code>. 同一秒已有同名文件时依次追加 <code>-1</code>, <code>-2</code> 等, 不会替换已有文件. 省略 <code>path</code> 时同样如此. 其他路径即归档文件本身 (不会自动追加 <code>.zip</code>), 文件已存在时被替换. 缺少的父文件夹会被创建. 归档先写入同一文件夹中的临时文件, 写入失败时不会留下不完整的归档.</p>
 <p><code>categories</code> 中的分类按设置页顺序写入, 重复的 id 只写入一次. 默认分类为 <a href="#settings_m_categories">categories</a> 中 <code>defaultSelected</code> 为 <code>true</code> 的分类, 与导出向导首次打开时的勾选相同, 包含快捷方式与颜色库两个数据分类.</p>
 <p>脚本不能导出凭据. 请求 <code>credentials</code> 分类时, 该分类不会写入, 并以 <code>reason: &#39;sensitive&#39;</code> 记入 <code>skipped</code>. 数据分类没有可导出的内容时 (例如没有快捷方式), 该分类不会写入, 并以 <code>reason: &#39;empty&#39;</code> 记入 <code>skipped</code>.</p>
+<p>从 AutoJs6 6.8.1 起, 插件分类 <code>plugin:&lt;包名&gt;</code> 导出该官方插件的设置, 与导出向导中勾选该插件的结果相同, 导入设置时交由插件自身导入. 只有明确请求的插件才会导出. 插件声明其设置含敏感内容时, 脚本同样不能导出, 该插件以 <code>reason: &#39;sensitive&#39;</code> 记入 <code>skipped</code>. 插件未安装, 未启用, 不是官方插件, 不支持设置迁移或导出失败 (例如 10 秒内未响应) 时, 以 <code>reason: &#39;unavailable&#39;</code> 记入 <code>skipped</code>. 请求的插件全部被略去时仍会写入归档.</p>
 <p>以下情况抛出异常, 且不会写入任何文件:</p>
 <ul>
 <li><code>path</code> 不是字符串, 或为空白字符串</li>
 <li><code>categories</code> 不是字符串或字符串数组, 或为空数组</li>
-<li><code>categories</code> 含未知的分类 id, 或只请求了 <code>credentials</code></li>
+<li><code>categories</code> 含未知的分类 id (插件分类须为 <code>plugin:&lt;包名&gt;</code> 形式), 或只请求了 <code>credentials</code></li>
 <li>在 UI 线程中调用</li>
 </ul>
 <p>归档超过 16 MB 或写入失败时同样抛出异常.</p>
@@ -449,23 +450,31 @@ console.log(`${result.categories.length} 个分类, ${result.entries} 项`);
 <pre><code class="lang-js">let result = settings.export(&#39;./exports/&#39;, [ &#39;appearance&#39;, &#39;general&#39;, &#39;credentials&#39; ]);
 result.skipped.forEach(s =&gt; console.log(`${s.id}: ${s.reason}`)); // 打印 &quot;credentials: sensitive&quot;.
 </code></pre>
+<pre><code class="lang-js">// 导出外观设置与全部可用且不含敏感内容的插件设置.
+let plugins = settings.categories().filter(c =&gt; c.kind === &#39;plugin&#39; &amp;&amp; c.available &amp;&amp; !c.sensitive);
+let result = settings.export(null, [ &#39;appearance&#39; ].concat(plugins.map(c =&gt; c.id)));
+console.log(result.categories.join(&#39;, &#39;));
+</code></pre>
 <h2>[m] categories<span><a class="mark" href="#settings_m_categories" id="settings_m_categories">#</a></span></h2>
 <h3>categories()<span><a class="mark" href="#settings_categories" id="settings_categories">#</a></span></h3>
 <p><strong><code>6.8.0</code></strong> <strong><code>Non-UI</code></strong></p>
 <ul>
 <li><ins><strong>returns</strong></ins> {{<ul>
-<li>id: <a href="dataTypes.html#datatypes_string">string</a> - 分类 id, 可用于 <a href="#settings_m_export">export</a> 的 <code>categories</code> 参数;</li>
-<li>title: <a href="dataTypes.html#datatypes_string">string</a> - 分类名称, 随应用语言变化;</li>
-<li>kind: <code>&#39;settings&#39;</code> | <code>&#39;data&#39;</code> - 种类, 分别为设置分类与数据分类 (快捷方式, 颜色库);</li>
+<li>id: <a href="dataTypes.html#datatypes_string">string</a> - 分类 id, 可用于 <a href="#settings_m_export">export</a> 的 <code>categories</code> 参数; 插件分类为 <code>plugin:&lt;包名&gt;</code>;</li>
+<li>title: <a href="dataTypes.html#datatypes_string">string</a> - 分类名称, 随应用语言变化; 插件分类为插件名称;</li>
+<li>kind: <code>&#39;settings&#39;</code> | <code>&#39;data&#39;</code> | <code>&#39;plugin&#39;</code> - 种类, 分别为设置分类, 数据分类 (快捷方式, 颜色库) 与插件分类;</li>
+<li>label: <a href="dataTypes.html#datatypes_string">string</a> - 插件名称, 仅插件分类有此属性;</li>
 <li>entries: <a href="dataTypes.html#datatypes_number">number</a> - 当前可导出的条目数;</li>
-<li>defaultSelected: <a href="dataTypes.html#datatypes_boolean">boolean</a> - 是否属于 <a href="#settings_m_export">export</a> 的默认分类;</li>
-<li>sensitive: <a href="dataTypes.html#datatypes_boolean">boolean</a> - 是否为敏感分类 (凭据), 敏感分类不能由脚本导出;</li>
+<li>defaultSelected: <a href="dataTypes.html#datatypes_boolean">boolean</a> - 是否属于 <a href="#settings_m_export">export</a> 的默认分类, 插件分类总是 <code>false</code>;</li>
+<li>sensitive: <a href="dataTypes.html#datatypes_boolean">boolean</a> - 是否为敏感分类 (凭据, 或声明设置含敏感内容的插件), 敏感分类不能由脚本导出;</li>
+<li>available: <a href="dataTypes.html#datatypes_boolean">boolean</a> - 插件当前能否导出设置, 仅插件分类有此属性;</li>
+<li>reason: <code>&#39;timeout&#39;</code> | <code>&#39;denied&#39;</code> | <code>&#39;busy&#39;</code> | <code>&#39;failed&#39;</code> - 插件不能导出的原因, 分别为 10 秒内未响应, 插件拒绝调用, 插件正忙与其他失败, 仅 <code>available</code> 为 <code>false</code> 的插件分类有此属性;</li>
 </ul>
 </li>
 <li>}}[] - 分类信息数组</li>
 </ul>
-<p>获取全部设置分类, 按设置页顺序排列, 与导出向导的分类列表相同.</p>
-<p>统计条目数需要读取设置与数据, 因此不能在 UI 线程中调用.</p>
+<p>获取全部设置分类, 按设置页顺序排列, 与导出向导的分类列表相同. 从 AutoJs6 6.8.1 起, 设置分类之后按包名列出每个已发现的官方插件 (已安装, 已启用且支持设置迁移) 各一项. 插件不能导出时, 其 <code>entries</code> 为 <code>0</code>, <code>sensitive</code> 为 <code>false</code>.</p>
+<p>统计条目数需要读取设置与数据, 并调用每个插件 (每个插件最多等待 10 秒), 因此不能在 UI 线程中调用.</p>
 <pre><code class="lang-js">settings.categories()
     .filter(c =&gt; c.entries &gt; 0 &amp;&amp; !c.sensitive)
     .forEach(c =&gt; console.log(`${c.id} (${c.kind}): ${c.title}, ${c.entries} 项`));
