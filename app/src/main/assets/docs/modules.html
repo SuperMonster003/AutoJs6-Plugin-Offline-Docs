@@ -32,6 +32,7 @@
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
+<li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
 </ul>
 <div class="line"></div>
@@ -45,6 +46,7 @@
 <li><a class="nav-barcode" href="barcode.html">Barcode - 条码</a></li>
 <li><a class="nav-base64" href="base64.html">Base64</a></li>
 <li><a class="nav-bundledLibraries" href="bundledLibraries.html">Bundled Libraries - 脚本库</a></li>
+<li><a class="nav-camera" href="camera.html">Camera - 相机</a></li>
 <li><a class="nav-canvas" href="canvas.html">Canvas - 画布</a></li>
 <li><a class="nav-color" href="color.html">Color - 颜色</a></li>
 <li><a class="nav-compose" href="compose.html">3-Block Compose</a></li>
@@ -403,7 +405,7 @@ console.log(circle.circumference(4));
 <ol>
 <li>移除可选的 <code>node:</code> 前缀.</li>
 <li>对内置模块及 HTTP(S) 地址调用原生加载器.</li>
-<li>从当前模块目录或 <a href="#modules_p_root">require.root</a> 开始解析本地文件或目录.</li>
+<li>从当前模块目录或 <a href="#modules_p_root">require.root</a> 开始解析本地文件或目录. 没有父模块的相对路径 (<code>.</code>, <code>..</code> 或以 <code>./</code>, <code>../</code> 开头) 在 require.root 下解析不到时, 再从主脚本所在目录解析 (AutoJs6 6.8.1 起, 见 <a href="#modules_p_root">require.root</a>).</li>
 <li>搜索 <a href="#modules_m_paths">require.paths</a> 返回的目录.</li>
 <li>逐级搜索 <code>node_modules</code>.</li>
 </ol>
@@ -444,6 +446,7 @@ let helper = require(&#39;./lib/helper&#39;);
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 顶层模块解析根目录</li>
 </ul>
 <p>读取或设置没有父模块时使用的模块解析根目录. 初始值来自脚本运行时的当前工作目录.</p>
+<p>AutoJs6 6.8.1 起, 没有父模块的相对路径在该目录下解析不到时, 再从主脚本 (运行的文件, 或项目的主脚本) 所在目录解析, 两处都有同名模块时以该目录为准. 因此项目的 <code>project.json</code> 把 <code>main</code> 设为 <code>src/main.js</code> 时, 主脚本里 <code>require(&#39;./src/core/Core.js&#39;)</code> 与 <code>require(&#39;./core/Core.js&#39;)</code> 都能加载 <code>src/core/Core.js</code>. <a href="#modules_m_resolve">require.resolve</a> 按同样的顺序解析; 两处都解析不到时, 错误消息列出这两个目录. 裸模块名 (如 <code>&#39;core/Core.js&#39;</code>) 和模块内部的 <code>require()</code> 不受影响.</p>
 <h2>[p+] cache<span><a class="mark" href="#modules_p_cache" id="modules_p_cache">#</a></span></h2>
 <div class="signature"><ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 模块缓存</li>

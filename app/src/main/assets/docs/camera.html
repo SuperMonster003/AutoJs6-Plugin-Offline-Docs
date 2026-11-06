@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>相机 (Camera) | AutoJs6 文档 - 6.8.0</title>
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/sh.css">
+    <link rel="stylesheet" href="plugins/docsify-copy-code@2-styles.css">
+    <link rel="stylesheet" href="plugins/zoom-image-styles.css">
+    <link rel="canonical" href="https://nodejs.org/api/camera.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="user-scalable=no">
+</head>
+<body class="alt apidoc" id="api-section-camera">
+<div id="content" class="clearfix">
+    <div id="column2" class="interior">
+        <div id="intro" class="interior">
+            <a href="/" title="返回首页">
+                AutoJs6
+            </a>
+        </div>
+        <ul>
+<li><a class="nav-overview" href="overview.html">Overview - 综述</a></li>
+<li><a class="nav-documentation" href="documentation.html">About - 关于文档</a></li>
+<li><a class="nav-progress" href="progress.html">Progress - 文档部署进度</a></li>
+<li><a class="nav-changelog" href="changelog.html">Changelog - 文档更新日志</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
+<li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
+<li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
+<li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-ai" href="ai.html">AI - 人工智能</a></li>
+<li><a class="nav-app" href="app.html">App - 通用应用</a></li>
+<li><a class="nav-autojs4Runtime" href="autojs4Runtime.html">AutoJs4 Runtime - AutoJs4 运行时</a></li>
+<li><a class="nav-autojs" href="autojs.html">AutoJs6 - 本体应用</a></li>
+<li><a class="nav-automator" href="automator.html">Automator - 自动化</a></li>
+<li><a class="nav-barcode" href="barcode.html">Barcode - 条码</a></li>
+<li><a class="nav-base64" href="base64.html">Base64</a></li>
+<li><a class="nav-bundledLibraries" href="bundledLibraries.html">Bundled Libraries - 脚本库</a></li>
+<li><a class="nav-camera active" href="camera.html">Camera - 相机</a></li>
+<li><a class="nav-canvas" href="canvas.html">Canvas - 画布</a></li>
+<li><a class="nav-color" href="color.html">Color - 颜色</a></li>
+<li><a class="nav-compose" href="compose.html">3-Block Compose</a></li>
+<li><a class="nav-composeDesigner" href="composeDesigner.html">3-Block Compose Designer - 设计器</a></li>
+<li><a class="nav-console" href="console.html">Console - 控制台</a></li>
+<li><a class="nav-continuation" href="continuation.html">Continuation - 续体</a></li>
+<li><a class="nav-cvt" href="cvt.html">Converter - 单位转换</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto - 密文</a></li>
+<li><a class="nav-device" href="device.html">Device - 设备</a></li>
+<li><a class="nav-dialogs" href="dialogs.html">Dialogs - 对话框</a></li>
+<li><a class="nav-e4x" href="e4x.html">E4X</a></li>
+<li><a class="nav-engines" href="engines.html">Engines - 引擎</a></li>
+<li><a class="nav-epub" href="epub.html">EPUB - 电子书</a></li>
+<li><a class="nav-events" href="events.html">Events - 事件监听</a></li>
+<li><a class="nav-files" href="files.html">Files - 文件</a></li>
+<li><a class="nav-floaty" href="floaty.html">Floaty - 悬浮窗</a></li>
+<li><a class="nav-flow" href="flow.html">Flow - 流程</a></li>
+<li><a class="nav-fmt" href="fmt.html">Formatter - 格式化</a></li>
+<li><a class="nav-gallery" href="gallery.html">Gallery - 相册</a></li>
+<li><a class="nav-global" href="global.html">Global - 全局对象</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-imgui" href="imgui.html">ImGui</a></li>
+<li><a class="nav-image" href="image.html">Images - 图像</a></li>
+<li><a class="nav-installer" href="installer.html">Installer - 安装器</a></li>
+<li><a class="nav-i18n" href="i18n.html">Internationalization - 国际化</a></li>
+<li><a class="nav-javaRuntime" href="javaRuntime.html">Java Runtime - Java 运行时</a></li>
+<li><a class="nav-jsox" href="jsox.html">Jsox - JavaScript 对象扩展</a></li>
+<li><a class="nav-keys" href="keys.html">Keys - 按键</a></li>
+<li><a class="nav-kotlinRuntime" href="kotlinRuntime.html">Kotlin Runtime - Kotlin 运行时</a></li>
+<li><a class="nav-luaRuntime" href="luaRuntime.html">Lua Runtime - Lua 运行时</a></li>
+<li><a class="nav-mail" href="mail.html">Mail - 邮件</a></li>
+<li><a class="nav-media" href="media.html">Media - 多媒体</a></li>
+<li><a class="nav-mediainfo" href="mediainfo.html">MediaInfo - 媒体信息</a></li>
+<li><a class="nav-memory" href="memory.html">Memory - 内存</a></li>
+<li><a class="nav-mime" href="mime.html">MIME - 媒体类型</a></li>
+<li><a class="nav-modules" href="modules.html">Module - 模块</a></li>
+<li><a class="nav-nanoid" href="nanoid.html">Nano ID - 随机 ID</a></li>
+<li><a class="nav-notice" href="notice.html">Notice - 消息通知</a></li>
+<li><a class="nav-ocr" href="ocr.html">OCR - 光学字符识别</a></li>
+<li><a class="nav-opencc" href="opencc.html">OpenCC - 中文转换</a></li>
+<li><a class="nav-pangu" href="pangu.html">Pangu - 文本间距</a></li>
+<li><a class="nav-pinyin" href="pinyin.html">Pinyin - 拼音</a></li>
+<li><a class="nav-pinyin4j" href="pinyin4j.html">Pinyin4j</a></li>
+<li><a class="nav-plugins" href="plugins.html">Plugins - 插件</a></li>
+<li><a class="nav-powerManager" href="powerManager.html">PowerManager - 电源管理</a></li>
+<li><a class="nav-pythonRuntime" href="pythonRuntime.html">Python Runtime - Python 运行时</a></li>
+<li><a class="nav-qrcode" href="qrcode.html">QR Code - 二维码</a></li>
+<li><a class="nav-recorder" href="recorder.html">Recorder - 记录器</a></li>
+<li><a class="nav-sensors" href="sensors.html">Sensors - 传感器</a></li>
+<li><a class="nav-settings" href="settings.html">Settings - 应用设置</a></li>
+<li><a class="nav-shell" href="shell.html">Shell</a></li>
+<li><a class="nav-shizuku" href="shizuku.html">Shizuku</a></li>
+<li><a class="nav-speech" href="speech.html">Speech - 语音</a></li>
+<li><a class="nav-sqlite" href="sqlite.html">SQLite - 数据库</a></li>
+<li><a class="nav-s13n" href="s13n.html">Standardization - 标准化</a></li>
+<li><a class="nav-storages" href="storages.html">Storages - 存储</a></li>
+<li><a class="nav-sysprops" href="sysprops.html">Sysprops - 系统属性</a></li>
+<li><a class="nav-tasks" href="tasks.html">Tasks - 任务</a></li>
+<li><a class="nav-terminal" href="terminal.html">Terminal - 终端</a></li>
+<li><a class="nav-threads" href="threads.html">Threads - 线程</a></li>
+<li><a class="nav-timers" href="timers.html">Timers - 定时器</a></li>
+<li><a class="nav-toast" href="toast.html">Toast - 消息浮动框</a></li>
+<li><a class="nav-tts" href="tts.html">TTS - 文本转语音</a></li>
+<li><a class="nav-ui" href="ui.html">UI - 用户界面</a></li>
+<li><a class="nav-uiAttributes" href="uiAttributes.html">UI Attributes - UI 布局属性</a></li>
+<li><a class="nav-util" href="util.html">Util - 工具</a></li>
+<li><a class="nav-web" href="web.html">Web - 万维网</a></li>
+<li><a class="nav-workManager" href="workManager.html">WorkManager - 计划任务兼容接口</a></li>
+<li><a class="nav-yolo" href="yolo.html">YOLO - 目标检测</a></li>
+<li><a class="nav-zip" href="zip.html">Zip - 压缩文件</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-uiSelectorType" href="uiSelectorType.html">UiSelector - 选择器</a></li>
+<li><a class="nav-uiObjectType" href="uiObjectType.html">UiObject - 控件节点</a></li>
+<li><a class="nav-uiObjectCollectionType" href="uiObjectCollectionType.html">UiObjectCollection - 控件集合</a></li>
+<li><a class="nav-uiObjectActionsType" href="uiObjectActionsType.html">UiObjectActions - 控件节点行为</a></li>
+<li><a class="nav-composeNodeType" href="composeNodeType.html">ComposeNode - Compose 节点</a></li>
+<li><a class="nav-composeStateType" href="composeStateType.html">ComposeState - Compose 状态</a></li>
+<li><a class="nav-composeModifierType" href="composeModifierType.html">ComposeModifier - Compose 修饰链</a></li>
+<li><a class="nav-composeThemeType" href="composeThemeType.html">ComposeTheme - Compose 主题</a></li>
+<li><a class="nav-composeSessionType" href="composeSessionType.html">ComposeSession - Compose 会话</a></li>
+<li><a class="nav-composeFloatyWindowType" href="composeFloatyWindowType.html">ComposeFloatyWindow - Compose 悬浮窗</a></li>
+<li><a class="nav-composeComponents" href="composeComponents.html">Compose 组件目录</a></li>
+<li><a class="nav-imguiSessionType" href="imguiSessionType.html">ImguiSession - ImGui 会话</a></li>
+<li><a class="nav-imguiDrawListType" href="imguiDrawListType.html">ImguiDrawList - ImGui 绘制列表</a></li>
+<li><a class="nav-imguiFloatingButtonType" href="imguiFloatingButtonType.html">ImguiFloatingButton - ImGui 悬浮按钮</a></li>
+<li><a class="nav-imguiComponentType" href="imguiComponentType.html">ImguiComponent - ImGui 高层组件</a></li>
+<li><a class="nav-imguiDataTableType" href="imguiDataTableType.html">ImguiDataTable - ImGui 数据表格</a></li>
+<li><a class="nav-imguiLogWindowType" href="imguiLogWindowType.html">ImguiLogWindow - ImGui 日志窗口</a></li>
+<li><a class="nav-imguiToastType" href="imguiToastType.html">ImguiToast - ImGui 短消息</a></li>
+<li><a class="nav-imguiStatsOverlayType" href="imguiStatsOverlayType.html">ImguiStatsOverlay - ImGui 帧率覆盖层</a></li>
+<li><a class="nav-imguiDialogType" href="imguiDialogType.html">ImguiDialog - ImGui 对话框</a></li>
+<li><a class="nav-imguiDialogPromiseType" href="imguiDialogPromiseType.html">ImguiDialogPromise - ImGui 对话框 Promise</a></li>
+<li><a class="nav-imguiTextureType" href="imguiTextureType.html">ImguiTexture - ImGui 纹理</a></li>
+<li><a class="nav-imguiSelectionStorageType" href="imguiSelectionStorageType.html">ImguiSelectionStorage - ImGui 选择存储</a></li>
+<li><a class="nav-imguiMultiSelectIOType" href="imguiMultiSelectIOType.html">ImguiMultiSelectIO - ImGui 多选结果</a></li>
+<li><a class="nav-epubBookType" href="epubBookType.html">EpubBook - 电子书对象</a></li>
+<li><a class="nav-epubReaderSessionType" href="epubReaderSessionType.html">EpubReaderSession - 阅读器会话</a></li>
+<li><a class="nav-flowType" href="flowType.html">Flow - 流程对象</a></li>
+<li><a class="nav-flowErrorType" href="flowErrorType.html">FlowError - 流程错误</a></li>
+<li><a class="nav-galleryViewSessionType" href="galleryViewSessionType.html">GalleryViewSession - 查看器会话</a></li>
+<li><a class="nav-mailClientType" href="mailClientType.html">MailClient - 邮件客户端</a></li>
+<li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
+<li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
+<li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
+<li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
+<li><a class="nav-eventEmitterType" href="eventEmitterType.html">EventEmitter - 事件发射器</a></li>
+<li><a class="nav-imageWrapperType" href="imageWrapperType.html">ImageWrapper - 包装图像类</a></li>
+<li><a class="nav-appType" href="appType.html">App - 应用枚举类</a></li>
+<li><a class="nav-colorType" href="colorType.html">Color - 颜色类</a></li>
+<li><a class="nav-versionType" href="versionType.html">Version - 版本工具类</a></li>
+<li><a class="nav-polyfill" href="polyfill.html">Polyfill - 代码填泥</a></li>
+<li><a class="nav-arrayx" href="arrayx.html">Arrayx - Array 扩展</a></li>
+<li><a class="nav-numberx" href="numberx.html">Numberx - Number 扩展</a></li>
+<li><a class="nav-mathx" href="mathx.html">Mathx - Math 扩展</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-exceptions" href="exceptions.html">Exceptions - 异常</a></li>
+<li><a class="nav-intentType" href="intentType.html">Intent - 意图</a></li>
+<li><a class="nav-runtime" href="runtime.html">Runtime - 运行时</a></li>
+<li><a class="nav-context" href="context.html">Context - 上下文</a></li>
+<li><a class="nav-activity" href="activity.html">Activity - 活动</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-scriptingJava" href="scriptingJava.html">Scripting Java - 脚本化 Java</a></li>
+<li><a class="nav-classSyntax" href="classSyntax.html">Class Syntax - 类语法</a></li>
+<li><a class="nav-asyncAwait" href="asyncAwait.html">Async/Await - async/await 与 continuation</a></li>
+<li><a class="nav-apiLevel" href="apiLevel.html">Android API Level - 安卓 API 级别</a></li>
+<li><a class="nav-colorTable" href="colorTable.html">Color Table - 颜色列表</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-glossaries" href="glossaries.html">Glossaries - 术语</a></li>
+<li><a class="nav-httpHeaderGlossary" href="httpHeaderGlossary.html">HttpHeader - HTTP 标头</a></li>
+<li><a class="nav-httpRequestMethodsGlossary" href="httpRequestMethodsGlossary.html">HttpRequestMethods - HTTP 请求方法</a></li>
+<li><a class="nav-mimeTypeGlossary" href="mimeTypeGlossary.html">MimeType - MIME 类型</a></li>
+<li><a class="nav-notificationChannelGlossary" href="notificationChannelGlossary.html">NotificationChannel - 通知渠道</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-dataTypes" href="dataTypes.html">Data Types - 数据类型</a></li>
+<li><a class="nav-omniTypes" href="omniTypes.html">Omnipotent Types - 全能类型</a></li>
+<li><a class="nav-storageType" href="storageType.html">Storage - 存储类</a></li>
+<li><a class="nav-androidBundleType" href="androidBundleType.html">AndroidBundle</a></li>
+<li><a class="nav-androidRectType" href="androidRectType.html">AndroidRect</a></li>
+<li><a class="nav-cryptoCipherOptionsType" href="cryptoCipherOptionsType.html">CryptoCipherOptions</a></li>
+<li><a class="nav-cryptoKeyType" href="cryptoKeyType.html">CryptoKey</a></li>
+<li><a class="nav-cryptoKeyPairType" href="cryptoKeyPairType.html">CryptoKeyPair</a></li>
+<li><a class="nav-consoleBuildOptionsType" href="consoleBuildOptionsType.html">ConsoleBuildOptions</a></li>
+<li><a class="nav-epubLocatorType" href="epubLocatorType.html">EpubLocator</a></li>
+<li><a class="nav-httpRequestBuilderOptionsType" href="httpRequestBuilderOptionsType.html">HttpRequestBuilderOptions</a></li>
+<li><a class="nav-httpRequestHeadersType" href="httpRequestHeadersType.html">HttpRequestHeaders</a></li>
+<li><a class="nav-httpResponseBodyType" href="httpResponseBodyType.html">HttpResponseBody</a></li>
+<li><a class="nav-httpResponseHeadersType" href="httpResponseHeadersType.html">HttpResponseHeaders</a></li>
+<li><a class="nav-httpResponseType" href="httpResponseType.html">HttpResponse</a></li>
+<li><a class="nav-injectableWebClientType" href="injectableWebClientType.html">InjectableWebClient</a></li>
+<li><a class="nav-injectableWebViewType" href="injectableWebViewType.html">InjectableWebView</a></li>
+<li><a class="nav-mailAccountOptionsType" href="mailAccountOptionsType.html">MailAccountOptions</a></li>
+<li><a class="nav-mailSearchQueryType" href="mailSearchQueryType.html">MailSearchQuery</a></li>
+<li><a class="nav-noticeOptionsType" href="noticeOptionsType.html">NoticeOptions</a></li>
+<li><a class="nav-noticeChannelOptionsType" href="noticeChannelOptionsType.html">NoticeChannelOptions</a></li>
+<li><a class="nav-noticePresetConfigurationType" href="noticePresetConfigurationType.html">NoticePresetConfiguration</a></li>
+<li><a class="nav-noticeBuilderType" href="noticeBuilderType.html">NoticeBuilder</a></li>
+<li><a class="nav-okhttp3HttpUrlType" href="okhttp3HttpUrlType.html">Okhttp3HttpUrl</a></li>
+<li><a class="nav-ocrOptionsType" href="ocrOptionsType.html">OcrOptions</a></li>
+<li><a class="nav-okhttp3RequestType" href="okhttp3RequestType.html">Okhttp3Request</a></li>
+<li><a class="nav-opencvPointType" href="opencvPointType.html">OpenCVPoint</a></li>
+<li><a class="nav-opencvRectType" href="opencvRectType.html">OpenCVRect</a></li>
+<li><a class="nav-opencvSizeType" href="opencvSizeType.html">OpenCVSize</a></li>
+<li><a class="nav-openCCConversionType" href="openCCConversionType.html">OpenCCConversion</a></li>
+<li><a class="nav-speechModelInfoType" href="speechModelInfoType.html">SpeechModelInfo</a></li>
+<li><a class="nav-speechRecognitionResultType" href="speechRecognitionResultType.html">SpeechRecognitionResult</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-http-project-autojs6-com" href="http://project.autojs6.com">GitHub - 应用项目地址</a></li>
+<li><p><a class="nav-http-docs-project-autojs6-com" href="http://docs-project.autojs6.com">GitHub - 文档项目地址</a></p>
+</li>
+<li><p><a class="nav-terminalSessionType" href="terminalSessionType.html">TerminalSession - 终端会话</a></p>
+</li>
+<li><a class="nav-terminalOpenOptionsType" href="terminalOpenOptionsType.html">TerminalOpenOptions - 终端选项</a></li>
+<li><a class="nav-terminalErrorType" href="terminalErrorType.html">TerminalError - 终端错误</a></li>
+<li><a class="nav-shellProcessType" href="shellProcessType.html">ShellProcess - Shell 进程</a></li>
+</ul>
+
+    </div>
+
+    <div id="column1" data-id="camera" class="interior">
+        <header>
+            <h1>AutoJs6 文档 - 6.8.0</h1>
+            <div id="gtoc">
+                <p class="index">
+                    <a href="index.html" name="toc">索引</a>
+                    <span class="offline-search-entry"> |
+                        <button type="button"
+                                class="offline-search-toggle"
+                                aria-controls="offline-search-panel"
+                                aria-expanded="false"
+                                data-offline-search-toggle>搜索文档</button>
+                    </span>
+                </p>
+            </div>
+            <hr>
+        </header>
+
+        <section id="offline-search-panel"
+                 class="offline-search"
+                 aria-labelledby="offline-search-title"
+                 data-offline-search
+                 data-index-src="assets/offline-search-index.js"
+                 data-state="idle"
+                 hidden>
+            <div class="offline-search-heading">
+                <h2 id="offline-search-title">搜索文档</h2>
+                <button type="button"
+                        class="offline-search-icon-button offline-search-close"
+                        aria-label="关闭搜索文档"
+                        data-offline-search-close>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path d="M6 6L18 18M18 6L6 18"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="offline-search-control">
+                <input id="offline-search-input"
+                       type="search"
+                       role="combobox"
+                       inputmode="search"
+                       autocomplete="off"
+                       spellcheck="false"
+                       placeholder="搜索文档内容"
+                       aria-labelledby="offline-search-title"
+                       aria-controls="offline-search-results"
+                       aria-autocomplete="list"
+                       aria-expanded="false"
+                       data-offline-search-input>
+                <button type="button"
+                        class="offline-search-icon-button offline-search-clear"
+                        aria-label="清除搜索内容"
+                        data-offline-search-clear
+                        hidden>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path d="M6 6L18 18M18 6L6 18"></path>
+                    </svg>
+                </button>
+            </div>
+            <p class="offline-search-status"
+               aria-live="polite"
+               data-offline-search-status>输入关键词搜索全部离线文档</p>
+            <div id="offline-search-results"
+                 class="offline-search-results"
+                 role="listbox"
+                 hidden
+                 data-offline-search-results></div>
+        </section>
+
+        <div id="toc">
+            <h2>目录</h2>
+<ul>
+<li><span class="stability_undefined"><a href="#camera_camera">相机 (Camera)</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera">准备工作</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_1">默认值与插件设置页</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_2">线程与调用形式</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_3">方向与镜像</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_camera_busy">独占与 CAMERA_BUSY</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_4">限制</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_m_isavailable">[m] isAvailable</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camera_isavailable">camera.isAvailable()</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_camera_isavailable_callback">camera.isAvailable(callback)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_capabilities">[m] capabilities</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camera_capabilities">camera.capabilities()</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_camera_capabilities_callback">camera.capabilities(callback)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_requestpermission">[m] requestPermission</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camera_requestpermission">camera.requestPermission()</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_camera_requestpermission_callback">camera.requestPermission(callback)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_list">[m] list</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camera_list">camera.list()</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_camera_list_callback">camera.list(callback)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_open">[m] open</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camera_open_options">camera.open(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_capture">[m] capture</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camera_capture_options">camera.capture(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_captureasync">[m] captureAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camera_captureasync_options">camera.captureAsync(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_c_cameraerror">[C] CameraError</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_cameraerror">CameraError</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_c_camerasession">[C] CameraSession</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_camerasession">CameraSession</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_p_holder">[p#] holder</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_p_dropped">[p#] dropped</a></span></li>
+<li><span class="stability_undefined"><a href="#camera_m_preview">[m#] preview</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_preview_view_options">preview(view, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_stoppreview">[m#] stopPreview</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_stoppreview">stopPreview()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_analyze">[m#] analyze</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_analyze_callback_options">analyze(callback?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_stopanalysis">[m#] stopAnalysis</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_stopanalysis">stopAnalysis()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_capture_1">[m#] capture</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_capture_options">capture(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_captureasync_1">[m#] captureAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_captureasync_options">captureAsync(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_torch">[m#] torch</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_torch_enabled">torch(enabled)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_flashmode">[m#] flashMode</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_flashmode_mode">flashMode(mode)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_zoom">[m#] zoom</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_zoom_ratio">zoom(ratio)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_zoomlinear">[m#] zoomLinear</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_zoomlinear_linear">zoomLinear(linear)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_zoomstate">[m#] zoomState</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_zoomstate">zoomState()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_exposure">[m#] exposure</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_exposure_index">exposure(index)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_exposurestate">[m#] exposureState</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_exposurestate">exposureState()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_focusat">[m#] focusAt</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_focusat_x_y_options">focusAt(x, y, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_state">[m#] state</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_state">state()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_close">[m#] close</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_close">close()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_isclosed">[m#] isClosed</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_isclosed">isClosed()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#camera_m_on">[m#] on</a></span><ul>
+<li><span class="stability_undefined"><a href="#camera_on_event_listener">on(event, listener)</a></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <div id="apicontent">
+            <h1>相机 (Camera)<span><a class="mark" href="#camera_camera" id="camera_camera">#</a></span></h1>
+<!-- runtime-support:begin camera -->
+<!-- 本段由 generator/runtime-support.js 根据 AutoJs6 运行时覆盖矩阵生成, 不要手动修改; 数据源 ksp -->
+<table>
+<thead>
+<tr>
+<th>运行时支持</th>
+<th>Rhino</th>
+<th>Node.js 主线程</th>
+<th>Node.js Worker</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入口</td>
+<td><code>camera</code></td>
+<td><code>autojs6:camera</code>, <code>$autojs.camera</code></td>
+<td><code>autojs6:camera</code>, <code>$autojs.camera</code></td>
+<td><code>host.camera</code></td>
+</tr>
+<tr>
+<td>状态</td>
+<td>已支持 8 项</td>
+<td>已支持 8 项</td>
+<td>已支持 8 项</td>
+<td>需授权 8 项</td>
+</tr>
+<tr>
+<td>授权</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><code>camera.control</code> 8 项</td>
+</tr>
+</tbody>
+</table>
+<p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
+<p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
+<!-- runtime-support:end -->
+<p><code>camera</code> 模块用于在脚本中使用 3-Prism Camera 插件的相机能力: 拍照 (可直接存为 JPEG 文件), 连续取帧做识别 (例如配合 <a href="ocr.html">ocr</a>, <a href="barcode.html">barcode</a> 或 YOLO 物体检测), 在 ui 布局或悬浮窗的 SurfaceView 中显示预览, 以及手电, 闪光, 变焦, 曝光与对焦控制. 相机由插件打开, 帧经共享内存交给 AutoJs6, 画面与照片只在插件和 AutoJs6 之间传递.</p>
+<p>从 AutoJs6 6.8.1 (构建 6641) 起, 本模块由外置 3-Prism Camera 插件 (AutoJs6-Plugin-Three-Prism-Camera) 1.0.0 及以上版本提供, 宿主不包含相机实现. 调用前需在插件中心安装并启用插件. 插件未安装时方法抛出 <code>code</code> 为 <code>PLUGIN_NOT_INSTALLED</code> 的 <a href="#camera_c_cameraerror">CameraError</a>, 被禁用时为 <code>PLUGIN_DISABLED</code>, 插件要求更高版本的 AutoJs6 时为 <code>HOST_VERSION_TOO_LOW</code>. <a href="#camera_m_isavailable">camera.isAvailable</a> 可预先探测, 不会抛出.</p>
+<p>本模块在 Rhino 中注册为全局名称 <code>camera</code>, 并提供 <code>$camera</code> 别名, 二者指向同一对象. 本页的签名与同步返回值描述 Rhino. Node.js 主线程与 Worker 通过 <code>require(&#39;autojs6:camera&#39;)</code> (或 <code>$autojs.camera</code>) 使用, Bun 通过 <code>host.camera</code> (需授权 <code>camera.control</code>) 使用, 成员, 选项, 错误码与关闭原因相同, 但全部返回 Promise; 这些运行时没有可用于预览的 View, <code>preview</code> 与 <code>stopPreview</code> 以 <code>UNSUPPORTED</code> 拒绝, 照片用 <code>camera.recycle(image)</code> 回收. 参阅 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
+<blockquote>
+<p><strong>帧的生命周期</strong>: <a href="#camera_m_analyze">analyze</a> 回调里的 <code>img</code> 只在回调执行期间有效, 回调返回后立即回收, 之后再访问会抛出 &quot;图像已回收&quot;. 要在回调之外使用, 先调用 <code>img.clone()</code> 得到副本, 用完后自行 <code>recycle()</code>. 回调耗时超过帧间隔时新帧会被丢弃而不是排队, 丢弃数量见 <code>state().dropped</code> 与 <code>&quot;dropped&quot;</code> 事件.</p>
+</blockquote>
+<pre><code class="lang-js">// 实时扫码: 帧只在回调里有效
+let session = camera.open({ resolution: &#39;1280x720&#39; });
+session.analyze((img, meta) =&gt; {
+    let codes = barcode.detect(img);
+    if (codes.length &gt; 0) {
+        toastLog(codes[0].rawValue);
+        session.close();
+    }
+});
+events.on(&#39;exit&#39;, () =&gt; session.close());
+</code></pre>
+<h2>准备工作<span><a class="mark" href="#camera" id="camera">#</a></span></h2>
+<div class="signature"><ol>
+<li>在插件中心安装并启用 3-Prism Camera. 插件为 <code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code> 与 <code>x86</code> 各提供一个安装包, 另有适用于全部设备的 <code>universal</code> 安装包; 支持 Android 7.0 (API 24) 及以上.</li>
+<li>授予插件相机权限. 相机在插件进程内打开, 因此相机权限由插件自己持有, AutoJs6 的相机权限不能代替. 可以在插件的设置页授权, 也可以由脚本调用 <a href="#camera_m_requestpermission">camera.requestPermission</a> 打开插件的授权页. 插件缺少权限时打开相机失败于 <code>PERMISSION_DENIED</code>.</li>
+<li>会话打开期间, 插件以相机类型的前台服务运行并显示一条通知, 这样 AutoJs6 退到后台或熄屏后仍能继续取帧; 会话关闭后通知随即消失. Android 13 及以上需要允许插件发送通知才能看到它.</li>
+</ol>
+</div><p>插件申请网络权限只用于设置页的检查更新: 读取 AutoJs6 官方插件索引, 与已安装版本的 versionCode 比较, 有新版本时提示下载; 打开设置页时自动检查, 每 12 小时最多一次, 可以在设置页关闭. 相机画面, 照片与设置不会离开设备, 插件也不申请存储权限, 照片只在指定 <code>path</code> 时由 AutoJs6 写入文件.</p>
+<h2>默认值与插件设置页<span><a class="mark" href="#camera_1" id="camera_1">#</a></span></h2>
+<p><a href="#camera_m_open">camera.open</a> 与 <a href="#camera_m_capture">camera.capture</a> 省略 <code>facing</code> / <code>id</code>, <code>resolution</code> 或 <code>fps</code> 时, AutoJs6 不发送对应的键, 由插件按其设置页的默认值补齐:</p>
+<ul>
+<li>镜头: 设置页的 &quot;默认镜头&quot;, 用户未修改时为后置镜头.</li>
+<li>分析分辨率: 设置页的默认分析分辨率, 用户未修改时为 <code>640x480</code>.</li>
+<li>帧率: 设置页的默认帧率, 用户未修改时由设备决定.</li>
+</ul>
+<p><a href="#camera_m_analyze">analyze</a> 省略的分辨率与帧率沿用 <code>open</code> 的值. 实际生效的镜头, 分辨率与帧率以 <a href="#camera_m_state">state</a> 与帧的 <code>meta</code> 为准, 脚本需要固定值时应显式传入.</p>
+<h2>线程与调用形式<span><a class="mark" href="#camera_2" id="camera_2">#</a></span></h2>
+<p>插件的绑定在 AutoJs6 的主线程上应答, 因此 UI 线程 (<code>&quot;ui&quot;;</code> 脚本的界面回调) 不能同步等待插件. 各方法在 UI 线程上的行为如下:</p>
+<ul>
+<li>发现类调用 <a href="#camera_m_isavailable">isAvailable</a>, <a href="#camera_m_capabilities">capabilities</a>, <a href="#camera_m_list">list</a> 与 <a href="#camera_m_requestpermission">requestPermission</a> 有三种形式, 返回形式只取决于线程与参数, 与插件是否已连接无关:<ul>
+<li>在 UI 线程上不传回调: 返回 Promise, 以同步形式的返回值兑现, 失败时以 <a href="#camera_c_cameraerror">CameraError</a> 拒绝 (<code>isAvailable</code> 只兑现).</li>
+<li>在任意线程上以函数为唯一参数: 立即返回 <code>undefined</code>, 之后在调用它的脚本线程上调用 <code>callback(value, null)</code> 或 <code>callback(null, error)</code>, 与 <a href="http.html">http</a> 的回调形式一致.</li>
+<li>在其他线程上不传回调: 等待插件应答后同步返回.</li>
+<li>参数为 <code>undefined</code> 或 <code>null</code> 视为未传回调, 其他参数抛出 <code>INVALID_ARGUMENT</code>.</li>
+</ul>
+</li>
+<li><a href="#camera_m_open">camera.open</a> 在 UI 线程上检查选项后立即返回会话, 并在后台连接插件与打开相机; 连接期间 <code>state().open</code> 为 <code>false</code>, 在 UI 线程上调用的 <code>preview</code>, <code>stopPreview</code>, <code>analyze</code>, <code>stopAnalysis</code>, <code>torch</code>, <code>flashMode</code>, <code>zoom</code>, <code>zoomLinear</code> 与 <code>exposure</code> 先检查参数, 再按调用顺序排队, 打开后依次执行. 排队的调用或打开本身失败时以会话的 <code>&quot;error&quot;</code> 事件报告 (没有监听器时输出到控制台), 打开失败后会话以原因 <code>error</code> 关闭. 在其他线程上 <code>open</code> 等会话打开后才返回.</li>
+<li>连接期间在 UI 线程上调用 <a href="#camera_m_zoomstate">zoomState</a> 与 <a href="#camera_m_exposurestate">exposureState</a> 抛出 <code>INVALID_ARGUMENT</code>, 因为它们需要镜头的应答: 在 <code>state().open</code> 为 <code>true</code> 之后再读取.</li>
+<li><a href="#camera_m_capture">camera.capture</a>, 会话的 <a href="#camera_m_capture_1">capture</a> 与 <a href="#camera_m_focusat">focusAt</a> 在 UI 线程上抛出 <code>INVALID_ARGUMENT</code>, 请在 <a href="threads.html#threads_m_start">threads.start</a> 的线程中调用, 或在 UI 线程上使用 <a href="#camera_m_captureasync">captureAsync</a>.</li>
+</ul>
+<h2>方向与镜像<span><a class="mark" href="#camera_3" id="camera_3">#</a></span></h2>
+<div class="signature"><ul>
+<li>帧默认按屏幕方向旋正 (<code>upright: true</code>), 帧的 <code>meta.rotationDegrees</code> 给出旋转角度; <code>upright: false</code> 时帧保持传感器方向.</li>
+<li>帧与拍照默认不镜像, 前置镜头也一样, 因此识别结果与真实画面一致; <code>mirror: true</code> 时帧与拍照同时水平镜像.</li>
+<li>前置镜头的预览总是镜像 (与系统相机一致), 不受 <code>mirror</code> 影响; <code>state().previewMirrored</code> 表示当前预览是否镜像.</li>
+<li>拍照得到的 JPEG 保留 EXIF 方向, AutoJs6 解码时按 EXIF 旋转, 因此返回的图像与写入的文件一致.</li>
+</ul>
+</div><h2>独占与 CAMERA_BUSY<span><a class="mark" href="#camera_camera_busy" id="camera_camera_busy">#</a></span></h2>
+<p>整个插件同一时间只有一个相机会话, 可以是某个脚本的会话, 也可以是插件自己的取景页. 已有会话时 <a href="#camera_m_open">camera.open</a> 失败于 <code>CAMERA_BUSY</code>, 错误的 <code>details.holder</code> 指出占用者: 脚本的路径, 或 <code>pluginUi</code> (插件的取景页). 取景页显示正在使用相机的脚本并提供 &quot;停止此脚本&quot; 按钮; 用户按下后插件关闭该会话, 脚本先收到原因为 <code>pluginUi</code> 的 <code>&quot;close&quot;</code> 事件, 监听器执行后该脚本被停止. 其他应用占用相机时为 <code>CAMERA_UNAVAILABLE</code>.</p>
+<h2>限制<span><a class="mark" href="#camera_4" id="camera_4">#</a></span></h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会话</td>
+<td>整个插件 1 个 (脚本会话或取景页)</td>
+</tr>
+<tr>
+<td>分析分辨率</td>
+<td>160x120 - 1920x1080</td>
+</tr>
+<tr>
+<td>分析帧率</td>
+<td>1 - 60</td>
+</tr>
+<tr>
+<td>拍照 JPEG</td>
+<td>64 MiB, 超出时为 <code>LIMIT_EXCEEDED</code></td>
+</tr>
+<tr>
+<td><code>quality</code></td>
+<td>1 - 100, 默认 95</td>
+</tr>
+<tr>
+<td><code>focusAt</code></td>
+<td>最多等待 5 秒对上焦; <code>size</code> 0 - 1 (默认 0.15); <code>autoCancelMillis</code> 0 - 60000 (默认 5000)</td>
+</tr>
+<tr>
+<td>等待期限</td>
+<td>拍照结果与打开会话各 15 秒, 其他调用 10 秒, 超出时为 <code>TIMEOUT</code>; 取景页与授权页等待用户, 无期限</td>
+</tr>
+<tr>
+<td>镜头列表</td>
+<td>最多 16 个镜头, 每个列表最多 64 个分辨率</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p style="font: bold 2em sans-serif; color: #FF7043">camera</p>
+
+<hr>
+<h2>[m] isAvailable<span><a class="mark" href="#camera_m_isavailable" id="camera_m_isavailable">#</a></span></h2>
+<h3>camera.isAvailable()<span><a class="mark" href="#camera_camera_isavailable" id="camera_camera_isavailable">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 1/2</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span> } - 插件是否已安装, 已启用且与当前 AutoJs6 兼容; 在 UI 线程上为兑现该值的 Promise</li>
+</ul>
+<p>探测插件可用性, 不抛出插件错误. 返回 <code>true</code> 不表示插件已获得相机权限, 权限状态见 <a href="#camera_m_capabilities">capabilities</a> 的 <code>permissionGranted</code>.</p>
+<h3>camera.isAvailable(callback)<span><a class="mark" href="#camera_camera_isavailable_callback" id="camera_camera_isavailable_callback">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 2/2</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">(</a>available: <a href="dataTypes.html#datatypes_boolean">boolean</a>, error: <a href="dataTypes.html#datatypes_null">null</a><a href="dataTypes.html#datatypes_function">)</a> <a href="dataTypes.html#datatypes_function">=&gt;</a> <a href="dataTypes.html#datatypes_void">void</a></span> } - 结果回调, 在调用线程上执行</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
+</ul>
+<p>立即返回, 结果经回调交付. 参阅 <a href="#camera_2">线程与调用形式</a>.</p>
+<h2>[m] capabilities<span><a class="mark" href="#camera_m_capabilities" id="camera_m_capabilities">#</a></span></h2>
+<h3>camera.capabilities()<span><a class="mark" href="#camera_camera_capabilities" id="camera_camera_capabilities">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 1/2</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> {{<ul>
+<li>contractVersion: <a href="dataTypes.html#datatypes_number">number</a> | <a href="dataTypes.html#datatypes_null">null</a>;</li>
+<li>features: <a href="dataTypes.html#datatypes_string">string</a>[];</li>
+<li>engineVersion: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_null">null</a>;</li>
+<li>permissionGranted: <a href="dataTypes.html#datatypes_boolean">boolean</a> | <a href="dataTypes.html#datatypes_null">null</a>;</li>
+<li>sharedMemory: <a href="dataTypes.html#datatypes_boolean">boolean</a> | <a href="dataTypes.html#datatypes_null">null</a>;</li>
+<li>cameraCount: <a href="dataTypes.html#datatypes_number">number</a> | <a href="dataTypes.html#datatypes_null">null</a>;</li>
+</ul>
+</li>
+<li>}} - 插件能力; 在 UI 线程上为兑现该对象的 Promise</li>
+</ul>
+<p>返回插件的契约版本, 功能列表, CameraX 版本, 是否持有相机权限, 帧是否经共享内存传输 (Android 8.1 及以上为 <code>true</code>, 更早的系统逐帧经文件传输, 帧率受限) 与镜头数量.</p>
+<h3>camera.capabilities(callback)<span><a class="mark" href="#camera_camera_capabilities_callback" id="camera_camera_capabilities_callback">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 2/2</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">(</a>value: <a href="dataTypes.html#datatypes_object">Object</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a>, error: <a href="#camera_c_cameraerror">CameraError</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a><a href="dataTypes.html#datatypes_function">)</a> <a href="dataTypes.html#datatypes_function">=&gt;</a> <a href="dataTypes.html#datatypes_void">void</a></span> } - 结果回调, 在调用线程上执行</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
+</ul>
+<h2>[m] requestPermission<span><a class="mark" href="#camera_m_requestpermission" id="camera_m_requestpermission">#</a></span></h2>
+<h3>camera.requestPermission()<span><a class="mark" href="#camera_camera_requestpermission" id="camera_camera_requestpermission">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 1/2</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span> } - 插件此后是否持有相机权限; 在 UI 线程上为兑现该值的 Promise</li>
+</ul>
+<p>插件已持有相机权限时立即返回 <code>true</code>. 否则打开插件的授权页, 等待用户返回 (最多两分钟) 后返回插件是否持有权限. 打开授权页要求 AutoJs6 处于前台, 否则抛出 <code>UI_REQUIRES_FOREGROUND</code>.</p>
+<h3>camera.requestPermission(callback)<span><a class="mark" href="#camera_camera_requestpermission_callback" id="camera_camera_requestpermission_callback">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 2/2</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">(</a>granted: <a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a>, error: <a href="#camera_c_cameraerror">CameraError</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a><a href="dataTypes.html#datatypes_function">)</a> <a href="dataTypes.html#datatypes_function">=&gt;</a> <a href="dataTypes.html#datatypes_void">void</a></span> } - 结果回调, 在调用线程上执行</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
+</ul>
+<h2>[m] list<span><a class="mark" href="#camera_m_list" id="camera_m_list">#</a></span></h2>
+<h3>camera.list()<span><a class="mark" href="#camera_camera_list" id="camera_camera_list">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 1/2</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a>[]</span> | <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span> } - 镜头列表; 在 UI 线程上为兑现该数组的 Promise</li>
+</ul>
+<p>每个镜头为 <code>{ id, facing, hasFlash, sensorRotation, zoomRange, exposureRange, exposureStep, analysisResolutions, captureResolutions }</code>: <code>facing</code> 为 <code>&quot;back&quot;</code>, <code>&quot;front&quot;</code> 或 <code>&quot;external&quot;</code>, <code>zoomRange</code> 与 <code>exposureRange</code> 为 <code>[min, max]</code>, 两个分辨率列表为 <code>&quot;宽x高&quot;</code> 字符串. <code>id</code> 可传给 <a href="#camera_m_open">open</a> 的 <code>id</code> 选项.</p>
+<h3>camera.list(callback)<span><a class="mark" href="#camera_camera_list_callback" id="camera_camera_list_callback">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 2/2</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>callback</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">(</a>cameras: <a href="dataTypes.html#datatypes_object">Object</a>[]</span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a>, error: <a href="#camera_c_cameraerror">CameraError</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a><a href="dataTypes.html#datatypes_function">)</a> <a href="dataTypes.html#datatypes_function">=&gt;</a> <a href="dataTypes.html#datatypes_void">void</a></span> } - 结果回调, 在调用线程上执行</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
+</ul>
+<pre><code class="lang-js">camera.list((cameras, err) =&gt; {
+    if (err) return console.error(err.code, err.message);
+    cameras.forEach(c =&gt; console.log(c.id, c.facing, c.analysisResolutions.join(&#39;, &#39;)));
+});
+</code></pre>
+<h2>[m] open<span><a class="mark" href="#camera_m_open" id="camera_m_open">#</a></span></h2>
+<h3>camera.open(options?)<span><a class="mark" href="#camera_camera_open_options" id="camera_camera_open_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> {{<ul>
+<li>facing?: <code>&quot;back&quot;</code> | <code>&quot;front&quot;</code>;</li>
+<li>id?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>resolution?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>fps?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>upright?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>mirror?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>flashMode?: <code>&quot;auto&quot;</code> | <code>&quot;on&quot;</code> | <code>&quot;off&quot;</code>;</li>
+</ul>
+</li>
+<li>}} - 会话选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> } - 相机会话</li>
+</ul>
+<p>独占打开相机并返回会话. 选项:</p>
+<ul>
+<li><code>facing</code> 与 <code>id</code> 二选一, 都省略时由插件设置页的默认镜头决定 (见 <a href="#camera_1">默认值与插件设置页</a>).</li>
+<li><code>resolution</code>: 分析的目标分辨率, 如 <code>&quot;1280x720&quot;</code>; 实际尺寸见 <code>state().resolution</code> 与帧的 <code>meta</code>. 省略时取设置页的默认值.</li>
+<li><code>fps</code>: 目标帧率, 省略时取设置页的默认值.</li>
+<li><code>upright</code>: 帧是否按屏幕方向旋正, 默认 <code>true</code>.</li>
+<li><code>mirror</code>: 帧与拍照是否镜像, 默认 <code>false</code>; 不影响预览 (见 <a href="#camera_3">方向与镜像</a>).</li>
+<li><code>flashMode</code>: 拍照的闪光模式, 默认 <code>&quot;auto&quot;</code>.</li>
+</ul>
+<p>在 UI 线程上调用时立即返回, 会话在后台连接 (见 <a href="#camera_2">线程与调用形式</a>); 在其他线程上会话打开后才返回. 会话在 <a href="#camera_m_close">close</a>, 脚本结束或插件关闭它时结束; 脚本结束时 AutoJs6 自动关闭会话.</p>
+<h2>[m] capture<span><a class="mark" href="#camera_m_capture" id="camera_m_capture">#</a></span></h2>
+<h3>camera.capture(options?)<span><a class="mark" href="#camera_camera_capture_options" id="camera_camera_capture_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> {{<ul>
+<li>ui?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>facing?: <code>&quot;back&quot;</code> | <code>&quot;front&quot;</code>;</li>
+<li>id?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>path?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>quality?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>flashMode?: <code>&quot;auto&quot;</code> | <code>&quot;on&quot;</code> | <code>&quot;off&quot;</code>;</li>
+<li>resolution?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>mirror?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+</ul>
+</li>
+<li>}} - 拍照选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="imageWrapperType.html">ImageWrapper</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 照片; 用户离开取景页时为 <code>null</code></li>
+</ul>
+<p>一步拍照. 本脚本已有打开的会话时使用该会话的镜头; 否则临时打开相机, 拍照后关闭. <code>ui: true</code> 时打开插件的取景页由用户拍照 (要求 AutoJs6 处于前台, 否则 <code>UI_REQUIRES_FOREGROUND</code>), 用户未拍照就离开时返回 <code>null</code>, 取景页等待用户, 没有期限.</p>
+<p>指定 <code>path</code> 时 AutoJs6 把 JPEG 原样 (保留 EXIF) 写入该路径, 相对路径按脚本工作目录解析; 写入先在同一目录生成隐藏的临时文件, 完成后改名为目标文件. <code>quality</code> 为 JPEG 质量 (1 - 100, 默认 95). 返回的图像是普通的 <a href="imageWrapperType.html">ImageWrapper</a>, 不受 <a href="#camera_camera">帧的生命周期</a> 限制, 用完后由脚本调用 <code>recycle()</code> 回收 (与 <a href="image.html">images.captureScreen</a> 返回的受截图模块管理的图像不同).</p>
+<p>不能在 UI 线程上调用, 请使用 <a href="#camera_m_captureasync">captureAsync</a>.</p>
+<pre><code class="lang-js">let img = camera.capture({ path: files.join(files.getSdcardPath(), &#39;prism.jpg&#39;) });
+toastLog(img.getWidth() + &#39;x&#39; + img.getHeight());
+img.recycle();
+
+// 让用户在取景页拍一张
+let shot = camera.capture({ ui: true });
+if (shot === null) toastLog(&#39;已取消&#39;);
+</code></pre>
+<h2>[m] captureAsync<span><a class="mark" href="#camera_m_captureasync" id="camera_m_captureasync">#</a></span></h2>
+<h3>camera.captureAsync(options?)<span><a class="mark" href="#camera_camera_captureasync_options" id="camera_camera_captureasync_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 同 <a href="#camera_m_capture">capture</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span> } - 兑现值为 <a href="imageWrapperType.html">ImageWrapper</a> 或 <code>null</code></li>
+</ul>
+<p><a href="#camera_m_capture">capture</a> 的异步形态, 可以在 UI 线程上调用.</p>
+<h2>[C] CameraError<span><a class="mark" href="#camera_c_cameraerror" id="camera_c_cameraerror">#</a></span></h2>
+<h3>CameraError<span><a class="mark" href="#camera_cameraerror" id="camera_cameraerror">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<p>相机失败的错误类, 通过 <code>camera.CameraError</code> 访问, 继承 <code>Error</code>. <code>e instanceof camera.CameraError</code> 可判断错误类型.</p>
+<ul>
+<li><code>name</code>: <code>&quot;CameraError&quot;</code>.</li>
+<li><code>code</code>: 错误码, 见下表.</li>
+<li><code>message</code>: 当前应用语言的说明; 插件或选项检查给出更多细节时附在括号中 (细节不翻译).</li>
+<li><code>details</code>: <code>{ holder, cameraId, limit, reason }</code>, <code>holder</code> 为占用者 (<code>CAMERA_BUSY</code>), <code>cameraId</code> 为相关镜头 (<code>CAMERA_UNAVAILABLE</code>), <code>limit</code> 为超出的上限 (<code>INVALID_ARGUMENT</code>, <code>LIMIT_EXCEEDED</code>), <code>reason</code> 为未翻译的细节; 不适用的字段为 <code>null</code>.</li>
+<li><code>toString()</code> 返回 <code>CameraError [code]: message</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>错误码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PLUGIN_NOT_INSTALLED</code></td>
+<td>未安装 3-Prism Camera 插件</td>
+</tr>
+<tr>
+<td><code>PLUGIN_DISABLED</code></td>
+<td>插件已在插件中心停用</td>
+</tr>
+<tr>
+<td><code>HOST_VERSION_TOO_LOW</code></td>
+<td>插件要求更高版本的 AutoJs6</td>
+</tr>
+<tr>
+<td><code>PERMISSION_DENIED</code></td>
+<td>插件没有相机权限, 可调用 <a href="#camera_m_requestpermission">requestPermission</a></td>
+</tr>
+<tr>
+<td><code>CAMERA_BUSY</code></td>
+<td>其他会话或插件的取景页正在使用相机, <code>details.holder</code> 指出占用者</td>
+</tr>
+<tr>
+<td><code>CAMERA_UNAVAILABLE</code></td>
+<td>没有符合 <code>facing</code> / <code>id</code> 的镜头, 或其他应用正在使用相机</td>
+</tr>
+<tr>
+<td><code>CAMERA_DISABLED</code></td>
+<td>当前不允许使用相机: 后台无相机能力, 设备策略或系统的相机隐私开关</td>
+</tr>
+<tr>
+<td><code>UI_REQUIRES_FOREGROUND</code></td>
+<td>打开取景页或授权页时 AutoJs6 不在前台</td>
+</tr>
+<tr>
+<td><code>UNSUPPORTED</code></td>
+<td>插件或镜头不支持该功能, 或插件契约版本不兼容</td>
+</tr>
+<tr>
+<td><code>INVALID_ARGUMENT</code></td>
+<td>选项缺失, 类型错误或超出范围, 或在不允许的线程上调用</td>
+</tr>
+<tr>
+<td><code>SESSION_CLOSED</code></td>
+<td>会话已关闭, 插件进程退出或绑定丢失</td>
+</tr>
+<tr>
+<td><code>TIMEOUT</code></td>
+<td>调用或拍照结果未在期限内到达</td>
+</tr>
+<tr>
+<td><code>LIMIT_EXCEEDED</code></td>
+<td>结果超出上限, 如超过 64 MiB 的 JPEG</td>
+</tr>
+<tr>
+<td><code>INTERNAL</code></td>
+<td>其他错误</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">try {
+    camera.open();
+} catch (e) {
+    if (e instanceof camera.CameraError &amp;&amp; e.code === &#39;CAMERA_BUSY&#39;) {
+        toastLog(&#39;相机正被占用: &#39; + e.details.holder);
+    } else {
+        throw e;
+    }
+}
+</code></pre>
+<h2>[C] CameraSession<span><a class="mark" href="#camera_c_camerasession" id="camera_c_camerasession">#</a></span></h2>
+<h3>CameraSession<span><a class="mark" href="#camera_camerasession" id="camera_camerasession">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<p><a href="#camera_m_open">camera.open</a> 返回的会话对象, 是 <a href="eventEmitterType.html">EventEmitter</a> 的实例. 事件在打开会话的脚本线程上到达; 分析进行中时脚本保持运行, 直到 <a href="#camera_m_stopanalysis">stopAnalysis</a>, <a href="#camera_m_close">close</a> 或会话结束. 控制方法返回会话本身, 可以链式调用.</p>
+<h2>[p#] holder<span><a class="mark" href="#camera_p_holder" id="camera_p_holder">#</a></span></h2>
+<p><strong><code>6.8.1</code></strong> <strong><code>Getter</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> }</li>
+</ul>
+<p>持有会话的脚本路径.</p>
+<h2>[p#] dropped<span><a class="mark" href="#camera_p_dropped" id="camera_p_dropped">#</a></span></h2>
+<p><strong><code>6.8.1</code></strong> <strong><code>Getter</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
+</ul>
+<p>当前分析 (或最近一次分析) 中被丢弃的帧数.</p>
+<h2>[m#] preview<span><a class="mark" href="#camera_m_preview" id="camera_m_preview">#</a></span></h2>
+<h3>preview(view, options?)<span><a class="mark" href="#camera_preview_view_options" id="camera_preview_view_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>view</strong> { <span class="type"><a href="https://developer.android.com/reference/android/view/SurfaceView">android.view.SurfaceView</a></span> } - ui 布局 (如 <code>&lt;surfaceview id=&quot;cam&quot;/&gt;</code>) 或悬浮窗中的 SurfaceView</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 预留, 目前没有可用的键</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<p>在 SurfaceView 中显示相机画面. 预览跟随 surface: 尺寸变化时重新开始, surface 销毁时停止. 前置镜头的预览总是镜像. 调用之后的失败以 <code>&quot;error&quot;</code> 事件到达.</p>
+<pre><code class="lang-js">&quot;ui&quot;;
+ui.layout(&lt;frame&gt;&lt;surfaceview id=&quot;cam&quot; w=&quot;*&quot; h=&quot;*&quot;/&gt;&lt;/frame&gt;);
+let s = camera.open().preview(ui.cam).torch(true).zoom(2);
+</code></pre>
+<h2>[m#] stopPreview<span><a class="mark" href="#camera_m_stoppreview" id="camera_m_stoppreview">#</a></span></h2>
+<h3>stopPreview()<span><a class="mark" href="#camera_stoppreview" id="camera_stoppreview">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<p>停止预览.</p>
+<h2>[m#] analyze<span><a class="mark" href="#camera_m_analyze" id="camera_m_analyze">#</a></span></h2>
+<h3>analyze(callback?, options?)<span><a class="mark" href="#camera_analyze_callback_options" id="camera_analyze_callback_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>[ callback ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">(</a>img: <a href="imageWrapperType.html">ImageWrapper</a>, meta: <a href="dataTypes.html#datatypes_object">Object</a><a href="dataTypes.html#datatypes_function">)</a> <a href="dataTypes.html#datatypes_function">=&gt;</a> <a href="dataTypes.html#datatypes_void">void</a></span> } - 帧回调</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>resolution?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>fps?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>upright?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>mirror?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+</ul>
+</li>
+<li>}} - 覆盖 <a href="#camera_m_open">open</a> 的同名选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<p>开始连续取帧; 已有的分析先停止. 回调与 <code>&quot;frame&quot;</code> 监听器在调用 <code>analyze</code> 的线程上执行, 收到的 <code>img</code> 只在执行期间有效 (见 <a href="#camera_camera">帧的生命周期</a>). 只传选项时只触发 <code>&quot;frame&quot;</code> 事件.</p>
+<p>帧的 <code>meta</code> 为 <code>{ seq, width, height, rotationDegrees, upright, mirrored, timestamp, facing, dropped }</code>: <code>seq</code> 为递增的帧序号, <code>timestamp</code> 为毫秒, <code>dropped</code> 为本次分析到目前为止丢弃的帧数.</p>
+<pre><code class="lang-js">// 保留一帧到回调之外
+let kept = null;
+session.analyze((img) =&gt; {
+    if (!kept) kept = img.clone();
+});
+// 用完后 kept.recycle()
+</code></pre>
+<h2>[m#] stopAnalysis<span><a class="mark" href="#camera_m_stopanalysis" id="camera_m_stopanalysis">#</a></span></h2>
+<h3>stopAnalysis()<span><a class="mark" href="#camera_stopanalysis" id="camera_stopanalysis">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<p>停止分析. 返回后不再有帧到达.</p>
+<h2>[m#] capture<span><a class="mark" href="#camera_m_capture_1" id="camera_m_capture_1">#</a></span></h2>
+<h3>capture(options?)<span><a class="mark" href="#camera_capture_options" id="camera_capture_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> {{<ul>
+<li>path?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>quality?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>flashMode?: <code>&quot;auto&quot;</code> | <code>&quot;on&quot;</code> | <code>&quot;off&quot;</code>;</li>
+<li>resolution?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>mirror?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+</ul>
+</li>
+<li>}} - 拍照选项, 含义同 <a href="#camera_m_capture">camera.capture</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="imageWrapperType.html">ImageWrapper</a></span> } - 照片, 由脚本回收</li>
+</ul>
+<p>用当前会话的镜头拍照, 分析与预览不中断. 同一会话的拍照按调用顺序进行. 不能在 UI 线程上调用, 请使用 <a href="#camera_m_captureasync_1">captureAsync</a>.</p>
+<h2>[m#] captureAsync<span><a class="mark" href="#camera_m_captureasync_1" id="camera_m_captureasync_1">#</a></span></h2>
+<h3>captureAsync(options?)<span><a class="mark" href="#camera_captureasync_options" id="camera_captureasync_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 同 <a href="#camera_m_capture_1">capture</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span> } - 兑现值为 <a href="imageWrapperType.html">ImageWrapper</a></li>
+</ul>
+<h2>[m#] torch<span><a class="mark" href="#camera_m_torch" id="camera_m_torch">#</a></span></h2>
+<h3>torch(enabled)<span><a class="mark" href="#camera_torch_enabled" id="camera_torch_enabled">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>enabled</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否打开手电</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<h2>[m#] flashMode<span><a class="mark" href="#camera_m_flashmode" id="camera_m_flashmode">#</a></span></h2>
+<h3>flashMode(mode)<span><a class="mark" href="#camera_flashmode_mode" id="camera_flashmode_mode">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>mode</strong> { <code>&quot;auto&quot;</code> | <code>&quot;on&quot;</code> | <code>&quot;off&quot;</code> } - 拍照的闪光模式</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<h2>[m#] zoom<span><a class="mark" href="#camera_m_zoom" id="camera_m_zoom">#</a></span></h2>
+<h3>zoom(ratio)<span><a class="mark" href="#camera_zoom_ratio" id="camera_zoom_ratio">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>ratio</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 变焦倍率, 范围见 <a href="#camera_m_zoomstate">zoomState</a> 或镜头的 <code>zoomRange</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<h2>[m#] zoomLinear<span><a class="mark" href="#camera_m_zoomlinear" id="camera_m_zoomlinear">#</a></span></h2>
+<h3>zoomLinear(linear)<span><a class="mark" href="#camera_zoomlinear_linear" id="camera_zoomlinear_linear">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>linear</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 0 - 1, 在最小与最大变焦之间线性取值</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<h2>[m#] zoomState<span><a class="mark" href="#camera_m_zoomstate" id="camera_m_zoomstate">#</a></span></h2>
+<h3>zoomState()<span><a class="mark" href="#camera_zoomstate" id="camera_zoomstate">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type">{ ratio: <a href="dataTypes.html#datatypes_number">number</a>; min: <a href="dataTypes.html#datatypes_number">number</a>; max: <a href="dataTypes.html#datatypes_number">number</a>; linear: <a href="dataTypes.html#datatypes_number">number</a></span> }}</li>
+</ul>
+<p>当前变焦状态. 在 UI 线程上打开的会话连接期间调用抛出 <code>INVALID_ARGUMENT</code>, 请在 <code>state().open</code> 为 <code>true</code> 之后读取.</p>
+<h2>[m#] exposure<span><a class="mark" href="#camera_m_exposure" id="camera_m_exposure">#</a></span></h2>
+<h3>exposure(index)<span><a class="mark" href="#camera_exposure_index" id="camera_exposure_index">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>index</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 曝光补偿档位 (整数), 范围见 <a href="#camera_m_exposurestate">exposureState</a> 或镜头的 <code>exposureRange</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<h2>[m#] exposureState<span><a class="mark" href="#camera_m_exposurestate" id="camera_m_exposurestate">#</a></span></h2>
+<h3>exposureState()<span><a class="mark" href="#camera_exposurestate" id="camera_exposurestate">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type">{ index: <a href="dataTypes.html#datatypes_number">number</a>; min: <a href="dataTypes.html#datatypes_number">number</a>; max: <a href="dataTypes.html#datatypes_number">number</a>; step: <a href="dataTypes.html#datatypes_number">number</a></span> }}</li>
+</ul>
+<p>当前曝光补偿状态, <code>step</code> 为每档的 EV 值. 连接期间的限制同 <a href="#camera_m_zoomstate">zoomState</a>.</p>
+<h2>[m#] focusAt<span><a class="mark" href="#camera_m_focusat" id="camera_m_focusat">#</a></span></h2>
+<h3>focusAt(x, y, options?)<span><a class="mark" href="#camera_focusat_x_y_options" id="camera_focusat_x_y_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>x</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 0 - 1, 相对旋正后画面的横坐标</li>
+<li><strong>y</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 0 - 1, 相对旋正后画面的纵坐标</li>
+<li><strong>[ options ]</strong> { <span class="type">{ size?: <a href="dataTypes.html#datatypes_number">number</a>; autoCancelMillis?: <a href="dataTypes.html#datatypes_number">number</a></span> }} - 测光区域大小 (0 - 1, 默认 0.15) 与锁定后自动取消的毫秒数 (0 - 60000, 默认 5000)</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否对上焦</li>
+</ul>
+<p>在指定位置对焦与测光, 最多等待 5 秒. 不能在 UI 线程上调用.</p>
+<h2>[m#] state<span><a class="mark" href="#camera_m_state" id="camera_m_state">#</a></span></h2>
+<h3>state()<span><a class="mark" href="#camera_state" id="camera_state">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 会话状态</li>
+</ul>
+<p>返回 <code>{ open, previewing, analyzing, id, facing, resolution, fps, previewMirrored, torch, flashMode, zoom, exposure, frames, dropped, holder }</code>. <code>open</code> 在 UI 线程上打开的会话连接期间与会话关闭后为 <code>false</code>; <code>resolution</code> 与 <code>fps</code> 为生效中的分析尺寸与帧率, 未在分析时为 <code>null</code>; <code>frames</code> 为已交付的帧数.</p>
+<h2>[m#] close<span><a class="mark" href="#camera_m_close" id="camera_m_close">#</a></span></h2>
+<h3>close()<span><a class="mark" href="#camera_close" id="camera_close">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
+</ul>
+<p>关闭会话并释放相机, 原因为 <code>script</code>. 可以重复调用. 连接期间调用会放弃排队的调用.</p>
+<h2>[m#] isClosed<span><a class="mark" href="#camera_m_isclosed" id="camera_m_isclosed">#</a></span></h2>
+<h3>isClosed()<span><a class="mark" href="#camera_isclosed" id="camera_isclosed">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+<h2>[m#] on<span><a class="mark" href="#camera_m_on" id="camera_m_on">#</a></span></h2>
+<h3>on(event, listener)<span><a class="mark" href="#camera_on_event_listener" id="camera_on_event_listener">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>event</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 事件名</li>
+<li><strong>listener</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } - 监听器</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#camera_c_camerasession">CameraSession</a></span> }</li>
+</ul>
+<p>注册监听器. <code>once</code> 形态相同, 只触发一次; <code>off(event, listener?)</code> 移除监听器, 省略 <code>listener</code> 时移除该事件的全部监听器. 事件:</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>frame</code></td>
+<td><code>(img, meta)</code></td>
+<td>每一帧; <code>img</code> 只在监听器执行期间有效</td>
+</tr>
+<tr>
+<td><code>dropped</code></td>
+<td><code>(count, lastSeq)</code></td>
+<td>有帧被丢弃时 (分批报告), <code>count</code> 为本次分析累计丢弃数</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td><code>(err)</code></td>
+<td>不结束会话的失败, 以及 UI 线程上排队调用的失败, <code>err</code> 为 <a href="#camera_c_cameraerror">CameraError</a></td>
+</tr>
+<tr>
+<td><code>close</code></td>
+<td><code>(reason)</code></td>
+<td>会话结束, 只触发一次</td>
+</tr>
+</tbody>
+</table>
+<p>关闭原因 <code>reason</code>: <code>script</code> (<a href="#camera_m_close">close</a> 或脚本结束), <code>pluginUi</code> (插件的取景页接管了相机, 监听器执行后脚本被停止), <code>cameraDisconnected</code> (镜头断开), <code>policy</code> (系统策略禁止使用相机), <code>error</code> (打开失败或插件进程退出), <code>host</code> (AutoJs6 结束了会话, 如插件被停用).</p>
+<pre><code class="lang-js">let session = camera.open({ facing: &#39;front&#39; });
+session.on(&#39;dropped&#39;, (count) =&gt; console.log(&#39;丢帧&#39;, count));
+session.on(&#39;close&#39;, (reason) =&gt; console.log(&#39;会话结束:&#39;, reason));
+</code></pre>
+
+        </div>
+    </div>
+</div>
+
+<script src="assets/sh_javascript.js"></script>
+<script src="assets/sh_java.js"></script>
+<script src="assets/sh_main.js"></script>
+<script src="assets/offline-search.js"></script>
+
+<script src="plugins/docsify-copy-code@2.js"></script>
+<script src="plugins/zoom-image.js"></script>
+
+<script>
+    highlight(void 0, void 0, 'pre');
+    highlight(void 0, void 0, 'tt');
+</script>
+
+<!-- __TRACKING__ -->
+
+</body>
+</html>

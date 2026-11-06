@@ -32,6 +32,7 @@
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
+<li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
 </ul>
 <div class="line"></div>
@@ -45,6 +46,7 @@
 <li><a class="nav-barcode" href="barcode.html">Barcode - 条码</a></li>
 <li><a class="nav-base64" href="base64.html">Base64</a></li>
 <li><a class="nav-bundledLibraries" href="bundledLibraries.html">Bundled Libraries - 脚本库</a></li>
+<li><a class="nav-camera" href="camera.html">Camera - 相机</a></li>
 <li><a class="nav-canvas" href="canvas.html">Canvas - 画布</a></li>
 <li><a class="nav-color" href="color.html">Color - 颜色</a></li>
 <li><a class="nav-compose" href="compose.html">3-Block Compose</a></li>
@@ -321,6 +323,7 @@
 <li><span class="stability_undefined"><a href="#automator_simpleactionautomator">简易自动化 (SimpleActionAutomator)</a></span></li>
 <li><span class="stability_undefined"><a href="#automator_rootautomator">高权限自动化 (RootAutomator)</a></span></li>
 <li><span class="stability_undefined"><a href="#automator_automatorconfiguration">自动化配置 (AutomatorConfiguration)</a></span></li>
+<li><span class="stability_undefined"><a href="#automator_restricted_settings">受限设置 (Restricted settings)</a></span></li>
 <li><span class="stability_undefined"><a href="#automator">工具集与事件驱动等待</a></span></li>
 <li><span class="stability_undefined"><a href="#automator_uiselector">选择器 (UiSelector)</a></span></li>
 <li><span class="stability_undefined"><a href="#automator_uiobject">控件节点 (UiObject)</a></span></li>
@@ -1071,6 +1074,27 @@
 <p>RootAutomator 通过 Root 或可访问输入设备的 Shizuku 向设备输入系统写入触摸事件, 可执行按下, 移动, 抬起及多指操作. 它与基于无障碍服务的 <code>automator</code> 方法具有不同的运行条件和生命周期, 详见 <a href="#automator_rootautomator">RootAutomator</a>.</p>
 <h2>自动化配置 (AutomatorConfiguration)<span><a class="mark" href="#automator_automatorconfiguration" id="automator_automatorconfiguration">#</a></span></h2>
 <p>可调用对象 <code>auto</code> 用于管理无障碍服务状态, 自动化模式, 事件配置, 窗口过滤器及窗口根节点. 本页后半部分以临时作用域对象 <code>auto</code> 列出其成员; 选择器和控件节点的独立参考见 <a href="uiSelectorType.html">UiSelector</a> 与 <a href="uiObjectType.html">UiObject</a>.</p>
+<h2>受限设置 (Restricted settings)<span><a class="mark" href="#automator_restricted_settings" id="automator_restricted_settings">#</a></span></h2>
+<p>Android 13 (API 33) 起, 系统会把非应用商店方式安装的应用的无障碍服务开关设为受限. 受限时, 系统 &quot;无障碍&quot; 设置中的 AutoJs6 条目在 Android 15 及以上显示为灰色并标注 &quot;由受限设置控制&quot;, 在 Android 13 / 14 中点开后弹出 &quot;受限设置&quot; 对话框, 开关都无法打开. 受限状态由系统保存, AutoJs6 未获得 Shizuku 或 Root 权限时无法读取或解除, 因此 <code>auto()</code>, <code>auto.start()</code> 或 <code>auto.launchSettings()</code> 打开系统设置页后, 需要先按下文解除限制, 再打开开关.</p>
+<p>受限的条件:</p>
+<ul>
+<li>通过文件管理器, 浏览器或聊天应用等打开 APK 文件, 经系统 &quot;软件包安装程序&quot; 安装或更新. 通过应用商店安装通常不受限.</li>
+<li>受限后再用 <code>adb install -r</code> 覆盖安装不会解除限制.</li>
+<li>Android 13 / 14 中, 解除限制后再次以上述方式更新 AutoJs6 会重新受限. Android 15 及以上解除限制后的更新不再受限, 但卸载后重新安装会再次受限.</li>
+</ul>
+<p>解除限制:</p>
+<ol>
+<li>在系统 &quot;无障碍&quot; 设置中点一次 AutoJs6 的条目, 关闭弹出的提示.</li>
+<li>打开 AutoJs6 的系统 &quot;应用信息&quot; 页, 点右上角的 &quot;更多&quot; 菜单, 选择 &quot;允许受限设置&quot; (锁屏设有密码时需要验证). HyperOS 中该页面位于 &quot;设置 &gt; 应用设置 &gt; 应用管理 &gt; AutoJs6&quot;, 入口名称随系统版本略有不同.</li>
+<li>回到系统 &quot;无障碍&quot; 设置, 打开 AutoJs6 的开关.</li>
+</ol>
+<p>不经过系统开关的启用方式 (受限时同样可用):</p>
+<ul>
+<li>ADB: 在电脑上执行 <code>adb shell pm grant org.autojs.autojs6 android.permission.WRITE_SECURE_SETTINGS</code>, 授予 &quot;修改安全设置&quot; 权限后, AutoJs6 直接写入系统设置以启用无障碍服务.</li>
+<li>Shizuku / Root: AutoJs6 获得 Shizuku 或 Root 权限后, 同样可以直接启用无障碍服务. 也可以在 ADB, Shizuku 或 Root 的 Shell 中执行 <code>cmd appops set org.autojs.autojs6 ACCESS_RESTRICTED_SETTINGS allow</code> 解除限制.</li>
+</ul>
+<p>AutoJs6 6.8.1 起, 从系统 &quot;无障碍&quot; 设置返回后服务仍未启用且安装来源可能受限时, AutoJs6 弹出说明对话框, 提供 &quot;去应用信息&quot;, &quot;改用 ADB / Shizuku 启用&quot; 与 &quot;查看说明&quot; 三个入口, 每次安装或更新后最多自动显示一次; 无障碍服务管理器的状态区显示 &quot;受限设置&quot; 一行, 点击可再次查看说明.</p>
+<p>AutoJs6 已获得 Shizuku 或 Root 权限时 (优先使用 Shizuku), 上述判断改为经其 Shell 读取系统记录的实际受限状态, 不再按安装来源推测: 确认未受限时不弹出说明对话框, 服务管理器的 &quot;受限设置&quot; 一行显示 &quot;否 (经 Shizuku 核实)&quot; 等; 确认受限时对话框提供 &quot;用 Shizuku 解除&quot; 或 &quot;用 Root 解除&quot; 按钮, 点击后执行 <code>cmd appops set org.autojs.autojs6 ACCESS_RESTRICTED_SETTINGS allow</code> 解除限制, 并经同一权限直接启用无障碍服务, 无需再去系统设置页; 解除失败时提示原因并回到原说明. 使用 Root 时, Root 管理器可能弹出授权提示.</p>
 <h2>工具集与事件驱动等待<span><a class="mark" href="#automator" id="automator">#</a></span></h2>
 <p>6.8.0 新增的 <a href="#automator_toolkit">工具集</a> 提供智能点击, 滚动查找, 文本输入, 弹窗关闭, 列表采集, 应用切换与开关切换等高阶自动化函数; <a href="#automator_4">事件驱动等待</a> 提供基于无障碍事件的界面空闲, 事件, Toast 与通知等待. 两者都同时具备同步形式 (全局函数与 <code>automator.*</code>) 与 <a href="flow.html">Flow</a> 形式.</p>
 <h2>选择器 (UiSelector)<span><a class="mark" href="#automator_uiselector" id="automator_uiselector">#</a></span></h2>

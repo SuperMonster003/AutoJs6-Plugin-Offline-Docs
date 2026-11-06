@@ -32,6 +32,7 @@
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
+<li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
 </ul>
 <div class="line"></div>
@@ -45,6 +46,7 @@
 <li><a class="nav-barcode" href="barcode.html">Barcode - 条码</a></li>
 <li><a class="nav-base64" href="base64.html">Base64</a></li>
 <li><a class="nav-bundledLibraries" href="bundledLibraries.html">Bundled Libraries - 脚本库</a></li>
+<li><a class="nav-camera" href="camera.html">Camera - 相机</a></li>
 <li><a class="nav-canvas" href="canvas.html">Canvas - 画布</a></li>
 <li><a class="nav-color" href="color.html">Color - 颜色</a></li>
 <li><a class="nav-compose" href="compose.html">3-Block Compose</a></li>
@@ -666,6 +668,7 @@ console.log(await run.result);
 <p>下列签名以 Rhino 为准. Node.js/Bun/Worker 的异步返回值和应用授权见 <a href="#ai_agent">Agent 任务与注册脚本</a>.</p>
 <p><code>result</code> 与 <code>context</code> 要求宿主构建号不低于 <code>5287</code>; 任务控制方法自 <code>5293</code> 起提供, 当前 3-Stove Agent 插件要求宿主构建号不低于 <code>5298</code>. 任务循环由已启用的 3-Stove Agent 插件执行, 模型与设备能力经宿主代理提供. <code>catalog</code>, <code>result</code> 与 <code>context</code> 的宿主侧功能不要求插件在线.</p>
 <p>插件中心是唯一的启用和禁用入口, 宿主抽屉不再提供独立的 Agent 开关. 首次安装官方插件后自动启用且不弹出启用确认; 用户明确禁用的插件在更新后保持禁用. 脚本与插件独立界面在需要时自动建立连接, 自动连接不代替插件中心的启用授权, 不增加开机自启, 不重放已结束或被中断的任务. <code>status()</code> 只读取当前状态, 因此首次使用前的 <code>detached</code> 不表示插件未启用.</p>
+<p>在 3-Stove Agent 任务台点 &quot;连接 AutoJs6&quot; 时, 若 AutoJs6 未在运行而连接请求没有送达 (例如 ColorOS 不允许其他应用在后台启动 AutoJs6), 3-Stove Agent 1.4.1 起会打开 AutoJs6 完成连接 (需要 AutoJs6 6.8.1); 打开任务台时的自动连接不会切换到 AutoJs6.</p>
 <p>3-Stove Agent 要求 Android 7.0 / API 24 或以上. 当前宿主模型代理使用 3-Stone AI 插件中的模型目录; 请先在该插件中配置在线模型或导入本地模型. 插件任务台与悬浮球共用界面中的模型选择, 脚本可通过任务选项指定目标. 其他 Provider 需要宿主另行集成, 不能仅通过 target 指定其组件.</p>
 <p>目标可用仅表示当前允许调用, 不保证模型能完成具体任务或持续输出有效决策. 显式选择的模型调用失败时不会自动换用其他模型. 当前插件支持文本, 可选 OCR 与截图观察, 原生工具调用和受确认控制的动态脚本生成; 具体能力取决于模型与已启用的工具组. 插件界面, 脚本登记和配置示例见 <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Three-Stove-Agent#readme">3-Stove Agent 使用说明</a>.</p>
 <h3>ai.agent.run(goal, options?)<span><a class="mark" href="#ai_ai_agent_run_goal_options" id="ai_ai_agent_run_goal_options">#</a></span></h3>

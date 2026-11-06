@@ -32,6 +32,7 @@
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
+<li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
 </ul>
 <div class="line"></div>
@@ -45,6 +46,7 @@
 <li><a class="nav-barcode" href="barcode.html">Barcode - 条码</a></li>
 <li><a class="nav-base64" href="base64.html">Base64</a></li>
 <li><a class="nav-bundledLibraries" href="bundledLibraries.html">Bundled Libraries - 脚本库</a></li>
+<li><a class="nav-camera" href="camera.html">Camera - 相机</a></li>
 <li><a class="nav-canvas" href="canvas.html">Canvas - 画布</a></li>
 <li><a class="nav-color" href="color.html">Color - 颜色</a></li>
 <li><a class="nav-compose" href="compose.html">3-Block Compose</a></li>
@@ -343,6 +345,18 @@
             <h1>文档更新日志 (Changelog)<span><a class="mark" href="#changelog_changelog" id="changelog_changelog">#</a></span></h1>
 <h2>v6.8.0<span><a class="mark" href="#changelog_v6_8_0" id="changelog_v6_8_0">#</a></span></h2>
 <div class="signature"><ul>
+<li><p><code>新增</code> <a href="upgradeTo68.html">从 6.7 升级到 6.8 (Upgrade to 6.8)</a>, 列出 6.8 起改由插件提供的功能与对应插件, 常见报错的含义, 插件安装失败的处理办法 (索引加载失败, 下载失败, 安装包检查未通过) 以及 AutoJs6 安装包的选择; <a href="plugins.html#plugins_1">插件 (Plugins)</a> 与 <a href="bundledLibraries.html#bundledlibraries_5">脚本库 (Bundled Libraries)</a> 增加该页链接</p>
+</li>
+<li><p><code>新增</code> <a href="camera.html">相机 (Camera)</a>: 3-Prism Camera 插件提供的 camera 模块 (AutoJs6 6.8.1), 包括拍照, 连续帧分析, 预览与相机控制, 会话对象, 事件与错误码; 页首说明帧的生命周期 (回调期间有效, 返回即回收, 保留需 clone, 回调过慢时丢帧), 以及省略参数按插件设置页的默认值补齐, UI 线程上的调用形式, 镜像规则与插件网络权限的用途</p>
+</li>
+<li><p><code>更新</code> <a href="automator.html#automator_restricted_settings">自动化 (Automator)</a>: &quot;受限设置&quot; 一节补充 AutoJs6 已获得 Shizuku 或 Root 权限时经其 Shell 核实实际受限状态, 以及说明对话框中的 &quot;用 Shizuku 解除&quot; / &quot;用 Root 解除&quot; 按钮 (解除后直接启用无障碍服务) (AutoJs6 6.8.1)</p>
+</li>
+<li><p><code>更新</code> <a href="ai.html#ai_agent">AI</a>: 说明 3-Stove Agent 1.4.1 起在任务台点 &quot;连接 AutoJs6&quot; 而请求因 AutoJs6 未在运行没有送达时会打开 AutoJs6 完成连接, 自动连接不切换 (AutoJs6 6.8.1)</p>
+</li>
+<li><p><code>更新</code> <a href="modules.html#modules_p_root">模块 (Modules)</a>: 没有父模块的相对路径在 require.root 下解析不到时, 再从主脚本所在目录解析 (AutoJs6 6.8.1), require.resolve 与找不到模块时的错误消息同步说明</p>
+</li>
+<li><p><code>更新</code> <a href="automator.html#automator_restricted_settings">自动化 (Automator)</a>: 补充 &quot;受限设置&quot; 一节, 说明 Android 13 及以上非应用商店安装的 AutoJs6 无障碍开关受限的表现, 条件与解除方法, 不经系统开关的 ADB / Shizuku / Root 启用方式, 以及 AutoJs6 6.8.1 起的说明对话框与服务管理器状态行</p>
+</li>
 <li><p><code>更新</code> <a href="ai.html">AI</a>: ai.agent.status 的返回值增加 <code>reason</code>, 在 <code>errorCode</code> 为 <code>PLUGIN_UNAVAILABLE</code> 时说明连接未能建立的原因及处理方法 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="ai.html">AI</a>: 3-Stone AI 的目标配置与在线凭据改为说明在插件自身的界面中设置 (AutoJs6 6.8.1 起开发者选项不再提供 &quot;AI 服务设置&quot; 入口); <a href="memory.html">内存 (Memory)</a>: 内存诊断页面的路径更新为 &quot;设置 &gt; 开发者 &gt; 开发者选项 &gt; 内存诊断&quot;</p>
@@ -419,7 +433,7 @@
 </li>
 <li><p><code>更新</code> <a href="runtimeApis.html#runtimeapis">运行时 API (Runtime APIs)</a> 的执行方式: Node.js 脚本与项目默认不限执行时长 (与 Rhino 脚本相同), project.json 的 node.timeoutMs 作为执行总预算 (从插件收到请求时计时, 含排队与工作区准备, 耗尽时报告 ERR_AUTOJS6_SCRIPT_TIMEOUT), 运行期间的输出逐段转发到控制台; WebView 等待一节同步改写</p>
 </li>
-<li><p><code>新增</code> <a href="runtimeApis.html#runtimeapis_44">运行时 API (Runtime APIs)</a> 的 &quot;运行时自有接口&quot; 一节: 按组列出 Node.js, Bun 与 QuickJS 运行时插件自带, 不对应宿主模块的入口 (Node.js 12 组 113 条: 宿主桥与宿主消息, 生命周期检查点, 能力快照, npm 与 package_manager, 本地插件, rhino 与 autojs6:compat, media_store, Worker 池 WorkerPool; Bun 客户端 12 条; QuickJS 的 console, print 与 scriptArgs), 每条写明签名, 用途, 所属运行时与最低插件版本; 另说明各运行时读取脚本参数的方式 (QuickJS 的 scriptArgs 只含脚本文件名, Node.js 与 Bun 用 process.argv, Rhino 用 engines.myEngine().execArgv)</p>
+<li><p><code>新增</code> <a href="runtimeApis.html#runtimeapis_45">运行时 API (Runtime APIs)</a> 的 &quot;运行时自有接口&quot; 一节: 按组列出 Node.js, Bun 与 QuickJS 运行时插件自带, 不对应宿主模块的入口 (Node.js 12 组 113 条: 宿主桥与宿主消息, 生命周期检查点, 能力快照, npm 与 package_manager, 本地插件, rhino 与 autojs6:compat, media_store, Worker 池 WorkerPool; Bun 客户端 12 条; QuickJS 的 console, print 与 scriptArgs), 每条写明签名, 用途, 所属运行时与最低插件版本; 另说明各运行时读取脚本参数的方式 (QuickJS 的 scriptArgs 只含脚本文件名, Node.js 与 Bun 用 process.argv, Rhino 用 engines.myEngine().execArgv)</p>
 </li>
 <li><p><code>新增</code> <a href="pythonRuntime.html">Python 运行时 (Python Runtime)</a>, <a href="javaRuntime.html">Java 运行时 (Java Runtime)</a>, <a href="kotlinRuntime.html">Kotlin 运行时 (Kotlin Runtime)</a> 与 <a href="luaRuntime.html">Lua 运行时 (Lua Runtime)</a>, 说明这四个语言运行时插件提供给脚本的 API: Python 的 autojs6 包 (46 个函数, 54 个常量与 10 个异常类), Java 与 Kotlin 共用的 JVM Entry API (Java 为 7 个类型 17 个方法, Kotlin 为不含 args 与 clipboard 的 6 个类型 13 个方法) 以及 Lua 的 autojs 模块 (11 个函数与只读的 arguments), 每项有签名, 说明与对应语言的示例; <a href="autojs4Runtime.html">AutoJs4 运行时 (AutoJs4 Runtime)</a> 增加 &quot;上游 API 与差异指引&quot; 小节, <a href="plugins.html">插件 (Plugins)</a> 页指向这四页</p>
 </li>
