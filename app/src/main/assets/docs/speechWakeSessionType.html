@@ -452,8 +452,8 @@ wake.on(&#39;wake&#39;, e =&gt; {
 <tbody>
 <tr>
 <td><code>ready</code></td>
-<td><code>({ sessionId, modelId })</code></td>
-<td>模型已加载, 开始检测</td>
+<td><code>({ sessionId, modelId, leaseId? })</code></td>
+<td>模型已加载, 开始检测; 以 <code>keepLoaded</code> 打开时带租约的 <code>leaseId</code> (AutoJs6 6.8.1 起)</td>
 </tr>
 <tr>
 <td><code>wake</code></td>
@@ -464,6 +464,16 @@ wake.on(&#39;wake&#39;, e =&gt; {
 <td><code>warning</code></td>
 <td><code>({ code, message })</code></td>
 <td>非致命问题, 会话继续</td>
+</tr>
+<tr>
+<td><code>paused</code></td>
+<td><code>({ reason })</code></td>
+<td>以 <code>background: true</code> 打开的会话为其他麦克风会话让出麦克风, 会话继续 (AutoJs6 6.8.1 起)</td>
+</tr>
+<tr>
+<td><code>resumed</code></td>
+<td><code>({ reason })</code></td>
+<td>让出结束, 重新开始检测 (AutoJs6 6.8.1 起)</td>
 </tr>
 <tr>
 <td><code>error</code></td>
@@ -489,6 +499,7 @@ wake.on(&#39;wake&#39;, e =&gt; {
 <li><code>warning</code> 的常见代码为 <code>PERMISSION_DENIED</code>, 含义同 <a href="speechSessionType.html#speechsessiontype_events">SpeechSession</a>.</li>
 <li><code>end</code> 的原因: <code>&#39;stopped&#39;</code>, <code>&#39;error&#39;</code> (插件侧失败或插件进程退出), <code>&#39;overflow&#39;</code> (脚本积压的事件超过 512 条或 8 MiB, 先触发 <code>code</code> 为 <code>LIMIT_EXCEEDED</code> 的 <code>error</code>).</li>
 <li>被临时接管期间不触发任何事件; 接管结束后自动恢复检测, 不会补发接管期间的命中.</li>
+<li><code>paused</code> 与 <code>resumed</code> 只在以 <code>background: true</code> 打开的会话上触发 (3-Macaw Speech 1.6.0 起), 成对出现. <code>paused</code> 的 <code>reason</code> 为让它暂停的会话类别: <code>&#39;listen&#39;</code> (听写会话或后台会话的 <code>thenListen</code> 轮次), <code>&#39;wake&#39;</code> (不带 <code>background</code> 的唤醒会话), <code>&#39;plugin&#39;</code> (插件界面); <code>resumed</code> 的 <code>reason</code> 为刚结束的会话类别. 暂停期间不报告 <code>wake</code>, 状态仍为 <code>&#39;active&#39;</code>; 打开时麦克风已被占用的会话在 <code>ready</code> 之后立即触发 <code>paused</code>. 见 <a href="speech.html#speech_5">会话仲裁</a>.</li>
 </ul>
 <p>事件对象都是普通 JavaScript 对象, <code>error</code> 事件的参数为 <a href="speech.html#speech_c_speecherror">SpeechError</a>.</p>
 

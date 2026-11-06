@@ -505,8 +505,8 @@ session.on(&#39;end&#39;, () =&gt; console.log(session.result()));
 <tbody>
 <tr>
 <td><code>ready</code></td>
-<td><code>({ sessionId, modelId })</code></td>
-<td>模型已加载, 开始收音或接受输入</td>
+<td><code>({ sessionId, modelId, leaseId? })</code></td>
+<td>模型已加载, 开始收音或接受输入; 以 <code>keepLoaded</code> 打开时带租约的 <code>leaseId</code> (AutoJs6 6.8.1 起, 见 <a href="speech.html#speech_6">引擎预热与保留</a>)</td>
 </tr>
 <tr>
 <td><code>partial</code></td>

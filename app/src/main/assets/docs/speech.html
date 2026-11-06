@@ -325,9 +325,11 @@
 <li><span class="stability_undefined"><a href="#speech_2">模型更新</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_3">麦克风会话与后台收音</a></span><ul>
 <li><span class="stability_undefined"><a href="#speech_4">唤醒会话的临时接管</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_5">会话仲裁</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#speech_5">离线分析</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_6">引擎预热与保留</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_7">离线分析</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_m_isavailable">[m] isAvailable</a></span><ul>
 <li><span class="stability_undefined"><a href="#speech_speech_isavailable">speech.isAvailable()</a></span></li>
 </ul>
@@ -354,6 +356,19 @@
 </li>
 <li><span class="stability_undefined"><a href="#speech_m_wake">[m] wake</a></span><ul>
 <li><span class="stability_undefined"><a href="#speech_speech_wake_keywords_options">speech.wake(keywords, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_prepare">[m] prepare</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_prepare_options">speech.prepare(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_prepareasync">[m] prepareAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_prepareasync_options">speech.prepareAsync(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_release">[m] release</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_release_leaseid">speech.release(leaseId)</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_speech_release">speech.release()</a></span></li>
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#speech_m_synthesize">[m] synthesize</a></span><ul>
@@ -458,6 +473,35 @@
 <li><span class="stability_undefined"><a href="#speech_speech_speaker_remove_name">speech.speaker.remove(name)</a></span></li>
 </ul>
 </li>
+<li><span class="stability_undefined"><a href="#speech_p_resident">[p+] resident</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_m_resident_get">[m] resident.get</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_resident_get">speech.resident.get()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_resident_set">[m] resident.set</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_resident_set_config">speech.resident.set(config)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_resident_enable">[m] resident.enable</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_resident_enable">speech.resident.enable()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_resident_disable">[m] resident.disable</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_resident_disable">speech.resident.disable()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_p_resident_enabled">[p] resident.enabled</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_resident_enabled">speech.resident.enabled</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_resident_on">[m] resident.on</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_resident_on_event_listener">speech.resident.on(event, listener)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#speech_m_resident_off">[m] resident.off</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_speech_resident_off_event_listener">speech.resident.off(event, listener?)</a></span></li>
+</ul>
+</li>
 <li><span class="stability_undefined"><a href="#speech_c_speecherror">[C] SpeechError</a></span><ul>
 <li><span class="stability_undefined"><a href="#speech_new_speech_speecherror_message_code">new speech.SpeechError(message?, code?)</a></span></li>
 </ul>
@@ -468,6 +512,7 @@
 <li><span class="stability_undefined"><a href="#speech_speechvadoptions">SpeechVadOptions</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechkeyword">SpeechKeyword</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechwakeoptions">SpeechWakeOptions</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_speechprepareoptions">SpeechPrepareOptions</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechsynthesizeoptions">SpeechSynthesizeOptions</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechspeakoptions">SpeechSpeakOptions</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechmodelfilter">SpeechModelFilter</a></span></li>
@@ -478,8 +523,13 @@
 <li><span class="stability_undefined"><a href="#speech_speechtagoptions">SpeechTagOptions</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#speech_6">返回对象</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_8">返回对象</a></span><ul>
 <li><span class="stability_undefined"><a href="#speech_speechcapabilities">SpeechCapabilities</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_speechlease">SpeechLease</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_speechresidentconfig">SpeechResidentConfig</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_speechresidentrule">SpeechResidentRule</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_speechresidentswitch">SpeechResidentSwitch</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_speechresidenthit">SpeechResidentHit</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechvoicesegments">SpeechVoiceSegments</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechsynthesisresult">SpeechSynthesisResult</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_speechdiarization">SpeechDiarization</a></span></li>
@@ -487,21 +537,21 @@
 <li><span class="stability_undefined"><a href="#speech_speechtagging">SpeechTagging</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#speech_7">错误代码</a></span></li>
-<li><span class="stability_undefined"><a href="#speech_8">限制</a></span></li>
-<li><span class="stability_undefined"><a href="#speech_9">插件的系统入口</a></span><ul>
+<li><span class="stability_undefined"><a href="#speech_9">错误代码</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_10">限制</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_11">插件的系统入口</a></span><ul>
 <li><span class="stability_undefined"><a href="#speech_tts">系统 TTS 引擎</a></span></li>
-<li><span class="stability_undefined"><a href="#speech_10">系统语音输入</a></span></li>
-<li><span class="stability_undefined"><a href="#speech_11">数字助理</a></span></li>
-<li><span class="stability_undefined"><a href="#speech_12">语音指令入口</a></span></li>
-<li><span class="stability_undefined"><a href="#speech_13">系统识别服务</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_12">系统语音输入</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_13">数字助理</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_14">语音指令入口</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_15">系统识别服务</a></span></li>
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#speech_examples">示例 (Examples)</a></span><ul>
-<li><span class="stability_undefined"><a href="#speech_14">听写到文件</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_16">听写到文件</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_3_stove_agent">唤醒词后交给 3-Stove Agent</a></span></li>
 <li><span class="stability_undefined"><a href="#speech_pcm">识别脚本生成的 PCM</a></span></li>
-<li><span class="stability_undefined"><a href="#speech_15">处理缺少模型或权限</a></span></li>
+<li><span class="stability_undefined"><a href="#speech_17">处理缺少模型或权限</a></span></li>
 </ul>
 </li>
 </ul>
@@ -527,28 +577,28 @@
 <tbody>
 <tr>
 <td>入口</td>
-<td><code>speech</code>, <code>speech.models</code>, <code>speech.speaker</code></td>
+<td><code>speech</code>, <code>speech.models</code>, <code>speech.resident</code>, <code>speech.speaker</code></td>
 <td><code>autojs6:speech</code>, <code>$autojs.speech</code></td>
 <td><code>autojs6:speech</code>, <code>$autojs.speech</code></td>
 <td><code>host.speech</code></td>
 </tr>
 <tr>
 <td>状态</td>
-<td>已支持 33 项</td>
-<td>已支持 33 项</td>
-<td>已支持 33 项</td>
-<td>需授权 33 项</td>
+<td>已支持 43 项</td>
+<td>已支持 43 项</td>
+<td>已支持 43 项</td>
+<td>需授权 43 项</td>
 </tr>
 <tr>
 <td>授权</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td><code>speech.control</code> 33 项</td>
+<td><code>speech.control</code> 43 项</td>
 </tr>
 </tbody>
 </table>
-<p>差异项 (16 项): 下表列出入口, 状态或授权与同列多数 API 不同的 API, 未列出的 API 与同列多数一致.</p>
+<p>差异项 (23 项): 下表列出入口, 状态或授权与同列多数 API 不同的 API, 未列出的 API 与同列多数一致.</p>
 <table>
 <thead>
 <tr>
@@ -606,6 +656,48 @@
 <td><span title="bridged">已支持</span>: <code>models.setDefault</code> (<code>autojs6:speech</code>)</td>
 <td><span title="bridged">已支持</span>: <code>models.setDefault</code> (<code>autojs6:speech</code>)</td>
 <td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.models.setDefault</code></td>
+</tr>
+<tr>
+<td><code>speech.resident.disable</code></td>
+<td><span title="bridged">已支持</span>: <code>resident.disable</code> (<code>autojs6:speech</code>)</td>
+<td><span title="bridged">已支持</span>: <code>resident.disable</code> (<code>autojs6:speech</code>)</td>
+<td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.resident.disable</code></td>
+</tr>
+<tr>
+<td><code>speech.resident.enable</code></td>
+<td><span title="bridged">已支持</span>: <code>resident.enable</code> (<code>autojs6:speech</code>)</td>
+<td><span title="bridged">已支持</span>: <code>resident.enable</code> (<code>autojs6:speech</code>)</td>
+<td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.resident.enable</code></td>
+</tr>
+<tr>
+<td><code>speech.resident.enabled</code></td>
+<td><span title="bridged">已支持</span>: <code>resident.enabled</code> (<code>autojs6:speech</code>)</td>
+<td><span title="bridged">已支持</span>: <code>resident.enabled</code> (<code>autojs6:speech</code>)</td>
+<td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.resident.enabled</code></td>
+</tr>
+<tr>
+<td><code>speech.resident.get</code></td>
+<td><span title="bridged">已支持</span>: <code>resident.get</code> (<code>autojs6:speech</code>)</td>
+<td><span title="bridged">已支持</span>: <code>resident.get</code> (<code>autojs6:speech</code>)</td>
+<td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.resident.get</code></td>
+</tr>
+<tr>
+<td><code>speech.resident.off</code></td>
+<td><span title="bridged">已支持</span>: <code>resident.off</code> (<code>autojs6:speech</code>)</td>
+<td><span title="bridged">已支持</span>: <code>resident.off</code> (<code>autojs6:speech</code>)</td>
+<td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.resident.off</code></td>
+</tr>
+<tr>
+<td><code>speech.resident.on</code></td>
+<td><span title="bridged">已支持</span>: <code>resident.on</code> (<code>autojs6:speech</code>)</td>
+<td><span title="bridged">已支持</span>: <code>resident.on</code> (<code>autojs6:speech</code>)</td>
+<td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.resident.on</code></td>
+</tr>
+<tr>
+<td><code>speech.resident.set</code></td>
+<td><span title="bridged">已支持</span>: <code>resident.set</code> (<code>autojs6:speech</code>)</td>
+<td><span title="bridged">已支持</span>: <code>resident.set</code> (<code>autojs6:speech</code>)</td>
+<td><span title="capability-gated">需授权</span> <code>speech.control</code>: <code>host.speech.resident.set</code></td>
 </tr>
 <tr>
 <td><code>speech.speaker.enroll</code></td>
@@ -971,7 +1063,7 @@ session.on(&#39;end&#39;, e =&gt; console.log(e.reason, session.result()));
 <li>流式模型 (<code>online-transducer</code>) 逐字给出部分结果; 离线模型 (<code>sense-voice</code>, <code>offline-transducer</code>) 由语音活动检测切段后逐段识别, 部分结果按段给出. 两类模型在会话上触发同样的事件.</li>
 <li>热词 (<code>hotwords</code>) 只对带 <code>bpe.vocab</code> 的流式模型生效 (目录中为 <code>asr.zipformer-streaming.zh-en.2023-02-20.int8</code>), 其他模型收到热词时忽略并给出警告.</li>
 <li><code>asr.nemo-transducer.es.2026-05-03.int8</code> 只识别西班牙语, 结果自带标点与大小写. <code>asr.zipformer-streaming.ar-en-id-ja-ru-th-vi-zh.2025-02-10.int8</code> 自行判断语种, 不能指定语言, 句首偶尔被识别成其他语言, 结果不带标点; 其权重为 Apache-2.0, 但训练数据未公开, 因此可商用一栏为 &quot;未知&quot;.</li>
-<li>说话人, 分割, 语种识别与音频标签模型只供 <a href="#speech_p_speaker">speech.speaker</a>, <a href="#speech_m_diarize">speech.diarize</a>, <a href="#speech_m_detectlanguage">speech.detectLanguage</a> 与 <a href="#speech_m_tag">speech.tag</a> 使用, 见 <a href="#speech_5">离线分析</a>. 说话人分离同时使用一个分割模型和一个说话人模型. <code>segment.pyannote.3-0</code> 的权重为 MIT 许可, 但训练数据中的 MSDWild 仅限研究用途, 因此可商用一栏为 &quot;否&quot;; Whisper 的权重为 MIT 许可, 训练数据未公开, 因此为 &quot;未知&quot;. 音频标签只有英文标签.</li>
+<li>说话人, 分割, 语种识别与音频标签模型只供 <a href="#speech_p_speaker">speech.speaker</a>, <a href="#speech_m_diarize">speech.diarize</a>, <a href="#speech_m_detectlanguage">speech.detectLanguage</a> 与 <a href="#speech_m_tag">speech.tag</a> 使用, 见 <a href="#speech_7">离线分析</a>. 说话人分离同时使用一个分割模型和一个说话人模型. <code>segment.pyannote.3-0</code> 的权重为 MIT 许可, 但训练数据中的 MSDWild 仅限研究用途, 因此可商用一栏为 &quot;否&quot;; Whisper 的权重为 MIT 许可, 训练数据未公开, 因此为 &quot;未知&quot;. 音频标签只有英文标签.</li>
 <li><code>tts.kokoro.multi-lang.v1_1</code> 的 0 - 2 号说话人为英文, 3 号及以后为中文, 默认说话人为 3 号. <code>tts.kokoro.multi-lang.v1_0.int8</code> 的说话人按语言划分: 0 - 19 号美式英语, 20 - 27 号英式英语, 28, 29 与 53 号西班牙语, 30 号法语, 31 - 34 号印地语, 35, 36 号意大利语, 42 - 44 号巴西葡萄牙语, 45 - 52 号中文 (也能读英文); 37 - 41 号为日语说话人, 不开放, 指定它们时调用失败于 <code>INVALID_OPTIONS</code>; 默认说话人为 3 号. 其他模型的默认说话人为 0 号.</li>
 </ul>
 <p>每个模型对象的 <code>license</code> 给出许可表达式 (<code>spdx</code>) 与是否可商用 (<code>commercialUse</code>). 仅限非商业用途或未声明许可的模型 (目录中可商用一栏为 &quot;否&quot; 或 &quot;未知&quot; 的条目, 其 <code>commercialUse</code> 为 <code>false</code>) 须先接受许可才能安装: 脚本以 <code>acceptLicense: true</code> 调用 <a href="#speech_m_models_install">speech.models.install</a> 或 <a href="#speech_m_models_importfile">speech.models.importFile</a>, 或者用户在插件界面的许可提示中确认. 接受记录按模型版本与许可表达式保存在插件中, 之后再次安装同一版本无需重复接受; 否则调用失败于 <code>MODEL_LICENSE_NOT_ACCEPTED</code>. <code>acceptLicense</code> 只表示接受许可条款, 不改变模型许可本身, 使用者需自行遵守.</p>
@@ -996,17 +1088,91 @@ speech.models.list({ installed: true })
 <li>AutoJs6 已在后台且没有麦克风能力时打开的会话, Android 不允许插件录音或启动麦克风前台服务. 会话仍会打开, 但触发 <code>code</code> 为 <code>PERMISSION_DENIED</code> 的 <code>warning</code> 事件, 并且收到的是静音; 会话不会因此结束, AutoJs6 重新回到前台等插件重新获得麦克风能力后恢复收音, 其间 <code>timeoutMillis</code> 可能先结束会话. 需要在后台收音的脚本应在 AutoJs6 可见时打开会话.</li>
 <li>Android 14 及以上, 插件在开始会话时会短暂显示一个透明界面以启动麦克风前台服务.</li>
 </ul>
-<p>插件只有一个麦克风. 整个插件同一时刻只运行一个麦克风会话 (听写或唤醒), 不论它由哪个脚本, 哪个应用 (例如 3-Stone AI 或 3-Stove Agent 的常驻监听) 或插件自己的界面打开; 第二个麦克风会话立即失败于 <code>SESSION_BUSY</code>, 不会排队等待. 以 <code>source: &#39;external&#39;</code> 打开的 PCM 会话与文件识别不占用麦克风, 外部 PCM 会话每个调用方应用最多同时 4 个.</p>
+<p>插件只有一个麦克风. 整个插件同一时刻只运行一个麦克风会话 (听写或唤醒), 不论它由哪个脚本, 哪个应用 (例如 3-Stone AI 或 3-Stove Agent 的常驻监听) 或插件自己的界面打开; 第二个麦克风会话立即失败于 <code>SESSION_BUSY</code>, 不会排队等待. 例外是后台持有者: 3-Macaw Speech 1.6.0 起, 插件的常驻唤醒与以 <code>background: true</code> 打开的唤醒会话不独占麦克风, 其他会话到来时它们暂停让出, 见 <a href="#speech_5">会话仲裁</a>. 以 <code>source: &#39;external&#39;</code> 打开的 PCM 会话与文件识别不占用麦克风, 外部 PCM 会话每个调用方应用最多同时 4 个.</p>
 <p>脚本退出时, 仍打开的会话被静默取消 (不再触发事件), 插件随即停止录音并释放麦克风.</p>
 <h3>唤醒会话的临时接管<span><a class="mark" href="#speech_4" id="speech_4">#</a></span></h3>
-<p>插件自己的听写入口, 即 <a href="#speech_11">数字助理</a>, <a href="#speech_10">系统语音输入</a> 弹层, <a href="#speech_13">系统识别服务</a> 与插件界面的 &quot;试听试说&quot; 页, 开始收音时若麦克风正被唤醒会话占用 (脚本的 <a href="#speech_m_wake">speech.wake</a>, 或其他应用经插件打开的唤醒会话), 会临时接管麦克风:</p>
+<p>插件自己的听写入口, 即 <a href="#speech_13">数字助理</a>, <a href="#speech_12">系统语音输入</a> 弹层, <a href="#speech_15">系统识别服务</a> 与插件界面的 &quot;试听试说&quot; 页, 开始收音时若麦克风正被唤醒会话占用 (脚本的 <a href="#speech_m_wake">speech.wake</a>, 或其他应用经插件打开的唤醒会话), 会临时接管麦克风:</p>
 <ul>
 <li>唤醒会话保持打开但静默: 接管期间不报告 <code>wake</code> 命中 (避免说话内容误触唤醒词), 不结束, 也不触发其他事件; 接管方结束后自动恢复检测.</li>
-<li>接管对脚本透明, 唤醒会话的状态与属性不变.</li>
+<li>接管对脚本透明, 唤醒会话的状态与属性不变. 以 <code>background: true</code> 打开的唤醒会话不会被临时接管, 而是与常驻唤醒一起暂停并收到 <code>paused</code> / <code>resumed</code> 事件, 见 <a href="#speech_5">会话仲裁</a>.</li>
 <li>唤醒命中后已按 <code>thenListen</code> 转入听写的轮次, 以及 <a href="#speech_m_listen">speech.listen</a> 的听写会话, 不会被接管; 此时这些入口显示 &quot;麦克风正被占用&quot; 的说明.</li>
 <li>接管期间打开新的麦克风会话同样失败于 <code>SESSION_BUSY</code>.</li>
 </ul>
-<h2>离线分析<span><a class="mark" href="#speech_5" id="speech_5">#</a></span></h2>
+<h3>会话仲裁<span><a class="mark" href="#speech_5" id="speech_5">#</a></span></h3>
+<p>3-Macaw Speech 1.6.0 起 (需要 AutoJs6 6.8.1 及以上), 麦克风会话分为两类: 前台会话独占麦克风; 后台持有者只在麦克风空闲时收音, 前台会话到来时自动暂停让出, 不让它失败, 该会话结束后按各自开始的先后顺序恢复. 后台持有者是插件的常驻唤醒 (插件设置页或 <a href="#speech_p_resident">speech.resident</a> 开启) 与以 <code>background: true</code> 打开的 <a href="#speech_m_wake">speech.wake</a> 会话, 其余都是前台会话.</p>
+<table>
+<thead>
+<tr>
+<th>会话</th>
+<th>类别</th>
+<th>其他会话到来时</th>
+<th>它到来时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>插件的常驻唤醒</td>
+<td>后台</td>
+<td>暂停, 前台会话结束后按开始顺序恢复</td>
+<td>排到后台队列末尾; 前台会话正在收音时以暂停状态开始</td>
+</tr>
+<tr>
+<td>后台脚本唤醒 (<code>background: true</code>)</td>
+<td>后台</td>
+<td>同上, 并触发 <code>paused</code> 与 <code>resumed</code> 事件</td>
+<td>同上; 打开时已暂停的会话在 <code>ready</code> 之后立即触发 <code>paused</code></td>
+</tr>
+<tr>
+<td>前台脚本唤醒 (不带 <code>background</code>)</td>
+<td>前台</td>
+<td>插件界面可临时接管 (见上节), 其他麦克风会话失败于 <code>SESSION_BUSY</code></td>
+<td>后台持有者全部暂停, 原因为 <code>wake</code></td>
+</tr>
+<tr>
+<td><a href="#speech_m_listen">speech.listen</a> 与 <code>thenListen</code> 轮次</td>
+<td>前台</td>
+<td>不会被接管, 其他麦克风会话失败于 <code>SESSION_BUSY</code></td>
+<td>后台持有者全部暂停, 原因为 <code>listen</code></td>
+</tr>
+<tr>
+<td>插件界面 (数字助理, 系统语音输入, 系统识别服务, 试听试说, 声纹录音)</td>
+<td>前台</td>
+<td>不会被接管, 脚本的麦克风会话失败于 <code>SESSION_BUSY</code></td>
+<td>后台持有者全部暂停, 原因为 <code>plugin</code>; 前台脚本唤醒被临时接管</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>后台持有者同时收音, 共用插件的一路录音, 各自检测自己的关键词. 后台脚本唤醒会话在整个插件中同时至多 4 个 (常驻唤醒另计), 第 5 个失败于 <code>SESSION_BUSY</code>.</li>
+<li><code>paused</code> 事件的 <code>reason</code> 为让它暂停的会话类别: <code>&#39;listen&#39;</code> (听写会话或 <code>thenListen</code> 轮次), <code>&#39;wake&#39;</code> (前台脚本唤醒), <code>&#39;plugin&#39;</code> (插件界面); <code>resumed</code> 事件的 <code>reason</code> 为刚结束的会话类别. 暂停期间不报告 <code>wake</code>, 会话不结束, 状态仍为 <code>&#39;active&#39;</code>, 插件的麦克风前台服务保持; 恢复后从头检测, 暂停之前听到的半个关键词不会与之后的声音拼成命中.</li>
+<li>后台会话命中后转入的 <code>thenListen</code> 轮次是前台听写: 从命中起占用麦克风, 其他后台持有者暂停 (原因 <code>&#39;listen&#39;</code>), 期间打开的麦克风会话失败于 <code>SESSION_BUSY</code>; 轮次结束后其他后台持有者恢复, 该会话继续检测. 两个后台持有者在同一段音频上都命中时, 先开始轮次的一方会让另一方暂停, 另一方的这次命中可能不报告.</li>
+<li>不带 <code>background</code> 的唤醒会话行为不变: 它是前台会话, 打开期间脚本的 <a href="#speech_m_listen">speech.listen</a> 失败于 <code>SESSION_BUSY</code>.</li>
+</ul>
+<p><code>SESSION_BUSY</code> 只在前台会话 (或后台会话的 <code>thenListen</code> 轮次) 正在收音时出现, 不排队. 脚本需要在长驻唤醒的同时听写时, 可选:</p>
+<ul>
+<li>用 <code>thenListen</code> 让命中直接转入一轮听写, 不另开 <a href="#speech_m_listen">speech.listen</a>.</li>
+<li>打开听写前用 <a href="speechWakeSessionType.html#speechwakesessiontype_m_stop">wakeSession.stop</a> 结束唤醒会话, 听写的 <code>end</code> 事件之后再重新打开.</li>
+<li>以 <code>background: true</code> 打开唤醒会话, 听写期间它自动暂停, 结束后自动恢复.</li>
+</ul>
+<p>只为等待一个唤醒词去运行脚本时, 推荐使用插件的常驻唤醒, 把该词的动作设为 &quot;运行脚本&quot; (插件设置页, 或 <a href="#speech_m_resident_set">speech.resident.set</a>), 而不是让脚本一直持有 <code>speech.wake</code>: 常驻唤醒有省电模式, 命中时由 AutoJs6 在后台运行指定脚本, 不需要脚本常驻.</p>
+<pre><code class="lang-js">let wake = speech.wake(&#39;小六小六&#39;, { background: true });
+wake.on(&#39;paused&#39;, e =&gt; console.log(&#39;暂停:&#39;, e.reason));
+wake.on(&#39;resumed&#39;, e =&gt; console.log(&#39;恢复:&#39;, e.reason));
+wake.on(&#39;wake&#39;, () =&gt; {
+    // 听写期间唤醒会话自动暂停, 听写结束后恢复.
+    let session = speech.listen({ timeoutMillis: 8000 });
+    session.on(&#39;final&#39;, r =&gt; console.log(&#39;指令:&#39;, r.text));
+});
+</code></pre>
+<h2>引擎预热与保留<span><a class="mark" href="#speech_6" id="speech_6">#</a></span></h2>
+<p>首次 <a href="#speech_m_listen">speech.listen</a> 或 <a href="#speech_m_wake">speech.wake</a> 要先加载模型, 插件进程刚启动或模型已被 &quot;空闲模型释放&quot; 设置释放 (默认空闲 5 分钟) 时, 会话的 <code>ready</code> 可能晚到数秒. 3-Macaw Speech 1.6.0 起 (需要 AutoJs6 6.8.1 及以上, 插件声明 <code>speechPrepare</code> 功能) 有三种办法:</p>
+<ul>
+<li><a href="#speech_m_prepare">speech.prepare</a> 在需要之前加载引擎并持有租约, 之后的会话直接使用已加载的引擎.</li>
+<li>会话选项 <code>keepLoaded</code> 让会话所用的引擎在会话结束后继续保留 (<code>true</code> 保留到 <a href="#speech_m_release">speech.release</a> 或脚本退出, 数字为会话结束后再保留的分钟数, <code>1..1440</code>); 会话的 <code>ready</code> 事件带该租约的 <code>leaseId</code>.</li>
+<li>插件设置页的 &quot;空闲模型释放&quot; 选择 &quot;不释放&quot;, 对所有调用方生效; 内存紧张或系统回收时仍会释放.</li>
+</ul>
+<p>租约只阻止按空闲时间释放. 同一 AutoJs6 的全部脚本合计最多持有 16 个租约 (含带 <code>keepLoaded</code> 的会话), 超出失败于 <code>LIMIT_EXCEEDED</code>; 脚本退出时它的全部租约自动归还. 每个保留的模型约占用与其安装大小相当的内存.</p>
+<h2>离线分析<span><a class="mark" href="#speech_7" id="speech_7">#</a></span></h2>
 <p><a href="#speech_m_diarize">speech.diarize</a> (说话人分离), <a href="#speech_m_detectlanguage">speech.detectLanguage</a> (语种识别) 与 <a href="#speech_m_tag">speech.tag</a> (音频标签) 分析一个完整的音频文件, 一次调用得到结果, 不做流式处理. 它们需要插件分别声明 <code>diarization</code>, <code>languageId</code> 与 <code>audioTagging</code> 功能 (3-Macaw Speech 1.3.0 及以上, 契约版本 <code>2</code>); 较早的插件以 <code>PLUGIN_INCOMPATIBLE</code> 拒绝调用. 所需模型未安装时失败于 <code>MODEL_MISSING</code>, 可在插件首页或通过 <a href="#speech_m_models_install">speech.models.install</a> 下载, 见 <a href="#speech_1">模型目录与许可</a>.</p>
 <ul>
 <li>只接受音频文件路径, 不接受 PCM 数据. 文件的格式要求与上限同 <a href="#speech_m_recognize">speech.recognize</a> 的文件路径: WAV 以外的格式需要 <code>audioDecode</code> 功能, 文件不超过 200 MiB 且时长不超过 30 分钟.</li>
@@ -1106,6 +1272,7 @@ console.log(`${segments.length} 段语音, 共 ${durationMillis} ms`);
 <p>打开一个唤醒词会话, 从插件的麦克风持续检测关键词, 每次命中触发 <code>wake</code> 事件. 需要插件声明 <code>kws</code> 功能; 使用 <code>thenListen</code> 时还需要 <code>asrStreaming</code> 功能. 唤醒会话占用插件唯一的麦克风, 与 <a href="#speech_m_listen">listen</a> 的打开失败情形相同.</p>
 <p>关键词直接写原文, 无需训练模型: 1 - 50 个, 不能重复, 每个不超过 128 个字符. 中文按常用读音转换为拼音 (声母与带调韵母), 英文单词按模型自带的音素词典转换; 空白与标点分隔单词. 数字, 词典中没有的英文单词与无法转换的字符以 <code>INVALID_OPTIONS</code> 拒绝. 由空格分隔的模型 token 原样使用, 可借此为多音字指定读音, 例如 <code>&#39;x iǎo l iù&#39;</code>.</p>
 <p>设置 <code>thenListen</code> 后, 每次命中自动转入一轮听写: <code>wake</code> 事件的 <code>listen</code> 字段是该轮的 <a href="speechSessionType.html">SpeechSession</a>, 在 <code>wake</code> 监听器中为它注册事件; 该轮结束后恢复关键词检测. 唤醒会话被插件自己的听写入口临时接管时保持静默, 见 <a href="#speech_4">唤醒会话的临时接管</a>.</p>
+<p>设置 <code>background: true</code> (AutoJs6 6.8.1 及以上, 插件声明 <code>speechBackgroundWake</code> 功能, 3-Macaw Speech 1.6.0 起) 时, 会话与插件的常驻唤醒一起作为后台持有者: 其他麦克风会话到来时暂停让出, 触发 <code>paused</code> 事件, 结束后恢复并触发 <code>resumed</code> 事件, 不让其他会话失败于 <code>SESSION_BUSY</code>, 见 <a href="#speech_5">会话仲裁</a>. 较早的插件以 <code>FEATURE_UNAVAILABLE</code> 拒绝该选项.</p>
 <pre><code class="lang-js">let wake = speech.wake([&#39;小六小六&#39;, { keyword: &#39;hey macaw&#39;, threshold: 0.3 }], {
     thenListen: { silenceEndMillis: 1200 },
 });
@@ -1113,6 +1280,54 @@ wake.on(&#39;wake&#39;, e =&gt; {
     console.log(&#39;唤醒:&#39;, e.keyword);
     e.listen.on(&#39;final&#39;, r =&gt; console.log(&#39;指令:&#39;, r.text));
 });
+</code></pre>
+<h2>[m] prepare<span><a class="mark" href="#speech_m_prepare" id="speech_m_prepare">#</a></span></h2>
+<h3>speech.prepare(options?)<span><a class="mark" href="#speech_speech_prepare_options" id="speech_speech_prepare_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Non-UI</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#speech_speech_prepare_options">SpeechPrepareOptions</a></span> } - 预热选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#speech_speechlease">SpeechLease</a></span> } - 租约</li>
+</ul>
+<p>在第一个会话之前加载模型的引擎, 并以本脚本的租约持有, 见 <a href="#speech_6">引擎预热与保留</a>. 持有期间插件不按 &quot;空闲模型释放&quot; 设置释放这些引擎, 之后的 <a href="#speech_m_listen">speech.listen</a> 或 <a href="#speech_m_wake">speech.wake</a> 无需再等模型加载. 阻塞当前脚本线程直至加载完成 (至多 2 分钟), 不能在 UI 线程调用.</p>
+<p>需要插件声明 <code>speechPrepare</code> 功能 (3-Macaw Speech 1.6.0 及以上, 契约版本 <code>3</code>); 较早的插件以 <code>FEATURE_UNAVAILABLE</code> 拒绝, 不加载任何内容.</p>
+<ul>
+<li><code>kind: &#39;asr&#39;</code> (默认) 加载该模型默认听写会话所用的引擎 (不带热词, 开启标点, 按 <code>language</code> 选变体), <code>kind: &#39;kws&#39;</code> 加载唤醒会话所用的引擎; 不预热语音合成. 省略 <code>model</code> 时使用该类别的默认模型.</li>
+<li>引擎已加载时立即返回, <code>loadMillis</code> 为 <code>0</code>, 仍另发一个租约.</li>
+<li>同一 AutoJs6 的全部脚本合计最多 16 个租约 (含带 <code>keepLoaded</code> 的会话), 超出失败于 <code>LIMIT_EXCEEDED</code>.</li>
+<li>租约在 <a href="#speech_m_release">speech.release</a> 时或脚本退出时归还. 插件进程重启后旧租约失效, <code>release</code> 对它返回 <code>false</code>.</li>
+<li>模型未安装或类别不符时失败于 <code>MODEL_MISSING</code> 或 <code>INVALID_OPTIONS</code>.</li>
+</ul>
+<pre><code class="lang-js">let lease = speech.prepare({ kind: &#39;kws&#39; });
+console.log(lease.modelId, lease.loadMillis);
+let wake = speech.wake(&#39;小六小六&#39;);
+</code></pre>
+<h2>[m] prepareAsync<span><a class="mark" href="#speech_m_prepareasync" id="speech_m_prepareasync">#</a></span></h2>
+<h3>speech.prepareAsync(options?)<span><a class="mark" href="#speech_speech_prepareasync_options" id="speech_speech_prepareasync_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#speech_speech_prepare_options">SpeechPrepareOptions</a></span> } - 预热选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_promise">Promise</a>&lt;<a href="#speech_speechlease">SpeechLease</a>&gt;</span> } - 以租约兑现的 Promise</li>
+</ul>
+<p><a href="#speech_m_prepare">speech.prepare</a> 的异步形态, 可在 UI 线程调用; 错误以 <a href="#speech_c_speecherror">SpeechError</a> 拒绝.</p>
+<pre><code class="lang-js">speech.prepareAsync().then(lease =&gt; console.log(&#39;已预热:&#39;, lease.modelId));
+</code></pre>
+<h2>[m] release<span><a class="mark" href="#speech_m_release" id="speech_m_release">#</a></span></h2>
+<h3>speech.release(leaseId)<span><a class="mark" href="#speech_speech_release_leaseid" id="speech_speech_release_leaseid">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 1/2</code></strong></p>
+<ul>
+<li><strong>leaseId</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - <a href="#speech_m_prepare">speech.prepare</a> 返回的 <code>leaseId</code>, 或带 <code>keepLoaded</code> 的会话 <code>ready</code> 事件中的 <code>leaseId</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 插件是否仍持有该租约</li>
+</ul>
+<p>归还本脚本的一个租约. 租约不属于本脚本, 已归还, 已到期或插件进程已重启时返回 <code>false</code>, 不抛出.</p>
+<h3>speech.release()<span><a class="mark" href="#speech_speech_release" id="speech_speech_release">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Overload 2/2</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 插件仍持有的租约个数</li>
+</ul>
+<p>归还本脚本的全部租约. 本脚本没有租约时不联系插件, 返回 <code>0</code>.</p>
+<pre><code class="lang-js">let lease = speech.prepare();
+// ... 若干次 speech.listen() ...
+speech.release(lease.leaseId);
 </code></pre>
 <h2>[m] synthesize<span><a class="mark" href="#speech_m_synthesize" id="speech_m_synthesize">#</a></span></h2>
 <h3>speech.synthesize(text, path, options?)<span><a class="mark" href="#speech_speech_synthesize_text_path_options" id="speech_speech_synthesize_text_path_options">#</a></span></h3>
@@ -1169,7 +1384,7 @@ speech.speak(&#39;你好&#39;, { model: &#39;tts.vits.icefall.zh-aishell3&#39;, 
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="#speech_speechdiarization">SpeechDiarization</a></span> } - 说话人分离结果</li>
 </ul>
 <p>说话人分离: 找出音频中 &quot;谁在什么时候说话&quot;. 结果按时间顺序列出每段说话的开始与结束时间及说话人编号; 说话人从 <code>0</code> 起按首次出现的顺序编号, 只区分不同的声音, 不表示身份. <code>identify: true</code> 时另用 <a href="#speech_p_speaker">speech.speaker</a> 注册的声纹为每位说话人取名.</p>
-<p>需要插件声明 <code>diarization</code> 功能, 并已安装一个分割模型 (<code>segment</code>) 与一个说话人模型 (<code>speaker</code>), 缺少任一时失败于 <code>MODEL_MISSING</code>. 说话段超过 10000 段时失败于 <code>LIMIT_EXCEEDED</code>. 文件, 进度与等待时限等规则见 <a href="#speech_5">离线分析</a>.</p>
+<p>需要插件声明 <code>diarization</code> 功能, 并已安装一个分割模型 (<code>segment</code>) 与一个说话人模型 (<code>speaker</code>), 缺少任一时失败于 <code>MODEL_MISSING</code>. 说话段超过 10000 段时失败于 <code>LIMIT_EXCEEDED</code>. 文件, 进度与等待时限等规则见 <a href="#speech_7">离线分析</a>.</p>
 <p>已知人数时传入 <code>speakers</code> 结果更准; 省略或为 <code>0</code> 时由插件按 <code>threshold</code> 自动计数.</p>
 <pre><code class="lang-js">let result = speech.diarize(&#39;./meeting.wav&#39;, {
     speakers: 2,
@@ -1201,7 +1416,7 @@ result.segments.forEach(s =&gt; console.log(s.speaker, s.startMillis, s.endMilli
 </ul>
 <p>语种识别: 判断音频中说的是哪种语言. 插件先用语音活动检测取出语音, 切成每段至多 30 秒的窗口, 对前 <code>windows</code> 个窗口 (默认 3 个) 逐句判断语种, 语音不足 1.25 秒的短句并入相邻的句子. 说话时长最长的语种为结果, 平票时取先出现的. 语言代码为 Whisper 的语言代码, 如 <code>&#39;zh&#39;</code>, <code>&#39;en&#39;</code>, <code>&#39;ja&#39;</code>. <code>segments</code> 给出每句的结果, 一段录音里说了几种语言时可以逐句看出来; 一句话中途换语言时只得到其中一种.</p>
 <p>3-Macaw Speech 1.3.0 不按句判断: 每个窗口只判一种语言, <code>segments</code> 为每个窗口的结果, 结果取窗口数最多的语种, 同一窗口里说了几种语言时只得到其中一种.</p>
-<p>需要插件声明 <code>languageId</code> 功能, 并已安装语种识别模型 (<code>langid</code>). 文件中没有语音时失败于 <code>AUDIO_TOO_SHORT</code>. 其他规则见 <a href="#speech_5">离线分析</a>.</p>
+<p>需要插件声明 <code>languageId</code> 功能, 并已安装语种识别模型 (<code>langid</code>). 文件中没有语音时失败于 <code>AUDIO_TOO_SHORT</code>. 其他规则见 <a href="#speech_7">离线分析</a>.</p>
 <pre><code class="lang-js">let r = speech.detectLanguage(&#39;./voice.mp3&#39;, { windows: 5 });
 console.log(r.language, JSON.stringify(r.candidates));
 </code></pre>
@@ -1223,7 +1438,7 @@ console.log(r.language, JSON.stringify(r.candidates));
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="#speech_speechtagging">SpeechTagging</a></span> } - 音频标签结果</li>
 </ul>
 <p>音频标签: 识别音频中的声音类别, 如人声, 音乐, 动物, 车辆与警报. 插件按 10 秒的窗口打分, 使用 AudioSet 的 527 个英文标签; 每个标签取其得分最高的窗口, 按分数从高到低返回前 <code>topK</code> 个 (默认 5 个). <code>timeline: true</code> 时另返回每个窗口的前 <code>topK</code> 个标签.</p>
-<p>需要插件声明 <code>audioTagging</code> 功能, 并已安装音频标签模型 (<code>tagger</code>). 其他规则见 <a href="#speech_5">离线分析</a>.</p>
+<p>需要插件声明 <code>audioTagging</code> 功能, 并已安装音频标签模型 (<code>tagger</code>). 其他规则见 <a href="#speech_7">离线分析</a>.</p>
 <pre><code class="lang-js">let r = speech.tag(&#39;./street.wav&#39;, { topK: 3, timeline: true });
 r.labels.forEach(l =&gt; console.log(l.label, l.score, l.startMillis));
 r.timeline.forEach(w =&gt; console.log(w.startMillis, w.labels.map(l =&gt; l.label).join(&#39;, &#39;)));
@@ -1260,7 +1475,7 @@ r.timeline.forEach(w =&gt; console.log(w.startMillis, w.labels.map(l =&gt; l.lab
 <li><strong>[ options ]</strong> { <span class="type"><a href="#speech_speechinstalloptions">SpeechInstallOptions</a></span> } - 安装选项</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="speechModelInfoType.html">SpeechModelInfo</a></span> } - 安装后的模型对象</li>
 </ul>
-<p>下载并安装目录中的模型, 阻塞当前脚本线程直至完成. 下载不设超时. <code>onProgress(done, total)</code> 以字节报告进度, 在脚本线程上执行, <code>total</code> 未知时为 <code>0</code>; 回调抛出的第一个错误在安装结束后抛出. 模型已安装较旧的版本时, 调用把它更新到目录的最新版本, 失败时旧版不变, 见 <a href="#speech_2">模型更新</a>.</p>
+<p>下载并安装目录中的模型, 阻塞当前脚本线程直至完成. 下载不设超时. <code>onProgress(done, total)</code> 以字节报告进度, 在脚本线程上执行, <code>total</code> 未知时为 <code>0</code>; <code>total</code> 为归档大小与安装大小之和, 即下载与解包两段 (镜像归档未压缩时约为下载大小的两倍; 插件界面分两段显示), <code>done / total</code> 仍是准确的总进度; 回调抛出的第一个错误在安装结束后抛出. 模型已安装较旧的版本时, 调用把它更新到目录的最新版本, 失败时旧版不变, 见 <a href="#speech_2">模型更新</a>.</p>
 <p>仅限非商业用途或未声明许可的模型需要 <code>acceptLicense: true</code>, 见 <a href="#speech_1">模型目录与许可</a>. 失败时的错误代码: <code>MODEL_MISSING</code> (目录中没有该 ID), <code>MODEL_LICENSE_NOT_ACCEPTED</code>, <code>MODEL_DOWNLOAD_FAILED</code>, <code>MODEL_CHECKSUM_MISMATCH</code>, <code>IO_FAILED</code> (例如空间不足), <code>SESSION_CANCELLED</code> (脚本停止或插件界面取消).</p>
 <pre><code class="lang-js">speech.models.install(&#39;kws.zipformer.zh-en.2025-12-20&#39;, {
     onProgress: (done, total) =&gt; console.log(done, &#39;/&#39;, total),
@@ -1414,6 +1629,76 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否实际删除了声纹</li>
 </ul>
 <p>删除该说话人的声纹. 名字未注册时返回 <code>false</code>. 没有异步形态.</p>
+<h2>[p+] resident<span><a class="mark" href="#speech_p_resident" id="speech_p_resident">#</a></span></h2>
+<p><strong><code>6.8.1</code></strong></p>
+<p><code>speech.resident</code> 读写插件的常驻唤醒: 插件在后台持续检测最多 10 个唤醒词, 每个词命中时执行各自的动作 (打开弹层, 运行脚本, 发广播或只通知). 需要插件声明 <code>speechResident</code> 功能 (3-Macaw Speech 1.6.0 及以上, 契约版本 <code>3</code>); 较早的插件以 <code>FEATURE_UNAVAILABLE</code> 拒绝每个调用 (<a href="#speech_p_resident_enabled">enabled</a> 除外, 它返回 <code>false</code>). 常驻唤醒是后台持有者, 脚本的麦克风会话到来时它暂停让出, 见 <a href="#speech_5">会话仲裁</a>.</p>
+<p>规则 (<a href="#speech_speechresidentrule">SpeechResidentRule</a>) 的动作:</p>
+<ul>
+<li><code>&#39;open&#39;</code> - 打开插件的语音弹层 (默认); 插件不能从后台打开界面时发 &quot;点此说话&quot; 通知.</li>
+<li><code>&#39;script&#39;</code> - 由 AutoJs6 在后台运行 <code>script</code> 指定的脚本 (AutoJs6 6.8.1 及以上; 更早的 AutoJs6 经 &quot;运行脚本&quot; 界面运行, 不能从后台打开界面时发 &quot;点击运行脚本&quot; 通知). 脚本的 <code>execArgv</code> 含 <code>keyword</code>, <code>matchedText</code>, <code>arguments</code>, <code>timeMillis</code> 与 <code>source</code> (<code>&#39;resident-wake&#39;</code>).</li>
+<li><code>&#39;broadcast&#39;</code> - 向 AutoJs6 发送广播 <code>org.autojs.plugin.speech.action.RESIDENT_HIT</code> (extras 为 <code>keyword</code>, <code>matchedText</code>, <code>timeMillis</code>), 可用 <a href="tasks.html">tasks.addIntentTask</a> 接收; 插件设置页打开 &quot;广播也发给其他应用&quot; 时同时发一条隐式广播, 任何应用都可能收到唤醒词.</li>
+<li><code>&#39;notify&#39;</code> - 只发通知.</li>
+</ul>
+<h2>[m] resident.get<span><a class="mark" href="#speech_m_resident_get" id="speech_m_resident_get">#</a></span></h2>
+<h3>speech.resident.get()<span><a class="mark" href="#speech_speech_resident_get" id="speech_speech_resident_get">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#speech_speechresidentconfig">SpeechResidentConfig</a></span> } - 常驻唤醒的开关与规则 (按顺序)</li>
+</ul>
+<h2>[m] resident.set<span><a class="mark" href="#speech_m_resident_set" id="speech_m_resident_set">#</a></span></h2>
+<h3>speech.resident.set(config)<span><a class="mark" href="#speech_speech_resident_set_config" id="speech_speech_resident_set_config">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>config</strong> { <span class="type"><a href="#speech_speechresidentconfig">SpeechResidentConfig</a></span> | <span class="type">(<a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="#speech_speechresidentrule">SpeechResidentRule</a>)<a href="dataTypes.html#datatypes_array">[]</a></span> } - <code>{ rules }</code> 或规则数组; 字符串表示动作为 <code>&#39;open&#39;</code> 的规则</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#speech_speechresidentconfig">SpeechResidentConfig</a></span> } - 保存后的配置</li>
+</ul>
+<p>整体替换常驻唤醒的规则. 至多 10 条, 关键词去掉首尾空白后为 1 - 32 个字符且不重复, <code>&#39;script&#39;</code> 动作必须给出 <code>script</code> (相对路径按脚本工作目录解析, 保存为绝对路径), <code>arguments</code> 至多 1024 个字符; 不合规为 <code>INVALID_OPTIONS</code>, 超过 10 条为 <code>LIMIT_EXCEEDED</code>, 唤醒词模型无法拼写的词为 <code>INVALID_OPTIONS</code>. 换了词时运行中的常驻唤醒立即以新词重开; 只改动作时下一次命中生效.</p>
+<pre><code class="lang-js">speech.resident.set([
+    &#39;小六小六&#39;,
+    { keyword: &#39;打开备忘&#39;, action: &#39;script&#39;, script: &#39;./memo.js&#39;, arguments: &#39;quick&#39; },
+]);
+</code></pre>
+<h2>[m] resident.enable<span><a class="mark" href="#speech_m_resident_enable" id="speech_m_resident_enable">#</a></span></h2>
+<h3>speech.resident.enable()<span><a class="mark" href="#speech_speech_resident_enable" id="speech_speech_resident_enable">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#speech_speechresidentswitch">SpeechResidentSwitch</a></span> } - 开关结果</li>
+</ul>
+<p>打开常驻唤醒. 先做插件设置页的检查: 插件没有麦克风权限时失败于 <code>PERMISSION_DENIED</code>; 没有唤醒词模型, 规则无法拼写, 或 3-Stone AI / 3-Stove Agent 的常驻监听已开启时失败于 <code>RESIDENT_UNAVAILABLE</code>. Android 不允许插件从后台启动麦克风前台服务时, 开关仍被记下, 返回 <code>{ started: false, restartNeeded: true }</code>, 插件发 &quot;点此恢复常驻唤醒&quot; 通知, 下次打开插件或点按通知时开始监听.</p>
+<h2>[m] resident.disable<span><a class="mark" href="#speech_m_resident_disable" id="speech_m_resident_disable">#</a></span></h2>
+<h3>speech.resident.disable()<span><a class="mark" href="#speech_speech_resident_disable" id="speech_speech_resident_disable">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#speech_speechresidentswitch">SpeechResidentSwitch</a></span> } - 开关结果</li>
+</ul>
+<p>关闭常驻唤醒, 立即停止监听.</p>
+<h2>[p] resident.enabled<span><a class="mark" href="#speech_p_resident_enabled" id="speech_p_resident_enabled">#</a></span></h2>
+<h3>speech.resident.enabled<span><a class="mark" href="#speech_speech_resident_enabled" id="speech_speech_resident_enabled">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>READONLY</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+<p>常驻唤醒是否开启. 没有插件应答, 插件不提供该功能或查询失败时为 <code>false</code>, 读取从不抛出.</p>
+<h2>[m] resident.on<span><a class="mark" href="#speech_m_resident_on" id="speech_m_resident_on">#</a></span></h2>
+<h3>speech.resident.on(event, listener)<span><a class="mark" href="#speech_speech_resident_on_event_listener" id="speech_speech_resident_on_event_listener">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>event</strong> { <code>&#39;hit&#39;</code> } - 事件名</li>
+<li><strong>listener</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } - 命中回调, 参数为 <a href="#speech_speechresidenthit">SpeechResidentHit</a>, 在脚本线程上执行</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_undefined">undefined</a></span> }</li>
+</ul>
+<p>监听常驻唤醒的命中. 无论该词的动作为何都会投递; 弹层可见时被忽略的命中与说话人检查拒绝的命中不投递. 有监听器期间脚本保持运行.</p>
+<pre><code class="lang-js">speech.resident.on(&#39;hit&#39;, hit =&gt; console.log(&#39;常驻唤醒:&#39;, hit.keyword, hit.action));
+</code></pre>
+<h2>[m] resident.off<span><a class="mark" href="#speech_m_resident_off" id="speech_m_resident_off">#</a></span></h2>
+<h3>speech.resident.off(event, listener?)<span><a class="mark" href="#speech_speech_resident_off_event_listener" id="speech_speech_resident_off_event_listener">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>event</strong> { <code>&#39;hit&#39;</code> } - 事件名</li>
+<li><strong>[ listener ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } - 要移除的监听器, 省略时移除全部</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_undefined">undefined</a></span> }</li>
+</ul>
+<p>移除命中监听器. 最后一个监听器移除后脚本可以正常退出.</p>
 <h2>[C] SpeechError<span><a class="mark" href="#speech_c_speecherror" id="speech_c_speecherror">#</a></span></h2>
 <h3>new speech.SpeechError(message?, code?)<span><a class="mark" href="#speech_new_speech_speecherror_message_code" id="speech_new_speech_speecherror_message_code">#</a></span></h3>
 <p><strong><code>6.8.0</code></strong></p>
@@ -1447,6 +1732,7 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <li><strong>[ timeoutMillis = <code>15000</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 没有语音或新文字时自动结束的时长, 范围 <code>0..1800000</code>, <code>0</code> 表示不限</li>
 <li><strong>[ hotwords = <code>[]</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 热词, 去重后最多 200 个, 每个不超过 128 个字符</li>
 <li><strong>[ punctuation = <code>true</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否加标点: 模型自带标点 (SenseVoice) 时保留; 流式模型的结果由插件中已安装的标点模型补上标点 (3-Macaw Speech 1.2.0 起, 中文与英文, 英文同时恢复大小写), 没有覆盖该语言的标点模型时保持原样; <code>false</code> 去掉所有标点</li>
+<li><strong>[ keepLoaded = <code>false</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 会话结束后保留引擎: <code>true</code> 保留到 <a href="#speech_m_release">speech.release</a> 或脚本退出, 数字为会话结束后再保留的分钟数, 范围 <code>1..1440</code> (超出为 <code>LIMIT_EXCEEDED</code>); 会话的 <code>ready</code> 事件带租约的 <code>leaseId</code>. 只能写在选项顶层, 写在 <code>thenListen</code> 中为 <code>INVALID_OPTIONS</code>. AutoJs6 6.8.1 及以上, 需要插件声明 <code>speechPrepare</code>, 见 <a href="#speech_6">引擎预热与保留</a></li>
 </ul>
 <p><code>timeoutMillis</code> 与 <code>maxDurationMillis</code> 按插件已处理的音频时长计算, 而不是墙钟时间: 麦克风会话按实时计算, 外部 PCM 会话按已输入的音频计算 (暂停输入时不会超时). <code>timeoutMillis</code> 从最近一次语音或新文字起算. 到达时会话以 <code>end</code> 结束, 原因分别为 <code>&#39;timeout&#39;</code> 与 <code>&#39;maxDuration&#39;</code>. 插件在静音达到 <code>silenceEndMillis</code> 或连续说话满 20 秒时结束一句话.</p>
 <h3>SpeechRecognizeOptions<span><a class="mark" href="#speech_speechrecognizeoptions" id="speech_speechrecognizeoptions">#</a></span></h3>
@@ -1481,6 +1767,15 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <li><strong>[ model ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 唤醒词模型 ID, 默认为默认唤醒词模型</li>
 <li><strong>[ minIntervalMillis = <code>1500</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 两次命中之间的最小间隔, 范围 <code>0..600000</code> 毫秒</li>
 <li><strong>[ thenListen ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="#speech_speech_listen_options">SpeechListenOptions</a></span> } - 命中后自动转入听写; <code>true</code> 使用默认听写选项, 对象形式的 <code>source</code> 只能为 <code>&#39;mic&#39;</code></li>
+<li><strong>[ keepLoaded = <code>false</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 会话结束后保留唤醒词引擎, 同 <a href="#speech_speech_listen_options">SpeechListenOptions</a> 的 <code>keepLoaded</code></li>
+<li><strong>[ background = <code>false</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 作为后台持有者打开: 其他麦克风会话到来时暂停让出, 结束后恢复, 触发 <code>paused</code> / <code>resumed</code> 事件, 见 <a href="#speech_5">会话仲裁</a>. AutoJs6 6.8.1 及以上, 需要插件声明 <code>speechBackgroundWake</code></li>
+</ul>
+<h3>SpeechPrepareOptions<span><a class="mark" href="#speech_speechprepareoptions" id="speech_speechprepareoptions">#</a></span></h3>
+<p><a href="#speech_m_prepare">speech.prepare</a> 与 <a href="#speech_m_prepareasync">speech.prepareAsync</a> 的选项.</p>
+<ul>
+<li><strong>[ kind = <code>&#39;asr&#39;</code> ]</strong> { <code>&#39;asr&#39;</code> | <code>&#39;kws&#39;</code> } - 预热听写引擎或唤醒词引擎</li>
+<li><strong>[ model ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 模型 ID, 默认为该类别的默认模型</li>
+<li><strong>[ language ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 语言提示, 同 <a href="#speech_speech_listen_options">SpeechListenOptions</a>; 只对 <code>&#39;asr&#39;</code> 有效</li>
 </ul>
 <h3>SpeechSynthesizeOptions<span><a class="mark" href="#speech_speechsynthesizeoptions" id="speech_speechsynthesizeoptions">#</a></span></h3>
 <p><a href="#speech_m_synthesize">speech.synthesize</a> 与 <a href="#speech_m_synthesizeasync">speech.synthesizeAsync</a> 的选项.</p>
@@ -1546,12 +1841,12 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <li><strong>[ timeline = <code>false</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否另返回每个 10 秒窗口的标签</li>
 <li><strong>[ onProgress ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } - 进度回调, 单位为音频毫秒</li>
 </ul>
-<h2>返回对象<span><a class="mark" href="#speech_6" id="speech_6">#</a></span></h2>
+<h2>返回对象<span><a class="mark" href="#speech_8" id="speech_8">#</a></span></h2>
 <h3>SpeechCapabilities<span><a class="mark" href="#speech_speechcapabilities" id="speech_speechcapabilities">#</a></span></h3>
 <p><a href="#speech_m_capabilities">speech.capabilities</a> 的返回值.</p>
 <ul>
-<li><strong>contractVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 语音插件契约版本, 3-Macaw Speech 1.2.0 及更早为 <code>1</code>, 1.3.0 起为 <code>2</code></li>
-<li><strong>features</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 插件实现的功能, 取自 <code>asr</code> (文件识别与外部 PCM 会话), <code>asrStreaming</code> (麦克风听写与 <code>thenListen</code>), <code>vad</code> (语音活动检测), <code>kws</code> (唤醒词), <code>tts</code> (合成到文件), <code>ttsSystemEngine</code> (系统 TTS 引擎), <code>models</code> (模型管理), <code>audioDecode</code> (WAV 以外的音频文件, 3-Macaw Speech 1.2.0 起), <code>speaker</code> (<a href="#speech_p_speaker">说话人识别</a>, 3-Macaw Speech 1.3.0 起), <code>diarization</code> (<a href="#speech_m_diarize">说话人分离</a>, 1.3.0 起), <code>languageId</code> (<a href="#speech_m_detectlanguage">语种识别</a>, 1.3.0 起), <code>audioTagging</code> (<a href="#speech_m_tag">音频标签</a>, 1.3.0 起)</li>
+<li><strong>contractVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 语音插件契约版本, 3-Macaw Speech 1.2.0 及更早为 <code>1</code>, 1.3.0 起为 <code>2</code>, 1.6.0 起与 AutoJs6 6.8.1 及以上为 <code>3</code></li>
+<li><strong>features</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 插件实现的功能, 取自 <code>asr</code> (文件识别与外部 PCM 会话), <code>asrStreaming</code> (麦克风听写与 <code>thenListen</code>), <code>vad</code> (语音活动检测), <code>kws</code> (唤醒词), <code>tts</code> (合成到文件), <code>ttsSystemEngine</code> (系统 TTS 引擎), <code>models</code> (模型管理), <code>audioDecode</code> (WAV 以外的音频文件, 3-Macaw Speech 1.2.0 起), <code>speaker</code> (<a href="#speech_p_speaker">说话人识别</a>, 3-Macaw Speech 1.3.0 起), <code>diarization</code> (<a href="#speech_m_diarize">说话人分离</a>, 1.3.0 起), <code>languageId</code> (<a href="#speech_m_detectlanguage">语种识别</a>, 1.3.0 起), <code>audioTagging</code> (<a href="#speech_m_tag">音频标签</a>, 1.3.0 起), <code>speechPrepare</code> (<a href="#speech_6">引擎预热与保留</a>, 1.6.0 起), <code>speechResident</code> (<a href="#speech_p_resident">常驻唤醒</a>, 1.6.0 起), <code>speechBackgroundWake</code> (<a href="#speech_5">后台唤醒</a>, 1.6.0 起); 契约版本 <code>3</code> 的三项需要 AutoJs6 6.8.1 及以上</li>
 <li><strong>catalogVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 插件当前的模型目录版本</li>
 <li><strong>engineName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 语音运行时名称, 如 <code>&#39;sherpa-onnx&#39;</code></li>
 <li><strong>engineVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 语音运行时版本</li>
@@ -1562,6 +1857,41 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <li><strong>versionCode</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 插件版本号</li>
 </ul>
 <p>应根据 <code>features</code> 的实际内容判断能力, 不要假定所有功能都存在.</p>
+<h3>SpeechLease<span><a class="mark" href="#speech_speechlease" id="speech_speechlease">#</a></span></h3>
+<p><a href="#speech_m_prepare">speech.prepare</a> 的返回值.</p>
+<ul>
+<li><strong>leaseId</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 租约 ID, 以 <code>lease-</code> 开头, 交给 <a href="#speech_m_release">speech.release</a></li>
+<li><strong>modelId</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 已加载的模型 ID</li>
+<li><strong>loadMillis</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 本次加载用时 (毫秒), 引擎已加载时为 <code>0</code></li>
+</ul>
+<h3>SpeechResidentConfig<span><a class="mark" href="#speech_speechresidentconfig" id="speech_speechresidentconfig">#</a></span></h3>
+<p><a href="#speech_m_resident_get">speech.resident.get</a> 与 <a href="#speech_m_resident_set">speech.resident.set</a> 的返回值, 也是 <code>set</code> 接受的对象形式.</p>
+<ul>
+<li><strong>enabled</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 常驻唤醒是否开启 (<code>set</code> 忽略此字段)</li>
+<li><strong>rules</strong> { <span class="type"><a href="#speech_speechresidentrule">SpeechResidentRule</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 规则, 按顺序</li>
+</ul>
+<h3>SpeechResidentRule<span><a class="mark" href="#speech_speechresidentrule" id="speech_speechresidentrule">#</a></span></h3>
+<p>常驻唤醒的一条规则.</p>
+<ul>
+<li><strong>keyword</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 唤醒词, 1 - 32 个字符</li>
+<li><strong>[ action = <code>&#39;open&#39;</code> ]</strong> { <code>&#39;open&#39;</code> | <code>&#39;script&#39;</code> | <code>&#39;broadcast&#39;</code> | <code>&#39;notify&#39;</code> } - 命中时的动作, 见 <a href="#speech_p_resident">resident</a></li>
+<li><strong>[ script ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - <code>&#39;script&#39;</code> 动作运行的脚本路径</li>
+<li><strong>[ arguments ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 交给脚本的参数字符串 (<code>execArgv.arguments</code>), 至多 1024 个字符</li>
+</ul>
+<h3>SpeechResidentSwitch<span><a class="mark" href="#speech_speechresidentswitch" id="speech_speechresidentswitch">#</a></span></h3>
+<p><a href="#speech_m_resident_enable">speech.resident.enable</a> 与 <a href="#speech_m_resident_disable">speech.resident.disable</a> 的返回值.</p>
+<ul>
+<li><strong>started</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否已开始监听</li>
+<li><strong>restartNeeded</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 开关已打开但 Android 不允许从后台开始监听, 需要打开插件或点按 &quot;点此恢复&quot; 通知</li>
+</ul>
+<h3>SpeechResidentHit<span><a class="mark" href="#speech_speechresidenthit" id="speech_speechresidenthit">#</a></span></h3>
+<p><a href="#speech_m_resident_on">speech.resident.on</a> 的 <code>hit</code> 事件参数.</p>
+<ul>
+<li><strong>keyword</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 命中的唤醒词</li>
+<li><strong>[ matchedText ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 唤醒词模型报告的词</li>
+<li><strong>action</strong> { <code>&#39;open&#39;</code> | <code>&#39;script&#39;</code> | <code>&#39;broadcast&#39;</code> | <code>&#39;notify&#39;</code> } - 该词的动作</li>
+<li><strong>timeMillis</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 命中时刻 (Unix 毫秒)</li>
+</ul>
 <h3>SpeechVoiceSegments<span><a class="mark" href="#speech_speechvoicesegments" id="speech_speechvoicesegments">#</a></span></h3>
 <p><a href="#speech_m_detectvoice">speech.detectVoice</a> 的返回值.</p>
 <ul>
@@ -1605,7 +1935,7 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <li><strong>modelId</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 实际使用的模型</li>
 <li><strong>timeline</strong> { <span class="type">{ startMillis: <a href="dataTypes.html#datatypes_number">number</a>; endMillis: <a href="dataTypes.html#datatypes_number">number</a>; labels: {{ label: <a href="dataTypes.html#datatypes_string">string</a>; mid: <a href="dataTypes.html#datatypes_string">string</a>; score: <a href="dataTypes.html#datatypes_number">number</a></span> }}[] }}[] | <a href="dataTypes.html#datatypes_undefined">undefined</a> - 只在 <code>timeline: true</code> 时存在, 每个 10 秒窗口一项, 含该窗口得分最高的前 <code>topK</code> 个标签</li>
 </ul>
-<h2>错误代码<span><a class="mark" href="#speech_7" id="speech_7">#</a></span></h2>
+<h2>错误代码<span><a class="mark" href="#speech_9" id="speech_9">#</a></span></h2>
 <table>
 <thead>
 <tr>
@@ -1660,7 +1990,7 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 </tr>
 <tr>
 <td><code>SESSION_BUSY</code></td>
-<td>麦克风正被另一个会话占用, 外部 PCM 会话已达上限, 或模型正被使用而无法删除</td>
+<td>麦克风正被另一个前台会话占用 (后台持有者不会导致它, 见 <a href="#speech_5">会话仲裁</a>), 外部 PCM 会话或后台唤醒会话已达上限, 或模型正被使用而无法删除</td>
 </tr>
 <tr>
 <td><code>SESSION_CLOSED</code></td>
@@ -1691,12 +2021,24 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <td>说话人录音中的有效语音不足 1 秒, 或语种识别的文件中没有语音 (契约版本 <code>2</code>)</td>
 </tr>
 <tr>
+<td><code>FEATURE_UNAVAILABLE</code></td>
+<td>插件未声明契约版本 <code>3</code> 的功能 (<code>speechPrepare</code>, <code>speechResident</code>, <code>speechBackgroundWake</code>), 或插件只支持契约版本 <code>2</code> 及更早; 消息写明缺少的功能 (AutoJs6 6.8.1 起)</td>
+</tr>
+<tr>
+<td><code>RESIDENT_UNAVAILABLE</code></td>
+<td>常驻唤醒无法打开: 没有唤醒词模型, 规则无法拼写, 或其他应用的常驻监听已开启 (AutoJs6 6.8.1 起)</td>
+</tr>
+<tr>
+<td><code>LEASE_NOT_FOUND</code></td>
+<td>插件不持有该租约; <a href="#speech_m_release">speech.release</a> 把它转为返回 <code>false</code>, 脚本一般不会看到 (AutoJs6 6.8.1 起)</td>
+</tr>
+<tr>
 <td><code>INTERNAL</code></td>
 <td>其他内部错误</td>
 </tr>
 </tbody>
 </table>
-<h2>限制<span><a class="mark" href="#speech_8" id="speech_8">#</a></span></h2>
+<h2>限制<span><a class="mark" href="#speech_10" id="speech_10">#</a></span></h2>
 <table>
 <thead>
 <tr>
@@ -1706,8 +2048,24 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 </thead>
 <tbody>
 <tr>
-<td>麦克风会话 (听写或唤醒), 整个插件</td>
+<td>前台麦克风会话 (听写或唤醒), 整个插件</td>
 <td>1</td>
+</tr>
+<tr>
+<td>后台唤醒会话 (<code>background: true</code>), 整个插件, 常驻唤醒另计</td>
+<td>4</td>
+</tr>
+<tr>
+<td>租约 (<a href="#speech_m_prepare">speech.prepare</a> 与 <code>keepLoaded</code> 会话), 同一 AutoJs6</td>
+<td>16</td>
+</tr>
+<tr>
+<td><code>keepLoaded</code> 的分钟数</td>
+<td>1440</td>
+</tr>
+<tr>
+<td>常驻唤醒的规则</td>
+<td>10 条, 每个词 32 个字符, <code>arguments</code> 1024 个字符</td>
 </tr>
 <tr>
 <td>外部 PCM 会话, 每个调用方应用</td>
@@ -1767,11 +2125,11 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 </tr>
 </tbody>
 </table>
-<h2>插件的系统入口<span><a class="mark" href="#speech_9" id="speech_9">#</a></span></h2>
+<h2>插件的系统入口<span><a class="mark" href="#speech_11" id="speech_11">#</a></span></h2>
 <p>以下入口由 3-Macaw Speech 提供给 Android 系统与其他应用, 不是脚本 API, 在此一并说明以便脚本作者与集成方了解它们与脚本会话的关系. 它们与脚本共用插件唯一的麦克风: 脚本的听写会话占用麦克风时, 这些入口显示 &quot;麦克风正被占用&quot; 的说明; 它们收音时, 脚本打开麦克风会话失败于 <code>SESSION_BUSY</code>; 唤醒会话则被临时接管 (见 <a href="#speech_4">唤醒会话的临时接管</a>).</p>
 <h3>系统 TTS 引擎<span><a class="mark" href="#speech_tts" id="speech_tts">#</a></span></h3>
 <p>插件把已安装的合成模型注册为 Android 系统 TTS 引擎, 可在系统的文字转语音设置中选为首选引擎, 也可以由 AutoJs6 的 <a href="tts.html">tts</a> 模块及其他应用指定使用. 语音名称与选择规则见 <a href="tts.html#tts_3_macaw_speech">使用 3-Macaw Speech 引擎</a>.</p>
-<h3>系统语音输入<span><a class="mark" href="#speech_10" id="speech_10">#</a></span></h3>
+<h3>系统语音输入<span><a class="mark" href="#speech_12" id="speech_12">#</a></span></h3>
 <p>插件导出一个应答 <code>android.speech.action.RECOGNIZE_SPEECH</code> 的界面, 其他应用 (例如 3-Stove Agent 的麦克风按钮) 发出语音输入请求时, 在底部弹层中说一句话, 识别出的文字直接交回该应用. 该入口不受插件权限保护, 任何应用都可以调用; 它只返回识别出的文字, 不返回音频, 不修改模型或设置, 也不启动下载.</p>
 <ul>
 <li>第一句话结束 (静音端点, 或点按 &quot;停止&quot;) 即返回 <code>RESULT_OK</code>, <code>RecognizerIntent.EXTRA_RESULTS</code> 中恰好 1 条文字, 不返回置信度.</li>
@@ -1781,16 +2139,16 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <li>返回码: 用户取消为 <code>RESULT_CANCELED</code>; 没有语音或结果为空为 <code>RESULT_NO_MATCH</code>; 麦克风权限被拒绝, 麦克风被占用或录音失败为 <code>RESULT_AUDIO_ERROR</code>; 没有识别模型, 模型加载或引擎失败为 <code>RESULT_SERVER_ERROR</code>.</li>
 <li>插件设置 &quot;识别&quot; 组中的 &quot;作为系统语音输入&quot; 开关可停用该入口. 设备上还有其他语音输入应用时, Android 会让用户选择.</li>
 </ul>
-<h3>数字助理<span><a class="mark" href="#speech_11" id="speech_11">#</a></span></h3>
+<h3>数字助理<span><a class="mark" href="#speech_13" id="speech_13">#</a></span></h3>
 <p>用户可以把 3-Macaw Speech 选为默认数字助理应用: 打开插件设置, 点按 &quot;识别&quot; 组中的 &quot;数字助理&quot; (该行同时显示插件当前是否为默认助理), 在系统打开的设置页中选择 3-Macaw Speech (各系统的页面名称略有不同). 插件不能代替用户做此选择.</p>
 <ul>
-<li>之后长按电源键或 Home 键, 或使用助理手势, 即打开底部弹层听写; 部分厂商的电源键或手势可能只能唤起自家助理. 听写的结束, 模型选择与引导规则与 <a href="#speech_10">系统语音输入</a> 相同.</li>
-<li>听写结束后弹层显示可编辑的识别文字, 以及每个接收语音指令的应用 (见 <a href="#speech_12">语音指令入口</a>) 的按钮, &quot;复制文本&quot;, &quot;重说&quot; 与 &quot;关闭&quot;. 只有用户点按某个应用按钮时才发送, 没有默认目标, 也不根据说话内容自动选择. 没有任何接收应用时, 助理仍可用于听写并复制.</li>
+<li>之后长按电源键或 Home 键, 或使用助理手势, 即打开底部弹层听写; 部分厂商的电源键或手势可能只能唤起自家助理. 听写的结束, 模型选择与引导规则与 <a href="#speech_12">系统语音输入</a> 相同.</li>
+<li>听写结束后弹层显示可编辑的识别文字, 以及每个接收语音指令的应用 (见 <a href="#speech_14">语音指令入口</a>) 的按钮, &quot;复制文本&quot;, &quot;重说&quot; 与 &quot;关闭&quot;. 只有用户点按某个应用按钮时才发送, 没有默认目标, 也不根据说话内容自动选择. 没有任何接收应用时, 助理仍可用于听写并复制.</li>
 <li>不读取屏幕内容: 系统不会把当前应用的界面结构或截图交给插件, 除识别文字外不向目标附带任何内容.</li>
 <li>平时不在后台收音: 只在弹层显示时录音, 没有常驻通知与常亮的麦克风指示灯. 插件不保存识别历史.</li>
 <li>锁屏时可以开始听写; 点按应用按钮或 &quot;复制文本&quot; 时先请求解锁, 解锁成功后才发送或复制, 取消解锁则留在弹层.</li>
 </ul>
-<h3>语音指令入口<span><a class="mark" href="#speech_12" id="speech_12">#</a></span></h3>
+<h3>语音指令入口<span><a class="mark" href="#speech_14" id="speech_14">#</a></span></h3>
 <p>希望接收数字助理识别文字的应用, 导出一个应答 <code>org.autojs.plugin.action.VOICE_COMMAND</code> 的 Activity:</p>
 <pre><code class="lang-xml">&lt;activity
     android:name=&quot;.VoiceCommandActivity&quot;
@@ -1810,18 +2168,18 @@ console.log(who.name === null ? &#39;不是已注册的人&#39; : who.name, JSON
 <pre><code class="lang-kotlin">val text = intent.getStringExtra(Intent.EXTRA_TEXT)?.trim().orEmpty()
 val language = intent.getStringExtra(&quot;org.autojs.plugin.extra.VOICE_LANGUAGE&quot;)
 </code></pre>
-<h3>系统识别服务<span><a class="mark" href="#speech_13" id="speech_13">#</a></span></h3>
+<h3>系统识别服务<span><a class="mark" href="#speech_15" id="speech_15">#</a></span></h3>
 <p>插件还提供系统语音识别服务 (<code>android.speech.RecognitionService</code>), 组件名为 <code>io.github.supermonster003.autojs6.plugin.three.macaw.speech/.recognition.MacawRecognitionService</code>. 其他应用可以在 <code>SpeechRecognizer.createSpeechRecognizer(context, component)</code> 中直接指定它.</p>
 <p>不指定组件的 <code>SpeechRecognizer</code> 使用系统设置的默认识别服务, 它是否随数字助理切换取决于 Android 版本: Android 11 及以下把 3-Macaw Speech 选为数字助理时, 一般会一并设为默认识别服务; Android 12 起需要在系统的语音输入设置中另行选择 (部分手机没有这项设置).</p>
 <ul>
 <li>支持 <code>startListening</code>, <code>stopListening</code> 与 <code>cancel</code>. 回调顺序为 <code>onReadyForSpeech</code>, <code>onBeginningOfSpeech</code>, 调用方要求时的部分结果, <code>onEndOfSpeech</code>, 然后恰好一次 <code>onResults</code> (1 条结果) 或 <code>onError</code>; 取消后不再回调. <code>onRmsChanged</code> 按语音活动状态近似.</li>
-<li>语言与热词的处理同 <a href="#speech_10">系统语音输入</a>.</li>
+<li>语言与热词的处理同 <a href="#speech_12">系统语音输入</a>.</li>
 <li>错误码: 调用方或插件没有麦克风权限为 <code>ERROR_INSUFFICIENT_PERMISSIONS</code>, 麦克风被听写占用为 <code>ERROR_RECOGNIZER_BUSY</code>, 录音失败为 <code>ERROR_AUDIO</code>, Intent 中的选项无效或调用方自带音频 (<code>EXTRA_AUDIO_SOURCE</code>) 为 <code>ERROR_CLIENT</code>, 没有模型及其他失败为 <code>ERROR_SERVER</code>, 超时前没有语音为 <code>ERROR_SPEECH_TIMEOUT</code>, 其他没有文字的结束为 <code>ERROR_NO_MATCH</code>.</li>
 <li>调用方自身须持有麦克风权限; Android 12 及以上录音归属于调用方.</li>
 <li>&quot;作为系统语音输入&quot; 开关不影响识别服务.</li>
 </ul>
 <h2>示例 (Examples)<span><a class="mark" href="#speech_examples" id="speech_examples">#</a></span></h2>
-<h3>听写到文件<span><a class="mark" href="#speech_14" id="speech_14">#</a></span></h3>
+<h3>听写到文件<span><a class="mark" href="#speech_16" id="speech_16">#</a></span></h3>
 <pre><code class="lang-js">let session = speech.listen({ silenceEndMillis: 1500, maxDurationMillis: 60000 });
 session.on(&#39;final&#39;, e =&gt; files.append(&#39;./dictation.txt&#39;, e.text + &#39;\n&#39;));
 session.on(&#39;error&#39;, e =&gt; console.error(e.code, e.message));
@@ -1846,7 +2204,7 @@ session.on(&#39;ready&#39;, () =&gt; {
 session.on(&#39;final&#39;, e =&gt; console.log(e.text));
 session.on(&#39;end&#39;, e =&gt; console.log(e.reason, session.result()));
 </code></pre>
-<h3>处理缺少模型或权限<span><a class="mark" href="#speech_15" id="speech_15">#</a></span></h3>
+<h3>处理缺少模型或权限<span><a class="mark" href="#speech_17" id="speech_17">#</a></span></h3>
 <pre><code class="lang-js">try {
     let session = speech.listen();
     session.on(&#39;end&#39;, e =&gt; console.log(session.result()));
