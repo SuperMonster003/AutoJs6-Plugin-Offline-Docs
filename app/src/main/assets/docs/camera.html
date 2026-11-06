@@ -683,6 +683,7 @@ events.on(&#39;exit&#39;, () =&gt; session.close());
 <li><code>flashMode</code>: 拍照的闪光模式, 默认 <code>&quot;auto&quot;</code>.</li>
 </ul>
 <p>在 UI 线程上调用时立即返回, 会话在后台连接 (见 <a href="#camera_2">线程与调用形式</a>); 在其他线程上会话打开后才返回. 会话在 <a href="#camera_m_close">close</a>, 脚本结束或插件关闭它时结束; 脚本结束时 AutoJs6 自动关闭会话.</p>
+<p>AutoJs6 在后台或手机停在锁屏时 (Android 11 及以上), 系统不允许插件使用相机: <code>open</code> 照常返回会话, 但收不到帧, 会话先触发 <code>CAMERA_DISABLED</code> 的 <code>&quot;error&quot;</code> 事件, 再以原因 <code>policy</code> 关闭. 需要在后台取帧时, 在 AutoJs6 位于前台时打开会话, 已打开的会话在 AutoJs6 退到后台或熄屏后照常出帧.</p>
 <h2>[m] capture<span><a class="mark" href="#camera_m_capture" id="camera_m_capture">#</a></span></h2>
 <h3>camera.capture(options?)<span><a class="mark" href="#camera_camera_capture_options" id="camera_camera_capture_options">#</a></span></h3>
 <p><strong><code>6.8.1</code></strong></p>
@@ -765,7 +766,7 @@ if (shot === null) toastLog(&#39;已取消&#39;);
 </tr>
 <tr>
 <td><code>CAMERA_DISABLED</code></td>
-<td>当前不允许使用相机: 后台无相机能力, 设备策略或系统的相机隐私开关</td>
+<td>当前不允许使用相机: AutoJs6 在后台或锁屏时打开会话 (以会话的 <code>&quot;error&quot;</code> 事件报告, 随后以 <code>policy</code> 关闭), 设备策略或系统的相机隐私开关</td>
 </tr>
 <tr>
 <td><code>UI_REQUIRES_FOREGROUND</code></td>
@@ -1007,7 +1008,7 @@ session.analyze((img) =&gt; {
 <tr>
 <td><code>error</code></td>
 <td><code>(err)</code></td>
-<td>不结束会话的失败, 以及 UI 线程上排队调用的失败, <code>err</code> 为 <a href="#camera_c_cameraerror">CameraError</a></td>
+<td>不结束会话的失败, UI 线程上排队调用的失败, 以及会话因相机被禁用而以 <code>policy</code> 关闭之前的 <code>CAMERA_DISABLED</code>, <code>err</code> 为 <a href="#camera_c_cameraerror">CameraError</a></td>
 </tr>
 <tr>
 <td><code>close</code></td>
@@ -1016,7 +1017,7 @@ session.analyze((img) =&gt; {
 </tr>
 </tbody>
 </table>
-<p>关闭原因 <code>reason</code>: <code>script</code> (<a href="#camera_m_close">close</a> 或脚本结束), <code>pluginUi</code> (插件的取景页接管了相机, 监听器执行后脚本被停止), <code>cameraDisconnected</code> (镜头断开), <code>policy</code> (系统策略禁止使用相机), <code>error</code> (打开失败或插件进程退出), <code>host</code> (AutoJs6 结束了会话, 如插件被停用).</p>
+<p>关闭原因 <code>reason</code>: <code>script</code> (<a href="#camera_m_close">close</a> 或脚本结束), <code>pluginUi</code> (插件的取景页接管了相机, 监听器执行后脚本被停止), <code>cameraDisconnected</code> (镜头断开), <code>policy</code> (系统不允许使用相机, 如 AutoJs6 在后台或锁屏时打开的会话; 关闭前先触发 <code>CAMERA_DISABLED</code> 的 <code>&quot;error&quot;</code> 事件), <code>error</code> (打开失败或插件进程退出), <code>host</code> (AutoJs6 结束了会话, 如插件被停用).</p>
 <pre><code class="lang-js">let session = camera.open({ facing: &#39;front&#39; });
 session.on(&#39;dropped&#39;, (count) =&gt; console.log(&#39;丢帧&#39;, count));
 session.on(&#39;close&#39;, (reason) =&gt; console.log(&#39;会话结束:&#39;, reason));

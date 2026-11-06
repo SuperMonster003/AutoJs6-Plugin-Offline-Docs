@@ -2382,6 +2382,13 @@ importClass(
 <li><code>root</code>: 使用 Root Shell.</li>
 </ul>
 <p>模式也可写为 <code>{ by: &quot;shizuku&quot; }</code> 或 <code>{ mode: &quot;root&quot; }</code>.</p>
+<p><code>a11y</code> 模式的结果由无障碍服务收到的窗口事件维护, 不进行轮询; 设置了 <code>useUsageStats</code> 或 <code>useShell</code> 标志时以相应来源为准 (参阅 <a href="automator.html#automator_m_setflags">auto.setFlags</a>). 维护规则如下:</p>
+<ul>
+<li>窗口状态事件 (<code>window_state_changed</code>) 的窗口已失去输入焦点或已关闭时, 该事件不更新结果 (<strong><code>6.8.0</code></strong>). 从最近任务回到应用后桌面补发的事件因此不会把结果改回桌面</li>
+<li>系统窗口列表中持有输入焦点的窗口变化时, 结果随即切换为该窗口此前记录的包名与 Activity, 不等待它再发事件 (<strong><code>6.8.1</code></strong>). 该窗口从未记录过时 (事件被漏掉或被拒绝), 包名取自其根节点, Activity 为空字符串, 直到它的窗口状态事件到达</li>
+<li>列表中没有焦点窗口 (如切换动画期间) 时结果不变</li>
+</ul>
+<p>因此从应用返回桌面, 从最近任务返回应用, 或关闭对话框回到页面时, 结果一般先于相应窗口自己的事件更新. 在 <a href="automator.html#automator_m_registerevent">auto.registerEvent</a> 的监听器中调用本方法, 得到的结果已包含触发该监听器的窗口事件 (<strong><code>6.8.1</code></strong>). 以无障碍事件自行判定前台应用, 以及区分桌面本体与最近任务的方式, 参阅 <a href="automator.html#automator_foreground_app">前台应用的判定</a>.</p>
 <h2>[m] currentActivity<span><a class="mark" href="#global_m_currentactivity" id="global_m_currentactivity">#</a></span></h2>
 <h3>currentActivity(mode?)<span><a class="mark" href="#global_currentactivity_mode" id="global_currentactivity_mode">#</a></span></h3>
 <p><strong><code>Global</code></strong> <strong><code>A11Y?</code></strong></p>

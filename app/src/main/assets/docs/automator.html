@@ -487,6 +487,7 @@
 <li><span class="stability_undefined"><a href="#automator_auto_currentpackage">auto.currentPackage()</a></span></li>
 <li><span class="stability_undefined"><a href="#automator_auto_currentactivity">auto.currentActivity()</a></span></li>
 <li><span class="stability_undefined"><a href="#automator_auto_currentcomponent">auto.currentComponent()</a></span></li>
+<li><span class="stability_undefined"><a href="#automator_foreground_app">前台应用的判定 (Foreground app)</a></span></li>
 <li><span class="stability_undefined"><a href="#automator_m_clearcache">[m] clearCache</a></span><ul>
 <li><span class="stability_undefined"><a href="#automator_clearcache">clearCache()</a></span></li>
 </ul>
@@ -1762,6 +1763,62 @@ console.log(state.hasService, state.isOperational);
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 最近识别的前台组件名称, 未识别时为空字符串</li>
 </ul>
 <p>包名和 Activity 名称均可用时返回 <code>packageName/activityName</code>, 否则返回空字符串.</p>
+<h2>前台应用的判定 (Foreground app)<span><a class="mark" href="#automator_foreground_app" id="automator_foreground_app">#</a></span></h2>
+<p><strong><code>6.8.1</code></strong> <strong><code>A11Y</code></strong></p>
+<p><a href="global.html#global_m_currentpackage">currentPackage</a> / <a href="global.html#global_m_currentactivity">currentActivity</a> 的 <code>a11y</code> 模式以窗口状态事件与系统窗口列表的焦点变化维护前台组件, 已失去焦点或已关闭的窗口补发的事件不会覆盖结果, 焦点切回此前见过的窗口时随即恢复其记录 (维护规则见 <a href="global.html#global_m_currentpackage">currentPackage(mode?)</a>). 需要在脚本中借助 <a href="#automator_m_registerevent">registerEvent</a> 判定 &quot;是否回到桌面&quot; 时, 系统的无障碍事件有三点需要留意 <em><a href="http://issues.autojs6.com/585"><code>issue #585</code></a></em>:</p>
+<ol>
+<li>桌面本体与最近任务共用包名. 最近任务 (Recents) 通常由桌面应用提供, 两者的事件只在类名上有差别, 且类名因 ROM 而异 (如同为 <code>com.android.launcher</code> 包的 <code>com.android.launcher.Launcher</code> 与 <code>android.widget.ListView</code>), 只按包名判断会把打开最近任务误判为回到桌面.</li>
+<li>桌面的事件可能晚于应用的事件到达. 从最近任务点击卡片回到应用后, 桌面的窗口事件仍可能持续补发数秒, 此时事件的 <code>packageName</code> 并不是真实前台. 事件到达的先后本身就是信号: 应用的事件在后, 说明应用已接管. 监听器中读取 <code>currentPackage()</code> 即可避开, 它只在事件窗口确实持有焦点时更新 (<strong><code>6.8.1</code></strong> 起在监听器中读取到的结果已包含触发它的事件).</li>
+<li>无法匹配时不判定. 类名既不像桌面本体也不像最近任务时, 保持上一次的结论, 不要强行判定. 以 Launcher3 为基础的桌面 (如 Pixel 的 Quickstep) 的最近任务与桌面本体是同一个 Activity, 类名无法区分, 此时只能确定 &quot;已离开应用&quot;, 不能确定 &quot;回到桌面本体&quot;.</li>
+</ol>
+<p>桌面应用的包名用 PackageManager 查询, 不要写死: 各 ROM 的包名不同, 用户也可能更换桌面.</p>
+<pre><code class="lang-js">auto();
+
+/* 已安装的桌面应用包名. 系统设置中的后备桌面 (FallbackHome) 优先级为负, 不计入. */
+let launcherPackages = (() =&gt; {
+    let Intent = android.content.Intent;
+    let intent = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME);
+    let list = context.getPackageManager().queryIntentActivities(intent, 0);
+    let packages = [];
+    for (let i = 0; i &lt; list.size(); i += 1) {
+        let info = list.get(i);
+        if (info.priority &gt;= 0) {
+            packages.push(String(info.activityInfo.packageName));
+        }
+    }
+    return packages;
+})();
+
+let isHomeClass = cls =&gt; /(^|\.)(\w*Launcher\w*|\w*Home\w*|Workspace)$/.test(cls);
+let isRecentsClass = cls =&gt; /Recents|Quickstep|Overview|TaskView|RecentApps/i.test(cls);
+
+let isOnHome = false;
+
+auto.registerEvent(&#39;window_state_changed&#39;, e =&gt; {
+    let pkg = String(e.packageName || &#39;&#39;);
+    let cls = String(e.className || &#39;&#39;);
+    if (!launcherPackages.includes(pkg)) {
+        if (pkg === currentPackage()) {
+            isOnHome = false; /* 应用已持有焦点. */
+        }
+        return;
+    }
+    if (currentPackage() !== pkg) {
+        return; /* 桌面的迟到事件, 焦点已在别的应用. */
+    }
+    if (isRecentsClass(cls)) {
+        isOnHome = false; /* 最近任务, 不算回到桌面. */
+    } else if (isHomeClass(cls)) {
+        isOnHome = true;
+    }
+    /* 其他类名 (如弹窗, 列表) 无法判定, 保持上一次的结论. */
+    console.log(`${pkg} / ${cls} -&gt; ${isOnHome ? &#39;桌面&#39; : &#39;非桌面&#39;}`);
+});
+
+events.on(&#39;exit&#39;, () =&gt; auto.removeEvent(&#39;window_state_changed&#39;));
+setInterval(() =&gt; void 0, 1e3); /* 保持脚本运行. */
+</code></pre>
+<p>只需要知道 &quot;当前是否在某个应用内&quot; 而不关心桌面本体与最近任务的区别时, 省去类名判断, 比较 <code>launcherPackages.includes(currentPackage())</code> 即可. 需要更早得到焦点变化时可同时监听 <code>windows_changed</code> 事件, 它由系统在窗口列表变化时发出, 不依赖桌面应用自身是否发送事件.</p>
 <h2>[m] clearCache<span><a class="mark" href="#automator_m_clearcache" id="automator_m_clearcache">#</a></span></h2>
 <h3>clearCache()<span><a class="mark" href="#automator_clearcache" id="automator_clearcache">#</a></span></h3>
 <p><strong><code>6.6.0</code></strong></p>
