@@ -536,6 +536,10 @@
 <li><span class="stability_undefined"><a href="#console_clear">clear()</a></span></li>
 </ul>
 </li>
+<li><span class="stability_undefined"><a href="#console_p_restoredentrycount">[p] restoredEntryCount</a></span><ul>
+<li><span class="stability_undefined"><a href="#console_restoredentrycount">restoredEntryCount</a></span></li>
+</ul>
+</li>
 <li><span class="stability_undefined"><a href="#console_m_print">[m] print</a></span><ul>
 <li><span class="stability_undefined"><a href="#console_print_data_args">print(data, ...args)</a></span></li>
 </ul>
@@ -602,10 +606,10 @@
 </tr>
 <tr>
 <td>状态</td>
-<td>已支持 65 项</td>
-<td>已支持 65 项</td>
-<td>已支持 65 项</td>
-<td>需授权 65 项</td>
+<td>已支持 66 项</td>
+<td>已支持 65 项, 待补 1 项</td>
+<td>已支持 65 项, 待补 1 项</td>
+<td>需授权 65 项, 待补 1 项</td>
 </tr>
 <tr>
 <td>授权</td>
@@ -616,7 +620,25 @@
 </tr>
 </tbody>
 </table>
-<p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
+<p>差异项 (1 项): 下表列出入口, 状态或授权与同列多数 API 不同的 API, 未列出的 API 与同列多数一致.</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Node.js 主线程</th>
+<th>Node.js Worker</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>console.restoredEntryCount</code></td>
+<td><span title="pending">待补</span></td>
+<td><span title="pending">待补</span></td>
+<td><span title="pending">待补</span></td>
+</tr>
+</tbody>
+</table>
 <p>返回对象 (1 个): 本页说明的对象的成员状态, 每个对象一行.</p>
 <table>
 <thead>
@@ -1647,6 +1669,14 @@ console.setBackgroundAlpha(-1).show(); /* 同上. */
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="console.html">this</a></span> }</li>
 </ul>
 <p>清空控制台日志内容.</p>
+<h2>[p] restoredEntryCount<span><a class="mark" href="#console_p_restoredentrycount" id="console_p_restoredentrycount">#</a></span></h2>
+<h3>restoredEntryCount<span><a class="mark" href="#console_restoredentrycount" id="console_restoredentrycount">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Getter</code></strong> <strong><code>READONLY</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> }</li>
+</ul>
+<p>控制台从 AutoJs6 上一个进程恢复的日志条目数. AutoJs6 自 6.8.1 起把日志页 (进程级的全局控制台) 的条目保存在应用私有目录 (至多 2000 条或 1 MB), 被系统结束后重新启动时, 日志页把这些条目恢复在本进程的条目之前: 读取期间为 <code>null</code>, 读取完成后为恢复的条数, 没有可恢复的条目时为 <code>0</code>. 清空日志页的同时删除保存的条目.</p>
+<p>只有全局控制台恢复条目. 脚本中的 <code>console</code> 是该脚本自己的控制台 (它的输出同时转发给全局控制台), 因此在脚本中读取本属性始终得到 <code>0</code>. 恢复的条目只在日志页显示, 不会出现在 MCP 与 Node.js / Bun 的控制台尾随读取中.</p>
 <h2>[m] print<span><a class="mark" href="#console_m_print" id="console_m_print">#</a></span></h2>
 <h3>print(data, ...args)<span><a class="mark" href="#console_print_data_args" id="console_print_data_args">#</a></span></h3>
 <p><strong><code>Global</code></strong> <strong><code>DEPRECATED</code></strong></p>

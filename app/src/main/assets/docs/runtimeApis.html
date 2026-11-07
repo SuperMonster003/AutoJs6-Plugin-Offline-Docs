@@ -1049,6 +1049,7 @@ try {
 <h2>Node.js 录屏与音频<span><a class="mark" href="#runtimeapis_node_js_3" id="runtimeapis_node_js_3">#</a></span></h2>
 <p><strong><code>Async</code></strong></p>
 <p><code>screen_recorder</code> / <code>autojs6:screen_recorder</code> 在主线程和 CJS/ESM/嵌套 Worker 中提供同一组方法. 先通过 <code>images.requestScreenCapture()</code> 或 <code>media_projection.requestScreenCapture()</code> 完成 Android 授权. <code>screen_capture</code> 是必要的执行能力; 有声录屏另需 <code>media</code> 和 <code>media.recording</code>, 并要求宿主具有 Android RECORD_AUDIO 权限. 原始 <code>autojs6:bridge</code> 调用同样执行这些检查.</p>
+<p>Node.js 的 <code>images.requestScreenCapture()</code> 以一次普通桥接调用等待用户确认, 受桥接调用 30 秒的等待上限约束: 用户 30 秒内没有在系统对话框中确认时, 调用以 <code>ERR_AUTOJS6_BRIDGE_TIMEOUT</code> 失败, 对话框随之关闭. 需要录屏的脚本应提示用户及时确认, 失败后可以重新调用. AutoJs6 6.8.1 起 Node.js 与 Bun 还可以使用 <a href="video.html">视频 (Video)</a> 与 <a href="audio.html">音频 (Audio)</a> 模块 (<code>autojs6:video</code> / <code>autojs6:audio</code>, Bun 为 <code>host.video</code> / <code>host.audio</code>), 其录屏与内录同样先经过这一步, 见 <a href="video.html#video_node_js_bun">Node.js 与 Bun</a>.</p>
 <table>
 <thead>
 <tr>

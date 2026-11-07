@@ -353,6 +353,12 @@
 </li>
 <li><p><code>新增</code> <a href="alarms.html">闹钟 (Alarms)</a>: 3-Chime Alarm 插件提供的 alarms 模块 (AutoJs6 6.8.1), 包括闹钟的新建, 查询, 修改与删除, 重复规则 (RRULE 子集与常见写法), 铃声, 振动与朗读, 响铃处理, 事件监听与登记脚本 (execArgv.alarm, currentEvent), 以及不需要插件的 alarms.system (系统时钟 Intent 与各时钟应用的已知差异); 页首说明脚本可以读写用户在插件界面建的闹钟, 以及 ColorOS 上要在 &quot;自动启动&quot; 列表中为插件与 AutoJs6 打开开关; <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
 </li>
+<li><p><code>新增</code> <a href="video.html">视频 (Video)</a> 与 <a href="audio.html">音频 (Audio)</a>: AutoJs6 自带的录屏与录音 (video.record, audio.record), 以及 3-Slate Studio 插件提供的视频与音频加工 (AutoJs6 6.8.1), 包括裁剪, 拼接, 变速, 缩放 / 旋转 / 裁切, 叠加, 抽帧与 GIF, 转码, 混音, 音量与格式转换, 多轨时间线合成 (转场, 叠加与字幕) 与字幕烧录; 页首说明默认输出位置, 插件的 &quot;所有文件访问&quot; 权限 (video.frame 同样需要), 同步与 Async 形态, 进度与取消, Node.js 与 Bun 的用法, 以及计划中的 FFmpeg 命令透传与第三方 FFmpeg 插件的对应写法; 新页 <a href="threeSlateStudio.html">3-Slate Studio</a> 介绍插件的安装, 权限, 界面 (媒体库, 工具箱, 时间线剪辑器, 录音) 与代码生成, 以及计划中的 FFmpeg 大库; <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
+</li>
+<li><p><code>更新</code> <a href="console.html#console_p_restoredentrycount">控制台 (Console)</a>: 补充 restoredEntryCount 属性, 即日志页从 AutoJs6 上一个进程恢复的日志条目数 (读取期间为 null), 脚本中的 console 读取始终为 0 (AutoJs6 6.8.1)</p>
+</li>
+<li><p><code>更新</code> <a href="runtimeApis.html#runtimeapis_node_js_3">运行时 API (Runtime APIs)</a>: 说明 Node.js 的 images.requestScreenCapture 受桥接调用 30 秒等待上限约束 (超时以 ERR_AUTOJS6_BRIDGE_TIMEOUT 失败, 授权对话框随之关闭), 并给出 video 与 audio 模块在 Node.js 与 Bun 中的入口</p>
+</li>
 <li><p><code>更新</code> <a href="automator.html#automator_restricted_settings">自动化 (Automator)</a>: &quot;受限设置&quot; 一节补充 AutoJs6 已获得 Shizuku 或 Root 权限时经其 Shell 核实实际受限状态, 以及说明对话框中的 &quot;用 Shizuku 解除&quot; / &quot;用 Root 解除&quot; 按钮 (解除后直接启用无障碍服务) (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="ai.html#ai_agent">AI</a>: 说明 3-Stove Agent 1.4.1 起在任务台点 &quot;连接 AutoJs6&quot; 而请求因 AutoJs6 未在运行没有送达时会打开 AutoJs6 完成连接, 自动连接不切换 (AutoJs6 6.8.1)</p>
