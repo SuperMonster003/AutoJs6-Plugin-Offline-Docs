@@ -953,7 +953,7 @@ console.log(v.versionName, v.contractVersion, v.ops.join(&#39;, &#39;));
 <li>需要截图会话: 先调用 <a href="image.html#image_m_images_requestscreencapture_options">images.requestScreenCapture</a>, 否则失败于 <code>PERMISSION_DENIED</code>. 录制期间 <a href="image.html#image_m_images_capturescreen">images.captureScreen</a> 照常可用, 它返回录屏中的当前画面, 不额外申请授权.</li>
 <li>同一脚本同时只能有一个录屏, 第二个失败于 <code>LIMIT_EXCEEDED</code>.</li>
 <li>省略 <code>width</code> / <code>height</code> 时按设备编码器能力取默认尺寸: 截图尺寸向下取到编码器要求的对齐倍数, 超出编码器上限时等比缩小 (例如 720 x 1650 的屏幕在要求 16 对齐的编码器上录成 720 x 1648). 显式给出的尺寸不受支持时失败于 <code>INVALID_OPTIONS</code>, 消息给出最接近的可用尺寸.</li>
-<li>录制声音 (<code>audio</code> 不为 <code>none</code>) 需要 AutoJs6 的麦克风权限; 内录 (<code>playback</code> / <code>mixed</code>) 需要 Android 10 及以上, 不允许被录制的应用的声音为静音.</li>
+<li>录制声音 (<code>audio</code> 不为 <code>none</code>) 需要 AutoJs6 的麦克风权限, 缺少时先弹出系统授权对话框, 规则同 <a href="audio.html#audio_1">audio.record</a>; 内录 (<code>playback</code> / <code>mixed</code>) 需要 Android 10 及以上, 不允许被录制的应用的声音为静音.</li>
 <li>文件先以临时名写在目标旁边, 保存时才移入, 因此取消或失败的录制不留下文件; 显式输出已存在时为 <code>IO_ERROR</code>.</li>
 <li>脚本停止时正在进行的录屏自动停止并保存. <code>maxDuration</code> 到时自动停止并保存.</li>
 </ul>
@@ -2240,7 +2240,7 @@ video.subtitles.write(&#39;/sdcard/Movies/a.ass&#39;, cues);
 </tr>
 <tr>
 <td><code>PERMISSION_DENIED</code></td>
-<td>录制缺少截图会话, 或麦克风权限被拒绝</td>
+<td>录制缺少截图会话, 或麦克风权限被拒绝或无法弹出授权对话框</td>
 </tr>
 <tr>
 <td><code>INTERNAL_ERROR</code></td>

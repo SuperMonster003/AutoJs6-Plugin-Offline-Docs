@@ -517,6 +517,7 @@ console.log(out.path, out.durationMillis);
 <p><a href="#audio_m_record">audio.record</a> 在 AutoJs6 进程中录音, 与 <a href="video.html#video_m_record">video.record</a> 共用同一个录制内核.</p>
 <ul>
 <li>音源 <code>source</code>: <code>mic</code> / <code>microphone</code> (默认), <code>playback</code> (内录, 录制其他应用播放的声音), <code>mixed</code> (麦克风与内录混在一条音轨). 三者都需要 AutoJs6 的麦克风权限; <code>playback</code> 与 <code>mixed</code> 另需 Android 10 及以上, 并像录屏一样需要截图会话, 先调用 <a href="image.html#image_m_images_requestscreencapture_options">images.requestScreenCapture</a>, 否则失败于 <code>PERMISSION_DENIED</code>. 不允许被录制的应用的声音为静音.</li>
+<li>缺少麦克风权限时, AutoJs6 先弹出系统授权对话框并等待用户选择, 允许后照常开始录音. 用户拒绝, 或对话框无法弹出 (AutoJs6 没有前台界面且系统禁止从后台弹出界面, 如脚本在后台运行时) 时, 录音失败于 <code>PERMISSION_DENIED</code>, 此时需在系统设置中为 AutoJs6 授予麦克风权限. 对话框须在 5 秒内出现, 用户作答不限时, 脚本停止时等待随之结束.</li>
 <li>格式为 M4A (AAC) 或 WAV (PCM 16 位), 省略 <code>format</code> 时随输出扩展名, 都没有时为 M4A. 麦克风默认 48 kHz 单声道 128 kbit/s, 内录与混合默认 48 kHz 立体声 192 kbit/s.</li>
 <li>文件先以临时名写在目标旁边, 保存时才移入; 取消或失败的录音不留下文件. 显式输出已存在时为 <code>IO_ERROR</code>, 除非 <code>overwrite</code> 为 <code>true</code>.</li>
 <li>脚本停止时正在进行的录音自动停止并保存.</li>
