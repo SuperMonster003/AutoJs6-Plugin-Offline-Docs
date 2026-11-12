@@ -328,6 +328,7 @@
 <li><span class="stability_undefined"><a href="#app_app_launchapp_appname">app.launchApp(appName)</a></span></li>
 <li><span class="stability_undefined"><a href="#app_app_launch_packagename">app.launch(packageName)</a></span></li>
 <li><span class="stability_undefined"><a href="#app_app_launchpackage_packagename">app.launchPackage(packageName)</a></span></li>
+<li><span class="stability_undefined"><a href="#app_launch_failures">启动失败或界面未打开 (Launch failures)</a></span></li>
 <li><span class="stability_undefined"><a href="#app_m_launchdual">[m] launchDual</a></span><ul>
 <li><span class="stability_undefined"><a href="#app_launchdual_app">launchDual(app)</a></span></li>
 </ul>
@@ -515,25 +516,40 @@
 </ul>
 </div><p>AutoJs6 版本名称, 例如 &quot;3.0.0 Beta&quot;.</p>
 <h2>app.launchApp(appName)<span><a class="mark" href="#app_app_launchapp_appname" id="app_app_launchapp_appname">#</a></span></h2>
-<div class="signature"><ul>
-<li><strong>appName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 应用名称</li>
+<p><strong><code>Global</code></strong></p>
+<ul>
+<li><strong>appName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="appType.html">App</a></span> } - 应用显示名, 预设别名或应用枚举</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否已找到应用并提交启动请求</li>
 </ul>
-</div><p>通过应用名称启动应用. 如果该名称对应的应用不存在, 则返回 false; 否则返回 true. 如果该名称对应多个应用, 则只启动其中某一个.</p>
-<p>该函数也可以作为全局函数使用.</p>
-<pre><code>launchApp(&quot;AutoJs6&quot;);
-</code></pre><h2>app.launch(packageName)<span><a class="mark" href="#app_app_launch_packagename" id="app_app_launch_packagename">#</a></span></h2>
-<div class="signature"><ul>
-<li><strong>packageName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 应用包名</li>
+<p>按应用显示名启动应用. 预设别名和应用枚举先对应到其应用. 找不到该名称的应用, 或找到的应用没有启动入口时返回 <code>false</code>; 名称对应多个应用时只启动其中一个.</p>
+<p>返回 <code>true</code> 只表示启动请求已提交, 界面是否打开见 <a href="#app_launch_failures">启动失败或界面未打开</a>.</p>
+<pre><code class="lang-js">launchApp(&quot;AutoJs6&quot;);
+</code></pre>
+<h2>app.launch(packageName)<span><a class="mark" href="#app_app_launch_packagename" id="app_app_launch_packagename">#</a></span></h2>
+<p><strong><code>Global</code></strong></p>
+<ul>
+<li><strong>packageName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="appType.html">App</a></span> } - 应用包名, 预设别名或应用枚举</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否已找到启动入口并提交启动请求</li>
 </ul>
-</div><p>通过应用包名启动应用. 如果该包名对应的应用不存在, 则返回 false; 否则返回 true.</p>
-<p>该函数也可以作为全局函数使用.</p>
-<pre><code>// 启动微信.
+<p>按应用包名启动应用. 预设别名和应用枚举先转换为对应包名. 应用未安装, 当前应用看不到它, 或它没有启动入口 (没有桌面图标或已停用) 时返回 <code>false</code>.</p>
+<p>返回 <code>true</code> 只表示启动请求已提交, 界面是否打开见 <a href="#app_launch_failures">启动失败或界面未打开</a>.</p>
+<pre><code class="lang-js">/* 启动微信. */
 launch(&quot;com.tencent.mm&quot;);
-</code></pre><h2>app.launchPackage(packageName)<span><a class="mark" href="#app_app_launchpackage_packagename" id="app_app_launchpackage_packagename">#</a></span></h2>
-<div class="signature"><ul>
-<li><strong>packageName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 应用包名</li>
+</code></pre>
+<h2>app.launchPackage(packageName)<span><a class="mark" href="#app_app_launchpackage_packagename" id="app_app_launchpackage_packagename">#</a></span></h2>
+<p><strong><code>Global</code></strong></p>
+<ul>
+<li><strong>packageName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="appType.html">App</a></span> } - 应用包名, 预设别名或应用枚举</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否已找到启动入口并提交启动请求</li>
 </ul>
-</div><p>相当于 <code>app.launch(packageName)</code>.</p>
+<p>等同于 <a href="#app_app_launch_packagename">app.launch(packageName)</a>.</p>
+<h2>启动失败或界面未打开 (Launch failures)<span><a class="mark" href="#app_launch_failures" id="app_launch_failures">#</a></span></h2>
+<p><a href="#app_app_launch_packagename">app.launch</a>, <a href="#app_app_launchpackage_packagename">app.launchPackage</a> 与 <a href="#app_app_launchapp_appname">app.launchApp</a> 在以下情况下返回 <code>false</code>, 或返回 <code>true</code> 但界面没有打开. <strong><code>6.8.1</code></strong> 起, 这些情况会在控制台输出警告, 说明原因与处理办法, 返回值不变.</p>
+<ul>
+<li>包可见性 (Android 11 及以上): 应用只能看到声明过的应用. AutoJs6 声明了 QUERY_ALL_PACKAGES, 能看到所有应用; 打包应用只有在打包页勾选 QUERY_ALL_PACKAGES 时才能看到所有应用, <strong><code>6.8.1</code></strong> 起不勾选也能看到有桌面图标的应用. 看不到的应用如同未安装: 启动返回 <code>false</code>, <a href="#app_m_isinstalled">app.isInstalled</a> 返回 <code>false</code>, <a href="#app_app_getpackagename_name">app.getPackageName</a> 返回 <code>null</code>. 需要操作没有桌面图标的应用, 或使用 6.8.0 及之前版本打包时, 在打包页勾选 QUERY_ALL_PACKAGES 后重新打包.</li>
+<li>后台启动限制 (Android 10 及以上): 应用在后台时, 系统可能拦截它打开界面的请求, 此时返回 <code>true</code> 但界面不打开. 授予 &quot;显示在其他应用的上层&quot; 权限或开启该应用的无障碍服务后可从后台启动; MIUI / HyperOS 还需要允许 &quot;后台弹出界面&quot;.</li>
+<li>脚本已停止: 首行调用的 <a href="automator.html#automator_auto_mode">auto()</a> 在无障碍服务未开启时会停止脚本, 之后的启动语句不会执行. 打包应用使用它自己的无障碍服务, 参阅 <a href="automator.html#automator_m_auto_waitfor">auto.waitFor</a>.</li>
+</ul>
 <h2>[m] launchDual<span><a class="mark" href="#app_m_launchdual" id="app_m_launchdual">#</a></span></h2>
 <h3>launchDual(app)<span><a class="mark" href="#app_launchdual_app" id="app_launchdual_app">#</a></span></h3>
 <p><strong><code>6.6.0</code></strong> <strong><code>Global</code></strong></p>

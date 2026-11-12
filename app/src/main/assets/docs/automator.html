@@ -1905,6 +1905,22 @@ auto.registerEvent(&#39;view_scrolled&#39;, e =&gt; console.log(&#39;滚动结�
 </ul>
 </div><p>尝试启动无障碍服务并阻塞等待服务绑定. 必要时引导用户进入无障碍设置. 超时仍未绑定会中断脚本. 此方法不等待服务进入 <code>isOperational</code> 状态, 也不同于返回 Flow 的条件等待 <code>auto.wait(cond, ...)</code>.</p>
 <p>应在工作线程调用; UI 模式中使用非阻塞入口或将等待放到工作线程.</p>
+<p>打包应用使用它自己的无障碍服务, 在系统 &quot;无障碍&quot; 设置里显示为打包应用的名称, 与 AutoJs6 的服务分别开启. <strong><code>6.8.1</code></strong> 起, 引导进入设置页时的提示也使用当前应用的名称.</p>
+<p>&quot;ui&quot; 脚本不要在首行调用 <a href="#automator_auto_mode">auto()</a> 或此方法: 服务未开启时 <code>auto()</code> 会停止脚本, 界面不会显示, 此方法则会阻塞界面线程. 先显示界面, 再在线程中等待:</p>
+<pre><code class="lang-js">&quot;ui&quot;;
+
+ui.layout(
+    &lt;vertical padding=&quot;16&quot;&gt;
+        &lt;text id=&quot;status&quot; text=&quot;正在等待无障碍服务...&quot;/&gt;
+    &lt;/vertical&gt;
+);
+
+threads.start(function () {
+    auto.waitFor();
+    ui.run(() =&gt; ui.status.setText(&quot;无障碍服务已开启&quot;));
+    app.launch(&quot;com.android.settings&quot;);
+});
+</code></pre>
 <h2>auto.setMode(mode)<span><a class="mark" href="#automator_auto_setmode_mode" id="automator_auto_setmode_mode">#</a></span></h2>
 <div class="signature"><ul>
 <li><strong>mode</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } 模式</li>
