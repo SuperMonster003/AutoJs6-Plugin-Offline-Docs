@@ -430,7 +430,7 @@
 <li>文件名固定为 <code>project.json</code>, 位于项目目录的根目录. 新建项目时 AutoJs6 自动生成该文件.</li>
 <li>在文件管理中进入项目目录后, 顶部的项目工具栏提供运行, 打包与编辑按钮. 编辑按钮打开项目配置页, 打包按钮打开打包页; 两个页面都会把修改写回 <code>project.json</code> (参阅 <a href="#projectconfig_3">保存时的行为</a>).</li>
 <li>运行项目时读取 <a href="#projectconfig_main">main</a>, <a href="#projectconfig_type">type</a>, <a href="#projectconfig_usefeatures">useFeatures</a>, <a href="#projectconfig_node">node</a> 与 <a href="#projectconfig_bun">bun</a> 的部分键; <a href="#projectconfig_agent">agent</a> 段用于把项目登记为 Agent 可调用的脚本.</li>
-<li>打包应用时读取 <a href="#projectconfig_name">name</a>, <a href="#projectconfig_packagename">packageName</a>, <a href="#projectconfig_versionname">versionName</a>, <a href="#projectconfig_versioncode">versionCode</a>, <a href="#projectconfig_icon">icon</a>, <a href="#projectconfig_abis">abis</a>, <a href="#projectconfig_libs">libs</a>, <a href="#projectconfig_permissions">permissions</a>, <a href="#projectconfig_signaturescheme">signatureScheme</a>, <a href="#projectconfig_excludedirs">excludeDirs</a>, <a href="#projectconfig_launchconfig">launchConfig</a> 与 <a href="#projectconfig_build">build</a>. <a href="#projectconfig_launchconfig">launchConfig</a> 只对打包应用起作用.</li>
+<li>打包应用时读取 <a href="#projectconfig_name">name</a>, <a href="#projectconfig_packagename">packageName</a>, <a href="#projectconfig_versionname">versionName</a>, <a href="#projectconfig_versioncode">versionCode</a>, <a href="#projectconfig_icon">icon</a>, <a href="#projectconfig_abis">abis</a>, <a href="#projectconfig_libs">libs</a>, <a href="#projectconfig_permissions">permissions</a>, <a href="#projectconfig_signaturescheme">signatureScheme</a>, <a href="#projectconfig_excludedirs">excludeDirs</a>, <a href="#projectconfig_launchconfig">launchConfig</a> 与 <a href="#projectconfig_build">build</a>. <a href="#projectconfig_launchconfig">launchConfig</a> 只对打包应用起作用. 打包应用运行时还读取 <a href="#projectconfig_usefeatures">useFeatures</a> (AutoJs6 6.8.1 起, 条件见该条).</li>
 <li>运行项目只要求 <a href="#projectconfig_name">name</a> 与 <a href="#projectconfig_main">main</a> 两项 (AutoJs6 6.8.1 起; 此前通过 VSCode 插件运行缺少 packageName, versionName 或 versionCode 的项目时, 项目会被判定为无效). 读不到有效配置 (例如缺少 name) 时, 普通 JavaScript 项目按默认的 <code>main.js</code> 运行, useFeatures 也不生效.</li>
 <li>打包还要求 <a href="#projectconfig_packagename">packageName</a>, <a href="#projectconfig_versionname">versionName</a> 与大于 0 的 <a href="#projectconfig_versioncode">versionCode</a>. 缺少 packageName 或 versionName 时, 项目工具栏不显示打包按钮.</li>
 </ul>
@@ -482,7 +482,7 @@
 <li>布尔类型的键只接受 JSON 布尔值 <code>true</code> / <code>false</code>, 不接受字符串 <code>&quot;true&quot;</code>. 值为 <code>null</code> 的键视为未写.</li>
 <li><a href="#projectconfig_node">node</a> 与 <a href="#projectconfig_bun">bun</a> 段内的键名区分大小写, 不支持别名与宽松写法.</li>
 <li><a href="#projectconfig_agent">agent</a> 段的键名必须写作小写 <code>agent</code>, 段内的键名区分大小写. 含有 agent 段的 <code>project.json</code> 必须是严格 JSON (不能有注释或末尾多余的逗号), 否则项目不会被登记.</li>
-<li><code>project.json</code> 不是合法 JSON 时, AutoJs6 先尝试修复常见的格式错误, 仍然失败时尽可能还原关键信息 (AutoJs6 6.6.1 起), 此时 name 为空则取项目目录名. 这一还原只识别部分键, 不能代替修正文件.</li>
+<li><code>project.json</code> 不是合法 JSON 时, AutoJs6 先尝试修复常见的格式错误, 仍然失败时尽可能还原关键信息 (AutoJs6 6.6.1 起), 此时 name 为空则取项目目录名. 这一还原只识别部分键, 不能代替修正文件. AutoJs6 6.8.1 起, 这一还原能识别 <a href="#projectconfig_launchconfig">launchConfig</a> 的全部键与别名 (此前用 showLogs, displayLogs, showSplash, hideSplash, showLauncher, hideLauncher, bootRun, bootAutoStart, autoStartOnBoot 或 splashText 写的值会被忽略, 按默认值处理).</li>
 </ul>
 </div><hr>
 <h2>保存时的行为<span><a class="mark" href="#projectconfig_3" id="projectconfig_3">#</a></span></h2>
@@ -721,7 +721,7 @@
 <li>别名: <code>useFeature</code>, <code>useFeatureList</code>, <code>features</code>, <code>feature</code>, <code>featureList</code></li>
 </ul>
 </div><p>为项目的脚本启用的特性. 目前只有 <code>&quot;continuation&quot;</code>, 启用后脚本顶层可以使用 <a href="asyncAwait.html#asyncawait_continuation">continuation.await</a> 等待 Promise (参阅 <a href="continuation.html">续体 (Continuation)</a>).</p>
-<p>在 AutoJs6 中运行项目时生效. 打包应用目前不读取此项 (截至 AutoJs6 6.8.1), 在打包应用中需要 continuation 的脚本暂时无法使用该特性.</p>
+<p>在 AutoJs6 中运行项目时生效. 打包应用也读取此项 (AutoJs6 6.8.1 起): 这项读取属于打包应用的运行时, 随 APK Builder Template 插件内含的 Runtime Kit 进入打包应用, 需要该 Runtime Kit 来自 AutoJs6 6.8.1 或更高版本. 用更早版本的插件打包时, 即使 AutoJs6 已是 6.8.1, 打包应用也不读取此项: 其中的脚本 <code>continuation.enabled</code> 为 <code>false</code>, 使用 continuation 等待时抛出异常. 已经打包好的应用不会随 AutoJs6 或插件升级而改变, 需要重新打包.</p>
 <hr>
 <h2>launchConfig<span><a class="mark" href="#projectconfig_launchconfig_1" id="projectconfig_launchconfig_1">#</a></span></h2>
 <p>打包应用的启动配置. 只对打包应用起作用, 在 AutoJs6 中运行项目时不读取. 打包页 &quot;运行配置&quot; 一节可以编辑全部 8 项.</p>
@@ -1142,7 +1142,7 @@ android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 <h3>agent 段写了, 但项目没有出现在 Agent 脚本目录中<span><a class="mark" href="#projectconfig_agent_agent" id="projectconfig_agent_agent">#</a></span></h3>
 <p>逐项检查: 键名是否为小写 <code>agent</code>; 文件是否为严格 JSON (没有注释和多余的逗号); agent 段是否只含 9 个允许的键; description 是否非空; id, risk, confirm, timeoutMs 与 parameters 是否符合 <a href="#projectconfig_agent_1">agent</a> 一节的约束.</p>
 <h3>打包应用中 continuation 不可用<span><a class="mark" href="#projectconfig_continuation" id="projectconfig_continuation">#</a></span></h3>
-<p>打包应用目前不读取 <a href="#projectconfig_usefeatures">useFeatures</a> (截至 AutoJs6 6.8.1). 在打包应用中运行的脚本可以改用 async 函数与 <code>await</code> (参阅 <a href="asyncAwait.html">async/await 与 continuation</a>).</p>
+<p>AutoJs6 6.8.1 起打包应用也读取 <a href="#projectconfig_usefeatures">useFeatures</a>. 仍不可用时, 检查打包时使用的 APK Builder Template 插件: 它内含的 Runtime Kit 需要来自 AutoJs6 6.8.1 或更高版本, 用更早版本的插件打包出的应用不读取 useFeatures (<code>continuation.enabled</code> 为 <code>false</code>). 升级插件后重新打包即可, 已经安装的打包应用不会自动改变. 不便重新打包时, 脚本可以改用 async 函数与 <code>await</code> (参阅 <a href="asyncAwait.html">async/await 与 continuation</a>).</p>
 <h3>assets 中列出的文件没有被打包<span><a class="mark" href="#projectconfig_assets_1" id="projectconfig_assets_1">#</a></span></h3>
 <p><a href="#projectconfig_assets">assets</a> 不起作用, 打包时整个项目目录都会进入打包应用. 文件没有出现在打包应用中时, 检查它是否位于 <a href="#projectconfig_excludedirs">excludeDirs</a> 列出的目录中.</p>
 

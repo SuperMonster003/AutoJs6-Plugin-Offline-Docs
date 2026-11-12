@@ -358,6 +358,8 @@
 </li>
 <li><p><code>新增</code> <a href="projectConfig.html">项目配置 (project.json)</a>: project.json 全部 46 个键 (顶层, launchConfig, build, node, bun 与 agent) 的类型, 默认值, 别名与作用, 运行项目与打包应用各自读取的键, 键名的宽松匹配与保存时的行为 (保留原键名, 删除未知键, 写出默认值, 键名冲突), 权限清单 (默认 13 项, 自定义清单替换默认清单, AutoJs6 6.8.1 起始终保留前台服务 2 项), 反向别名 (hideLogs 等在 6.8.1 之前打包时与写法相反, 每保存一次值也翻转一次) 与来自 AutoJs4 / AutoX 的键, 以及常见问题; <a href="qa.html#qa_17">疑难解答 (Q &amp; A)</a> 的示例改用 logsVisible, <a href="runtimeApis.html#runtimeapis_21">运行时 API (Runtime APIs)</a>, <a href="modules.html">模块 (Modules)</a> 与 <a href="asyncAwait.html">async/await 与 continuation</a> 等页增加该页链接 (AutoJs6 issue #594, #596)</p>
 </li>
+<li><p><code>更新</code> <a href="projectConfig.html#projectconfig_usefeatures">项目配置 (project.json)</a>: useFeatures 一节与常见问题 &quot;打包应用中 continuation 不可用&quot; 改为打包应用也读取 useFeatures, 需要用 6.8.1 或更高版本的 APK Builder Template 插件打包, 更早版本打包的应用不读取, 重新打包后生效; &quot;键名与读取规则&quot; 补充 project.json 无法解析时的还原能识别 launchConfig 的全部键与别名 (AutoJs6 6.8.1)</p>
+</li>
 <li><p><code>更新</code> <a href="plugins.html#plugins_3">插件 (Plugins)</a>: 补充 &quot;插件设置页入口&quot; 一节, 说明插件中心的插件设置页按 meta-data <code>org.autojs.plugin.SETTINGS_ACTION</code>, MCP Server 与 3-Shell Terminal 原有的设置页 action 的顺序打开插件自身的设置页, 以及 meta-data 的写法与对 Activity 的要求 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="console.html#console_p_restoredentrycount">控制台 (Console)</a>: 补充 restoredEntryCount 属性, 即日志页从 AutoJs6 上一个进程恢复的日志条目数 (读取期间为 null), 脚本中的 console 读取始终为 0 (AutoJs6 6.8.1)</p>
