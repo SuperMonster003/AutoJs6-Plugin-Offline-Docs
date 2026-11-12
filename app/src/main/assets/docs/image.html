@@ -1239,6 +1239,7 @@ console.log(&quot;bytes=&quot; + result.size);
 <li><code>isAsync: true</code> 的申请者独占会话: 已有会话时另建会话, 其他申请者遇到独占会话时同样另建会话. 两者交替申请时后来者胜, 与 6.8.0 相同.</li>
 <li>同一时刻只允许一个录屏 (<a href="video.html#video_m_record">video.record</a>, Node.js / Bun 的 <code>screen_recorder.start</code> 等). 第二个录屏立即报错并注明正在录制的一方 (video.record 的错误码为 <code>LIMIT_EXCEEDED</code>), 不排队; 录制期间其他参与者的 <code>captureScreen()</code> 返回录制中的画面.</li>
 <li>参与者退出 (<a href="#image_m_images_stopscreencapture">stopScreenCapture()</a>, 脚本或执行结束, 网页关闭) 只离开会话, 其他参与者继续使用; 最后一个参与者离开后会话立即释放 (投影, 虚拟显示与前台服务一并停止), 之后的申请会再次弹出授权窗口.</li>
+<li>截图期间 AutoJs6 的 &quot;屏幕捕获器前台服务&quot; 通知带有 &quot;停止&quot; 按钮: 点按后结束全部屏幕捕获会话, 效果与系统停止投影相同. 各参与者 (包括 Node.js / Bun 执行) 的控制台提示截图已从通知栏停止, 其下一次 <code>captureScreen()</code> 重新申请 (已授予 &quot;投影媒体权限&quot; 时不弹出授权窗口). 部分系统 (如 HyperOS) 没有停止屏幕捕获的系统入口, 可用此按钮停止.</li>
 <li>Node.js 与 Bun 脚本以 <code>requireExistingPermission: true</code> 申请时加入其他脚本已有的兼容会话, 不弹窗; 没有会话, 会话是 isAsync 独占会话, 或共享已关闭时以 permission-denied 失败. 另建会话的原因与会话被替换的提示同样写入 Node.js / Bun 执行的控制台; 网页 (getDisplayMedia) 的原因只写入 logcat (标签 <code>ScreenCaptureSessions</code>).</li>
 <li>MCP Server / 3-Stove Agent 仍优先使用无障碍截图; 回退到屏幕捕获时加入已有会话, 不再弹出第二次授权窗口.</li>
 <li>设置 &gt; 脚本运行 &gt; &quot;屏幕捕获会话共享&quot; (默认开启) 关闭后, 每个申请者各自申请权限并建立会话, 与 6.8.0 及之前版本相同 (多个申请者会相互打断). 更改对下一次申请生效, 不影响已有会话.</li>
