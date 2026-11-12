@@ -345,21 +345,26 @@
 <li><span class="stability_undefined"><a href="#qa_8">定时任务获取外部参数</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#qa_9">脚本执行差异</a></span><ul>
-<li><span class="stability_undefined"><a href="#qa_10">不同的系统版本</a></span></li>
-<li><span class="stability_undefined"><a href="#qa_11">不同的设备厂商</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_9">无响应与自动重启</a></span><ul>
+<li><span class="stability_undefined"><a href="#qa_10">主线程无响应</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_11">进程被系统冻结</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#qa_12">脚本执行差异</a></span><ul>
+<li><span class="stability_undefined"><a href="#qa_13">不同的系统版本</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_14">不同的设备厂商</a></span></li>
 <li><span class="stability_undefined"><a href="#qa_auto_js">不同的 Auto.js 应用</a></span></li>
 <li><span class="stability_undefined"><a href="#qa_autojs6_6">不同的 AutoJs6 版本</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#qa_12">打包应用</a></span><ul>
-<li><span class="stability_undefined"><a href="#qa_13">图片等资源共同打包及多脚本打包</a></span></li>
-<li><span class="stability_undefined"><a href="#qa_14">打包应用不显示主界面</a></span></li>
-<li><span class="stability_undefined"><a href="#qa_15">打包应用的共享存储权限</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_15">打包应用</a></span><ul>
+<li><span class="stability_undefined"><a href="#qa_16">图片等资源共同打包及多脚本打包</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_17">打包应用不显示主界面</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_18">打包应用的共享存储权限</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#qa_16">代码转换</a></span></li>
-<li><span class="stability_undefined"><a href="#qa_17">反馈</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_19">代码转换</a></span></li>
+<li><span class="stability_undefined"><a href="#qa_20">反馈</a></span></li>
 </ul>
 </li>
 </ul>
@@ -453,9 +458,28 @@ AutoJs6 基于 Paddle Lite 引擎的 <a href="http://project.autojs6.com/blob/ma
 但 AutoJs6 暂未提供解锁功能, 因此可能需要根据设备自行设计解锁代码.</p>
 <h3>定时任务获取外部参数<span><a class="mark" href="#qa_8" id="qa_8">#</a></span></h3>
 <p>若脚本由 intent (如网络状态变化等特定事件) 触发启动, 可通过 <code>engines.myEngine().execArgv.intent</code> 获取 intent, 进而获取外部参数.</p>
-<h2>脚本执行差异<span><a class="mark" href="#qa_9" id="qa_9">#</a></span></h2>
+<h2>无响应与自动重启<span><a class="mark" href="#qa_9" id="qa_9">#</a></span></h2>
+<p>AutoJs6 的主线程负责界面与悬浮窗. 主线程卡住或 AutoJs6 进程被系统冻结时, 界面没有反应, 悬浮窗停止刷新, 日志也不再更新. 下面两种情况的处理方式不同.</p>
+<h3>主线程无响应<span><a class="mark" href="#qa_10" id="qa_10">#</a></span></h3>
+<p>脚本在 UI 线程中执行耗时操作或死循环 (如在 <code>ui.post</code> 的回调或界面控件的点击回调中) 时, 主线程无法响应.</p>
+<p>AutoJs6 6.8.1 起:</p>
+<ul>
+<li>主线程 10 秒没有响应时, 写入一份无响应报告, 包括全部线程的调用栈, 运行中的脚本与最近一条日志的时间. 报告最多保留 5 份, 可在 &quot;设置 &gt; 开发者 &gt; 开发者选项 &gt; 诊断报告 &gt; 无响应报告&quot; 中查看, 复制或分享.</li>
+<li>主线程持续无响应达到 &quot;设置 &gt; 脚本运行 &gt; 无响应时自动重启&quot; 所选的时长 (30 秒, 60 秒或 120 秒, 默认 60 秒) 时, 先写入报告, 再自动重启 AutoJs6. 重启后由 &quot;AutoJs6 启动时&quot; 触发的定时任务重新运行, 下次打开 AutoJs6 时提示一次.</li>
+<li>10 分钟内最多自动重启 2 次, 之后只写入报告, 以免脚本一运行就卡住时反复重启.</li>
+<li>选择 &quot;关闭&quot; 时只写入报告, 不会重启.</li>
+<li>调试器已连接或脚本停在断点时不判定为无响应.</li>
+</ul>
+<blockquote>
+<p>注: 自动重启会结束 AutoJs6 进程, 运行中的脚本随之停止. 需要在重启后继续运行的脚本, 可在 &quot;脚本右侧菜单 -&gt; 定时任务&quot; 中添加由 &quot;AutoJs6 启动时&quot; 触发的任务.</p>
+</blockquote>
+<h3>进程被系统冻结<span><a class="mark" href="#qa_11" id="qa_11">#</a></span></h3>
+<p>部分系统会在息屏一段时间后冻结或挂起后台应用的进程. 冻结期间脚本无法运行, 悬浮窗与日志停在冻结前的状态. 这不是主线程无响应, AutoJs6 无法自行察觉或恢复, 直到系统解冻进程 (如重新打开 AutoJs6).</p>
+<p>AutoJs6 6.8.1 起, 进程解冻后会记录冻结的起始时间与时长 (不含设备深度睡眠), 显示在 &quot;无响应报告&quot; 页面的冻结记录中. 有脚本运行时被冻结 1 分钟以上的, 下次打开 AutoJs6 时提示一次.</p>
+<p>需要在息屏后保持运行时, 可在系统设置中解除对 AutoJs6 的后台限制, 包括 [ 允许自启动 / 忽略电池优化 / 允许后台高耗电 / 在最近任务中锁定 ] 等 (名称因系统而异), 并在 AutoJs6 主页侧拉菜单中开启 &quot;前台服务&quot;.</p>
+<h2>脚本执行差异<span><a class="mark" href="#qa_12" id="qa_12">#</a></span></h2>
 <p>同样的脚本, 在不同环境 (如设备或系统等) 可能出现执行结果差异, 甚至出现异常而无法正常运行.</p>
-<h3>不同的系统版本<span><a class="mark" href="#qa_10" id="qa_10">#</a></span></h3>
+<h3>不同的系统版本<span><a class="mark" href="#qa_13" id="qa_13">#</a></span></h3>
 <p>AutoJs6 可以安装在 <code>Andoird API 24 (7.0) [N]</code> 及以上的操作系统.</p>
 <p>然而不同操作系统 <code>API</code> 是有区别的, 有些 <code>API</code> 在某个系统版本之后 (甚至之前) 才能使用.</p>
 <p>下面列出几个 AutoJs6 中受系统版本影响的方法或属性:</p>
@@ -467,7 +491,7 @@ AutoJs6 基于 Paddle Lite 引擎的 <a href="http://project.autojs6.com/blob/ma
 <li><a href="uiSelectorType.html#uiselectortype_m_showtextsuggestions">UiSelector#showTextSuggestions</a> 只能在 <code>Android API 33 (13) [TIRAMISU]</code> 及以上才能起作用</li>
 <li>... ...</li>
 </ul>
-<h3>不同的设备厂商<span><a class="mark" href="#qa_11" id="qa_11">#</a></span></h3>
+<h3>不同的设备厂商<span><a class="mark" href="#qa_14" id="qa_14">#</a></span></h3>
 <p>因不同设备厂商对操作系统进行了不同程度的定制和修改, 一些 <code>API</code> 可能发生变更.</p>
 <p>下表列出了部分厂商及操作系统的信息 (排序无先后):</p>
 <table>
@@ -584,11 +608,11 @@ AutoJs6 基于 Paddle Lite 引擎的 <a href="http://project.autojs6.com/blob/ma
 <h3>不同的 AutoJs6 版本<span><a class="mark" href="#qa_autojs6_6" id="qa_autojs6_6">#</a></span></h3>
 <p>随着 AutoJs6 版本的更新, 一些 <code>API</code> 可能出现 [ 新增 / 修改 / 废弃 / 移除 ] 等操作.</p>
 <p>当升级 AutoJs6 后, 某个或某些 <code>API</code> 出现异常时, 可查询应用文档并定位到相关章节, 根据文档的提示排查并解决上述问题.</p>
-<p>如问题仍未解决, 可在项目的 GitHub 议题页面提交 <a href="#qa_17">反馈</a>.</p>
-<h2>打包应用<span><a class="mark" href="#qa_12" id="qa_12">#</a></span></h2>
+<p>如问题仍未解决, 可在项目的 GitHub 议题页面提交 <a href="#qa_20">反馈</a>.</p>
+<h2>打包应用<span><a class="mark" href="#qa_15" id="qa_15">#</a></span></h2>
 <p>AutoJs6 打包功能尚不完善, 打包应用与 AutoJs6 主应用可能有较大的功能和界面差异.</p>
 <p>AutoJs6 开发者暂不考虑参与打包功能相关的开发工作, 目前以 <a href="https://github.com/LZX284">LZX284</a> 为主要贡献者进行打包功能的开发及维护, 后续将继续由其他开发者贡献相关代码.</p>
-<h3>图片等资源共同打包及多脚本打包<span><a class="mark" href="#qa_13" id="qa_13">#</a></span></h3>
+<h3>图片等资源共同打包及多脚本打包<span><a class="mark" href="#qa_16" id="qa_16">#</a></span></h3>
 <p>上述需求需使用 &quot;项目&quot; 功能.</p>
 <p>点击 AutoJs6 主页面 &quot;+&quot; 图标, 选择项目, 填写信息后可新建一个项目.<br>
 项目支持存放多个 [ 脚本 / 模块 / 资源文件 ].<br>
@@ -597,7 +621,7 @@ AutoJs6 基于 Paddle Lite 引擎的 <a href="http://project.autojs6.com/blob/ma
 脚本读取同目录 <code>1.png</code>: <code>images.read(&quot;./1.png&quot;)</code>.<br>
 UI 脚本图片控件引用同目录 <code>2.png</code>: <code>&lt;img src=&quot;file://2.png&quot;/&gt;</code>.<br>
 AutoJs6 内置模块支持相对路径引用, 其他情况可能需借助 <code>files.path()</code> 转换为绝对路径.</p>
-<h3>打包应用不显示主界面<span><a class="mark" href="#qa_14" id="qa_14">#</a></span></h3>
+<h3>打包应用不显示主界面<span><a class="mark" href="#qa_17" id="qa_17">#</a></span></h3>
 <p>需使用 &quot;项目&quot; 功能.<br>
 新建项目后, 在项目目录 <code>project.json</code> 文件中增加以下条目:</p>
 <pre><code class="lang-json">{
@@ -620,9 +644,9 @@ AutoJs6 内置模块支持相对路径引用, 其他情况可能需借助 <code>
 </code></pre>
 <p>也可以在打包页的 &quot;运行配置&quot; 中取消勾选 &quot;启动时显示日志&quot;. 已安装的打包应用以其设置页的 &quot;不显示主界面&quot; 开关为准 (参阅 <a href="projectConfig.html#projectconfig_launchconfig_1">项目配置 &gt; launchConfig</a>).</p>
 <blockquote>
-<p>注: 旧版文档使用的 <code>&quot;hideLogs&quot;: true</code> 与 <code>&quot;logsVisible&quot;: false</code> 含义相同, 但 AutoJs6 6.8.1 之前每保存一次 project.json (包括打包) hideLogs 的值就翻转一次, 建议改用 logsVisible (参阅 <a href="projectConfig.html#projectconfig_11">项目配置 &gt; 反向别名</a>).</p>
+<p>注: 旧版文档使用的 <code>&quot;hideLogs&quot;: true</code> 与 <code>&quot;logsVisible&quot;: false</code> 含义相同, 但 AutoJs6 6.8.1 之前用 hideLogs 写的值在打包出的应用中与写法相反, 每保存一次 project.json (包括打包) 也翻转一次, 建议改用 logsVisible (参阅 <a href="projectConfig.html#projectconfig_11">项目配置 &gt; 反向别名</a>).</p>
 </blockquote>
-<h3>打包应用的共享存储权限<span><a class="mark" href="#qa_15" id="qa_15">#</a></span></h3>
+<h3>打包应用的共享存储权限<span><a class="mark" href="#qa_18" id="qa_18">#</a></span></h3>
 <p><strong><code>6.8.0</code></strong></p>
 <p><code>project.json</code> 中的 <a href="projectConfig.html#projectconfig_launchconfig_requiressharedstorage">launchConfig.requiresSharedStorage</a> 是布尔值, 默认 <code>false</code>. 打包界面的 &quot;启动需要共享存储访问&quot; 选项与此字段对应, 可随打包配置保存.</p>
 <pre><code class="lang-json">{
@@ -665,7 +689,7 @@ AutoJs6 内置模块支持相对路径引用, 其他情况可能需借助 <code>
 <p>Android 11 及以上使用 &quot;所有文件访问&quot; 设置. Android 10 及以下申请旧存储运行时权限, 无法再次弹出授权框时进入应用设置. 旧安装仍具有可用的传统存储访问权限时, 可直接继续启动. &quot;所有文件访问&quot; 不允许访问其他应用的私有目录, 也不保证可访问不可用的卷或任意受限路径.</p>
 <p>如果自定义了打包权限列表, 跨系统支持需要保留 <code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code> 和 <code>MANAGE_EXTERNAL_STORAGE</code> 对应的 Android 权限声明. 勾选启动选项不会自动修改权限列表. 更新旧项目后, 作者应按其实际共享路径需求设置此字段, 并验证原有文件能否访问.</p>
 <p>同时关闭桌面入口时, 缺少必要存储权限期间会保留桌面入口供用户恢复. 授权后重新启动会应用原有隐藏设置; 也可从打包应用设置页点击 &quot;运行脚本&quot;. 开机入口缺少权限时记录停止原因, 保留恢复入口, 不自动弹出授权页面. 存储授权不会豁免开机启动, 后台服务或音频播放的其他系统限制.</p>
-<h2>代码转换<span><a class="mark" href="#qa_16" id="qa_16">#</a></span></h2>
+<h2>代码转换<span><a class="mark" href="#qa_19" id="qa_19">#</a></span></h2>
 <p>AutoJs6 支持直接调用 [ Java / Android / 扩展库 ] 等 API.<br>
 对于 AutoJs6 没有内置的功能, 可进行 Java 脚本化, 即直接参照 Java (或 Kotlin 等) 源码, 转换为 JavaScript 代码.<br>
 例如:</p>
@@ -693,7 +717,7 @@ function rotate(src, degrees, px, py) {
 }
 </code></pre>
 <p>关于脚本化 Java 的更多信息, 参阅 <a href="scriptingJava.html">Scripting Java - 脚本化 Java</a> 章节.</p>
-<h2>反馈<span><a class="mark" href="#qa_17" id="qa_17">#</a></span></h2>
+<h2>反馈<span><a class="mark" href="#qa_20" id="qa_20">#</a></span></h2>
 <p>如有任何问题或建议, 可在 GitHub 项目议题页面发起新的反馈.</p>
 <p>关于 <strong>应用文档</strong> 的反馈:<br>
 <a href="http://docs-issues.autojs6.com">http://docs-issues.autojs6.com</a></p>
