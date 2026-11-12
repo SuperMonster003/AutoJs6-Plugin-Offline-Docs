@@ -616,7 +616,7 @@
 <ul>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://square.github.io/okhttp/4.x/okhttp/okhttp3/-ok-http-client/">okhttp3.OkHttpClient</a></span> } - 当前脚本运行时使用的 OkHttp 客户端</li>
 </ul>
-<p>获取当前脚本共享的 OkHttp 客户端. 请求选项中的 <code>timeout</code> 和 <code>client</code> 配置会基于并替换该客户端. 自 AutoJs6 6.8.0 起, <code>isInsecure</code> / <code>insecure</code> 仅作用于当前请求, 不会使后续请求继承其证书和主机名校验豁免.</p>
+<p>获取当前脚本共享的 OkHttp 客户端. 请求选项中的 <code>timeout</code> 和 <code>client</code> 配置会基于并替换该客户端. 自 AutoJs6 6.8.0 起, <code>isInsecure</code> / <code>insecure</code> 仅作用于当前请求, 不会使后续请求继承其证书和主机名校验豁免. 自 AutoJs6 6.8.1 起, 顶层的 <a href="httpRequestBuilderOptionsType.html#httprequestbuilderoptionstype_p_proxy">proxy</a> 选项同样仅作用于当前请求, <code>client.proxy</code> 则保存到该客户端, 参见 <a href="httpRequestBuilderOptionsType.html#httprequestbuilderoptionstype_p_client">代理的写法与保存</a>.</p>
 <h2>[m] buildRequest<span><a class="mark" href="#http_m_buildrequest" id="http_m_buildrequest">#</a></span></h2>
 <h3>buildRequest(url, options)<span><a class="mark" href="#http_buildrequest_url_options" id="http_buildrequest_url_options">#</a></span></h3>
 <div class="signature"><ul>
@@ -625,7 +625,7 @@
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="okhttp3RequestType.html">Okhttp3Request</a></span> } - 构建的 OkHttp 请求</li>
 </ul>
 </div><p>只构建请求, 不执行网络操作.</p>
-<p>此方法使用 <code>method</code>, <code>headers</code>, <code>contentType</code>, <code>body</code> 和 <code>files</code> 等构建选项, 但不应用 <code>timeout</code>, <code>maxRetries</code>, <code>cacheBody</code>, <code>bodyCacheThresholdBytes</code>, <code>isInsecure</code>, <code>insecure</code> 或 <code>client</code> 等运行时选项.</p>
+<p>此方法使用 <code>method</code>, <code>headers</code>, <code>contentType</code>, <code>body</code> 和 <code>files</code> 等构建选项, 但不应用 <code>timeout</code>, <code>maxRetries</code>, <code>cacheBody</code>, <code>bodyCacheThresholdBytes</code>, <code>isInsecure</code>, <code>insecure</code>, <code>proxy</code> 或 <code>client</code> 等运行时选项.</p>
 <pre><code class="lang-js">let request = http.buildRequest(&quot;https://example.com/api&quot;, {
     method: &quot;PATCH&quot;,
     contentType: &quot;application/json&quot;,

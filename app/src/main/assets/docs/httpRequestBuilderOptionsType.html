@@ -332,6 +332,7 @@
 <li><span class="stability_undefined"><a href="#httprequestbuilderoptionstype_p_bodycachethresholdbytes">[p?] bodyCacheThresholdBytes</a></span></li>
 <li><span class="stability_undefined"><a href="#httprequestbuilderoptionstype_p_isinsecure">[p?] isInsecure</a></span></li>
 <li><span class="stability_undefined"><a href="#httprequestbuilderoptionstype_p_insecure">[p?] insecure</a></span></li>
+<li><span class="stability_undefined"><a href="#httprequestbuilderoptionstype_p_proxy">[p?] proxy</a></span></li>
 <li><span class="stability_undefined"><a href="#httprequestbuilderoptionstype_p_client">[p?] client</a></span></li>
 </ul>
 </li>
@@ -345,7 +346,7 @@
 <p>选项分为两类:</p>
 <ul>
 <li><code>method</code>, <code>headers</code>, <code>contentType</code>, <code>body</code> 和 <code>files</code> 参与构建 <a href="okhttp3RequestType.html">Okhttp3Request</a>.</li>
-<li><code>timeout</code>, <code>maxRetries</code>, <code>cacheBody</code>, <code>bodyCacheThresholdBytes</code>, <code>isInsecure</code>, <code>insecure</code> 和 <code>client</code> 在执行请求时生效.</li>
+<li><code>timeout</code>, <code>maxRetries</code>, <code>cacheBody</code>, <code>bodyCacheThresholdBytes</code>, <code>isInsecure</code>, <code>insecure</code>, <code>proxy</code> 和 <code>client</code> 在执行请求时生效.</li>
 </ul>
 <p><a href="http.html#http_m_buildrequest">http.buildRequest</a> 只构建请求, 不应用第二类运行时选项.</p>
 <hr>
@@ -447,8 +448,34 @@
 <li>[ <code>false</code> ] { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
 </ul>
 <p><a href="#httprequestbuilderoptionstype_p_isinsecure">isInsecure</a> 的别名.</p>
+<h2>[p?] proxy<span><a class="mark" href="#httprequestbuilderoptionstype_p_proxy" id="httprequestbuilderoptionstype_p_proxy">#</a></span></h2>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> | <span class="type"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/Proxy.html">java.net.Proxy</a></span> }</li>
+</ul>
+<p>仅对当前请求使用的代理. 省略或为 <code>null</code> 时, 使用 <a href="#httprequestbuilderoptionstype_p_client">client</a> 中保存的 <code>proxy</code>; 两者都未设置时跟随系统代理.</p>
+<p>可用写法:</p>
+<ul>
+<li><code>&quot;host:port&quot;</code> 或 <code>&quot;http://host:port&quot;</code>: HTTP 代理. IPv6 地址需加方括号, 如 <code>&quot;[::1]:8080&quot;</code>.</li>
+<li><code>&quot;socks5://host:port&quot;</code> 或 <code>&quot;socks://host:port&quot;</code>: SOCKS5 代理.</li>
+<li><code>&quot;direct&quot;</code>: 不使用代理, 直接连接, 与 <code>java.net.Proxy.NO_PROXY</code> 相同.</li>
+<li><code>{ host, port, type }</code>: <code>type</code> 可为 <code>&quot;http&quot;</code> (默认), <code>&quot;socks&quot;</code> (<code>&quot;socks5&quot;</code> 与之相同) 或 <code>&quot;direct&quot;</code>, 也可以是 <code>java.net.Proxy.Type</code>; <code>port</code> 可为整数或数字字符串; <code>type</code> 为 <code>&quot;direct&quot;</code> 时可省略 <code>host</code> 与 <code>port</code>.</li>
+<li><code>java.net.Proxy</code> 对象.</li>
+</ul>
+<p>代理地址中不能包含用户名和密码. 需要认证的 HTTP 代理, 通过 <a href="#httprequestbuilderoptionstype_p_client">client</a> 的 <code>proxyAuthenticator</code> 提供 <code>okhttp3.Authenticator</code>.</p>
+<p>取值有误时 (例如缺少端口, 端口超出 <code>1</code> 到 <code>65535</code>, 或使用 <code>&quot;https://&quot;</code>, <code>&quot;socks4://&quot;</code> 等不支持的写法), 请求不会发出, 抛出的异常会写明错误原因并列出上述可用写法, 同一请求中的 <code>client</code> 配置也不会保存.</p>
+<p>此选项在 <code>client</code> 配置保存之后应用, 不会写入当前脚本的共享客户端, 同一脚本的后续请求仍使用 <code>client</code> 中保存的 <code>proxy</code> 或系统代理.</p>
+<pre><code class="lang-js">/* 本次请求经由 SOCKS5 代理. */
+http.get(&quot;https://example.com&quot;, { proxy: &quot;socks5://127.0.0.1:1080&quot; });
+
+/* 本次请求直接连接, 不影响此前通过 client 保存的代理. */
+http.get(&quot;https://example.com&quot;, { proxy: &quot;direct&quot; });
+
+/* 对象写法. */
+http.get(&quot;https://example.com&quot;, { proxy: { host: &quot;10.0.2.2&quot;, port: 8080 } });
+</code></pre>
 <h2>[p?] client<span><a class="mark" href="#httprequestbuilderoptionstype_p_client" id="httprequestbuilderoptionstype_p_client">#</a></span></h2>
-<p><strong><code>6.7.0</code></strong></p>
+<p><strong><code>6.7.0</code></strong> <strong><code>[6.8.1]</code></strong></p>
 <ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> }</li>
 </ul>
@@ -472,6 +499,16 @@
 });
 console.log(response.statusCode);
 </code></pre>
+<p><code>client.proxy</code> 除 <code>java.net.Proxy</code> 对象外, 自 AutoJs6 6.8.1 起还接受与 <a href="#httprequestbuilderoptionstype_p_proxy">proxy</a> 选项相同的字符串和对象写法, 设为 <code>null</code> 时清除保存的代理, 恢复为跟随系统代理.</p>
+<p>与其他 <code>client</code> 配置一样, <code>client.proxy</code> 会保存到当前脚本的共享客户端: 同一脚本的后续请求即使省略 <code>client</code>, 也继续使用该代理, 直到再次设置 <code>client.proxy</code>. 只想让某一次请求使用其他代理时, 使用顶层的 <a href="#httprequestbuilderoptionstype_p_proxy">proxy</a> 选项, 它不会改变保存的 <code>client.proxy</code>.</p>
+<pre><code class="lang-js">/* 之后的请求都经由此 HTTP 代理. */
+http.get(&quot;https://example.com&quot;, { client: { proxy: &quot;127.0.0.1:8080&quot; } });
+http.get(&quot;https://example.com/next&quot;); /* 仍经由 127.0.0.1:8080. */
+
+/* 恢复为跟随系统代理. */
+http.get(&quot;https://example.com&quot;, { client: { proxy: null } });
+</code></pre>
+<p>未设置代理的请求跟随系统代理 (例如 WLAN 设置中的代理). 自 AutoJs6 6.8.1 起, 系统代理开启, 关闭或更换后, 下一个请求开始前会清空当前脚本连接池中的空闲连接, 之后的请求按新的代理设置建立连接; 变化时仍在进行中的请求在原连接上完成, 该连接归还后同样被清空. 旧版本中, 切换系统代理之后的请求可能沿用此前建立的连接, 继续按原来的代理或直连发送, 直到该连接关闭.</p>
 
         </div>
     </div>

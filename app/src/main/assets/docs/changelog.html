@@ -386,6 +386,8 @@
 </li>
 <li><p><code>更新</code> <a href="modules.html#modules_p_root">模块 (Modules)</a>: 没有父模块的相对路径在 require.root 下解析不到时, 再从主脚本所在目录解析 (AutoJs6 6.8.1), require.resolve 与找不到模块时的错误消息同步说明</p>
 </li>
+<li><p><code>更新</code> <a href="httpRequestBuilderOptionsType.html#httprequestbuilderoptionstype_p_proxy">HttpRequestBuilderOptions</a>: 补充仅对当前请求生效的 proxy 选项 (AutoJs6 6.8.1), 包括可用写法 (&quot;host:port&quot;, &quot;http://...&quot;, &quot;socks5://...&quot;, &quot;direct&quot;, { <span class="type">host, port, type</span> } 对象与 java.net.Proxy) 与取值有误时的报错; client 一节补充 client.proxy 接受同样的写法并保存到共享客户端 (同一脚本的后续请求沿用, 设为 null 恢复跟随系统代理), 以及系统代理变化后清空空闲连接; <a href="http.html#http_m_client">HTTP</a> 的 client 与 buildRequest 同步说明</p>
+</li>
 <li><p><code>更新</code> <a href="automator.html#automator_restricted_settings">自动化 (Automator)</a>: 补充 &quot;受限设置&quot; 一节, 说明 Android 13 及以上非应用商店安装的 AutoJs6 无障碍开关受限的表现, 条件与解除方法, 不经系统开关的 ADB / Shizuku / Root 启用方式, 以及 AutoJs6 6.8.1 起的说明对话框与服务管理器状态行</p>
 </li>
 <li><p><code>更新</code> <a href="ai.html">AI</a>: ai.agent.status 的返回值增加 <code>reason</code>, 在 <code>errorCode</code> 为 <code>PLUGIN_UNAVAILABLE</code> 时说明连接未能建立的原因及处理方法 (AutoJs6 6.8.1)</p>
