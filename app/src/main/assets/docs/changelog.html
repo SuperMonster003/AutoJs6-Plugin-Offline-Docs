@@ -372,7 +372,7 @@
 </li>
 <li><p><code>更新</code> <a href="image.html#image_screen_capture_session_sharing">图像 (Image)</a>: 补充 &quot;屏幕捕获会话共享&quot; 一节 (脚本, 子脚本, Node.js / Bun 执行, 网页与 MCP Server / 3-Stove Agent 的截图回退默认共用一个会话; 兼容判定, 参数不兼容时另建会话并说明原因, 被替换的参与者自动重新申请, isAsync 独占, 同一时刻只允许一个录屏, 最后一个参与者退出后释放, 设置项, 以及与 &quot;投影媒体权限&quot; 的区别), getScreenCaptureOptions 返回值的 isShared 与 participants, 并相应修改 requestScreenCapture, stopScreenCapture 与 captureScreen 的说明; <a href="runtimeApis.html">运行时 API (Runtime APIs)</a> 与 <a href="video.html#video_m_record">视频 (Video)</a> 同步说明 requireExistingPermission 与录屏数量限制 (AutoJs6 6.8.1)</p>
 </li>
-<li><p><code>更新</code> <a href="qa.html#qa_9">疑难解答 (Q &amp; A)</a>: 补充 &quot;无响应与自动重启&quot; 一节, 说明主线程无响应时写入的无响应报告与自动重启 (默认 60 秒, 10 分钟内最多 2 次, 可关闭; 重启后重新运行由 &quot;AutoJs6 启动时&quot; 触发的任务), 以及 AutoJs6 被系统冻结时的冻结记录, 一次性提示与保持后台运行的系统设置 (AutoJs6 6.8.1)</p>
+<li><p><code>更新</code> <a href="qa.html#qa_9">疑难解答 (Q &amp; A)</a>: 补充 &quot;无响应与自动重启&quot; 一节, 说明主线程无响应时写入的无响应报告与自动重启 (默认 60 秒, 10 分钟内最多 2 次, 可关闭; 重启后重新运行由 &quot;AutoJs6 启动时&quot; 触发的任务), 以及 AutoJs6 被系统冻结时的冻结记录与保持后台运行的系统设置 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="runtimeApis.html#runtimeapis_node_js_3">运行时 API (Runtime APIs)</a>: 说明 Node.js 的 images.requestScreenCapture 受桥接调用 30 秒等待上限约束 (超时以 ERR_AUTOJS6_BRIDGE_TIMEOUT 失败, 授权对话框随之关闭), 并给出 video 与 audio 模块在 Node.js 与 Bun 中的入口</p>
 </li>
