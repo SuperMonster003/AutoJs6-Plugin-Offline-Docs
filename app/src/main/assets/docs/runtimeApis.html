@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis active" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -553,7 +554,7 @@
 </tbody>
 </table>
 <p>独立脚本可以在首条字符串语句中使用 <code>&quot;nodejs&quot;;</code> 或 <code>&quot;bun&quot;;</code>. Node 也支持 <code>node</code> 标记. Node 的 <code>.node.js</code>, <code>.cjs</code>, <code>.mjs</code>, <code>.mts</code>, <code>.cts</code> 后缀和 Bun 的 <code>.bun.js</code>, <code>.bun.ts</code>, <code>.bun.tsx</code> 后缀用于选择对应环境. 普通 <code>.ts</code> / <code>.tsx</code> 默认仍按 Rhino 的 TypeScript 路径处理; 项目的 <code>type</code> / <code>projectType</code> 为 <code>node</code> 时可选择 Node. 当前 <code>type: &#39;bun&#39;</code> 元数据本身不选择 Bun 引擎, 应使用 Bun 标记或后缀. 标记不能与固定引擎后缀冲突. 作为 Bun 入口的相对依赖导入的 <code>.mjs</code> 文件由 Bun 解释, 将该文件单独运行则按其后缀选择 Node.</p>
-<p>Node.js 脚本与项目默认不限执行时长, 与 Rhino 脚本相同, 可随时停止. 项目可在 project.json 的 node 配置中设置 <code>timeoutMs</code> (毫秒) 作为执行总预算: 从 Node.js Runtime 插件收到请求时开始计时, 包含排队与工作区准备, 耗尽后脚本停止并报告 <code>ERR_AUTOJS6_SCRIPT_TIMEOUT</code>; 未设置或为 0 时不限. TypeScript 项目设置的预算不少于 30000 毫秒. 运行期间的输出 (console.log 及 process.stdout / process.stderr) 逐段转发到 AutoJs6 控制台, 不等脚本结束.</p>
+<p>Node.js 脚本与项目默认不限执行时长, 与 Rhino 脚本相同, 可随时停止. 项目可在 project.json 的 node 配置中设置 <a href="projectConfig.html#projectconfig_node_timeoutms">timeoutMs</a> (毫秒) 作为执行总预算: 从 Node.js Runtime 插件收到请求时开始计时, 包含排队与工作区准备, 耗尽后脚本停止并报告 <code>ERR_AUTOJS6_SCRIPT_TIMEOUT</code>; 未设置或为 0 时不限. TypeScript 项目设置的预算不少于 30000 毫秒. 运行期间的输出 (console.log 及 process.stdout / process.stderr) 逐段转发到 AutoJs6 控制台, 不等脚本结束.</p>
 <h3>相对路径<span><a class="mark" href="#runtimeapis_1" id="runtimeapis_1">#</a></span></h3>
 <p>Node.js 与 Bun 的 <code>process.cwd()</code> 是运行时插件私有目录里的项目副本, 宿主进程无法读写. 由宿主打开文件的调用 (zip, files.open, files.toFile) 因此按脚本的源目录解析相对路径, 与 Rhino 相同; Node.js 可经 <code>engines.myEngine().hostCwd</code> 读取这个目录. 写进 <code>process.cwd()</code> 的文件不能直接交给这些调用, 要先放到共享存储 (例如以 <code>files.sdcardPath</code> 开头的路径).</p>
 <p>Node.js 的其他 files 方法在插件进程内执行, 相对路径按 <code>process.cwd()</code> 解析. 插件进程读写共享存储 (如 <code>/sdcard</code>) 要在系统设置里给运行时插件授权: Android 10 及更早是 &quot;存储&quot; 权限, Android 11 起是 &quot;所有文件访问权限&quot;, 未授权时报 EACCES 或 EPERM (Android 11 起在共享存储根目录新建文件是 EPERM, <code>Download</code>, <code>Documents</code> 等公共目录里自己创建的文件不需要授权). 首次失败时 AutoJs6 提示一次, 可从提示跳转到系统设置中该插件的页面, 每次执行最多提示一次, 错误本身不变. 提示来自脚本的错误输出, 所以脚本捕获了 <code>node:fs</code> 的错误又没有输出时不提示.</p>
@@ -874,7 +875,7 @@ let opencc = require(&#39;autojs6:opencc&#39;);
 </tr>
 <tr>
 <td>截图辅助</td>
-<td><code>requestScreenCaptureAsync</code> 是异步授权入口的别名; <code>getScreenCaptureOptions()</code> 返回当前 width/height/orientation, 无会话时返回 null</td>
+<td><code>requestScreenCaptureAsync</code> 是异步授权入口的别名; <code>getScreenCaptureOptions()</code> 返回当前 width/height/orientation 以及 shared / participants (是否与其他脚本共用屏幕捕获会话, 会话的参与者数; AutoJs6 6.8.1), 无会话时返回 null</td>
 </tr>
 </tbody>
 </table>
@@ -951,7 +952,7 @@ try {
 </tr>
 </tbody>
 </table>
-<p><code>options</code> 支持 <code>orientation: &#39;auto&#39; | &#39;portrait&#39; | &#39;landscape&#39;</code>, 同时指定的 <code>width</code> / <code>height</code> (各为 1-8192), <code>requireExistingPermission</code> 以及 <code>timeoutMs</code> (1-120000 毫秒, 默认 120000). 默认方向为自动. <code>requireExistingPermission: true</code> 在本次执行没有有效会话时直接失败, 不显示授权对话框. 同一客户端的并发申请共用一个 Promise, 已生效的会话可复用; 停止或系统撤销后再次申请会重新经过 Android 授权流程.</p>
+<p><code>options</code> 支持 <code>orientation: &#39;auto&#39; | &#39;portrait&#39; | &#39;landscape&#39;</code>, 同时指定的 <code>width</code> / <code>height</code> (各为 1-8192), <code>requireExistingPermission</code> 以及 <code>timeoutMs</code> (1-120000 毫秒, 默认 120000). 默认方向为自动. <code>requireExistingPermission: true</code> 不显示授权对话框: 本次执行没有有效会话时加入其他脚本或执行已有的兼容会话 (AutoJs6 6.8.1), 也没有这样的会话时直接失败. 同一客户端的并发申请共用一个 Promise, 已生效的会话可复用; 停止或系统撤销后再次申请会重新经过 Android 授权流程. AutoJs6 6.8.1 起各执行与 Rhino 脚本共用进程内的屏幕捕获会话, 已有兼容会话时申请直接兑现, 见 <a href="image.html#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
 <p>权限开关只允许请求系统授权, 不代替 Android 的明确同意. 关闭开关影响下一次执行. 运行结束或取消时会释放会话及待处理授权, 已产生的图像句柄仍按执行作用域清理. 视频文件使用下述 <code>host.screenRecorder</code> 接口, 另需 <code>screen.record</code> 授权.</p>
 <p>授权等待使用短状态调用, 不延长普通宿主调用的 10 秒上限. 整体脚本超时仍可提前结束等待; Bun 默认执行限时为 60 秒, 需要更长时间时应在执行配置中调整 <code>bun.timeoutMillis</code>. 截图返回句柄, 不把整张图片放入 JSON; 随后的字节和像素读取仍遵循前述传输上限.</p>
 <h2>Bun 视频录制与文件输出<span><a class="mark" href="#runtimeapis_bun_1" id="runtimeapis_bun_1">#</a></span></h2>
@@ -2823,8 +2824,8 @@ console.log(value.answer);
 <h3>打包项目<span><a class="mark" href="#runtimeapis_21" id="runtimeapis_21">#</a></span></h3>
 <p>宿主 5566 起, Bun 项目可在 project.json 设置 bun.timeoutMs, 默认 60000 毫秒, 按现有运行时范围限制为 1..600000 毫秒. 显式执行参数 bun.timeoutMillis 优先于项目设置. 打包应用采用同一设置; 拍照/文件选择和下载的等待时限不会延长整个项目的执行预算.</p>
 <p>Node.js/Bun 项目 APK 使用已安装的外部 Runtime 插件和 3-Block Compose 插件, 自己的应用版本号可以从 1 开始. runtimeVersionCode 表示内置宿主运行库版本, applicationVersionCode 表示应用声明版本. APK Builder 需要匹配的 Runtime Kit (本批为 6.8.0+5567).</p>
-<p>Node 项目通过 node.permissions 声明 ui. Bun 项目使用 projectType=bun 或 bun 入口标记, 并在 project.json 明确声明 bun.hostCapabilities, 例如:</p>
-<p>WebView 网络加载和下载还需要打包项目的 Android INTERNET 权限. 在项目的 permissions 数组中保留 android.permission.INTERNET; Runtime 插件自身的联网权限不能替代打包应用的权限. HTTPS/明文流量仍遵循应用的 Android 网络安全配置.</p>
+<p>Node 项目通过 node.permissions 声明 ui. Bun 项目使用 projectType=bun 或 bun 入口标记, 并在 project.json 明确声明 <a href="projectConfig.html#projectconfig_bun_hostcapabilities">bun.hostCapabilities</a>, 例如:</p>
+<p>WebView 网络加载和下载还需要打包项目的 Android INTERNET 权限. 在项目的 <a href="projectConfig.html#projectconfig_5">permissions</a> 数组中保留 android.permission.INTERNET (写了 permissions 即替换默认清单); Runtime 插件自身的联网权限不能替代打包应用的权限. HTTPS/明文流量仍遵循应用的 Android 网络安全配置.</p>
 <p>Node.js/Bun 项目的执行总预算与 WebView 回调超时相互独立. Node.js 项目未设置 timeoutMs 时不限执行时长; 设置了 node.timeoutMs 的 Node.js 项目与 Bun 项目 (bun.timeoutMs 默认 60000 毫秒) 需要等待用户选择文件或操作界面时, 应留出足够的预算, 例如 <code>&quot;node&quot;: {&quot;permissions&quot;: [&quot;ui&quot;], &quot;timeoutMs&quot;: 120000}</code>. evaluateJavascript 的 timeoutMs 不会延长整个项目的执行预算.</p>
 <pre><code class="lang-json">{
   &quot;projectType&quot;: &quot;bun&quot;,

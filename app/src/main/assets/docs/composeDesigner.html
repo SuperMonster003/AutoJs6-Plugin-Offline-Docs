@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -781,7 +782,7 @@
 </ul>
 <h4>文件夹工程<span><a class="mark" href="#composedesigner_11" id="composedesigner_11">#</a></span></h4>
 <div class="signature"><ul>
-<li>私有工程第一次带着布局文件保存时, 由 <code>名称.js</code> 变为文件夹 <code>名称/</code>: 脚本改名为 <code>main.js</code>, 布局文件放在同一文件夹中, 草稿, 来源记录与图片目录随之迁移, 并生成 AutoJs6 的 <code>project.json</code> (<code>name</code>, <code>main</code>, <code>packageName</code> 为 <code>org.example.&lt;名称&gt;</code>, <code>versionName</code>, <code>versionCode</code>), 因此在 AutoJs6 中可以作为项目运行与打包. 首页以 <code>名称/</code> 显示文件夹工程.</li>
+<li>私有工程第一次带着布局文件保存时, 由 <code>名称.js</code> 变为文件夹 <code>名称/</code>: 脚本改名为 <code>main.js</code>, 布局文件放在同一文件夹中, 草稿, 来源记录与图片目录随之迁移, 并生成 AutoJs6 的 <a href="projectConfig.html"><code>project.json</code></a> (<code>name</code>, <code>main</code>, <code>packageName</code> 为 <code>org.example.&lt;名称&gt;</code>, <code>versionName</code>, <code>versionCode</code>), 因此在 AutoJs6 中可以作为项目运行与打包. 首页以 <code>名称/</code> 显示文件夹工程.</li>
 <li>新建工程时, UI 类型的 &quot;布局&quot; 可选 &quot;脚本内&quot;, &quot;AutoJs6 XML 文件&quot; 或 &quot;Android 原生 XML 文件&quot;; 后两种直接创建文件夹工程, 原生模板为 <code>ui.useAndroidLayout()</code> 加 <code>res/layout/activity_main.xml</code>, 与 AutoJs6 示例 &quot;Android 原生布局&quot; 的组织方式相同.</li>
 <li>菜单 &quot;导出到文件&quot; 把文件夹工程 (或带布局文件的文档) 导出为一个 zip: <code>main.js</code> 在顶层, 缺少 <code>project.json</code> 时补上.</li>
 <li>首页菜单 &quot;导入脚本或 zip&quot; 也接受 zip, &quot;导入文件夹&quot; 接受一个文件夹: 顶层 (或唯一外层文件夹内) 有 <code>main.js</code> 时成为文件夹工程; 没有时, 唯一的顶层 <code>.js</code> 改名为 <code>main.js</code>; 只有一个脚本时成为普通工程. 含不安全路径 (<code>..</code>, 绝对路径), 超过 4096 个文件或 128 MB, 或找不到脚本的 zip 整体拒绝. 导入的 zip 与文件夹不记录来源.</li>

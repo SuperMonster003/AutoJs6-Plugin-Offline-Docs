@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -2083,7 +2084,7 @@ let { engines, events } = await createHostClient();
 <p>运行前的准备:</p>
 <ul>
 <li>在插件中心启用 ImGui 插件, 并授予 AutoJs6 悬浮窗权限.</li>
-<li>Node.js 项目在 project.json 的 <code>node.permissions</code> 中声明 <code>engines</code>, <code>engines.exec</code> 和 <code>events</code>.</li>
+<li>Node.js 项目在 project.json 的 <a href="projectConfig.html#projectconfig_node_permissions">node.permissions</a> 中声明 <code>engines</code>, <code>engines.exec</code> 和 <code>events</code>.</li>
 <li>Bun 在插件中心开启 <code>engines.control</code>, <code>engines.exec</code> 和 <code>events.observe</code>, 打包项目在 <code>bun.hostCapabilities</code> 中声明.</li>
 </ul>
 <p>行为说明:</p>

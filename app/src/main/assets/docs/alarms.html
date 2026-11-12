@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -548,7 +549,7 @@
 <!-- runtime-support:end -->
 <p><code>alarms</code> 模块用于在脚本中管理 3-Chime Alarm 插件的闹钟: 新建, 查询, 修改与删除闹钟, 推算重复规则的响铃时刻, 处理正在响的闹钟, 监听响铃等事件, 以及把脚本登记到闹钟事件上, 由事件启动脚本. 子模块 <a href="#alarms_p_system">alarms.system</a> 不需要插件, 它通过 Android 的 <code>AlarmClock</code> Intent 使用系统的时钟应用.</p>
 <p>脚本可以读写用户在插件界面里建的闹钟, 用户也能在插件界面看到并修改脚本建的闹钟. 插件界面为每个闹钟标出创建来源与最后修改来源 (用户, 脚本, 插件工具或系统时钟 Intent), 对应 <a href="#alarms_alarm">Alarm</a> 的 <code>source</code> 与 <code>updatedBy</code>.</p>
-<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Chime Alarm 插件 (AutoJs6-Plugin-Three-Chime-Alarm) 1.0.0 及以上版本提供. 闹钟的存储, 排程与响铃都在插件中完成: AutoJs6 没有运行, 被强行停止甚至被卸载时, 闹钟照常响铃. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失时方法抛出 <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code> 的 <a href="#alarms_c_alarmerror">AlarmError</a>; 插件被禁用或未授权时为 <code>PLUGIN_DISABLED</code>; 插件版本或契约不兼容, 或插件未声明调用所需的功能时为 <code>PLUGIN_INCOMPATIBLE</code>. <a href="#alarms_m_isavailable">alarms.isAvailable</a> 可预先探测. 插件本身可以作为独立的闹钟应用使用: 在不满足版本要求的 AutoJs6 上, 插件中心不能启用它, 本模块与它的 <a href="plugins.html#plugins_5">插件工具</a> 不可用, 但插件界面与系统时钟 Intent 的接收照常可用.</p>
+<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Chime Alarm 插件 (AutoJs6-Plugin-Three-Chime-Alarm) 1.0.0 及以上版本提供. 闹钟的存储, 排程与响铃都在插件中完成: AutoJs6 没有运行, 被强行停止甚至被卸载时, 闹钟照常响铃. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失时方法抛出 <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code> 的 <a href="#alarms_c_alarmerror">AlarmError</a>; 插件被禁用或未授权时为 <code>PLUGIN_DISABLED</code>; 插件版本或契约不兼容, 或插件未声明调用所需的功能时为 <code>PLUGIN_INCOMPATIBLE</code>. <a href="#alarms_m_isavailable">alarms.isAvailable</a> 可预先探测. 插件本身可以作为独立的闹钟应用使用: 在不满足版本要求的 AutoJs6 上, 插件中心不能启用它, 本模块与它的 <a href="plugins.html#plugins_6">插件工具</a> 不可用, 但插件界面与系统时钟 Intent 的接收照常可用.</p>
 <p>本模块在 Rhino 中注册为全局名称 <code>alarms</code>, 并提供 <code>$alarms</code> 别名, 二者指向同一对象. Node.js, Bun 与 Node.js Worker 不提供本模块; 这些运行时可以用 <a href="engines.html#engines_m_execscript">engines.execScript</a> 运行一个调用 <code>alarms</code> 的 Rhino 脚本.</p>
 <p>约定:</p>
 <ul>

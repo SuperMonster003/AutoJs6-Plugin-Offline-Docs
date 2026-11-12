@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>项目配置 (project.json) | AutoJs6 文档 - 6.8.0</title>
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/sh.css">
+    <link rel="stylesheet" href="plugins/docsify-copy-code@2-styles.css">
+    <link rel="stylesheet" href="plugins/zoom-image-styles.css">
+    <link rel="canonical" href="https://nodejs.org/api/projectConfig.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="user-scalable=no">
+</head>
+<body class="alt apidoc" id="api-section-projectConfig">
+<div id="content" class="clearfix">
+    <div id="column2" class="interior">
+        <div id="intro" class="interior">
+            <a href="/" title="返回首页">
+                AutoJs6
+            </a>
+        </div>
+        <ul>
+<li><a class="nav-overview" href="overview.html">Overview - 综述</a></li>
+<li><a class="nav-documentation" href="documentation.html">About - 关于文档</a></li>
+<li><a class="nav-progress" href="progress.html">Progress - 文档部署进度</a></li>
+<li><a class="nav-changelog" href="changelog.html">Changelog - 文档更新日志</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
+<li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig active" href="projectConfig.html">Project Config - 项目配置</a></li>
+<li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
+<li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
+<li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-ai" href="ai.html">AI - 人工智能</a></li>
+<li><a class="nav-app" href="app.html">App - 通用应用</a></li>
+<li><a class="nav-autojs4Runtime" href="autojs4Runtime.html">AutoJs4 Runtime - AutoJs4 运行时</a></li>
+<li><a class="nav-autojs" href="autojs.html">AutoJs6 - 本体应用</a></li>
+<li><a class="nav-automator" href="automator.html">Automator - 自动化</a></li>
+<li><a class="nav-barcode" href="barcode.html">Barcode - 条码</a></li>
+<li><a class="nav-base64" href="base64.html">Base64</a></li>
+<li><a class="nav-bundledLibraries" href="bundledLibraries.html">Bundled Libraries - 脚本库</a></li>
+<li><a class="nav-camera" href="camera.html">Camera - 相机</a></li>
+<li><a class="nav-canvas" href="canvas.html">Canvas - 画布</a></li>
+<li><a class="nav-color" href="color.html">Color - 颜色</a></li>
+<li><a class="nav-compose" href="compose.html">3-Block Compose</a></li>
+<li><a class="nav-composeDesigner" href="composeDesigner.html">3-Block Compose Designer - 设计器</a></li>
+<li><a class="nav-console" href="console.html">Console - 控制台</a></li>
+<li><a class="nav-continuation" href="continuation.html">Continuation - 续体</a></li>
+<li><a class="nav-cvt" href="cvt.html">Converter - 单位转换</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto - 密文</a></li>
+<li><a class="nav-device" href="device.html">Device - 设备</a></li>
+<li><a class="nav-dialogs" href="dialogs.html">Dialogs - 对话框</a></li>
+<li><a class="nav-e4x" href="e4x.html">E4X</a></li>
+<li><a class="nav-engines" href="engines.html">Engines - 引擎</a></li>
+<li><a class="nav-epub" href="epub.html">EPUB - 电子书</a></li>
+<li><a class="nav-events" href="events.html">Events - 事件监听</a></li>
+<li><a class="nav-files" href="files.html">Files - 文件</a></li>
+<li><a class="nav-floaty" href="floaty.html">Floaty - 悬浮窗</a></li>
+<li><a class="nav-flow" href="flow.html">Flow - 流程</a></li>
+<li><a class="nav-fmt" href="fmt.html">Formatter - 格式化</a></li>
+<li><a class="nav-gallery" href="gallery.html">Gallery - 相册</a></li>
+<li><a class="nav-global" href="global.html">Global - 全局对象</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-imgui" href="imgui.html">ImGui</a></li>
+<li><a class="nav-image" href="image.html">Images - 图像</a></li>
+<li><a class="nav-installer" href="installer.html">Installer - 安装器</a></li>
+<li><a class="nav-i18n" href="i18n.html">Internationalization - 国际化</a></li>
+<li><a class="nav-javaRuntime" href="javaRuntime.html">Java Runtime - Java 运行时</a></li>
+<li><a class="nav-jsox" href="jsox.html">Jsox - JavaScript 对象扩展</a></li>
+<li><a class="nav-keys" href="keys.html">Keys - 按键</a></li>
+<li><a class="nav-kotlinRuntime" href="kotlinRuntime.html">Kotlin Runtime - Kotlin 运行时</a></li>
+<li><a class="nav-luaRuntime" href="luaRuntime.html">Lua Runtime - Lua 运行时</a></li>
+<li><a class="nav-mail" href="mail.html">Mail - 邮件</a></li>
+<li><a class="nav-media" href="media.html">Media - 多媒体</a></li>
+<li><a class="nav-mediainfo" href="mediainfo.html">MediaInfo - 媒体信息</a></li>
+<li><a class="nav-memory" href="memory.html">Memory - 内存</a></li>
+<li><a class="nav-mime" href="mime.html">MIME - 媒体类型</a></li>
+<li><a class="nav-modules" href="modules.html">Module - 模块</a></li>
+<li><a class="nav-nanoid" href="nanoid.html">Nano ID - 随机 ID</a></li>
+<li><a class="nav-notice" href="notice.html">Notice - 消息通知</a></li>
+<li><a class="nav-ocr" href="ocr.html">OCR - 光学字符识别</a></li>
+<li><a class="nav-opencc" href="opencc.html">OpenCC - 中文转换</a></li>
+<li><a class="nav-pangu" href="pangu.html">Pangu - 文本间距</a></li>
+<li><a class="nav-pinyin" href="pinyin.html">Pinyin - 拼音</a></li>
+<li><a class="nav-pinyin4j" href="pinyin4j.html">Pinyin4j</a></li>
+<li><a class="nav-plugins" href="plugins.html">Plugins - 插件</a></li>
+<li><a class="nav-powerManager" href="powerManager.html">PowerManager - 电源管理</a></li>
+<li><a class="nav-pythonRuntime" href="pythonRuntime.html">Python Runtime - Python 运行时</a></li>
+<li><a class="nav-qrcode" href="qrcode.html">QR Code - 二维码</a></li>
+<li><a class="nav-recorder" href="recorder.html">Recorder - 记录器</a></li>
+<li><a class="nav-sensors" href="sensors.html">Sensors - 传感器</a></li>
+<li><a class="nav-settings" href="settings.html">Settings - 应用设置</a></li>
+<li><a class="nav-shell" href="shell.html">Shell</a></li>
+<li><a class="nav-shizuku" href="shizuku.html">Shizuku</a></li>
+<li><a class="nav-speech" href="speech.html">Speech - 语音</a></li>
+<li><a class="nav-sqlite" href="sqlite.html">SQLite - 数据库</a></li>
+<li><a class="nav-s13n" href="s13n.html">Standardization - 标准化</a></li>
+<li><a class="nav-storages" href="storages.html">Storages - 存储</a></li>
+<li><a class="nav-sysprops" href="sysprops.html">Sysprops - 系统属性</a></li>
+<li><a class="nav-tasks" href="tasks.html">Tasks - 任务</a></li>
+<li><a class="nav-terminal" href="terminal.html">Terminal - 终端</a></li>
+<li><a class="nav-threads" href="threads.html">Threads - 线程</a></li>
+<li><a class="nav-timers" href="timers.html">Timers - 定时器</a></li>
+<li><a class="nav-toast" href="toast.html">Toast - 消息浮动框</a></li>
+<li><a class="nav-tts" href="tts.html">TTS - 文本转语音</a></li>
+<li><a class="nav-ui" href="ui.html">UI - 用户界面</a></li>
+<li><a class="nav-uiAttributes" href="uiAttributes.html">UI Attributes - UI 布局属性</a></li>
+<li><a class="nav-util" href="util.html">Util - 工具</a></li>
+<li><a class="nav-web" href="web.html">Web - 万维网</a></li>
+<li><a class="nav-workManager" href="workManager.html">WorkManager - 计划任务兼容接口</a></li>
+<li><a class="nav-yolo" href="yolo.html">YOLO - 目标检测</a></li>
+<li><a class="nav-zip" href="zip.html">Zip - 压缩文件</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-uiSelectorType" href="uiSelectorType.html">UiSelector - 选择器</a></li>
+<li><a class="nav-uiObjectType" href="uiObjectType.html">UiObject - 控件节点</a></li>
+<li><a class="nav-uiObjectCollectionType" href="uiObjectCollectionType.html">UiObjectCollection - 控件集合</a></li>
+<li><a class="nav-uiObjectActionsType" href="uiObjectActionsType.html">UiObjectActions - 控件节点行为</a></li>
+<li><a class="nav-composeNodeType" href="composeNodeType.html">ComposeNode - Compose 节点</a></li>
+<li><a class="nav-composeStateType" href="composeStateType.html">ComposeState - Compose 状态</a></li>
+<li><a class="nav-composeModifierType" href="composeModifierType.html">ComposeModifier - Compose 修饰链</a></li>
+<li><a class="nav-composeThemeType" href="composeThemeType.html">ComposeTheme - Compose 主题</a></li>
+<li><a class="nav-composeSessionType" href="composeSessionType.html">ComposeSession - Compose 会话</a></li>
+<li><a class="nav-composeFloatyWindowType" href="composeFloatyWindowType.html">ComposeFloatyWindow - Compose 悬浮窗</a></li>
+<li><a class="nav-composeComponents" href="composeComponents.html">Compose 组件目录</a></li>
+<li><a class="nav-imguiSessionType" href="imguiSessionType.html">ImguiSession - ImGui 会话</a></li>
+<li><a class="nav-imguiDrawListType" href="imguiDrawListType.html">ImguiDrawList - ImGui 绘制列表</a></li>
+<li><a class="nav-imguiFloatingButtonType" href="imguiFloatingButtonType.html">ImguiFloatingButton - ImGui 悬浮按钮</a></li>
+<li><a class="nav-imguiComponentType" href="imguiComponentType.html">ImguiComponent - ImGui 高层组件</a></li>
+<li><a class="nav-imguiDataTableType" href="imguiDataTableType.html">ImguiDataTable - ImGui 数据表格</a></li>
+<li><a class="nav-imguiLogWindowType" href="imguiLogWindowType.html">ImguiLogWindow - ImGui 日志窗口</a></li>
+<li><a class="nav-imguiToastType" href="imguiToastType.html">ImguiToast - ImGui 短消息</a></li>
+<li><a class="nav-imguiStatsOverlayType" href="imguiStatsOverlayType.html">ImguiStatsOverlay - ImGui 帧率覆盖层</a></li>
+<li><a class="nav-imguiDialogType" href="imguiDialogType.html">ImguiDialog - ImGui 对话框</a></li>
+<li><a class="nav-imguiDialogPromiseType" href="imguiDialogPromiseType.html">ImguiDialogPromise - ImGui 对话框 Promise</a></li>
+<li><a class="nav-imguiTextureType" href="imguiTextureType.html">ImguiTexture - ImGui 纹理</a></li>
+<li><a class="nav-imguiSelectionStorageType" href="imguiSelectionStorageType.html">ImguiSelectionStorage - ImGui 选择存储</a></li>
+<li><a class="nav-imguiMultiSelectIOType" href="imguiMultiSelectIOType.html">ImguiMultiSelectIO - ImGui 多选结果</a></li>
+<li><a class="nav-epubBookType" href="epubBookType.html">EpubBook - 电子书对象</a></li>
+<li><a class="nav-epubReaderSessionType" href="epubReaderSessionType.html">EpubReaderSession - 阅读器会话</a></li>
+<li><a class="nav-flowType" href="flowType.html">Flow - 流程对象</a></li>
+<li><a class="nav-flowErrorType" href="flowErrorType.html">FlowError - 流程错误</a></li>
+<li><a class="nav-galleryViewSessionType" href="galleryViewSessionType.html">GalleryViewSession - 查看器会话</a></li>
+<li><a class="nav-mailClientType" href="mailClientType.html">MailClient - 邮件客户端</a></li>
+<li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
+<li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
+<li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
+<li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
+<li><a class="nav-eventEmitterType" href="eventEmitterType.html">EventEmitter - 事件发射器</a></li>
+<li><a class="nav-imageWrapperType" href="imageWrapperType.html">ImageWrapper - 包装图像类</a></li>
+<li><a class="nav-appType" href="appType.html">App - 应用枚举类</a></li>
+<li><a class="nav-colorType" href="colorType.html">Color - 颜色类</a></li>
+<li><a class="nav-versionType" href="versionType.html">Version - 版本工具类</a></li>
+<li><a class="nav-polyfill" href="polyfill.html">Polyfill - 代码填泥</a></li>
+<li><a class="nav-arrayx" href="arrayx.html">Arrayx - Array 扩展</a></li>
+<li><a class="nav-numberx" href="numberx.html">Numberx - Number 扩展</a></li>
+<li><a class="nav-mathx" href="mathx.html">Mathx - Math 扩展</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-exceptions" href="exceptions.html">Exceptions - 异常</a></li>
+<li><a class="nav-intentType" href="intentType.html">Intent - 意图</a></li>
+<li><a class="nav-runtime" href="runtime.html">Runtime - 运行时</a></li>
+<li><a class="nav-context" href="context.html">Context - 上下文</a></li>
+<li><a class="nav-activity" href="activity.html">Activity - 活动</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-scriptingJava" href="scriptingJava.html">Scripting Java - 脚本化 Java</a></li>
+<li><a class="nav-classSyntax" href="classSyntax.html">Class Syntax - 类语法</a></li>
+<li><a class="nav-asyncAwait" href="asyncAwait.html">Async/Await - async/await 与 continuation</a></li>
+<li><a class="nav-apiLevel" href="apiLevel.html">Android API Level - 安卓 API 级别</a></li>
+<li><a class="nav-colorTable" href="colorTable.html">Color Table - 颜色列表</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-glossaries" href="glossaries.html">Glossaries - 术语</a></li>
+<li><a class="nav-httpHeaderGlossary" href="httpHeaderGlossary.html">HttpHeader - HTTP 标头</a></li>
+<li><a class="nav-httpRequestMethodsGlossary" href="httpRequestMethodsGlossary.html">HttpRequestMethods - HTTP 请求方法</a></li>
+<li><a class="nav-mimeTypeGlossary" href="mimeTypeGlossary.html">MimeType - MIME 类型</a></li>
+<li><a class="nav-notificationChannelGlossary" href="notificationChannelGlossary.html">NotificationChannel - 通知渠道</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-dataTypes" href="dataTypes.html">Data Types - 数据类型</a></li>
+<li><a class="nav-omniTypes" href="omniTypes.html">Omnipotent Types - 全能类型</a></li>
+<li><a class="nav-storageType" href="storageType.html">Storage - 存储类</a></li>
+<li><a class="nav-androidBundleType" href="androidBundleType.html">AndroidBundle</a></li>
+<li><a class="nav-androidRectType" href="androidRectType.html">AndroidRect</a></li>
+<li><a class="nav-cryptoCipherOptionsType" href="cryptoCipherOptionsType.html">CryptoCipherOptions</a></li>
+<li><a class="nav-cryptoKeyType" href="cryptoKeyType.html">CryptoKey</a></li>
+<li><a class="nav-cryptoKeyPairType" href="cryptoKeyPairType.html">CryptoKeyPair</a></li>
+<li><a class="nav-consoleBuildOptionsType" href="consoleBuildOptionsType.html">ConsoleBuildOptions</a></li>
+<li><a class="nav-epubLocatorType" href="epubLocatorType.html">EpubLocator</a></li>
+<li><a class="nav-httpRequestBuilderOptionsType" href="httpRequestBuilderOptionsType.html">HttpRequestBuilderOptions</a></li>
+<li><a class="nav-httpRequestHeadersType" href="httpRequestHeadersType.html">HttpRequestHeaders</a></li>
+<li><a class="nav-httpResponseBodyType" href="httpResponseBodyType.html">HttpResponseBody</a></li>
+<li><a class="nav-httpResponseHeadersType" href="httpResponseHeadersType.html">HttpResponseHeaders</a></li>
+<li><a class="nav-httpResponseType" href="httpResponseType.html">HttpResponse</a></li>
+<li><a class="nav-injectableWebClientType" href="injectableWebClientType.html">InjectableWebClient</a></li>
+<li><a class="nav-injectableWebViewType" href="injectableWebViewType.html">InjectableWebView</a></li>
+<li><a class="nav-mailAccountOptionsType" href="mailAccountOptionsType.html">MailAccountOptions</a></li>
+<li><a class="nav-mailSearchQueryType" href="mailSearchQueryType.html">MailSearchQuery</a></li>
+<li><a class="nav-noticeOptionsType" href="noticeOptionsType.html">NoticeOptions</a></li>
+<li><a class="nav-noticeChannelOptionsType" href="noticeChannelOptionsType.html">NoticeChannelOptions</a></li>
+<li><a class="nav-noticePresetConfigurationType" href="noticePresetConfigurationType.html">NoticePresetConfiguration</a></li>
+<li><a class="nav-noticeBuilderType" href="noticeBuilderType.html">NoticeBuilder</a></li>
+<li><a class="nav-okhttp3HttpUrlType" href="okhttp3HttpUrlType.html">Okhttp3HttpUrl</a></li>
+<li><a class="nav-ocrOptionsType" href="ocrOptionsType.html">OcrOptions</a></li>
+<li><a class="nav-okhttp3RequestType" href="okhttp3RequestType.html">Okhttp3Request</a></li>
+<li><a class="nav-opencvPointType" href="opencvPointType.html">OpenCVPoint</a></li>
+<li><a class="nav-opencvRectType" href="opencvRectType.html">OpenCVRect</a></li>
+<li><a class="nav-opencvSizeType" href="opencvSizeType.html">OpenCVSize</a></li>
+<li><a class="nav-openCCConversionType" href="openCCConversionType.html">OpenCCConversion</a></li>
+<li><a class="nav-speechModelInfoType" href="speechModelInfoType.html">SpeechModelInfo</a></li>
+<li><a class="nav-speechRecognitionResultType" href="speechRecognitionResultType.html">SpeechRecognitionResult</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-http-project-autojs6-com" href="http://project.autojs6.com">GitHub - 应用项目地址</a></li>
+<li><p><a class="nav-http-docs-project-autojs6-com" href="http://docs-project.autojs6.com">GitHub - 文档项目地址</a></p>
+</li>
+<li><p><a class="nav-terminalSessionType" href="terminalSessionType.html">TerminalSession - 终端会话</a></p>
+</li>
+<li><a class="nav-terminalOpenOptionsType" href="terminalOpenOptionsType.html">TerminalOpenOptions - 终端选项</a></li>
+<li><a class="nav-terminalErrorType" href="terminalErrorType.html">TerminalError - 终端错误</a></li>
+<li><a class="nav-shellProcessType" href="shellProcessType.html">ShellProcess - Shell 进程</a></li>
+</ul>
+
+    </div>
+
+    <div id="column1" data-id="projectConfig" class="interior">
+        <header>
+            <h1>AutoJs6 文档 - 6.8.0</h1>
+            <div id="gtoc">
+                <p class="index">
+                    <a href="index.html" name="toc">索引</a>
+                    <span class="offline-search-entry"> |
+                        <button type="button"
+                                class="offline-search-toggle"
+                                aria-controls="offline-search-panel"
+                                aria-expanded="false"
+                                data-offline-search-toggle>搜索文档</button>
+                    </span>
+                </p>
+            </div>
+            <hr>
+        </header>
+
+        <section id="offline-search-panel"
+                 class="offline-search"
+                 aria-labelledby="offline-search-title"
+                 data-offline-search
+                 data-index-src="assets/offline-search-index.js"
+                 data-state="idle"
+                 hidden>
+            <div class="offline-search-heading">
+                <h2 id="offline-search-title">搜索文档</h2>
+                <button type="button"
+                        class="offline-search-icon-button offline-search-close"
+                        aria-label="关闭搜索文档"
+                        data-offline-search-close>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path d="M6 6L18 18M18 6L6 18"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="offline-search-control">
+                <input id="offline-search-input"
+                       type="search"
+                       role="combobox"
+                       inputmode="search"
+                       autocomplete="off"
+                       spellcheck="false"
+                       placeholder="搜索文档内容"
+                       aria-labelledby="offline-search-title"
+                       aria-controls="offline-search-results"
+                       aria-autocomplete="list"
+                       aria-expanded="false"
+                       data-offline-search-input>
+                <button type="button"
+                        class="offline-search-icon-button offline-search-clear"
+                        aria-label="清除搜索内容"
+                        data-offline-search-clear
+                        hidden>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path d="M6 6L18 18M18 6L6 18"></path>
+                    </svg>
+                </button>
+            </div>
+            <p class="offline-search-status"
+               aria-live="polite"
+               data-offline-search-status>输入关键词搜索全部离线文档</p>
+            <div id="offline-search-results"
+                 class="offline-search-results"
+                 role="listbox"
+                 hidden
+                 data-offline-search-results></div>
+        </section>
+
+        <div id="toc">
+            <h2>目录</h2>
+<ul>
+<li><span class="stability_undefined"><a href="#projectconfig_project_json">项目配置 (project.json)</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig">文件位置与作用</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_1">完整示例</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_2">键名与读取规则</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_3">保存时的行为</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_4">顶层字段</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_name">name</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_versionname">versionName</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_versioncode">versionCode</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_packagename">packageName</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_main">main</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_type">type</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_assets">assets</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_excludedirs">excludeDirs</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig">launchConfig</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_build">build</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_icon">icon</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_abis">abis</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_libs">libs</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_node">node</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_bun">bun</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent">agent</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_permissions">permissions</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_signaturescheme">signatureScheme</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_usefeatures">useFeatures</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_1">launchConfig</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_logsvisible">launchConfig.logsVisible</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_splashvisible">launchConfig.splashVisible</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_launchervisible">launchConfig.launcherVisible</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_logshortcutvisible">launchConfig.logShortcutVisible</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_settingsshortcutvisible">launchConfig.settingsShortcutVisible</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_runonboot">launchConfig.runOnBoot</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_requiressharedstorage">launchConfig.requiresSharedStorage</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_slug">launchConfig.slug</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_build_1">build</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_build_id">build.id</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_build_number">build.number</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_build_time">build.time</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_node_1">node</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_node_backend">node.backend</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_node_timeoutms">node.timeoutMs</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_node_executionmode">node.executionMode</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_node_entrydirective">node.entryDirective</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_node_permissions">node.permissions</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_bun_1">bun</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_bun_timeoutms">bun.timeoutMs</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_bun_hostcapabilities">bun.hostCapabilities</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_1">agent</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_id">agent.id</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_description">agent.description</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_parameters">agent.parameters</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_result">agent.result</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_risk">agent.risk</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_confirm">agent.confirm</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_timeoutms">agent.timeoutMs</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_examples">agent.examples</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_tags">agent.tags</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_5">权限清单</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_6">默认清单</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_7">自定义清单是替换</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_8">始终保留的前台服务权限</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_9">打包页的权限列表</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_10">别名与兼容</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_11">反向别名</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_autojs4_autox">来自 AutoJs4 与 AutoX 的键</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#projectconfig_12">常见问题</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_project_json_1">保存后 project.json 的内容变了</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_hidelogs">hideLogs 等配置每次保存后都会反过来</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_13">打包应用开启 &quot;前台服务&quot; 后崩溃</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_permissions_1">写进 permissions 的权限在打包页保存后不见了</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_launchconfig_2">修改 launchConfig 后, 已安装的打包应用没有变化</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_14">保存时提示键名冲突</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_agent_agent">agent 段写了, 但项目没有出现在 Agent 脚本目录中</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_continuation">打包应用中 continuation 不可用</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_assets_1">assets 中列出的文件没有被打包</a></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <div id="apicontent">
+            <h1>项目配置 (project.json)<span><a class="mark" href="#projectconfig_project_json" id="projectconfig_project_json">#</a></span></h1>
+<!-- type=misc -->
+<p><code>project.json</code> 是 AutoJs6 项目的配置文件, 放在项目目录的根目录. 含有 <code>project.json</code> 的目录即为一个项目, 可以存放多个脚本, 模块与资源文件 (参阅 <a href="qa.html#qa_13">疑难解答 &gt; 图片等资源共同打包及多脚本打包</a>).</p>
+<p>本页面不是脚本 API. 本页说明 <code>project.json</code> 的全部键: 类型, 默认值, 取值范围, 别名, 保存时的行为, 以及运行项目和打包应用时各自读取哪些键. 字段信息以 AutoJs6 源码为准, 起始版本只在能够确认时注明.</p>
+<hr>
+<h2>文件位置与作用<span><a class="mark" href="#projectconfig" id="projectconfig">#</a></span></h2>
+<div class="signature"><ul>
+<li>文件名固定为 <code>project.json</code>, 位于项目目录的根目录. 新建项目时 AutoJs6 自动生成该文件.</li>
+<li>在文件管理中进入项目目录后, 顶部的项目工具栏提供运行, 打包与编辑按钮. 编辑按钮打开项目配置页, 打包按钮打开打包页; 两个页面都会把修改写回 <code>project.json</code> (参阅 <a href="#projectconfig_3">保存时的行为</a>).</li>
+<li>运行项目时读取 <a href="#projectconfig_main">main</a>, <a href="#projectconfig_type">type</a>, <a href="#projectconfig_usefeatures">useFeatures</a>, <a href="#projectconfig_node">node</a> 与 <a href="#projectconfig_bun">bun</a> 的部分键; <a href="#projectconfig_agent">agent</a> 段用于把项目登记为 Agent 可调用的脚本.</li>
+<li>打包应用时读取 <a href="#projectconfig_name">name</a>, <a href="#projectconfig_packagename">packageName</a>, <a href="#projectconfig_versionname">versionName</a>, <a href="#projectconfig_versioncode">versionCode</a>, <a href="#projectconfig_icon">icon</a>, <a href="#projectconfig_abis">abis</a>, <a href="#projectconfig_libs">libs</a>, <a href="#projectconfig_permissions">permissions</a>, <a href="#projectconfig_signaturescheme">signatureScheme</a>, <a href="#projectconfig_excludedirs">excludeDirs</a>, <a href="#projectconfig_launchconfig">launchConfig</a> 与 <a href="#projectconfig_build">build</a>. <a href="#projectconfig_launchconfig">launchConfig</a> 只对打包应用起作用.</li>
+<li>运行项目只要求 <a href="#projectconfig_name">name</a> 与 <a href="#projectconfig_main">main</a> 两项 (AutoJs6 6.8.1 起; 此前通过 VSCode 插件运行缺少 packageName, versionName 或 versionCode 的项目时, 项目会被判定为无效). 读不到有效配置 (例如缺少 name) 时, 普通 JavaScript 项目按默认的 <code>main.js</code> 运行, useFeatures 也不生效.</li>
+<li>打包还要求 <a href="#projectconfig_packagename">packageName</a>, <a href="#projectconfig_versionname">versionName</a> 与大于 0 的 <a href="#projectconfig_versioncode">versionCode</a>. 缺少 packageName 或 versionName 时, 项目工具栏不显示打包按钮.</li>
+</ul>
+</div><hr>
+<h2>完整示例<span><a class="mark" href="#projectconfig_1" id="projectconfig_1">#</a></span></h2>
+<p>下例包含打包常用的键. 只在 AutoJs6 中运行的项目, 写 <code>name</code> 与 <code>main</code> 即可.</p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;示例项目&quot;,
+    &quot;packageName&quot;: &quot;org.example.demo&quot;,
+    &quot;versionName&quot;: &quot;1.0.0&quot;,
+    &quot;versionCode&quot;: 1,
+    &quot;main&quot;: &quot;main.js&quot;,
+    &quot;icon&quot;: &quot;res/logo.png&quot;,
+    &quot;abis&quot;: [&quot;arm64-v8a&quot;, &quot;armeabi-v7a&quot;],
+    &quot;libs&quot;: [&quot;OpenCV&quot;, &quot;Paddle OCR&quot;],
+    &quot;permissions&quot;: [
+        &quot;android.permission.WAKE_LOCK&quot;,
+        &quot;android.permission.INTERNET&quot;,
+        &quot;android.permission.POST_NOTIFICATIONS&quot;,
+        &quot;android.permission.FOREGROUND_SERVICE&quot;,
+        &quot;android.permission.FOREGROUND_SERVICE_SPECIAL_USE&quot;
+    ],
+    &quot;signatureScheme&quot;: &quot;V1 + V2&quot;,
+    &quot;excludeDirs&quot;: [&quot;build&quot;, &quot;tests&quot;],
+    &quot;launchConfig&quot;: {
+        &quot;logsVisible&quot;: true,
+        &quot;splashVisible&quot;: true,
+        &quot;launcherVisible&quot;: true,
+        &quot;logShortcutVisible&quot;: false,
+        &quot;settingsShortcutVisible&quot;: false,
+        &quot;runOnBoot&quot;: false,
+        &quot;requiresSharedStorage&quot;: false,
+        &quot;slug&quot;: &quot;Powered by AutoJs6&quot;
+    },
+    &quot;build&quot;: {
+        &quot;id&quot;: &quot;3C1F0A2B-3&quot;,
+        &quot;number&quot;: 3,
+        &quot;time&quot;: 1762934400000
+    }
+}
+</code></pre>
+<p><code>build</code> 段由打包流程生成, 一般不需要手写. <code>node</code>, <code>bun</code> 与 <code>agent</code> 段的示例见各自的章节.</p>
+<hr>
+<h2>键名与读取规则<span><a class="mark" href="#projectconfig_2" id="projectconfig_2">#</a></span></h2>
+<div class="signature"><ul>
+<li>键名不区分大小写, 并忽略字母与数字以外的字符. 例如 <code>versionCode</code>, <code>version_code</code> 与 <code>VERSION-CODE</code> 等价. 此规则适用于顶层, <a href="#projectconfig_launchconfig">launchConfig</a> 与 <a href="#projectconfig_build">build</a> 段 (AutoJs6 6.6.2 起).</li>
+<li>许多键有别名, 例如 <code>package</code> 等价于 <a href="#projectconfig_packagename">packageName</a>. 各键的别名列在对应条目中, 来自 AutoJs4 与 AutoX 的别名另见 <a href="#projectconfig_10">别名与兼容</a>.</li>
+<li>规范键与别名 (或同一键的不同写法) 同时出现时, 读取取 JSON 中最后出现的那个, 不报错; 保存时的处理见 <a href="#projectconfig_3">保存时的行为</a>.</li>
+<li>布尔类型的键只接受 JSON 布尔值 <code>true</code> / <code>false</code>, 不接受字符串 <code>&quot;true&quot;</code>. 值为 <code>null</code> 的键视为未写.</li>
+<li><a href="#projectconfig_node">node</a> 与 <a href="#projectconfig_bun">bun</a> 段内的键名区分大小写, 不支持别名与宽松写法.</li>
+<li><a href="#projectconfig_agent">agent</a> 段的键名必须写作小写 <code>agent</code>, 段内的键名区分大小写. 含有 agent 段的 <code>project.json</code> 必须是严格 JSON (不能有注释或末尾多余的逗号), 否则项目不会被登记.</li>
+<li><code>project.json</code> 不是合法 JSON 时, AutoJs6 先尝试修复常见的格式错误, 仍然失败时尽可能还原关键信息 (AutoJs6 6.6.1 起), 此时 name 为空则取项目目录名. 这一还原只识别部分键, 不能代替修正文件.</li>
+</ul>
+</div><hr>
+<h2>保存时的行为<span><a class="mark" href="#projectconfig_3" id="projectconfig_3">#</a></span></h2>
+<p>项目配置页保存, 打包页保存或打包, 打包完成后写回打包信息, 以及新建项目时, AutoJs6 都会重新生成 <code>project.json</code>:</p>
+<ul>
+<li>保留用户原来的键名 (AutoJs6 6.7.0 起). 例如原文件用 <code>package</code>, 保存后仍是 <code>package</code>, 不会改成 <code>packageName</code>.</li>
+<li>本页没有列出的键 (未知键) 在保存后消失, 例如 AutoJs4 的 <code>scripts</code>. 需要保留的自定义数据请放在其他文件中.</li>
+<li>有默认值的键会被写出. 例如没有写 permissions 的项目, 保存后出现默认的 13 项权限; launchConfig 的 8 个键全部写出; agent 段写出 risk, confirm, timeoutMs 等的默认值.</li>
+<li>值为空 (未设置) 的键不写出.</li>
+<li>在项目配置页或打包页保存时, 同一个键同时以两种写法出现 (例如同时有 <code>packageName</code> 与 <code>package</code>) 会报键名冲突, 需要先删去其中一个 (AutoJs6 6.7.0 起). 打包完成后写回打包信息时不报错, 保留原写法的那个.</li>
+<li>打包页保存时, <a href="#projectconfig_excludedirs">excludeDirs</a> 总会加入 <code>build</code> 目录, <a href="#projectconfig_permissions">permissions</a> 写成完整的权限名.</li>
+<li>反向别名 (例如 <code>hideLogs</code>) 在 AutoJs6 6.8.1 之前每保存一次值就翻转一次, 见 <a href="#projectconfig_11">反向别名</a>.</li>
+</ul>
+<hr>
+<h2>顶层字段<span><a class="mark" href="#projectconfig_4" id="projectconfig_4">#</a></span></h2>
+<h3>name<span><a class="mark" href="#projectconfig_name" id="projectconfig_name">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>别名: <code>projectName</code></li>
+<li>运行与打包都必须填写.</li>
+</ul>
+</div><p>项目名称. 打包时作为打包应用的应用名称, 输出的 APK 文件名为 <code>&lt;name&gt;_v&lt;versionName&gt;.apk</code>.</p>
+<h3>versionName<span><a class="mark" href="#projectconfig_versionname" id="projectconfig_versionname">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>别名: <code>version</code></li>
+<li>打包时必须填写.</li>
+</ul>
+</div><p>版本名称, 例如 <code>&quot;1.0.0&quot;</code>, 写入打包应用.</p>
+<h3>versionCode<span><a class="mark" href="#projectconfig_versioncode" id="projectconfig_versioncode">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_number">number</a> (整数)</li>
+<li>默认值: <code>1</code></li>
+<li>打包时必须大于 0.</li>
+</ul>
+</div><p>版本号, 写入打包应用. 项目配置页要求它在 32 位整数范围内. 覆盖安装打包应用时, Android 要求新版本号不小于已安装的版本号.</p>
+<h3>packageName<span><a class="mark" href="#projectconfig_packagename" id="projectconfig_packagename">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>别名: <code>package</code></li>
+<li>打包时必须填写.</li>
+</ul>
+</div><p>打包应用的包名, 例如 <code>&quot;org.example.demo&quot;</code>. 至少两段, 以 <code>.</code> 分隔, 每段以英文字母开头, 只含英文字母, 数字与下划线.</p>
+<h3>main<span><a class="mark" href="#projectconfig_main" id="projectconfig_main">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: <code>&quot;main.js&quot;</code></li>
+<li>别名: <code>mainName</code>, <code>mainScript</code>, <code>mainScriptName</code>, <code>mainScriptFile</code>, <code>mainScriptFileName</code>, <code>mainFile</code>, <code>mainFileName</code></li>
+</ul>
+</div><p>主脚本路径, 相对于项目目录. 运行项目时以项目目录为工作目录运行主脚本. 打包时主脚本不能位于项目目录之外.</p>
+<ul>
+<li>主脚本不在项目根目录时 (例如 <code>&quot;src/main.js&quot;</code>), 主脚本中以相对路径 <code>require</code> 的模块先在项目根目录下查找, 找不到时再到主脚本所在目录下查找 (AutoJs6 6.8.1 起).</li>
+<li><a href="#projectconfig_type">type</a> 为 <code>&quot;node&quot;</code> 时, 主脚本的扩展名可以是 <code>js</code>, <code>cjs</code>, <code>mjs</code>, <code>ts</code>, <code>cts</code> 或 <code>mts</code>.</li>
+<li>主脚本为 <code>.py</code> 文件时必须同时声明 <a href="#projectconfig_type">type</a> 为 <code>&quot;python&quot;</code>.</li>
+<li>项目登记为 Agent 脚本时, 同时写了多个别名且取值不同的, 执行会被拒绝.</li>
+</ul>
+<h3>type<span><a class="mark" href="#projectconfig_type" id="projectconfig_type">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>别名: <code>projectType</code></li>
+</ul>
+</div><p>项目类型. 未写时为普通的 AutoJs6 (Rhino 引擎) 项目.</p>
+<table>
+<thead>
+<tr>
+<th>取值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&quot;node&quot;</code></td>
+<td>Node.js 项目 (不区分大小写). 运行时使用 Node.js 引擎, 打包时自动带入 Node.js Runtime</td>
+</tr>
+<tr>
+<td><code>&quot;python&quot;</code></td>
+<td>Python 项目. 主脚本为 <code>.py</code> 文件时必须声明; Python 项目不能打包</td>
+</tr>
+<tr>
+<td><code>&quot;bun&quot;</code></td>
+<td>打包时带入 Bun 运行时. 运行时是否使用 Bun 引擎由文件名 (如 <code>.bun.js</code>) 或 <code>&quot;bun&quot;</code> 指令决定, 不由此项决定 (参阅 <a href="runtimeApis.html">运行时 API</a>)</td>
+</tr>
+<tr>
+<td><code>&quot;quickjs&quot;</code></td>
+<td>打包时被拒绝, 打包应用不支持 QuickJS</td>
+</tr>
+</tbody>
+</table>
+<h3>assets<span><a class="mark" href="#projectconfig_assets" id="projectconfig_assets">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+<li>别名: <code>asset</code>, <code>assetList</code></li>
+</ul>
+</div><p>目前没有任何功能读取此项, 只在保存时保留. 打包时整个项目目录 (<a href="#projectconfig_excludedirs">excludeDirs</a> 中的目录除外) 都会进入打包应用, 不需要逐个列出资源文件.</p>
+<h3>excludeDirs<span><a class="mark" href="#projectconfig_excludedirs" id="projectconfig_excludedirs">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+<li>别名: <code>ignoredDirs</code> (AutoJs4, AutoX), <code>ignore</code>, <code>excludedDirs</code></li>
+</ul>
+</div><p>打包时排除的目录, 相对于项目目录, 末尾的 <code>/</code> 可以省略. 打包页保存时总会加入打包输出目录 <code>build</code>. 使用别名 <code>excludedDirs</code> 时项目配置无法解析的问题已于 AutoJs6 6.7.0 修复 <em><a href="http://issues.autojs6.com/428"><code>issue #428</code></a></em>.</p>
+<h3>launchConfig<span><a class="mark" href="#projectconfig_launchconfig" id="projectconfig_launchconfig">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_object">object</a></li>
+<li>别名: <code>launch</code></li>
+</ul>
+</div><p>打包应用的启动配置, 见 <a href="#projectconfig_launchconfig_1">launchConfig</a> 一节.</p>
+<h3>build<span><a class="mark" href="#projectconfig_build" id="projectconfig_build">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_object">object</a></li>
+<li>别名: <code>buildInfo</code></li>
+</ul>
+</div><p>打包信息, 见 <a href="#projectconfig_build_1">build</a> 一节.</p>
+<h3>icon<span><a class="mark" href="#projectconfig_icon" id="projectconfig_icon">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>别名: <code>iconPath</code></li>
+</ul>
+</div><p>图标图片的路径, 相对于项目目录. 打包时用它替换打包应用的启动器图标. 新建项目时为 <code>&quot;res/logo.png&quot;</code>.</p>
+<h3>abis<span><a class="mark" href="#projectconfig_abis" id="projectconfig_abis">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+<li>别名: <code>abi</code>, <code>abiList</code></li>
+</ul>
+</div><p>打包应用包含的 ABI 架构, 可选 <code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code>, <code>x86</code> 与 <code>armeabi</code>, 打包页也接受常见简写 (如 <code>arm64</code>). 未写或为空时, 打包页预选本机支持的 ABI. 无效的名称在打包页显示为不可用, 打包至少需要一个 ABI (AutoJs6 6.6.0 起).</p>
+<h3>libs<span><a class="mark" href="#projectconfig_libs" id="projectconfig_libs">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+<li>别名: <code>lib</code>, <code>libList</code></li>
+</ul>
+</div><p>打包应用带入的扩展库, 写名称或简写均可, 不区分大小写 (AutoJs6 6.6.0 起). 可用名称与简写:</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>简写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OpenCV</code></td>
+<td><code>cv</code></td>
+</tr>
+<tr>
+<td><code>MLKit OCR</code></td>
+<td><code>mlkit</code>, <code>mlkitocr</code>, <code>mlkit-ocr</code>, <code>mlkit_ocr</code></td>
+</tr>
+<tr>
+<td><code>Paddle OCR</code></td>
+<td><code>paddle</code>, <code>paddleocr</code>, <code>paddle-ocr</code>, <code>paddle_ocr</code></td>
+</tr>
+<tr>
+<td><code>Rapid OCR</code></td>
+<td><code>rapid</code>, <code>rapidocr</code>, <code>rapid-ocr</code>, <code>rapid_ocr</code></td>
+</tr>
+<tr>
+<td><code>OpenCC</code></td>
+<td><code>cc</code></td>
+</tr>
+<tr>
+<td><code>Pinyin</code></td>
+<td><code>pin</code></td>
+</tr>
+<tr>
+<td><code>Pinyin4j</code></td>
+<td><code>pinyin4j</code>, <code>pinyin-4j</code>, <code>pinyin_4j</code></td>
+</tr>
+<tr>
+<td><code>MLKit Barcode</code></td>
+<td><code>barcode</code>, <code>mlkit-barcode</code>, <code>mlkit_barcode</code></td>
+</tr>
+<tr>
+<td><code>MediaInfo</code></td>
+<td><code>mediainfo</code>, <code>media-info</code>, <code>media_info</code></td>
+</tr>
+<tr>
+<td><code>Image Quantization</code></td>
+<td><code>imagequant</code>, <code>image-quant</code>, <code>image-quantization</code>, <code>image_quant</code>, <code>image_quantization</code></td>
+</tr>
+<tr>
+<td><code>Bundled Libraries</code></td>
+<td><code>bundled-libraries</code>, <code>bundled_libraries</code>, <code>bundledlibraries</code></td>
+</tr>
+<tr>
+<td><code>Java Libraries</code></td>
+<td><code>java-libraries</code>, <code>java_libraries</code>, <code>javalibraries</code></td>
+</tr>
+<tr>
+<td><code>Node.js Runtime</code></td>
+<td><code>node</code>, <code>nodejs</code>, <code>node.js</code>, <code>node-runtime</code>, <code>nodejs-runtime</code></td>
+</tr>
+<tr>
+<td><code>Embedded Node.js</code></td>
+<td><code>embedded-node</code>, <code>embedded-nodejs</code>, <code>embedded_nodejs</code></td>
+</tr>
+</tbody>
+</table>
+<p>终端模拟器 (Terminal Emulator) 总是带入, 不需要声明. <a href="#projectconfig_type">type</a> 为 <code>&quot;node&quot;</code> 的项目总是带入 <code>Node.js Runtime</code>. 打包应用使用 images 等依赖 OpenCV 的功能时需要声明 <code>OpenCV</code>.</p>
+<h3>node<span><a class="mark" href="#projectconfig_node" id="projectconfig_node">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_object">object</a></li>
+</ul>
+</div><p>Node.js 项目的运行配置, 见 <a href="#projectconfig_node_1">node</a> 一节 (AutoJs6 6.8.0 起).</p>
+<h3>bun<span><a class="mark" href="#projectconfig_bun" id="projectconfig_bun">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_object">object</a></li>
+</ul>
+</div><p>Bun 项目的运行配置, 见 <a href="#projectconfig_bun_1">bun</a> 一节 (AutoJs6 6.8.0 起).</p>
+<h3>agent<span><a class="mark" href="#projectconfig_agent" id="projectconfig_agent">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_object">object</a></li>
+</ul>
+</div><p>把项目登记为 Agent 可调用的脚本, 见 <a href="#projectconfig_agent_1">agent</a> 一节 (AutoJs6 6.8.0 起).</p>
+<h3>permissions<span><a class="mark" href="#projectconfig_permissions" id="projectconfig_permissions">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: 13 项, 见 <a href="#projectconfig_5">权限清单</a></li>
+<li>别名: <code>permission</code>, <code>permissionList</code></li>
+</ul>
+</div><p>打包应用声明的 Android 权限 (AutoJs6 6.6.3 起) <em><a href="http://pr.autojs6.com/391"><code>pr #391</code></a></em> <em><a href="http://issues.autojs6.com/362"><code>issue #362</code></a></em>. 写了此项即替换默认清单, 详见 <a href="#projectconfig_5">权限清单</a>.</p>
+<h3>signatureScheme<span><a class="mark" href="#projectconfig_signaturescheme" id="projectconfig_signaturescheme">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: <code>&quot;V1 + V2&quot;</code></li>
+<li>别名: <code>signatureSchemes</code>, <code>signature</code></li>
+</ul>
+</div><p>APK 签名方案. 读取时提取其中的 <code>V1</code>, <code>V2</code>, <code>V3</code> 等 (不区分大小写), 去重并排序后以 <code>&quot; + &quot;</code> 连接, 例如 <code>&quot;v2,v1&quot;</code> 读作 <code>&quot;V1 + V2&quot;</code>; 没有可提取的内容时保留原值.</p>
+<p>打包页可选 <code>&quot;V1 + V2&quot;</code>, <code>&quot;V1 + V3&quot;</code>, <code>&quot;V1 + V2 + V3&quot;</code>, <code>&quot;V1&quot;</code>, <code>&quot;V2 + V3&quot;</code> (Android 7.0 及以上), <code>&quot;V2&quot;</code> (Android 7.0 及以上) 与 <code>&quot;V3&quot;</code> (Android 9.0 及以上). 不在这些选项中的值, 打包页显示并保存为 <code>&quot;V1 + V2&quot;</code>.</p>
+<h3>useFeatures<span><a class="mark" href="#projectconfig_usefeatures" id="projectconfig_usefeatures">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+<li>别名: <code>useFeature</code>, <code>useFeatureList</code>, <code>features</code>, <code>feature</code>, <code>featureList</code></li>
+</ul>
+</div><p>为项目的脚本启用的特性. 目前只有 <code>&quot;continuation&quot;</code>, 启用后脚本顶层可以使用 <a href="asyncAwait.html#asyncawait_continuation">continuation.await</a> 等待 Promise (参阅 <a href="continuation.html">续体 (Continuation)</a>).</p>
+<p>在 AutoJs6 中运行项目时生效. 打包应用目前不读取此项 (截至 AutoJs6 6.8.1), 在打包应用中需要 continuation 的脚本暂时无法使用该特性.</p>
+<hr>
+<h2>launchConfig<span><a class="mark" href="#projectconfig_launchconfig_1" id="projectconfig_launchconfig_1">#</a></span></h2>
+<p>打包应用的启动配置. 只对打包应用起作用, 在 AutoJs6 中运行项目时不读取. 打包页 &quot;运行配置&quot; 一节可以编辑全部 8 项.</p>
+<p>logsVisible 与 runOnBoot 在打包应用首次启动, 覆盖安装或 <a href="#projectconfig_build_id">build.id</a> 变化时复制到打包应用自己的设置中 (分别对应打包应用设置页的 &quot;不显示主界面&quot; 与 &quot;开机时&quot;). 此后以打包应用设置页的开关为准, 直到下一次覆盖安装.</p>
+<h3>launchConfig.logsVisible<span><a class="mark" href="#projectconfig_launchconfig_logsvisible" id="projectconfig_launchconfig_logsvisible">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
+<li>默认值: <code>true</code></li>
+<li>别名: <code>showLogs</code>, <code>hideLogs</code> (AutoJs4, AutoX; 反向), <code>displayLogs</code></li>
+</ul>
+</div><p>启动时是否显示日志页面. 为 <code>true</code> 时打开日志页面并在其中运行主脚本; 为 <code>false</code> 时不显示任何界面 (启动页也不显示), 直接运行主脚本 (参阅 <a href="qa.html#qa_14">疑难解答 &gt; 打包应用不显示主界面</a>).</p>
+<h3>launchConfig.splashVisible<span><a class="mark" href="#projectconfig_launchconfig_splashvisible" id="projectconfig_launchconfig_splashvisible">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
+<li>默认值: <code>true</code></li>
+<li>别名: <code>showSplash</code>, <code>hideSplash</code> (反向), <code>displaySplash</code> (AutoX)</li>
+</ul>
+</div><p>启动时是否显示启动页. <a href="#projectconfig_launchconfig_logsvisible">logsVisible</a> 为 <code>false</code> 时启动页也不显示.</p>
+<h3>launchConfig.launcherVisible<span><a class="mark" href="#projectconfig_launchconfig_launchervisible" id="projectconfig_launchconfig_launchervisible">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
+<li>默认值: <code>true</code></li>
+<li>别名: <code>showLauncher</code>, <code>hideLauncher</code> (AutoX; 反向), <code>displayLauncher</code></li>
+</ul>
+</div><p>是否在启动器中显示应用图标. 为 <code>false</code> 时, 图标在打包应用首次启动后隐藏, 此后可以通过 <a href="#projectconfig_launchconfig_runonboot">runOnBoot</a> 等方式运行脚本. <a href="#projectconfig_launchconfig_requiressharedstorage">requiresSharedStorage</a> 为 <code>true</code> 且尚未获得共享存储访问时, 图标保持显示.</p>
+<h3>launchConfig.logShortcutVisible<span><a class="mark" href="#projectconfig_launchconfig_logshortcutvisible" id="projectconfig_launchconfig_logshortcutvisible">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
+<li>默认值: <code>false</code></li>
+<li>别名: <code>showLogShortcut</code>, <code>hideLogShortcut</code> (反向), <code>displayLogShortcut</code></li>
+</ul>
+</div><p>长按启动器图标时是否显示 &quot;日志&quot; 快捷方式, 需要 Android 7.1 及以上 (AutoJs6 6.8.0 起) <em><a href="http://issues.autojs6.com/550"><code>issue #550</code></a></em>.</p>
+<h3>launchConfig.settingsShortcutVisible<span><a class="mark" href="#projectconfig_launchconfig_settingsshortcutvisible" id="projectconfig_launchconfig_settingsshortcutvisible">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
+<li>默认值: <code>false</code></li>
+<li>别名: <code>showSettingsShortcut</code>, <code>hideSettingsShortcut</code> (反向), <code>displaySettingsShortcut</code></li>
+</ul>
+</div><p>长按启动器图标时是否显示 &quot;设置&quot; 快捷方式, 需要 Android 7.1 及以上 (AutoJs6 6.8.0 起) <em><a href="http://issues.autojs6.com/550"><code>issue #550</code></a></em>.</p>
+<h3>launchConfig.runOnBoot<span><a class="mark" href="#projectconfig_launchconfig_runonboot" id="projectconfig_launchconfig_runonboot">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
+<li>默认值: <code>false</code></li>
+<li>别名: <code>bootRun</code>, <code>autoRunOnBoot</code>, <code>bootAutoStart</code>, <code>autoStartOnBoot</code></li>
+</ul>
+</div><p>开机后是否自动运行主脚本 (不显示界面) (AutoJs6 6.7.0 起). 需要 <a href="#projectconfig_permissions">permissions</a> 含有 <code>android.permission.RECEIVE_BOOT_COMPLETED</code> (默认清单已含). 部分系统还需要在系统设置中允许打包应用自启动.</p>
+<h3>launchConfig.requiresSharedStorage<span><a class="mark" href="#projectconfig_launchconfig_requiressharedstorage" id="projectconfig_launchconfig_requiressharedstorage">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
+<li>默认值: <code>false</code></li>
+</ul>
+</div><p>启动前是否要求共享存储访问 (AutoJs6 6.8.0 起). 为 <code>true</code> 时, 未获得访问权限的打包应用在运行脚本前弹出说明对话框: Android 11 及以上前往 &quot;所有文件访问权限&quot; 设置, 以下版本申请读写外部存储权限; 取消则不运行脚本. 开机运行时未获得权限会记录错误并放弃运行.</p>
+<p><a href="#projectconfig_permissions">permissions</a> 中需要含有 <code>android.permission.MANAGE_EXTERNAL_STORAGE</code> (Android 11 及以上) 或读写外部存储权限, 否则对话框不显示前往设置的按钮 (参阅 <a href="qa.html#qa_15">疑难解答 &gt; 打包应用的共享存储权限</a>).</p>
+<h3>launchConfig.slug<span><a class="mark" href="#projectconfig_launchconfig_slug" id="projectconfig_launchconfig_slug">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: <code>&quot;Powered by AutoJs6&quot;</code></li>
+<li>别名: <code>slugText</code>, <code>splashText</code> (AutoX)</li>
+</ul>
+</div><p>启动页上的标语文本, 为空字符串时不显示.</p>
+<hr>
+<h2>build<span><a class="mark" href="#projectconfig_build_1" id="projectconfig_build_1">#</a></span></h2>
+<p>打包信息, 由打包流程在每次打包完成后写回, 一般不需要手写. 打包应用据此判断项目是否更新: <a href="#projectconfig_build_id">build.id</a> 变化时重新解压项目文件, 并重新复制 <a href="#projectconfig_launchconfig_1">launchConfig</a> 中的部分设置.</p>
+<h3>build.id<span><a class="mark" href="#projectconfig_build_id" id="projectconfig_build_id">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>别名: <code>build_id</code> (AutoJs4, AutoX)</li>
+</ul>
+</div><p>构建 ID, 格式为 <code>&lt;8 位十六进制&gt;-&lt;number&gt;</code>, 由打包时间与打包序号计算.</p>
+<h3>build.number<span><a class="mark" href="#projectconfig_build_number" id="projectconfig_build_number">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_number">number</a> (整数)</li>
+<li>默认值: <code>0</code></li>
+<li>别名: <code>build_number</code> (AutoJs4, AutoX)</li>
+</ul>
+</div><p>打包序号, 项目每打包一次加 1.</p>
+<h3>build.time<span><a class="mark" href="#projectconfig_build_time" id="projectconfig_build_time">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_number">number</a> (整数)</li>
+<li>默认值: <code>0</code></li>
+<li>别名: <code>build_time</code> (AutoJs4, AutoX)</li>
+</ul>
+</div><p>打包时间, Unix 毫秒.</p>
+<hr>
+<h2>node<span><a class="mark" href="#projectconfig_node_1" id="projectconfig_node_1">#</a></span></h2>
+<p>Node.js 项目 (<a href="#projectconfig_type">type</a> 为 <code>&quot;node&quot;</code>) 的运行配置 (AutoJs6 6.8.0 起). 段内的键名区分大小写. Node.js 运行时还会读取本段的其他键 (如 featureFlags, bridgeLimits), 这些键由 Node.js 运行时插件定义, 不在本页范围.</p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;node-demo&quot;,
+    &quot;type&quot;: &quot;node&quot;,
+    &quot;main&quot;: &quot;main.mjs&quot;,
+    &quot;node&quot;: {
+        &quot;timeoutMs&quot;: 120000,
+        &quot;executionMode&quot;: &quot;one_shot&quot;,
+        &quot;entryDirective&quot;: &quot;nodejs ui&quot;,
+        &quot;permissions&quot;: [&quot;ui&quot;, &quot;toast&quot;, &quot;files&quot;]
+    }
+}
+</code></pre>
+<h3>node.backend<span><a class="mark" href="#projectconfig_node_backend" id="projectconfig_node_backend">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+</ul>
+</div><p>保留字段, 目前没有作用.</p>
+<h3>node.timeoutMs<span><a class="mark" href="#projectconfig_node_timeoutms" id="projectconfig_node_timeoutms">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_number">number</a></li>
+<li>默认值: 不限</li>
+</ul>
+</div><p>整次执行的期限, 单位为毫秒. 未写, 为 0 或负数时不限时. TypeScript 项目写正数时至少按 30000 计. 项目的启动描述文件写有期限时以启动描述文件为准. 打包应用同样读取此项 (参阅 <a href="runtimeApis.html">运行时 API</a>).</p>
+<h3>node.executionMode<span><a class="mark" href="#projectconfig_node_executionmode" id="projectconfig_node_executionmode">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: <code>&quot;one_shot&quot;</code></li>
+</ul>
+</div><p>执行模式: <code>&quot;one_shot&quot;</code> (单次执行), <code>&quot;interactive_long_running&quot;</code> (交互式常驻) 或 <code>&quot;scheduled&quot;</code> (定时任务). 也接受 <code>oneshot</code>, <code>long_running</code>, <code>longrunning</code>, <code>service</code>, <code>schedule</code>, <code>workmanager</code>, <code>work_manager</code> 等写法, 大小写与 <code>-</code> 不影响识别.</p>
+<p>打包应用按此项运行, 与打包时生成的启动描述不一致时报错. 在 AutoJs6 中运行项目时以启动描述为准, 此项只作为诊断信息.</p>
+<h3>node.entryDirective<span><a class="mark" href="#projectconfig_node_entrydirective" id="projectconfig_node_entrydirective">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: <code>&quot;nodejs&quot;</code></li>
+</ul>
+</div><p>入口指令, 由 <code>nodejs</code>, <code>ui</code> 与 <code>ui-thread</code> 组成, 例如 <code>&quot;nodejs ui&quot;</code> 或 <code>&quot;nodejs ui ui-thread&quot;</code>; 词之间可用空格, <code>,</code>, <code>;</code> 或 <code>|</code> 分隔, 不区分大小写. 含有其他词时报错. 打包应用使用此项, 与打包时生成的启动描述不一致时报错; 在 AutoJs6 中运行时使用主脚本文件自身的指令.</p>
+<h3>node.permissions<span><a class="mark" href="#projectconfig_node_permissions" id="projectconfig_node_permissions">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: 未声明 (不检查)</li>
+</ul>
+</div><p>项目使用的 Node.js 桥接能力, 例如 <code>&quot;ui&quot;</code>, <code>&quot;engines&quot;</code>, <code>&quot;files.write&quot;</code>. 声明此项 (即使是空数组) 后, 脚本只能使用其中列出的能力; 未声明时不做这一检查. 能力名称不区分大小写, <code>:</code> 视同 <code>.</code>; 父能力包含其子能力 (<code>shell.root</code>, <code>files.write</code> 等少数敏感能力除外, 需要单独声明); 未知的名称只产生警告. 打包时按声明的能力为打包应用补充所需的 Android 权限.</p>
+<p>同样的清单也可以写在 <code>node.bridgePermissions</code>, 或 <code>package.json</code> 的 <code>autojs6.permissions</code> 与 <code>autojs6.node.permissions</code> 中 (参阅 <a href="runtimeApis.html">运行时 API</a>, <a href="imgui.html">ImGui</a>).</p>
+<hr>
+<h2>bun<span><a class="mark" href="#projectconfig_bun_1" id="projectconfig_bun_1">#</a></span></h2>
+<p>Bun 项目的运行配置 (AutoJs6 6.8.0 起). 段内的键名区分大小写.</p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;bun-demo&quot;,
+    &quot;type&quot;: &quot;bun&quot;,
+    &quot;main&quot;: &quot;main.bun.js&quot;,
+    &quot;bun&quot;: {
+        &quot;timeoutMs&quot;: 180000,
+        &quot;hostCapabilities&quot;: [&quot;ui.layout&quot;, &quot;ui.compose&quot;]
+    }
+}
+</code></pre>
+<h3>bun.timeoutMs<span><a class="mark" href="#projectconfig_bun_timeoutms" id="projectconfig_bun_timeoutms">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_number">number</a></li>
+<li>默认值: <code>60000</code></li>
+</ul>
+</div><p>整次执行的期限, 单位为毫秒, 范围 1-600000, 超出范围时按边界值计. 执行参数 <code>bun.timeoutMillis</code> 优先于此项 (参阅 <a href="runtimeApis.html#runtimeapis_21">运行时 API &gt; 打包项目</a>).</p>
+<h3>bun.hostCapabilities<span><a class="mark" href="#projectconfig_bun_hostcapabilities" id="projectconfig_bun_hostcapabilities">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+</ul>
+</div><p>打包应用授予 Bun 脚本的宿主能力, 例如 <code>&quot;ui.layout&quot;</code>, <code>&quot;files.control&quot;</code>, <code>&quot;agent.control&quot;</code>. 打包与运行时都会校验, 未知或重复的名称报错. <code>execution.control</code> 自动授予, 不能写在此处. 声明 <code>notifications.post</code> 或 <code>shell.shizuku</code> 时, 打包会补充对应的 Android 权限.</p>
+<p>在 AutoJs6 中运行时不读取此项, 以插件中心的授权开关为准.</p>
+<hr>
+<h2>agent<span><a class="mark" href="#projectconfig_agent_1" id="projectconfig_agent_1">#</a></span></h2>
+<p>把项目登记为 3-Stove Agent 可以调用的脚本 (AutoJs6 6.8.0 起). 登记后的脚本出现在 <a href="ai.html#ai_ai_agent_catalog_query">ai.agent.catalog</a> 的结果中 (参阅 <a href="agentScriptEntryType.html">AgentScriptEntry</a>). 单个脚本文件也可以用文件头的 <code>@agent</code> 注释登记.</p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;清理下载目录旧安装包&quot;,
+    &quot;main&quot;: &quot;main.js&quot;,
+    &quot;agent&quot;: {
+        &quot;id&quot;: &quot;clean-download-installers&quot;,
+        &quot;description&quot;: &quot;列出或删除下载目录中超过指定天数的安装包.&quot;,
+        &quot;parameters&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+                &quot;days&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;保留最近几天的文件&quot;, &quot;minimum&quot;: 1, &quot;default&quot;: 30 },
+                &quot;dryRun&quot;: { &quot;type&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;只列出, 不删除&quot;, &quot;default&quot;: true }
+            },
+            &quot;required&quot;: []
+        },
+        &quot;risk&quot;: &quot;sensitive&quot;,
+        &quot;confirm&quot;: &quot;before-run&quot;,
+        &quot;timeoutMs&quot;: 60000,
+        &quot;examples&quot;: [&quot;清理下载目录里一个月前的安装包&quot;],
+        &quot;tags&quot;: [&quot;files&quot;, &quot;cleanup&quot;]
+    }
+}
+</code></pre>
+<p>agent 段只允许下列 9 个键. 出现其他键或任何一项校验失败时, 项目不会被登记 (目录查询时忽略, 执行时报未登记). 读取登记信息时 <code>project.json</code> 不能超过 256 KiB.</p>
+<h3>agent.id<span><a class="mark" href="#projectconfig_agent_id" id="projectconfig_agent_id">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: 由项目目录名生成</li>
+</ul>
+</div><p>登记 ID, 只能由小写英文字母与数字组成, 以单个 <code>-</code> 连接, 例如 <code>&quot;clean-download-installers&quot;</code>. 未写时由项目目录名转换而来, 无法转换时为 <code>script-</code> 加一段十六进制摘要.</p>
+<h3>agent.description<span><a class="mark" href="#projectconfig_agent_description" id="projectconfig_agent_description">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>必须填写, 不能为空.</li>
+</ul>
+</div><p>用途说明, 供 Agent 选择脚本.</p>
+<h3>agent.parameters<span><a class="mark" href="#projectconfig_agent_parameters" id="projectconfig_agent_parameters">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_object">object</a></li>
+<li>默认值: 无参数</li>
+</ul>
+</div><p>参数的 JSON Schema 子集:</p>
+<ul>
+<li>根对象的 <code>type</code> 必须为 <code>&quot;object&quot;</code>, 只允许 <code>type</code>, <code>properties</code>, <code>required</code> 与 <code>additionalProperties</code> 四个键; <code>additionalProperties</code> 只能为 <code>false</code>.</li>
+<li><code>required</code> 中的名称不能重复, 且必须在 <code>properties</code> 中定义.</li>
+<li>参数名须符合 JavaScript 标识符的写法 (英文字母, 数字, <code>_</code> 与 <code>$</code>, 不以数字开头).</li>
+<li>每个参数只允许 <code>type</code>, <code>description</code>, <code>enum</code>, <code>default</code>, <code>minimum</code>, <code>maximum</code>, <code>minLength</code>, <code>maxLength</code>. <code>type</code> 为 <code>&quot;string&quot;</code>, <code>&quot;number&quot;</code>, <code>&quot;integer&quot;</code> 或 <code>&quot;boolean&quot;</code>; <code>minimum</code> / <code>maximum</code> 只用于数值, <code>minLength</code> / <code>maxLength</code> 只用于字符串; <code>enum</code> 不能为空且不能有重复值; <code>default</code> 必须符合上述约束.</li>
+</ul>
+<h3>agent.result<span><a class="mark" href="#projectconfig_agent_result" id="projectconfig_agent_result">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_object">object</a></li>
+</ul>
+</div><p>结果说明, 任意 JSON 对象, 供 Agent 理解脚本回传的结果 (参阅 <a href="ai.html#ai_ai_agent_result_value">ai.agent.result</a>).</p>
+<h3>agent.risk<span><a class="mark" href="#projectconfig_agent_risk" id="projectconfig_agent_risk">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: <code>&quot;normal&quot;</code></li>
+</ul>
+</div><p>风险等级: <code>&quot;readonly&quot;</code>, <code>&quot;normal&quot;</code> 或 <code>&quot;sensitive&quot;</code>.</p>
+<h3>agent.confirm<span><a class="mark" href="#projectconfig_agent_confirm" id="projectconfig_agent_confirm">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a></li>
+<li>默认值: <code>&quot;never&quot;</code></li>
+</ul>
+</div><p>运行前是否需要用户确认: <code>&quot;never&quot;</code> 或 <code>&quot;before-run&quot;</code>. <a href="#projectconfig_agent_risk">risk</a> 为 <code>&quot;sensitive&quot;</code> 时总是 <code>&quot;before-run&quot;</code>.</p>
+<h3>agent.timeoutMs<span><a class="mark" href="#projectconfig_agent_timeoutms" id="projectconfig_agent_timeoutms">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_number">number</a> (整数)</li>
+<li>默认值: <code>60000</code></li>
+</ul>
+</div><p>执行超时, 单位为毫秒, 范围 1-300000.</p>
+<h3>agent.examples<span><a class="mark" href="#projectconfig_agent_examples" id="projectconfig_agent_examples">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+</ul>
+</div><p>示例目标, 每项为非空字符串, 供检索使用.</p>
+<h3>agent.tags<span><a class="mark" href="#projectconfig_agent_tags" id="projectconfig_agent_tags">#</a></span></h3>
+<div class="signature"><ul>
+<li>类型: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></li>
+<li>默认值: <code>[]</code></li>
+</ul>
+</div><p>检索标签, 每项为非空字符串.</p>
+<hr>
+<h2>权限清单<span><a class="mark" href="#projectconfig_5" id="projectconfig_5">#</a></span></h2>
+<p><a href="#projectconfig_permissions">permissions</a> 决定打包应用声明哪些 Android 权限.</p>
+<h3>默认清单<span><a class="mark" href="#projectconfig_6" id="projectconfig_6">#</a></span></h3>
+<p>未写 permissions 时, 打包应用声明以下 13 项. 保存一次 <code>project.json</code> 后, 这 13 项会被写入文件.</p>
+<pre><code class="lang-text">android.permission.WAKE_LOCK
+android.permission.INTERNET
+android.permission.READ_EXTERNAL_STORAGE
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.MANAGE_EXTERNAL_STORAGE
+android.permission.POST_NOTIFICATIONS
+android.permission.FOREGROUND_SERVICE
+android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
+android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+android.permission.RECEIVE_BOOT_COMPLETED
+android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+android.permission.SYSTEM_ALERT_WINDOW
+</code></pre>
+<h3>自定义清单是替换<span><a class="mark" href="#projectconfig_7" id="projectconfig_7">#</a></span></h3>
+<p>写了 permissions 时, 清单整体替换默认清单, 不是在默认清单上追加: 打包应用只保留清单中列出的权限, 默认清单中没有列出的项会被去掉. 清单用于从打包模板已声明的权限中选择保留哪些, 不会为打包应用新增模板中没有的权限.</p>
+<ul>
+<li><a href="#projectconfig_node_permissions">node.permissions</a> 与 <a href="#projectconfig_bun_hostcapabilities">bun.hostCapabilities</a> 声明的能力需要的 Android 权限, 打包时另行补充, 不必写进 permissions.</li>
+<li>去掉某项权限后, 依赖它的功能在打包应用中无法使用. 例如 <a href="#projectconfig_launchconfig_runonboot">runOnBoot</a> 需要 <code>RECEIVE_BOOT_COMPLETED</code>, <a href="#projectconfig_launchconfig_requiressharedstorage">requiresSharedStorage</a> 需要共享存储相关权限.</li>
+</ul>
+<h3>始终保留的前台服务权限<span><a class="mark" href="#projectconfig_8" id="projectconfig_8">#</a></span></h3>
+<p>AutoJs6 6.8.1 起, 无论 permissions 如何填写, 打包应用始终保留以下 2 项:</p>
+<pre><code class="lang-text">android.permission.FOREGROUND_SERVICE
+android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+</code></pre>
+<p>原因: 打包应用的设置页有 &quot;前台服务&quot; 开关, 开启后运行前台服务需要这 2 项权限 (Android 14 及以上的前台服务类型为 specialUse, 需要后一项). 此前, 自定义清单中没有这 2 项时, 在打包应用中开启 &quot;前台服务&quot; 会导致打包应用崩溃 <em><a href="http://issues.autojs6.com/594"><code>issue #594</code></a></em>.</p>
+<ul>
+<li>打包页中这 2 项的复选框总是选中且不能取消, 旁边注明原因. 载入的 <code>project.json</code> 中没有这 2 项时, 复选框同样显示为选中, 保存后清单中包含它们.</li>
+<li>默认清单中的其余 11 项仍可去掉.</li>
+<li>使用 AutoJs6 6.8.1 之前的版本打包时, 请在自定义清单中手动加入这 2 项.</li>
+</ul>
+<h3>打包页的权限列表<span><a class="mark" href="#projectconfig_9" id="projectconfig_9">#</a></span></h3>
+<p>打包页的 &quot;需要的权限&quot; 列出 72 项常用权限, 载入 <code>project.json</code> 时按以下规则匹配清单中的项:</p>
+<ul>
+<li>不区分大小写.</li>
+<li><code>android.permission.*</code> 可以只写最后一段, 且 <code>-</code> 与 <code>_</code> 等价, 例如 <code>&quot;wake-lock&quot;</code> 匹配 <code>android.permission.WAKE_LOCK</code>.</li>
+<li><code>&quot;shizuku&quot;</code> 匹配 <code>moe.shizuku.manager.permission.API_V23</code>, <code>&quot;termux&quot;</code> 匹配 <code>com.termux.permission.RUN_COMMAND</code>.</li>
+</ul>
+<p>在打包页保存后, 清单只含列表中勾选的项, 并写成完整的权限名. 列表之外的权限会被去掉, 需要它们时直接编辑 <code>project.json</code> 并且不在打包页中保存. 简写只在打包页中识别, 建议直接写完整的权限名.</p>
+<hr>
+<h2>别名与兼容<span><a class="mark" href="#projectconfig_10" id="projectconfig_10">#</a></span></h2>
+<h3>反向别名<span><a class="mark" href="#projectconfig_11" id="projectconfig_11">#</a></span></h3>
+<p>以下 5 个别名与规范键含义相反, 读取时把值取反. 例如 <code>&quot;hideLogs&quot;: true</code> 等同于 <code>&quot;logsVisible&quot;: false</code>.</p>
+<table>
+<thead>
+<tr>
+<th>反向别名</th>
+<th>规范键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hideLogs</code></td>
+<td><a href="#projectconfig_launchconfig_logsvisible">logsVisible</a></td>
+</tr>
+<tr>
+<td><code>hideSplash</code></td>
+<td><a href="#projectconfig_launchconfig_splashvisible">splashVisible</a></td>
+</tr>
+<tr>
+<td><code>hideLauncher</code></td>
+<td><a href="#projectconfig_launchconfig_launchervisible">launcherVisible</a></td>
+</tr>
+<tr>
+<td><code>hideLogShortcut</code></td>
+<td><a href="#projectconfig_launchconfig_logshortcutvisible">logShortcutVisible</a></td>
+</tr>
+<tr>
+<td><code>hideSettingsShortcut</code></td>
+<td><a href="#projectconfig_launchconfig_settingsshortcutvisible">settingsShortcutVisible</a></td>
+</tr>
+</tbody>
+</table>
+<p>保存 <code>project.json</code> 时保留原来的键名 (见 <a href="#projectconfig_3">保存时的行为</a>). AutoJs6 6.8.1 起, 写回反向别名时同样把值取反, 保存前后含义不变.</p>
+<p>AutoJs6 6.8.1 之前的版本写回反向别名时没有取反, 每保存一次 (项目配置页保存, 打包页保存或打包, 打包完成后写回打包信息), 值就翻转一次 <em><a href="http://issues.autojs6.com/596"><code>issue #596</code></a></em>. 例如 <code>&quot;hideLogs&quot;: true</code> 保存后变成 <code>&quot;hideLogs&quot;: false</code>, 打包应用因此可能不再显示日志页面.</p>
+<p>规避方式: 改用规范键 (如 <code>&quot;logsVisible&quot;: false</code>), 并核对一次当前的值. 已被旧版本翻转过的值无法判断哪一次才是本意, AutoJs6 6.8.1 不会自动更正, 请按需要的效果重新填写.</p>
+<h3>来自 AutoJs4 与 AutoX 的键<span><a class="mark" href="#projectconfig_autojs4_autox" id="projectconfig_autojs4_autox">#</a></span></h3>
+<p>以下别名来自 AutoJs4 或 AutoX 的 <code>project.json</code>, AutoJs6 可以直接读取, 保存时保留原键名:</p>
+<table>
+<thead>
+<tr>
+<th>键</th>
+<th>来源</th>
+<th>对应的规范键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ignoredDirs</code></td>
+<td>AutoJs4, AutoX</td>
+<td><a href="#projectconfig_excludedirs">excludeDirs</a></td>
+</tr>
+<tr>
+<td><code>hideLogs</code> (反向)</td>
+<td>AutoJs4, AutoX</td>
+<td><a href="#projectconfig_launchconfig_logsvisible">launchConfig.logsVisible</a></td>
+</tr>
+<tr>
+<td><code>displaySplash</code></td>
+<td>AutoX</td>
+<td><a href="#projectconfig_launchconfig_splashvisible">launchConfig.splashVisible</a></td>
+</tr>
+<tr>
+<td><code>hideLauncher</code> (反向)</td>
+<td>AutoX</td>
+<td><a href="#projectconfig_launchconfig_launchervisible">launchConfig.launcherVisible</a></td>
+</tr>
+<tr>
+<td><code>splashText</code></td>
+<td>AutoX</td>
+<td><a href="#projectconfig_launchconfig_slug">launchConfig.slug</a></td>
+</tr>
+<tr>
+<td><code>build_id</code></td>
+<td>AutoJs4, AutoX</td>
+<td><a href="#projectconfig_build_id">build.id</a></td>
+</tr>
+<tr>
+<td><code>build_number</code></td>
+<td>AutoJs4, AutoX</td>
+<td><a href="#projectconfig_build_number">build.number</a></td>
+</tr>
+<tr>
+<td><code>build_time</code></td>
+<td>AutoJs4, AutoX</td>
+<td><a href="#projectconfig_build_time">build.time</a></td>
+</tr>
+</tbody>
+</table>
+<p>AutoJs4 的 <code>scripts</code> (为单个脚本设置的配置) 不受支持, 保存后会被删除.</p>
+<hr>
+<h2>常见问题<span><a class="mark" href="#projectconfig_12" id="projectconfig_12">#</a></span></h2>
+<h3>保存后 project.json 的内容变了<span><a class="mark" href="#projectconfig_project_json_1" id="projectconfig_project_json_1">#</a></span></h3>
+<p>保存时 AutoJs6 重新生成文件: 有默认值的键被写出, 未知键被删除, 打包页还会加入 <code>build</code> 排除目录与完整的权限名 (见 <a href="#projectconfig_3">保存时的行为</a>). 需要保留的自定义数据请放在其他文件中.</p>
+<h3>hideLogs 等配置每次保存后都会反过来<span><a class="mark" href="#projectconfig_hidelogs" id="projectconfig_hidelogs">#</a></span></h3>
+<p>这是 AutoJs6 6.8.1 之前的问题, 见 <a href="#projectconfig_11">反向别名</a>. 改用 <code>logsVisible</code> 等规范键可以避免.</p>
+<h3>打包应用开启 &quot;前台服务&quot; 后崩溃<span><a class="mark" href="#projectconfig_13" id="projectconfig_13">#</a></span></h3>
+<p>自定义的 <a href="#projectconfig_permissions">permissions</a> 中缺少前台服务权限. AutoJs6 6.8.1 起打包时始终保留这 2 项; 使用此前的版本时, 在清单中加入 <code>android.permission.FOREGROUND_SERVICE</code> 与 <code>android.permission.FOREGROUND_SERVICE_SPECIAL_USE</code> 后重新打包 (见 <a href="#projectconfig_8">始终保留的前台服务权限</a>).</p>
+<h3>写进 permissions 的权限在打包页保存后不见了<span><a class="mark" href="#projectconfig_permissions_1" id="projectconfig_permissions_1">#</a></span></h3>
+<p>打包页只保留其列表中勾选的权限, 见 <a href="#projectconfig_9">打包页的权限列表</a>.</p>
+<h3>修改 launchConfig 后, 已安装的打包应用没有变化<span><a class="mark" href="#projectconfig_launchconfig_2" id="projectconfig_launchconfig_2">#</a></span></h3>
+<p>logsVisible 与 runOnBoot 只在打包应用首次启动, 覆盖安装或 build.id 变化时复制到打包应用的设置, 之后以打包应用设置页的开关为准. 重新打包并覆盖安装, 或在打包应用的设置页中修改.</p>
+<h3>保存时提示键名冲突<span><a class="mark" href="#projectconfig_14" id="projectconfig_14">#</a></span></h3>
+<p>同一个键以两种写法同时出现, 例如同时有 <code>packageName</code> 与 <code>package</code>, 或同时有 <code>logsVisible</code> 与 <code>hideLogs</code>. 删去其中一个后再保存.</p>
+<h3>agent 段写了, 但项目没有出现在 Agent 脚本目录中<span><a class="mark" href="#projectconfig_agent_agent" id="projectconfig_agent_agent">#</a></span></h3>
+<p>逐项检查: 键名是否为小写 <code>agent</code>; 文件是否为严格 JSON (没有注释和多余的逗号); agent 段是否只含 9 个允许的键; description 是否非空; id, risk, confirm, timeoutMs 与 parameters 是否符合 <a href="#projectconfig_agent_1">agent</a> 一节的约束.</p>
+<h3>打包应用中 continuation 不可用<span><a class="mark" href="#projectconfig_continuation" id="projectconfig_continuation">#</a></span></h3>
+<p>打包应用目前不读取 <a href="#projectconfig_usefeatures">useFeatures</a> (截至 AutoJs6 6.8.1). 在打包应用中运行的脚本可以改用 async 函数与 <code>await</code> (参阅 <a href="asyncAwait.html">async/await 与 continuation</a>).</p>
+<h3>assets 中列出的文件没有被打包<span><a class="mark" href="#projectconfig_assets_1" id="projectconfig_assets_1">#</a></span></h3>
+<p><a href="#projectconfig_assets">assets</a> 不起作用, 打包时整个项目目录都会进入打包应用. 文件没有出现在打包应用中时, 检查它是否位于 <a href="#projectconfig_excludedirs">excludeDirs</a> 列出的目录中.</p>
+
+        </div>
+    </div>
+</div>
+
+<script src="assets/sh_javascript.js"></script>
+<script src="assets/sh_java.js"></script>
+<script src="assets/sh_main.js"></script>
+<script src="assets/offline-search.js"></script>
+
+<script src="plugins/docsify-copy-code@2.js"></script>
+<script src="plugins/zoom-image.js"></script>
+
+<script>
+    highlight(void 0, void 0, 'pre');
+    highlight(void 0, void 0, 'tt');
+</script>
+
+<!-- __TRACKING__ -->
+
+</body>
+</html>

@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -355,7 +356,15 @@
 </li>
 <li><p><code>新增</code> <a href="video.html">视频 (Video)</a> 与 <a href="audio.html">音频 (Audio)</a>: AutoJs6 自带的录屏与录音 (video.record, audio.record), 以及 3-Slate Studio 插件提供的视频与音频加工 (AutoJs6 6.8.1), 包括裁剪, 拼接, 变速, 缩放 / 旋转 / 裁切, 叠加, 抽帧与 GIF, 转码, 混音, 音量与格式转换, 多轨时间线合成 (转场, 叠加与字幕) 与字幕烧录; 页首说明默认输出位置, 插件的 &quot;所有文件访问&quot; 权限 (video.frame 同样需要), 同步与 Async 形态, 进度与取消, Node.js 与 Bun 的用法, 以及计划中的 FFmpeg 命令透传与第三方 FFmpeg 插件的对应写法; 新页 <a href="threeSlateStudio.html">3-Slate Studio</a> 介绍插件的安装, 权限, 界面 (媒体库, 工具箱, 时间线剪辑器, 录音) 与代码生成, 以及计划中的 FFmpeg 大库; <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
 </li>
+<li><p><code>新增</code> <a href="projectConfig.html">项目配置 (project.json)</a>: project.json 全部 46 个键 (顶层, launchConfig, build, node, bun 与 agent) 的类型, 默认值, 别名与作用, 运行项目与打包应用各自读取的键, 键名的宽松匹配与保存时的行为 (保留原键名, 删除未知键, 写出默认值, 键名冲突), 权限清单 (默认 13 项, 自定义清单替换默认清单, AutoJs6 6.8.1 起始终保留前台服务 2 项), 反向别名 (hideLogs 等在 6.8.1 之前每保存一次值就翻转一次) 与来自 AutoJs4 / AutoX 的键, 以及常见问题; <a href="qa.html#qa_14">疑难解答 (Q &amp; A)</a> 的示例改用 logsVisible, <a href="runtimeApis.html#runtimeapis_21">运行时 API (Runtime APIs)</a>, <a href="modules.html">模块 (Modules)</a> 与 <a href="asyncAwait.html">async/await 与 continuation</a> 等页增加该页链接 (AutoJs6 issue #594, #596)</p>
+</li>
+<li><p><code>更新</code> <a href="plugins.html#plugins_3">插件 (Plugins)</a>: 补充 &quot;插件设置页入口&quot; 一节, 说明插件中心的插件设置页按 meta-data <code>org.autojs.plugin.SETTINGS_ACTION</code>, MCP Server 与 3-Shell Terminal 原有的设置页 action 的顺序打开插件自身的设置页, 以及 meta-data 的写法与对 Activity 的要求 (AutoJs6 6.8.1)</p>
+</li>
 <li><p><code>更新</code> <a href="console.html#console_p_restoredentrycount">控制台 (Console)</a>: 补充 restoredEntryCount 属性, 即日志页从 AutoJs6 上一个进程恢复的日志条目数 (读取期间为 null), 脚本中的 console 读取始终为 0 (AutoJs6 6.8.1)</p>
+</li>
+<li><p><code>更新</code> <a href="shizuku.html#shizuku_p_state">Shizuku</a>: 补充 state 各字段的含义 (isRunning 即已收到 Shizuku 服务端的 Binder, 收到之前 hasPermission 总为 false), 读取 state 时在后台绑定用户服务, &quot;等待 Shizuku 可用&quot; 一节 (轮询 state 或直接执行一次命令, 无需 auto.restart) 以及 Shizuku 不可用时执行命令的报错顺序 (AutoJs6 6.8.1)</p>
+</li>
+<li><p><code>更新</code> <a href="image.html#image_screen_capture_session_sharing">图像 (Image)</a>: 补充 &quot;屏幕捕获会话共享&quot; 一节 (脚本, 子脚本, Node.js / Bun 执行, 网页与 MCP Server / 3-Stove Agent 的截图回退默认共用一个会话; 兼容判定, 参数不兼容时另建会话并说明原因, 被替换的参与者自动重新申请, isAsync 独占, 同一时刻只允许一个录屏, 最后一个参与者退出后释放, 设置项, 以及与 &quot;投影媒体权限&quot; 的区别), getScreenCaptureOptions 返回值的 isShared 与 participants, 并相应修改 requestScreenCapture, stopScreenCapture 与 captureScreen 的说明; <a href="runtimeApis.html">运行时 API (Runtime APIs)</a> 与 <a href="video.html#video_m_record">视频 (Video)</a> 同步说明 requireExistingPermission 与录屏数量限制 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="runtimeApis.html#runtimeapis_node_js_3">运行时 API (Runtime APIs)</a>: 说明 Node.js 的 images.requestScreenCapture 受桥接调用 30 秒等待上限约束 (超时以 ERR_AUTOJS6_BRIDGE_TIMEOUT 失败, 授权对话框随之关闭), 并给出 video 与 audio 模块在 Node.js 与 Bun 中的入口</p>
 </li>
@@ -429,7 +438,7 @@
 </li>
 <li><p><code>更新</code> <a href="device.html">设备 (Device)</a>, <a href="sensors.html">传感器 (Sensors)</a> 与 <a href="media.html">多媒体 (Media)</a> 页的运行时支持表: Bun 现在经宿主客户端提供 device 的全部成员 (Build 字段, width / height, density, pageSize, digest, getMarketName, isManufacturer 与 manufacturers / brands / roms 的判断来自启动快照, 随 device.info 授权提供; 屏幕 / 电源 / 网络查询, keepAwake / keepScreenDim, vibrate 的时长数组与摩尔斯电码重载, cancelVibration, wakeUpIfNeeded 与 rotation / orientation 走 device.control), sensors 的 Rhino 事件发射器形态 (register / unregister / unregisterAll / getSensor, sensors.delay 四档), 以及新的 host.media (playMusic 等 8 个播放成员与 scanFile, 并含 play / pause / resume / stop / seekTo / getPlaybackStatus 播放会话); 新增默认关闭的 Bun 授权 device.identifiers (getIMEI / getSerial / getAndroidId / getMacAddress / getSharedDeviceId 与 imei / serial), media.control (播放) 与 media.library (scanFile)</p>
 </li>
-<li><p><code>新增</code> <a href="plugins.html#plugins_6">插件 (Plugins)</a> 的 &quot;官方插件工具表&quot;: 列出 3-Hanzi CC, AutoJs6 YOLO NCNN, Image Quantization, 3-Stack Archive 与 3-Macaw Speech 提供的 15 个插件工具 (opencc_convert, yolo_detect, imagequant_quantize, archive_list / archive_read / archive_extract, 以及 speech_listen, speech_speak, speech_transcribe, speech_synthesize, speech_speaker_verify, speech_speaker_identify, speech_diarize, speech_detect_language 与 speech_tag), 每个工具写明用途, 提供插件, 最低插件版本, 参数 (类型, 是否必填与默认值), 结果字段与文件或目录输出</p>
+<li><p><code>新增</code> <a href="plugins.html#plugins_7">插件 (Plugins)</a> 的 &quot;官方插件工具表&quot;: 列出 3-Hanzi CC, AutoJs6 YOLO NCNN, Image Quantization, 3-Stack Archive 与 3-Macaw Speech 提供的 15 个插件工具 (opencc_convert, yolo_detect, imagequant_quantize, archive_list / archive_read / archive_extract, 以及 speech_listen, speech_speak, speech_transcribe, speech_synthesize, speech_speaker_verify, speech_speaker_identify, speech_diarize, speech_detect_language 与 speech_tag), 每个工具写明用途, 提供插件, 最低插件版本, 参数 (类型, 是否必填与默认值), 结果字段与文件或目录输出</p>
 </li>
 <li><p><code>修复</code> <a href="plugins.html#plugins_m_tools_call">插件 (Plugins)</a> 中 plugins.tools.call 的 imagequant_quantize 示例: 参数名 colors 改为实际的 maxColors, 输出名 image 改为实际的 png (原示例会被参数校验拒绝)</p>
 </li>

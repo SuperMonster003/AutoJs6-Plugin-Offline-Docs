@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -355,7 +356,10 @@
 <li><span class="stability_undefined"><a href="#shizuku_currentcomponent">currentComponent()</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#shizuku_p_state">[p] state</a></span></li>
+<li><span class="stability_undefined"><a href="#shizuku_p_state">[p] state</a></span><ul>
+<li><span class="stability_undefined"><a href="#shizuku_shizuku_2">等待 Shizuku 可用</a></span></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -566,7 +570,7 @@ setTimeout(() =&gt; proc.kill(), 30000);
 </ul>
 <p>结果通常采用 <code>package/class</code> 形式. Shizuku 不可操作或查询失败时返回空字符串.</p>
 <h2>[p] state<span><a class="mark" href="#shizuku_p_state" id="shizuku_p_state">#</a></span></h2>
-<p><strong><code>6.7.0</code></strong> <strong><code>Getter</code></strong></p>
+<p><strong><code>6.7.0</code></strong> <strong><code>[6.8.1]</code></strong> <strong><code>Getter</code></strong></p>
 <ul>
 <li>{{<ul>
 <li>isInstalled: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
@@ -581,14 +585,35 @@ setTimeout(() =&gt; proc.kill(), 30000);
 <p>返回 Shizuku 状态快照. 每次读取都会创建一个新对象:</p>
 <ul>
 <li><code>isInstalled</code> 表示设备上是否存在可启动的 Shizuku 应用</li>
-<li><code>hasService</code> 表示 AutoJs6 是否已取得其 Shizuku 用户服务实例</li>
-<li><code>isRunning</code> 表示 AutoJs6 是否已收到 Shizuku Binder</li>
-<li><code>hasPermission</code> 表示 Shizuku 是否已向 AutoJs6 授权</li>
-<li><code>isOperational</code> 表示 <code>isRunning</code> 和 <code>hasPermission</code> 是否同时为 <code>true</code></li>
+<li><code>isRunning</code> 表示 AutoJs6 是否已收到 Shizuku 服务端的 Binder, 即 Shizuku 正在运行且已与当前 AutoJs6 进程连接</li>
+<li><code>hasPermission</code> 表示 Shizuku 是否已向 AutoJs6 授权. 收到 Binder 之前无法读取授权状态, 此时总为 <code>false</code>, 即使 Shizuku 应用中显示已授权</li>
+<li><code>isOperational</code> 表示 <code>isRunning</code> 和 <code>hasPermission</code> 是否同时为 <code>true</code>, 此时即可执行 Shizuku 命令</li>
+<li><code>hasService</code> 表示 AutoJs6 是否已绑定其 Shizuku 用户服务 (执行命令的进程)</li>
 </ul>
+<p>Shizuku 服务端在 AutoJs6 进程启动后才向其发送 Binder, 因此进程刚启动时 (如退出后重新打开 AutoJs6, 或开机后由 &quot;AutoJs6 启动时&quot; 任务运行脚本), 以及 Shizuku 晚于 AutoJs6 启动时, <code>isRunning</code> 与 <code>hasPermission</code> 会短暂为 <code>false</code>.</p>
+<p><code>isOperational</code> 为 <code>true</code> 而用户服务尚未绑定时, 读取 <code>state</code> (或调用 <code>hasService()</code>, <code>isOperational()</code>) 会在后台发起绑定且不等待, 用户服务进程启动后 <code>hasService</code> 变为 <code>true</code>, 通常约需 2 秒 (视设备而定). AutoJs6 6.8.1 之前的版本只在执行 Shizuku 命令时绑定用户服务, 在此之前 <code>hasService</code> 一直为 <code>false</code>.</p>
 <pre><code class="lang-js">let state = shizuku.state;
 console.log(state.isInstalled, state.isOperational);
 </code></pre>
+<h3>等待 Shizuku 可用<span><a class="mark" href="#shizuku_shizuku_2" id="shizuku_shizuku_2">#</a></span></h3>
+<p>脚本启动时 Shizuku 可能尚未连接. 需要等待时, 轮询 <code>shizuku.state</code> 直到 <code>isOperational</code> 为 <code>true</code>, 或直接执行一次命令: 执行命令时若尚未收到 Binder, 会先等待最多 3 秒 (AutoJs6 6.8.1). 不需要 <code>auto.restart()</code> 或打开 Shizuku 应用.</p>
+<pre><code class="lang-js">/* 最多等待 10 秒, 直到 Shizuku 可用. */
+let deadline = Date.now() + 10e3;
+while (!shizuku.state.isOperational &amp;&amp; Date.now() &lt; deadline) {
+    sleep(200);
+}
+if (!shizuku.state.isOperational) {
+    throw Error(&#39;Shizuku 不可用, 请确认 Shizuku 服务已启动并已授权 AutoJs6&#39;);
+}
+console.log(shizuku(&#39;id&#39;).result.trim());
+</code></pre>
+<p>Shizuku 不可用时执行命令会抛出异常, 消息按以下顺序说明原因:</p>
+<ul>
+<li>未收到 Binder (等待 3 秒后仍未连接): &quot;Shizuku 未运行或尚未连接&quot;, AutoJs6 6.8.1 之前的版本此时报 &quot;缺少 Shizuku 访问权限&quot;</li>
+<li>已连接但未授权: &quot;缺少 Shizuku 访问权限&quot;</li>
+<li>已授权但用户服务无法绑定: &quot;无法使用 Shizuku 服务&quot;</li>
+</ul>
+<p>首页抽屉的 &quot;Shizuku 权限&quot; 项在 Shizuku 已安装但尚未收到 Binder 时显示 &quot;未运行或尚未连接&quot; (AutoJs6 6.8.1).</p>
 
         </div>
     </div>

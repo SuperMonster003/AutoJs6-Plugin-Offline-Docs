@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -382,6 +383,7 @@
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#image_3">截图</a></span><ul>
+<li><span class="stability_undefined"><a href="#image_4">屏幕捕获会话共享</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_requestscreencapture_options">[m] images.requestScreenCapture(options?)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_requestscreencapture_landscape">[m] images.requestScreenCapture(landscape)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_requestscreencapture_width_height">[m] images.requestScreenCapture(width, height)</a></span></li>
@@ -395,7 +397,7 @@
 <li><span class="stability_undefined"><a href="#image_m_images_on_screen_capture_available_listener">[m] images.on(&quot;screen_capture_available&quot;, listener)</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#image_4">找色</a></span><ul>
+<li><span class="stability_undefined"><a href="#image_5">找色</a></span><ul>
 <li><span class="stability_undefined"><a href="#image_m_images_detectcolor_image_color_x_y_threshold_algorithm">[m] images.detectColor(image, color, x, y, threshold?, algorithm?)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_detectscolor_image_color_x_y_threshold_algorithm">[m] images.detectsColor(image, color, x, y, threshold?, algorithm?)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_detectmulticolors_image_x_y_firstcolor_paths_options">[m] images.detectMultiColors(image, x, y, firstColor, paths, options?)</a></span></li>
@@ -415,7 +417,7 @@
 <li><span class="stability_undefined"><a href="#image_m_images_getmeancolor_image_region">[m] images.getMeanColor(image, region?)</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#image_5">找图与特征匹配</a></span><ul>
+<li><span class="stability_undefined"><a href="#image_6">找图与特征匹配</a></span><ul>
 <li><span class="stability_undefined"><a href="#image_m_images_findcircles_image_options">[m] images.findCircles(image, options?)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_findpointbyimage_image_template_options">[m] images.findPointByImage(image, template, options?)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_findpointbyimage_image_template_x_y_width_height_threshold">[m] images.findPointByImage(image, template, x?, y?, width?, height?, threshold?)</a></span></li>
@@ -426,7 +428,7 @@
 <li><span class="stability_undefined"><a href="#image_m_images_matchfeatures_scene_object_options">[m] images.matchFeatures(scene, object, options?)</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#image_6">相似度</a></span><ul>
+<li><span class="stability_undefined"><a href="#image_7">相似度</a></span><ul>
 <li><span class="stability_undefined"><a href="#image_m_images_psnr_imagea_imageb">[m] images.psnr(imageA, imageB)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_ssim_imagea_imageb">[m] images.ssim(imageA, imageB)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_mssim_imagea_imageb">[m] images.mssim(imageA, imageB)</a></span></li>
@@ -437,12 +439,12 @@
 <li><span class="stability_undefined"><a href="#image_m_images_getsimilarity_imagea_imageb_options">[m] images.getSimilarity(imageA, imageB, options?)</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#image_7">资源状态</a></span><ul>
+<li><span class="stability_undefined"><a href="#image_8">资源状态</a></span><ul>
 <li><span class="stability_undefined"><a href="#image_m_images_isrecycled_images">[m] images.isRecycled(...images)</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_images_recycle_images">[m] images.recycle(...images)</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#image_8">类型</a></span><ul>
+<li><span class="stability_undefined"><a href="#image_9">类型</a></span><ul>
 <li><span class="stability_undefined"><a href="#image_circle">Circle</a></span></li>
 <li><span class="stability_undefined"><a href="#image_screencapturer_options">ScreenCapturer.Options</a></span><ul>
 <li><span class="stability_undefined"><a href="#image_m_width">[m#] width()</a></span></li>
@@ -450,6 +452,8 @@
 <li><span class="stability_undefined"><a href="#image_m_orientation">[m#] orientation()</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_density">[m#] density()</a></span></li>
 <li><span class="stability_undefined"><a href="#image_m_isasync">[m#] isAsync()</a></span></li>
+<li><span class="stability_undefined"><a href="#image_m_isshared">[m#] isShared()</a></span></li>
+<li><span class="stability_undefined"><a href="#image_m_participants">[m#] participants()</a></span></li>
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#image_c_images_objectframe">[C] images.ObjectFrame</a></span><ul>
@@ -1224,6 +1228,45 @@ console.log(&quot;bytes=&quot; + result.size);
 </ul>
 </div><p>方向支持 Android Gravity 常量 <code>START</code>, <code>END</code>, <code>TOP</code> 和 <code>BOTTOM</code>, 或对应整数. 水平拼接时图片垂直居中, 垂直拼接时图片水平居中.</p>
 <h2>截图<span><a class="mark" href="#image_3" id="image_3">#</a></span></h2>
+<p><span id="screen-capture-session-sharing"></span></p>
+<h3>屏幕捕获会话共享<span><a class="mark" href="#image_4" id="image_4">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<p>Android 同一时刻只保留一个屏幕投影 (MediaProjection), 新投影启动时系统会停掉旧的. AutoJs6 6.8.1 起, 进程内的全部截图使用者默认共用一个屏幕捕获会话: 脚本, <code>engines.execScript</code> 等启动的子脚本, Node.js 与 Bun 脚本, 经 <code>web.enableDisplayCapture</code> 使用 getDisplayMedia 的网页, MCP Server / 3-Stove Agent 在无障碍截图不可用时的截图回退, 以及录屏.</p>
+<ul>
+<li>第一个申请者弹出系统授权窗口并建立会话; 之后参数兼容的申请直接加入, 不弹窗, 也不再等待首帧延迟.</li>
+<li>兼容判定: 申请者未显式指定的参数一律兼容, 因此无参的 <code>requestScreenCapture()</code> 可以加入任何非独占会话; 显式指定的 <code>orientation</code> (<code>none</code>, <code>portrait</code> 或 <code>landscape</code>; 默认的 <code>auto</code> 视为未指定) 与 <code>width</code> / <code>height</code> 必须与会话相同. Android 14 及以上版本的 &quot;屏幕捕获范围&quot; 设置值也须与建立会话时相同.</li>
+<li>参数不兼容的申请者另建会话并再次弹出授权窗口, 系统随即停止原会话. 新申请者的控制台写明原因 (如 &quot;方向 landscape 与当前会话的 auto 不同&quot;), 原会话的参与者的控制台提示会话已被替换; 其下一次 <code>captureScreen()</code> 以默认参数自动重新申请, 因而通常直接加入新会话. 重新申请的次数不限.</li>
+<li><code>isAsync: true</code> 的申请者独占会话: 已有会话时另建会话, 其他申请者遇到独占会话时同样另建会话. 两者交替申请时后来者胜, 与 6.8.0 相同.</li>
+<li>同一时刻只允许一个录屏 (<a href="video.html#video_m_record">video.record</a>, Node.js / Bun 的 <code>screen_recorder.start</code> 等). 第二个录屏立即报错并注明正在录制的一方 (video.record 的错误码为 <code>LIMIT_EXCEEDED</code>), 不排队; 录制期间其他参与者的 <code>captureScreen()</code> 返回录制中的画面.</li>
+<li>参与者退出 (<a href="#image_m_images_stopscreencapture">stopScreenCapture()</a>, 脚本或执行结束, 网页关闭) 只离开会话, 其他参与者继续使用; 最后一个参与者离开后会话立即释放 (投影, 虚拟显示与前台服务一并停止), 之后的申请会再次弹出授权窗口.</li>
+<li>Node.js 与 Bun 脚本以 <code>requireExistingPermission: true</code> 申请时加入其他脚本已有的兼容会话, 不弹窗; 没有会话, 会话是 isAsync 独占会话, 或共享已关闭时以 permission-denied 失败. 另建会话的原因与会话被替换的提示同样写入 Node.js / Bun 执行的控制台; 网页 (getDisplayMedia) 的原因只写入 logcat (标签 <code>ScreenCaptureSessions</code>).</li>
+<li>MCP Server / 3-Stove Agent 仍优先使用无障碍截图; 回退到屏幕捕获时加入已有会话, 不再弹出第二次授权窗口.</li>
+<li>设置 &gt; 脚本运行 &gt; &quot;屏幕捕获会话共享&quot; (默认开启) 关闭后, 每个申请者各自申请权限并建立会话, 与 6.8.0 及之前版本相同 (多个申请者会相互打断). 更改对下一次申请生效, 不影响已有会话.</li>
+</ul>
+<p><a href="#image_m_images_getscreencaptureoptions">getScreenCaptureOptions()</a> 返回值的 <code>isShared()</code> 与 <code>participants()</code> 可用于确认本脚本是否与他人共用会话.</p>
+<p>两种减少授权窗口的方式作用不同, 可以同时使用:</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>条件</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>屏幕捕获会话共享</td>
+<td>无需额外权限, 默认开启</td>
+<td>进程内多个使用者共用一次授权; 会话释放 (最后一个使用者退出) 后, 下一次申请仍会弹出授权窗口</td>
+</tr>
+<tr>
+<td>&quot;投影媒体权限&quot;</td>
+<td>由 ADB, Shizuku 或 Root 授予一次, 即 <code>appops set org.autojs.autojs6 PROJECT_MEDIA allow</code></td>
+<td>系统授权窗口不再弹出, 包括会话释放后的再次申请与每次重新运行脚本</td>
+</tr>
+</tbody>
+</table>
+<p>&quot;投影媒体权限&quot; 可在 AutoJs6 主页抽屉中开启 (需要 Shizuku 或 Root), 也可以用 ADB 或 <a href="shizuku.html">shizuku()</a> 执行上述命令.</p>
 <h3>[m] images.requestScreenCapture(options?)<span><a class="mark" href="#image_m_images_requestscreencapture_options" id="image_m_images_requestscreencapture_options">#</a></span></h3>
 <p><strong><code>Global</code></strong> <strong><code>Non-UI</code></strong> <strong><code>Overload 1/3</code></strong></p>
 <ul>
@@ -1239,6 +1282,7 @@ console.log(&quot;bytes=&quot; + result.size);
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否获得截图权限</li>
 </ul>
 <p>请求屏幕捕获权限并等待用户选择. 默认选项为 <code>orientation = &quot;auto&quot;</code>, <code>width = -1</code>, <code>height = -1</code>, <code>isAsync = false</code>.</p>
+<p>AutoJs6 6.8.1 起, 已有参数兼容的屏幕捕获会话 (其他脚本, 子脚本, Node.js / Bun 执行或网页建立的) 时直接加入, 立即返回 <code>true</code> 而不弹出授权窗口; 参数不兼容时另建会话, 见 <a href="#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
 <p><code>orientation</code> 支持 <code>auto</code>, <code>none</code>, <code>portrait</code>, <code>landscape</code> 或对应整数 <code>0</code>, <code>-1</code>, <code>1</code>, <code>2</code>. <code>isAsync</code> 控制截图器是否持续异步产生帧, <code>async</code> 是其兼容别名.</p>
 <p>此同步方法不能在 UI 线程调用. UI 模式应使用 <a href="#image_m_images_requestscreencaptureasync_options"><code>requestScreenCaptureAsync()</code></a>.</p>
 <h3>[m] images.requestScreenCapture(landscape)<span><a class="mark" href="#image_m_images_requestscreencapture_landscape" id="image_m_images_requestscreencapture_landscape">#</a></span></h3>
@@ -1284,18 +1328,27 @@ console.log(&quot;bytes=&quot; + result.size);
 <li><strong>height</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span> } - 兑现值为 <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
 </ul>
+<p><span id="m-images-stopscreencapture"></span></p>
 <h3>[m] images.stopScreenCapture()<span><a class="mark" href="#image_m_images_stopscreencapture" id="image_m_images_stopscreencapture">#</a></span></h3>
 <p><strong><code>6.6.0</code></strong></p>
 <ul>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_void">void</a></span> }</li>
 </ul>
-<p>停止当前截图器, 释放屏幕捕获资源, 并将仍在等待的授权请求以 <code>false</code> 完成. 之后再次截图需要重新请求权限.</p>
+<p>本脚本退出所在的屏幕捕获会话, 并将仍在等待的授权请求以 <code>false</code> 完成. 之后本脚本再次截图需要重新请求权限.</p>
+<p>AutoJs6 6.8.1 起, 其他脚本或执行仍在使用该会话时会话继续保留, 最后一个参与者退出时才释放屏幕捕获资源, 见 <a href="#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
+<p><span id="m-images-getscreencaptureoptions"></span></p>
 <h3>[m] images.getScreenCaptureOptions()<span><a class="mark" href="#image_m_images_getscreencaptureoptions" id="image_m_images_getscreencaptureoptions">#</a></span></h3>
 <p><strong><code>6.6.0</code></strong></p>
 <ul>
-<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#image_screencapturer_options">ScreenCapturer.Options</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 当前截图器选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#image_screencapturer_options">ScreenCapturer.Options</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 本脚本所在屏幕捕获会话的选项</li>
 </ul>
-<p>尚未获得截图权限或截图器已停止时返回 <code>null</code>.</p>
+<p>尚未获得截图权限, 已调用 stopScreenCapture, 或会话已被系统停止时返回 <code>null</code>.</p>
+<p>AutoJs6 6.8.1 起, 返回值附带调用时刻的共享状态: <code>isShared()</code> (也可读取属性 <code>shared</code>) 表示是否有其他脚本, 执行或网页与本脚本共用会话, <code>participants()</code> 为会话当前的参与者数 (包括本脚本). 二者是调用时刻的快照, 之后有参与者加入或退出时不会更新. 参阅 <a href="#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
+<pre><code class="lang-js">requestScreenCapture();
+let options = images.getScreenCaptureOptions();
+console.log(`shared: ${options.shared}, participants: ${options.participants()}`);
+</code></pre>
+<p>Node.js 与 Bun 中的 getScreenCaptureOptions 返回普通对象 <code>{ width, height, orientation, shared, participants }</code>, 没有会话时返回 <code>null</code>.</p>
 <p><span id="m-capturescreen"></span>
 <span id="image_m_capturescreen"></span>
 <span id="m-images-capturescreen"></span></p>
@@ -1306,6 +1359,7 @@ console.log(&quot;bytes=&quot; + result.size);
 </ul>
 <p>在后台脚本线程中, 若尚未请求权限, 此方法会先同步调用 <code>requestScreenCapture()</code>. UI 线程不会自动请求权限.</p>
 <p>截图模块会管理返回图片的缓存和更新, 通常不需要手动回收该对象. 若截图暂时失败且已有可用的上一帧, 方法会返回上一帧的副本; 无任何有效帧时抛出异常.</p>
+<p>本脚本的屏幕捕获会话被系统停止 (如通知栏的 &quot;停止&quot;, 其他应用开始投影, 或参数不兼容的申请者另建会话) 后, 下一次调用以默认参数重新申请; 录屏期间返回录制中的画面. 参阅 <a href="#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
 <pre><code class="lang-js">requestScreenCapture();
 let image = captureScreen();
 console.log(`${image.width} x ${image.height}`);
@@ -1324,6 +1378,7 @@ console.log(`${image.width} x ${image.height}`);
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 当前 <code>images</code> 对象</li>
 </ul>
 <p>当截图请求使用 <code>isAsync = true</code> 时, 每个可用帧触发一次事件. 监听器收到的图片由调用方负责及时回收.</p>
+<p>异步帧流独占屏幕捕获会话, 不与其他脚本共用; 其他申请者到来时另建会话, 异步会话随即被系统停止, 见 <a href="#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
 <p>同一帧还会依次触发兼容事件 <code>capture_available</code> 和 <code>screen_capture</code>. 三个事件传入同一个 <code>ImageWrapper</code>.</p>
 <pre><code class="lang-js">images.on(&quot;screen_capture_available&quot;, (image) =&gt; {
     try {
@@ -1338,7 +1393,7 @@ requestScreenCapture({
     isAsync: true,
 });
 </code></pre>
-<h2>找色<span><a class="mark" href="#image_4" id="image_4">#</a></span></h2>
+<h2>找色<span><a class="mark" href="#image_5" id="image_5">#</a></span></h2>
 <p>找色选项中的 <code>threshold</code> 默认为 <code>4</code>, 表示颜色通道差异阈值. 也可使用 <code>similarity</code>, 此时阈值按 <code>round(255 * (1 - similarity))</code> 换算. 同一选项对象不能同时包含 <code>threshold</code> 和 <code>similarity</code>.</p>
 <h3>[m] images.detectColor(image, color, x, y, threshold?, algorithm?)<span><a class="mark" href="#image_m_images_detectcolor_image_color_x_y_threshold_algorithm" id="image_m_images_detectcolor_image_color_x_y_threshold_algorithm">#</a></span></h3>
 <div class="signature"><ul>
@@ -1559,7 +1614,7 @@ let mean = images.getMeanColor(img, [ 0, 0, 200, 100 ]);
 console.log(colors.toHex(mean), colors.luminance(mean) &gt; 0.5 ? &quot;偏亮&quot; : &quot;偏暗&quot;);
 img.recycle();
 </code></pre>
-<h2>找图与特征匹配<span><a class="mark" href="#image_5" id="image_5">#</a></span></h2>
+<h2>找图与特征匹配<span><a class="mark" href="#image_6" id="image_6">#</a></span></h2>
 <h3>[m] images.findCircles(image, options?)<span><a class="mark" href="#image_m_images_findcircles_image_options" id="image_m_images_findcircles_image_options">#</a></span></h3>
 <p><strong><code>[6.8.0]</code></strong></p>
 <ul>
@@ -1723,7 +1778,7 @@ if (frame !== null) {
 }
 scene.recycle();
 </code></pre>
-<h2>相似度<span><a class="mark" href="#image_6" id="image_6">#</a></span></h2>
+<h2>相似度<span><a class="mark" href="#image_7" id="image_7">#</a></span></h2>
 <p>除 <code>isEqual()</code> 外, 本节方法的图片参数接受 <a href="imageWrapperType.html">ImageWrapper</a>, 图片路径 <a href="dataTypes.html#datatypes_string">string</a> 或 <a href="https://docs.opencv.org/4.x/javadoc/org/opencv/core/Mat.html">Mat</a>. 两张图片必须满足所选算法的尺寸和通道要求, 否则 OpenCV 或相似度实现会抛出异常.</p>
 <h3>[m] images.psnr(imageA, imageB)<span><a class="mark" href="#image_m_images_psnr_imagea_imageb" id="image_m_images_psnr_imagea_imageb">#</a></span></h3>
 <p><strong><code>6.6.0</code></strong></p>
@@ -1790,7 +1845,7 @@ scene.recycle();
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 所选算法的原始结果</li>
 </ul>
 <p><code>metric</code> 支持 <code>psnr</code>, <code>ssim</code>, <code>mssim</code>, <code>hist</code>, <code>mse</code> 和 <code>ncc</code>, 默认值为 <code>mssim</code>. <code>type</code> 是兼容别名, 仅在 <code>metric</code> 缺失时使用. 拼写 <code>pnsr</code> 会兼容为 <code>psnr</code>.</p>
-<h2>资源状态<span><a class="mark" href="#image_7" id="image_7">#</a></span></h2>
+<h2>资源状态<span><a class="mark" href="#image_8" id="image_8">#</a></span></h2>
 <h3>[m] images.isRecycled(...images)<span><a class="mark" href="#image_m_images_isrecycled_images" id="image_m_images_isrecycled_images">#</a></span></h3>
 <div class="signature"><ul>
 <li><strong>...images</strong> { <span class="type">...(<a href="imageWrapperType.html">ImageWrapper</a>)[]</span> } - 待检查的图片</li>
@@ -1804,7 +1859,7 @@ scene.recycle();
 </ul>
 </div><p>已回收的图片视为成功. 无参数时返回 <code>true</code>. 任一参数不是 <code>ImageWrapper</code> 或回收时发生异常, 结果为 <code>false</code>.</p>
 <p>单个图片也可直接调用 <a href="imageWrapperType.html#imagewrappertype_m_recycle"><code>ImageWrapper#recycle()</code></a>.</p>
-<h2>类型<span><a class="mark" href="#image_8" id="image_8">#</a></span></h2>
+<h2>类型<span><a class="mark" href="#image_9" id="image_9">#</a></span></h2>
 <h3>Circle<span><a class="mark" href="#image_circle" id="image_circle">#</a></span></h3>
 <p>圆检测结果.</p>
 <ul>
@@ -1840,6 +1895,18 @@ scene.recycle();
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
 </ul>
 </div><p>返回截图器是否使用异步帧模式.</p>
+<h4>[m#] isShared()<span><a class="mark" href="#image_m_isshared" id="image_m_isshared">#</a></span></h4>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+<p>返回调用 getScreenCaptureOptions 时是否有其他脚本, 执行或网页与本脚本共用屏幕捕获会话. 也可读取属性 <code>shared</code>.</p>
+<h4>[m#] participants()<span><a class="mark" href="#image_m_participants" id="image_m_participants">#</a></span></h4>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> }</li>
+</ul>
+<p>返回调用 getScreenCaptureOptions 时屏幕捕获会话的参与者数, 包括本脚本.</p>
 <p><span id="c-images-objectframe"></span></p>
 <h3>[C] images.ObjectFrame<span><a class="mark" href="#image_c_images_objectframe" id="image_c_images_objectframe">#</a></span></h3>
 <p><strong><code>6.8.0</code></strong></p>

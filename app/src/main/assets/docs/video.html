@@ -31,6 +31,7 @@
 <ul>
 <li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
 <li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
@@ -951,7 +952,7 @@ console.log(v.versionName, v.contractVersion, v.ops.join(&#39;, &#39;));
 <p>开始录屏, 录制开始后立即返回句柄. 录屏由 AutoJs6 完成 (H.264 + AAC, MP4), 不需要插件.</p>
 <ul>
 <li>需要截图会话: 先调用 <a href="image.html#image_m_images_requestscreencapture_options">images.requestScreenCapture</a>, 否则失败于 <code>PERMISSION_DENIED</code>. 录制期间 <a href="image.html#image_m_images_capturescreen">images.captureScreen</a> 照常可用, 它返回录屏中的当前画面, 不额外申请授权.</li>
-<li>同一脚本同时只能有一个录屏, 第二个失败于 <code>LIMIT_EXCEEDED</code>.</li>
+<li>同一时刻只能有一个录屏, 第二个失败于 <code>LIMIT_EXCEEDED</code>, 消息注明正在录制的一方. AutoJs6 进程内的脚本与 Node.js / Bun 执行默认共用一个屏幕捕获会话, 因此该限制也作用于其他脚本的录屏, 见 <a href="image.html#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</li>
 <li>省略 <code>width</code> / <code>height</code> 时按设备编码器能力取默认尺寸: 截图尺寸向下取到编码器要求的对齐倍数, 超出编码器上限时等比缩小 (例如 720 x 1650 的屏幕在要求 16 对齐的编码器上录成 720 x 1648). 显式给出的尺寸不受支持时失败于 <code>INVALID_OPTIONS</code>, 消息给出最接近的可用尺寸.</li>
 <li>录制声音 (<code>audio</code> 不为 <code>none</code>) 需要 AutoJs6 的麦克风权限, 缺少时先弹出系统授权对话框, 规则同 <a href="audio.html#audio_1">audio.record</a>; 内录 (<code>playback</code> / <code>mixed</code>) 需要 Android 10 及以上, 不允许被录制的应用的声音为静音.</li>
 <li>文件先以临时名写在目标旁边, 保存时才移入, 因此取消或失败的录制不留下文件; 显式输出已存在时为 <code>IO_ERROR</code>.</li>
@@ -2208,7 +2209,7 @@ video.subtitles.write(&#39;/sdcard/Movies/a.ass&#39;, cues);
 </tr>
 <tr>
 <td><code>LIMIT_EXCEEDED</code></td>
-<td>超出上限 (输入个数, GIF 帧数, 抽帧数, 混音输入数, 时间线轨道与片段数, 字幕条目数), 同一脚本的第二个录屏, 或请求过大</td>
+<td>超出上限 (输入个数, GIF 帧数, 抽帧数, 混音输入数, 时间线轨道与片段数, 字幕条目数), 共用屏幕捕获会话时的第二个录屏, 或请求过大</td>
 </tr>
 <tr>
 <td><code>TASK_LIMIT</code></td>
