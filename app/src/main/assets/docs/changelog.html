@@ -362,7 +362,7 @@
 </li>
 <li><p><code>更新</code> <a href="projectConfig.html#projectconfig_usefeatures">项目配置 (project.json)</a>: useFeatures 一节与常见问题 &quot;打包应用中 continuation 不可用&quot; 改为打包应用也读取 useFeatures, 需要用 6.8.1 或更高版本的 APK Builder Template 插件打包, 更早版本打包的应用不读取, 重新打包后生效; &quot;键名与读取规则&quot; 补充 project.json 无法解析时的还原能识别 launchConfig 的全部键与别名 (AutoJs6 6.8.1)</p>
 </li>
-<li><p><code>更新</code> <a href="projectConfig.html#projectconfig_9">项目配置 (project.json)</a>: 补充 &quot;缺少权限时的表现&quot; 一节, 说明打包应用缺少对应的前台服务权限时, 截图 (images.requestScreenCapture), 网页的后台录音与后台录像, 以及 recorder 模块的录音不再启动前台服务, 改为报错并写明所缺的权限, 打包应用设置页的 &quot;开机时&quot; 开关在缺少 RECEIVE_BOOT_COMPLETED 时不可用; launchConfig.runOnBoot 一节补充该项为 true 时打包始终保留 RECEIVE_BOOT_COMPLETED, 常见问题增加 &quot;打包应用申请截图后崩溃&quot;; <a href="runtimeApis.html#runtimeapis_23">运行时 API (Runtime APIs)</a> 的 &quot;打包权限与平台边界&quot; 增加该节的链接 (AutoJs6 6.8.1)</p>
+<li><p><code>更新</code> <a href="projectConfig.html#projectconfig_9">项目配置 (project.json)</a>: 补充 &quot;缺少权限时的表现&quot; 一节, 说明打包应用缺少对应的前台服务权限时, 截图 (images.requestScreenCapture), 网页的后台录音与后台录像, 以及 recorder 模块的录音不再启动前台服务, 改为报错并写明所缺的权限, 打包应用设置页的 &quot;开机时&quot; 开关在缺少 RECEIVE_BOOT_COMPLETED 时不可用; launchConfig.runOnBoot 一节补充该项为 true 时打包始终保留 RECEIVE_BOOT_COMPLETED, 常见问题增加 &quot;打包应用同意截图授权后仍无法截图&quot;; <a href="runtimeApis.html#runtimeapis_23">运行时 API (Runtime APIs)</a> 的 &quot;打包权限与平台边界&quot; 增加该节的链接 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="plugins.html#plugins_3">插件 (Plugins)</a>: 补充 &quot;插件设置页入口&quot; 一节, 说明插件中心的插件设置页按 meta-data <code>org.autojs.plugin.SETTINGS_ACTION</code>, MCP Server 与 3-Shell Terminal 原有的设置页 action 的顺序打开插件自身的设置页, 以及 meta-data 的写法与对 Activity 的要求 (AutoJs6 6.8.1)</p>
 </li>

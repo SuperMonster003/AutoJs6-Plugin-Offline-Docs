@@ -406,7 +406,7 @@
 <li><span class="stability_undefined"><a href="#projectconfig_project_json_1">保存后 project.json 的内容变了</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_hidelogs">hideLogs 等配置每次保存后都会反过来</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_14">打包应用开启 &quot;前台服务&quot; 后崩溃</a></span></li>
-<li><span class="stability_undefined"><a href="#projectconfig_15">打包应用申请截图后崩溃</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_15">打包应用同意截图授权后仍无法截图</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_permissions_1">写进 permissions 的权限在打包页保存后不见了</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_launchconfig_2">修改 launchConfig 后, 已安装的打包应用没有变化</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_16">保存时提示键名冲突</a></span></li>
@@ -1058,7 +1058,7 @@ android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 </code></pre>
 <p>把错误信息中的权限加入 <a href="#projectconfig_permissions">permissions</a> 后重新打包即可.</p>
 <ul>
-<li><code>FOREGROUND_SERVICE_MEDIA_PROJECTION</code> 在默认清单中, 但不属于 <a href="#projectconfig_8">始终保留的前台服务权限</a>: 自定义清单中没有它时, 打包应用在 Android 14 及以上版本不能截图. 此前这种情况下同意截图授权后打包应用会崩溃 <em><a href="http://issues.autojs6.com/594"><code>issue #594</code></a></em>.</li>
+<li><code>FOREGROUND_SERVICE_MEDIA_PROJECTION</code> 在默认清单中, 但不属于 <a href="#projectconfig_8">始终保留的前台服务权限</a>: 自定义清单中没有它时, 打包应用在 Android 14 及以上版本不能截图. 此前这种情况下仍会弹出截图授权, 同意后系统拒绝启动截图所需的前台服务, images.requestScreenCapture 抛出系统的 SecurityException <em><a href="http://issues.autojs6.com/594"><code>issue #594</code></a></em>.</li>
 <li>相机与麦克风的前台服务权限不在默认清单中. 清单含 <code>CAMERA</code> / <code>RECORD_AUDIO</code> 时, APK Builder Template 插件同时保留对应的 <code>FOREGROUND_SERVICE_CAMERA</code> / <code>FOREGROUND_SERVICE_MICROPHONE</code> (见 <a href="runtimeApis.html#runtimeapis_23">打包权限与平台边界</a>), 一般不会遇到表中后两行的情况.</li>
 <li>打包应用未声明 <code>RECEIVE_BOOT_COMPLETED</code> 时, 设置页中的 &quot;开机时&quot; 开关不可用并说明原因, 见 <a href="#projectconfig_launchconfig_runonboot">launchConfig.runOnBoot</a>.</li>
 <li>上述检查属于打包应用的运行时, 随 APK Builder Template 插件内含的 Runtime Kit 进入打包应用, 需要该 Runtime Kit 来自 AutoJs6 6.8.1 或更高版本, 已经打包好的应用需要重新打包. runOnBoot 为 <code>true</code> 时保留 <code>RECEIVE_BOOT_COMPLETED</code> 是打包时的处理, 在 AutoJs6 (宿主) 中, 与 APK Builder Template 插件的版本无关.</li>
@@ -1174,8 +1174,8 @@ android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 <p>这是 AutoJs6 6.8.1 之前的问题: 写回反向别名时没有取反, 打包出的应用也与写法相反, 见 <a href="#projectconfig_12">反向别名</a>. 改用 <code>logsVisible</code> 等规范键可以避免; 已被翻转的值不会自动改回, 需要核对一次.</p>
 <h3>打包应用开启 &quot;前台服务&quot; 后崩溃<span><a class="mark" href="#projectconfig_14" id="projectconfig_14">#</a></span></h3>
 <p>自定义的 <a href="#projectconfig_permissions">permissions</a> 中缺少前台服务权限. AutoJs6 6.8.1 起打包时始终保留这 2 项, 用它重新打包即可; 使用此前的版本时, 在清单中加入 <code>android.permission.FOREGROUND_SERVICE</code> 与 <code>android.permission.FOREGROUND_SERVICE_SPECIAL_USE</code> 后重新打包. 打包应用的运行时来自 AutoJs6 6.8.1 或更高版本时, 缺少权限不再崩溃, 开关保持关闭并提示原因 (见 <a href="#projectconfig_8">始终保留的前台服务权限</a>).</p>
-<h3>打包应用申请截图后崩溃<span><a class="mark" href="#projectconfig_15" id="projectconfig_15">#</a></span></h3>
-<p>Android 14 及以上版本中, 自定义的 <a href="#projectconfig_permissions">permissions</a> 缺少 <code>android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION</code> 时, 打包应用调用 images.requestScreenCapture 并同意截图授权后崩溃. 在清单中加入该权限后重新打包即可. 打包应用的运行时来自 AutoJs6 6.8.1 或更高版本时, 缺少该权限不再崩溃, 也不弹出截图授权, images.requestScreenCapture 抛出写明所缺权限的异常 (见 <a href="#projectconfig_9">缺少权限时的表现</a>).</p>
+<h3>打包应用同意截图授权后仍无法截图<span><a class="mark" href="#projectconfig_15" id="projectconfig_15">#</a></span></h3>
+<p>Android 14 及以上版本中, 自定义的 <a href="#projectconfig_permissions">permissions</a> 缺少 <code>android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION</code> 时, 打包应用调用 images.requestScreenCapture 仍会弹出截图授权, 同意后系统拒绝启动截图所需的前台服务, images.requestScreenCapture 抛出 SecurityException (信息含 &quot;Starting FGS with type mediaProjection&quot;). 在清单中加入该权限后重新打包即可. 打包应用的运行时来自 AutoJs6 6.8.1 或更高版本时, 缺少该权限时不再弹出截图授权, images.requestScreenCapture 直接抛出写明所缺权限的异常 (见 <a href="#projectconfig_9">缺少权限时的表现</a>).</p>
 <h3>写进 permissions 的权限在打包页保存后不见了<span><a class="mark" href="#projectconfig_permissions_1" id="projectconfig_permissions_1">#</a></span></h3>
 <p>打包页只保留其列表中勾选的权限, 见 <a href="#projectconfig_10">打包页的权限列表</a>.</p>
 <h3>修改 launchConfig 后, 已安装的打包应用没有变化<span><a class="mark" href="#projectconfig_launchconfig_2" id="projectconfig_launchconfig_2">#</a></span></h3>
