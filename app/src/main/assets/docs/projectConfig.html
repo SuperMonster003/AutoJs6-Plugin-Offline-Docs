@@ -393,21 +393,23 @@
 <li><span class="stability_undefined"><a href="#projectconfig_6">默认清单</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_7">自定义清单是替换</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_8">始终保留的前台服务权限</a></span></li>
-<li><span class="stability_undefined"><a href="#projectconfig_9">打包页的权限列表</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_9">缺少权限时的表现</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_10">打包页的权限列表</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#projectconfig_10">别名与兼容</a></span><ul>
-<li><span class="stability_undefined"><a href="#projectconfig_11">反向别名</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_11">别名与兼容</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_12">反向别名</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_autojs4_autox">来自 AutoJs4 与 AutoX 的键</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#projectconfig_12">常见问题</a></span><ul>
+<li><span class="stability_undefined"><a href="#projectconfig_13">常见问题</a></span><ul>
 <li><span class="stability_undefined"><a href="#projectconfig_project_json_1">保存后 project.json 的内容变了</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_hidelogs">hideLogs 等配置每次保存后都会反过来</a></span></li>
-<li><span class="stability_undefined"><a href="#projectconfig_13">打包应用开启 &quot;前台服务&quot; 后崩溃</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_14">打包应用开启 &quot;前台服务&quot; 后崩溃</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_15">打包应用申请截图后崩溃</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_permissions_1">写进 permissions 的权限在打包页保存后不见了</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_launchconfig_2">修改 launchConfig 后, 已安装的打包应用没有变化</a></span></li>
-<li><span class="stability_undefined"><a href="#projectconfig_14">保存时提示键名冲突</a></span></li>
+<li><span class="stability_undefined"><a href="#projectconfig_16">保存时提示键名冲突</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_agent_agent">agent 段写了, 但项目没有出现在 Agent 脚本目录中</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_continuation">打包应用中 continuation 不可用</a></span></li>
 <li><span class="stability_undefined"><a href="#projectconfig_assets_1">assets 中列出的文件没有被打包</a></span></li>
@@ -477,7 +479,7 @@
 <h2>键名与读取规则<span><a class="mark" href="#projectconfig_2" id="projectconfig_2">#</a></span></h2>
 <div class="signature"><ul>
 <li>键名不区分大小写, 并忽略字母与数字以外的字符. 例如 <code>versionCode</code>, <code>version_code</code> 与 <code>VERSION-CODE</code> 等价. 此规则适用于顶层, <a href="#projectconfig_launchconfig">launchConfig</a> 与 <a href="#projectconfig_build">build</a> 段 (AutoJs6 6.6.2 起).</li>
-<li>许多键有别名, 例如 <code>package</code> 等价于 <a href="#projectconfig_packagename">packageName</a>. 各键的别名列在对应条目中, 来自 AutoJs4 与 AutoX 的别名另见 <a href="#projectconfig_10">别名与兼容</a>.</li>
+<li>许多键有别名, 例如 <code>package</code> 等价于 <a href="#projectconfig_packagename">packageName</a>. 各键的别名列在对应条目中, 来自 AutoJs4 与 AutoX 的别名另见 <a href="#projectconfig_11">别名与兼容</a>.</li>
 <li>规范键与别名 (或同一键的不同写法) 同时出现时, 读取取 JSON 中最后出现的那个, 不报错; 保存时的处理见 <a href="#projectconfig_3">保存时的行为</a>.</li>
 <li>布尔类型的键只接受 JSON 布尔值 <code>true</code> / <code>false</code>, 不接受字符串 <code>&quot;true&quot;</code>. 值为 <code>null</code> 的键视为未写.</li>
 <li><a href="#projectconfig_node">node</a> 与 <a href="#projectconfig_bun">bun</a> 段内的键名区分大小写, 不支持别名与宽松写法.</li>
@@ -494,7 +496,7 @@
 <li>值为空 (未设置) 的键不写出.</li>
 <li>在项目配置页或打包页保存时, 同一个键同时以两种写法出现 (例如同时有 <code>packageName</code> 与 <code>package</code>) 会报键名冲突, 需要先删去其中一个 (AutoJs6 6.7.0 起). 打包完成后写回打包信息时不报错, 保留原写法的那个.</li>
 <li>打包页保存时, <a href="#projectconfig_excludedirs">excludeDirs</a> 总会加入 <code>build</code> 目录, <a href="#projectconfig_permissions">permissions</a> 写成完整的权限名.</li>
-<li>反向别名 (例如 <code>hideLogs</code>) 在 AutoJs6 6.8.1 之前打包时与写法相反, 每保存一次值也翻转一次, 见 <a href="#projectconfig_11">反向别名</a>.</li>
+<li>反向别名 (例如 <code>hideLogs</code>) 在 AutoJs6 6.8.1 之前打包时与写法相反, 每保存一次值也翻转一次, 见 <a href="#projectconfig_12">反向别名</a>.</li>
 </ul>
 <hr>
 <h2>顶层字段<span><a class="mark" href="#projectconfig_4" id="projectconfig_4">#</a></span></h2>
@@ -767,7 +769,8 @@
 <li>默认值: <code>false</code></li>
 <li>别名: <code>bootRun</code>, <code>autoRunOnBoot</code>, <code>bootAutoStart</code>, <code>autoStartOnBoot</code></li>
 </ul>
-</div><p>开机后是否自动运行主脚本 (不显示界面) (AutoJs6 6.7.0 起). 需要 <a href="#projectconfig_permissions">permissions</a> 含有 <code>android.permission.RECEIVE_BOOT_COMPLETED</code> (默认清单已含). 部分系统还需要在系统设置中允许打包应用自启动.</p>
+</div><p>开机后是否自动运行主脚本 (不显示界面) (AutoJs6 6.7.0 起). 需要 <a href="#projectconfig_permissions">permissions</a> 含有 <code>android.permission.RECEIVE_BOOT_COMPLETED</code> (默认清单已含). AutoJs6 6.8.1 起, 此项为 <code>true</code> 时打包始终保留该权限, 自定义的 permissions 中没有它也一样. 部分系统还需要在系统设置中允许打包应用自启动.</p>
+<p>打包应用未声明该权限时 (例如此项为 <code>false</code> 且自定义清单中没有该权限), 打包应用设置页中的 &quot;开机时&quot; 开关不可用, 说明文字为 &quot;不可用: 应用未声明 RECEIVE_BOOT_COMPLETED 权限, 无法开机运行. 请重新打包应用以包含该权限&quot;, 见 <a href="#projectconfig_9">缺少权限时的表现</a>.</p>
 <h3>launchConfig.requiresSharedStorage<span><a class="mark" href="#projectconfig_launchconfig_requiressharedstorage" id="projectconfig_launchconfig_requiressharedstorage">#</a></span></h3>
 <div class="signature"><ul>
 <li>类型: <a href="dataTypes.html#datatypes_boolean">boolean</a></li>
@@ -985,7 +988,7 @@ android.permission.SYSTEM_ALERT_WINDOW
 <p>写了 permissions 时, 清单整体替换默认清单, 不是在默认清单上追加: 打包应用只保留清单中列出的权限, 默认清单中没有列出的项会被去掉. 清单用于从打包模板已声明的权限中选择保留哪些, 不会为打包应用新增模板中没有的权限.</p>
 <ul>
 <li><a href="#projectconfig_node_permissions">node.permissions</a> 与 <a href="#projectconfig_bun_hostcapabilities">bun.hostCapabilities</a> 声明的能力需要的 Android 权限, 打包时另行补充, 不必写进 permissions.</li>
-<li>去掉某项权限后, 依赖它的功能在打包应用中无法使用. 例如 <a href="#projectconfig_launchconfig_runonboot">runOnBoot</a> 需要 <code>RECEIVE_BOOT_COMPLETED</code>, <a href="#projectconfig_launchconfig_requiressharedstorage">requiresSharedStorage</a> 需要共享存储相关权限.</li>
+<li>去掉某项权限后, 依赖它的功能在打包应用中无法使用. 例如 <a href="#projectconfig_launchconfig_runonboot">runOnBoot</a> 需要 <code>RECEIVE_BOOT_COMPLETED</code> (AutoJs6 6.8.1 起 runOnBoot 为 <code>true</code> 时打包始终保留), Android 14 及以上版本的截图 (<a href="image.html#image_m_images_requestscreencapture_options">images.requestScreenCapture</a>) 需要 <code>FOREGROUND_SERVICE_MEDIA_PROJECTION</code>, <a href="#projectconfig_launchconfig_requiressharedstorage">requiresSharedStorage</a> 需要共享存储相关权限. 缺少前台服务权限时各功能的表现见 <a href="#projectconfig_9">缺少权限时的表现</a>.</li>
 </ul>
 <h3>始终保留的前台服务权限<span><a class="mark" href="#projectconfig_8" id="projectconfig_8">#</a></span></h3>
 <p>AutoJs6 6.8.1 起, 无论 permissions 如何填写, 打包应用始终保留以下 2 项:</p>
@@ -1022,7 +1025,45 @@ android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 </tr>
 </tbody>
 </table>
-<h3>打包页的权限列表<span><a class="mark" href="#projectconfig_9" id="projectconfig_9">#</a></span></h3>
+<h3>缺少权限时的表现<span><a class="mark" href="#projectconfig_9" id="projectconfig_9">#</a></span></h3>
+<p>以下功能运行时要启动前台服务: Android 9 及以上需要 <code>FOREGROUND_SERVICE</code>, Android 14 及以上还需要表中对应类型的权限. 打包应用未声明这些权限时, AutoJs6 6.8.1 起不再启动前台服务, 而是报错并写明缺少的权限, 打包应用不会崩溃.</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>Android 14 及以上还需要</th>
+<th>缺少权限时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>截图 (<a href="image.html#image_m_images_requestscreencapture_options">images.requestScreenCapture</a>)</td>
+<td><code>FOREGROUND_SERVICE_MEDIA_PROJECTION</code></td>
+<td>不弹出截图授权, images.requestScreenCapture 抛出异常</td>
+</tr>
+<tr>
+<td>网页的后台录音与后台录像 (<a href="runtimeApis.html#runtimeapis_22">后台网页录音</a>)</td>
+<td>按所用的设备: <code>FOREGROUND_SERVICE_CAMERA</code>, <code>FOREGROUND_SERVICE_MICROPHONE</code></td>
+<td>网页的相机 / 麦克风请求被拒绝, 并经 <code>webCallbackError</code> 报告原因; view.startBackgroundRecording 返回的 Promise 被拒绝</td>
+</tr>
+<tr>
+<td>recorder 模块的录音 (<a href="runtimeApis.html#runtimeapis_node_js_3">Node.js 录屏与音频</a>)</td>
+<td><code>FOREGROUND_SERVICE_MICROPHONE</code></td>
+<td>录音无法开始, 返回错误</td>
+</tr>
+</tbody>
+</table>
+<p>错误信息为英文, 写出完整的权限名, 例如:</p>
+<pre><code class="lang-text">Screen capture foreground service not started: the manifest of this app does not request android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION. For a packaged app, add it to &quot;permissions&quot; in project.json and build the app again
+</code></pre>
+<p>把错误信息中的权限加入 <a href="#projectconfig_permissions">permissions</a> 后重新打包即可.</p>
+<ul>
+<li><code>FOREGROUND_SERVICE_MEDIA_PROJECTION</code> 在默认清单中, 但不属于 <a href="#projectconfig_8">始终保留的前台服务权限</a>: 自定义清单中没有它时, 打包应用在 Android 14 及以上版本不能截图. 此前这种情况下同意截图授权后打包应用会崩溃 <em><a href="http://issues.autojs6.com/594"><code>issue #594</code></a></em>.</li>
+<li>相机与麦克风的前台服务权限不在默认清单中. 清单含 <code>CAMERA</code> / <code>RECORD_AUDIO</code> 时, APK Builder Template 插件同时保留对应的 <code>FOREGROUND_SERVICE_CAMERA</code> / <code>FOREGROUND_SERVICE_MICROPHONE</code> (见 <a href="runtimeApis.html#runtimeapis_23">打包权限与平台边界</a>), 一般不会遇到表中后两行的情况.</li>
+<li>打包应用未声明 <code>RECEIVE_BOOT_COMPLETED</code> 时, 设置页中的 &quot;开机时&quot; 开关不可用并说明原因, 见 <a href="#projectconfig_launchconfig_runonboot">launchConfig.runOnBoot</a>.</li>
+<li>上述检查属于打包应用的运行时, 随 APK Builder Template 插件内含的 Runtime Kit 进入打包应用, 需要该 Runtime Kit 来自 AutoJs6 6.8.1 或更高版本, 已经打包好的应用需要重新打包. runOnBoot 为 <code>true</code> 时保留 <code>RECEIVE_BOOT_COMPLETED</code> 是打包时的处理, 在 AutoJs6 (宿主) 中, 与 APK Builder Template 插件的版本无关.</li>
+</ul>
+<h3>打包页的权限列表<span><a class="mark" href="#projectconfig_10" id="projectconfig_10">#</a></span></h3>
 <p>打包页的 &quot;需要的权限&quot; 列出 72 项常用权限, 载入 <code>project.json</code> 时按以下规则匹配清单中的项:</p>
 <ul>
 <li>不区分大小写.</li>
@@ -1031,8 +1072,8 @@ android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 </ul>
 <p>在打包页保存后, 清单只含列表中勾选的项, 并写成完整的权限名. 列表之外的权限会被去掉, 需要它们时直接编辑 <code>project.json</code> 并且不在打包页中保存. 简写只在打包页中识别, 建议直接写完整的权限名.</p>
 <hr>
-<h2>别名与兼容<span><a class="mark" href="#projectconfig_10" id="projectconfig_10">#</a></span></h2>
-<h3>反向别名<span><a class="mark" href="#projectconfig_11" id="projectconfig_11">#</a></span></h3>
+<h2>别名与兼容<span><a class="mark" href="#projectconfig_11" id="projectconfig_11">#</a></span></h2>
+<h3>反向别名<span><a class="mark" href="#projectconfig_12" id="projectconfig_12">#</a></span></h3>
 <p>以下 5 个别名与规范键含义相反, 读取时把值取反. 例如 <code>&quot;hideLogs&quot;: true</code> 等同于 <code>&quot;logsVisible&quot;: false</code>.</p>
 <table>
 <thead>
@@ -1126,18 +1167,20 @@ android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 </table>
 <p>AutoJs4 的 <code>scripts</code> (为单个脚本设置的配置) 不受支持, 保存后会被删除.</p>
 <hr>
-<h2>常见问题<span><a class="mark" href="#projectconfig_12" id="projectconfig_12">#</a></span></h2>
+<h2>常见问题<span><a class="mark" href="#projectconfig_13" id="projectconfig_13">#</a></span></h2>
 <h3>保存后 project.json 的内容变了<span><a class="mark" href="#projectconfig_project_json_1" id="projectconfig_project_json_1">#</a></span></h3>
 <p>保存时 AutoJs6 重新生成文件: 有默认值的键被写出, 未知键被删除, 打包页还会加入 <code>build</code> 排除目录与完整的权限名 (见 <a href="#projectconfig_3">保存时的行为</a>). 需要保留的自定义数据请放在其他文件中.</p>
 <h3>hideLogs 等配置每次保存后都会反过来<span><a class="mark" href="#projectconfig_hidelogs" id="projectconfig_hidelogs">#</a></span></h3>
-<p>这是 AutoJs6 6.8.1 之前的问题: 写回反向别名时没有取反, 打包出的应用也与写法相反, 见 <a href="#projectconfig_11">反向别名</a>. 改用 <code>logsVisible</code> 等规范键可以避免; 已被翻转的值不会自动改回, 需要核对一次.</p>
-<h3>打包应用开启 &quot;前台服务&quot; 后崩溃<span><a class="mark" href="#projectconfig_13" id="projectconfig_13">#</a></span></h3>
+<p>这是 AutoJs6 6.8.1 之前的问题: 写回反向别名时没有取反, 打包出的应用也与写法相反, 见 <a href="#projectconfig_12">反向别名</a>. 改用 <code>logsVisible</code> 等规范键可以避免; 已被翻转的值不会自动改回, 需要核对一次.</p>
+<h3>打包应用开启 &quot;前台服务&quot; 后崩溃<span><a class="mark" href="#projectconfig_14" id="projectconfig_14">#</a></span></h3>
 <p>自定义的 <a href="#projectconfig_permissions">permissions</a> 中缺少前台服务权限. AutoJs6 6.8.1 起打包时始终保留这 2 项, 用它重新打包即可; 使用此前的版本时, 在清单中加入 <code>android.permission.FOREGROUND_SERVICE</code> 与 <code>android.permission.FOREGROUND_SERVICE_SPECIAL_USE</code> 后重新打包. 打包应用的运行时来自 AutoJs6 6.8.1 或更高版本时, 缺少权限不再崩溃, 开关保持关闭并提示原因 (见 <a href="#projectconfig_8">始终保留的前台服务权限</a>).</p>
+<h3>打包应用申请截图后崩溃<span><a class="mark" href="#projectconfig_15" id="projectconfig_15">#</a></span></h3>
+<p>Android 14 及以上版本中, 自定义的 <a href="#projectconfig_permissions">permissions</a> 缺少 <code>android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION</code> 时, 打包应用调用 images.requestScreenCapture 并同意截图授权后崩溃. 在清单中加入该权限后重新打包即可. 打包应用的运行时来自 AutoJs6 6.8.1 或更高版本时, 缺少该权限不再崩溃, 也不弹出截图授权, images.requestScreenCapture 抛出写明所缺权限的异常 (见 <a href="#projectconfig_9">缺少权限时的表现</a>).</p>
 <h3>写进 permissions 的权限在打包页保存后不见了<span><a class="mark" href="#projectconfig_permissions_1" id="projectconfig_permissions_1">#</a></span></h3>
-<p>打包页只保留其列表中勾选的权限, 见 <a href="#projectconfig_9">打包页的权限列表</a>.</p>
+<p>打包页只保留其列表中勾选的权限, 见 <a href="#projectconfig_10">打包页的权限列表</a>.</p>
 <h3>修改 launchConfig 后, 已安装的打包应用没有变化<span><a class="mark" href="#projectconfig_launchconfig_2" id="projectconfig_launchconfig_2">#</a></span></h3>
 <p>logsVisible 与 runOnBoot 只在打包应用首次启动, 覆盖安装或 build.id 变化时复制到打包应用的设置, 之后以打包应用设置页的开关为准. 重新打包并覆盖安装, 或在打包应用的设置页中修改.</p>
-<h3>保存时提示键名冲突<span><a class="mark" href="#projectconfig_14" id="projectconfig_14">#</a></span></h3>
+<h3>保存时提示键名冲突<span><a class="mark" href="#projectconfig_16" id="projectconfig_16">#</a></span></h3>
 <p>同一个键以两种写法同时出现, 例如同时有 <code>packageName</code> 与 <code>package</code>, 或同时有 <code>logsVisible</code> 与 <code>hideLogs</code>. 删去其中一个后再保存.</p>
 <h3>agent 段写了, 但项目没有出现在 Agent 脚本目录中<span><a class="mark" href="#projectconfig_agent_agent" id="projectconfig_agent_agent">#</a></span></h3>
 <p>逐项检查: 键名是否为小写 <code>agent</code>; 文件是否为严格 JSON (没有注释和多余的逗号); agent 段是否只含 9 个允许的键; description 是否非空; id, risk, confirm, timeoutMs 与 parameters 是否符合 <a href="#projectconfig_agent_1">agent</a> 一节的约束.</p>
