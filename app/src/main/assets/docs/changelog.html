@@ -380,6 +380,8 @@
 </li>
 <li><p><code>更新</code> <a href="app.html#app_launch_failures">通用应用 (App)</a>: launch / launchPackage / launchApp 补充参数类型与返回值的含义, 并补充 &quot;启动失败或界面未打开&quot; 一节 (包可见性与 QUERY_ALL_PACKAGES 权限, 后台启动限制, 首行 auto() 停止脚本); <a href="automator.html#automator_m_auto_waitfor">自动化 (Automator)</a>: auto.waitFor 补充打包应用使用自己的无障碍服务, 以及 &quot;ui&quot; 脚本先显示界面再在线程中等待服务的写法 (AutoJs6 6.8.1)</p>
 </li>
+<li><p><code>更新</code> <a href="app.html#app_app_launchapp_appname">通用应用 (App)</a>: launchApp 补充名称对应多个应用时优先启动有启动入口的应用 (getPackageName 仍返回第一个匹配的包名), 以及应用显示名随界面语言而不同 (AutoJs6 6.8.1)</p>
+</li>
 <li><p><code>更新</code> <a href="ai.html#ai_agent">AI</a>: 说明 3-Stove Agent 1.4.1 起在任务台点 &quot;连接 AutoJs6&quot; 而请求因 AutoJs6 未在运行没有送达时会打开 AutoJs6 完成连接, 自动连接不切换 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="modules.html#modules_p_root">模块 (Modules)</a>: 没有父模块的相对路径在 require.root 下解析不到时, 再从主脚本所在目录解析 (AutoJs6 6.8.1), require.resolve 与找不到模块时的错误消息同步说明</p>

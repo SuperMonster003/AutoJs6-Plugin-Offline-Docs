@@ -521,7 +521,9 @@
 <li><strong>appName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="appType.html">App</a></span> } - 应用显示名, 预设别名或应用枚举</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否已找到应用并提交启动请求</li>
 </ul>
-<p>按应用显示名启动应用. 预设别名和应用枚举先对应到其应用. 找不到该名称的应用, 或找到的应用没有启动入口时返回 <code>false</code>; 名称对应多个应用时只启动其中一个.</p>
+<p>按应用显示名启动应用. 预设别名和应用枚举先对应到其应用. 找不到该名称的应用, 或该名称的应用都没有启动入口时返回 <code>false</code>.</p>
+<p>名称对应多个应用时只启动其中一个: <strong><code>6.8.1</code></strong> 起优先选择有启动入口的应用, 此前取第一个匹配的应用, 它没有启动入口时返回 <code>false</code>. <a href="#app_app_getpackagename_name">app.getPackageName</a> 不受影响, 仍返回第一个匹配的包名.</p>
+<p>应用显示名随 AutoJs6 (或打包应用) 的界面语言而不同. 例如 MIUI 在英文界面下有两个名为 &quot;Settings&quot; 的应用 (com.android.settings 与没有启动入口的 com.xiaomi.misettings), 在简体中文界面下则分别为 &quot;设置&quot; 与 &quot;小米设置&quot;.</p>
 <p>返回 <code>true</code> 只表示启动请求已提交, 界面是否打开见 <a href="#app_launch_failures">启动失败或界面未打开</a>.</p>
 <pre><code class="lang-js">launchApp(&quot;AutoJs6&quot;);
 </code></pre>
