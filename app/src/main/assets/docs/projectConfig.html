@@ -489,8 +489,9 @@
 <li><code>version</code>, <code>package</code>, <code>signature</code>, <code>ignore</code> 与 <code>feature</code> 只在顶层识别; <code>id</code>, <code>number</code> 与 <code>time</code> 只在 build 段 (或其别名 <code>buildInfo</code>) 内识别. 其余键在全文中查找, 写在注释或未知段中的同名键也可能被读取.</li>
 <li>不读取 <a href="#projectconfig_node">node</a>, <a href="#projectconfig_bun">bun</a> 与 <a href="#projectconfig_agent">agent</a> 段 (AutoJs6 6.8.1 起; 此前段中的同名键可能被当作项目配置读取, 例如写在顶层 permissions 之后的 <code>node.permissions</code> 被当作打包应用的权限清单).</li>
 <li>同一个键以多种写法出现时取规范键, 不按出现的先后.</li>
-<li>字符串中的转义 (例如 <code>\&quot;</code>) 保持原样, 不做还原.</li>
-<li>用段名别名写的段 (例如 <code>launch</code>, <code>buildInfo</code>) 保存后写为规范名, 不像正常读取那样保留原写法 (见 <a href="#projectconfig_3">保存时的行为</a>).</li>
+<li>键与值可以用双引号或单引号书写 (AutoJs6 6.8.1 起; 此前只识别双引号). 未加引号的键与字符串值不识别.</li>
+<li>字符串与列表项中的转义按正常读取的规则还原, 例如 <code>\&quot;</code> 还原为 <code>&quot;</code>, <code>\u4e2d</code> 还原为 <code>中</code> (AutoJs6 6.8.1 起; 此前保持原样). 正常读取会报错的转义 (例如 <code>\x</code>) 保持原样. 键名中的转义不还原, 用转义写的键名 (例如 <code>&quot;\u006eame&quot;</code>) 不识别.</li>
+<li>用段名别名写的段 (例如 <code>launch</code>, <code>buildInfo</code>) 保存后保留原写法, 与正常读取相同 (AutoJs6 6.8.1 起; 此前写为规范名, 见 <a href="#projectconfig_3">保存时的行为</a>).</li>
 </ul>
 </li>
 </ul>
