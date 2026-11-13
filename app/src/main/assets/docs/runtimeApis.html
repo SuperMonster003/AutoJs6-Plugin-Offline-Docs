@@ -89,6 +89,7 @@
 <li><a class="nav-ocr" href="ocr.html">OCR - 光学字符识别</a></li>
 <li><a class="nav-opencc" href="opencc.html">OpenCC - 中文转换</a></li>
 <li><a class="nav-pangu" href="pangu.html">Pangu - 文本间距</a></li>
+<li><a class="nav-pdf" href="pdf.html">PDF - PDF 文档</a></li>
 <li><a class="nav-pinyin" href="pinyin.html">Pinyin - 拼音</a></li>
 <li><a class="nav-pinyin4j" href="pinyin4j.html">Pinyin4j</a></li>
 <li><a class="nav-plugins" href="plugins.html">Plugins - 插件</a></li>
@@ -153,6 +154,8 @@
 <li><a class="nav-galleryViewSessionType" href="galleryViewSessionType.html">GalleryViewSession - 查看器会话</a></li>
 <li><a class="nav-mailClientType" href="mailClientType.html">MailClient - 邮件客户端</a></li>
 <li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
+<li><a class="nav-pdfDocumentType" href="pdfDocumentType.html">PdfDocument - PDF 文档对象</a></li>
+<li><a class="nav-pdfViewSessionType" href="pdfViewSessionType.html">PdfViewSession - PDF 查看器会话</a></li>
 <li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
 <li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
 <li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
@@ -478,14 +481,20 @@
 <li><span class="stability_undefined"><a href="#runtimeapis_40">打包应用与额度</a></span></li>
 </ul>
 </li>
+<li><span class="stability_undefined"><a href="#runtimeapis_node_js_bun_worker_pdf">Node.js / Bun / Worker 的 pdf</a></span><ul>
+<li><span class="stability_undefined"><a href="#runtimeapis_41">成员, 能力与授权</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_pdfdocument">PdfDocument 与查看器</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_42">额度</a></span></li>
+</ul>
+</li>
 <li><span class="stability_undefined"><a href="#runtimeapis_flow">Flow 异步链与等待核心</a></span><ul>
-<li><span class="stability_undefined"><a href="#runtimeapis_41">运行条件与覆盖范围</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_43">运行条件与覆盖范围</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_flow_1">根方法与 Flow 对象</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_42">条件与稳定性</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_43">取消, 期限与重试</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_44">高级工具与节点动作</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_45">系统事件等待</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_46">工具授权与清理</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_44">条件与稳定性</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_45">取消, 期限与重试</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_46">高级工具与节点动作</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_47">系统事件等待</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_48">工具授权与清理</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_within_scope">within 与 scope</a></span><ul>
 <li><span class="stability_undefined"><a href="#runtimeapis_within_cond_options_onok_onerror">within(cond, options?, onOk?, onError?)</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_scope_options">scope(options)</a></span></li>
@@ -496,11 +505,11 @@
 </li>
 <li><span class="stability_undefined"><a href="#runtimeapis_ai">AI 生成与持久会话</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_agent">Agent 任务控制</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_47">运行时自有接口</a></span><ul>
+<li><span class="stability_undefined"><a href="#runtimeapis_49">运行时自有接口</a></span><ul>
 <li><span class="stability_undefined"><a href="#runtimeapis_scriptargs">脚本参数与 scriptArgs</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_node_js_runtime">Node.js Runtime</a></span><ul>
-<li><span class="stability_undefined"><a href="#runtimeapis_48">宿主桥与宿主消息</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_49">生命周期与能力快照</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_50">宿主桥与宿主消息</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_51">生命周期与能力快照</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_npm_package_manager">npm 与 package_manager</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_plugins">本地插件 (plugins)</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_rhino_rhino_autojs6_compat">Rhino 迁移 (rhino, autojs6:compat)</a></span></li>
@@ -4036,6 +4045,90 @@ try {
 <h3>打包应用与额度<span><a class="mark" href="#runtimeapis_40" id="runtimeapis_40">#</a></span></h3>
 <p>独立签名的打包应用需要匹配的 Runtime Kit, 插件通过单独的服务与查看器入口接受调用. Builder 为声明了 files 能力的 Node 项目和声明了 xlsx.control 的 Bun 项目添加 <code>org.autojs.plugin.xlsx.permission.RUNTIME</code>, 返回的工作簿, Writer 与查看器会话只允许创建它们的应用调用.</p>
 <p>Bun 的 xlsx.control 在操作进行, 逐行读取或查看器打开期间轮询宿主, 这些请求不计入普通能力的单次执行 1024 次调用额度; 授权, 请求与响应大小, 并发数和单次请求期限的检查仍然保留.</p>
+<h2>Node.js / Bun / Worker 的 pdf<span><a class="mark" href="#runtimeapis_node_js_bun_worker_pdf" id="runtimeapis_node_js_bun_worker_pdf">#</a></span></h2>
+<p>Node.js Runtime 2.2.0 与 Bun Runtime 0.23.0 的本地开发版本提供与 AutoJs6 脚本相同的 <a href="pdf.html">pdf</a> 模块, 读取, 渲染, 编辑, 生成与查看 PDF 文档, 需要 AutoJs6 6.8.1 与 3-Paper PDF 1.0.0 或以上. 此处描述开发版本, 不表示已公开发布. 文档的解析, 编辑与查看器由 3-Paper PDF 插件提供; 插件缺失, 停用或不兼容时 isAvailable 返回 false, 其他调用以 PdfError <code>PLUGIN_UNAVAILABLE</code> 拒绝.</p>
+<p>Node.js 主线程与 CommonJS/ESM/嵌套 Worker 使用 <code>require(&#39;pdf&#39;)</code>, <code>require(&#39;autojs6:pdf&#39;)</code> 或对应的 ESM import, 主线程也可使用显式 <code>$autojs.pdf</code> 与 <code>autojs6:compat</code> 的同名成员. Bun 通过 <code>createHostClient()</code> 返回的 <code>host.pdf</code> 使用同一接口. 路径由宿主解析并打开, 规则同 <a href="#runtimeapis_1">相对路径</a>.</p>
+<pre><code class="lang-js">&quot;nodejs&quot;;
+let pdf = require(&#39;autojs6:pdf&#39;);
+let info = await pdf.info(&#39;/sdcard/Documents/manual.pdf&#39;);
+console.log(info.pageCount, info.title);
+let { texts } = await pdf.text(&#39;/sdcard/Documents/manual.pdf&#39;, { pages: &#39;1-3&#39; });
+console.log(texts[0]);
+await pdf.merge([&#39;./a.pdf&#39;, &#39;./b.pdf&#39;], &#39;./merged.pdf&#39;, {
+    onProgress: p =&gt; console.log(p.percent, p.stage),
+    timeoutMs: 60000,
+});
+</code></pre>
+<p>Bun 中对应入口为:</p>
+<pre><code class="lang-js">&quot;bun&quot;;
+let { createHostClient } = await import(process.env.AUTOJS6_HOST_CLIENT_MODULE);
+let host = await createHostClient();
+console.log((await host.pdf.info(&#39;/sdcard/Documents/manual.pdf&#39;)).pageCount);
+</code></pre>
+<h3>成员, 能力与授权<span><a class="mark" href="#runtimeapis_41" id="runtimeapis_41">#</a></span></h3>
+<p>成员与 AutoJs6 脚本的 pdf 模块相同, 共 45 个: isAvailable, info, text, outline, search, render, renderToFile, images, extractImages, merge, split, extract, delete, reorder, rotate, fromImages, fromText, fromHtml, encrypt, decrypt, open, view, 各带 Async 形态, 以及 PdfError. 参数个数, 参数, 选项与错误码同 AutoJs6 脚本, 差别只有:</p>
+<ul>
+<li>全部成员返回 Promise. 不带后缀的名称与 Async 形态是同一个调用, 不提供阻塞式调用.</li>
+<li>参数个数不符时 Promise 以 <code>INVALID_ARGUMENT</code> 拒绝, 不同步抛出. 参数须能表示为 JSON (函数只允许出现在 <code>onProgress</code>), 否则同样是 <code>INVALID_ARGUMENT</code>.</li>
+<li>text 的结果为 <code>{ texts, pages, sources }</code>: texts 与 pages 一一对应, sources 标明每页文字取自文字层还是 OCR.</li>
+<li>render 默认把 PNG 写到 <code>&lt;当前工作目录&gt;/.pdf-render/</code>, 结果为 <code>{ path, width, height, format, sizeBytes }</code>; 选项 <code>encoding: &#39;base64&#39;</code> 时不写文件, 结果为 <code>{ base64, width, height, format, sizeBytes }</code>, 图片超过 16 MiB 时以 <code>LIMIT_EXCEEDED</code> 拒绝.</li>
+<li>返回的 Promise 带不可枚举的 <code>cancel()</code>: 调用进行中返回 true, 宿主取消任务, Promise 以 <code>CANCELLED</code> 拒绝.</li>
+<li><code>onProgress</code> 在调用方的 JS 线程运行, 收到 <code>{ opId, percent, stage, current, total }</code>. 它抛出错误或返回被拒绝的 Promise 时, 任务被取消, 调用以该错误拒绝.</li>
+<li>选项 <code>signal</code> (AbortSignal) 与 <code>timeoutMs</code> (毫秒) 留在调用方的 JS 线程, 不发给宿主. 进行中中止等同 <code>cancel()</code>; 传入已中止的 signal 时调用立即拒绝, 不启动任务; timeoutMs 等同 <code>AbortSignal.timeout(timeoutMs)</code>, 与 signal 同时给出时先到者取消. 三种情形都以 <code>CANCELLED</code> 拒绝, <code>cause</code> 为中止原因 (超时为 <code>TimeoutError</code> DOMException). timeoutMs 须大于 0 且不超过 2147483647, 小数向上取整, 否则为 <code>INVALID_ARGUMENT</code>; 不写或为 null 时不限时. open 与 view 的 signal 与 timeoutMs 只作用到文档或查看器就绪为止.</li>
+<li>失败为 PdfError, <code>code</code> 与 <code>message</code> 不可枚举, toString 为 <code>PdfError [CODE]: message</code>. 请求本身被拒绝 (例如缺少能力) 时, 宿主错误码 <code>ERR_AUTOJS6_PDF_&lt;code&gt;</code> 去掉前缀后作为 code.</li>
+</ul>
+<p>能力按每次调用声明:</p>
+<table>
+<thead>
+<tr>
+<th>调用</th>
+<th>Node 能力</th>
+<th>Bun 授权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全部调用 (含 isAvailable)</td>
+<td>files</td>
+<td>pdf.control</td>
+</tr>
+<tr>
+<td>merge, split, extract, delete, reorder, rotate, fromImages, fromText, fromHtml, encrypt, decrypt, renderToFile, extractImages 及其 Async 形态, PdfDocument 的 renderToFile, extractImages 与 save, 不带 <code>encoding: &#39;base64&#39;</code> 的 render</td>
+<td>另需 files.write</td>
+<td>pdf.control</td>
+</tr>
+<tr>
+<td><code>ocr</code> 为 true 或 <code>&#39;always&#39;</code> 的 text (含 PdfDocument.text)</td>
+<td>另需 ocr</td>
+<td>另需 ocr.control</td>
+</tr>
+<tr>
+<td>view 与查看器会话</td>
+<td>files 与 ui</td>
+<td>pdf.control</td>
+</tr>
+</tbody>
+</table>
+<p>Node 项目在 nodeConfig.permissions 中声明能力, 缺少时调用被拒绝, 错误码为 <code>ERR_AUTOJS6_CAPABILITY_NOT_DECLARED</code>, 并带有 capability 与 missingCapabilities. Bun 的 pdf.control 独立且默认关闭, 在插件中心的 Bun 运行时设置页开启; 一项授权覆盖读取, 写文件与查看器, 识别文字另需 ocr.control (操作开始时检查), 未授权时以 PdfError <code>NOT_GRANTED</code> 拒绝, 并带有 capability.</p>
+<h3>PdfDocument 与查看器<span><a class="mark" href="#runtimeapis_pdfdocument" id="runtimeapis_pdfdocument">#</a></span></h3>
+<p>open 返回冻结的 PdfDocument (path, pageCount, isClosed, 与 AutoJs6 脚本相同的 info, pageSize, text, outline, search, render, renderToFile, images, extractImages, save 及其 Async 形态, close). close 重复调用安全且总是完成, 之后的调用以 <code>SESSION_CLOSED</code> 拒绝. 脚本或 Worker 结束时, 宿主关闭它未关闭的文档; 打开的文档不会让脚本保持运行.</p>
+<p>view 返回冻结的 PdfViewSession, 有 path, page, pageCount, isClosed, reason, on/addListener, once, off/removeListener, removeAllListeners, listenerCount, goTo, state 和 close. page 事件的数据为 <code>{ page, pageCount }</code>, close 事件为 <code>{ reason }</code>. 尚无监听器时每个事件名最多保留 32 条, 添加监听器后补发. goTo 与 close 的结果为会话本身, state 返回 <code>{ page, pageCount, zoom, token, visible }</code>; 这三个方法不可取消, 不理会 signal 与 timeoutMs. <code>close()</code> 结束脚本会话并把查看器留给用户, <code>close({ finish: true })</code> 同时关闭查看器, 随后收到 close 事件. reason 与 <a href="pdfViewSessionType.html#pdfviewsessiontype_events">PdfViewSession</a> 相同, 另有 <code>overflow</code> (脚本不处理的事件积压到 1024 条) 与 <code>error</code> (与宿主的连接失败). 查看器打开期间脚本保持运行.</p>
+<pre><code class="lang-js">&quot;nodejs&quot;;
+let pdf = require(&#39;pdf&#39;);
+let doc = await pdf.open(&#39;/sdcard/Documents/manual.pdf&#39;);
+try {
+    console.log(doc.pageCount, await doc.pageSize(1));
+    let hits = await doc.search(&#39;Android&#39;, { limit: 20 });
+    console.log(hits.length);
+} finally {
+    await doc.close();
+}
+let session = await pdf.view(&#39;/sdcard/Documents/manual.pdf&#39;, { page: 3 });
+session.on(&#39;page&#39;, e =&gt; console.log(e.page, &#39;/&#39;, e.pageCount));
+session.on(&#39;close&#39;, e =&gt; console.log(&#39;closed:&#39;, e.reason));
+</code></pre>
+<h3>额度<span><a class="mark" href="#runtimeapis_42" id="runtimeapis_42">#</a></span></h3>
+<p>Bun 的 pdf.control 在操作进行或查看器打开期间轮询宿主, 这些请求不计入普通能力的单次执行 1024 次调用额度; 授权, 请求与响应大小, 并发数和单次请求期限的检查仍然保留.</p>
 <h2>Flow 异步链与等待核心<span><a class="mark" href="#runtimeapis_flow" id="runtimeapis_flow">#</a></span></h2>
 <p>Node.js 1.30.0 与 Bun Runtime 0.19.0 提供显式的 flow 模块. Node 主线程与 CJS/ESM/嵌套 Worker 使用 <code>require(&#39;flow&#39;)</code>, <code>require(&#39;autojs6:flow&#39;)</code> 或对应 ESM 导入; <code>$autojs.flow</code> 也指向当前线程的 facade. Bun 使用 <code>host.flow</code>.</p>
 <pre><code class="lang-js">&quot;nodejs&quot;;
@@ -4053,7 +4146,7 @@ let node = await flow.waitForVisible({ text: &#39;登录&#39; }, {
 });
 console.log(node.text, node.bounds);
 </code></pre>
-<h3>运行条件与覆盖范围<span><a class="mark" href="#runtimeapis_41" id="runtimeapis_41">#</a></span></h3>
+<h3>运行条件与覆盖范围<span><a class="mark" href="#runtimeapis_43" id="runtimeapis_43">#</a></span></h3>
 <p>纯回调, Promise 组合与计时不调用宿主, 无须无障碍授权. 选择器与前台组件等待需要配套宿主的 Flow 查询接口, Node 的 accessibility 能力, 或 Bun 默认关闭的 accessibility.control 授权, 以及调用应用内已绑定的 Android 无障碍服务. 打包应用使用自己的服务与包身份; 在 Android 设置中授权后才能执行界面查询.</p>
 <p>Flow 立即返回可被 await/Promise.resolve 接纳的对象. 回调在导入它的 JavaScript 线程执行, 支持异步回调; 纯本地链不创建宿主线程; 原生工具在宿主工作线程执行, workers 记录待定原生操作数. 每个 Worker 有独立的 defaults, pending 和 cancelAll. 主线程停止执行或 Worker 退出时, 所属计时器和未完成查询随运行时结束.</p>
 <p>本批覆盖 52 个已注册根方法名称, Flow 构造器, 核心链, 高级工具和四种事件等待. 全局 <code>$flow</code>/waitAsync 注入与 Java UiObject 原型仍不在 portable 契约内. 使用 JavaScript 的 <code>await value</code>, <code>value.toPromise()</code>, <code>value.await()</code> 或 <code>value.sync(timeout?)</code> 读取结果. 本节限制优先于 <a href="flow.html">Rhino Flow</a> 页面中的线程, 选择器和动作说明.</p>
@@ -4122,7 +4215,7 @@ console.log(node.text, node.bounds);
 </table>
 <p>all 返回按输入顺序排列的结果; race 采用首个结算; any 采用首个成功, 全部失败时保留最后到达的错误. all([]) 返回空数组, race([])/any([]) 以 INVALID_TARGET 拒绝. 组合器结束后取消自己创建的条件等待, 不取消调用者提供的独立 Flow/Promise.</p>
 <p>Flow 的 state 为 pending/fulfilled/rejected/cancelled, step 为当前步骤名, value/error 为已结算结果. toString 返回步骤和状态. 所有等待方法也可接在已有 Flow 后面. then/catch/else/finally/map/run/filter/peek/sleep/delay/timeout/retry/whenPresent/repeatUntil 返回新节点, 允许从同一父节点分叉. filter 为假时以 INVALID_TARGET 拒绝; peek 等待回调但保留原值; finally 等待回调并保留原结算, 其自身失败则覆盖原结算.</p>
-<h3>条件与稳定性<span><a class="mark" href="#runtimeapis_42" id="runtimeapis_42">#</a></span></h3>
+<h3>条件与稳定性<span><a class="mark" href="#runtimeapis_44" id="runtimeapis_44">#</a></span></h3>
 <p>wait 系列接受 <code>(cond, timeout?, interval?)</code> 或 <code>(cond, options, onOk?, onError?)</code>. 条件可为同步/异步函数, Flow/Promise, 字符串, RegExp 或下表的选择器描述符. 函数仅返回 null/undefined/false/NaN 时不满足; 0, 空字符串与空数组都算满足. 直接提供的 Promise 兑现即为满足, 包括兑现值 false/undefined; 拒绝会原样传播.</p>
 <table>
 <thead>
@@ -4166,13 +4259,13 @@ console.log(node.text, node.bounds);
 <p>选择器返回 JSON 快照: text, desc, id, className, bounds, clickable, enabled, visibleToUser, scrollable, checked, selected, packageName. 这不是可调用 click 的 UiObject; 查询结束就释放临时 Android 节点. 后续查询返回新的快照. 新版快照与动作重定位见下文高级工具.</p>
 <p>等待选项 timeout 默认 10000 ms, interval 默认 200 ms, times 默认 Infinity. timeout 为 Infinity 表示不限等待期限, 0 表示只尝试一次; 异步探测仍可被取消, 且受该等待和后续链的期限约束. times 必须为正整数或 Infinity. stableFor 默认 100 ms, 表示连续稳定时长. compare 可为 fingerprint (结构化快照), bounds, content 或异步比较函数. snapshot 可提供每次采样的无环数据投影, 与 compare 互斥, 用来检测原地修改的对象. missing 默认为 reset; fail 在已经出现的目标再次缺失时以 INVALID_TARGET 拒绝.</p>
 <p>recoverService 默认 false. 服务未绑定时以 A11Y_UNAVAILABLE 拒绝, 不把服务中断当作目标消失. 设为 true 时在原期限内静默重试, 不打开设置, 不自动授予权限. Node 能力缺失和 Bun NOT_GRANTED 仍直接拒绝. defaults 接受 timeout/interval/stableFor/recoverService/trace/strictActions/humanize, 整体校验成功后才修改, 后建步骤读取新值. trace 输出步骤开始/结束和耗时.</p>
-<h3>取消, 期限与重试<span><a class="mark" href="#runtimeapis_43" id="runtimeapis_43">#</a></span></h3>
+<h3>取消, 期限与重试<span><a class="mark" href="#runtimeapis_45" id="runtimeapis_45">#</a></span></h3>
 <p>cancel() 在节点仍待定时返回 true, 否则 false. 它取消该分支; 只有父节点的全部续接都已取消时才向上停止父节点. 其他分支仍可继续. 取消后来的回调结果不再推进该节点, 回调已经产生的外部副作用不能撤销. 普通用户 Promise 不具备强制中断能力, 但等待它的 Flow 可以及时结算取消或超时. 回调中创建的子 Flow 通过异步上下文归该步骤所有, 取消/超时会清理这些子 Flow. 即使在 await 恢复后才创建, 所属步骤已经取消时也会立即取消. 阻塞 JavaScript 线程的同步代码无法被计时器抢占.</p>
 <p>timeout(ms) 从该步骤运行时设置后续链的截止时间, 不回溯限制前序步骤. 等待中的异步回调也受期限约束. catch/finally 可观察期限失败. retry(times = 1, delay = 0) 只重跑紧前面的失败步骤, 不重跑整条链, 不重跑取消结果或已接纳的 Promise.</p>
 <p>whenPresent 的选项为 timeout/interval/times/recoverService. handler 得到找到的样本, 返回值不会替换链输入. repeatUntil 的选项为有限 timeout, interval, maxAttempts (默认 0, 即不限制动作次数) 和 retryOn(error, attempt). action 收到从 1 开始的次数. 条件一开始已满足时不执行动作; timeout 为 0 时只检查一次. 动作异常仅在 retryOn 返回 true 时重试.</p>
 <p>FlowError 提供 code, step, selector, elapsed, attempts, reason. portable 核心使用 TIMEOUT/ACTION_FAILED/CANCELLED/A11Y_UNAVAILABLE/INVALID_TARGET; 回调异常和宿主授权/传输错误保留原错误. 拒绝也可以从 error/state 读取, 不会强制触发未处理 Promise 拒绝.</p>
 <p>Bun 选择器轮询沿用普通桥的每次执行 1024 次调用预算, 一次查询至少包含 start/poll 两次请求, 并共享 4 个并发请求与单次期限/大小限制. 长时间等待应设置合理 interval/timeout; 纯本地条件不消耗宿主调用预算. 本批不扩展 Bun 的 Android/ABI 支持范围或原生二进制.</p>
-<h3>高级工具与节点动作<span><a class="mark" href="#runtimeapis_44" id="runtimeapis_44">#</a></span></h3>
+<h3>高级工具与节点动作<span><a class="mark" href="#runtimeapis_46" id="runtimeapis_46">#</a></span></h3>
 <p>从 Node Runtime 1.29.0 与 Bun Runtime 0.18.0 起, 配套宿主增加下列工具. 工具立即返回 Flow, 可使用 await, then, catch, retry 与 cancel. 根方法共覆盖 Rhino 注册表中的 52 个名称; 这不表示 Rhino 的全部重载, Java 类型和同步行为都已移植.</p>
 <p>工具的 target 接受上述选择器, 字符串, RegExp, 新版 NodeSnapshot, 或返回 NodeSnapshot/null 的同步或异步函数. 直接传入 Promise 作为工具参数会拒绝; 可使用返回 Promise 的函数. 快照增加 windowId, depth, indexInParent, checkable, editable, focused. 动作会在当前窗口中重新定位, 核对包名, 类名, ID, 文本, 描述, 路径位置和边界. 窗口变化, 目标缺失或匹配不唯一时拒绝 INVALID_TARGET. 节点没有 Java 原型; 使用 <code>flow.of(snapshot).click()</code> 等链方法执行动作. 输入和开关操作返回操作后的新快照.</p>
 <table>
@@ -4325,7 +4418,7 @@ await flow.smartClick({ text: &#39;确认&#39; }, {
 let field = await flow.typeInto({ desc: &#39;用户名&#39; }, &#39;example&#39;);
 await flow.of(field).appendText(&#39;1&#39;);
 </code></pre>
-<h3>系统事件等待<span><a class="mark" href="#runtimeapis_45" id="runtimeapis_45">#</a></span></h3>
+<h3>系统事件等待<span><a class="mark" href="#runtimeapis_47" id="runtimeapis_47">#</a></span></h3>
 <p>事件等待订阅真实 Android 无障碍与通知观察源, 不轮询 UI 来假装事件. 返回 EventFlow, 除一般 Flow 成员外提供只读 ready Promise. <code>await task.ready</code> 确认监听已建立后, 再触发测试点击或发送通知. 取消, 超时, 服务断开, 运行结束或 Worker 退出均移除所属监听; 不影响其他 Worker 或父线程的等待. 忽略 ready 不会强制产生未处理拒绝.</p>
 <table>
 <thead>
@@ -4362,7 +4455,7 @@ await event.ready;
 await flow.wait({ text: &#39;确认&#39; }).click();
 console.log((await event).packageName);
 </code></pre>
-<h3>工具授权与清理<span><a class="mark" href="#runtimeapis_46" id="runtimeapis_46">#</a></span></h3>
+<h3>工具授权与清理<span><a class="mark" href="#runtimeapis_48" id="runtimeapis_48">#</a></span></h3>
 <p>Node 的原生工具入口需要 accessibility. 边界点击, 智能点击的默认手势后备, 或 method:&#39;gesture&#39; 滚动额外需要 accessibility.gesture, 并在任何动作之前检查. <code>gestureFallback:false</code> 可只使用节点/祖先动作. launchAndWait 需要 app.query/app.launch; backToApp 需要 app.query. copy/cut/paste 和对应 performAction 需要 clipboard. 事件等待需要 events, Toast/notification 另外需要 events.toast/events.notification. press/swipe/gesture/gestures 需要 accessibility.gesture; back/home/recents 之外的其余全局链动作需要 keys.</p>
 <p>Bun 工具与事件等待使用独立且默认关闭的 flow.control. 宿主仍按操作检查 accessibility.control, accessibility.gesture, app.control, clipboard.control, events.observe, events.toast, events.notification 等既有授权. flow.control 本身不授予这些能力. 打包应用须在项目配置中声明所需能力, 并启用自己的 Android 无障碍服务; 授权不继承宿主或其他安装包.</p>
 <p>Bun 的界面事件长轮询为控制与回调调用保留执行机会, 总并发调用上限仍为 4. flow.control 的短轮询不计入 Bun 普通桥每次执行 1024 次累计调用预算; 仍保留请求/结果大小, 并发和单次期限限制. 旧的 accessibility.control 选择器轮询继续消耗普通预算. Node 的无障碍查询沿用每秒 20 次的上限; 连续查询应控制间隔, 这同样适用于带 scope 的查询. 工具结果使用 UTF-8 分片传递, 函数参数和回调答复仍受单次请求大小限制. 每个 facade 最多同时有 64 个原生操作, 宿主执行实例最多 128 个原生工具线程; 每个客户端排队结果限制为 64 MiB, 单个操作最多保留 100000 个私有节点. 此项未改变 Bun 原生载荷或 Android/ABI 兼容矩阵.</p>
@@ -4493,7 +4586,7 @@ console.log(result); // 完成.
 <h2>Agent 任务控制<span><a class="mark" href="#runtimeapis_agent" id="runtimeapis_agent">#</a></span></h2>
 <p>Node.js 主线程及 CommonJS/ESM/嵌套 Worker 使用 ai.agent, Bun 使用 host.ai.agent. 九个根方法 run/create/get/list/catalog/presets/status/result/context 和 AgentRun 的 on/once/off/respond/confirm/cancel/join 均有对应封装. run/get 返回 Promise 句柄; respond/confirm/cancel/join 异步完成, join 超时不取消任务. 事件和 JSON 结果保留类型与 Unicode, 注册脚本的上下文和结果槽可由其 Node Worker 访问. 任务循环和设备执行沿用 3-Stove Agent 与原宿主实现.</p>
 <p>Node 的 ai.agent 与 Bun 默认关闭的 agent.control 为独立授权. 生成应用还需在已安装的 AutoJs6 build 5850 或以上明确授权, 通过该宿主使用 Agent 的模型, 登记脚本和设备能力. 应用只能查询或控制自己的委托任务, 授权按安装身份保存并可在插件中心设置撤销. Worker 退出只取消其创建的非 detached 任务, get 的观察句柄不取得取消所有权. 详见 <a href="ai.html#ai_agent">Agent 任务与注册脚本</a>.</p>
-<h2>运行时自有接口<span><a class="mark" href="#runtimeapis_47" id="runtimeapis_47">#</a></span></h2>
+<h2>运行时自有接口<span><a class="mark" href="#runtimeapis_49" id="runtimeapis_49">#</a></span></h2>
 <p>本节列出 Node.js, Bun 与 QuickJS 运行时插件自带, 且没有对应宿主模块的入口: 宿主桥, 生命周期, 包管理, 本地插件, Rhino 迁移, MediaStore 与 Worker 池等. 它们不属于宿主脚本 API, 不计入运行时覆盖矩阵; 宿主模块在 Node.js / Bun 中的形态见各模块页的运行时支持表.</p>
 <p>&quot;最低版本&quot; 是首个含该入口的插件版本. 完整类型见 Node.js 插件的 <code>docs/nodejs/types/autojs6-node</code>, Bun 插件的 <code>host-client.d.mts</code>, 以及 <code>AutoJs6-TypeScript-Declarations</code> 的 <code>declarations/autojs6-node</code> 与 <code>declarations/autojs6-bun</code>; QuickJS 没有类型声明.</p>
 <h3>脚本参数与 scriptArgs<span><a class="mark" href="#runtimeapis_scriptargs" id="runtimeapis_scriptargs">#</a></span></h3>
@@ -4541,7 +4634,7 @@ console.log(scriptArgs[0]); // 例如 demo.quickjs.js
 </code></pre>
 <h3>Node.js Runtime<span><a class="mark" href="#runtimeapis_node_js_runtime" id="runtimeapis_node_js_runtime">#</a></span></h3>
 <p>共 12 组 113 条. 除 <code>autojs6:bridge</code> 外, 本节入口只在主线程 (根脚本) 中提供; Worker 中的宿主调用经 <code>autojs6:bridge</code> 转发. 模块用 <code>require(名称)</code> 或同名 ESM 导入取得, <code>$autojs</code> 为主线程全局对象.</p>
-<h4>宿主桥与宿主消息<span><a class="mark" href="#runtimeapis_48" id="runtimeapis_48">#</a></span></h4>
+<h4>宿主桥与宿主消息<span><a class="mark" href="#runtimeapis_50" id="runtimeapis_50">#</a></span></h4>
 <p><code>autojs6:bridge</code> 2 条, <code>autojs6:host</code> 11 条. <code>autojs6:host</code> 是每次执行独立的事件发射器, 只有 <code>message</code> 一个事件.</p>
 <table>
 <thead>
@@ -4647,7 +4740,7 @@ console.log(scriptArgs[0]); // 例如 demo.quickjs.js
 </tr>
 </tbody>
 </table>
-<h4>生命周期与能力快照<span><a class="mark" href="#runtimeapis_49" id="runtimeapis_49">#</a></span></h4>
+<h4>生命周期与能力快照<span><a class="mark" href="#runtimeapis_51" id="runtimeapis_51">#</a></span></h4>
 <p><code>autojs6:lifecycle</code> 7 条, <code>autojs6:profile</code> 1 条, <code>$autojs</code> 自有成员 3 条. 检查点只用于脚本主动保存和读取 JSON 进度, 插件不会自动重启脚本.</p>
 <table>
 <thead>

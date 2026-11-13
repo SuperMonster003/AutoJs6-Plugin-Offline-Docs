@@ -89,6 +89,7 @@
 <li><a class="nav-ocr" href="ocr.html">OCR - 光学字符识别</a></li>
 <li><a class="nav-opencc" href="opencc.html">OpenCC - 中文转换</a></li>
 <li><a class="nav-pangu" href="pangu.html">Pangu - 文本间距</a></li>
+<li><a class="nav-pdf" href="pdf.html">PDF - PDF 文档</a></li>
 <li><a class="nav-pinyin" href="pinyin.html">Pinyin - 拼音</a></li>
 <li><a class="nav-pinyin4j" href="pinyin4j.html">Pinyin4j</a></li>
 <li><a class="nav-plugins" href="plugins.html">Plugins - 插件</a></li>
@@ -153,6 +154,8 @@
 <li><a class="nav-galleryViewSessionType" href="galleryViewSessionType.html">GalleryViewSession - 查看器会话</a></li>
 <li><a class="nav-mailClientType" href="mailClientType.html">MailClient - 邮件客户端</a></li>
 <li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
+<li><a class="nav-pdfDocumentType" href="pdfDocumentType.html">PdfDocument - PDF 文档对象</a></li>
+<li><a class="nav-pdfViewSessionType" href="pdfViewSessionType.html">PdfViewSession - PDF 查看器会话</a></li>
 <li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
 <li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
 <li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
@@ -358,6 +361,8 @@
 </li>
 <li><p><code>新增</code> <a href="alarms.html#alarms_p_holidays">闹钟 (Alarms)</a>: 3-Chime Alarm 1.2.0 提供的节假日 (alarms.holidays) 与 <a href="alarms.html#alarms_4">响铃前决定</a> (AutoJs6 6.8.1), 包括节假日数据的地区列表, 判断某天是否为节假日或工作日, 列出一年的节假日与补班日, 数据信息与刷新 (refresh 与返回 Promise 的 refreshAsync), 闹钟的节假日过滤 (holidays 选项: 节假日跳过, 只在节假日响, 每个工作日响), 响铃前的 beforeRing 事件 (绑定的 leadSeconds 提前量, 事件对象的 skip(reason?) 与 ring(overrides?), 截止时刻, 以及没有及时决定时照常响铃的各种情形); 说明补班日是否准确取决于上游节假日数据, 官方尚未公布安排的年份为推算, 在插件 1.1.0 及更早版本上调用会提示把插件升级到 1.2.0 (PLUGIN_INCOMPATIBLE)</p>
 </li>
+<li><p><code>新增</code> <a href="pdf.html">PDF 文档 (PDF)</a>: 3-Paper PDF 插件提供的 pdf 模块 (AutoJs6 6.8.1), 包括文档信息, 文字提取与搜索, 目录, 页面渲染, 图片的列出与导出, 合并, 拆分, 提取, 删除, 重排与旋转页面, 由图片, 文本与 HTML 生成 PDF, 加密与解密, 以及打开的文档 (<a href="pdfDocumentType.html">PdfDocument</a>) 与查看器会话 (<a href="pdfViewSessionType.html">PdfViewSession</a>) 两个类型页; 页首说明路径与输出文件的规则, 页码范围的写法, 同步与 Async 形态, 进度与取消, 加密文档的密码, 以及识别扫描页文字 (OCR) 的两种做法; <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_pdf">运行时 API (Runtime APIs)</a> 补充 &quot;Node.js / Bun / Worker 的 pdf&quot; 一节 (能力与 Bun 的 pdf.control 授权, signal 与 timeoutMs); <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
+</li>
 <li><p><code>新增</code> <a href="video.html">视频 (Video)</a> 与 <a href="audio.html">音频 (Audio)</a>: AutoJs6 自带的录屏与录音 (video.record, audio.record), 以及 3-Slate Studio 插件提供的视频与音频加工 (AutoJs6 6.8.1), 包括裁剪, 拼接, 变速, 缩放 / 旋转 / 裁切, 叠加, 抽帧与 GIF, 转码, 混音, 音量与格式转换, 多轨时间线合成 (转场, 叠加与字幕) 与字幕烧录; 页首说明默认输出位置, 插件的 &quot;所有文件访问&quot; 权限 (video.frame 同样需要), 同步与 Async 形态, 进度与取消, Node.js 与 Bun 的用法, 以及计划中的 FFmpeg 命令透传与第三方 FFmpeg 插件的对应写法; 新页 <a href="threeSlateStudio.html">3-Slate Studio</a> 介绍插件的安装, 权限, 界面 (媒体库, 工具箱, 时间线剪辑器, 录音) 与代码生成, 以及计划中的 FFmpeg 大库; <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
 </li>
 <li><p><code>新增</code> <a href="projectConfig.html">项目配置 (project.json)</a>: project.json 全部 46 个键 (顶层, launchConfig, build, node, bun 与 agent) 的类型, 默认值, 别名与作用, 运行项目与打包应用各自读取的键, 键名的宽松匹配与保存时的行为 (保留原键名, 删除未知键, 写出默认值, 键名冲突), 权限清单 (默认 13 项, 自定义清单替换默认清单, AutoJs6 6.8.1 起始终保留前台服务 2 项), 反向别名 (hideLogs 等在 6.8.1 之前打包时与写法相反, 每保存一次值也翻转一次) 与来自 AutoJs4 / AutoX 的键, 以及常见问题; <a href="qa.html#qa_17">疑难解答 (Q &amp; A)</a> 的示例改用 logsVisible, <a href="runtimeApis.html#runtimeapis_21">运行时 API (Runtime APIs)</a>, <a href="modules.html">模块 (Modules)</a> 与 <a href="asyncAwait.html">async/await 与 continuation</a> 等页增加该页链接 (AutoJs6 issue #594, #596)</p>
@@ -470,7 +475,7 @@
 </li>
 <li><p><code>更新</code> <a href="runtimeApis.html#runtimeapis">运行时 API (Runtime APIs)</a> 的执行方式: Node.js 脚本与项目默认不限执行时长 (与 Rhino 脚本相同), project.json 的 node.timeoutMs 作为执行总预算 (从插件收到请求时计时, 含排队与工作区准备, 耗尽时报告 ERR_AUTOJS6_SCRIPT_TIMEOUT), 运行期间的输出逐段转发到控制台; WebView 等待一节同步改写</p>
 </li>
-<li><p><code>新增</code> <a href="runtimeApis.html#runtimeapis_47">运行时 API (Runtime APIs)</a> 的 &quot;运行时自有接口&quot; 一节: 按组列出 Node.js, Bun 与 QuickJS 运行时插件自带, 不对应宿主模块的入口 (Node.js 12 组 113 条: 宿主桥与宿主消息, 生命周期检查点, 能力快照, npm 与 package_manager, 本地插件, rhino 与 autojs6:compat, media_store, Worker 池 WorkerPool; Bun 客户端 12 条; QuickJS 的 console, print 与 scriptArgs), 每条写明签名, 用途, 所属运行时与最低插件版本; 另说明各运行时读取脚本参数的方式 (QuickJS 的 scriptArgs 只含脚本文件名, Node.js 与 Bun 用 process.argv, Rhino 用 engines.myEngine().execArgv)</p>
+<li><p><code>新增</code> <a href="runtimeApis.html#runtimeapis_49">运行时 API (Runtime APIs)</a> 的 &quot;运行时自有接口&quot; 一节: 按组列出 Node.js, Bun 与 QuickJS 运行时插件自带, 不对应宿主模块的入口 (Node.js 12 组 113 条: 宿主桥与宿主消息, 生命周期检查点, 能力快照, npm 与 package_manager, 本地插件, rhino 与 autojs6:compat, media_store, Worker 池 WorkerPool; Bun 客户端 12 条; QuickJS 的 console, print 与 scriptArgs), 每条写明签名, 用途, 所属运行时与最低插件版本; 另说明各运行时读取脚本参数的方式 (QuickJS 的 scriptArgs 只含脚本文件名, Node.js 与 Bun 用 process.argv, Rhino 用 engines.myEngine().execArgv)</p>
 </li>
 <li><p><code>新增</code> <a href="pythonRuntime.html">Python 运行时 (Python Runtime)</a>, <a href="javaRuntime.html">Java 运行时 (Java Runtime)</a>, <a href="kotlinRuntime.html">Kotlin 运行时 (Kotlin Runtime)</a> 与 <a href="luaRuntime.html">Lua 运行时 (Lua Runtime)</a>, 说明这四个语言运行时插件提供给脚本的 API: Python 的 autojs6 包 (46 个函数, 54 个常量与 10 个异常类), Java 与 Kotlin 共用的 JVM Entry API (Java 为 7 个类型 17 个方法, Kotlin 为不含 args 与 clipboard 的 6 个类型 13 个方法) 以及 Lua 的 autojs 模块 (11 个函数与只读的 arguments), 每项有签名, 说明与对应语言的示例; <a href="autojs4Runtime.html">AutoJs4 运行时 (AutoJs4 Runtime)</a> 增加 &quot;上游 API 与差异指引&quot; 小节, <a href="plugins.html">插件 (Plugins)</a> 页指向这四页</p>
 </li>
