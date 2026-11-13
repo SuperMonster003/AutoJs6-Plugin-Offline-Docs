@@ -793,6 +793,7 @@ if (e !== null &amp;&amp; e.type === &#39;dismiss&#39;) {
 </ul>
 <h2>响铃前决定<span><a class="mark" href="#alarms_4" id="alarms_4">#</a></span></h2>
 <p>插件 1.2.0 起, 闹钟可以在响铃之前先问脚本: 插件在应响时刻 (<code>scheduledAt</code>) 之前发出 <code>beforeRing</code> 事件, 提前量由 <a href="#alarms_bindoptions">BindOptions</a> 的 <code>leadSeconds</code> 指定 (15 - 300 秒, 默认 60 秒); 脚本在截止时刻 (<code>deadline</code>, 默认为 <code>scheduledAt</code> 之前 5 秒) 之前调用事件的 <code>skip</code> 或 <code>ring</code> 作出决定. 计时器没有 <code>beforeRing</code>.</p>
+<p>同一闹钟有多个含 <code>beforeRing</code> 的绑定时, 提前量取其中最小的 <code>leadSeconds</code> (没有写 <code>leadSeconds</code> 的绑定按 60 秒计), 每轮响铃只发出一次 <code>beforeRing</code>; 没有这样的绑定, 只有脚本实时监听 <code>beforeRing</code> 时, 提前量为 60 秒.</p>
 <ul>
 <li>实时监听 <code>beforeRing</code> 的回调参数, 以及由 <code>beforeRing</code> 绑定启动的脚本中 <a href="#alarms_m_currentevent">alarms.currentEvent</a> 的返回值, 带有 <code>skip(reason?)</code> 与 <code>ring(overrides?)</code> 两个方法. 它们不可枚举, 不出现在 <code>Object.keys</code> 与 <code>JSON.stringify</code> 的结果中. <code>execArgv.alarm</code> 是普通 JSON 对象, 没有这两个方法; 其他事件的对象也没有.</li>
 <li><code>e.skip(reason?)</code>: 这一次不响. 插件发出 <code>skip</code> 事件, <code>reason</code> 为 <code>&#39;script&#39;</code>, <code>detail</code> 为给出的原因. <code>reason</code> 为字符串, 去掉首尾空白后至多 100 个字符, 超出抛出 <code>LIMIT_EXCEEDED</code>; 省略或为空字符串时不带原因.</li>
@@ -1357,7 +1358,7 @@ if (alarms.holidays.isWorkday(new Date(), region)) {
 <ul>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="#alarms_holidayinfo">HolidayInfo</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 插件当前使用的节假日数据, 插件还没有数据时为 <code>null</code></li>
 </ul>
-<p>返回插件当前使用的节假日数据的版本, 来源与生成时间. 不访问网络.</p>
+<p>返回插件当前使用的节假日数据的版本, 来源与生成时间. 不访问网络. 结果的 <code>version</code> 与 <a href="#alarms_m_capabilities">capabilities</a> 返回的 <code>holidayDataVersion</code> 二者相同.</p>
 <h2>[m] holidays.refresh<span><a class="mark" href="#alarms_m_holidays_refresh" id="alarms_m_holidays_refresh">#</a></span></h2>
 <h3>alarms.holidays.refresh()<span><a class="mark" href="#alarms_alarms_holidays_refresh" id="alarms_alarms_holidays_refresh">#</a></span></h3>
 <p><strong><code>6.8.1</code></strong></p>
@@ -1803,7 +1804,7 @@ alarms.add({ time: &#39;07:30&#39;, label: &#39;上班&#39;, holidays: { region:
 <p><a href="#alarms_m_bind">alarms.bind</a> 的选项.</p>
 <ul>
 <li><strong>[ events = <code>[&#39;ring&#39;]</code> ]</strong> { <span class="type"><a href="#alarms_alarmevent">AlarmEventName</a></span> | <span class="type"><a href="#alarms_alarmevent">AlarmEventName</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 启动脚本的事件, 不能为空数组; 计时器只能是 <code>ring</code>, <code>snooze</code>, <code>dismiss</code> 与 <code>silence</code></li>
-<li><strong>[ leadSeconds = <code>60</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - <code>beforeRing</code> 的提前量 (秒), <code>15..300</code>, 即插件在应响时刻之前多久发出 <code>beforeRing</code>; 只在 <code>events</code> 含 <code>beforeRing</code> 时允许写, 否则抛出 <code>INVALID_OPTIONS</code>. <code>beforeRing</code> 需要插件 1.2.0 及以上版本, 见 <a href="#alarms_4">响铃前决定</a></li>
+<li><strong>[ leadSeconds = <code>60</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - <code>beforeRing</code> 的提前量 (秒), <code>15..300</code>, 即插件在应响时刻之前多久发出 <code>beforeRing</code>; 同一闹钟的多个绑定取其中最小的值; 只在 <code>events</code> 含 <code>beforeRing</code> 时允许写, 否则抛出 <code>INVALID_OPTIONS</code>. <code>beforeRing</code> 需要插件 1.2.0 及以上版本, 见 <a href="#alarms_4">响铃前决定</a></li>
 </ul>
 <h3>TimerOptions<span><a class="mark" href="#alarms_timeroptions" id="alarms_timeroptions">#</a></span></h3>
 <p><a href="#alarms_m_timers_start">alarms.timers.start</a> 的选项, 需要插件 1.1.0 及以上版本. 各选项与 <a href="#alarms_alarmoptions">AlarmOptions</a> 的同名选项写法与范围相同, 其他键抛出 <code>INVALID_OPTIONS</code>. 计时器没有贪睡选项: 贪睡的分钟数与每轮的次数上限取插件设置页的默认值. 省略的 <code>sound.source</code>, <code>vibrate</code> 与 <code>autoSilenceMinutes</code> 同样在响铃时取插件设置页的默认值.</p>
@@ -2084,8 +2085,8 @@ if (info !== null) {
 <li><strong>contractVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 闹钟插件契约版本, 现为 <code>1</code></li>
 <li><strong>features</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 插件实现的功能: <code>alarms</code> (闹钟, 插件 1.0.x 只有它), <code>timers</code> (计时器) 与 <code>stopwatch</code> (秒表) (插件 1.1.0 起), <code>holidays</code> (节假日) 与 <code>beforeRing</code> (响铃前决定) (插件 1.2.0 起), 以及计划中的 <code>challenges</code>; 应按它判断能力, 不要假定所有功能都存在</li>
 <li><strong>permissions</strong> { <span class="type">{ exactAlarm: <a href="dataTypes.html#datatypes_boolean">boolean</a>; notifications: <a href="dataTypes.html#datatypes_boolean">boolean</a>; fullScreen: <a href="dataTypes.html#datatypes_boolean">boolean</a></span> }} - 插件当前持有的精确闹钟, 通知与全屏通知权限</li>
-<li><strong>holidayDataVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 节假日数据版本, 没有 <code>holidays</code> 功能时为 <code>null</code></li>
-<li><strong>warnings</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 需要用户注意的情况, 例如默认地区或闹钟所用地区的节假日数据缺少当年, 或从某年起是推算的; 没有时为空数组</li>
+<li><strong>holidayDataVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 节假日数据版本, 与 <a href="#alarms_m_holidays_info">alarms.holidays.info</a> 返回的 <code>version</code> 二者相同; 没有 <code>holidays</code> 功能时为 <code>null</code></li>
+<li><strong>warnings</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 需要用户注意的情况, 是英文句子, 没有时为空数组. 插件检查默认地区与已启用闹钟所用的节假日地区 (相同的句子只出现一次), 有三种情形: 地区无法解析 (代码未知, 或默认地区没有数据), 使用它的闹钟只按星期规则响铃; 某地区的数据不含当年 (句中给出数据覆盖的年份范围), 使用它的闹钟当年只按星期规则响铃; 某地区当年或次年是推算年份 (句中给出从哪一年起推算), 补班与调休尚未公布, 可能变化</li>
 <li><strong>limits</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 契约限制值: <code>maxAlarms</code>, <code>maxEnabledAlarms</code>, <code>maxTimers</code>, <code>minTimerMillis</code>, <code>maxTimerMillis</code>, <code>maxStopwatchLaps</code>, <code>maxBindingsPerAlarm</code>, <code>maxLabelChars</code>, <code>maxTagChars</code>, <code>maxSpeakTextChars</code>, <code>maxRingtoneBytes</code>, <code>maxPreviewCount</code>, <code>maxUpcomingCount</code>, <code>maxExcludeDates</code>, <code>maxVibratePattern</code>, <code>minAutoSilenceMinutes</code>, <code>maxAutoSilenceMinutes</code>, <code>minSnoozeMinutes</code>, <code>maxSnoozeMinutes</code>, <code>maxSnoozeCount</code>, <code>maxRampSeconds</code>, <code>minLeadSeconds</code>, <code>maxLeadSeconds</code>, 数值见 <a href="#alarms_8">限制</a></li>
 </ul>
 <h2>错误代码<span><a class="mark" href="#alarms_7" id="alarms_7">#</a></span></h2>
