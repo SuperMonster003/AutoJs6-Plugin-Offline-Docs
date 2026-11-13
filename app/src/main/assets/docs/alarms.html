@@ -748,7 +748,7 @@ console.log(a.id, a.repeat, a.repeatText, new Date(a.nextTrigger));
 <p>各字段见 <a href="#alarms_alarmevent">AlarmEvent</a>. 补充说明:</p>
 <ul>
 <li><code>dismiss</code> 的 <code>by</code> 为 <code>&#39;user&#39;</code> (插件界面, 通知或系统时钟 Intent), <code>&#39;script&#39;</code>, <code>&#39;tool&#39;</code> (插件工具) 或 <code>&#39;challenge&#39;</code> (关闭挑战).</li>
-<li><code>skip</code> 的 <code>reason</code> 为 <code>&#39;skipNext&#39;</code> (见 <a href="#alarms_m_skipnext">alarms.skipNext</a>), <code>&#39;holiday&#39;</code> (被闹钟的节假日过滤去掉, 见 <a href="#alarms_holidayfilter">HolidayFilter</a>) 或 <code>&#39;script&#39;</code> (<code>beforeRing</code> 中有脚本决定跳过, <code>detail</code> 为它给出的原因); 后两者需要插件 1.2.0 及以上版本. 被节假日过滤去掉的那一次不发 <code>beforeRing</code>.</li>
+<li><code>skip</code> 的 <code>reason</code> 为 <code>&#39;skipNext&#39;</code> (见 <a href="#alarms_m_skipnext">alarms.skipNext</a>), <code>&#39;holiday&#39;</code> (被闹钟的节假日过滤去掉, 见 <a href="#alarms_holidayfilter">HolidayFilter</a>) 或 <code>&#39;script&#39;</code> (<code>beforeRing</code> 中有脚本决定跳过, <code>detail</code> 为它给出的原因); 后两者需要插件 1.2.0 及以上版本. 被节假日过滤去掉的那一次不发 <code>beforeRing</code>; 本来就不响的日子 (<code>&#39;only&#39;</code> 模式的非节假日, <code>&#39;workdays&#39;</code> 模式的周末) 不发 <code>skip</code>.</li>
 <li><code>change</code> 由任何来源的新建, 修改与删除触发 (脚本, 插件界面, 插件工具, 系统时钟 Intent). 没有实际改变的调用不发 <code>change</code>; 一次性闹钟响过后被插件自动禁用时也不发. <code>action</code> 为 <code>&#39;remove&#39;</code> 的事件带闹钟被删除前的 <code>label</code>.</li>
 <li>插件 1.1.0 及更早版本不提供 <code>beforeRing</code>: 监听或登记该事件抛出 <code>PLUGIN_INCOMPATIBLE</code>, 消息提示把 3-Chime Alarm 升级到 1.2.0 或更高版本.</li>
 <li>计时器 (插件 1.1.0 起) 与闹钟走同一条响铃路径, 也会排队, 但只发出 <code>ring</code>, <code>snooze</code>, <code>dismiss</code> 与 <code>silence</code>: 事件的 <code>kind</code> 为 <code>&#39;timer&#39;</code>, <code>alarmId</code> 为计时器 ID, <code>scheduledAt</code> 为到点的时刻. 计时器没有 <code>change</code>, <code>miss</code>, <code>skip</code> 与 <code>beforeRing</code> 事件, 见 <a href="#alarms_p_timers">计时器</a>.</li>
@@ -1778,7 +1778,7 @@ if (next !== null &amp;&amp; next.triggerTime &gt; Date.now()) {
 </ul>
 </li>
 </ul>
-<p>被过滤去掉的那一次不响, 插件发出 <code>reason</code> 为 <code>&#39;holiday&#39;</code> 的 <code>skip</code> 事件, 不发 <code>beforeRing</code>. <a href="#alarms_m_upcoming">alarms.upcoming</a> 与 <a href="#alarms_m_preview">alarms.preview</a> 的结果已计入过滤. 补班日是否准确完全取决于上游数据; 某年完全没有数据时, 该年只按星期规则响铃, 不会因为缺少数据而不响.</p>
+<p>原本会响而被过滤去掉的那一次 (<code>&#39;skip&#39;</code> 模式下重复规则日子里的节假日, <code>&#39;workdays&#39;</code> 模式下不在周末的节假日) 不响, 插件发出 <code>reason</code> 为 <code>&#39;holiday&#39;</code> 的 <code>skip</code> 事件, 不发 <code>beforeRing</code>; 本来就不响的日子 (<code>&#39;only&#39;</code> 模式的非节假日, <code>&#39;workdays&#39;</code> 模式的周末) 不发 <code>skip</code>. <a href="#alarms_m_upcoming">alarms.upcoming</a> 与 <a href="#alarms_m_preview">alarms.preview</a> 的结果已计入过滤. 补班日是否准确完全取决于上游数据; 某年完全没有数据时, 该年只按星期规则响铃, 不会因为缺少数据而不响.</p>
 <pre><code class="lang-js">/* 中国大陆的工作日 07:30 响, 节假日不响, 补班日照常响. */
 alarms.add({ time: &#39;07:30&#39;, label: &#39;上班&#39;, holidays: { region: &#39;CN&#39;, mode: &#39;workdays&#39; } });
 </code></pre>
