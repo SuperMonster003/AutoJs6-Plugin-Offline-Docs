@@ -589,7 +589,7 @@
 <p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
 <!-- runtime-support:end -->
 <p><code>pdf</code> 模块用于在脚本中读取 PDF 文档的信息, 目录 (书签), 文本与图片, 搜索关键词, 把页面渲染为图像或图片文件, 合并, 拆分, 提取, 删除, 重排与旋转页面, 从图片, 文本或 HTML 生成 PDF, 加密与解密, 以及打开插件的查看器并接收翻页事件. 没有文本层的扫描页可借助已安装的 OCR 插件识别文字.</p>
-<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Paper PDF 插件 (AutoJs6-Plugin-Three-Paper-PDF) 1.0.0 及以上版本提供. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失, 被禁用或版本不兼容时, 方法抛出 (或以 Promise 拒绝) <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code>, <code>PLUGIN_DISABLED</code> 或 <code>PLUGIN_INCOMPATIBLE</code> 的 <a href="#pdf_c_pdferror">PdfError</a>. <a href="#pdf_m_isavailable">pdf.isAvailable</a> 可预先探测. 3-Paper PDF 1.0.0 只为 AutoJs6 本身提供服务, 由 AutoJs6 打包的应用暂不能使用本模块.</p>
+<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Paper PDF 插件 (AutoJs6-Plugin-Three-Paper-PDF) 1.0.0 及以上版本提供. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失, 被禁用或版本不兼容时, 方法抛出 (或以 Promise 拒绝) <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code>, <code>PLUGIN_DISABLED</code> 或 <code>PLUGIN_INCOMPATIBLE</code> 的 <a href="#pdf_c_pdferror">PdfError</a>. <a href="#pdf_m_isavailable">pdf.isAvailable</a> 可预先探测. 由 AutoJs6 打包的应用同样可以使用本模块, 前提是运行它的设备已安装 3-Paper PDF 1.0.0 及以上版本, 应用由 AutoJs6 6.8.1 及以上版本打包, 且带有 <code>org.autojs.plugin.pdf.permission.RUNTIME</code> 权限 (由打包流程自动加入, 不需要修改 <code>project.json</code>). 打包应用经插件单独的服务与查看器入口调用, 打开的文档与查看器会话只允许创建它们的应用调用.</p>
 <p>本模块在 Rhino 中注册为全局名称 <code>pdf</code>, 并提供 <code>$pdf</code> 别名, 二者指向同一对象. 本页的签名与同步返回值描述 Rhino. Node.js, Bun 与 Node.js Worker 提供显式导入的异步接口, 参阅 <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_pdf">Runtime APIs 的 pdf</a>.</p>
 <pre><code class="lang-js">let path = &#39;/sdcard/Documents/report.pdf&#39;;
 let info = pdf.info(path);

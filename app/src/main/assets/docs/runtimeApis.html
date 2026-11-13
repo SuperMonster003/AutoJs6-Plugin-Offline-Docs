@@ -484,7 +484,7 @@
 <li><span class="stability_undefined"><a href="#runtimeapis_node_js_bun_worker_pdf">Node.js / Bun / Worker 的 pdf</a></span><ul>
 <li><span class="stability_undefined"><a href="#runtimeapis_41">成员, 能力与授权</a></span></li>
 <li><span class="stability_undefined"><a href="#runtimeapis_pdfdocument">PdfDocument 与查看器</a></span></li>
-<li><span class="stability_undefined"><a href="#runtimeapis_42">额度</a></span></li>
+<li><span class="stability_undefined"><a href="#runtimeapis_42">打包应用与额度</a></span></li>
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#runtimeapis_flow">Flow 异步链与等待核心</a></span><ul>
@@ -4127,7 +4127,8 @@ let session = await pdf.view(&#39;/sdcard/Documents/manual.pdf&#39;, { page: 3 }
 session.on(&#39;page&#39;, e =&gt; console.log(e.page, &#39;/&#39;, e.pageCount));
 session.on(&#39;close&#39;, e =&gt; console.log(&#39;closed:&#39;, e.reason));
 </code></pre>
-<h3>额度<span><a class="mark" href="#runtimeapis_42" id="runtimeapis_42">#</a></span></h3>
+<h3>打包应用与额度<span><a class="mark" href="#runtimeapis_42" id="runtimeapis_42">#</a></span></h3>
+<p>由 AutoJs6 6.8.1 及以上版本打包的独立签名应用需要匹配的 Runtime Kit 与 3-Paper PDF 1.0.0 或以上, 插件通过单独的服务与查看器入口接受调用, 原宿主签名入口保留. Builder 为声明了 files 能力的 Node 项目和声明了 pdf.control 的 Bun 项目添加 <code>org.autojs.plugin.pdf.permission.RUNTIME</code>, 不需要修改 <code>project.json</code>. 返回的 PdfDocument, 查看器会话与进行中的操作只允许创建它们的应用调用. 路径仍由调用的应用打开后以文件描述符交给插件, 插件不为打包应用开放额外的文件访问.</p>
 <p>Bun 的 pdf.control 在操作进行或查看器打开期间轮询宿主, 这些请求不计入普通能力的单次执行 1024 次调用额度; 授权, 请求与响应大小, 并发数和单次请求期限的检查仍然保留.</p>
 <h2>Flow 异步链与等待核心<span><a class="mark" href="#runtimeapis_flow" id="runtimeapis_flow">#</a></span></h2>
 <p>Node.js 1.30.0 与 Bun Runtime 0.19.0 提供显式的 flow 模块. Node 主线程与 CJS/ESM/嵌套 Worker 使用 <code>require(&#39;flow&#39;)</code>, <code>require(&#39;autojs6:flow&#39;)</code> 或对应 ESM 导入; <code>$autojs.flow</code> 也指向当前线程的 facade. Bun 使用 <code>host.flow</code>.</p>
