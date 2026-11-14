@@ -384,6 +384,45 @@
 
         <div id="apicontent">
             <h1>写出器对象 (Writer)<span><a class="mark" href="#xlsxwritertype_writer" id="xlsxwritertype_writer">#</a></span></h1>
+<!-- runtime-support:begin Writer# -->
+<!-- 本段由 generator/runtime-support.js 根据 AutoJs6 运行时覆盖矩阵生成, 不要手动修改; 数据源 ksp -->
+<table>
+<thead>
+<tr>
+<th>运行时支持</th>
+<th>Rhino</th>
+<th>Node.js 主线程</th>
+<th>Node.js Worker</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入口</td>
+<td><code>Writer</code> 对象</td>
+<td><code>autojs6:xlsx</code></td>
+<td><code>autojs6:xlsx</code></td>
+<td><code>host.xlsx</code></td>
+</tr>
+<tr>
+<td>状态</td>
+<td>已支持 13 项</td>
+<td>已支持 13 项</td>
+<td>已支持 13 项</td>
+<td>需授权 13 项</td>
+</tr>
+<tr>
+<td>授权</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><code>xlsx.control</code> 13 项</td>
+</tr>
+</tbody>
+</table>
+<p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
+<p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
+<!-- runtime-support:end -->
 <p>Writer 是 <a href="xlsx.html#xlsx_m_createwriter">xlsx.createWriter</a> 返回的写出器对象, 用于逐行生成很大的 xlsx, csv 或 tsv 文件. 插件只在内存中保留最近写出的 100 行, 内存占用与行数无关.</p>
 <p>每个方法都有同步形态与 <code>Async</code> 形态, 参数与结果一致, 规则同 <a href="xlsx.html#xlsx_4">xlsx 模块</a>; 其中只有 <a href="#xlsxwritertype_m_closeasync">closeAsync</a> 报告进度. 失败时抛出 (或拒绝为) <a href="xlsx.html#xlsx_c_xlsxerror">XlsxError</a>, 与单元格有关时错误的 <code>sheet</code> 与 <code>ref</code> 指出位置.</p>
 <p>写出的内容先进入临时文件, 调用 <a href="#xlsxwritertype_m_close">close</a> 成功后文件才出现在目标路径, 目标路径上已有的文件被替换. 调用 <a href="#xlsxwritertype_m_abort">abort</a>, <code>close</code> 失败或脚本结束 (含被停止) 时丢弃已写的内容, 目标路径上已有的文件保持不变.</p>

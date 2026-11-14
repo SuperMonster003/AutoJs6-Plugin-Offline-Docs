@@ -581,6 +581,81 @@
 
         <div id="apicontent">
             <h1>工作表对象 (Sheet)<span><a class="mark" href="#xlsxsheettype_sheet" id="xlsxsheettype_sheet">#</a></span></h1>
+<!-- runtime-support:begin Sheet# -->
+<!-- 本段由 generator/runtime-support.js 根据 AutoJs6 运行时覆盖矩阵生成, 不要手动修改; 数据源 ksp -->
+<table>
+<thead>
+<tr>
+<th>运行时支持</th>
+<th>Rhino</th>
+<th>Node.js 主线程</th>
+<th>Node.js Worker</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入口</td>
+<td><code>Sheet</code> 对象</td>
+<td><code>autojs6:xlsx</code></td>
+<td><code>autojs6:xlsx</code></td>
+<td><code>host.xlsx</code></td>
+</tr>
+<tr>
+<td>状态</td>
+<td>已支持 64 项</td>
+<td>已支持 60 项, 不适用 4 项</td>
+<td>已支持 60 项, 不适用 4 项</td>
+<td>需授权 60 项, 不适用 4 项</td>
+</tr>
+<tr>
+<td>授权</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><code>xlsx.control</code> 60 项</td>
+</tr>
+</tbody>
+</table>
+<p>差异项 (4 项): 下表列出入口, 状态或授权与同列多数 API 不同的 API, 未列出的 API 与同列多数一致.</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Node.js 主线程</th>
+<th>Node.js Worker</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sheet#cols</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+</tr>
+<tr>
+<td><code>Sheet#dimension</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+</tr>
+<tr>
+<td><code>Sheet#index</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+</tr>
+<tr>
+<td><code>Sheet#rows</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
+</tr>
+</tbody>
+</table>
+<p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
+<!-- runtime-support:end -->
 <p>Sheet 是 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_sheet">Workbook#sheet</a>, <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_addsheet">Workbook#addSheet</a> 与 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_copysheet">Workbook#copySheet</a> 返回的工作表对象, 指向打开的工作簿中的一个工作表. 用它读取行与单元格, 写入值与公式, 插入与删除行列, 排序, 设置样式与版式, 添加批注, 超链接, 图片, 条件格式与数据有效性.</p>
 <p>每个方法都有同步形态与 <code>Async</code> 形态, 参数与结果一致, 规则同 <a href="xlsx.html#xlsx_4">xlsx 模块</a>; 工作表的方法都不报告进度. 失败时抛出 (或拒绝为) <a href="xlsx.html#xlsx_c_xlsxerror">XlsxError</a>, 与单元格有关时错误的 <code>sheet</code> 与 <code>ref</code> 指出位置.</p>
 <p>修改作用于插件内存中的工作簿, 调用 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a> 后才写入文件. 行号与列号从 1 计, 列可以写作字母或数字, 范围为 A1 形式, 见 <a href="xlsx.html#xlsx_2">行列编号与数据模型</a>. csv 与 tsv 工作簿也能设置样式与版式, 但保存为 csv 或 tsv 时只写出值, 见 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a>.</p>

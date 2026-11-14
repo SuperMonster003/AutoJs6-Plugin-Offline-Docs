@@ -3994,7 +3994,7 @@ console.log(await host.xlsx.sheetNames(&#39;/sdcard/Documents/sales.xlsx&#39;));
 <li>全部成员返回 Promise. 不带后缀的名称与 Async 形态是同一个调用, 两者都接受选项中的 <code>onProgress</code>; 不提供阻塞式调用.</li>
 <li>参数个数或类型不符时 Promise 以 <code>INVALID_ARGUMENT</code> 拒绝, 不同步抛出. 参数须能表示为 JSON, NaN 与 Infinity 也是 <code>INVALID_ARGUMENT</code>; 日期以 Date 读写.</li>
 <li>返回的 Promise 带不可枚举的 <code>cancel()</code>: 调用进行中返回 true, 宿主取消任务, Promise 以 <code>CANCELLED</code> 拒绝.</li>
-<li><code>onProgress</code> 在调用方的 JS 线程运行, 收到 <code>{ opId, percent, stage, current, total }</code>, 只有报告进度的方法 (写文件的模块方法, sniff, Workbook.save 与 Writer.close) 调用它. 它抛出错误或返回被拒绝的 Promise 时, 任务被取消, 调用以该错误拒绝.</li>
+<li><code>onProgress</code> 在调用方的 JS 线程运行, 收到 <code>{ opId, percent, stage, current, total }</code>, 只有报告进度的方法 (写文件的模块方法, sniff, Workbook.save 与 Writer.close) 调用它, TypeScript 声明也只在这些方法的选项中列出它. 它抛出错误或返回被拒绝的 Promise 时, 任务被取消, 调用以该错误拒绝.</li>
 </ul>
 <p>能力按每次调用声明, 与 AutoJs6 脚本相同:</p>
 <table>
@@ -4044,7 +4044,7 @@ try {
 }
 </code></pre>
 <h3>Writer 与查看器<span><a class="mark" href="#runtimeapis_writer" id="runtimeapis_writer">#</a></span></h3>
-<p>createWriter 返回冻结的 Writer (format, rowCount, addSheet, addRow, addRows, close, abort 及其 Async 形态). 不带选项的 addRow 先缓存在当前 JS 线程, 每 1000 行作为一次 addRows 发给宿主; 其他调用会先发出缓存的行. rowCount 包括已发出, 正在发送与缓存中的行, 发送失败的行退回缓存. <code>close({ onProgress })</code> 发出余下的行并完成文件, 这些行写入失败时 Writer 中止, 与 AutoJs6 脚本相同; abort 重复调用安全. 脚本结束时宿主丢弃未完成的文件.</p>
+<p>createWriter 返回冻结的 Writer (format, rowCount, addSheet, addRow, addRows, close, abort 及其 Async 形态). 不带选项的 addRow 先缓存在当前 JS 线程, 每 1000 行作为一次 addRows 发给宿主; 其他调用会先发出缓存的行. rowCount 包括已发出, 正在发送与缓存中的行. 与 AutoJs6 脚本相同, 发送失败时只有插件未接收的行退回缓存, 显式调用的 addRows 失败时插件已接收的行计入 rowCount, 所以重试时只需再发其余的行, 不会重复写出; 较早的 AutoJs6 6.8.1 开发版本不报告接收的行数, 此时按全部未接收处理. 重试前先等之前的调用结束, 否则退回的行可能排在之后加入的行或新工作表之后. <code>close({ onProgress })</code> 发出余下的行并完成文件, 这些行写入失败时 Writer 中止, 与 AutoJs6 脚本相同. close (包括失败的 close), abort 或宿主报告 <code>SESSION_CLOSED</code> 之后, 除 abort 外的调用立即以 <code>SESSION_CLOSED</code> 拒绝, rowCount 不再变化; abort 重复调用安全. 脚本结束时宿主丢弃未完成的文件.</p>
 <p>view 返回冻结的 SheetViewSession, 有 isClosed, reason, on/addListener, once, off/removeListener, removeAllListeners, listenerCount, update, select, state 和 close. select 事件的数据为 <code>{ sheet, row, col, values }</code>, close 事件为 <code>{ reason }</code>. 尚无监听器时每个事件名最多保留 32 条, 添加监听器后补发. update 与 select 的结果为会话本身, state 返回 <code>{ sheet, row, col, rows, cols, token }</code>. <code>close()</code> 结束脚本会话并把查看器留给用户, <code>close({ finish: true })</code> 同时关闭查看器, 随后收到 reason 为 <code>finished</code> 的 close 事件; 其他 reason 为 <code>closed</code>, <code>replaced</code>, <code>timeout</code>, <code>overflow</code> (脚本不处理的事件积压过多) 与 <code>error</code>. 查看器打开期间脚本保持运行.</p>
 <p>查看器正显示同一线程 (Node.js 的主线程或同一个 Worker; Bun 为同一个 <code>host</code>) 上一个会话时, 再次 view 就地替换它, 不要求 AutoJs6 在前台: 查看器改为显示新会话的内容与选项, 上一个会话收到 reason 为 <code>replaced</code> 的 close 事件, 之后对它的 update, select 与 state 以 <code>SESSION_CLOSED</code> 拒绝, close 不再起作用. 这个 close 事件与新 view 的 Promise 谁先完成不保证. 其他线程打开的会话不会被替换, 此时仍要求 AutoJs6 在前台, 否则以 <code>UI_REQUIRES_FOREGROUND</code> 拒绝. view 的 selectable 可为布尔值或 <code>&#39;row&#39;</code>, <code>&#39;cell&#39;</code>, <code>&#39;none&#39;</code> (true 同 <code>&#39;row&#39;</code>, false 与不写同 <code>&#39;none&#39;</code>); 为 <code>&#39;cell&#39;</code> 时选择单个单元格, select 事件的 col 为该单元格的列.</p>
 <h3>打包应用与额度<span><a class="mark" href="#runtimeapis_40" id="runtimeapis_40">#</a></span></h3>

@@ -449,6 +449,45 @@
 
         <div id="apicontent">
             <h1>工作簿对象 (Workbook)<span><a class="mark" href="#xlsxworkbooktype_workbook" id="xlsxworkbooktype_workbook">#</a></span></h1>
+<!-- runtime-support:begin Workbook# -->
+<!-- 本段由 generator/runtime-support.js 根据 AutoJs6 运行时覆盖矩阵生成, 不要手动修改; 数据源 ksp -->
+<table>
+<thead>
+<tr>
+<th>运行时支持</th>
+<th>Rhino</th>
+<th>Node.js 主线程</th>
+<th>Node.js Worker</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入口</td>
+<td><code>Workbook</code> 对象</td>
+<td><code>autojs6:xlsx</code></td>
+<td><code>autojs6:xlsx</code></td>
+<td><code>host.xlsx</code></td>
+</tr>
+<tr>
+<td>状态</td>
+<td>已支持 30 项</td>
+<td>已支持 30 项</td>
+<td>已支持 30 项</td>
+<td>需授权 30 项</td>
+</tr>
+<tr>
+<td>授权</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><code>xlsx.control</code> 30 项</td>
+</tr>
+</tbody>
+</table>
+<p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
+<p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
+<!-- runtime-support:end -->
 <p>Workbook 是 <a href="xlsx.html#xlsx_m_open">xlsx.open</a> 与 <a href="xlsx.html#xlsx_m_create">xlsx.create</a> 返回的工作簿对象, 对应插件进程中一个打开的工作簿. 用它取得 <a href="xlsxSheetType.html">工作表</a>, 管理工作表, 注册样式, 重算公式并保存到文件.</p>
 <p>每个方法都有同步形态与 <code>Async</code> 形态, 参数与结果一致, 规则同 <a href="xlsx.html#xlsx_4">xlsx 模块</a>: 同步形态阻塞当前脚本线程, <code>Async</code> 形态返回带 <code>cancel()</code> 的 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>. 失败时抛出 (或拒绝为) <a href="xlsx.html#xlsx_c_xlsxerror">XlsxError</a>. 只有 <a href="#xlsxworkbooktype_m_saveasync">saveAsync</a> 报告进度.</p>
 <p>修改都作用于插件内存中的工作簿, 调用 <a href="#xlsxworkbooktype_m_save">save</a> 后才写入文件; 不保存就 <a href="#xlsxworkbooktype_m_close">close</a> 时丢弃全部修改. 同一工作簿的调用在插件中依次执行.</p>
