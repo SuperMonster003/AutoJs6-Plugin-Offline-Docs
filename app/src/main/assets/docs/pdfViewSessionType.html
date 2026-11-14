@@ -513,7 +513,7 @@ setTimeout(() =&gt; session.goTo(1), 3000);
 <ul>
 <li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> }</li>
 </ul>
-<p>会话结束的原因, 会话打开期间为 <code>null</code>. 取值见 <a href="#pdfviewsessiontype_events">事件</a> 中的 <code>close</code>, 另有 <code>&#39;script-exit&#39;</code> (脚本退出, 不触发事件).</p>
+<p>会话结束的原因, 会话打开期间为 <code>null</code>. 取值见 <a href="#pdfviewsessiontype_events">事件</a> 中的 <code>close</code> (含 Node.js 与 Bun 独有的 <code>&#39;overflow&#39;</code>), 另有 <code>&#39;script-exit&#39;</code> (脚本退出, 不触发事件).</p>
 <h2>[m#] goTo<span><a class="mark" href="#pdfviewsessiontype_m_goto" id="pdfviewsessiontype_m_goto">#</a></span></h2>
 <h3>session.goTo(page)<span><a class="mark" href="#pdfviewsessiontype_session_goto_page" id="pdfviewsessiontype_session_goto_page">#</a></span></h3>
 <p><strong><code>6.8.1</code></strong></p>
@@ -584,7 +584,7 @@ session.close({ finish: true }); // 同时关闭查看器.
 <tr>
 <td><code>close</code></td>
 <td><code>({ reason })</code></td>
-<td>会话已结束, 不再有事件. 原因: <code>&#39;closed&#39;</code> (用户或系统关闭了查看器), <code>&#39;replaced&#39;</code> (之后的 <a href="pdf.html#pdf_m_view">pdf.view</a> 替换了本会话), <code>&#39;timeout&#39;</code> (查看器 60 秒内未能显示), <code>&#39;finished&#39;</code> (脚本调用 <code>close({ finish: true })</code>), <code>&#39;host&#39;</code> (脚本调用 <code>close()</code>), <code>&#39;error&#39;</code> (插件进程退出)</td>
+<td>会话已结束, 不再有事件. 原因: <code>&#39;closed&#39;</code> (用户或系统关闭了查看器), <code>&#39;replaced&#39;</code> (之后的 <a href="pdf.html#pdf_m_view">pdf.view</a> 替换了本会话), <code>&#39;timeout&#39;</code> (查看器 60 秒内未能显示), <code>&#39;finished&#39;</code> (脚本调用 <code>close({ finish: true })</code>), <code>&#39;host&#39;</code> (脚本调用 <code>close()</code>), <code>&#39;error&#39;</code> (插件进程退出); Node.js 与 Bun 另有 <code>&#39;overflow&#39;</code> (脚本未取走的事件积压到 1024 条, 会话结束, 查看器留给用户), 参阅 <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_pdf">Runtime APIs 的 pdf</a></td>
 </tr>
 </tbody>
 </table>

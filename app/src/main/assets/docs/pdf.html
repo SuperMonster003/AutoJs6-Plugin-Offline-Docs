@@ -1492,6 +1492,7 @@ session.on(&#39;close&#39;, e =&gt; console.log(&#39;closed:&#39;, e.reason));
 </tr>
 </tbody>
 </table>
+<p>AutoJs6 先检查输入文件, 再判断插件是否可用: 输入文件不存在时先报 <code>FILE_NOT_FOUND</code> (输入是目录时为 <code>INVALID_ARGUMENT</code>, 无法读取时为 <code>IO_ERROR</code>), 即使插件同时缺失, 被禁用或不兼容; 输入文件可以读取后才报 <code>PLUGIN_UNAVAILABLE</code>, <code>PLUGIN_DISABLED</code> 或 <code>PLUGIN_INCOMPATIBLE</code>. 不读取输入文件的方法 (如 <a href="#pdf_m_fromtext">fromText</a>) 直接报插件可用性的代码. 要单独判断插件是否可用, 使用 <a href="#pdf_m_isavailable">pdf.isAvailable</a>.</p>
 <h2>[p#] cause<span><a class="mark" href="#pdf_p_cause" id="pdf_p_cause">#</a></span></h2>
 <p><strong><code>6.8.1</code></strong></p>
 <ul>
