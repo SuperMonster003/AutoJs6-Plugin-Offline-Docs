@@ -337,6 +337,10 @@
 <li><span class="stability_undefined"><a href="#alarms_2">事件</a></span></li>
 <li><span class="stability_undefined"><a href="#alarms_3">脚本联动</a></span></li>
 <li><span class="stability_undefined"><a href="#alarms_4">响铃前决定</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_5">关闭挑战</a></span><ul>
+<li><span class="stability_undefined"><a href="#alarms_6">脚本条件</a></span></li>
+</ul>
+</li>
 <li><span class="stability_undefined"><a href="#alarms_m_isavailable">[m] isAvailable</a></span><ul>
 <li><span class="stability_undefined"><a href="#alarms_alarms_isavailable">alarms.isAvailable()</a></span></li>
 </ul>
@@ -569,7 +573,7 @@
 <li><span class="stability_undefined"><a href="#alarms_alarms_system_handlers_action">alarms.system.handlers(action?)</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#alarms_5">重复规则</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_7">重复规则</a></span></li>
 <li><span class="stability_undefined"><a href="#alarms_options">选项 (Options)</a></span><ul>
 <li><span class="stability_undefined"><a href="#alarms_alarmoptions">AlarmOptions</a></span></li>
 <li><span class="stability_undefined"><a href="#alarms_repeatrule">RepeatRule</a></span></li>
@@ -582,7 +586,7 @@
 <li><span class="stability_undefined"><a href="#alarms_timeroptions">TimerOptions</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#alarms_6">返回对象</a></span><ul>
+<li><span class="stability_undefined"><a href="#alarms_8">返回对象</a></span><ul>
 <li><span class="stability_undefined"><a href="#alarms_alarm">Alarm</a></span></li>
 <li><span class="stability_undefined"><a href="#alarms_occurrence">Occurrence</a></span></li>
 <li><span class="stability_undefined"><a href="#alarms_ringing">Ringing</a></span></li>
@@ -599,16 +603,16 @@
 <li><span class="stability_undefined"><a href="#alarms_alarmcapabilities">AlarmCapabilities</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#alarms_7">错误代码</a></span></li>
-<li><span class="stability_undefined"><a href="#alarms_8">限制</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_9">错误代码</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_10">限制</a></span></li>
 <li><span class="stability_undefined"><a href="#alarms_examples">示例 (Examples)</a></span><ul>
-<li><span class="stability_undefined"><a href="#alarms_9">工作日起床, 关闭后运行另一个脚本</a></span></li>
-<li><span class="stability_undefined"><a href="#alarms_10">每月最后一个星期五与轮班</a></span></li>
-<li><span class="stability_undefined"><a href="#alarms_11">明天休息就跳过用户的闹钟</a></span></li>
-<li><span class="stability_undefined"><a href="#alarms_12">用朗读代替铃声</a></span></li>
-<li><span class="stability_undefined"><a href="#alarms_13">处理缺少插件或权限</a></span></li>
-<li><span class="stability_undefined"><a href="#alarms_14">番茄钟: 计时器到点后运行另一个脚本</a></span></li>
-<li><span class="stability_undefined"><a href="#alarms_15">系统时钟</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_11">工作日起床, 关闭后运行另一个脚本</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_12">每月最后一个星期五与轮班</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_13">明天休息就跳过用户的闹钟</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_14">用朗读代替铃声</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_15">处理缺少插件或权限</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_16">番茄钟: 计时器到点后运行另一个脚本</a></span></li>
+<li><span class="stability_undefined"><a href="#alarms_17">系统时钟</a></span></li>
 </ul>
 </li>
 </ul>
@@ -651,9 +655,9 @@
 <p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
 <p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
 <!-- runtime-support:end -->
-<p><code>alarms</code> 模块用于在脚本中管理 3-Chime Alarm 插件的闹钟: 新建, 查询, 修改与删除闹钟, 推算重复规则的响铃时刻, 处理正在响的闹钟, 监听响铃等事件, 以及把脚本登记到闹钟事件上, 由事件启动脚本. 子模块 <a href="#alarms_p_timers">alarms.timers</a> 与 <a href="#alarms_p_stopwatch">alarms.stopwatch</a> 使用插件的计时器与秒表. 子模块 <a href="#alarms_p_holidays">alarms.holidays</a> 查询插件内置的节假日数据; 闹钟可以按节假日跳过, 只在节假日响或在每个工作日响 (<a href="#alarms_holidayfilter">HolidayFilter</a>), 也可以在响铃之前由脚本决定这一次响不响以及怎么响 (<code>beforeRing</code> 事件, 见 <a href="#alarms_4">响铃前决定</a>). 子模块 <a href="#alarms_p_system">alarms.system</a> 不需要插件, 它通过 Android 的 <code>AlarmClock</code> Intent 使用系统的时钟应用.</p>
+<p><code>alarms</code> 模块用于在脚本中管理 3-Chime Alarm 插件的闹钟: 新建, 查询, 修改与删除闹钟, 推算重复规则的响铃时刻, 处理正在响的闹钟, 监听响铃等事件, 以及把脚本登记到闹钟事件上, 由事件启动脚本. 子模块 <a href="#alarms_p_timers">alarms.timers</a> 与 <a href="#alarms_p_stopwatch">alarms.stopwatch</a> 使用插件的计时器与秒表. 子模块 <a href="#alarms_p_holidays">alarms.holidays</a> 查询插件内置的节假日数据; 闹钟可以按节假日跳过, 只在节假日响或在每个工作日响 (<a href="#alarms_holidayfilter">HolidayFilter</a>), 也可以在响铃之前由脚本决定这一次响不响以及怎么响 (<code>beforeRing</code> 事件, 见 <a href="#alarms_4">响铃前决定</a>). 闹钟还可以要求先完成算术题, 摇晃手机, 输入文字或由脚本确认才能关闭, 见 <a href="#alarms_5">关闭挑战</a>. 子模块 <a href="#alarms_p_system">alarms.system</a> 不需要插件, 它通过 Android 的 <code>AlarmClock</code> Intent 使用系统的时钟应用.</p>
 <p>脚本可以读写用户在插件界面里建的闹钟, 用户也能在插件界面看到并修改脚本建的闹钟. 插件界面为每个闹钟标出创建来源与最后修改来源 (用户, 脚本, 插件工具或系统时钟 Intent), 对应 <a href="#alarms_alarm">Alarm</a> 的 <code>source</code> 与 <code>updatedBy</code>.</p>
-<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Chime Alarm 插件 (AutoJs6-Plugin-Three-Chime-Alarm) 1.0.0 及以上版本提供. 闹钟的存储, 排程与响铃都在插件中完成: AutoJs6 没有运行, 被强行停止甚至被卸载时, 闹钟照常响铃. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失时方法抛出 <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code> 的 <a href="#alarms_c_alarmerror">AlarmError</a>; 插件被禁用或未授权时为 <code>PLUGIN_DISABLED</code>; 插件版本或契约不兼容, 或插件未声明调用所需的功能时为 <code>PLUGIN_INCOMPATIBLE</code>. 计时器与秒表需要插件 1.1.0 及以上版本, 在插件 1.0.x 上调用抛出 <code>PLUGIN_INCOMPATIBLE</code>, 消息提示把 3-Chime Alarm 升级到 1.1.0 或更高版本. 节假日 (<a href="#alarms_p_holidays">alarms.holidays</a> 与 <a href="#alarms_alarmoptions">AlarmOptions</a> 的 <code>holidays</code>) 与 <code>beforeRing</code> 事件需要插件 1.2.0 及以上版本, 在更早的插件上调用抛出 <code>PLUGIN_INCOMPATIBLE</code>, 消息提示升级到 1.2.0 或更高版本. <a href="#alarms_m_isavailable">alarms.isAvailable</a> 可预先探测. 插件本身可以作为独立的闹钟应用使用: 在不满足版本要求的 AutoJs6 上, 插件中心不能启用它, 本模块与它的 <a href="plugins.html#plugins_6">插件工具</a> 不可用, 但插件界面与系统时钟 Intent 的接收照常可用.</p>
+<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Chime Alarm 插件 (AutoJs6-Plugin-Three-Chime-Alarm) 1.0.0 及以上版本提供. 闹钟的存储, 排程与响铃都在插件中完成: AutoJs6 没有运行, 被强行停止甚至被卸载时, 闹钟照常响铃. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失时方法抛出 <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code> 的 <a href="#alarms_c_alarmerror">AlarmError</a>; 插件被禁用或未授权时为 <code>PLUGIN_DISABLED</code>; 插件版本或契约不兼容, 或插件未声明调用所需的功能时为 <code>PLUGIN_INCOMPATIBLE</code>. 计时器与秒表需要插件 1.1.0 及以上版本, 在插件 1.0.x 上调用抛出 <code>PLUGIN_INCOMPATIBLE</code>, 消息提示把 3-Chime Alarm 升级到 1.1.0 或更高版本. 节假日 (<a href="#alarms_p_holidays">alarms.holidays</a> 与 <a href="#alarms_alarmoptions">AlarmOptions</a> 的 <code>holidays</code>) 与 <code>beforeRing</code> 事件需要插件 1.2.0 及以上版本, 在更早的插件上调用抛出 <code>PLUGIN_INCOMPATIBLE</code>, 消息提示升级到 1.2.0 或更高版本. 关闭挑战 (<a href="#alarms_alarmoptions">AlarmOptions</a> 的 <code>dismiss</code>) 需要插件 1.3.0 及以上版本, 在更早的插件上给出非 <code>null</code> 的 <code>dismiss</code> 抛出 <code>PLUGIN_INCOMPATIBLE</code>, 消息提示升级到 1.3.0 或更高版本. <a href="#alarms_m_isavailable">alarms.isAvailable</a> 可预先探测. 插件本身可以作为独立的闹钟应用使用: 在不满足版本要求的 AutoJs6 上, 插件中心不能启用它, 本模块与它的 <a href="plugins.html#plugins_6">插件工具</a> 不可用, 但插件界面与系统时钟 Intent 的接收照常可用.</p>
 <p>本模块在 Rhino 中注册为全局名称 <code>alarms</code>, 并提供 <code>$alarms</code> 别名, 二者指向同一对象. Node.js, Bun 与 Node.js Worker 不提供本模块; 这些运行时可以用 <a href="engines.html#engines_m_execscript">engines.execScript</a> 运行一个调用 <code>alarms</code> 的 Rhino 脚本.</p>
 <p>约定:</p>
 <ul>
@@ -714,7 +718,7 @@ console.log(a.id, a.repeat, a.repeatText, new Date(a.nextTrigger));
 <tr>
 <td><code>ring</code></td>
 <td>开始发声, 包括贪睡后再响, 以及排队后开始发声</td>
-<td><code>snoozeCount</code></td>
+<td><code>snoozeCount</code>, <code>challenge</code></td>
 </tr>
 <tr>
 <td><code>snooze</code></td>
@@ -755,7 +759,7 @@ console.log(a.id, a.repeat, a.repeatText, new Date(a.nextTrigger));
 </table>
 <p>各字段见 <a href="#alarms_alarmevent">AlarmEvent</a>. 补充说明:</p>
 <ul>
-<li><code>dismiss</code> 的 <code>by</code> 为 <code>&#39;user&#39;</code> (插件界面, 通知或系统时钟 Intent), <code>&#39;script&#39;</code>, <code>&#39;tool&#39;</code> (插件工具) 或 <code>&#39;challenge&#39;</code> (关闭挑战).</li>
+<li><code>dismiss</code> 的 <code>by</code> 为 <code>&#39;user&#39;</code> (插件界面, 通知或系统时钟 Intent), <code>&#39;script&#39;</code>, <code>&#39;tool&#39;</code> (插件工具) 或 <code>&#39;challenge&#39;</code> (关闭挑战). <code>ring</code> 与 <code>dismiss</code> 的 <code>challenge</code> 见 <a href="#alarms_5">关闭挑战</a> (插件 1.3.0 起).</li>
 <li><code>skip</code> 的 <code>reason</code> 为 <code>&#39;skipNext&#39;</code> (见 <a href="#alarms_m_skipnext">alarms.skipNext</a>), <code>&#39;holiday&#39;</code> (被闹钟的节假日过滤去掉, 见 <a href="#alarms_holidayfilter">HolidayFilter</a>) 或 <code>&#39;script&#39;</code> (<code>beforeRing</code> 中有脚本决定跳过, <code>detail</code> 为它给出的原因); 后两者需要插件 1.2.0 及以上版本. 被节假日过滤去掉的那一次不发 <code>beforeRing</code>; 本来就不响的日子 (<code>&#39;only&#39;</code> 模式的非节假日, <code>&#39;workdays&#39;</code> 模式的周末) 不发 <code>skip</code>.</li>
 <li><code>change</code> 由任何来源的新建, 修改与删除触发 (脚本, 插件界面, 插件工具, 系统时钟 Intent). 没有实际改变的调用不发 <code>change</code>; 一次性闹钟响过后被插件自动禁用时也不发. <code>action</code> 为 <code>&#39;remove&#39;</code> 的事件带闹钟被删除前的 <code>label</code>.</li>
 <li>插件 1.1.0 及更早版本不提供 <code>beforeRing</code>: 监听或登记该事件抛出 <code>PLUGIN_INCOMPATIBLE</code>, 消息提示把 3-Chime Alarm 升级到 1.2.0 或更高版本.</li>
@@ -836,6 +840,160 @@ if (e !== null &amp;&amp; e.type === &#39;beforeRing&#39;) {
         console.log(e.skip(&#39;休息日&#39;) ? &#39;已决定跳过&#39; : &#39;未发出&#39;);
     }
 });
+</code></pre>
+<h2>关闭挑战<span><a class="mark" href="#alarms_5" id="alarms_5">#</a></span></h2>
+<p>插件 1.3.0 起, 闹钟可以要求先完成一项挑战才能关闭, 由 <a href="#alarms_alarmoptions">AlarmOptions</a> 的 <code>dismiss</code> 设置 (成员见 <a href="#alarms_dismissoptions">DismissOptions</a>). 需要 AutoJs6 6.8.1 及以上版本与插件 1.3.0 及以上版本; 在更早的插件上给出非 <code>null</code> 的 <code>dismiss</code> 抛出 <code>PLUGIN_INCOMPATIBLE</code>, <code>dismiss: null</code> (清除挑战) 不受影响. 计时器没有关闭挑战.</p>
+<p>无论哪种挑战, 闹钟总有两条出路, 不会一直响下去:</p>
+<ul>
+<li>自动停止: 设置了挑战而省略 <code>autoSilenceMinutes</code> 时, 取插件设置页的默认值与 30 分钟中较大的一个; 显式写出的值仍为 <code>1..60</code> 分钟. 到时停止并发出 <code>silence</code> 事件, 响铃界面始终显示剩余时间.</li>
+<li>紧急关闭: 响铃界面在前台 (包括在锁屏上) 时, 4 秒内连按 5 次音量键 (加或减都算) 立即关闭闹钟, <code>dismiss</code> 事件的 <code>by</code> 为 <code>&#39;user&#39;</code>. 挑战生效期间音量键只用于计数, 不调节音量. 可以在插件设置页关闭此功能 (默认打开).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>挑战 (<code>challenge</code>)</th>
+<th>关闭条件</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&#39;none&#39;</code></td>
+<td>普通关闭 (默认)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>&#39;math&#39;</code></td>
+<td>依次答对算术题, 答错时保留原题</td>
+<td><code>math.difficulty</code>: <code>1</code> 为两位数加减, <code>2</code> 为一位数乘两位数再加两位数, <code>3</code> 为两位数乘两位数再加减三位数 (默认 <code>2</code>); <code>math.count</code>: 题数 <code>1..20</code> (默认 <code>3</code>)</td>
+</tr>
+<tr>
+<td><code>&#39;shake&#39;</code></td>
+<td>摇晃手机达到次数</td>
+<td><code>shake.count</code>: <code>1..300</code> (默认 <code>30</code>); 拿稳或倾斜手机不计数, 一次猛甩只计一次</td>
+</tr>
+<tr>
+<td><code>&#39;type&#39;</code></td>
+<td>输入指定文字, 忽略大小写与首尾空白</td>
+<td><code>type.text</code>: 至多 200 个字符; 省略时每一轮从插件内置的句子中按界面语言选一句</td>
+</tr>
+<tr>
+<td><code>&#39;script&#39;</code></td>
+<td>由脚本调用 <a href="#alarms_m_dismiss">alarms.dismiss</a> 关闭, 见 <a href="#alarms_6">脚本条件</a></td>
+<td><code>script.fallback</code>: 脚本无法执行时改用的挑战, <code>&#39;none&#39;</code>, <code>&#39;math&#39;</code>, <code>&#39;shake&#39;</code> 或 <code>&#39;type&#39;</code> (默认 <code>&#39;none&#39;</code>)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>allowSnooze</code> (默认 <code>true</code>) 为 <code>false</code> 时, 响铃界面, 通知与系统时钟的 <code>snoozeAlarm</code> 都不能贪睡; 脚本的 <a href="#alarms_m_snooze">alarms.snooze</a> 与插件工具不受限制. 贪睡后再响是新的一轮, 挑战从头开始.</li>
+<li>挑战生效时, 通知的 &quot;关闭&quot; 按钮与系统时钟的 <code>dismissAlarm</code> 不直接关闭闹钟, 而是打开响铃界面的挑战.</li>
+<li>脚本的 <a href="#alarms_m_dismiss">alarms.dismiss</a> 与插件工具在任何挑战下都能直接关闭闹钟. 插件工具可以设置 <code>&#39;none&#39;</code>, <code>&#39;math&#39;</code>, <code>&#39;shake&#39;</code> 与 <code>&#39;type&#39;</code>, 不能设置 <code>&#39;script&#39;</code>.</li>
+<li>各子选项与 <code>challenge</code> 的取值无关, 都会保存, 例如 <code>{ challenge: &#39;none&#39;, shake: { count: 10 } }</code> 合法, 以后只改 <code>challenge</code> 即可启用摇晃. 省略的子选项不保存在闹钟中, 响铃时由插件取上表的默认值.</li>
+</ul>
+<p>事件与 <a href="#alarms_m_ringing">alarms.ringing</a> 中的 <code>challenge</code> 为 &quot;此刻生效的挑战&quot;: 通常是闹钟设置的挑战; <code>script</code> 条件退回之后为退回的挑战, 退回 <code>&#39;none&#39;</code> 时视为没有挑战. 没有挑战时, 事件中不存在 <code>challenge</code>, <a href="#alarms_m_ringing">Ringing</a> 的 <code>challenge</code> 为 <code>null</code>.</p>
+<ul>
+<li><code>ring</code> 事件 (包括贪睡后再响) 的 <code>challenge</code> 为这一轮开始时生效的挑战, 即闹钟设置的挑战.</li>
+<li><code>snooze</code> 与 <code>silence</code> 事件不带 <code>challenge</code>.</li>
+<li><a href="#alarms_m_ringing">Ringing</a> 的 <code>challenge</code>: 正在发声的一轮为生效的挑战, 排队与贪睡中的为闹钟设置的挑战.</li>
+<li><code>dismiss</code> 事件的 <code>by</code> 与 <code>challenge</code>:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>关闭方式</th>
+<th><code>by</code></th>
+<th><code>challenge</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完成挑战 (包括 <code>script</code> 退回之后的挑战)</td>
+<td><code>&#39;challenge&#39;</code></td>
+<td>完成的挑战</td>
+</tr>
+<tr>
+<td>脚本调用 <a href="#alarms_m_dismiss">alarms.dismiss</a></td>
+<td><code>&#39;script&#39;</code></td>
+<td>生效的挑战, 等待脚本期间为 <code>&#39;script&#39;</code></td>
+</tr>
+<tr>
+<td>插件工具</td>
+<td><code>&#39;tool&#39;</code></td>
+<td>生效的挑战</td>
+</tr>
+<tr>
+<td>紧急关闭</td>
+<td><code>&#39;user&#39;</code></td>
+<td>生效的挑战</td>
+</tr>
+<tr>
+<td>没有挑战时的普通关闭 (包括 <code>script</code> 退回 <code>&#39;none&#39;</code> 之后)</td>
+<td><code>&#39;user&#39;</code></td>
+<td>不存在</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">/* 工作日 7:00, 依次答对 5 道难度 3 的算术题才能关闭, 不允许贪睡. */
+alarms.add({
+    time: &#39;07:00&#39;,
+    repeat: [1, 2, 3, 4, 5],
+    label: &#39;起床&#39;,
+    dismiss: { challenge: &#39;math&#39;, math: { difficulty: 3, count: 5 }, allowSnooze: false },
+});
+</code></pre>
+<h3>脚本条件<span><a class="mark" href="#alarms_6" id="alarms_6">#</a></span></h3>
+<p><code>challenge</code> 为 <code>&#39;script&#39;</code> 时, 响铃界面没有关闭按钮, 显示 &quot;等待脚本关闭&quot;, 由脚本调用 <a href="#alarms_m_dismiss">alarms.dismiss</a> 关闭闹钟. 调用的可以是登记在该闹钟 <code>ring</code> 事件上的脚本 (<a href="#alarms_m_bind">alarms.bind</a>), 也可以是其他任何脚本, 例如以 <a href="#alarms_m_on">alarms.on</a> 实时监听 <code>ring</code> 的常驻脚本. 自动停止与紧急关闭照常可用.</p>
+<p>脚本无法执行时, 插件把这一轮改为 <code>script.fallback</code> 的挑战 (<code>&#39;none&#39;</code> 即恢复普通关闭), 立即在响铃界面生效, 这一轮不再回到等待脚本. 只要还有脚本实时监听 <code>ring</code>, 插件就一直等待 (<code>locked</code> 除外); 最后一个监听者结束时再按下表判断:</p>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>locked</code></td>
+<td>设备开机后尚未解锁, AutoJs6 不能运行脚本</td>
+</tr>
+<tr>
+<td><code>noScript</code></td>
+<td>该闹钟没有含 <code>ring</code> 的绑定, 也没有脚本实时监听 <code>ring</code></td>
+</tr>
+<tr>
+<td><code>unavailable</code></td>
+<td>AutoJs6 未安装, 被强行停止, 被禁用或没有应答; AutoJs6 6.8.0 不支持查询脚本状态, 在 6.8.0 上约 5 秒后退回</td>
+</tr>
+<tr>
+<td><code>launchFailed</code></td>
+<td>登记在 <code>ring</code> 上的脚本都没能启动 (文件不存在或启动出错)</td>
+</tr>
+<tr>
+<td><code>ended</code></td>
+<td>启动的脚本都已结束 (包括出错与被停止) 而闹钟仍在响; AutoJs6 进程在此期间被结束时同样如此</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>登记的脚本启动后, 插件每 5 秒向 AutoJs6 查询一次这一轮启动的脚本是否仍在运行, 所以脚本结束后至多约 5 秒退回. AutoJs6 不检查脚本是否调用了 <code>alarms.dismiss</code>, 脚本可以先做别的事, 满足条件后再关闭.</li>
+<li>插件因进程重启接续同一轮时, 已经启动的脚本不会再次启动, 插件继续查询它们.</li>
+<li>退回的原因记在插件日志中, 不出现在事件里.</li>
+</ul>
+<pre><code class="lang-js">/* wake-task.js, 登记在闹钟的 ring 事件上: 用户打开指定的应用后才关闭闹钟. */
+/* 闹钟: alarms.add({ time: &#39;06:30&#39;, dismiss: { challenge: &#39;script&#39;, script: { fallback: &#39;math&#39; } } }). */
+let e = alarms.currentEvent();
+if (e !== null &amp;&amp; e.type === &#39;ring&#39;) {
+    let until = Date.now() + 20 * 60 * 1000;
+    while (Date.now() &lt; until) {
+        /* currentPackage 可能依赖无障碍服务, 获取失败时返回空字符串. */
+        if (currentPackage() === &#39;com.example.reader&#39;) {
+            alarms.dismiss(e.alarmId);
+            break;
+        }
+        sleep(3000);
+    }
+    /* 脚本到此结束; 闹钟仍在响时, 插件改用算术题 (原因 ended). */
+}
 </code></pre>
 <h2>[m] isAvailable<span><a class="mark" href="#alarms_m_isavailable" id="alarms_m_isavailable">#</a></span></h2>
 <h3>alarms.isAvailable()<span><a class="mark" href="#alarms_alarms_isavailable" id="alarms_alarms_isavailable">#</a></span></h3>
@@ -1010,7 +1168,7 @@ if (a !== null) {
 <li><strong>[ id ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 闹钟或计时器 ID, 省略时处理全部</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否关闭了至少一个闹钟或计时器</li>
 </ul>
-<p>关闭响铃, 发出 <code>dismiss</code> 事件 (<code>by</code> 为 <code>&#39;script&#39;</code>). 指定 <code>id</code> 时结束该闹钟这一轮 (发声, 排队或贪睡中); 省略时关闭全部正在发声与排队的闹钟, 并结束全部贪睡. 没有匹配的闹钟时返回 <code>false</code>. 一次性闹钟这一轮结束后自动禁用. 计时器 (插件 1.1.0 起) 同样处理, 关闭后即被删除.</p>
+<p>关闭响铃, 发出 <code>dismiss</code> 事件 (<code>by</code> 为 <code>&#39;script&#39;</code>). 指定 <code>id</code> 时结束该闹钟这一轮 (发声, 排队或贪睡中); 省略时关闭全部正在发声与排队的闹钟, 并结束全部贪睡. 没有匹配的闹钟时返回 <code>false</code>. 一次性闹钟这一轮结束后自动禁用. 设置了 <a href="#alarms_5">关闭挑战</a> 的闹钟同样直接关闭, 事件的 <code>challenge</code> 为此刻生效的挑战; <code>challenge</code> 为 <code>&#39;script&#39;</code> 的闹钟正是由本方法关闭. 计时器 (插件 1.1.0 起) 同样处理, 关闭后即被删除.</p>
 <h2>[m] snooze<span><a class="mark" href="#alarms_m_snooze" id="alarms_m_snooze">#</a></span></h2>
 <h3>alarms.snooze(id?, minutes?)<span><a class="mark" href="#alarms_alarms_snooze_id_minutes" id="alarms_alarms_snooze_id_minutes">#</a></span></h3>
 <p><strong><code>6.8.1</code></strong></p>
@@ -1019,7 +1177,7 @@ if (a !== null) {
 <li><strong>[ minutes ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 贪睡分钟数, 范围 <code>1..60</code>, 默认为闹钟的 <code>snooze.minutes</code>, 闹钟未设置时为插件设置中的默认值</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否让至少一个闹钟进入贪睡</li>
 </ul>
-<p>停止发声, <code>minutes</code> 分钟后再响 (新的一轮), 发出 <code>snooze</code> 事件 (<code>by</code> 为 <code>&#39;script&#39;</code>). 以下情形不贪睡: 闹钟关闭了贪睡 (<code>snooze: false</code>), 贪睡次数已达 <code>max</code>, 已在贪睡中, 或插件没有精确闹钟权限而无法排程. 没有闹钟进入贪睡时返回 <code>false</code>. 计时器 (插件 1.1.0 起) 同样可以贪睡, 它没有自己的贪睡选项, <code>minutes</code> 的默认值与每轮的次数上限取插件设置页的默认值.</p>
+<p>停止发声, <code>minutes</code> 分钟后再响 (新的一轮), 发出 <code>snooze</code> 事件 (<code>by</code> 为 <code>&#39;script&#39;</code>). 以下情形不贪睡: 闹钟关闭了贪睡 (<code>snooze: false</code>), 贪睡次数已达 <code>max</code>, 已在贪睡中, 或插件没有精确闹钟权限而无法排程. 关闭挑战的 <code>allowSnooze: false</code> 只限制响铃界面, 通知与系统时钟 Intent, 不限制本方法. 没有闹钟进入贪睡时返回 <code>false</code>. 计时器 (插件 1.1.0 起) 同样可以贪睡, 它没有自己的贪睡选项, <code>minutes</code> 的默认值与每轮的次数上限取插件设置页的默认值.</p>
 <pre><code class="lang-js">/* 让全部正在响的闹钟 5 分钟后再响. */
 alarms.snooze(null, 5);
 </code></pre>
@@ -1411,7 +1569,7 @@ if (alarms.holidays.isWorkday(new Date(), region)) {
 <li><strong>[ hint = <code>null</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 处理提示</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="#alarms_c_alarmerror">AlarmError</a></span> }</li>
 </ul>
-<p>本模块 (含 <a href="#alarms_p_system">alarms.system</a>) 抛出的所有错误都是 <code>name</code> 为 <code>&#39;AlarmError&#39;</code> 的 JavaScript <a href="exceptions.html#exceptions_error_1">Error</a>, 可用 <code>instanceof alarms.AlarmError</code> 判断, 用 <code>code</code> 区分原因 (见 <a href="#alarms_7">错误代码</a>). <code>message</code> 不可枚举; <code>toString()</code> 返回形如 <code>AlarmError [NOT_FOUND]: ...</code> 的文本. AutoJs6 抛出的错误可能另带不可枚举的 <code>javaException</code> 属性 (原始 Java 异常). 不使用 <code>new</code> 调用也会构造新对象.</p>
+<p>本模块 (含 <a href="#alarms_p_system">alarms.system</a>) 抛出的所有错误都是 <code>name</code> 为 <code>&#39;AlarmError&#39;</code> 的 JavaScript <a href="exceptions.html#exceptions_error_1">Error</a>, 可用 <code>instanceof alarms.AlarmError</code> 判断, 用 <code>code</code> 区分原因 (见 <a href="#alarms_9">错误代码</a>). <code>message</code> 不可枚举; <code>toString()</code> 返回形如 <code>AlarmError [NOT_FOUND]: ...</code> 的文本. AutoJs6 抛出的错误可能另带不可枚举的 <code>javaException</code> 属性 (原始 Java 异常). 不使用 <code>new</code> 调用也会构造新对象.</p>
 <p><code>hint</code> 告诉用户去哪里处理问题, 其余代码为 <code>null</code>:</p>
 <table>
 <thead>
@@ -1458,7 +1616,7 @@ if (alarms.holidays.isWorkday(new Date(), region)) {
 <li>方法返回 <code>true</code> 只表示有应用接收了 Intent, 不保证时钟应用已建好闹钟或已执行操作.</li>
 <li>不写 <code>package</code> 时把 Intent 交给系统解析: 有默认时钟应用时直接交给它, 有多个候选时由用户在选择器中选择. 写 <code>package</code> 时交给该应用中处理此动作的界面, 该应用不处理时抛出 <code>NO_HANDLER</code>.</li>
 <li>没有任何应用能处理时抛出 <code>NO_HANDLER</code>; 设备的 Android 版本低于该动作所需时抛出 <code>UNSUPPORTED</code>; 选项错误为 <code>INVALID_OPTIONS</code>.</li>
-<li>3-Chime Alarm 也接收这些 Intent. 用户把它设为默认时钟应用, 或在选择器中选了它时, <code>alarms.system</code> 建的闹钟进入 3-Chime Alarm, 来源记为 <code>&#39;intent&#39;</code>; 也可以写 <code>package: &#39;io.github.supermonster003.autojs6.plugin.three.chime.alarm&#39;</code> 直接指定它. 插件 1.0.x 处理 <code>setAlarm</code>, <code>showAlarms</code>, <code>dismissAlarm</code> 与 <code>snoozeAlarm</code>, 不处理计时器的三个动作; 插件 1.1.0 起也处理 <code>setTimer</code>, <code>showTimers</code> 与 <code>dismissTimer</code>, 建的计时器出现在 <a href="#alarms_p_timers">alarms.timers</a> 中.</li>
+<li>3-Chime Alarm 也接收这些 Intent. 用户把它设为默认时钟应用, 或在选择器中选了它时, <code>alarms.system</code> 建的闹钟进入 3-Chime Alarm, 来源记为 <code>&#39;intent&#39;</code>; 也可以写 <code>package: &#39;io.github.supermonster003.autojs6.plugin.three.chime.alarm&#39;</code> 直接指定它. 插件 1.0.x 处理 <code>setAlarm</code>, <code>showAlarms</code>, <code>dismissAlarm</code> 与 <code>snoozeAlarm</code>, 不处理计时器的三个动作; 插件 1.1.0 起也处理 <code>setTimer</code>, <code>showTimers</code> 与 <code>dismissTimer</code>, 建的计时器出现在 <a href="#alarms_p_timers">alarms.timers</a> 中. 插件 1.3.0 起, 设置了 <a href="#alarms_5">关闭挑战</a> 的闹钟收到 <code>dismissAlarm</code> 时打开响铃界面的挑战而不直接关闭, <code>allowSnooze</code> 为 <code>false</code> 时不响应 <code>snoozeAlarm</code>.</li>
 </ul>
 <p>各时钟应用对这些 Intent 的支持不一, AutoJs6 不做兼容处理. 已知差异 (2026-11-05 实测, 未列出的项目未实测):</p>
 <table>
@@ -1615,7 +1773,7 @@ if (next !== null &amp;&amp; next.triggerTime &gt; Date.now()) {
 </ul>
 <pre><code class="lang-js">console.log(alarms.system.handlers(&#39;dismissAlarm&#39;));
 </code></pre>
-<h2>重复规则<span><a class="mark" href="#alarms_5" id="alarms_5">#</a></span></h2>
+<h2>重复规则<span><a class="mark" href="#alarms_7" id="alarms_7">#</a></span></h2>
 <p><code>repeat</code> 接受三种写法, 都转为一条不带 <code>RRULE:</code> 前缀的规范 RRULE (RFC 5545) 保存, <a href="#alarms_alarm">Alarm</a> 的 <code>repeat</code> 总是回读这一形式, <code>repeatText</code> 给出插件界面语言的可读描述:</p>
 <ul>
 <li>RRULE 字符串, 如 <code>&#39;FREQ=MONTHLY;BYDAY=-1FR&#39;</code>, 可带 <code>RRULE:</code> 前缀, 大小写不限, 只能有一行.</li>
@@ -1710,12 +1868,12 @@ if (next !== null &amp;&amp; next.triggerTime &gt; Date.now()) {
 </table>
 <h2>选项 (Options)<span><a class="mark" href="#alarms_options" id="alarms_options">#</a></span></h2>
 <h3>AlarmOptions<span><a class="mark" href="#alarms_alarmoptions" id="alarms_alarmoptions">#</a></span></h3>
-<p><a href="#alarms_m_add">alarms.add</a>, <a href="#alarms_m_preview">alarms.preview</a> 与 <a href="#alarms_m_update">alarms.update</a> 的选项. 省略的 <code>sound.source</code>, <code>vibrate</code>, <code>snooze</code> (包括只省略 <code>minutes</code> 或 <code>max</code>) 与 <code>autoSilenceMinutes</code> 不保存在闹钟中, 响铃时取插件设置页的默认值 (出厂为默认铃声, 振动, 贪睡 10 分钟至多 3 次, 10 分钟后自动停止); 改动设置只影响之后的响铃.</p>
+<p><a href="#alarms_m_add">alarms.add</a>, <a href="#alarms_m_preview">alarms.preview</a> 与 <a href="#alarms_m_update">alarms.update</a> 的选项. 省略的 <code>sound.source</code>, <code>vibrate</code>, <code>snooze</code> (包括只省略 <code>minutes</code> 或 <code>max</code>) 与 <code>autoSilenceMinutes</code> 不保存在闹钟中, 响铃时取插件设置页的默认值 (出厂为默认铃声, 振动, 贪睡 10 分钟至多 3 次, 10 分钟后自动停止; 设置了关闭挑战的闹钟至少 30 分钟后自动停止); 改动设置只影响之后的响铃.</p>
 <ul>
 <li><strong>[ time ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type">{{ hour: <a href="dataTypes.html#datatypes_number">number</a>; minute: <a href="dataTypes.html#datatypes_number">number</a>; second?: <a href="dataTypes.html#datatypes_number">number</a></span> }} } - 响铃的墙上时间, <code>&#39;07:30&#39;</code>, <code>&#39;07:30:15&#39;</code> 或对象形式; 与 <code>at</code> 二选一</li>
 <li><strong>[ date ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_date">Date</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 一次性闹钟的日期, 或重复规则的起始日, <code>&#39;YYYY-MM-DD&#39;</code>, Date 或时间戳 (按闹钟的时区取日期); 省略时由插件补上, 见 <a href="#alarms_m_add">add</a></li>
 <li><strong>[ at ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_date">Date</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 一次性闹钟的绝对时刻; 与 <code>time</code> 二选一, 不能与 <code>date</code> 或 <code>repeat</code> 同用</li>
-<li><strong>[ repeat ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="#alarms_repeatrule">RepeatRule</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 重复规则, 见 <a href="#alarms_5">重复规则</a>; 省略即一次性闹钟</li>
+<li><strong>[ repeat ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="#alarms_repeatrule">RepeatRule</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 重复规则, 见 <a href="#alarms_7">重复规则</a>; 省略即一次性闹钟</li>
 <li><strong>[ exclude ]</strong> { <span class="type">(<a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_date">Date</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a>)<a href="dataTypes.html#datatypes_array">[]</a></span> } - 不响铃的日期, 至多 366 个</li>
 <li><strong>[ timeZone ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - IANA 时区 ID, 如 <code>&#39;Asia/Shanghai&#39;</code>; 省略或为 <code>null</code> 时跟随设备时区</li>
 <li><strong>[ label ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 标签, 至多 100 个字符</li>
@@ -1725,12 +1883,12 @@ if (next !== null &amp;&amp; next.triggerTime &gt; Date.now()) {
 <li><strong>[ vibrate ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 振动: <code>true</code> 按默认节奏 <code>[0, 600, 400]</code> 循环; 数组为自定义节奏, 写法同 <a href="device.html">device.vibrate</a> (等待, 振动, 等待, 振动, ... 毫秒), 1 - 64 项, 不能为负且不能全为 0; <code>false</code> 不振动. 振动以闹钟用途发出, 勿扰模式下仍振动</li>
 <li><strong>[ speak ]</strong> { <span class="type"><a href="#alarms_speakoptions">SpeakOptions</a></span> } - 朗读</li>
 <li><strong>[ snooze ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type">{{ minutes?: <a href="dataTypes.html#datatypes_number">number</a>; max?: <a href="dataTypes.html#datatypes_number">number</a></span> }} } - 贪睡: <code>false</code> 不允许贪睡; <code>true</code> 或对象允许贪睡, <code>minutes</code> 为每次贪睡的分钟数 (<code>1..60</code>), <code>max</code> 为一轮至多贪睡的次数 (<code>1..10</code>)</li>
-<li><strong>[ autoSilenceMinutes ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 无人处理时响多久自动停止 (分钟), 范围 <code>1..60</code>; 停止时发出 <code>silence</code> 事件</li>
+<li><strong>[ autoSilenceMinutes ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 无人处理时响多久自动停止 (分钟), 范围 <code>1..60</code>; 停止时发出 <code>silence</code> 事件. 设置了关闭挑战而省略时, 取插件设置页的默认值与 30 分钟中较大的一个</li>
 <li><strong>[ holidays ]</strong> { <span class="type"><a href="#alarms_holidayfilter">HolidayFilter</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 节假日过滤, <code>null</code> 为不过滤; 需要插件 1.2.0 及以上版本 (功能 <code>holidays</code>), 更早的插件上给出非 <code>null</code> 值时抛出 <code>PLUGIN_INCOMPATIBLE</code></li>
-<li><strong>[ dismiss ]</strong> { <span class="type"><a href="#alarms_dismissoptions">DismissOptions</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 关闭方式, 需要插件的 <code>challenges</code> 功能 (插件 1.1.0 及更早版本不提供, 给出非 <code>null</code> 值时抛出 <code>PLUGIN_INCOMPATIBLE</code>)</li>
+<li><strong>[ dismiss ]</strong> { <span class="type"><a href="#alarms_dismissoptions">DismissOptions</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 关闭挑战, <code>null</code> 为不设挑战, 见 <a href="#alarms_5">关闭挑战</a>; 需要插件 1.3.0 及以上版本 (功能 <code>challenges</code>), 更早的插件上给出非 <code>null</code> 值时抛出 <code>PLUGIN_INCOMPATIBLE</code></li>
 </ul>
 <h3>RepeatRule<span><a class="mark" href="#alarms_repeatrule" id="alarms_repeatrule">#</a></span></h3>
-<p>结构化的重复规则, 各键对应 RRULE 的同名部分, 见 <a href="#alarms_5">重复规则</a>.</p>
+<p>结构化的重复规则, 各键对应 RRULE 的同名部分, 见 <a href="#alarms_7">重复规则</a>.</p>
 <ul>
 <li><strong>freq</strong> { <code>&#39;daily&#39;</code> | <code>&#39;weekly&#39;</code> | <code>&#39;monthly&#39;</code> | <code>&#39;yearly&#39;</code> } - 频率</li>
 <li><strong>[ interval = <code>1</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 每隔几个周期</li>
@@ -1791,14 +1949,14 @@ if (next !== null &amp;&amp; next.triggerTime &gt; Date.now()) {
 alarms.add({ time: &#39;07:30&#39;, label: &#39;上班&#39;, holidays: { region: &#39;CN&#39;, mode: &#39;workdays&#39; } });
 </code></pre>
 <h3>DismissOptions<span><a class="mark" href="#alarms_dismissoptions" id="alarms_dismissoptions">#</a></span></h3>
-<p>关闭挑战, 需要插件的 <code>challenges</code> 功能 (插件 1.1.0 及更早版本不提供).</p>
+<p>关闭挑战, 需要插件 1.3.0 及以上版本 (功能 <code>challenges</code>), 见 <a href="#alarms_5">关闭挑战</a>. 省略的成员不保存在闹钟中, 响铃时由插件取默认值; 各成员与 <code>challenge</code> 的取值无关, 都会保存. <a href="#alarms_m_update">alarms.update</a> 的 <code>dismiss</code> 按成员合并到已保存的值上.</p>
 <ul>
-<li><strong>[ challenge = <code>&#39;none&#39;</code> ]</strong> { <code>&#39;none&#39;</code> | <code>&#39;math&#39;</code> | <code>&#39;shake&#39;</code> | <code>&#39;type&#39;</code> | <code>&#39;script&#39;</code> } - 关闭方式</li>
-<li><strong>[ math ]</strong> { <span class="type">{ difficulty?: <a href="dataTypes.html#datatypes_number">number</a>; count?: <a href="dataTypes.html#datatypes_number">number</a></span> }} - 算术题的难度 (<code>1..3</code>) 与题数 (<code>1..20</code>)</li>
-<li><strong>[ shake ]</strong> { <span class="type">{ count?: <a href="dataTypes.html#datatypes_number">number</a></span> }} - 摇晃次数 (<code>1..300</code>)</li>
-<li><strong>[ type ]</strong> { <span class="type">{ text?: <a href="dataTypes.html#datatypes_string">string</a></span> }} - 需要输入的文字, 至多 200 个字符</li>
-<li><strong>[ script ]</strong> {{ fallback?: <code>&#39;none&#39;</code> | <code>&#39;math&#39;</code> | <code>&#39;shake&#39;</code> | <code>&#39;type&#39;</code> }} - 脚本条件无法执行时的退路</li>
-<li><strong>[ allowSnooze ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 挑战期间是否允许贪睡</li>
+<li><strong>[ challenge = <code>&#39;none&#39;</code> ]</strong> { <code>&#39;none&#39;</code> | <code>&#39;math&#39;</code> | <code>&#39;shake&#39;</code> | <code>&#39;type&#39;</code> | <code>&#39;script&#39;</code> } - 挑战</li>
+<li><strong>[ math ]</strong> { <span class="type">{ difficulty?: <a href="dataTypes.html#datatypes_number">number</a>; count?: <a href="dataTypes.html#datatypes_number">number</a></span> }} - 算术题的难度 (<code>1..3</code>, 默认 <code>2</code>) 与题数 (<code>1..20</code>, 默认 <code>3</code>)</li>
+<li><strong>[ shake ]</strong> { <span class="type">{ count?: <a href="dataTypes.html#datatypes_number">number</a></span> }} - 摇晃次数 (<code>1..300</code>, 默认 <code>30</code>)</li>
+<li><strong>[ type ]</strong> { <span class="type">{ text?: <a href="dataTypes.html#datatypes_string">string</a></span> }} - 需要输入的文字, 1 - 200 个字符且不能全为空白; 省略时每一轮从插件内置的句子中按界面语言选一句</li>
+<li><strong>[ script ]</strong> {{ fallback?: <code>&#39;none&#39;</code> | <code>&#39;math&#39;</code> | <code>&#39;shake&#39;</code> | <code>&#39;type&#39;</code> }} - 脚本条件无法执行时改用的挑战 (默认 <code>&#39;none&#39;</code>), 见 <a href="#alarms_6">脚本条件</a></li>
+<li><strong>[ allowSnooze = <code>true</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 挑战期间是否允许在响铃界面, 通知与系统时钟 Intent 中贪睡; 脚本与插件工具的贪睡不受它限制</li>
 </ul>
 <h3>AlarmFilter<span><a class="mark" href="#alarms_alarmfilter" id="alarms_alarmfilter">#</a></span></h3>
 <p><a href="#alarms_m_list">alarms.list</a> 与 <a href="#alarms_m_upcoming">alarms.upcoming</a> 的筛选条件, 各条件同时满足.</p>
@@ -1823,7 +1981,7 @@ alarms.add({ time: &#39;07:30&#39;, label: &#39;上班&#39;, holidays: { region:
 <li><strong>[ speak ]</strong> { <span class="type"><a href="#alarms_speakoptions">SpeakOptions</a></span> } - 朗读, 必须有 <code>text</code></li>
 <li><strong>[ autoSilenceMinutes ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 无人处理时响多久自动停止 (分钟), 范围 <code>1..60</code></li>
 </ul>
-<h2>返回对象<span><a class="mark" href="#alarms_6" id="alarms_6">#</a></span></h2>
+<h2>返回对象<span><a class="mark" href="#alarms_8" id="alarms_8">#</a></span></h2>
 <h3>Alarm<span><a class="mark" href="#alarms_alarm" id="alarms_alarm">#</a></span></h3>
 <p>闹钟快照, 即调用时刻插件保存的状态, 不会自动更新. 选项键总是存在, 未设置的为 <code>null</code> (<code>enabled</code> 默认为 <code>true</code>); 插件将来增加的键原样出现.</p>
 <ul>
@@ -1844,7 +2002,7 @@ alarms.add({ time: &#39;07:30&#39;, label: &#39;上班&#39;, holidays: { region:
 <li><strong>speak</strong> { <span class="type"><a href="#alarms_speakoptions">SpeakOptions</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 朗读</li>
 <li><strong>snooze</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type">{{ minutes?: <a href="dataTypes.html#datatypes_number">number</a>; max?: <a href="dataTypes.html#datatypes_number">number</a></span> }} | <a href="dataTypes.html#datatypes_null">null</a> } - 贪睡, 不允许贪睡时为 <code>false</code></li>
 <li><strong>autoSilenceMinutes</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 自动停止的分钟数</li>
-<li><strong>dismiss</strong> { <span class="type"><a href="#alarms_dismissoptions">DismissOptions</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 关闭方式</li>
+<li><strong>dismiss</strong> { <span class="type"><a href="#alarms_dismissoptions">DismissOptions</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 关闭挑战, 只含已保存的成员; 没有设置时为 <code>null</code>, 见 <a href="#alarms_5">关闭挑战</a></li>
 <li><strong>source</strong> { <code>&#39;user&#39;</code> | <code>&#39;script&#39;</code> | <code>&#39;tool&#39;</code> | <code>&#39;intent&#39;</code> } - 创建来源: 插件界面, 脚本, 插件工具, 系统时钟 Intent</li>
 <li><strong>updatedBy</strong> { <code>&#39;user&#39;</code> | <code>&#39;script&#39;</code> | <code>&#39;tool&#39;</code> | <code>&#39;intent&#39;</code> } - 最后修改来源</li>
 <li><strong>createdAt</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 创建时刻</li>
@@ -1916,7 +2074,7 @@ a.disable();
 <li><strong>since</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 这一轮开始的时刻</li>
 <li><strong>snoozed</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否在贪睡中</li>
 <li><strong>snoozeCount</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 本次计划响铃已贪睡的次数</li>
-<li><strong>challenge</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 关闭挑战, 插件 1.1.0 及更早版本为 <code>null</code></li>
+<li><strong>challenge</strong> { <code>&#39;math&#39;</code> | <code>&#39;shake&#39;</code> | <code>&#39;type&#39;</code> | <code>&#39;script&#39;</code> | <a href="dataTypes.html#datatypes_null">null</a> } - 关闭挑战: 正在发声的一轮为此刻生效的挑战, 排队与贪睡中的为闹钟设置的挑战, 没有挑战时为 <code>null</code> (插件 1.2.0 及更早版本总为 <code>null</code>), 见 <a href="#alarms_5">关闭挑战</a></li>
 </ul>
 <h3>Ringtone<span><a class="mark" href="#alarms_ringtone" id="alarms_ringtone">#</a></span></h3>
 <p><a href="#alarms_m_ringtones_list">alarms.ringtones.list</a> 的元素.</p>
@@ -1945,9 +2103,9 @@ a.disable();
 <li><strong>firedAt</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 事件发生的时刻</li>
 <li><strong>occurrence</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 这一轮响铃的标识, 至多 128 个字符, 见 <a href="#alarms_2">事件</a></li>
 <li><strong>[ snoozeCount ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - <code>ring</code>, <code>snooze</code>: 已贪睡的次数</li>
-<li><strong>[ by ]</strong> { <code>&#39;user&#39;</code> | <code>&#39;script&#39;</code> | <code>&#39;tool&#39;</code> | <code>&#39;challenge&#39;</code> } - <code>snooze</code>, <code>dismiss</code>: 操作来源</li>
+<li><strong>[ by ]</strong> { <code>&#39;user&#39;</code> | <code>&#39;script&#39;</code> | <code>&#39;tool&#39;</code> | <code>&#39;challenge&#39;</code> } - <code>snooze</code>, <code>dismiss</code>: 操作来源; <code>&#39;challenge&#39;</code> 只用于 <code>dismiss</code>, 表示用户完成了关闭挑战 (插件 1.3.0 起)</li>
 <li><strong>[ minutes ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - <code>snooze</code>: 贪睡分钟数</li>
-<li><strong>[ challenge ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - <code>dismiss</code>: 关闭挑战</li>
+<li><strong>[ challenge ]</strong> { <code>&#39;math&#39;</code> | <code>&#39;shake&#39;</code> | <code>&#39;type&#39;</code> | <code>&#39;script&#39;</code> } - <code>ring</code>, <code>dismiss</code>: 此刻生效的关闭挑战, 没有挑战时不存在 (插件 1.3.0 起), 见 <a href="#alarms_5">关闭挑战</a></li>
 <li><strong>[ ringMillis ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - <code>silence</code>: 响了多久 (毫秒)</li>
 <li><strong>[ reason ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - <code>miss</code>: <code>&#39;off&#39;</code> 或 <code>&#39;late&#39;</code>; <code>skip</code>: <code>&#39;skipNext&#39;</code> (跳过下一次), <code>&#39;holiday&#39;</code> (被 <a href="#alarms_holidayfilter">节假日过滤</a> 跳过) 或 <code>&#39;script&#39;</code> (脚本在 <code>beforeRing</code> 时调用了 <code>skip</code>), 后两者需要插件 1.2.0 及以上版本</li>
 <li><strong>[ detail ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - <code>skip</code> 且 <code>reason</code> 为 <code>&#39;script&#39;</code> 时, 脚本传给 <code>skip</code> 的原因; 脚本没有给出原因时不存在</li>
@@ -2091,13 +2249,13 @@ if (info !== null) {
 <li><strong>pluginVersionCode</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 插件版本号</li>
 <li><strong>packageName</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 插件包名</li>
 <li><strong>contractVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 闹钟插件契约版本, 现为 <code>1</code></li>
-<li><strong>features</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 插件实现的功能: <code>alarms</code> (闹钟, 插件 1.0.x 只有它), <code>timers</code> (计时器) 与 <code>stopwatch</code> (秒表) (插件 1.1.0 起), <code>holidays</code> (节假日) 与 <code>beforeRing</code> (响铃前决定) (插件 1.2.0 起), 以及计划中的 <code>challenges</code>; 应按它判断能力, 不要假定所有功能都存在</li>
+<li><strong>features</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 插件实现的功能: <code>alarms</code> (闹钟, 插件 1.0.x 只有它), <code>timers</code> (计时器) 与 <code>stopwatch</code> (秒表) (插件 1.1.0 起), <code>holidays</code> (节假日) 与 <code>beforeRing</code> (响铃前决定) (插件 1.2.0 起), <code>challenges</code> (关闭挑战) (插件 1.3.0 起); 应按它判断能力, 不要假定所有功能都存在</li>
 <li><strong>permissions</strong> { <span class="type">{ exactAlarm: <a href="dataTypes.html#datatypes_boolean">boolean</a>; notifications: <a href="dataTypes.html#datatypes_boolean">boolean</a>; fullScreen: <a href="dataTypes.html#datatypes_boolean">boolean</a></span> }} - 插件当前持有的精确闹钟, 通知与全屏通知权限</li>
 <li><strong>holidayDataVersion</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 节假日数据版本, 与 <a href="#alarms_m_holidays_info">alarms.holidays.info</a> 返回的 <code>version</code> 二者相同; 没有 <code>holidays</code> 功能时为 <code>null</code></li>
 <li><strong>warnings</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 需要用户注意的情况, 是英文句子, 没有时为空数组. 插件检查默认地区与已启用闹钟所用的节假日地区 (相同的句子只出现一次), 有三种情形: 地区无法解析 (代码未知, 或默认地区没有数据), 使用它的闹钟只按星期规则响铃; 某地区的数据不含当年 (句中给出数据覆盖的年份范围), 使用它的闹钟当年只按星期规则响铃; 某地区当年或次年是推算年份 (句中给出从哪一年起推算), 补班与调休尚未公布, 可能变化</li>
-<li><strong>limits</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 契约限制值: <code>maxAlarms</code>, <code>maxEnabledAlarms</code>, <code>maxTimers</code>, <code>minTimerMillis</code>, <code>maxTimerMillis</code>, <code>maxStopwatchLaps</code>, <code>maxBindingsPerAlarm</code>, <code>maxLabelChars</code>, <code>maxTagChars</code>, <code>maxSpeakTextChars</code>, <code>maxRingtoneBytes</code>, <code>maxPreviewCount</code>, <code>maxUpcomingCount</code>, <code>maxExcludeDates</code>, <code>maxVibratePattern</code>, <code>minAutoSilenceMinutes</code>, <code>maxAutoSilenceMinutes</code>, <code>minSnoozeMinutes</code>, <code>maxSnoozeMinutes</code>, <code>maxSnoozeCount</code>, <code>maxRampSeconds</code>, <code>minLeadSeconds</code>, <code>maxLeadSeconds</code>, 数值见 <a href="#alarms_8">限制</a></li>
+<li><strong>limits</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 契约限制值: <code>maxAlarms</code>, <code>maxEnabledAlarms</code>, <code>maxTimers</code>, <code>minTimerMillis</code>, <code>maxTimerMillis</code>, <code>maxStopwatchLaps</code>, <code>maxBindingsPerAlarm</code>, <code>maxLabelChars</code>, <code>maxTagChars</code>, <code>maxSpeakTextChars</code>, <code>maxRingtoneBytes</code>, <code>maxPreviewCount</code>, <code>maxUpcomingCount</code>, <code>maxExcludeDates</code>, <code>maxVibratePattern</code>, <code>minAutoSilenceMinutes</code>, <code>maxAutoSilenceMinutes</code>, <code>minSnoozeMinutes</code>, <code>maxSnoozeMinutes</code>, <code>maxSnoozeCount</code>, <code>maxRampSeconds</code>, <code>minLeadSeconds</code>, <code>maxLeadSeconds</code>, 数值见 <a href="#alarms_10">限制</a></li>
 </ul>
-<h2>错误代码<span><a class="mark" href="#alarms_7" id="alarms_7">#</a></span></h2>
+<h2>错误代码<span><a class="mark" href="#alarms_9" id="alarms_9">#</a></span></h2>
 <table>
 <thead>
 <tr>
@@ -2116,7 +2274,7 @@ if (info !== null) {
 </tr>
 <tr>
 <td><code>PLUGIN_INCOMPATIBLE</code></td>
-<td>插件版本或契约版本不兼容, 或插件未声明该调用所需的功能 (例如插件 1.0.x 上的 <a href="#alarms_p_timers">alarms.timers</a> 与 <a href="#alarms_p_stopwatch">alarms.stopwatch</a>, 插件 1.1.0 上的 <a href="#alarms_p_holidays">alarms.holidays</a>, <code>holidays</code> 选项与 <code>beforeRing</code> 事件, 消息提示升级到 1.2.0; 插件 1.2.0 上的 <code>dismiss</code> 选项)</td>
+<td>插件版本或契约版本不兼容, 或插件未声明该调用所需的功能 (例如插件 1.0.x 上的 <a href="#alarms_p_timers">alarms.timers</a> 与 <a href="#alarms_p_stopwatch">alarms.stopwatch</a>, 插件 1.1.0 上的 <a href="#alarms_p_holidays">alarms.holidays</a>, <code>holidays</code> 选项与 <code>beforeRing</code> 事件, 消息提示升级到 1.2.0; 插件 1.2.0 上非 <code>null</code> 的 <code>dismiss</code> 选项, 消息提示升级到 1.3.0)</td>
 </tr>
 <tr>
 <td><code>PERMISSION_REQUIRED</code></td>
@@ -2136,7 +2294,7 @@ if (info !== null) {
 </tr>
 <tr>
 <td><code>LIMIT_EXCEEDED</code></td>
-<td>超出 <a href="#alarms_8">限制</a> 中的长度, 大小或数量上限</td>
+<td>超出 <a href="#alarms_10">限制</a> 中的长度, 大小或数量上限</td>
 </tr>
 <tr>
 <td><code>NO_HANDLER</code></td>
@@ -2168,7 +2326,7 @@ if (info !== null) {
 </tr>
 </tbody>
 </table>
-<h2>限制<span><a class="mark" href="#alarms_8" id="alarms_8">#</a></span></h2>
+<h2>限制<span><a class="mark" href="#alarms_10" id="alarms_10">#</a></span></h2>
 <table>
 <thead>
 <tr>
@@ -2211,7 +2369,11 @@ if (info !== null) {
 </tr>
 <tr>
 <td><code>autoSilenceMinutes</code></td>
-<td>1 - 60 分钟 (默认 10)</td>
+<td>1 - 60 分钟 (默认 10, 设置了关闭挑战时至少 30)</td>
+</tr>
+<tr>
+<td>关闭挑战的算术题 / 摇晃 / 输入文字</td>
+<td>1 - 20 题 / 1 - 300 次 / 200 个字符</td>
 </tr>
 <tr>
 <td>贪睡</td>
@@ -2244,7 +2406,7 @@ if (info !== null) {
 </tbody>
 </table>
 <h2>示例 (Examples)<span><a class="mark" href="#alarms_examples" id="alarms_examples">#</a></span></h2>
-<h3>工作日起床, 关闭后运行另一个脚本<span><a class="mark" href="#alarms_9" id="alarms_9">#</a></span></h3>
+<h3>工作日起床, 关闭后运行另一个脚本<span><a class="mark" href="#alarms_11" id="alarms_11">#</a></span></h3>
 <pre><code class="lang-js">let a = alarms.add({
     time: &#39;07:30&#39;,
     repeat: [1, 2, 3, 4, 5],
@@ -2261,14 +2423,14 @@ if (e !== null &amp;&amp; e.type === &#39;dismiss&#39;) {
     toastLog(&#39;早上好&#39;);
 }
 </code></pre>
-<h3>每月最后一个星期五与轮班<span><a class="mark" href="#alarms_10" id="alarms_10">#</a></span></h3>
+<h3>每月最后一个星期五与轮班<span><a class="mark" href="#alarms_12" id="alarms_12">#</a></span></h3>
 <pre><code class="lang-js">/* 每月最后一个星期五 18:00. */
 alarms.add({ time: &#39;18:00&#39;, repeat: &#39;FREQ=MONTHLY;BYDAY=-1FR&#39;, label: &#39;写月报&#39; });
 
 /* 轮班: 从 2026 年 11 月 4 日起每 3 天一次. */
 alarms.add({ time: &#39;06:10&#39;, date: &#39;2026-11-04&#39;, repeat: { freq: &#39;daily&#39;, interval: 3 }, tag: &#39;shift&#39; });
 </code></pre>
-<h3>明天休息就跳过用户的闹钟<span><a class="mark" href="#alarms_11" id="alarms_11">#</a></span></h3>
+<h3>明天休息就跳过用户的闹钟<span><a class="mark" href="#alarms_13" id="alarms_13">#</a></span></h3>
 <pre><code class="lang-js">/* restDay 由脚本自己判断, 例如读取日程文件. */
 let restDay = files.exists(&#39;./rest-tomorrow.flag&#39;);
 if (restDay) {
@@ -2277,7 +2439,7 @@ if (restDay) {
     });
 }
 </code></pre>
-<h3>用朗读代替铃声<span><a class="mark" href="#alarms_12" id="alarms_12">#</a></span></h3>
+<h3>用朗读代替铃声<span><a class="mark" href="#alarms_14" id="alarms_14">#</a></span></h3>
 <pre><code class="lang-js">alarms.add({
     time: &#39;08:55&#39;,
     repeat: [1, 2, 3, 4, 5],
@@ -2286,7 +2448,7 @@ if (restDay) {
     autoSilenceMinutes: 3,
 });
 </code></pre>
-<h3>处理缺少插件或权限<span><a class="mark" href="#alarms_13" id="alarms_13">#</a></span></h3>
+<h3>处理缺少插件或权限<span><a class="mark" href="#alarms_15" id="alarms_15">#</a></span></h3>
 <pre><code class="lang-js">if (!alarms.isAvailable()) {
     toastLog(&#39;请在插件中心安装并启用 3-Chime Alarm&#39;);
     exit();
@@ -2301,7 +2463,7 @@ try {
     }
 }
 </code></pre>
-<h3>番茄钟: 计时器到点后运行另一个脚本<span><a class="mark" href="#alarms_14" id="alarms_14">#</a></span></h3>
+<h3>番茄钟: 计时器到点后运行另一个脚本<span><a class="mark" href="#alarms_16" id="alarms_16">#</a></span></h3>
 <pre><code class="lang-js">let caps = alarms.capabilities();
 if (caps.features.indexOf(&#39;timers&#39;) &lt; 0) {
     toastLog(&#39;请把 3-Chime Alarm 升级到 1.1.0 或更高版本&#39;);
@@ -2316,7 +2478,7 @@ if (e !== null &amp;&amp; e.kind === &#39;timer&#39;) {
     alarms.timers.start(&#39;5m&#39;, { label: &#39;休息&#39; });
 }
 </code></pre>
-<h3>系统时钟<span><a class="mark" href="#alarms_15" id="alarms_15">#</a></span></h3>
+<h3>系统时钟<span><a class="mark" href="#alarms_17" id="alarms_17">#</a></span></h3>
 <pre><code class="lang-js">alarms.system.setAlarm({ hour: 6, minute: 50, label: &#39;赶飞机&#39; });
 setTimeout(() =&gt; {
     let next = alarms.system.next();
