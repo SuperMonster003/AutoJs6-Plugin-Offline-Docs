@@ -604,56 +604,20 @@
 <tr>
 <td>状态</td>
 <td>已支持 64 项</td>
-<td>已支持 60 项, 不适用 4 项</td>
-<td>已支持 60 项, 不适用 4 项</td>
-<td>需授权 60 项, 不适用 4 项</td>
+<td>已支持 64 项</td>
+<td>已支持 64 项</td>
+<td>需授权 64 项</td>
 </tr>
 <tr>
 <td>授权</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td><code>xlsx.control</code> 60 项</td>
+<td><code>xlsx.control</code> 64 项</td>
 </tr>
 </tbody>
 </table>
-<p>差异项 (4 项): 下表列出入口, 状态或授权与同列多数 API 不同的 API, 未列出的 API 与同列多数一致.</p>
-<table>
-<thead>
-<tr>
-<th>API</th>
-<th>Node.js 主线程</th>
-<th>Node.js Worker</th>
-<th>Bun</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Sheet#cols</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-</tr>
-<tr>
-<td><code>Sheet#dimension</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-</tr>
-<tr>
-<td><code>Sheet#index</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-</tr>
-<tr>
-<td><code>Sheet#rows</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-<td><span title="not-portable: sync-only">不适用</span> (依赖同步阻塞), 等价写法: <code>await sheet.properties() of the Node / Bun Sheet, which answers { name, index, rows, cols, dimension }</code></td>
-</tr>
-</tbody>
-</table>
+<p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
 <p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
 <!-- runtime-support:end -->
 <p>Sheet 是 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_sheet">Workbook#sheet</a>, <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_addsheet">Workbook#addSheet</a> 与 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_copysheet">Workbook#copySheet</a> 返回的工作表对象, 指向打开的工作簿中的一个工作表. 用它读取行与单元格, 写入值与公式, 插入与删除行列, 排序, 设置样式与版式, 添加批注, 超链接, 图片, 条件格式与数据有效性.</p>
@@ -694,6 +658,7 @@ try {
 </ul>
 <p>从 1 计的序号. 只读.</p>
 <p><code>index</code>, <a href="#xlsxsheettype_p_rows">rows</a>, <a href="#xlsxsheettype_p_cols">cols</a> 与 <a href="#xlsxsheettype_p_dimension">dimension</a> 是实时属性: 每次读取都向插件查询一次, 反映当前 (含未保存的修改) 的内容. 在循环中反复使用时, 先存入变量.</p>
+<p>在 Node.js 与 Bun 中这四个属性同样每次读取都查询一次, 但读取结果是 Promise, 用 <code>await sheet.rows</code> 取得数值, 查询排在同一工作簿之前的调用之后执行. 见 <a href="runtimeApis.html#runtimeapis_workbook_sheet">运行时 API</a>.</p>
 <h2>[p#] rows<span><a class="mark" href="#xlsxsheettype_p_rows" id="xlsxsheettype_p_rows">#</a></span></h2>
 <p><strong><code>6.8.1</code></strong></p>
 <ul>
