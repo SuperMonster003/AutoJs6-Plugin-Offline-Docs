@@ -599,7 +599,7 @@
 <p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
 <!-- runtime-support:end -->
 <p><code>xlsx</code> 模块用于在脚本中读写电子表格: 读取工作簿信息与单元格数据, 整体写出或在末尾追加行, 打开工作簿后编辑工作表, 行列, 单元格, 样式, 合并单元格, 超链接, 批注, 图片, 条件格式与数据有效性, 用流式写出器生成大表, 以及在格式之间转换, 合并, 拆分, 去重, 重算公式, 加密与解密, 探测 csv 的编码与分隔符, 打开插件的表格查看器并接收选中事件. 支持的格式为 xlsx, xlsm, xls, csv 与 tsv.</p>
-<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Tally Sheet 插件 (AutoJs6-Plugin-Three-Tally-Sheet) 1.0.0 及以上版本提供. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失, 被禁用或版本不兼容时, 方法抛出 (或以 Promise 拒绝) <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code>, <code>PLUGIN_DISABLED</code> 或 <code>PLUGIN_INCOMPATIBLE</code> 的 <a href="#xlsx_c_xlsxerror">XlsxError</a>, 消息以 &quot;3-Tally Sheet 插件不可用. 请在插件中心安装, 启用或更新后重试.&quot; 开头. <a href="#xlsx_m_isavailable">xlsx.isAvailable</a> 可预先探测. 由 AutoJs6 打包的应用同样可以使用本模块, 前提是运行它的设备已安装 3-Tally Sheet 1.0.0 及以上版本, 应用由 AutoJs6 6.8.1 及以上版本打包, 且带有 <code>org.autojs.plugin.xlsx.permission.RUNTIME</code> 权限. 打包流程为 Node.js 项目 (声明了 <code>files</code> 能力或未强制能力) 与 Bun 项目 (授予了 <code>xlsx.control</code>) 自动加入该权限; Rhino 项目需要在 <code>project.json</code> 的 <a href="projectConfig.html#projectconfig_permissions">permissions</a> 中加入它. 打包应用经插件单独的服务与查看器入口调用, 打开的工作簿, 写出器与查看器会话只允许创建它们的应用调用.</p>
+<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Tally Sheet 插件 (AutoJs6-Plugin-Three-Tally-Sheet) 1.0.0 及以上版本提供. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失, 被禁用或版本不兼容时, 方法抛出 (或以 Promise 拒绝) <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code>, <code>PLUGIN_DISABLED</code> 或 <code>PLUGIN_INCOMPATIBLE</code> 的 <a href="#xlsx_c_xlsxerror">XlsxError</a>, 消息以 &quot;3-Tally Sheet 插件不可用. 请在插件中心安装, 启用或更新后重试.&quot; 开头. <a href="#xlsx_m_isavailable">xlsx.isAvailable</a> 可预先探测. 由 AutoJs6 打包的应用同样可以使用本模块, 前提是运行它的设备已安装 3-Tally Sheet 1.0.0 及以上版本, 应用由 AutoJs6 6.8.1 及以上版本打包, 且带有 <code>org.autojs.plugin.xlsx.permission.RUNTIME</code> 权限. 打包流程自动加入该权限: Rhino 项目总会加入, Node.js 项目 (声明了 <code>files</code> 能力或未强制能力) 与 Bun 项目 (授予了 <code>xlsx.control</code>) 也会加入, 无需在 <code>project.json</code> 的 <a href="projectConfig.html#projectconfig_permissions">permissions</a> 中手动添加. 打包应用经插件单独的服务与查看器入口调用, 打开的工作簿, 写出器与查看器会话只允许创建它们的应用调用.</p>
 <p>本模块在 Rhino 中注册为全局名称 <code>xlsx</code>, 并提供 <code>$xlsx</code> 别名, 二者指向同一对象. 本页的签名与同步返回值描述 Rhino. Node.js, Bun 与 Node.js Worker 提供显式导入的异步接口, 参阅 <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_xlsx">Runtime APIs 的 xlsx</a>.</p>
 <pre><code class="lang-js">let path = &#39;/sdcard/Documents/sales.xlsx&#39;;
 let info = xlsx.info(path);
@@ -1260,8 +1260,8 @@ try {
 <ul>
 <li>工作簿之间: 能整载的工作簿连同样式, 合并, 公式与工作表设置一起转换; 超出整载上限时只复制值, 并给出警告. 只有 xlsm 能转为 xlsm (否则失败于 <code>UNSUPPORTED</code>), xlsm 转为其他格式时去掉宏.</li>
 <li>工作簿转 csv 或 tsv: 只写出 <code>sheet</code> 指定的工作表 (默认第一个可见的), 还有其他工作表时给出警告 (每个工作表一个文件请用 <a href="#xlsx_m_split">split</a>). 输出默认为带 BOM 的 UTF-8, <code>encoding</code>, <code>delimiter</code> 与 <code>bom</code> 可改变它; <code>formatted: true</code> 时写入显示文本而不是原始值.</li>
-<li>csv 或 tsv 转工作簿: <code>encoding</code> 与 <code>delimiter</code> 描述源文件, 省略时自动探测 (见 <a href="#xlsx_csv">csv 与编码</a>); <code>parseNumbers</code> (默认 <code>true</code>) 把形如数字的字段写为数字; 列宽按内容自动设置.</li>
-<li>csv 与 tsv 之间: <code>encoding</code>, <code>delimiter</code> 与 <code>bom</code> 描述输出, 源文件的编码与分隔符自动探测. 源与输出格式相同 (例如 csv 转 csv) 时为转码, <code>sourceEncoding</code> 指定源文件的编码, 省略时自动探测.</li>
+<li>csv 或 tsv 转工作簿: 源文件的编码取 <code>sourceEncoding</code>, 其次取 <code>encoding</code>, <code>delimiter</code> 描述源文件的分隔符, 省略时自动探测 (见 <a href="#xlsx_csv">csv 与编码</a>); <code>parseNumbers</code> (默认 <code>true</code>) 把形如数字的字段写为数字; 列宽按内容自动设置.</li>
+<li>csv 与 tsv 之间 (包括源与输出格式相同的转码, 例如 csv 转 csv): <code>encoding</code>, <code>delimiter</code> 与 <code>bom</code> 描述输出; <code>sourceEncoding</code> 指定源文件的编码, 省略时自动探测; 源文件的分隔符自动探测.</li>
 <li>加密的源文件需要 <code>password</code>. 输出为工作簿时沿用该密码, 为 csv 或 tsv 时输出明文并给出警告.</li>
 </ul>
 <pre><code class="lang-js">xlsx.convert(&#39;./report.xls&#39;, &#39;./report.xlsx&#39;);
@@ -1299,7 +1299,7 @@ console.log(r.path);
 <li>}} - 选项</li>
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
 </ul>
-<p>转换为 csv, 相当于输出格式固定为 csv 的 <a href="#xlsx_m_convert">convert</a>, 不看输出路径的扩展名. 选项的含义同 <a href="#xlsx_m_convert">convert</a>; 源文件是 csv 时为转码, <code>sourceEncoding</code> 指定源文件的编码.</p>
+<p>转换为 csv, 相当于输出格式固定为 csv 的 <a href="#xlsx_m_convert">convert</a>, 不看输出路径的扩展名. 选项的含义同 <a href="#xlsx_m_convert">convert</a>; 源文件是 csv 或 tsv 时, <code>sourceEncoding</code> 指定源文件的编码, 省略时自动探测.</p>
 <pre><code class="lang-js">xlsx.toCsv(&#39;./report.xlsx&#39;, &#39;./report-gbk.csv&#39;, { encoding: &#39;GBK&#39;, bom: false });
 </code></pre>
 <h2>[m] toCsvAsync<span><a class="mark" href="#xlsx_m_tocsvasync" id="xlsx_m_tocsvasync">#</a></span></h2>

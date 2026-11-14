@@ -416,7 +416,7 @@ try {
 <h2>[@] Writer<span><a class="mark" href="#xlsxwritertype_writer_1" id="xlsxwritertype_writer_1">#</a></span></h2>
 <p><strong><code>6.8.1</code></strong></p>
 <p>写出器对象. 不能用 <code>new</code> 构造, 只由 <a href="xlsx.html#xlsx_m_createwriter">xlsx.createWriter</a> 与 <a href="xlsx.html#xlsx_m_createwriterasync">xlsx.createWriterAsync</a> 产生. 创建时已开始写第一个工作表 (名称为选项 <code>sheet</code>, 默认 <code>&#39;Sheet1&#39;</code>).</p>
-<p>写出器占用一个句柄 (每个脚本与打开的工作簿合计至多 16 个), <a href="#xlsxwritertype_m_close">close</a> 或 <a href="#xlsxwritertype_m_abort">abort</a> 后释放. 插件 30 分钟没有收到写出器的调用时关闭它并丢弃已写的内容 (缓冲中的 <a href="#xlsxwritertype_m_addrow">addRow</a> 不发送到插件, 不算调用). 写出器关闭后的调用失败于 <code>SESSION_CLOSED</code> (消息形如 &quot;the writer is closed&quot;), <a href="#xlsxwritertype_m_abort">abort</a> 除外; 不带 <code>style</code> 的 <a href="#xlsxwritertype_m_addrow">addRow</a> 只放入缓冲, 在缓冲满而发送时才报告此错误.</p>
+<p>写出器占用一个句柄 (每个脚本与打开的工作簿合计至多 16 个), <a href="#xlsxwritertype_m_close">close</a> 或 <a href="#xlsxwritertype_m_abort">abort</a> 后释放. 插件 30 分钟没有收到写出器的调用时关闭它并丢弃已写的内容 (缓冲中的 <a href="#xlsxwritertype_m_addrow">addRow</a> 不发送到插件, 不算调用), 此后发往插件的调用失败于 <code>SESSION_CLOSED</code>. 调用 <a href="#xlsxwritertype_m_close">close</a> (无论成功与否) 或 <a href="#xlsxwritertype_m_abort">abort</a> 之后, 除 <a href="#xlsxwritertype_m_abort">abort</a> 外的调用都立即失败于 <code>SESSION_CLOSED</code> (消息形如 &quot;the writer is closed&quot;), 不带 <code>style</code> 的 <a href="#xlsxwritertype_m_addrow">addRow</a> 也不例外, <a href="#xlsxwritertype_p_rowcount">rowCount</a> 不再变化.</p>
 <h2>[p#] format<span><a class="mark" href="#xlsxwritertype_p_format" id="xlsxwritertype_p_format">#</a></span></h2>
 <p><strong><code>6.8.1</code></strong></p>
 <ul>
@@ -475,7 +475,7 @@ w.addRow({ 编号: 1, 名称: &#39;钢笔&#39;, 数量: 3 });
 </ul>
 <p>向当前工作表添加一行. <code>row</code> 不是数组或对象时失败于 <code>INVALID_ARGUMENT</code>.</p>
 <ul>
-<li>不带 <code>style</code> 时, 行先在 AutoJs6 中缓冲, 每满 1000 行一并发送给插件, 其余的在 <a href="#xlsxwritertype_m_addrows">addRows</a>, <a href="#xlsxwritertype_m_addsheet">addSheet</a> 或 <a href="#xlsxwritertype_m_close">close</a> 之前发送. 因此这些行的错误 (例如公式语法错误, 超出行数上限) 可能在之后的调用中才报告; 发送失败的行留在缓冲中, 之后的发送会再次失败, 出错后请调用 <a href="#xlsxwritertype_m_abort">abort</a>.</li>
+<li>不带 <code>style</code> 时, 行先在 AutoJs6 中缓冲, 每满 1000 行一并发送给插件, 其余的在 <a href="#xlsxwritertype_m_addrows">addRows</a>, <a href="#xlsxwritertype_m_addsheet">addSheet</a> 或 <a href="#xlsxwritertype_m_close">close</a> 之前发送. 因此这些行的错误 (例如公式语法错误, 超出行数上限) 可能在之后的调用中才报告. 缓冲的行分块发送 (每块至多 1000 行, 行的内容较多时更少); 发送中途失败时, 已写出的块离开缓冲, 只有未写出的行留在缓冲中, 由之后的调用再次发送, <a href="#xlsxwritertype_p_rowcount">rowCount</a> 不会重复计入. 错误由行的内容引起时再次发送仍会失败, 放弃写出时请调用 <a href="#xlsxwritertype_m_abort">abort</a>.</li>
 <li>带 <code>style</code> 时, 先发送缓冲中的行, 再立即发送这一行, 并把样式应用到这一行写出的各个单元格. 每次调用都要与插件往返一次, 比不带样式的调用慢得多; 大量带样式的单元格可以改用单元格对象的 <code>style</code>. <code>style</code> 只接受 <a href="xlsx.html#xlsx_stylespec">StyleSpec</a>, 不接受样式 id. csv 与 tsv 忽略样式.</li>
 </ul>
 <pre><code class="lang-js">w.addRow([&#39;合计&#39;, { f: &#39;SUM(B2:B100)&#39; }], { style: { font: { bold: true }, fill: &#39;#FFF2CC&#39; } });
