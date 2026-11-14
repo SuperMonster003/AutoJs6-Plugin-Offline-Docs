@@ -56,6 +56,7 @@
 <li><a class="nav-continuation" href="continuation.html">Continuation - 续体</a></li>
 <li><a class="nav-cvt" href="cvt.html">Converter - 单位转换</a></li>
 <li><a class="nav-crypto" href="crypto.html">Crypto - 密文</a></li>
+<li><a class="nav-debugging" href="debugging.html">Debugging - 调试</a></li>
 <li><a class="nav-device" href="device.html">Device - 设备</a></li>
 <li><a class="nav-dialogs" href="dialogs.html">Dialogs - 对话框</a></li>
 <li><a class="nav-e4x" href="e4x.html">E4X</a></li>
@@ -378,6 +379,8 @@
 </li>
 <li><p><code>新增</code> <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_xlsx">运行时 API (Runtime APIs)</a>: 补充 &quot;Node.js / Bun / Worker 的 xlsx&quot; 一节, 说明 Node.js 与 Bun 中与 AutoJs6 脚本相同的 xlsx 模块 (AutoJs6 6.8.1, 3-Tally Sheet 1.0.0, Node.js Runtime 2.2.0, Bun Runtime 0.23.0): 入口, 42 个成员都返回 Promise 并可用 cancel() 取消, 选项中的 onProgress, 每次调用需要的能力 (files, files.write, ui) 与 Bun 的 xlsx.control 授权, 同一工作簿上的调用按顺序执行, 工作表的 index, rows, cols 与 dimension 实时属性 (每次读取都以 Promise 返回), sheet.eachRow 用回调或 for await 逐块读取大表, 写入器的行缓冲 (未等待的调用也按顺序执行, 发送失败或被 cancel() 取消时只退回插件未接收的行, 不会重复写出), 表格查看器的事件, 关闭原因与 AutoJs6 脚本相同的事件成员 (emit, emitSticky, listeners 等), 查看器正在显示时再次 view 会直接替换内容 (不要求 AutoJs6 在前台, 旧会话以 replaced 结束), 以及打包应用的权限</p>
 </li>
+<li><p><code>新增</code> <a href="debugging.html">调试 (Debugging)</a>: debugging 模块 (也可写作 $debugging, AutoJs6 6.8.1, 仅 AutoJs6 脚本), 让脚本得知自身是否正被调试, 包括 isAttached, waitForAttach (等待调试器附加并结束配置, 可给超时), breakpoint (已附加时像 debugger 语句一样暂停), 以及 on / once / off 监听的 attach, detach, pause 与 resume 事件 (attach 的 frontend, pause 的 reason 与 threadName); 页首说明可附加的条件 (在代码编辑器中用 &quot;调试&quot; 运行, 或开启 3-Probe Debugger 插件的 &quot;调试服务&quot; 之后开始运行的脚本) 以及不可附加时各方法的表现</p>
+</li>
 <li><p><code>更新</code> <a href="projectConfig.html#projectconfig_usefeatures">项目配置 (project.json)</a>: useFeatures 一节与常见问题 &quot;打包应用中 continuation 不可用&quot; 改为打包应用也读取 useFeatures, 需要用 6.8.1 或更高版本的 APK Builder Template 插件打包, 更早版本打包的应用不读取, 重新打包后生效; &quot;键名与读取规则&quot; 补充 project.json 无法解析时的还原能识别顶层, launchConfig 与 build 段的全部键与别名, 不读取 node, bun 与 agent 段, 接受单引号, 还原字符串中的转义, 用段名别名写的段保存后保留原写法, 以及与正常读取的其他差别 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="projectConfig.html#projectconfig_9">项目配置 (project.json)</a>: 补充 &quot;缺少权限时的表现&quot; 一节, 说明打包应用缺少对应的前台服务权限时, 截图 (images.requestScreenCapture), 网页的后台录音与后台录像, 以及 recorder 模块的录音不再启动前台服务, 改为报错并写明所缺的权限, 打包应用设置页的 &quot;开机时&quot; 开关在缺少 RECEIVE_BOOT_COMPLETED 时不可用; launchConfig.runOnBoot 一节补充该项为 true 时打包始终保留 RECEIVE_BOOT_COMPLETED, 常见问题增加 &quot;打包应用同意截图授权后仍无法截图&quot;; <a href="runtimeApis.html#runtimeapis_23">运行时 API (Runtime APIs)</a> 的 &quot;打包权限与平台边界&quot; 增加该节的链接 (AutoJs6 6.8.1)</p>
@@ -389,6 +392,8 @@
 <li><p><code>更新</code> <a href="shizuku.html#shizuku_p_state">Shizuku</a>: 补充 state 各字段的含义 (isRunning 即已收到 Shizuku 服务端的 Binder, 收到之前 hasPermission 总为 false), 读取 state 时在后台绑定用户服务, &quot;等待 Shizuku 可用&quot; 一节 (轮询 state 或直接执行一次命令, 无需 auto.restart) 以及 Shizuku 不可用时执行命令的报错顺序 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="image.html#image_screen_capture_session_sharing">图像 (Image)</a>: 补充 &quot;屏幕捕获会话共享&quot; 一节 (脚本, 子脚本, Node.js / Bun 执行, 网页与 MCP Server / 3-Stove Agent 的截图回退默认共用一个会话; 兼容判定, 参数不兼容时另建会话并说明原因, 被替换的参与者自动重新申请, isAsync 独占, 同一时刻只允许一个录屏, 最后一个参与者退出后释放, &quot;屏幕捕获器前台服务&quot; 通知的 &quot;停止&quot; 按钮, 设置项, 以及与 &quot;投影媒体权限&quot; 的区别), getScreenCaptureOptions 返回值的 isShared 与 participants, 并相应修改 requestScreenCapture, stopScreenCapture 与 captureScreen 的说明; <a href="runtimeApis.html">运行时 API (Runtime APIs)</a> 与 <a href="video.html#video_m_record">视频 (Video)</a> 同步说明 requireExistingPermission 与录屏数量限制 (AutoJs6 6.8.1)</p>
+</li>
+<li><p><code>更新</code> <a href="image.html#image_m_images_capturescreen">图像 (Image)</a>: captureScreen 说明返回调用时的最新画面 (画面静止时约两个刷新周期内即返回最近一帧, 需要某个操作之后的画面时应自行等待), 取不到画面时约 2.4 秒后返回上一帧; &quot;屏幕捕获会话共享&quot; 一节补充多个脚本同时截图的行为 (不排队, 同一时刻得到同一帧的独立副本) (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="qa.html#qa_9">疑难解答 (Q &amp; A)</a>: 补充 &quot;无响应与自动重启&quot; 一节, 说明主线程无响应时写入的无响应报告与自动重启 (默认 60 秒, 10 分钟内最多 2 次, 可关闭; 重启后重新运行由 &quot;AutoJs6 启动时&quot; 触发的任务), 以及 AutoJs6 被系统冻结时的冻结记录与保持后台运行的系统设置 (AutoJs6 6.8.1)</p>
 </li>

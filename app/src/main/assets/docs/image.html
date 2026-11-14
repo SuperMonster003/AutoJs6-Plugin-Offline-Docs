@@ -56,6 +56,7 @@
 <li><a class="nav-continuation" href="continuation.html">Continuation - 续体</a></li>
 <li><a class="nav-cvt" href="cvt.html">Converter - 单位转换</a></li>
 <li><a class="nav-crypto" href="crypto.html">Crypto - 密文</a></li>
+<li><a class="nav-debugging" href="debugging.html">Debugging - 调试</a></li>
 <li><a class="nav-device" href="device.html">Device - 设备</a></li>
 <li><a class="nav-dialogs" href="dialogs.html">Dialogs - 对话框</a></li>
 <li><a class="nav-e4x" href="e4x.html">E4X</a></li>
@@ -1246,6 +1247,7 @@ console.log(&quot;bytes=&quot; + result.size);
 <li>参数不兼容的申请者另建会话并再次弹出授权窗口, 系统随即停止原会话. 新申请者的控制台写明原因 (如 &quot;方向 landscape 与当前会话的 auto 不同&quot;), 原会话的参与者的控制台提示会话已被替换; 其下一次 <code>captureScreen()</code> 以默认参数自动重新申请, 因而通常直接加入新会话. 重新申请的次数不限.</li>
 <li><code>isAsync: true</code> 的申请者独占会话: 已有会话时另建会话, 其他申请者遇到独占会话时同样另建会话. 两者交替申请时后来者胜, 与 6.8.0 相同.</li>
 <li>同一时刻只允许一个录屏 (<a href="video.html#video_m_record">video.record</a>, Node.js / Bun 的 <code>screen_recorder.start</code> 等). 第二个录屏立即报错并注明正在录制的一方 (video.record 的错误码为 <code>LIMIT_EXCEEDED</code>), 不排队; 录制期间其他参与者的 <code>captureScreen()</code> 返回录制中的画面.</li>
+<li>多个参与者同时截图时不相互排队: 各自取用会话中最新的一帧并同时复制, 同一时刻截图的参与者得到同一帧画面, 但每个参与者得到各自独立的图片, 回收其中一张不影响其他参与者. 画面持续变化时, 同时连续截图的参与者越多, 每张截图的耗时越高 (多份复制同时进行, 争用内存带宽, 视设备而定); 画面静止时与单个参与者基本相同.</li>
 <li>参与者退出 (<a href="#image_m_images_stopscreencapture">stopScreenCapture()</a>, 脚本或执行结束, 网页关闭) 只离开会话, 其他参与者继续使用; 最后一个参与者离开后会话立即释放 (投影, 虚拟显示与前台服务一并停止), 之后的申请会再次弹出授权窗口.</li>
 <li>截图期间 AutoJs6 的 &quot;屏幕捕获器前台服务&quot; 通知带有 &quot;停止&quot; 按钮: 点按后结束全部屏幕捕获会话, 效果与系统停止投影相同. 各参与者 (包括 Node.js / Bun 执行) 的控制台提示截图已从通知栏停止, 其下一次 <code>captureScreen()</code> 重新申请 (已授予 &quot;投影媒体权限&quot; 时不弹出授权窗口). 部分系统 (如 HyperOS) 没有停止屏幕捕获的系统入口, 可用此按钮停止.</li>
 <li>Node.js 与 Bun 脚本以 <code>requireExistingPermission: true</code> 申请时加入其他脚本已有的兼容会话, 不弹窗; 没有会话, 会话是 isAsync 独占会话, 或共享已关闭时以 permission-denied 失败. 另建会话的原因与会话被替换的提示同样写入 Node.js / Bun 执行的控制台; 网页 (getDisplayMedia) 的原因只写入 logcat (标签 <code>ScreenCaptureSessions</code>).</li>
@@ -1367,7 +1369,14 @@ console.log(`shared: ${options.shared}, participants: ${options.participants()}`
 <li><ins><strong>returns</strong></ins> { <span class="type"><a href="imageWrapperType.html">ImageWrapper</a></span> } - 当前屏幕图片</li>
 </ul>
 <p>在后台脚本线程中, 若尚未请求权限, 此方法会先同步调用 <code>requestScreenCapture()</code>. UI 线程不会自动请求权限.</p>
-<p>截图模块会管理返回图片的缓存和更新, 通常不需要手动回收该对象. 若截图暂时失败且已有可用的上一帧, 方法会返回上一帧的副本; 无任何有效帧时抛出异常.</p>
+<p>截图模块会管理返回图片的缓存和更新, 通常不需要手动回收该对象. 若暂时取不到画面 (如屏幕关闭) 且已有可用的上一帧, 方法约 2.4 秒后返回上一帧的副本; 无任何有效帧时抛出异常.</p>
+<p>AutoJs6 6.8.1 起, 此方法返回调用时屏幕的最新画面: 屏幕捕获会话保留最近的一帧, 画面持续变化时立即取用最新一帧; 画面静止 (系统没有产生新帧) 时最多只等待约两个刷新周期 (20 - 50 毫秒), 仍无新帧即返回最近一帧的副本, 不再每次等待新的一帧. 因此执行点击, 滑动或启动应用等操作后立即截图, 可能得到操作生效之前的画面; 需要某个操作之后的画面时, 先自行等待界面更新 (例如 <code>sleep()</code> 适当的时长, 或循环截图直到画面出现预期的变化) 再截图. 屏幕方向或尺寸改变, 开始或结束录屏, 以及屏幕点亮或熄灭之后的第一次截图会等待新的一帧, 不返回此前保留的画面. Node.js 与 Bun 脚本的 <code>images.captureScreen()</code> 同样如此. 多个脚本同时截图的行为见 <a href="#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
+<pre><code class="lang-js">requestScreenCapture();
+click(500, 1000);
+// 等待点击后的界面更新, 再截取其画面.
+sleep(300);
+let after = captureScreen();
+</code></pre>
 <p>本脚本的屏幕捕获会话被系统停止 (如通知栏的 &quot;停止&quot;, 其他应用开始投影, 或参数不兼容的申请者另建会话) 后, 下一次调用以默认参数重新申请; 录屏期间返回录制中的画面. 参阅 <a href="#image_screen_capture_session_sharing">屏幕捕获会话共享</a>.</p>
 <pre><code class="lang-js">requestScreenCapture();
 let image = captureScreen();
