@@ -842,12 +842,12 @@ if (e !== null &amp;&amp; e.type === &#39;beforeRing&#39;) {
 });
 </code></pre>
 <h2>关闭挑战<span><a class="mark" href="#alarms_5" id="alarms_5">#</a></span></h2>
-<p>插件 1.3.0 起, 闹钟可以要求先完成一项挑战才能关闭, 由 <a href="#alarms_alarmoptions">AlarmOptions</a> 的 <code>dismiss</code> 设置 (成员见 <a href="#alarms_dismissoptions">DismissOptions</a>). 需要 AutoJs6 6.8.1 及以上版本与插件 1.3.0 及以上版本; 在更早的插件上给出非 <code>null</code> 的 <code>dismiss</code> 抛出 <code>PLUGIN_INCOMPATIBLE</code>, <code>dismiss: null</code> (清除挑战) 不受影响. 计时器没有关闭挑战.</p>
-<p>无论哪种挑战, 闹钟总有两条出路, 不会一直响下去:</p>
+<p>插件 1.3.0 起, 闹钟可以要求先完成一项挑战才能关闭, 由 <a href="#alarms_alarmoptions">AlarmOptions</a> 的 <code>dismiss</code> 设置 (成员见 <a href="#alarms_dismissoptions">DismissOptions</a>). 无论哪种挑战, 闹钟总有两条出路, 不会一直响下去:</p>
 <ul>
 <li>自动停止: 设置了挑战而省略 <code>autoSilenceMinutes</code> 时, 取插件设置页的默认值与 30 分钟中较大的一个; 显式写出的值仍为 <code>1..60</code> 分钟. 到时停止并发出 <code>silence</code> 事件, 响铃界面始终显示剩余时间.</li>
 <li>紧急关闭: 响铃界面在前台 (包括在锁屏上) 时, 4 秒内连按 5 次音量键 (加或减都算) 立即关闭闹钟, <code>dismiss</code> 事件的 <code>by</code> 为 <code>&#39;user&#39;</code>. 挑战生效期间音量键只用于计数, 不调节音量. 可以在插件设置页关闭此功能 (默认打开).</li>
 </ul>
+<p>需要 AutoJs6 6.8.1 及以上版本与插件 1.3.0 及以上版本; 在更早的插件上给出非 <code>null</code> 的 <code>dismiss</code> 抛出 <code>PLUGIN_INCOMPATIBLE</code>, <code>dismiss: null</code> (清除挑战) 不受影响. 计时器没有关闭挑战.</p>
 <table>
 <thead>
 <tr>
@@ -1616,7 +1616,7 @@ if (alarms.holidays.isWorkday(new Date(), region)) {
 <li>方法返回 <code>true</code> 只表示有应用接收了 Intent, 不保证时钟应用已建好闹钟或已执行操作.</li>
 <li>不写 <code>package</code> 时把 Intent 交给系统解析: 有默认时钟应用时直接交给它, 有多个候选时由用户在选择器中选择. 写 <code>package</code> 时交给该应用中处理此动作的界面, 该应用不处理时抛出 <code>NO_HANDLER</code>.</li>
 <li>没有任何应用能处理时抛出 <code>NO_HANDLER</code>; 设备的 Android 版本低于该动作所需时抛出 <code>UNSUPPORTED</code>; 选项错误为 <code>INVALID_OPTIONS</code>.</li>
-<li>3-Chime Alarm 也接收这些 Intent. 用户把它设为默认时钟应用, 或在选择器中选了它时, <code>alarms.system</code> 建的闹钟进入 3-Chime Alarm, 来源记为 <code>&#39;intent&#39;</code>; 也可以写 <code>package: &#39;io.github.supermonster003.autojs6.plugin.three.chime.alarm&#39;</code> 直接指定它. 插件 1.0.x 处理 <code>setAlarm</code>, <code>showAlarms</code>, <code>dismissAlarm</code> 与 <code>snoozeAlarm</code>, 不处理计时器的三个动作; 插件 1.1.0 起也处理 <code>setTimer</code>, <code>showTimers</code> 与 <code>dismissTimer</code>, 建的计时器出现在 <a href="#alarms_p_timers">alarms.timers</a> 中. 插件 1.3.0 起, 设置了 <a href="#alarms_5">关闭挑战</a> 的闹钟收到 <code>dismissAlarm</code> 时打开响铃界面的挑战而不直接关闭, <code>allowSnooze</code> 为 <code>false</code> 时不响应 <code>snoozeAlarm</code>.</li>
+<li>3-Chime Alarm 也接收这些 Intent. 用户把它设为默认时钟应用, 或在选择器中选了它时, <code>alarms.system</code> 建的闹钟进入 3-Chime Alarm, 来源记为 <code>&#39;intent&#39;</code>; 也可以写 <code>package: &#39;io.github.supermonster003.autojs6.plugin.three.chime.alarm&#39;</code> 直接指定它. 插件 1.0.x 处理 <code>setAlarm</code>, <code>showAlarms</code>, <code>dismissAlarm</code> 与 <code>snoozeAlarm</code>, 不处理计时器的三个动作; 插件 1.1.0 起也处理 <code>setTimer</code>, <code>showTimers</code> 与 <code>dismissTimer</code>, 建的计时器出现在 <a href="#alarms_p_timers">alarms.timers</a> 中. 插件 1.3.0 起, 设置了 <a href="#alarms_5">关闭挑战</a> 的闹钟收到 <code>dismissAlarm</code> 时打开响铃界面的挑战而不直接关闭, <code>allowSnooze</code> 为 <code>false</code> 时收到 <code>snoozeAlarm</code> 也不贪睡.</li>
 </ul>
 <p>各时钟应用对这些 Intent 的支持不一, AutoJs6 不做兼容处理. 已知差异 (2026-11-05 实测, 未列出的项目未实测):</p>
 <table>
