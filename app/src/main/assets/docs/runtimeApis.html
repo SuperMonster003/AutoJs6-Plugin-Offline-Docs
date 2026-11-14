@@ -117,6 +117,7 @@
 <li><a class="nav-util" href="util.html">Util - 工具</a></li>
 <li><a class="nav-web" href="web.html">Web - 万维网</a></li>
 <li><a class="nav-workManager" href="workManager.html">WorkManager - 计划任务兼容接口</a></li>
+<li><a class="nav-xlsx" href="xlsx.html">Xlsx - 表格</a></li>
 <li><a class="nav-yolo" href="yolo.html">YOLO - 目标检测</a></li>
 <li><a class="nav-zip" href="zip.html">Zip - 压缩文件</a></li>
 </ul>
@@ -156,8 +157,12 @@
 <li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
 <li><a class="nav-pdfDocumentType" href="pdfDocumentType.html">PdfDocument - PDF 文档对象</a></li>
 <li><a class="nav-pdfViewSessionType" href="pdfViewSessionType.html">PdfViewSession - PDF 查看器会话</a></li>
+<li><a class="nav-xlsxSheetType" href="xlsxSheetType.html">Sheet - 工作表对象</a></li>
+<li><a class="nav-xlsxViewSessionType" href="xlsxViewSessionType.html">SheetViewSession - 表格查看器会话</a></li>
 <li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
 <li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
+<li><a class="nav-xlsxWorkbookType" href="xlsxWorkbookType.html">Workbook - 工作簿对象</a></li>
+<li><a class="nav-xlsxWriterType" href="xlsxWriterType.html">Writer - 写出器对象</a></li>
 <li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
 <li><a class="nav-eventEmitterType" href="eventEmitterType.html">EventEmitter - 事件发射器</a></li>
 <li><a class="nav-imageWrapperType" href="imageWrapperType.html">ImageWrapper - 包装图像类</a></li>
@@ -3967,7 +3972,7 @@ watcher.on(&#39;message&#39;, async (message, watch) =&gt; {
 <p>独立签名应用需要匹配的 Runtime Kit 与 Builder. Builder 根据 mail/mail.control 能力添加 <code>org.autojs.plugin.mail.permission.RUNTIME</code>. 插件通过单独入口接受调用者显式提供的连接配置, 返回的会话和监听仅允许创建它们的 UID 调用. 已保存账户别名, accounts.list/accounts.has 和后台守望状态仍只允许原签名宿主访问; 打包应用尝试访问时以 PLUGIN_UNAVAILABLE 拒绝. 本入口不要求麦克风权限, 也不打开账户管理页面.</p>
 <p>Bun 的 mail.control 分片和监听调用不计入普通能力的单次执行 1024 次累计额度; 授权, 请求/响应大小, 四个并发请求及单次 RPC 期限仍保留. 大附件按文件流传输, 内联消息参数仍受运行时请求大小限制. mail 的根方法与 providers/accounts 共覆盖 57 个现有方法名, 不表示完整 Rhino 对象或 EventEmitter 原型一致. 本批不改变 Node/Bun 引擎版本或 Android/ABI 兼容范围; Node 的宿主桥接库随封装实现重新构建.</p>
 <h2>Node.js / Bun / Worker 的 xlsx<span><a class="mark" href="#runtimeapis_node_js_bun_worker_xlsx" id="runtimeapis_node_js_bun_worker_xlsx">#</a></span></h2>
-<p>Node.js Runtime 2.2.0 与 Bun Runtime 0.23.0 的本地开发版本提供与 AutoJs6 脚本相同的 xlsx 模块, 读写 xlsx, xlsm, xls, csv 与 tsv 表格, 需要 AutoJs6 6.8.1 与 3-Tally Sheet 1.0.0 或以上. 此处描述开发版本, 不表示已公开发布. 表格的读写, 公式计算与查看器由 3-Tally Sheet 插件提供; 插件缺失, 停用或不兼容时 isAvailable 返回 false, 其他调用以 XlsxError <code>PLUGIN_UNAVAILABLE</code> 拒绝.</p>
+<p>Node.js Runtime 2.2.0 与 Bun Runtime 0.23.0 的本地开发版本提供与 AutoJs6 脚本相同的 <a href="xlsx.html">xlsx</a> 模块, 读写 xlsx, xlsm, xls, csv 与 tsv 表格, 需要 AutoJs6 6.8.1 与 3-Tally Sheet 1.0.0 或以上. 此处描述开发版本, 不表示已公开发布. 表格的读写, 公式计算与查看器由 3-Tally Sheet 插件提供; 插件缺失, 停用或不兼容时 isAvailable 返回 false, 其他调用以 XlsxError <code>PLUGIN_UNAVAILABLE</code> 拒绝.</p>
 <p>Node.js 主线程与 CommonJS/ESM/嵌套 Worker 使用 <code>require(&#39;xlsx&#39;)</code>, <code>require(&#39;autojs6:xlsx&#39;)</code> 或对应的 ESM import, 主线程也可使用显式 <code>$autojs.xlsx</code> 与 <code>autojs6:compat</code> 的同名成员. Bun 通过 <code>createHostClient()</code> 返回的 <code>host.xlsx</code> 使用同一接口. 路径由宿主解析并打开, 规则同 <a href="#runtimeapis_1">相对路径</a>.</p>
 <pre><code class="lang-js">&quot;nodejs&quot;;
 let xlsx = require(&#39;autojs6:xlsx&#39;);

@@ -1,0 +1,2008 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>表格 (Xlsx) | AutoJs6 文档 - 6.8.0</title>
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/sh.css">
+    <link rel="stylesheet" href="plugins/docsify-copy-code@2-styles.css">
+    <link rel="stylesheet" href="plugins/zoom-image-styles.css">
+    <link rel="canonical" href="https://nodejs.org/api/xlsx.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="user-scalable=no">
+</head>
+<body class="alt apidoc" id="api-section-xlsx">
+<div id="content" class="clearfix">
+    <div id="column2" class="interior">
+        <div id="intro" class="interior">
+            <a href="/" title="返回首页">
+                AutoJs6
+            </a>
+        </div>
+        <ul>
+<li><a class="nav-overview" href="overview.html">Overview - 综述</a></li>
+<li><a class="nav-documentation" href="documentation.html">About - 关于文档</a></li>
+<li><a class="nav-progress" href="progress.html">Progress - 文档部署进度</a></li>
+<li><a class="nav-changelog" href="changelog.html">Changelog - 文档更新日志</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-manual" href="manual.html">Manual - AutoJs6 使用手册</a></li>
+<li><a class="nav-runtimeApis" href="runtimeApis.html">Runtime APIs - 运行时 API</a></li>
+<li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
+<li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
+<li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
+<li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-ai" href="ai.html">AI - 人工智能</a></li>
+<li><a class="nav-app" href="app.html">App - 通用应用</a></li>
+<li><a class="nav-autojs4Runtime" href="autojs4Runtime.html">AutoJs4 Runtime - AutoJs4 运行时</a></li>
+<li><a class="nav-autojs" href="autojs.html">AutoJs6 - 本体应用</a></li>
+<li><a class="nav-automator" href="automator.html">Automator - 自动化</a></li>
+<li><a class="nav-barcode" href="barcode.html">Barcode - 条码</a></li>
+<li><a class="nav-base64" href="base64.html">Base64</a></li>
+<li><a class="nav-bundledLibraries" href="bundledLibraries.html">Bundled Libraries - 脚本库</a></li>
+<li><a class="nav-camera" href="camera.html">Camera - 相机</a></li>
+<li><a class="nav-canvas" href="canvas.html">Canvas - 画布</a></li>
+<li><a class="nav-color" href="color.html">Color - 颜色</a></li>
+<li><a class="nav-compose" href="compose.html">3-Block Compose</a></li>
+<li><a class="nav-composeDesigner" href="composeDesigner.html">3-Block Compose Designer - 设计器</a></li>
+<li><a class="nav-console" href="console.html">Console - 控制台</a></li>
+<li><a class="nav-continuation" href="continuation.html">Continuation - 续体</a></li>
+<li><a class="nav-cvt" href="cvt.html">Converter - 单位转换</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto - 密文</a></li>
+<li><a class="nav-device" href="device.html">Device - 设备</a></li>
+<li><a class="nav-dialogs" href="dialogs.html">Dialogs - 对话框</a></li>
+<li><a class="nav-e4x" href="e4x.html">E4X</a></li>
+<li><a class="nav-engines" href="engines.html">Engines - 引擎</a></li>
+<li><a class="nav-epub" href="epub.html">EPUB - 电子书</a></li>
+<li><a class="nav-events" href="events.html">Events - 事件监听</a></li>
+<li><a class="nav-files" href="files.html">Files - 文件</a></li>
+<li><a class="nav-floaty" href="floaty.html">Floaty - 悬浮窗</a></li>
+<li><a class="nav-flow" href="flow.html">Flow - 流程</a></li>
+<li><a class="nav-fmt" href="fmt.html">Formatter - 格式化</a></li>
+<li><a class="nav-gallery" href="gallery.html">Gallery - 相册</a></li>
+<li><a class="nav-global" href="global.html">Global - 全局对象</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-imgui" href="imgui.html">ImGui</a></li>
+<li><a class="nav-image" href="image.html">Images - 图像</a></li>
+<li><a class="nav-installer" href="installer.html">Installer - 安装器</a></li>
+<li><a class="nav-i18n" href="i18n.html">Internationalization - 国际化</a></li>
+<li><a class="nav-javaRuntime" href="javaRuntime.html">Java Runtime - Java 运行时</a></li>
+<li><a class="nav-jsox" href="jsox.html">Jsox - JavaScript 对象扩展</a></li>
+<li><a class="nav-keys" href="keys.html">Keys - 按键</a></li>
+<li><a class="nav-kotlinRuntime" href="kotlinRuntime.html">Kotlin Runtime - Kotlin 运行时</a></li>
+<li><a class="nav-luaRuntime" href="luaRuntime.html">Lua Runtime - Lua 运行时</a></li>
+<li><a class="nav-mail" href="mail.html">Mail - 邮件</a></li>
+<li><a class="nav-media" href="media.html">Media - 多媒体</a></li>
+<li><a class="nav-mediainfo" href="mediainfo.html">MediaInfo - 媒体信息</a></li>
+<li><a class="nav-memory" href="memory.html">Memory - 内存</a></li>
+<li><a class="nav-mime" href="mime.html">MIME - 媒体类型</a></li>
+<li><a class="nav-modules" href="modules.html">Module - 模块</a></li>
+<li><a class="nav-nanoid" href="nanoid.html">Nano ID - 随机 ID</a></li>
+<li><a class="nav-notice" href="notice.html">Notice - 消息通知</a></li>
+<li><a class="nav-ocr" href="ocr.html">OCR - 光学字符识别</a></li>
+<li><a class="nav-opencc" href="opencc.html">OpenCC - 中文转换</a></li>
+<li><a class="nav-pangu" href="pangu.html">Pangu - 文本间距</a></li>
+<li><a class="nav-pdf" href="pdf.html">PDF - PDF 文档</a></li>
+<li><a class="nav-pinyin" href="pinyin.html">Pinyin - 拼音</a></li>
+<li><a class="nav-pinyin4j" href="pinyin4j.html">Pinyin4j</a></li>
+<li><a class="nav-plugins" href="plugins.html">Plugins - 插件</a></li>
+<li><a class="nav-powerManager" href="powerManager.html">PowerManager - 电源管理</a></li>
+<li><a class="nav-pythonRuntime" href="pythonRuntime.html">Python Runtime - Python 运行时</a></li>
+<li><a class="nav-qrcode" href="qrcode.html">QR Code - 二维码</a></li>
+<li><a class="nav-recorder" href="recorder.html">Recorder - 记录器</a></li>
+<li><a class="nav-sensors" href="sensors.html">Sensors - 传感器</a></li>
+<li><a class="nav-settings" href="settings.html">Settings - 应用设置</a></li>
+<li><a class="nav-shell" href="shell.html">Shell</a></li>
+<li><a class="nav-shizuku" href="shizuku.html">Shizuku</a></li>
+<li><a class="nav-speech" href="speech.html">Speech - 语音</a></li>
+<li><a class="nav-sqlite" href="sqlite.html">SQLite - 数据库</a></li>
+<li><a class="nav-s13n" href="s13n.html">Standardization - 标准化</a></li>
+<li><a class="nav-storages" href="storages.html">Storages - 存储</a></li>
+<li><a class="nav-sysprops" href="sysprops.html">Sysprops - 系统属性</a></li>
+<li><a class="nav-tasks" href="tasks.html">Tasks - 任务</a></li>
+<li><a class="nav-terminal" href="terminal.html">Terminal - 终端</a></li>
+<li><a class="nav-threads" href="threads.html">Threads - 线程</a></li>
+<li><a class="nav-timers" href="timers.html">Timers - 定时器</a></li>
+<li><a class="nav-toast" href="toast.html">Toast - 消息浮动框</a></li>
+<li><a class="nav-tts" href="tts.html">TTS - 文本转语音</a></li>
+<li><a class="nav-ui" href="ui.html">UI - 用户界面</a></li>
+<li><a class="nav-uiAttributes" href="uiAttributes.html">UI Attributes - UI 布局属性</a></li>
+<li><a class="nav-util" href="util.html">Util - 工具</a></li>
+<li><a class="nav-web" href="web.html">Web - 万维网</a></li>
+<li><a class="nav-workManager" href="workManager.html">WorkManager - 计划任务兼容接口</a></li>
+<li><a class="nav-xlsx active" href="xlsx.html">Xlsx - 表格</a></li>
+<li><a class="nav-yolo" href="yolo.html">YOLO - 目标检测</a></li>
+<li><a class="nav-zip" href="zip.html">Zip - 压缩文件</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-uiSelectorType" href="uiSelectorType.html">UiSelector - 选择器</a></li>
+<li><a class="nav-uiObjectType" href="uiObjectType.html">UiObject - 控件节点</a></li>
+<li><a class="nav-uiObjectCollectionType" href="uiObjectCollectionType.html">UiObjectCollection - 控件集合</a></li>
+<li><a class="nav-uiObjectActionsType" href="uiObjectActionsType.html">UiObjectActions - 控件节点行为</a></li>
+<li><a class="nav-composeNodeType" href="composeNodeType.html">ComposeNode - Compose 节点</a></li>
+<li><a class="nav-composeStateType" href="composeStateType.html">ComposeState - Compose 状态</a></li>
+<li><a class="nav-composeModifierType" href="composeModifierType.html">ComposeModifier - Compose 修饰链</a></li>
+<li><a class="nav-composeThemeType" href="composeThemeType.html">ComposeTheme - Compose 主题</a></li>
+<li><a class="nav-composeSessionType" href="composeSessionType.html">ComposeSession - Compose 会话</a></li>
+<li><a class="nav-composeFloatyWindowType" href="composeFloatyWindowType.html">ComposeFloatyWindow - Compose 悬浮窗</a></li>
+<li><a class="nav-composeComponents" href="composeComponents.html">Compose 组件目录</a></li>
+<li><a class="nav-imguiSessionType" href="imguiSessionType.html">ImguiSession - ImGui 会话</a></li>
+<li><a class="nav-imguiDrawListType" href="imguiDrawListType.html">ImguiDrawList - ImGui 绘制列表</a></li>
+<li><a class="nav-imguiFloatingButtonType" href="imguiFloatingButtonType.html">ImguiFloatingButton - ImGui 悬浮按钮</a></li>
+<li><a class="nav-imguiComponentType" href="imguiComponentType.html">ImguiComponent - ImGui 高层组件</a></li>
+<li><a class="nav-imguiDataTableType" href="imguiDataTableType.html">ImguiDataTable - ImGui 数据表格</a></li>
+<li><a class="nav-imguiLogWindowType" href="imguiLogWindowType.html">ImguiLogWindow - ImGui 日志窗口</a></li>
+<li><a class="nav-imguiToastType" href="imguiToastType.html">ImguiToast - ImGui 短消息</a></li>
+<li><a class="nav-imguiStatsOverlayType" href="imguiStatsOverlayType.html">ImguiStatsOverlay - ImGui 帧率覆盖层</a></li>
+<li><a class="nav-imguiDialogType" href="imguiDialogType.html">ImguiDialog - ImGui 对话框</a></li>
+<li><a class="nav-imguiDialogPromiseType" href="imguiDialogPromiseType.html">ImguiDialogPromise - ImGui 对话框 Promise</a></li>
+<li><a class="nav-imguiTextureType" href="imguiTextureType.html">ImguiTexture - ImGui 纹理</a></li>
+<li><a class="nav-imguiSelectionStorageType" href="imguiSelectionStorageType.html">ImguiSelectionStorage - ImGui 选择存储</a></li>
+<li><a class="nav-imguiMultiSelectIOType" href="imguiMultiSelectIOType.html">ImguiMultiSelectIO - ImGui 多选结果</a></li>
+<li><a class="nav-epubBookType" href="epubBookType.html">EpubBook - 电子书对象</a></li>
+<li><a class="nav-epubReaderSessionType" href="epubReaderSessionType.html">EpubReaderSession - 阅读器会话</a></li>
+<li><a class="nav-flowType" href="flowType.html">Flow - 流程对象</a></li>
+<li><a class="nav-flowErrorType" href="flowErrorType.html">FlowError - 流程错误</a></li>
+<li><a class="nav-galleryViewSessionType" href="galleryViewSessionType.html">GalleryViewSession - 查看器会话</a></li>
+<li><a class="nav-mailClientType" href="mailClientType.html">MailClient - 邮件客户端</a></li>
+<li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
+<li><a class="nav-pdfDocumentType" href="pdfDocumentType.html">PdfDocument - PDF 文档对象</a></li>
+<li><a class="nav-pdfViewSessionType" href="pdfViewSessionType.html">PdfViewSession - PDF 查看器会话</a></li>
+<li><a class="nav-xlsxSheetType" href="xlsxSheetType.html">Sheet - 工作表对象</a></li>
+<li><a class="nav-xlsxViewSessionType" href="xlsxViewSessionType.html">SheetViewSession - 表格查看器会话</a></li>
+<li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
+<li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
+<li><a class="nav-xlsxWorkbookType" href="xlsxWorkbookType.html">Workbook - 工作簿对象</a></li>
+<li><a class="nav-xlsxWriterType" href="xlsxWriterType.html">Writer - 写出器对象</a></li>
+<li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
+<li><a class="nav-eventEmitterType" href="eventEmitterType.html">EventEmitter - 事件发射器</a></li>
+<li><a class="nav-imageWrapperType" href="imageWrapperType.html">ImageWrapper - 包装图像类</a></li>
+<li><a class="nav-appType" href="appType.html">App - 应用枚举类</a></li>
+<li><a class="nav-colorType" href="colorType.html">Color - 颜色类</a></li>
+<li><a class="nav-versionType" href="versionType.html">Version - 版本工具类</a></li>
+<li><a class="nav-polyfill" href="polyfill.html">Polyfill - 代码填泥</a></li>
+<li><a class="nav-arrayx" href="arrayx.html">Arrayx - Array 扩展</a></li>
+<li><a class="nav-numberx" href="numberx.html">Numberx - Number 扩展</a></li>
+<li><a class="nav-mathx" href="mathx.html">Mathx - Math 扩展</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-exceptions" href="exceptions.html">Exceptions - 异常</a></li>
+<li><a class="nav-intentType" href="intentType.html">Intent - 意图</a></li>
+<li><a class="nav-runtime" href="runtime.html">Runtime - 运行时</a></li>
+<li><a class="nav-context" href="context.html">Context - 上下文</a></li>
+<li><a class="nav-activity" href="activity.html">Activity - 活动</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-scriptingJava" href="scriptingJava.html">Scripting Java - 脚本化 Java</a></li>
+<li><a class="nav-classSyntax" href="classSyntax.html">Class Syntax - 类语法</a></li>
+<li><a class="nav-asyncAwait" href="asyncAwait.html">Async/Await - async/await 与 continuation</a></li>
+<li><a class="nav-apiLevel" href="apiLevel.html">Android API Level - 安卓 API 级别</a></li>
+<li><a class="nav-colorTable" href="colorTable.html">Color Table - 颜色列表</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-glossaries" href="glossaries.html">Glossaries - 术语</a></li>
+<li><a class="nav-httpHeaderGlossary" href="httpHeaderGlossary.html">HttpHeader - HTTP 标头</a></li>
+<li><a class="nav-httpRequestMethodsGlossary" href="httpRequestMethodsGlossary.html">HttpRequestMethods - HTTP 请求方法</a></li>
+<li><a class="nav-mimeTypeGlossary" href="mimeTypeGlossary.html">MimeType - MIME 类型</a></li>
+<li><a class="nav-notificationChannelGlossary" href="notificationChannelGlossary.html">NotificationChannel - 通知渠道</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-dataTypes" href="dataTypes.html">Data Types - 数据类型</a></li>
+<li><a class="nav-omniTypes" href="omniTypes.html">Omnipotent Types - 全能类型</a></li>
+<li><a class="nav-storageType" href="storageType.html">Storage - 存储类</a></li>
+<li><a class="nav-androidBundleType" href="androidBundleType.html">AndroidBundle</a></li>
+<li><a class="nav-androidRectType" href="androidRectType.html">AndroidRect</a></li>
+<li><a class="nav-cryptoCipherOptionsType" href="cryptoCipherOptionsType.html">CryptoCipherOptions</a></li>
+<li><a class="nav-cryptoKeyType" href="cryptoKeyType.html">CryptoKey</a></li>
+<li><a class="nav-cryptoKeyPairType" href="cryptoKeyPairType.html">CryptoKeyPair</a></li>
+<li><a class="nav-consoleBuildOptionsType" href="consoleBuildOptionsType.html">ConsoleBuildOptions</a></li>
+<li><a class="nav-epubLocatorType" href="epubLocatorType.html">EpubLocator</a></li>
+<li><a class="nav-httpRequestBuilderOptionsType" href="httpRequestBuilderOptionsType.html">HttpRequestBuilderOptions</a></li>
+<li><a class="nav-httpRequestHeadersType" href="httpRequestHeadersType.html">HttpRequestHeaders</a></li>
+<li><a class="nav-httpResponseBodyType" href="httpResponseBodyType.html">HttpResponseBody</a></li>
+<li><a class="nav-httpResponseHeadersType" href="httpResponseHeadersType.html">HttpResponseHeaders</a></li>
+<li><a class="nav-httpResponseType" href="httpResponseType.html">HttpResponse</a></li>
+<li><a class="nav-injectableWebClientType" href="injectableWebClientType.html">InjectableWebClient</a></li>
+<li><a class="nav-injectableWebViewType" href="injectableWebViewType.html">InjectableWebView</a></li>
+<li><a class="nav-mailAccountOptionsType" href="mailAccountOptionsType.html">MailAccountOptions</a></li>
+<li><a class="nav-mailSearchQueryType" href="mailSearchQueryType.html">MailSearchQuery</a></li>
+<li><a class="nav-noticeOptionsType" href="noticeOptionsType.html">NoticeOptions</a></li>
+<li><a class="nav-noticeChannelOptionsType" href="noticeChannelOptionsType.html">NoticeChannelOptions</a></li>
+<li><a class="nav-noticePresetConfigurationType" href="noticePresetConfigurationType.html">NoticePresetConfiguration</a></li>
+<li><a class="nav-noticeBuilderType" href="noticeBuilderType.html">NoticeBuilder</a></li>
+<li><a class="nav-okhttp3HttpUrlType" href="okhttp3HttpUrlType.html">Okhttp3HttpUrl</a></li>
+<li><a class="nav-ocrOptionsType" href="ocrOptionsType.html">OcrOptions</a></li>
+<li><a class="nav-okhttp3RequestType" href="okhttp3RequestType.html">Okhttp3Request</a></li>
+<li><a class="nav-opencvPointType" href="opencvPointType.html">OpenCVPoint</a></li>
+<li><a class="nav-opencvRectType" href="opencvRectType.html">OpenCVRect</a></li>
+<li><a class="nav-opencvSizeType" href="opencvSizeType.html">OpenCVSize</a></li>
+<li><a class="nav-openCCConversionType" href="openCCConversionType.html">OpenCCConversion</a></li>
+<li><a class="nav-speechModelInfoType" href="speechModelInfoType.html">SpeechModelInfo</a></li>
+<li><a class="nav-speechRecognitionResultType" href="speechRecognitionResultType.html">SpeechRecognitionResult</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-http-project-autojs6-com" href="http://project.autojs6.com">GitHub - 应用项目地址</a></li>
+<li><p><a class="nav-http-docs-project-autojs6-com" href="http://docs-project.autojs6.com">GitHub - 文档项目地址</a></p>
+</li>
+<li><p><a class="nav-terminalSessionType" href="terminalSessionType.html">TerminalSession - 终端会话</a></p>
+</li>
+<li><a class="nav-terminalOpenOptionsType" href="terminalOpenOptionsType.html">TerminalOpenOptions - 终端选项</a></li>
+<li><a class="nav-terminalErrorType" href="terminalErrorType.html">TerminalError - 终端错误</a></li>
+<li><a class="nav-shellProcessType" href="shellProcessType.html">ShellProcess - Shell 进程</a></li>
+</ul>
+
+    </div>
+
+    <div id="column1" data-id="xlsx" class="interior">
+        <header>
+            <h1>AutoJs6 文档 - 6.8.0</h1>
+            <div id="gtoc">
+                <p class="index">
+                    <a href="index.html" name="toc">索引</a>
+                    <span class="offline-search-entry"> |
+                        <button type="button"
+                                class="offline-search-toggle"
+                                aria-controls="offline-search-panel"
+                                aria-expanded="false"
+                                data-offline-search-toggle>搜索文档</button>
+                    </span>
+                </p>
+            </div>
+            <hr>
+        </header>
+
+        <section id="offline-search-panel"
+                 class="offline-search"
+                 aria-labelledby="offline-search-title"
+                 data-offline-search
+                 data-index-src="assets/offline-search-index.js"
+                 data-state="idle"
+                 hidden>
+            <div class="offline-search-heading">
+                <h2 id="offline-search-title">搜索文档</h2>
+                <button type="button"
+                        class="offline-search-icon-button offline-search-close"
+                        aria-label="关闭搜索文档"
+                        data-offline-search-close>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path d="M6 6L18 18M18 6L6 18"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="offline-search-control">
+                <input id="offline-search-input"
+                       type="search"
+                       role="combobox"
+                       inputmode="search"
+                       autocomplete="off"
+                       spellcheck="false"
+                       placeholder="搜索文档内容"
+                       aria-labelledby="offline-search-title"
+                       aria-controls="offline-search-results"
+                       aria-autocomplete="list"
+                       aria-expanded="false"
+                       data-offline-search-input>
+                <button type="button"
+                        class="offline-search-icon-button offline-search-clear"
+                        aria-label="清除搜索内容"
+                        data-offline-search-clear
+                        hidden>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path d="M6 6L18 18M18 6L6 18"></path>
+                    </svg>
+                </button>
+            </div>
+            <p class="offline-search-status"
+               aria-live="polite"
+               data-offline-search-status>输入关键词搜索全部离线文档</p>
+            <div id="offline-search-results"
+                 class="offline-search-results"
+                 role="listbox"
+                 hidden
+                 data-offline-search-results></div>
+        </section>
+
+        <div id="toc">
+            <h2>目录</h2>
+<ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx">表格 (Xlsx)</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx">准备工作</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_1">路径与输出</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_2">行列编号与数据模型</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_3">读取模式与大表</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_4">同步, 异步与进度</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_csv">csv 与编码</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_5">公式</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_6">加密与密码</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_7">样式与版式</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_stylespec">StyleSpec</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_layoutoptions">LayoutOptions</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_8">条件格式与数据有效性</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_conditionalformatrule">ConditionalFormatRule</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_validationrule">ValidationRule</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_9">选项</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_openoptions">OpenOptions</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_readoptions">ReadOptions</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_writeoptions">WriteOptions</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_info">[m] info</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_info_path_options">xlsx.info(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_infoasync">[m] infoAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_infoasync_path_options">xlsx.infoAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_sheetnames">[m] sheetNames</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_sheetnames_path_options">xlsx.sheetNames(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_sheetnamesasync">[m] sheetNamesAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_sheetnamesasync_path_options">xlsx.sheetNamesAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_read">[m] read</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_read_path_options">xlsx.read(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_readasync">[m] readAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_readasync_path_options">xlsx.readAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_readall">[m] readAll</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_readall_path_options">xlsx.readAll(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_readallasync">[m] readAllAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_readallasync_path_options">xlsx.readAllAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_write">[m] write</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_write_path_rows_options">xlsx.write(path, rows, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_writeasync">[m] writeAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_writeasync_path_rows_options">xlsx.writeAsync(path, rows, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_writeall">[m] writeAll</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_writeall_path_sheets_options">xlsx.writeAll(path, sheets, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_writeallasync">[m] writeAllAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_writeallasync_path_sheets_options">xlsx.writeAllAsync(path, sheets, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_append">[m] append</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_append_path_rows_options">xlsx.append(path, rows, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_appendasync">[m] appendAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_appendasync_path_rows_options">xlsx.appendAsync(path, rows, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_open">[m] open</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_open_path_options">xlsx.open(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_openasync">[m] openAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_openasync_path_options">xlsx.openAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_create">[m] create</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_create_options">xlsx.create(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_createasync">[m] createAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_createasync_options">xlsx.createAsync(options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_createwriter">[m] createWriter</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_createwriter_path_options">xlsx.createWriter(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_createwriterasync">[m] createWriterAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_createwriterasync_path_options">xlsx.createWriterAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_convert">[m] convert</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_convert_input_output_options">xlsx.convert(input, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_convertasync">[m] convertAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_convertasync_input_output_options">xlsx.convertAsync(input, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_tocsv">[m] toCsv</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_tocsv_input_output_options">xlsx.toCsv(input, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_tocsvasync">[m] toCsvAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_tocsvasync_input_output_options">xlsx.toCsvAsync(input, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_merge">[m] merge</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_merge_inputs_output_options">xlsx.merge(inputs, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_mergeasync">[m] mergeAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_mergeasync_inputs_output_options">xlsx.mergeAsync(inputs, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_split">[m] split</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_split_path_outputdir_options">xlsx.split(path, outputDir?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_splitasync">[m] splitAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_splitasync_path_outputdir_options">xlsx.splitAsync(path, outputDir?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_dedupe">[m] dedupe</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_dedupe_path_output_options">xlsx.dedupe(path, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_dedupeasync">[m] dedupeAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_dedupeasync_path_output_options">xlsx.dedupeAsync(path, output?, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_recalc">[m] recalc</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_recalc_path_options">xlsx.recalc(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_recalcasync">[m] recalcAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_recalcasync_path_options">xlsx.recalcAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_encrypt">[m] encrypt</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_encrypt_path_output_options">xlsx.encrypt(path, output?, options)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_encryptasync">[m] encryptAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_encryptasync_path_output_options">xlsx.encryptAsync(path, output?, options)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_decrypt">[m] decrypt</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_decrypt_path_output_options">xlsx.decrypt(path, output?, options)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_decryptasync">[m] decryptAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_decryptasync_path_output_options">xlsx.decryptAsync(path, output?, options)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_sniff">[m] sniff</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_sniff_path">xlsx.sniff(path)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_sniffasync">[m] sniffAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_sniffasync_path_options">xlsx.sniffAsync(path, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_view">[m] view</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_view_pathorrows_options">xlsx.view(pathOrRows, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_viewasync">[m] viewAsync</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_viewasync_pathorrows_options">xlsx.viewAsync(pathOrRows, options?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_m_isavailable">[m] isAvailable</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_xlsx_isavailable">xlsx.isAvailable()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_c_xlsxerror">[C] XlsxError</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_new_xlsx_xlsxerror_message_code">new xlsx.XlsxError(message?, code?)</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_p_name">[p#] name</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_p_message">[p#] message</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_p_code">[p#] code</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_p_cause">[p#] cause</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_p_sheet">[p#] sheet</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_p_ref">[p#] ref</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_m_tostring">[m#] toString</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_tostring">toString()</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_10">返回对象</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_sheetfileinfo">SheetFileInfo</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_sheetresult">SheetResult</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_splitresult">SplitResult</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_sniffresult">SniffResult</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_celldetail">CellDetail</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_progress">Progress</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#xlsx_11">限制</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_examples">示例 (Examples)</a></span><ul>
+<li><span class="stability_undefined"><a href="#xlsx_12">读取并筛选</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_13">写出带版式的报表</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_14">追加日志</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_15">流式写出与读取大表</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_csv_1">csv 编码</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_16">异步与取消</a></span></li>
+<li><span class="stability_undefined"><a href="#xlsx_17">在查看器中选择一行</a></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <div id="apicontent">
+            <h1>表格 (Xlsx)<span><a class="mark" href="#xlsx_xlsx" id="xlsx_xlsx">#</a></span></h1>
+<!-- runtime-support:begin xlsx -->
+<!-- 本段由 generator/runtime-support.js 根据 AutoJs6 运行时覆盖矩阵生成, 不要手动修改; 数据源 ksp -->
+<table>
+<thead>
+<tr>
+<th>运行时支持</th>
+<th>Rhino</th>
+<th>Node.js 主线程</th>
+<th>Node.js Worker</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入口</td>
+<td><code>xlsx</code></td>
+<td><code>autojs6:xlsx</code>, <code>$autojs.xlsx</code></td>
+<td><code>autojs6:xlsx</code>, <code>$autojs.xlsx</code></td>
+<td><code>host.xlsx</code></td>
+</tr>
+<tr>
+<td>状态</td>
+<td>已支持 42 项</td>
+<td>已支持 42 项</td>
+<td>已支持 42 项</td>
+<td>需授权 42 项</td>
+</tr>
+<tr>
+<td>授权</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><code>xlsx.control</code> 42 项</td>
+</tr>
+</tbody>
+</table>
+<p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
+<p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
+<!-- runtime-support:end -->
+<p><code>xlsx</code> 模块用于在脚本中读写电子表格: 读取工作簿信息与单元格数据, 整体写出或在末尾追加行, 打开工作簿后编辑工作表, 行列, 单元格, 样式, 合并单元格, 超链接, 批注, 图片, 条件格式与数据有效性, 用流式写出器生成大表, 以及在格式之间转换, 合并, 拆分, 去重, 重算公式, 加密与解密, 探测 csv 的编码与分隔符, 打开插件的表格查看器并接收选中事件. 支持的格式为 xlsx, xlsm, xls, csv 与 tsv.</p>
+<p>从 AutoJs6 6.8.1 起, 本模块由外置 3-Tally Sheet 插件 (AutoJs6-Plugin-Three-Tally-Sheet) 1.0.0 及以上版本提供. 调用前需在插件中心安装并启用与当前 AutoJs6 兼容的插件. 插件缺失, 被禁用或版本不兼容时, 方法抛出 (或以 Promise 拒绝) <code>code</code> 为 <code>PLUGIN_UNAVAILABLE</code>, <code>PLUGIN_DISABLED</code> 或 <code>PLUGIN_INCOMPATIBLE</code> 的 <a href="#xlsx_c_xlsxerror">XlsxError</a>, 消息以 &quot;3-Tally Sheet 插件不可用. 请在插件中心安装, 启用或更新后重试.&quot; 开头. <a href="#xlsx_m_isavailable">xlsx.isAvailable</a> 可预先探测. 由 AutoJs6 打包的应用同样可以使用本模块, 前提是运行它的设备已安装 3-Tally Sheet 1.0.0 及以上版本, 应用由 AutoJs6 6.8.1 及以上版本打包, 且带有 <code>org.autojs.plugin.xlsx.permission.RUNTIME</code> 权限. 打包流程为 Node.js 项目 (声明了 <code>files</code> 能力或未强制能力) 与 Bun 项目 (授予了 <code>xlsx.control</code>) 自动加入该权限; Rhino 项目需要在 <code>project.json</code> 的 <a href="projectConfig.html#projectconfig_permissions">permissions</a> 中加入它. 打包应用经插件单独的服务与查看器入口调用, 打开的工作簿, 写出器与查看器会话只允许创建它们的应用调用.</p>
+<p>本模块在 Rhino 中注册为全局名称 <code>xlsx</code>, 并提供 <code>$xlsx</code> 别名, 二者指向同一对象. 本页的签名与同步返回值描述 Rhino. Node.js, Bun 与 Node.js Worker 提供显式导入的异步接口, 参阅 <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_xlsx">Runtime APIs 的 xlsx</a>.</p>
+<pre><code class="lang-js">let path = &#39;/sdcard/Documents/sales.xlsx&#39;;
+let info = xlsx.info(path);
+info.sheets.forEach(s =&gt; console.log(s.name, s.rows + &#39; 行&#39;, s.cols + &#39; 列&#39;));
+let items = xlsx.read(path, { header: true, limit: 3 });
+items.forEach(item =&gt; console.log(JSON.stringify(item)));
+let result = xlsx.write(&#39;./summary.xlsx&#39;, [[&#39;城市&#39;, &#39;销量&#39;], [&#39;杭州&#39;, 120], [&#39;苏州&#39;, 95]], {
+    header: true, columnWidths: &#39;auto&#39;, freeze: 1,
+});
+console.log(result.path, result.sheets[0].rows); // ./summary.xlsx 的绝对路径, 3
+</code></pre>
+<h2>准备工作<span><a class="mark" href="#xlsx" id="xlsx">#</a></span></h2>
+<div class="signature"><ol>
+<li>在插件中心安装并启用 3-Tally Sheet. 1.0.0 要求 AutoJs6 6.8.1 (版本号 6641) 及以上版本, 版本不满足时调用失败于 <code>PLUGIN_INCOMPATIBLE</code>.</li>
+<li>授予 AutoJs6 存储权限. 输入与输出文件都由 AutoJs6 打开, 再以文件描述符交给插件, 插件不会得到任何路径, 也不需要自己的存储权限. AutoJs6 没有权限读写某个文件时调用失败于 <code>STORAGE_PERMISSION_DENIED</code>, 其他读写失败为 <code>IO_ERROR</code>.</li>
+<li>使用 <a href="#xlsx_m_view">view</a> 时, AutoJs6 需要处于前台 (有可见的界面, 系统为 Android 10 以下, 或 AutoJs6 有悬浮窗权限).</li>
+</ol>
+</div><h2>路径与输出<span><a class="mark" href="#xlsx_1" id="xlsx_1">#</a></span></h2>
+<p>输入文件以路径指定, 相对路径按脚本工作目录解析 (与 <a href="files.html#files_m_path">files.path</a> 相同), 也可使用绝对路径. 不接受 <code>content://</code> URI (失败于 <code>INVALID_ARGUMENT</code>, 消息形如 &quot;&#39;read path&#39; must be a file path; content:// URIs are not accepted&quot;). 路径不是已存在的普通文件时失败于 <code>FILE_NOT_FOUND</code>.</p>
+<p>文件格式由扩展名与文件头共同判断: <code>.xlsx</code>, <code>.xlsm</code>, <code>.xls</code>, <code>.csv</code> 与 <code>.tsv</code> 按扩展名识别, 内容与扩展名不符或无法识别时失败于 <code>INVALID_FILE</code>; 扩展名不常见时可用选项 <code>format</code> 指定 (<code>&#39;xlsx&#39;</code>, <code>&#39;xlsm&#39;</code>, <code>&#39;xls&#39;</code>, <code>&#39;csv&#39;</code> 或 <code>&#39;tsv&#39;</code>, 不区分大小写, 其他值失败于 <code>UNSUPPORTED_FORMAT</code>). tsv 是以制表符分隔的 csv.</p>
+<p><a href="#xlsx_m_write">write</a>, <a href="#xlsx_m_writeall">writeAll</a>, <a href="#xlsx_m_append">append</a>, <a href="#xlsx_m_createwriter">createWriter</a> 与 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a> 的目标路径必须给出, 格式取选项 <code>format</code>, 其次取目标的扩展名, 都没有时失败于 <code>UNSUPPORTED_FORMAT</code>.</p>
+<p><a href="#xlsx_m_convert">convert</a>, <a href="#xlsx_m_tocsv">toCsv</a>, <a href="#xlsx_m_merge">merge</a>, <a href="#xlsx_m_split">split</a>, <a href="#xlsx_m_dedupe">dedupe</a>, <a href="#xlsx_m_encrypt">encrypt</a> 与 <a href="#xlsx_m_decrypt">decrypt</a> 的第二个参数是可选的输出路径 (split 为输出目录):</p>
+<ul>
+<li>字符串: 输出路径, 相对路径同样按脚本工作目录解析.</li>
+<li><code>null</code> 或 <code>undefined</code>: 使用默认输出, 但占用这个参数位置, 后面可以继续传选项.</li>
+<li>对象且后面没有第三个参数: 视为省略输出, 该对象是选项. 例如 <code>xlsx.dedupe(path, { columns: [1] })</code> 与 <code>xlsx.dedupe(path, null, { columns: [1] })</code> 相同.</li>
+</ul>
+<p><a href="#xlsx_m_recalc">recalc</a> 的输出由选项 <code>output</code> 给出. 默认输出位于 <code>/sdcard/Documents/3-Tally Sheet/</code> (外部存储的 Documents 目录), 文件名为 <code>&lt;源名&gt;-&lt;操作&gt;-&lt;yyyyMMdd-HHmmss&gt;.&lt;扩展名&gt;</code>, 重名时依次追加 <code>-2</code>, <code>-3</code> 等; split 的默认输出目录同样命名, 不带扩展名. 源名为输入文件名去掉扩展名 (<a href="#xlsx_m_merge">merge</a> 取第一个输入), 为空时为 <code>sheet</code>. 操作名为方法名 (<code>convert</code>, <code>toCsv</code>, <code>merge</code>, <code>split</code>, <code>dedupe</code>, <code>recalc</code>, <code>encrypt</code>, <code>decrypt</code>), 扩展名为输出格式.</p>
+<p>输出的写入方式:</p>
+<ul>
+<li>显式给出的输出文件已存在时被覆盖, 输出也可以是输入文件本身. <a href="#xlsx_m_write">write</a> 与 <a href="#xlsx_m_writeall">writeAll</a> 总是写出一个新文件, 替换目标路径上已有的文件.</li>
+<li>结果先写入同目录的隐藏文件 <code>.&lt;文件名&gt;.&lt;时间戳&gt;.tmp</code>, 完成后改名为目标文件; 调用失败或被取消时删除该文件, 目标路径下不会留下不完整的文件.</li>
+<li>输出路径是已存在的目录时失败于 <code>INVALID_ARGUMENT</code>. 父目录不存在时自动创建, 无法创建时失败于 <code>IO_ERROR</code>.</li>
+<li>split 的输出目录不存在时自动创建. 目录中已有同名文件时, 新文件依次追加 <code>-2</code>, <code>-3</code> 等, 不覆盖已有文件.</li>
+</ul>
+<h2>行列编号与数据模型<span><a class="mark" href="#xlsx_2" id="xlsx_2">#</a></span></h2>
+<p>行号与列号都从 1 计 (第 1 行, 第 1 列即 <code>A1</code>).</p>
+<ul>
+<li>列可以写作字母 (<code>&#39;A&#39;</code>, <code>&#39;AA&#39;</code>, 不区分大小写, 1 至 3 个字母) 或数字 (1 至 16384).</li>
+<li>单元格引用为 A1 形式, 如 <code>&#39;B4&#39;</code>.</li>
+<li>范围为 A1 形式的单个单元格, 矩形 (<code>&#39;A1:D20&#39;</code>), 整列 (<code>&#39;B:B&#39;</code>, <code>&#39;B:D&#39;</code>) 或整行 (<code>&#39;3:3&#39;</code>, <code>&#39;3:5&#39;</code>). 两个角可以任意顺序书写, 会被规范为左上与右下. 格式不对或超出格式上限 (xlsx 为 1,048,576 行, 16,384 列; xls 为 65,536 行, 256 列) 时失败于 <code>RANGE_INVALID</code>.</li>
+<li>工作表以名称或从 1 计的序号指定 (选项 <code>sheet</code>), 省略时为第一个可见的工作表. 工作表不存在时失败于 <code>SHEET_NOT_FOUND</code>. 名称至多 31 个字符.</li>
+</ul>
+<p>读取得到的行默认为数组的数组, 每行是一个数组, 行内缺失的列补 <code>null</code>. 选项 <code>header: true</code> 把范围的第一行作为表头, 其余各行返回以表头文字为键的对象; 表头重复的键依次加后缀 <code>_2</code>, <code>_3</code> 等, 第 n 个空表头的键为 <code>__EMPTY_n</code> (从 1 计).</p>
+<p>单元格的值 (CellValue):</p>
+<table>
+<thead>
+<tr>
+<th>单元格</th>
+<th>读到的值</th>
+<th>写入时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数字</td>
+<td><a href="dataTypes.html#datatypes_number">number</a></td>
+<td>数字写为数字单元格. <code>NaN</code> 与无穷大失败于 <code>INVALID_ARGUMENT</code></td>
+</tr>
+<tr>
+<td>文本</td>
+<td><a href="dataTypes.html#datatypes_string">string</a></td>
+<td>字符串写为文本. 以 <code>=</code> 开头的字符串只有在选项 <code>formulas: true</code> 时才作为公式</td>
+</tr>
+<tr>
+<td>布尔</td>
+<td><a href="dataTypes.html#datatypes_boolean">boolean</a></td>
+<td>布尔值写为布尔单元格</td>
+</tr>
+<tr>
+<td>日期与时间</td>
+<td><a href="dataTypes.html#datatypes_date">Date</a></td>
+<td><a href="dataTypes.html#datatypes_date">Date</a> 写为日期单元格, 数字格式默认 <code>yyyy-mm-dd hh:mm:ss</code>, 可用选项 <code>dateFormat</code> 改变</td>
+</tr>
+<tr>
+<td>空单元格</td>
+<td><a href="dataTypes.html#datatypes_null">null</a></td>
+<td><code>null</code> 或 <code>undefined</code> 清除值, 保留已有样式</td>
+</tr>
+<tr>
+<td>错误</td>
+<td>错误文本, 如 <code>&#39;#DIV/0!&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>公式</td>
+<td>缓存的计算结果</td>
+<td><code>{ f: &#39;SUM(A1:A3)&#39; }</code> 写入公式 (<code>=</code> 可省略)</td>
+</tr>
+</tbody>
+</table>
+<p>日期按设备当前时区解释: 读取时把单元格的日期与时间视为设备本地时间, 写入时存入 <code>Date</code> 在设备时区下的本地日期与时间, 二者在同一设备上往返不变. 工作簿使用 1904 日期系统时同样按其标志换算, <a href="#xlsx_m_info">info</a> 的 <code>dateSystem</code> 报告它.</p>
+<p>选项 <code>formatted: true</code> 让各单元格返回显示文本 (按数字格式与公式结果格式化的字符串). 选项 <code>cells: true</code> 让各单元格返回 <a href="#xlsx_celldetail">CellDetail</a> 对象, 其中带有值, 公式, 类型, 显示文本与样式 id.</p>
+<h2>读取模式与大表<span><a class="mark" href="#xlsx_3" id="xlsx_3">#</a></span></h2>
+<p><a href="#xlsx_m_open">open</a> 与读取类方法的选项 <code>mode</code> 决定插件如何载入工作簿:</p>
+<ul>
+<li><code>&#39;auto&#39;</code> (默认): 单元格总数不超过整载上限时整体载入, 否则以流式读取.</li>
+<li><code>&#39;full&#39;</code>: 整体载入. 超过整载上限时失败于 <code>LIMIT_EXCEEDED</code>.</li>
+<li><code>&#39;stream&#39;</code>: 流式读取, 内存占用与表的大小无关.</li>
+</ul>
+<p>整载上限取以下两者的较小值:</p>
+<ul>
+<li>1,000,000 个单元格.</li>
+<li>插件进程剩余 Java 堆的 90% 能容纳的单元格数 (按每个单元格约 750 字节估算). 剩余内存不足时, 较小的表也会改为流式读取; <code>mode: &#39;full&#39;</code> 则失败于 <code>LIMIT_EXCEEDED</code>, 消息提到剩余的 Java 堆. 流式读取不受这一限制.</li>
+</ul>
+<p>csv 与 tsv 按开头 64 KB 的样本估算单元格数, 再按同样的规则选择模式.</p>
+<p>流式打开的工作簿只能按行顺序读取:</p>
+<ul>
+<li><a href="xlsxSheetType.html#xlsxsheettype_m_read">Sheet#read</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_eachrow">Sheet#eachRow</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_cell">Sheet#cell</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_find">Sheet#find</a> 与信息查询可用.</li>
+<li>所有修改, <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a> 与 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_recalc">Workbook#recalc</a> 失败于 <code>READ_ONLY</code>; 读取条件格式与数据有效性失败于 <code>UNSUPPORTED</code>.</li>
+<li>共享公式的单元格在 <code>cells: true</code> 时不带 <code>f</code>.</li>
+</ul>
+<p>读取大表时, 使用 <a href="xlsxSheetType.html#xlsxsheettype_m_eachrow">Sheet#eachRow</a> 分批处理 (每批至多 1000 行), 或用 <code>range</code>, <code>from</code> / <code>to</code> 与 <code>limit</code> 只取需要的行; 生成大表时, 使用 <a href="#xlsx_m_createwriter">createWriter</a> 逐行写出 (插件只在内存中保留最近 100 行). 行数据在 AutoJs6 与插件之间分块传递, 每块至多 1000 行或 512 KiB, 单行超过 32 MiB 时失败于 <code>LIMIT_EXCEEDED</code>.</p>
+<h2>同步, 异步与进度<span><a class="mark" href="#xlsx_4" id="xlsx_4">#</a></span></h2>
+<p>除 <a href="#xlsx_m_isavailable">isAvailable</a> 外, 每个方法都有同步形态 <code>x(...)</code> 与异步形态 <code>xAsync(...)</code>, 二者参数与结果一致. 默认没有超时, 调用一直等待到插件返回结果, 失败或被取消.</p>
+<ul>
+<li>同步形态阻塞当前脚本线程直至插件返回结果或调用失败. 在 UI 线程调用会阻塞界面, UI 模式中请使用 <code>Async</code> 形态. 停止脚本会取消尚未完成的调用.</li>
+<li>异步形态立即返回 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>, 回调在脚本线程执行. 参数错误同样以 Promise 拒绝体现, 不同步抛出. 返回的 Promise 带有不可枚举, 只读的 <code>cancel()</code> 方法: 调用仍在进行时返回 <code>true</code> 并取消任务, 之后 Promise 以 <code>CANCELLED</code> 拒绝; 调用已结束时返回 <code>false</code>.</li>
+<li><code>options</code> 必须是对象, 未知的选项键失败于 <code>INVALID_ARGUMENT</code> (消息形如 &quot;read does not know the option &#39;x&#39;; known: ...&quot;). 参数个数不在签名范围内时同样失败于 <code>INVALID_ARGUMENT</code> (消息形如 &quot;... takes at most 3 argument(s), got 4&quot;).</li>
+</ul>
+<p>报告进度的调用接受选项 <code>onProgress</code>, 它在脚本线程收到 <a href="#xlsx_progress">Progress</a> 对象, 至多每 100 毫秒一次. 报告进度的有 <a href="#xlsx_m_write">write</a>, <a href="#xlsx_m_writeall">writeAll</a>, <a href="#xlsx_m_append">append</a>, <a href="#xlsx_m_convert">convert</a>, <a href="#xlsx_m_tocsv">toCsv</a>, <a href="#xlsx_m_merge">merge</a>, <a href="#xlsx_m_split">split</a>, <a href="#xlsx_m_dedupe">dedupe</a>, <a href="#xlsx_m_recalc">recalc</a>, <a href="#xlsx_m_encrypt">encrypt</a>, <a href="#xlsx_m_decrypt">decrypt</a>, <a href="#xlsx_m_sniff">sniff</a>, <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_saveasync">Workbook#saveAsync</a> 与 <a href="xlsxWriterType.html#xlsxwritertype_m_closeasync">Writer#closeAsync</a> 的 <code>Async</code> 形态; 其他 <code>Async</code> 方法接受但不使用 <code>onProgress</code>. 同步形态不接受 <code>onProgress</code> (失败于 <code>INVALID_ARGUMENT</code>, 消息形如 &quot;&#39;write&#39; does not take &#39;onProgress&#39;; writeAsync reports progress&quot;).</p>
+<pre><code class="lang-js">let job = xlsx.mergeAsync([&#39;./a.xlsx&#39;, &#39;./b.xlsx&#39;], &#39;./ab.xlsx&#39;, {
+    mode: &#39;rows&#39;,
+    onProgress: p =&gt; console.log(p.stage, p.percent &lt; 0 ? &#39;?&#39; : p.percent + &#39;%&#39;),
+});
+job.then(r =&gt; console.log(r.path, r.sheets[0].rows)).catch(e =&gt; console.error(e.toString()));
+setTimeout(() =&gt; job.cancel(), 5000);
+</code></pre>
+<p>每个脚本同时至多持有 16 个打开的工作簿与写出器 (合计, 超出时失败于 <code>TOO_MANY_HANDLES</code>), 插件同时至多执行 2 个耗时操作 (写出, 转换, 合并等), 其余排队等待.</p>
+<h2>csv 与编码<span><a class="mark" href="#xlsx_csv" id="xlsx_csv">#</a></span></h2>
+<p>csv 与 tsv 按 RFC 4180 读写: 字段可用双引号包围, 引号内可以有分隔符与换行, 引号本身写作两个双引号. 读取时的工作表名称为文件名去掉扩展名 (截断到 31 个字符), 为空时为 <code>Sheet1</code>.</p>
+<p>读取时的编码:</p>
+<ul>
+<li>给出选项 <code>encoding</code> (Java 字符集名称, 如 <code>&#39;UTF-8&#39;</code>, <code>&#39;GBK&#39;</code>, <code>&#39;GB18030&#39;</code>, <code>&#39;Big5&#39;</code>, <code>&#39;Shift_JIS&#39;</code>, <code>&#39;UTF-16LE&#39;</code>) 时直接使用, 不做探测; 未知的名称失败于 <code>INVALID_ARGUMENT</code>. <code>&#39;UTF-16&#39;</code> 读取时按 BOM 的字节序.</li>
+<li>否则依次判断: 文件开头的 BOM (UTF-8, UTF-16LE, UTF-16BE); 按零字节的比例识别不带 BOM 的 UTF-16; 样本是否为严格合法的 UTF-8 (纯 ASCII 视为 UTF-8); 统计探测 (GBK 文本得到 GB18030, 以及 Big5, Shift_JIS, windows-125x 等).</li>
+<li>以上都没有结论时 (例如很短的 GBK 文件), 使用插件设置页 &quot;CSV&quot; 分组中的 &quot;读取默认编码&quot; (默认 GB18030; 读取设置失败时同样为 GB18030). 很短但合法的 UTF-8 文件仍按 UTF-8 读取.</li>
+</ul>
+<p>分隔符: 给出选项 <code>delimiter</code> (单个字符) 时直接使用; 否则在开头 64 KB 中对 <code>,</code>, <code>;</code>, 制表符与 <code>|</code> 按各行列数的一致性评分选出 (考虑引号). tsv 默认使用制表符. <a href="#xlsx_m_sniff">sniff</a> 返回探测得到的编码, 分隔符与有无 BOM, 不读取全部内容.</p>
+<p>读取时的值:</p>
+<ul>
+<li><code>parseNumbers</code> (默认 <code>true</code>): 能解析为数字的字段转为数字. 带多余前导零的 (如 <code>&#39;007&#39;</code>, 但 <code>&#39;0&#39;</code> 与 <code>&#39;0.5&#39;</code> 可以) 或有效数字超过 15 位的 (如身份证号与长订单号) 保持字符串, 以免丢失精度.</li>
+<li><code>parseBooleans</code> (默认 <code>false</code>): 为 <code>true</code> 时把 <code>TRUE</code> 与 <code>FALSE</code> 转为布尔值.</li>
+<li>日期不做转换, 保持字符串.</li>
+</ul>
+<p>写出时默认使用 UTF-8 并带 BOM (Excel 据此识别 UTF-8), 分隔符为 <code>,</code> (tsv 为制表符). 选项 <code>encoding</code>, <code>bom: false</code> 与 <code>delimiter</code> 可以改变; <code>&#39;UTF-16&#39;</code> 写出为带 BOM 的 UTF-16LE. 插件设置页的 &quot;写出默认编码&quot; 与 &quot;写出时带 BOM&quot; 只决定插件工具箱的初始选项, 不影响脚本. csv 与 tsv 只能保存一个工作表 (写入多个时失败于 <code>UNSUPPORTED</code>), 不保存样式, 公式与版式: <a href="#xlsx_m_write">write</a> 与 <a href="#xlsx_m_writeall">writeAll</a> 给出版式选项或 <code>password</code> 时, 以及 <a href="#xlsx_m_append">append</a> 给出版式选项时, 失败于 <code>INVALID_ARGUMENT</code>; <a href="#xlsx_m_createwriter">createWriter</a> 写入的样式与公式只在结果的 <code>warnings</code> 中说明.</p>
+<pre><code class="lang-js">let probe = xlsx.sniff(&#39;./legacy.csv&#39;);
+console.log(probe.encoding, JSON.stringify(probe.delimiter), probe.hasBom); // GB18030 &quot;,&quot; false
+let rows = xlsx.read(&#39;./legacy.csv&#39;, { header: true, encoding: probe.encoding });
+xlsx.convert(&#39;./legacy.csv&#39;, &#39;./legacy-utf8.csv&#39;, { encoding: &#39;UTF-8&#39;, bom: true });
+</code></pre>
+<h2>公式<span><a class="mark" href="#xlsx_5" id="xlsx_5">#</a></span></h2>
+<p>读取时公式单元格返回其缓存的计算结果; <code>cells: true</code> 时 <a href="#xlsx_celldetail">CellDetail</a> 的 <code>f</code> 为公式文本 (不带 <code>=</code>), <code>formatted: true</code> 时为显示文本. 流式读取的共享公式单元格不带 <code>f</code>.</p>
+<p>写入公式有两种方式: 值为 <code>{ f: &#39;SUM(B2:B9)&#39; }</code> 对象 (<code>=</code> 可省略), 或者以 <code>=</code> 开头的字符串并给出选项 <code>formulas: true</code>. 公式有语法错误时失败于 <code>FORMULA_ERROR</code>, 错误的 <code>sheet</code> 与 <code>ref</code> 指出位置.</p>
+<p>保存时的计算:</p>
+<ul>
+<li>有值的改动 (写入行, 设置单元格, 行列或工作表操作) 后保存时, 插件计算公式并写入缓存值, 使其他程序不必重算即可读到结果. 只改样式, 工作表属性, 规则或版式时不计算. 选项 <code>evaluate: false</code> 跳过计算, 并让 Excel 打开文件时重算.</li>
+<li>插件不能计算的函数 (例如 <code>INFO</code>, <code>CELL</code>, <code>N</code>, <code>DATEDIF</code>) 与无法解析的公式: 保留公式, 清空缓存值, 设置打开时重算, 并在 <code>warnings</code> 中说明.</li>
+<li>引用其他工作簿的公式不计算, 保留原缓存值并给出警告.</li>
+<li>循环引用 (及依赖它的公式) 的缓存值为 <code>#VALUE!</code>, 并给出警告; 其他 Excel 错误 (<code>#REF!</code>, <code>#DIV/0!</code>, <code>#N/A</code> 等) 照常作为结果.</li>
+<li>引用链过深导致计算失败时失败于 <code>FORMULA_ERROR</code>, 消息建议使用 <code>evaluate: false</code>.</li>
+</ul>
+<p><a href="#xlsx_m_recalc">xlsx.recalc</a> 与 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_recalc">Workbook#recalc</a> 不论有无改动都重算全部公式. <a href="#xlsx_m_createwriter">createWriter</a> 写出的公式不计算, 文件被设置为打开时重算. 警告文本由计算引擎生成, 为英文.</p>
+<h2>加密与密码<span><a class="mark" href="#xlsx_6" id="xlsx_6">#</a></span></h2>
+<p>xlsx, xlsm 与 xls 可以加密, csv 与 tsv 不能.</p>
+<ul>
+<li>打开加密文件时用选项 <code>password</code> 传入密码. 未给密码时失败于 <code>PASSWORD_REQUIRED</code>, 密码错误时失败于 <code>WRONG_PASSWORD</code>. 对未加密的文件给出的密码被忽略.</li>
+<li><a href="#xlsx_m_info">info</a> 与 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_info">Workbook#info</a> 的 <code>encrypted</code> 只在以密码打开了加密文件时为 <code>true</code>.</li>
+<li>保存 (<a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a>, <a href="#xlsx_m_append">append</a>, <a href="#xlsx_m_recalc">recalc</a>, <a href="#xlsx_m_convert">convert</a>, <a href="#xlsx_m_dedupe">dedupe</a>, <a href="#xlsx_m_split">split</a> 等) 时沿用打开时的密码. xlsx 与 xlsm 总是以 Agile 加密 (AES-256, SHA-512) 保存; xls 沿用原加密方式, 新加密的 xls 使用 RC4 CryptoAPI.</li>
+<li><a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a> 的 <code>password</code> 为非空字符串时以它重新加密, 为 <code>&#39;&#39;</code> 或 <code>null</code> 时去掉加密.</li>
+<li>输出为 csv 或 tsv 时总是明文, 结果的 <code>warnings</code> 说明去掉了加密; 此时显式给出非空的输出密码失败于 <code>UNSUPPORTED</code> (save) 或 <code>INVALID_ARGUMENT</code> (<a href="#xlsx_m_merge">merge</a> 的 <code>outputPassword</code>).</li>
+<li><a href="#xlsx_m_write">write</a>, <a href="#xlsx_m_writeall">writeAll</a> 与 <a href="#xlsx_m_createwriter">createWriter</a> 的 <code>password</code> 加密新文件. 写出器只能加密 xlsx.</li>
+<li><a href="#xlsx_m_merge">merge</a> 以 <code>passwords</code> 为各输入分别给出密码, 以 <code>outputPassword</code> 决定输出的密码, 见该方法.</li>
+<li><a href="#xlsx_m_encrypt">encrypt</a> 与 <a href="#xlsx_m_decrypt">decrypt</a> 为已有文件加上或去掉密码.</li>
+</ul>
+<h2>样式与版式<span><a class="mark" href="#xlsx_7" id="xlsx_7">#</a></span></h2>
+<h3>StyleSpec<span><a class="mark" href="#xlsx_stylespec" id="xlsx_stylespec">#</a></span></h3>
+<p>样式规格对象, 用于 <a href="xlsxSheetType.html#xlsxsheettype_m_setstyle">Sheet#setStyle</a>, <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_createstyle">Workbook#createStyle</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_set">Sheet#set</a> 与 <a href="xlsxSheetType.html#xlsxsheettype_m_setrows">Sheet#setRows</a> 的 <code>style</code>, <a href="xlsxWriterType.html#xlsxwritertype_m_addrow">Writer#addRow</a> 的 <code>style</code>, 以及 <a href="#xlsx_layoutoptions">LayoutOptions</a> 的 <code>styles</code>. 各键都可省略, 设置到已有样式上时只改给出的键, 未知的键失败于 <code>INVALID_ARGUMENT</code>.</p>
+<ul>
+<li><strong>font</strong> {{<ul>
+<li>name?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>size?: <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>bold?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>italic?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>underline?: <a href="dataTypes.html#datatypes_boolean">boolean</a> | <code>&#39;none&#39;</code> | <code>&#39;single&#39;</code> | <code>&#39;double&#39;</code> | <code>&#39;singleAccounting&#39;</code> | <code>&#39;doubleAccounting&#39;</code>;</li>
+<li>strike?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>color?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+</ul>
+</li>
+<li>}} - 字体. <code>size</code> 为磅值 (大于 0, 至多 409), <code>underline: true</code> 等同 <code>&#39;single&#39;</code></li>
+<li><strong>fill</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 填充颜色 <code>&#39;#RRGGBB&#39;</code>, <code>&#39;none&#39;</code> 去掉填充</li>
+<li><strong>border</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 四边相同的线型名称, 或 <code>{ top, bottom, left, right }</code>, 每边为线型名称或 <code>{ style, color }</code>. 线型为 <code>none</code>, <code>thin</code>, <code>medium</code>, <code>thick</code>, <code>dashed</code>, <code>dotted</code>, <code>double</code>, <code>hair</code>, <code>mediumDashed</code>, <code>dashDot</code>, <code>mediumDashDot</code>, <code>dashDotDot</code>, <code>mediumDashDotDot</code>, <code>slantedDashDot</code></li>
+<li><strong>align</strong> { <code>&#39;general&#39;</code> | <code>&#39;left&#39;</code> | <code>&#39;center&#39;</code> | <code>&#39;right&#39;</code> | <code>&#39;fill&#39;</code> | <code>&#39;justify&#39;</code> | <code>&#39;centerAcross&#39;</code> | <code>&#39;distributed&#39;</code> } - 水平对齐</li>
+<li><strong>valign</strong> { <code>&#39;top&#39;</code> | <code>&#39;middle&#39;</code> | <code>&#39;bottom&#39;</code> | <code>&#39;justify&#39;</code> | <code>&#39;distributed&#39;</code> } - 垂直对齐</li>
+<li><strong>wrap</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 自动换行</li>
+<li><strong>numFmt</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 数字格式, 如 <code>&#39;0.00&#39;</code>, <code>&#39;#,##0&#39;</code>, <code>&#39;0%&#39;</code>, <code>&#39;yyyy-mm-dd&#39;</code></li>
+<li><strong>indent</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 缩进, 0 至 250 (xls 为 0 至 15)</li>
+<li><strong>rotation</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 文字角度, -90 至 90, 或 255 (竖排)</li>
+</ul>
+<p>颜色写作 <code>&#39;#RRGGBB&#39;</code>. xls 只有调色板颜色, 写入时换为调色板中最接近的颜色. 一个工作簿中不同样式的数目有上限 (xlsx 64,000 个, xls 4,000 个), 超出时失败于 <code>LIMIT_EXCEEDED</code>. 同一样式反复使用时, 先用 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_createstyle">Workbook#createStyle</a> 得到样式 id 再传入, 比每次传规格对象更快.</p>
+<h3>LayoutOptions<span><a class="mark" href="#xlsx_layoutoptions" id="xlsx_layoutoptions">#</a></span></h3>
+<p><a href="#xlsx_m_write">write</a>, <a href="#xlsx_m_writeall">writeAll</a> 与 <a href="#xlsx_m_append">append</a> 接受的版式选项. 版式作用于本次写入的行 (追加时为追加的行) 与工作表已用的列, 按以下顺序应用:</p>
+<ul>
+<li><strong>styles</strong> {{<ul>
+<li>body?: <a href="#xlsx_stylespec">StyleSpec</a>;</li>
+<li>columns?: <a href="dataTypes.html#datatypes_object">Object</a>;</li>
+<li>header?: <a href="#xlsx_stylespec">StyleSpec</a>;</li>
+</ul>
+</li>
+<li>}} - 样式. 先把 <code>body</code> 应用到表头行以外的各行, 再把 <code>columns</code> (键为列字母或列号, 值为样式规格) 应用到各列 (含表头行), 最后把 <code>header</code> 应用到表头行 (只在写入了表头行时). 样式叠加在单元格已有的样式上, 以 <code>dateFormat</code> 写入的日期在 <code>body</code> 下保留其数字格式</li>
+<li><strong>columnWidths</strong> { <code>&#39;auto&#39;</code> | <a href="dataTypes.html#datatypes_array">Array</a> | <a href="dataTypes.html#datatypes_object">Object</a> } - 列宽 (字符数, 至多 255). <code>&#39;auto&#39;</code> 按内容调整写入的各列; 数组按第 1 列起的顺序给出, <code>null</code> 跳过该列; 对象的键为列字母或列号. 单列的宽度为数字或 <code>&#39;auto&#39;</code></li>
+<li><strong>rowHeights</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 行高 (磅, 至多 409), 键为工作表行号, 如 <code>{ 1: 24 }</code></li>
+<li><strong>merges</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 要合并的 A1 范围</li>
+<li><strong>freeze</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type">{{ rows?: <a href="dataTypes.html#datatypes_number">number</a>; cols?: <a href="dataTypes.html#datatypes_number">number</a></span> }} } - 冻结窗格, 数字表示冻结的行数</li>
+<li><strong>autoFilter</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 自动筛选. <code>true</code> 作用于本次写入的区域, 字符串为 A1 范围</li>
+</ul>
+<p><code>rowHeights</code>, <code>merges</code>, <code>freeze</code> 与字符串形式的 <code>autoFilter</code> 使用工作表坐标. csv 与 tsv 目标不接受版式选项 (<code>INVALID_ARGUMENT</code>). 打开的工作簿以 <a href="xlsxSheetType.html">Sheet</a> 的 <a href="xlsxSheetType.html#xlsxsheettype_m_setstyle">setStyle</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_setcolumnwidth">setColumnWidth</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_merge">merge</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_freeze">freeze</a> 等方法设置同样的内容.</p>
+<pre><code class="lang-js">xlsx.write(&#39;./report.xlsx&#39;, [
+    [&#39;商品&#39;, &#39;数量&#39;, &#39;单价&#39;, &#39;金额&#39;],
+    [&#39;钢笔&#39;, 3, 1.5, { f: &#39;B2*C2&#39; }],
+    [&#39;笔记本&#39;, 2, 12, { f: &#39;B3*C3&#39; }],
+], {
+    header: true,
+    styles: {
+        header: { font: { bold: true }, fill: &#39;#DDEBF7&#39;, align: &#39;center&#39; },
+        columns: { C: { numFmt: &#39;0.00&#39; }, D: { numFmt: &#39;0.00&#39; } },
+    },
+    columnWidths: &#39;auto&#39;, freeze: { rows: 1 }, autoFilter: true,
+});
+</code></pre>
+<h2>条件格式与数据有效性<span><a class="mark" href="#xlsx_8" id="xlsx_8">#</a></span></h2>
+<p>xlsx 与 xlsm 支持全部规则; xls 的条件格式只支持 <code>cellIs</code> 与 <code>expression</code> (其他类型与带 <code>numFmt</code> 的样式失败于 <code>UNSUPPORTED</code>), 规则读回时 <code>stopIfTrue</code> 总为 <code>true</code>, 数据有效性支持全部类型. csv 与 tsv 不含规则: 添加失败于 <code>UNSUPPORTED</code>, 读取返回空数组, 清除返回 0. 以 <code>stream</code> 模式打开的工作簿添加或清除规则失败于 <code>READ_ONLY</code>, 读取失败于 <code>UNSUPPORTED</code>.</p>
+<p><a href="xlsxSheetType.html#xlsxsheettype_m_addconditionalformat">Sheet#addConditionalFormat</a> 与 <a href="xlsxSheetType.html#xlsxsheettype_m_addvalidation">Sheet#addValidation</a> 的范围为一个 A1 范围. 读回的规则 (<a href="xlsxSheetType.html#xlsxsheettype_m_conditionalformats">Sheet#conditionalFormats</a>, <a href="xlsxSheetType.html#xlsxsheettype_m_validations">Sheet#validations</a>) 形如 <code>{ range, rule }</code>, 其中 <code>range</code> 可以是以空格分隔的多个矩形 (例如经 <a href="xlsxSheetType.html#xlsxsheettype_m_clearrules">Sheet#clearRules</a> 拆分后, 或文件本来如此). 无法映射的规则读回为 <code>{ type: &#39;unknown&#39;, description }</code>.</p>
+<p>一个单元格至多有一条数据有效性, 添加时先把其单元格从已有的数据有效性中去掉 (与 Excel 相同); 条件格式可以重叠, 按 <code>priority</code> 排序.</p>
+<h3>ConditionalFormatRule<span><a class="mark" href="#xlsx_conditionalformatrule" id="xlsx_conditionalformatrule">#</a></span></h3>
+<p>条件格式规则. 公共键:</p>
+<ul>
+<li><strong>type</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 规则类型, 见下</li>
+<li><strong>[ priority ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 优先级, 正整数, 小者优先. 省略时排在最后; 给出时该优先级及之后的规则依次顺延</li>
+<li><strong>[ stopIfTrue = false ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 成立时不再应用后面的规则</li>
+<li><strong>style</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 差异样式, 用于 <code>cellIs</code>, <code>expression</code>, <code>top10</code>, <code>duplicateValues</code> 与 <code>uniqueValues</code>. 只接受 <code>font.color</code>, <code>font.bold</code>, <code>font.italic</code>, <code>fill</code>, <code>border</code> 与 <code>numFmt</code>, 写法同 <a href="#xlsx_stylespec">StyleSpec</a></li>
+</ul>
+<p>各类型:</p>
+<ul>
+<li><code>cellIs</code>: 单元格值比较. <code>operator</code> 为 <code>&#39;between&#39;</code> (默认), <code>&#39;notBetween&#39;</code>, <code>&#39;eq&#39;</code>, <code>&#39;ne&#39;</code>, <code>&#39;gt&#39;</code>, <code>&#39;lt&#39;</code>, <code>&#39;ge&#39;</code>, <code>&#39;le&#39;</code> (也接受 <code>&#39;greaterThan&#39;</code> 等 OOXML 名称, 读回为短名); <code>value</code> 必填, <code>value2</code> 用于 <code>between</code> 与 <code>notBetween</code>. 操作数可为数字, 布尔值, 日期, 以 <code>=</code> 开头的公式或文本.</li>
+<li><code>expression</code>: <code>formula</code> 为条件公式 (<code>=</code> 可省略, 读回不带 <code>=</code>).</li>
+<li><code>top10</code>: <code>rank</code> 默认 10 (<code>percent</code> 为 <code>true</code> 时 1 至 100, 否则 1 至 1000), <code>bottom</code> 取最小的若干项, <code>percent</code> 按百分比.</li>
+<li><code>duplicateValues</code> 与 <code>uniqueValues</code>: 重复值与唯一值.</li>
+<li><code>colorScale</code>: <code>colors</code> 为 2 或 3 个颜色, <code>points</code> 为对应的阈值 (默认最小值与最大值, 三色时中间为第 50 百分位).</li>
+<li><code>dataBar</code>: <code>color</code> 默认 <code>&#39;#638EC6&#39;</code>, <code>showValue</code> (默认 <code>true</code>) 是否显示数值, <code>points</code> 为两个阈值 (默认最小值与最大值).</li>
+<li><code>iconSet</code>: <code>set</code> 为图标集名称 (默认 <code>&#39;3TrafficLights1&#39;</code>), 可选 <code>3Arrows</code>, <code>3ArrowsGray</code>, <code>3Flags</code>, <code>3TrafficLights1</code>, <code>3TrafficLights2</code>, <code>3Signs</code>, <code>3Symbols</code>, <code>3Symbols2</code>, <code>4Arrows</code>, <code>4ArrowsGray</code>, <code>4RedToBlack</code>, <code>4Rating</code>, <code>4TrafficLights</code>, <code>5Arrows</code>, <code>5ArrowsGray</code>, <code>5Rating</code>, <code>5Quarters</code>; <code>reverse</code> 反转图标顺序, <code>showValue</code> 是否显示数值, <code>points</code> 的个数等于图标数 (默认按百分比均分, 三个图标为 0, 33, 67). 阈值的 <code>gte</code> (默认 <code>true</code>) 表示图标从该值本身 (<code>&gt;=</code>) 开始, 为 <code>false</code> 时从大于它 (<code>&gt;</code>) 开始.</li>
+</ul>
+<p>阈值写作 <code>&#39;min&#39;</code>, <code>&#39;max&#39;</code> 或 <code>{ type, value }</code>, <code>type</code> 为 <code>&#39;num&#39;</code>, <code>&#39;percent&#39;</code>, <code>&#39;percentile&#39;</code> 或 <code>&#39;formula&#39;</code>.</p>
+<h3>ValidationRule<span><a class="mark" href="#xlsx_validationrule" id="xlsx_validationrule">#</a></span></h3>
+<p>数据有效性规则. 各类型:</p>
+<ul>
+<li><code>list</code>: 下拉列表. <code>values</code> 为字符串数组 (合计至多 255 个字符), 或 <code>formula</code> 为来源范围 (如 <code>&#39;Sheet2!$A$1:$A$9&#39;</code>); <code>showDropdown</code> (默认 <code>true</code>) 是否显示下拉箭头.</li>
+<li><code>whole</code>, <code>decimal</code>, <code>date</code>, <code>time</code>, <code>textLength</code>: 整数, 小数, 日期, 时间与文本长度. <code>operator</code> 同 <code>cellIs</code> (默认 <code>&#39;between&#39;</code>); <code>between</code> 与 <code>notBetween</code> 用 <code>min</code> 与 <code>max</code>, <code>eq</code> 与 <code>ne</code> 用 <code>value</code>, <code>gt</code> 与 <code>ge</code> 用 <code>min</code>, <code>lt</code> 与 <code>le</code> 用 <code>max</code> (单个操作数时也可写 <code>value</code>). <code>date</code> 接受 <code>&#39;yyyy-mm-dd&#39;</code> 与序列号, 读回为 <code>&#39;yyyy-mm-dd&#39;</code>; <code>time</code> 接受 <code>&#39;HH:mm&#39;</code>, <code>&#39;HH:mm:ss&#39;</code> 与一天中的小数, 读回为 <code>&#39;HH:mm:ss&#39;</code>.</li>
+<li><code>custom</code>: <code>formula</code> 为自定义公式.</li>
+<li><code>any</code>: 任何值, 只用于显示输入提示.</li>
+</ul>
+<p>公共键:</p>
+<ul>
+<li><strong>[ allowBlank = true ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否允许空值</li>
+<li><strong>[ prompt ]</strong> { <span class="type">{ title?: <a href="dataTypes.html#datatypes_string">string</a>; text?: <a href="dataTypes.html#datatypes_string">string</a></span> }} - 选中单元格时的输入提示, 默认关闭</li>
+<li><strong>[ error ]</strong> { <span class="type">{ title?: <a href="dataTypes.html#datatypes_string">string</a>; text?: <a href="dataTypes.html#datatypes_string">string</a>; style?: <a href="dataTypes.html#datatypes_string">string</a></span> }} - 输入无效时的提示, 默认开启. <code>style</code> 为 <code>&#39;stop&#39;</code> (默认), <code>&#39;warning&#39;</code> 或 <code>&#39;info&#39;</code></li>
+</ul>
+<p><code>prompt</code> 与 <code>error</code> 给 <code>false</code> 表示关闭, 读回时关闭的一项为 <code>false</code>. 标题至多 32 个字符, 输入提示至多 255 个字符, 错误提示至多 225 个字符. 公式在改动前先解析, 文件格式存不下的公式失败于 <code>INVALID_ARGUMENT</code>.</p>
+<pre><code class="lang-js">let wb = xlsx.open(&#39;./report.xlsx&#39;);
+try {
+    let sheet = wb.sheet(1);
+    sheet.addConditionalFormat(&#39;D2:D100&#39;, { type: &#39;cellIs&#39;, operator: &#39;gt&#39;, value: 20, style: { font: { color: &#39;#C00000&#39;, bold: true } } });
+    sheet.addConditionalFormat(&#39;B2:B100&#39;, { type: &#39;dataBar&#39;, color: &#39;#5B9BD5&#39; });
+    sheet.addValidation(&#39;B2:B100&#39;, { type: &#39;whole&#39;, operator: &#39;between&#39;, min: 0, max: 999, error: { title: &#39;数量&#39;, text: &#39;请输入 0 至 999 的整数&#39; } });
+    sheet.addValidation(&#39;E2:E100&#39;, { type: &#39;list&#39;, values: [&#39;待发货&#39;, &#39;已发货&#39;, &#39;已签收&#39;] });
+    sheet.validations().forEach(v =&gt; console.log(v.range, v.rule.type));
+    wb.save();
+} finally {
+    wb.close();
+}
+</code></pre>
+<h2>选项<span><a class="mark" href="#xlsx_9" id="xlsx_9">#</a></span></h2>
+<h3>OpenOptions<span><a class="mark" href="#xlsx_openoptions" id="xlsx_openoptions">#</a></span></h3>
+<p>打开表格文件的选项, 用于 <a href="#xlsx_m_info">info</a>, <a href="#xlsx_m_sheetnames">sheetNames</a>, <a href="#xlsx_m_read">read</a>, <a href="#xlsx_m_readall">readAll</a> 与 <a href="#xlsx_m_open">open</a>.</p>
+<ul>
+<li><strong>[ password ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 加密文件的密码, 见 <a href="#xlsx_6">加密与密码</a></li>
+<li><strong>[ format ]</strong> { <code>&#39;xlsx&#39;</code> | <code>&#39;xlsm&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code> } - 扩展名无法判断格式时指定</li>
+<li><strong>[ mode = <code>&#39;auto&#39;</code> ]</strong> { <code>&#39;auto&#39;</code> | <code>&#39;full&#39;</code> | <code>&#39;stream&#39;</code> } - 载入方式, 见 <a href="#xlsx_3">读取模式与大表</a>. <a href="#xlsx_m_info">info</a> 与 <a href="#xlsx_m_sheetnames">sheetNames</a> 不接受此键</li>
+<li><strong>[ encoding ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - csv 的编码, 默认自动探测, 见 <a href="#xlsx_csv">csv 与编码</a></li>
+<li><strong>[ delimiter ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - csv 的分隔符 (一个字符), 默认自动探测</li>
+<li><strong>[ parseNumbers = true ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - csv 中形如数字的字段转为数字</li>
+<li><strong>[ parseBooleans = false ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - csv 中的 <code>true</code> / <code>false</code> 转为布尔值</li>
+</ul>
+<h3>ReadOptions<span><a class="mark" href="#xlsx_readoptions" id="xlsx_readoptions">#</a></span></h3>
+<p>读取行的选项, 用于 <a href="#xlsx_m_read">read</a>, <a href="#xlsx_m_readall">readAll</a> 与 <a href="xlsxSheetType.html#xlsxsheettype_m_read">Sheet#read</a>. <a href="#xlsx_m_read">read</a> 与 <a href="#xlsx_m_readall">readAll</a> 同时接受 <a href="#xlsx_openoptions">OpenOptions</a> 的键.</p>
+<ul>
+<li><strong>[ sheet ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 工作表名称或从 1 计的序号, 默认第一个可见的工作表. 只用于 <a href="#xlsx_m_read">read</a></li>
+<li><strong>[ range ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 读取的 A1 范围, 默认为工作表的已用范围</li>
+<li><strong>[ from ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 第一个数据行的工作表行号</li>
+<li><strong>[ to ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 最后一个数据行的工作表行号</li>
+<li><strong>[ header = false ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 范围的第一行作为表头, 其余各行返回对象</li>
+<li><strong>[ cells = false ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 各单元格返回 <a href="#xlsx_celldetail">CellDetail</a></li>
+<li><strong>[ formatted = false ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 各单元格返回显示文本</li>
+<li><strong>[ blankRows ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否返回空行, 数组行默认 <code>true</code>, 对象行默认 <code>false</code></li>
+<li><strong>[ trim = false ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 去掉字符串值与表头名的首尾空白</li>
+<li><strong>[ limit ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 至多返回的行数, <code>0</code> 返回空数组</li>
+</ul>
+<p>说明:</p>
+<ul>
+<li><code>header: true</code> 时表头总是范围的第一行, <code>from</code> 与 <code>to</code> 只限制其后的数据行.</li>
+<li>空行指没有任何值的行. 返回的空行止于最后一个有数据的行; 给出 <code>range</code> 时, 范围开头的空行同样返回.</li>
+<li><code>cells</code> 与 <code>formatted</code> 不能同时为 <code>true</code>, 否则失败于 <code>INVALID_ARGUMENT</code>.</li>
+<li>流式读取且文件没有记录已用范围时 (部分程序生成的 xlsx, 以及流式读取的 csv), 每行按自身的宽度从 A 列返回, 各行长度可能不同.</li>
+</ul>
+<h3>WriteOptions<span><a class="mark" href="#xlsx_writeoptions" id="xlsx_writeoptions">#</a></span></h3>
+<p>写入的选项, 用于 <a href="#xlsx_m_write">write</a> 与 <a href="#xlsx_m_writeall">writeAll</a>. 带 <code>*</code> 的键也用于 <a href="#xlsx_m_append">append</a>.</p>
+<ul>
+<li><strong>[ sheet ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 工作表名称, 默认 <code>&#39;Sheet1&#39;</code>. 只用于 <a href="#xlsx_m_write">write</a> *</li>
+<li><strong>[ header ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 表头, 见下文 *</li>
+<li><strong>[ format ]</strong> { <code>&#39;xlsx&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code> } - 目标格式, 默认按目标的扩展名. 不能新建 xlsm (失败于 <code>UNSUPPORTED</code>)</li>
+<li><strong>[ dateFormat = <code>&#39;yyyy-mm-dd hh:mm:ss&#39;</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 写入日期使用的数字格式 *</li>
+<li><strong>[ formulas = false ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 以 <code>=</code> 开头的字符串按公式写入 *</li>
+<li><strong>[ evaluate ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 保存前是否计算公式, 见 <a href="#xlsx_5">公式</a></li>
+<li><strong>[ password ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 加密输出 (只用于 xlsx, xlsm 与 xls) *</li>
+<li><strong>[ encoding = <code>&#39;UTF-8&#39;</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - csv 输出的编码 *</li>
+<li><strong>[ delimiter ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - csv 输出的分隔符, csv 默认 <code>,</code>, tsv 为制表符 *</li>
+<li><strong>[ bom = true ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - csv 输出是否写入 BOM</li>
+<li><strong>[ styles ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 样式, 见 <a href="#xlsx_layoutoptions">LayoutOptions</a> *</li>
+<li><strong>[ columnWidths ]</strong> { <code>&#39;auto&#39;</code> | <a href="dataTypes.html#datatypes_array">Array</a> | <a href="dataTypes.html#datatypes_object">Object</a> } - 列宽, 见 <a href="#xlsx_layoutoptions">LayoutOptions</a> *</li>
+<li><strong>[ rowHeights ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 行高, 见 <a href="#xlsx_layoutoptions">LayoutOptions</a> *</li>
+<li><strong>[ merges ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 要合并的范围, 见 <a href="#xlsx_layoutoptions">LayoutOptions</a> *</li>
+<li><strong>[ freeze ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 冻结窗格, 见 <a href="#xlsx_layoutoptions">LayoutOptions</a> *</li>
+<li><strong>[ autoFilter ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> | <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 自动筛选, 见 <a href="#xlsx_layoutoptions">LayoutOptions</a> *</li>
+<li><strong>[ onProgress ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_function">Function</a></span> } - 进度回调, 只用于 <code>Async</code> 形态, 见 <a href="#xlsx_4">同步, 异步与进度</a> *</li>
+</ul>
+<p><code>header</code> 的取值:</p>
+<ul>
+<li>字符串数组: 作为第一行写入; 对象行按这些名称依次取值, 没有对应键的名称留空, 不在其中的键被忽略.</li>
+<li>省略: 行是对象时, 以第一个对象行的键作为表头写入第一行, 之后的对象行按这些键取值; 行是数组时不写表头.</li>
+<li><code>true</code>: 同省略. 行是数组时没有可写的表头, 不写.</li>
+<li><code>false</code>: 不写表头行, 对象行仍按第一个对象行的键的顺序取值.</li>
+</ul>
+<h2>[m] info<span><a class="mark" href="#xlsx_m_info" id="xlsx_m_info">#</a></span></h2>
+<h3>xlsx.info(path, options?)<span><a class="mark" href="#xlsx_xlsx_info_path_options" id="xlsx_xlsx_info_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a></span> } - 打开选项, 不接受 <code>mode</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetfileinfo">SheetFileInfo</a></span> } - 文件信息</li>
+</ul>
+<p>读取格式, 工作表清单 (名称, 序号, 末行与末列, 已用范围, 是否隐藏), 文件大小, 是否加密与日期系统; csv 还给出探测到的编码, 分隔符与是否带 BOM. 字段见 <a href="#xlsx_sheetfileinfo">SheetFileInfo</a>.</p>
+<pre><code class="lang-js">let info = xlsx.info(&#39;./sales.xlsx&#39;);
+console.log(info.format, info.mode, info.encrypted, info.dateSystem);
+info.sheets.forEach(s =&gt; console.log(s.index, s.name, s.rows + &#39; x &#39; + s.cols, s.dimension, s.hidden));
+</code></pre>
+<h2>[m] infoAsync<span><a class="mark" href="#xlsx_m_infoasync" id="xlsx_m_infoasync">#</a></span></h2>
+<h3>xlsx.infoAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_infoasync_path_options" id="xlsx_xlsx_infoasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a></span> } - 打开选项, 不接受 <code>mode</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetfileinfo">SheetFileInfo</a>&gt;</span> }</li>
+</ul>
+<h2>[m] sheetNames<span><a class="mark" href="#xlsx_m_sheetnames" id="xlsx_m_sheetnames">#</a></span></h2>
+<h3>xlsx.sheetNames(path, options?)<span><a class="mark" href="#xlsx_xlsx_sheetnames_path_options" id="xlsx_xlsx_sheetnames_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a></span> } - 打开选项, 不接受 <code>mode</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 工作表名称</li>
+</ul>
+<p>按工作簿中的顺序返回全部工作表的名称, 包括隐藏的工作表. csv 与 tsv 只有一个工作表.</p>
+<pre><code class="lang-js">console.log(xlsx.sheetNames(&#39;./sales.xlsx&#39;)); // [&#39;一月&#39;, &#39;二月&#39;, &#39;三月&#39;]
+</code></pre>
+<h2>[m] sheetNamesAsync<span><a class="mark" href="#xlsx_m_sheetnamesasync" id="xlsx_m_sheetnamesasync">#</a></span></h2>
+<h3>xlsx.sheetNamesAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_sheetnamesasync_path_options" id="xlsx_xlsx_sheetnamesasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a></span> } - 打开选项, 不接受 <code>mode</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a>&gt;</span> }</li>
+</ul>
+<h2>[m] read<span><a class="mark" href="#xlsx_m_read" id="xlsx_m_read">#</a></span></h2>
+<h3>xlsx.read(path, options?)<span><a class="mark" href="#xlsx_xlsx_read_path_options" id="xlsx_xlsx_read_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a> &amp; <a href="#xlsx_readoptions">ReadOptions</a></span> } - 打开与读取选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 行</li>
+</ul>
+<p>读取一个工作表 (默认第一个可见的工作表) 的行. 默认返回数组的数组, <code>header: true</code> 时返回对象数组, 值的类型见 <a href="#xlsx_2">行列编号与数据模型</a>.</p>
+<p>结果一次性放入脚本内存. 大表请用 <code>range</code>, <code>from</code> / <code>to</code> 与 <code>limit</code> 只取需要的行, 或用 <a href="#xlsx_m_open">open</a> 打开后以 <a href="xlsxSheetType.html#xlsxsheettype_m_eachrow">Sheet#eachRow</a> 分批读取.</p>
+<pre><code class="lang-js">let rows = xlsx.read(&#39;./sales.xlsx&#39;, { sheet: &#39;一月&#39;, header: true, range: &#39;A1:D200&#39; });
+rows.forEach(r =&gt; console.log(r[&#39;产品&#39;], r[&#39;数量&#39;]));
+
+let head = xlsx.read(&#39;./data.csv&#39;, { limit: 10 }); // 前 10 行, 数组的数组.
+let text = xlsx.read(&#39;./sales.xlsx&#39;, { formatted: true, from: 2, to: 5 }); // 显示文本.
+</code></pre>
+<h2>[m] readAsync<span><a class="mark" href="#xlsx_m_readasync" id="xlsx_m_readasync">#</a></span></h2>
+<h3>xlsx.readAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_readasync_path_options" id="xlsx_xlsx_readasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a> &amp; <a href="#xlsx_readoptions">ReadOptions</a></span> } - 打开与读取选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a>&gt;</span> }</li>
+</ul>
+<h2>[m] readAll<span><a class="mark" href="#xlsx_m_readall" id="xlsx_m_readall">#</a></span></h2>
+<h3>xlsx.readAll(path, options?)<span><a class="mark" href="#xlsx_xlsx_readall_path_options" id="xlsx_xlsx_readall_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a> &amp; <a href="#xlsx_readoptions">ReadOptions</a></span> } - 打开与读取选项, 不接受 <code>sheet</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 以工作表名称为键, 各工作表的行为值</li>
+</ul>
+<p>按工作簿中的顺序读取每个工作表 (包括隐藏的工作表), 读取选项作用于每个工作表.</p>
+<pre><code class="lang-js">let all = xlsx.readAll(&#39;./sales.xlsx&#39;, { header: true });
+Object.keys(all).forEach(name =&gt; console.log(name, all[name].length));
+</code></pre>
+<h2>[m] readAllAsync<span><a class="mark" href="#xlsx_m_readallasync" id="xlsx_m_readallasync">#</a></span></h2>
+<h3>xlsx.readAllAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_readallasync_path_options" id="xlsx_xlsx_readallasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 表格文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a> &amp; <a href="#xlsx_readoptions">ReadOptions</a></span> } - 打开与读取选项, 不接受 <code>sheet</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="dataTypes.html#datatypes_object">object</a>&gt;</span> }</li>
+</ul>
+<h2>[m] write<span><a class="mark" href="#xlsx_m_write" id="xlsx_m_write">#</a></span></h2>
+<h3>xlsx.write(path, rows, options?)<span><a class="mark" href="#xlsx_xlsx_write_path_rows_options" id="xlsx_xlsx_write_path_rows_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>rows</strong> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 行, 每行是数组 (从 A 列起) 或对象</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_writeoptions">WriteOptions</a></span> } - 写入选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> } - <code>{ path, format, sheets, sizeBytes, warnings }</code></li>
+</ul>
+<p>新建一个只含一个工作表的文件, 目标路径上已有的文件被替换. 格式取 <code>format</code>, 其次取目标的扩展名. 新文件没有可保留的宏, 目标为 xlsm 时失败于 <code>UNSUPPORTED</code>; xlsm 只能由 <a href="#xlsx_m_open">open</a> 打开后保存为 xlsm. 单元格对象 (<code>{ v, f, style }</code>), 日期与公式的写法见 <a href="#xlsx_2">行列编号与数据模型</a> 与 <a href="#xlsx_5">公式</a>, 样式与版式见 <a href="#xlsx_7">样式与版式</a>.</p>
+<p>目标为 csv 或 tsv 时只能写入值: 带版式键或 <code>password</code> 时失败于 <code>INVALID_ARGUMENT</code>, 见 <a href="#xlsx_csv">csv 与编码</a>. 行先在脚本中转换再分块发给插件, 生成很大的表时请用 <a href="#xlsx_m_createwriter">createWriter</a> 逐行写出.</p>
+<pre><code class="lang-js">let rows = [
+    { 产品: &#39;苹果&#39;, 数量: 12, 单价: 3.5, 日期: new Date(2026, 10, 1) },
+    { 产品: &#39;香蕉&#39;, 数量: 30, 单价: 2.8, 日期: new Date(2026, 10, 2) },
+];
+let r = xlsx.write(&#39;./fruit.xlsx&#39;, rows, {
+    sheet: &#39;入库&#39;,
+    dateFormat: &#39;yyyy-mm-dd&#39;,
+    columnWidths: &#39;auto&#39;,
+    freeze: { rows: 1 },
+    styles: { header: { font: { bold: true }, fill: &#39;#DDEBF7&#39; } },
+});
+console.log(r.path, r.sheets[0].rows); // ... 3
+
+xlsx.write(&#39;./fruit.csv&#39;, rows); // csv: 表头取对象的键, UTF-8 带 BOM.
+xlsx.write(&#39;./plain.xlsx&#39;, [[&#39;a&#39;, 1], [&#39;b&#39;, 2]], { header: [&#39;名称&#39;, &#39;值&#39;] });
+</code></pre>
+<h2>[m] writeAsync<span><a class="mark" href="#xlsx_m_writeasync" id="xlsx_m_writeasync">#</a></span></h2>
+<h3>xlsx.writeAsync(path, rows, options?)<span><a class="mark" href="#xlsx_xlsx_writeasync_path_rows_options" id="xlsx_xlsx_writeasync_path_rows_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>rows</strong> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 行</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_writeoptions">WriteOptions</a></span> } - 写入选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] writeAll<span><a class="mark" href="#xlsx_m_writeall" id="xlsx_m_writeall">#</a></span></h2>
+<h3>xlsx.writeAll(path, sheets, options?)<span><a class="mark" href="#xlsx_xlsx_writeall_path_sheets_options" id="xlsx_xlsx_writeall_path_sheets_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>sheets</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 以工作表名称为键, 各工作表的行为值, 至少一项</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_writeoptions">WriteOptions</a></span> } - 写入选项, 不接受 <code>sheet</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>新建一个含多个工作表的文件, 工作表按对象键的顺序排列, 选项作用于每个工作表. csv 与 tsv 只能容纳一个工作表, 给出多个时失败于 <code>UNSUPPORTED</code>.</p>
+<pre><code class="lang-js">xlsx.writeAll(&#39;./summary.xlsx&#39;, {
+    &#39;一月&#39;: [[&#39;产品&#39;, &#39;数量&#39;], [&#39;苹果&#39;, 12]],
+    &#39;二月&#39;: [[&#39;产品&#39;, &#39;数量&#39;], [&#39;苹果&#39;, 20]],
+}, { freeze: { rows: 1 } });
+</code></pre>
+<h2>[m] writeAllAsync<span><a class="mark" href="#xlsx_m_writeallasync" id="xlsx_m_writeallasync">#</a></span></h2>
+<h3>xlsx.writeAllAsync(path, sheets, options?)<span><a class="mark" href="#xlsx_xlsx_writeallasync_path_sheets_options" id="xlsx_xlsx_writeallasync_path_sheets_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>sheets</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 以工作表名称为键, 各工作表的行为值</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_writeoptions">WriteOptions</a></span> } - 写入选项, 不接受 <code>sheet</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] append<span><a class="mark" href="#xlsx_m_append" id="xlsx_m_append">#</a></span></h2>
+<h3>xlsx.append(path, rows, options?)<span><a class="mark" href="#xlsx_xlsx_append_path_rows_options" id="xlsx_xlsx_append_path_rows_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>rows</strong> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 追加的行</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>header?: <a href="dataTypes.html#datatypes_boolean">boolean</a> | <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a>;</li>
+<li>createIfMissing?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>dateFormat?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>formulas?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>encoding?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>delimiter?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>styles?, columnWidths?, rowHeights?, merges?, freeze?, autoFilter?: 见 <a href="#xlsx_layoutoptions">LayoutOptions</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - 追加选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>把行追加到工作表 (默认第一个可见的工作表) 已用范围的末行之后, 保存回原文件.</p>
+<ul>
+<li>工作表为空时, 与 <a href="#xlsx_m_write">write</a> 一样按 <code>header</code> 写入表头行. 工作表已有内容时, 对象行按工作表第一行的文字对应各列, 第一行没有的键被忽略, <code>header</code> 不再起作用.</li>
+<li>目标文件以 <code>full</code> 模式载入, 超出整载上限时失败于 <code>LIMIT_EXCEEDED</code>, 此时请用 <a href="#xlsx_m_createwriter">createWriter</a> 重新生成.</li>
+<li><code>createIfMissing</code> 为 <code>true</code> 时, 文件不存在则按 <a href="#xlsx_m_write">write</a> 新建, <code>sheet</code> 为名称且工作表不存在则新建该工作表; 为 <code>false</code> (默认) 时这两种情况分别失败于 <code>FILE_NOT_FOUND</code> 与 <code>SHEET_NOT_FOUND</code>.</li>
+<li><code>password</code> 为加密目标的密码, 保存时沿用. <code>encoding</code> 与 <code>delimiter</code> 用于读取 csv 目标, 追加的行沿用文件原有的编码与分隔符.</li>
+<li>版式键只作用于本次追加的行: 列宽, 行高, 合并与筛选按追加区块的位置计算, 工作表原本为空时区块的第一行算作表头行. 目标为 csv 或 tsv 时不接受版式键 (失败于 <code>INVALID_ARGUMENT</code>).</li>
+</ul>
+<pre><code class="lang-js">xlsx.append(&#39;./log.xlsx&#39;, [[new Date(), &#39;start&#39;, 1]], { sheet: &#39;日志&#39;, createIfMissing: true, dateFormat: &#39;yyyy-mm-dd hh:mm&#39; });
+xlsx.append(&#39;./fruit.xlsx&#39;, [{ 产品: &#39;橙子&#39;, 数量: 8, 单价: 4.2 }], { sheet: &#39;入库&#39; });
+</code></pre>
+<h2>[m] appendAsync<span><a class="mark" href="#xlsx_m_appendasync" id="xlsx_m_appendasync">#</a></span></h2>
+<h3>xlsx.appendAsync(path, rows, options?)<span><a class="mark" href="#xlsx_xlsx_appendasync_path_rows_options" id="xlsx_xlsx_appendasync_path_rows_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>rows</strong> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 追加的行</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 追加选项, 同 <a href="#xlsx_m_append">append</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] open<span><a class="mark" href="#xlsx_m_open" id="xlsx_m_open">#</a></span></h2>
+<h3>xlsx.open(path, options?)<span><a class="mark" href="#xlsx_xlsx_open_path_options" id="xlsx_xlsx_open_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a></span> } - 打开选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="xlsxWorkbookType.html">Workbook</a></span> }</li>
+</ul>
+<p>打开工作簿, 返回 <a href="xlsxWorkbookType.html">Workbook</a> 对象, 用于按工作表读取, 修改单元格, 样式与规则, 管理工作表并保存. 工作簿在插件中保持打开, 直到调用 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_close">Workbook#close</a> 或脚本结束, 期间占用一个句柄 (每个脚本至多 16 个, 见 <a href="#xlsx_4">同步, 异步与进度</a>).</p>
+<p><code>mode</code> 的含义见 <a href="#xlsx_3">读取模式与大表</a>. csv 与 tsv 整载后同样可以修改并保存.</p>
+<pre><code class="lang-js">let wb = xlsx.open(&#39;./fruit.xlsx&#39;);
+try {
+    let sheet = wb.sheet(&#39;入库&#39;);
+    sheet.set(&#39;E1&#39;, &#39;金额&#39;);
+    for (let r = 2; r &lt;= sheet.rows; r++) {
+        sheet.set(&#39;E&#39; + r, { f: &#39;B&#39; + r + &#39;*C&#39; + r });
+    }
+    wb.save();
+} finally {
+    wb.close();
+}
+</code></pre>
+<h2>[m] openAsync<span><a class="mark" href="#xlsx_m_openasync" id="xlsx_m_openasync">#</a></span></h2>
+<h3>xlsx.openAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_openasync_path_options" id="xlsx_xlsx_openasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="#xlsx_openoptions">OpenOptions</a></span> } - 打开选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="xlsxWorkbookType.html">Workbook</a>&gt;</span> }</li>
+</ul>
+<h2>[m] create<span><a class="mark" href="#xlsx_m_create" id="xlsx_m_create">#</a></span></h2>
+<h3>xlsx.create(options?)<span><a class="mark" href="#xlsx_xlsx_create_options" id="xlsx_xlsx_create_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> {{<ul>
+<li>format?: <code>&#39;xlsx&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code>;</li>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+</ul>
+</li>
+<li>}} - <code>format</code> 为新工作簿的格式, 默认 <code>&#39;xlsx&#39;</code>; <code>sheet</code> 为第一个工作表的名称, 默认 <code>&#39;Sheet1&#39;</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="xlsxWorkbookType.html">Workbook</a></span> }</li>
+</ul>
+<p>在内存中新建一个只含一个工作表的工作簿 (<code>mode</code> 为 <code>&#39;full&#39;</code>), 占用一个句柄. 新工作簿没有路径, 调用 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a> 时必须给出输出路径. 新文件没有可保留的宏, <code>format: &#39;xlsm&#39;</code> 失败于 <code>UNSUPPORTED</code>. csv 与 tsv 文件只容纳一个工作表, 以它们保存多工作表的工作簿时只写出一个工作表并给出警告.</p>
+<pre><code class="lang-js">let wb = xlsx.create({ sheet: &#39;成绩&#39; });
+let sheet = wb.sheet(1);
+sheet.setRows(1, [[&#39;姓名&#39;, &#39;分数&#39;], [&#39;甲&#39;, 92], [&#39;乙&#39;, 78]]);
+sheet.setStyle(&#39;A1:B1&#39;, { font: { bold: true }, fill: &#39;#FFF2CC&#39; });
+sheet.addConditionalFormat(&#39;B2:B3&#39;, { type: &#39;cellIs&#39;, operator: &#39;lt&#39;, value: 80, style: { font: { color: &#39;#C00000&#39; } } });
+wb.save(&#39;./score.xlsx&#39;);
+wb.close();
+</code></pre>
+<h2>[m] createAsync<span><a class="mark" href="#xlsx_m_createasync" id="xlsx_m_createasync">#</a></span></h2>
+<h3>xlsx.createAsync(options?)<span><a class="mark" href="#xlsx_xlsx_createasync_options" id="xlsx_xlsx_createasync_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_create">create</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="xlsxWorkbookType.html">Workbook</a>&gt;</span> }</li>
+</ul>
+<h2>[m] createWriter<span><a class="mark" href="#xlsx_m_createwriter" id="xlsx_m_createwriter">#</a></span></h2>
+<h3>xlsx.createWriter(path, options?)<span><a class="mark" href="#xlsx_xlsx_createwriter_path_options" id="xlsx_xlsx_createwriter_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>header?: <a href="dataTypes.html#datatypes_boolean">boolean</a> | <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a>;</li>
+<li>format?: <code>&#39;xlsx&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code>;</li>
+<li>encoding?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>delimiter?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>bom?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>columnWidths?, freeze?, autoFilter?: 见 <a href="#xlsx_layoutoptions">LayoutOptions</a>;</li>
+</ul>
+</li>
+<li>}} - 写出选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="xlsxWriterType.html">Writer</a></span> }</li>
+</ul>
+<p>创建逐行写出的写出器 <a href="xlsxWriterType.html">Writer</a>, 用于生成很大的表. 插件只在内存中保留最近写出的 100 行, 内存占用与行数无关. 写出器占用一个句柄; 调用 <a href="xlsxWriterType.html#xlsxwritertype_m_close">Writer#close</a> 后文件才出现在目标路径, 调用 <a href="xlsxWriterType.html#xlsxwritertype_m_abort">Writer#abort</a> 或脚本结束时丢弃已写的内容.</p>
+<ul>
+<li><code>sheet</code> 为第一个工作表的名称, 默认 <code>&#39;Sheet1&#39;</code>. 之后可用 <a href="xlsxWriterType.html#xlsxwritertype_m_addsheet">Writer#addSheet</a> 开始新的工作表 (只限 xlsx).</li>
+<li><code>header</code>, <code>encoding</code>, <code>delimiter</code> 与 <code>bom</code> 的含义同 <a href="#xlsx_writeoptions">WriteOptions</a>. <code>header</code> 为 <code>false</code> 时不写表头行, 对象行仍按第一个对象行的键的顺序取值.</li>
+<li><code>password</code> 加密输出, 只用于 xlsx.</li>
+<li><code>columnWidths</code>, <code>freeze</code> 与 <code>autoFilter</code> 的写法同 <a href="#xlsx_layoutoptions">LayoutOptions</a>, 作用于第一个工作表. <code>columnWidths: &#39;auto&#39;</code> 按写出的前 100,000 行的内容调整列宽, 需要 <code>header</code> 为字符串数组以确定列数, 否则失败于 <code>INVALID_ARGUMENT</code>.</li>
+<li>写出器只写 xlsx, csv 与 tsv: xls 失败于 <code>UNSUPPORTED_FORMAT</code> (请用 <a href="#xlsx_m_create">create</a> 新建后保存为 xls), xlsm 失败于 <code>UNSUPPORTED</code>.</li>
+<li>写出的公式不计算, 文件被设置为打开时重算.</li>
+</ul>
+<pre><code class="lang-js">let w = xlsx.createWriter(&#39;./big.xlsx&#39;, { header: [&#39;序号&#39;, &#39;值&#39;], freeze: { rows: 1 }, columnWidths: &#39;auto&#39; });
+try {
+    for (let i = 1; i &lt;= 200000; i++) {
+        w.addRow([i, Math.random()]);
+    }
+    let r = w.close();
+    console.log(r.path, r.sheets[0].rows); // ... 200001
+} catch (e) {
+    w.abort();
+    throw e;
+}
+</code></pre>
+<h2>[m] createWriterAsync<span><a class="mark" href="#xlsx_m_createwriterasync" id="xlsx_m_createwriterasync">#</a></span></h2>
+<h3>xlsx.createWriterAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_createwriterasync_path_options" id="xlsx_xlsx_createwriterasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 目标文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_createwriter">createWriter</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="xlsxWriterType.html">Writer</a>&gt;</span> }</li>
+</ul>
+<h2>[m] convert<span><a class="mark" href="#xlsx_m_convert" id="xlsx_m_convert">#</a></span></h2>
+<h3>xlsx.convert(input, output?, options?)<span><a class="mark" href="#xlsx_xlsx_convert_input_output_options" id="xlsx_xlsx_convert_input_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>input</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径, 省略时使用默认输出, 见 <a href="#xlsx_1">路径与输出</a></li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>format?: <code>&#39;xlsx&#39;</code> | <code>&#39;xlsm&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code>;</li>
+<li>sourceFormat?: <code>&#39;xlsx&#39;</code> | <code>&#39;xlsm&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code>;</li>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>encoding?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>sourceEncoding?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>delimiter?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>bom?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>parseNumbers?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>formatted?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - 转换选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>在 xlsx, xlsm, xls, csv 与 tsv 之间转换. 输出格式取 <code>format</code>, 其次取输出路径的扩展名, 都没有时失败于 <code>UNSUPPORTED_FORMAT</code> (省略输出时必须给出 <code>format</code>). <code>sourceFormat</code> 用于源文件扩展名无法判断格式的情形.</p>
+<ul>
+<li>工作簿之间: 能整载的工作簿连同样式, 合并, 公式与工作表设置一起转换; 超出整载上限时只复制值, 并给出警告. 只有 xlsm 能转为 xlsm (否则失败于 <code>UNSUPPORTED</code>), xlsm 转为其他格式时去掉宏.</li>
+<li>工作簿转 csv 或 tsv: 只写出 <code>sheet</code> 指定的工作表 (默认第一个可见的), 还有其他工作表时给出警告 (每个工作表一个文件请用 <a href="#xlsx_m_split">split</a>). 输出默认为带 BOM 的 UTF-8, <code>encoding</code>, <code>delimiter</code> 与 <code>bom</code> 可改变它; <code>formatted: true</code> 时写入显示文本而不是原始值.</li>
+<li>csv 或 tsv 转工作簿: <code>encoding</code> 与 <code>delimiter</code> 描述源文件, 省略时自动探测 (见 <a href="#xlsx_csv">csv 与编码</a>); <code>parseNumbers</code> (默认 <code>true</code>) 把形如数字的字段写为数字; 列宽按内容自动设置.</li>
+<li>csv 与 tsv 之间: <code>encoding</code>, <code>delimiter</code> 与 <code>bom</code> 描述输出, 源文件的编码与分隔符自动探测. 源与输出格式相同 (例如 csv 转 csv) 时为转码, <code>sourceEncoding</code> 指定源文件的编码, 省略时自动探测.</li>
+<li>加密的源文件需要 <code>password</code>. 输出为工作簿时沿用该密码, 为 csv 或 tsv 时输出明文并给出警告.</li>
+</ul>
+<pre><code class="lang-js">xlsx.convert(&#39;./report.xls&#39;, &#39;./report.xlsx&#39;);
+xlsx.convert(&#39;./report.xlsx&#39;, &#39;./report.csv&#39;, { sheet: &#39;汇总&#39;, formatted: true });
+xlsx.convert(&#39;./gbk.csv&#39;, &#39;./utf8.csv&#39;, { sourceEncoding: &#39;GBK&#39;, encoding: &#39;UTF-8&#39; });
+let r = xlsx.convert(&#39;./data.tsv&#39;, { format: &#39;xlsx&#39; }); // 默认输出
+console.log(r.path);
+</code></pre>
+<h2>[m] convertAsync<span><a class="mark" href="#xlsx_m_convertasync" id="xlsx_m_convertasync">#</a></span></h2>
+<h3>xlsx.convertAsync(input, output?, options?)<span><a class="mark" href="#xlsx_xlsx_convertasync_input_output_options" id="xlsx_xlsx_convertasync_input_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>input</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_convert">convert</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] toCsv<span><a class="mark" href="#xlsx_m_tocsv" id="xlsx_m_tocsv">#</a></span></h2>
+<h3>xlsx.toCsv(input, output?, options?)<span><a class="mark" href="#xlsx_xlsx_tocsv_input_output_options" id="xlsx_xlsx_tocsv_input_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>input</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径, 省略时使用默认输出</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>encoding?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>sourceEncoding?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>delimiter?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>bom?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>formatted?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - 选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>转换为 csv, 相当于输出格式固定为 csv 的 <a href="#xlsx_m_convert">convert</a>, 不看输出路径的扩展名. 选项的含义同 <a href="#xlsx_m_convert">convert</a>; 源文件是 csv 时为转码, <code>sourceEncoding</code> 指定源文件的编码.</p>
+<pre><code class="lang-js">xlsx.toCsv(&#39;./report.xlsx&#39;, &#39;./report-gbk.csv&#39;, { encoding: &#39;GBK&#39;, bom: false });
+</code></pre>
+<h2>[m] toCsvAsync<span><a class="mark" href="#xlsx_m_tocsvasync" id="xlsx_m_tocsvasync">#</a></span></h2>
+<h3>xlsx.toCsvAsync(input, output?, options?)<span><a class="mark" href="#xlsx_xlsx_tocsvasync_input_output_options" id="xlsx_xlsx_tocsvasync_input_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>input</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_tocsv">toCsv</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] merge<span><a class="mark" href="#xlsx_m_merge" id="xlsx_m_merge">#</a></span></h2>
+<h3>xlsx.merge(inputs, output?, options?)<span><a class="mark" href="#xlsx_xlsx_merge_inputs_output_options" id="xlsx_xlsx_merge_inputs_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>inputs</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 2 至 64 个源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径, 省略时使用默认输出</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>mode?: <code>&#39;sheets&#39;</code> | <code>&#39;rows&#39;</code>;</li>
+<li>header?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>sheetNames?: <a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a>;</li>
+<li>passwords?: (<a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_null">null</a>)<a href="dataTypes.html#datatypes_array">[]</a>;</li>
+<li>outputPassword?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_null">null</a>;</li>
+<li>format?: <code>&#39;xlsx&#39;</code> | <code>&#39;xlsm&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - 合并选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>把多个文件合并为一个. 输入少于 2 个时失败于 <code>INVALID_ARGUMENT</code>, 多于 64 个时失败于 <code>LIMIT_EXCEEDED</code>. 插件先校验全部输入与密码, 然后才开始写出. 输出格式取 <code>format</code>, 其次取输出路径的扩展名, 再次取第一个输入的格式.</p>
+<p><code>mode: &#39;sheets&#39;</code> (默认) 按工作表合并:</p>
+<ul>
+<li>各输入的每个工作表按输入顺序复制到输出, 连同样式, 合并, 公式与工作表设置; csv 与 tsv 输入成为一个工作表.</li>
+<li>工作表名称重复时, 后来的工作表改名 (追加 <code>(2)</code>, <code>(3)</code> 等), 同一输入中引用它的公式随之改写, 并给出警告.</li>
+<li><code>sheetNames</code> 为每个输入的工作表命名, 项数必须等于输入个数; 含多个工作表的输入依次使用该名称, 该名称加 <code>(2)</code> 等.</li>
+<li>单元格合计超过整载上限时只复制值, 并给出警告.</li>
+<li>输出为 xlsm 时保留第一个 xlsm 输入的宏, 没有 xlsm 输入时失败于 <code>UNSUPPORTED</code>. 输出为 csv 或 tsv 时失败于 <code>UNSUPPORTED</code> (请改用 <code>mode: &#39;rows&#39;</code>).</li>
+</ul>
+<p><code>mode: &#39;rows&#39;</code> 按行合并:</p>
+<ul>
+<li>各输入第一个可见的工作表按值依次追加: 值保留类型, 公式只保留缓存的结果, 不带样式. 输入内部的空行保留.</li>
+<li><code>header</code> (默认 <code>true</code>): 各输入的第 1 行是表头, 输出只保留一行表头, 列按表头文字 (去掉首尾空白) 对应; 之前没有的表头文字在末尾新增一列, 并给出警告; 没有表头文字的列保持原位置. <code>header: false</code> 时每一行都追加, 列保持原位置.</li>
+<li>输出为 csv 或 tsv 时为带 BOM 的 UTF-8. 输出为 xlsm 时失败于 <code>UNSUPPORTED</code> (值中没有宏).</li>
+</ul>
+<p>密码:</p>
+<ul>
+<li><code>passwords</code> 按输入顺序给出各输入的密码, 项数必须等于输入个数, <code>&#39;&#39;</code> 或 <code>null</code> 表示该输入没有密码.</li>
+<li><code>outputPassword</code> 为非空字符串时以它加密工作簿输出 (输出为 csv 或 tsv 时失败于 <code>INVALID_ARGUMENT</code>); 为 <code>null</code> 或 <code>&#39;&#39;</code> 时输出不加密. 省略时, 工作簿输出以第一个带密码打开的输入的密码加密, csv 与 tsv 输出为明文, 两种情况都给出警告.</li>
+</ul>
+<pre><code class="lang-js">xlsx.merge([&#39;./1月.xlsx&#39;, &#39;./2月.xlsx&#39;, &#39;./3月.xlsx&#39;], &#39;./一季度.xlsx&#39;, { sheetNames: [&#39;1月&#39;, &#39;2月&#39;, &#39;3月&#39;] });
+xlsx.merge([&#39;./a.csv&#39;, &#39;./b.csv&#39;], &#39;./ab.xlsx&#39;, { mode: &#39;rows&#39; });
+xlsx.merge([&#39;./secret.xlsx&#39;, &#39;./plain.xlsx&#39;], &#39;./all.xlsx&#39;, { passwords: [&#39;p@ss&#39;, null], outputPassword: null });
+</code></pre>
+<h2>[m] mergeAsync<span><a class="mark" href="#xlsx_m_mergeasync" id="xlsx_m_mergeasync">#</a></span></h2>
+<h3>xlsx.mergeAsync(inputs, output?, options?)<span><a class="mark" href="#xlsx_xlsx_mergeasync_inputs_output_options" id="xlsx_xlsx_mergeasync_inputs_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>inputs</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 2 至 64 个源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_merge">merge</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] split<span><a class="mark" href="#xlsx_m_split" id="xlsx_m_split">#</a></span></h2>
+<h3>xlsx.split(path, outputDir?, options?)<span><a class="mark" href="#xlsx_xlsx_split_path_outputdir_options" id="xlsx_xlsx_split_path_outputdir_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ outputDir ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出目录, 省略时使用默认输出目录, 见 <a href="#xlsx_1">路径与输出</a></li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>by?: <code>&#39;sheet&#39;</code> | { <span class="type">rows: <a href="dataTypes.html#datatypes_number">number</a></span> } | { <span class="type">column: <a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> };</li>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>header?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>namePattern?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - 拆分选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_splitresult">SplitResult</a></span> }</li>
+</ul>
+<p>把一个文件拆分为多个文件, 写入输出目录.</p>
+<ul>
+<li><code>by: &#39;sheet&#39;</code> (默认): 每个工作表一个文件, 隐藏的工作表在输出中设为可见.</li>
+<li><code>by: { rows: n }</code>: <code>sheet</code> 指定的工作表 (默认第一个可见的) 每 n 个数据行一个文件.</li>
+<li><code>by: { column: &#39;C&#39; }</code>: 按该列的值分组, 每个不同的值一个文件, 按值首次出现的顺序; 空单元格归入 <code>(blank)</code>.</li>
+<li><code>header</code> (默认 <code>true</code>): 按行或按列拆分时, 第 1 行是表头, 在每个文件顶部重复. <code>header: false</code> 时第 1 行按普通数据行处理. 按工作表拆分时不使用该选项.</li>
+<li>能整载的工作簿连同样式, 合并, 规则与工作表设置复制; 公式所读的行或工作表不全在同一输出中时只保留缓存值, 并给出警告. 流式打开的工作簿与 csv, tsv 按值复制.</li>
+<li>加密的源文件需要 <code>password</code>, 工作簿输出沿用该密码.</li>
+<li>至多 256 个输出, 超出时失败于 <code>LIMIT_EXCEEDED</code>.</li>
+</ul>
+<p>文件名由 <code>namePattern</code> 生成, 可用的占位符:</p>
+<ul>
+<li><code>{name}</code>: 源文件名去掉扩展名.</li>
+<li><code>{index}</code>: 输出的序号, 从 1 计.</li>
+<li><code>{value}</code>: 工作表名称, 行范围 (如 <code>2-101</code>) 或列值; 去掉首尾空白后至多 100 个字符, 为空时为 <code>(blank)</code>.</li>
+</ul>
+<p>默认为 <code>{name}-{value}</code> (按工作表或按列) 与 <code>{name}-{index}</code> (按行). 其他 <code>{单词}</code> 失败于 <code>INVALID_ARGUMENT</code>. 模式带扩展名时由它决定输出格式, 否则沿用源文件的格式 (不含宏的 xlsm 改为 xlsx, 并给出警告). 文件名中不允许的字符替换为 <code>_</code>, 名称连同扩展名至多 255 字节, 重名的文件依次追加 <code>-2</code>, <code>-3</code> 等.</p>
+<pre><code class="lang-js">let r = xlsx.split(&#39;./sales.xlsx&#39;, &#39;./by-region&#39;, { by: { column: &#39;B&#39; }, namePattern: &#39;{value}.xlsx&#39; });
+r.outputs.forEach(o =&gt; console.log(o.name, o.sheets[0].rows));
+
+xlsx.split(&#39;./huge.csv&#39;, &#39;./parts&#39;, { by: { rows: 50000 } }); // huge-1.csv, huge-2.csv ...
+</code></pre>
+<h2>[m] splitAsync<span><a class="mark" href="#xlsx_m_splitasync" id="xlsx_m_splitasync">#</a></span></h2>
+<h3>xlsx.splitAsync(path, outputDir?, options?)<span><a class="mark" href="#xlsx_xlsx_splitasync_path_outputdir_options" id="xlsx_xlsx_splitasync_path_outputdir_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ outputDir ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出目录</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_split">split</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_splitresult">SplitResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] dedupe<span><a class="mark" href="#xlsx_m_dedupe" id="xlsx_m_dedupe">#</a></span></h2>
+<h3>xlsx.dedupe(path, output?, options?)<span><a class="mark" href="#xlsx_xlsx_dedupe_path_output_options" id="xlsx_xlsx_dedupe_path_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径, 省略时使用默认输出 (与源文件同格式)</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>columns?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a> | (<a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>)<a href="dataTypes.html#datatypes_array">[]</a>;</li>
+<li>keep?: <code>&#39;first&#39;</code> | <code>&#39;last&#39;</code>;</li>
+<li>header?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - 去重选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> } - 另带 <code>removed</code>, 即删除的行数</li>
+</ul>
+<p>删除一个工作表 (<code>sheet</code>, 默认第一个可见的) 中的重复行, 以源文件的格式写出.</p>
+<ul>
+<li>键为 <code>columns</code> 所列各列的值, 省略时为全部列. 值按类型比较: 数字与写成该数字的文本不同, <code>1.0</code> 与 <code>1</code> 不同; csv 字段按原文比较.</li>
+<li><code>keep: &#39;first&#39;</code> (默认) 保留第一次出现的行, <code>&#39;last&#39;</code> 保留最后一次出现的行.</li>
+<li><code>header</code> (默认 <code>true</code>) 时第 1 行总是保留. 键单元格全为空的行总是保留.</li>
+<li>其余行保持顺序向上合拢, 其他工作表原样复制. 能整载的工作簿保留样式, 合并, 规则与工作表设置 (跨越被删行的合并区域随之收缩); 去重工作表上的公式, 以及读取它的公式, 保留缓存值并给出警告, 因为它们的引用会指向别的行. 超出整载上限时按值复制, 并给出警告.</li>
+<li>csv 与 tsv 保留原有的编码, 分隔符, BOM 与换行符.</li>
+</ul>
+<pre><code class="lang-js">let r = xlsx.dedupe(&#39;./contacts.xlsx&#39;, &#39;./contacts-unique.xlsx&#39;, { columns: [&#39;B&#39;, &#39;C&#39;] });
+console.log(&#39;删除了 &#39; + r.removed + &#39; 行&#39;);
+</code></pre>
+<h2>[m] dedupeAsync<span><a class="mark" href="#xlsx_m_dedupeasync" id="xlsx_m_dedupeasync">#</a></span></h2>
+<h3>xlsx.dedupeAsync(path, output?, options?)<span><a class="mark" href="#xlsx_xlsx_dedupeasync_path_output_options" id="xlsx_xlsx_dedupeasync_path_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_dedupe">dedupe</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] recalc<span><a class="mark" href="#xlsx_m_recalc" id="xlsx_m_recalc">#</a></span></h2>
+<h3>xlsx.recalc(path, options?)<span><a class="mark" href="#xlsx_xlsx_recalc_path_options" id="xlsx_xlsx_recalc_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>output?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - <code>output</code> 为输出路径, 省略时使用默认输出 (与源文件同格式); 写回源文件时给出源文件路径</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>重新计算工作簿中的全部公式, 把结果写入缓存值后保存. 工作簿以整载方式打开, 超出整载上限时失败于 <code>LIMIT_EXCEEDED</code>. 无法计算的公式的处理与警告见 <a href="#xlsx_5">公式</a>.</p>
+<pre><code class="lang-js">let r = xlsx.recalc(&#39;./budget.xlsx&#39;, { output: &#39;./budget.xlsx&#39; });
+r.warnings.forEach(w =&gt; console.warn(w));
+</code></pre>
+<h2>[m] recalcAsync<span><a class="mark" href="#xlsx_m_recalcasync" id="xlsx_m_recalcasync">#</a></span></h2>
+<h3>xlsx.recalcAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_recalcasync_path_options" id="xlsx_xlsx_recalcasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_recalc">recalc</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] encrypt<span><a class="mark" href="#xlsx_m_encrypt" id="xlsx_m_encrypt">#</a></span></h2>
+<h3>xlsx.encrypt(path, output?, options)<span><a class="mark" href="#xlsx_xlsx_encrypt_path_output_options" id="xlsx_xlsx_encrypt_path_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径, 省略时使用默认输出 (与源文件同格式)</li>
+<li><strong>options</strong> {{<ul>
+<li>password: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - <code>password</code> 为新密码, 必须给出</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>为 xlsx, xlsm 或 xls 文件加上密码: xlsx 与 xlsm 使用 Agile 加密 (AES-256, SHA-512), xls 使用 RC4 CryptoAPI. 未给出 <code>password</code> 时失败于 <code>INVALID_ARGUMENT</code>; 文件已加密时失败于 <code>INVALID_ARGUMENT</code> (请先 <a href="#xlsx_m_decrypt">decrypt</a>); csv 与 tsv 失败于 <code>UNSUPPORTED</code>. xls 加密需要整载工作簿, 超出整载上限时失败于 <code>LIMIT_EXCEEDED</code>.</p>
+<h2>[m] encryptAsync<span><a class="mark" href="#xlsx_m_encryptasync" id="xlsx_m_encryptasync">#</a></span></h2>
+<h3>xlsx.encryptAsync(path, output?, options)<span><a class="mark" href="#xlsx_xlsx_encryptasync_path_output_options" id="xlsx_xlsx_encryptasync_path_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径</li>
+<li><strong>options</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_encrypt">encrypt</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] decrypt<span><a class="mark" href="#xlsx_m_decrypt" id="xlsx_m_decrypt">#</a></span></h2>
+<h3>xlsx.decrypt(path, output?, options)<span><a class="mark" href="#xlsx_xlsx_decrypt_path_output_options" id="xlsx_xlsx_decrypt_path_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径, 省略时使用默认输出 (与源文件同格式)</li>
+<li><strong>options</strong> {{<ul>
+<li>password: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - <code>password</code> 为当前密码, 必须给出</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sheetresult">SheetResult</a></span> }</li>
+</ul>
+<p>去掉 xlsx, xlsm 或 xls 文件的密码, 写出明文副本. 未给出 <code>password</code> 时失败于 <code>INVALID_ARGUMENT</code>, 密码错误时失败于 <code>WRONG_PASSWORD</code>. 文件本来没有加密时原样复制, 并给出警告. csv 与 tsv 失败于 <code>UNSUPPORTED</code>.</p>
+<pre><code class="lang-js">xlsx.encrypt(&#39;./salary.xlsx&#39;, &#39;./salary-locked.xlsx&#39;, { password: &#39;p@ss&#39; });
+let rows = xlsx.read(&#39;./salary-locked.xlsx&#39;, { password: &#39;p@ss&#39; });
+xlsx.decrypt(&#39;./salary-locked.xlsx&#39;, &#39;./salary-plain.xlsx&#39;, { password: &#39;p@ss&#39; });
+</code></pre>
+<h2>[m] decryptAsync<span><a class="mark" href="#xlsx_m_decryptasync" id="xlsx_m_decryptasync">#</a></span></h2>
+<h3>xlsx.decryptAsync(path, output?, options)<span><a class="mark" href="#xlsx_xlsx_decryptasync_path_output_options" id="xlsx_xlsx_decryptasync_path_output_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 源文件路径</li>
+<li><strong>[ output ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出路径</li>
+<li><strong>options</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_decrypt">decrypt</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sheetresult">SheetResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] sniff<span><a class="mark" href="#xlsx_m_sniff" id="xlsx_m_sniff">#</a></span></h2>
+<h3>xlsx.sniff(path)<span><a class="mark" href="#xlsx_xlsx_sniff_path" id="xlsx_xlsx_sniff_path">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 文件路径</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_sniffresult">SniffResult</a></span> }</li>
+</ul>
+<p>探测文件的格式, 以及 csv 与 tsv 的编码与分隔符, 不读取整个文件. 规则见 <a href="#xlsx_csv">csv 与编码</a>. 工作簿文件的 <code>encoding</code> 与 <code>delimiter</code> 为 <code>null</code>, <code>confidence</code> 为 <code>1</code>. 以制表符分隔的 csv 文件报告为 <code>&#39;tsv&#39;</code>.</p>
+<pre><code class="lang-js">let s = xlsx.sniff(&#39;./unknown.csv&#39;);
+console.log(s.format, s.encoding, s.delimiter, s.confidence);
+let rows = xlsx.read(&#39;./unknown.csv&#39;, { encoding: s.encoding, delimiter: s.delimiter });
+</code></pre>
+<h2>[m] sniffAsync<span><a class="mark" href="#xlsx_m_sniffasync" id="xlsx_m_sniffasync">#</a></span></h2>
+<h3>xlsx.sniffAsync(path, options?)<span><a class="mark" href="#xlsx_xlsx_sniffasync_path_options" id="xlsx_xlsx_sniffasync_path_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 文件路径</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>onProgress?: <a href="dataTypes.html#datatypes_function">Function</a>;</li>
+</ul>
+</li>
+<li>}} - 只接受 <code>onProgress</code></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="#xlsx_sniffresult">SniffResult</a>&gt;</span> }</li>
+</ul>
+<h2>[m] view<span><a class="mark" href="#xlsx_m_view" id="xlsx_m_view">#</a></span></h2>
+<h3>xlsx.view(pathOrRows, options?)<span><a class="mark" href="#xlsx_xlsx_view_pathorrows_options" id="xlsx_xlsx_view_pathorrows_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>pathOrRows</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 文件路径, 或要显示的行</li>
+<li><strong>[ options ]</strong> {{<ul>
+<li>title?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>sheet?: <a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>;</li>
+<li>header?: <a href="dataTypes.html#datatypes_boolean">boolean</a>;</li>
+<li>columns?: (<a href="dataTypes.html#datatypes_string">string</a> | <a href="dataTypes.html#datatypes_number">number</a>)<a href="dataTypes.html#datatypes_array">[]</a> | ColumnSpec<a href="dataTypes.html#datatypes_array">[]</a>;</li>
+<li>selectable?: <a href="dataTypes.html#datatypes_boolean">boolean</a> | <code>&#39;row&#39;</code> | <code>&#39;cell&#39;</code> | <code>&#39;none&#39;</code>;</li>
+<li>password?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>format?: <code>&#39;xlsx&#39;</code> | <code>&#39;xlsm&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code>;</li>
+<li>encoding?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+<li>delimiter?: <a href="dataTypes.html#datatypes_string">string</a>;</li>
+</ul>
+</li>
+<li>}} - 查看器选项</li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="xlsxViewSessionType.html">SheetViewSession</a></span> }</li>
+</ul>
+<p>在 3-Tally Sheet 的表格查看器中显示文件或脚本给出的行, 返回查看器会话 <a href="xlsxViewSessionType.html">SheetViewSession</a>, 通过它接收用户的选择, 更新显示的内容或关闭查看器.</p>
+<ul>
+<li><code>title</code> 为查看器标题, 默认为文件名.</li>
+<li><code>sheet</code> 为初始显示的工作表, 只用于文件.</li>
+<li><code>header: true</code> 时, 行数据的第一个数组行作为列标题显示, 不占数据行. 对象行总以属性名为列标题.</li>
+<li><code>columns</code> 为要显示的列及其顺序: 列字母或列号组成的数组; 或者 <code>{ key, title, width, align }</code> 对象组成的数组, 其中 <code>key</code> 为列字母, 列号或对象行的属性名 (显示文件时只能是列字母或列号), <code>title</code> 为列标题, <code>width</code> 为列宽 (dp, 0 隐藏该列), <code>align</code> 为 <code>&#39;left&#39;</code>, <code>&#39;center&#39;</code> 或 <code>&#39;right&#39;</code>.</li>
+<li><code>selectable</code> 为用户可选中的对象: <code>true</code> 或 <code>&#39;row&#39;</code> 选行, <code>&#39;cell&#39;</code> 选单元格, <code>false</code> 或 <code>&#39;none&#39;</code> (默认) 不可选. 用户的选择以会话的 <code>select</code> 事件送达.</li>
+<li><code>password</code>, <code>format</code>, <code>encoding</code> 与 <code>delimiter</code> 用于打开文件, 含义同 <a href="#xlsx_openoptions">OpenOptions</a>.</li>
+</ul>
+<p>查看器在插件中运行, 打开时 AutoJs6 需要在前台, 否则失败于 <code>UI_REQUIRES_FOREGROUND</code>; 查看器 60 秒内未能显示时, 会话以 <code>timeout</code> 结束. 本脚本上一个查看器会话仍在显示时再次调用 <code>view</code>, 新会话直接接手已显示的查看器, AutoJs6 在后台也可以; 旧会话以原因 <code>replaced</code> 结束. 详见 <a href="xlsxViewSessionType.html">SheetViewSession</a>.</p>
+<pre><code class="lang-js">let session = xlsx.view([[&#39;姓名&#39;, &#39;分数&#39;], [&#39;甲&#39;, 92], [&#39;乙&#39;, 78]], { title: &#39;成绩&#39;, header: true, selectable: true });
+session.on(&#39;select&#39;, e =&gt; {
+    toastLog(e.values.join(&#39;, &#39;));
+    session.close({ finish: true });
+});
+</code></pre>
+<h2>[m] viewAsync<span><a class="mark" href="#xlsx_m_viewasync" id="xlsx_m_viewasync">#</a></span></h2>
+<h3>xlsx.viewAsync(pathOrRows, options?)<span><a class="mark" href="#xlsx_xlsx_viewasync_pathorrows_options" id="xlsx_xlsx_viewasync_pathorrows_options">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong> <strong><code>Async</code></strong></p>
+<ul>
+<li><strong>pathOrRows</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_any">any</a><a href="dataTypes.html#datatypes_array">[]</a><a href="dataTypes.html#datatypes_array">[]</a></span> | <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 文件路径, 或要显示的行</li>
+<li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a></span> } - 同 <a href="#xlsx_m_view">view</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="xlsxViewSessionType.html">SheetViewSession</a>&gt;</span> }</li>
+</ul>
+<h2>[m] isAvailable<span><a class="mark" href="#xlsx_m_isavailable" id="xlsx_m_isavailable">#</a></span></h2>
+<h3>xlsx.isAvailable()<span><a class="mark" href="#xlsx_xlsx_isavailable" id="xlsx_xlsx_isavailable">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> }</li>
+</ul>
+<p>插件已安装, 已启用且版本满足要求时返回 <code>true</code>, 否则返回 <code>false</code>. 不抛出异常, 没有 <code>Async</code> 形态. 见 <a href="#xlsx">准备工作</a>.</p>
+<pre><code class="lang-js">if (!xlsx.isAvailable()) {
+    toastLog(&#39;请先安装并启用 3-Tally Sheet 插件&#39;);
+    exit();
+}
+</code></pre>
+<h2>[C] XlsxError<span><a class="mark" href="#xlsx_c_xlsxerror" id="xlsx_c_xlsxerror">#</a></span></h2>
+<h3>new xlsx.XlsxError(message?, code?)<span><a class="mark" href="#xlsx_new_xlsx_xlsxerror_message_code" id="xlsx_new_xlsx_xlsxerror_message_code">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><strong>[ message = <code>&#39;&#39;</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 错误消息</li>
+<li><strong>[ code = <code>&#39;INTERNAL&#39;</code> ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 错误码, 见 <a href="#xlsx_p_code">code</a></li>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="#xlsx_c_xlsxerror">XlsxError</a></span> }</li>
+</ul>
+<p>表格模块的错误类型. 同步形态的失败以 <code>XlsxError</code> 抛出, <code>Async</code> 形态的失败以 <code>XlsxError</code> 拒绝 Promise. 宿主对参数的检查失败同样转为 <code>INVALID_ARGUMENT</code> 的 <code>XlsxError</code>; 只有脚本自己的回调 (例如 <code>onProgress</code> 与查看器会话的事件监听器) 抛出的值原样传出.</p>
+<p><code>XlsxError</code> 不带 <code>new</code> 调用也会创建实例, 脚本可以用它抛出与模块一致的错误. 错误消息为英文.</p>
+<pre><code class="lang-js">try {
+    xlsx.read(&#39;./secret.xlsx&#39;);
+} catch (e) {
+    if (e instanceof xlsx.XlsxError &amp;&amp; e.code === &#39;PASSWORD_REQUIRED&#39;) {
+        let rows = xlsx.read(&#39;./secret.xlsx&#39;, { password: &#39;1234&#39; });
+        console.log(rows.length);
+    } else {
+        throw e;
+    }
+}
+</code></pre>
+<h2>[p#] name<span><a class="mark" href="#xlsx_p_name" id="xlsx_p_name">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>固定为 <code>&#39;XlsxError&#39;</code>, 定义在原型上.</p>
+<h2>[p#] message<span><a class="mark" href="#xlsx_p_message" id="xlsx_p_message">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>错误消息, 不可枚举. 至多 4 KiB, 超出部分被截断.</p>
+<h2>[p#] code<span><a class="mark" href="#xlsx_p_code" id="xlsx_p_code">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>错误码:</p>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PLUGIN_UNAVAILABLE</code></td>
+<td>没有安装 3-Tally Sheet, 无法连接插件, 或插件进程在调用期间退出</td>
+</tr>
+<tr>
+<td><code>PLUGIN_DISABLED</code></td>
+<td>插件在插件中心被关闭</td>
+</tr>
+<tr>
+<td><code>PLUGIN_INCOMPATIBLE</code></td>
+<td>插件版本, 契约版本或插件要求的 AutoJs6 版本不匹配</td>
+</tr>
+<tr>
+<td><code>INVALID_ARGUMENT</code></td>
+<td>参数的类型, 个数或取值不合法, 未知的选项键, 输出路径是目录, 加密已加密的文件等</td>
+</tr>
+<tr>
+<td><code>FILE_NOT_FOUND</code></td>
+<td>输入文件不存在, 或 <a href="#xlsx_m_append">append</a> 的目标不存在且没有 <code>createIfMissing</code></td>
+</tr>
+<tr>
+<td><code>INVALID_FILE</code></td>
+<td>文件损坏, 不是表格文件, 或内容与扩展名不符</td>
+</tr>
+<tr>
+<td><code>UNSUPPORTED_FORMAT</code></td>
+<td>无法确定格式, 或该操作不支持此格式 (例如写出器写 xls)</td>
+</tr>
+<tr>
+<td><code>PASSWORD_REQUIRED</code></td>
+<td>文件已加密而没有给出密码</td>
+</tr>
+<tr>
+<td><code>WRONG_PASSWORD</code></td>
+<td>密码错误</td>
+</tr>
+<tr>
+<td><code>SHEET_NOT_FOUND</code></td>
+<td>工作表不存在</td>
+</tr>
+<tr>
+<td><code>RANGE_INVALID</code></td>
+<td>单元格引用或范围的写法不对, 或超出格式的行列上限</td>
+</tr>
+<tr>
+<td><code>LIMIT_EXCEEDED</code></td>
+<td>超出整载上限, 剩余内存, 拆分输出数, 合并输入数, 单行大小等限制, 见 <a href="#xlsx_11">限制</a></td>
+</tr>
+<tr>
+<td><code>TOO_MANY_HANDLES</code></td>
+<td>当前脚本已持有 16 个打开的工作簿与写出器</td>
+</tr>
+<tr>
+<td><code>READ_ONLY</code></td>
+<td>修改或保存以流式方式打开的工作簿</td>
+</tr>
+<tr>
+<td><code>FORMULA_ERROR</code></td>
+<td>公式语法错误, 或计算时引用链过深</td>
+</tr>
+<tr>
+<td><code>SESSION_CLOSED</code></td>
+<td>工作簿, 写出器或查看器会话已经关闭 (包括空闲 30 分钟后被插件关闭)</td>
+</tr>
+<tr>
+<td><code>UI_REQUIRES_FOREGROUND</code></td>
+<td>调用 <a href="#xlsx_m_view">view</a> 时 AutoJs6 不在前台</td>
+</tr>
+<tr>
+<td><code>STORAGE_PERMISSION_DENIED</code></td>
+<td>AutoJs6 没有读写该文件的权限</td>
+</tr>
+<tr>
+<td><code>CANCELLED</code></td>
+<td>被 <code>cancel()</code> 取消, 或脚本停止</td>
+</tr>
+<tr>
+<td><code>TIMEOUT</code></td>
+<td>契约保留, 脚本的调用没有超时, 不会遇到</td>
+</tr>
+<tr>
+<td><code>UNSUPPORTED</code></td>
+<td>操作不适用于这类文件, 例如新建 xlsm, 加密 csv, 以 csv 输出合并的多个工作表</td>
+</tr>
+<tr>
+<td><code>IO_ERROR</code></td>
+<td>读写文件失败, 或无法创建输出目录</td>
+</tr>
+<tr>
+<td><code>INTERNAL</code></td>
+<td>其他未归类的错误</td>
+</tr>
+</tbody>
+</table>
+<h2>[p#] cause<span><a class="mark" href="#xlsx_p_cause" id="xlsx_p_cause">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>底层原因的说明, 已知时才有.</p>
+<h2>[p#] sheet<span><a class="mark" href="#xlsx_p_sheet" id="xlsx_p_sheet">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>出错的工作表名称, 已知时才有.</p>
+<h2>[p#] ref<span><a class="mark" href="#xlsx_p_ref" id="xlsx_p_ref">#</a></span></h2>
+<div class="signature"><ul>
+<li>{ <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+</div><p>出错的单元格或范围 (A1 写法), 已知时才有.</p>
+<h2>[m#] toString<span><a class="mark" href="#xlsx_m_tostring" id="xlsx_m_tostring">#</a></span></h2>
+<h3>toString()<span><a class="mark" href="#xlsx_tostring" id="xlsx_tostring">#</a></span></h3>
+<p><strong><code>6.8.1</code></strong></p>
+<ul>
+<li><ins><strong>returns</strong></ins> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> }</li>
+</ul>
+<p>返回 <code>&#39;XlsxError [&#39; + code + &#39;]: &#39; + message</code>, 例如以 <code>XlsxError [WRONG_PASSWORD]:</code> 开头的字符串.</p>
+<h2>返回对象<span><a class="mark" href="#xlsx_10" id="xlsx_10">#</a></span></h2>
+<h3>SheetFileInfo<span><a class="mark" href="#xlsx_sheetfileinfo" id="xlsx_sheetfileinfo">#</a></span></h3>
+<p><a href="#xlsx_m_info">info</a> 与 <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_info">Workbook#info</a> 的结果.</p>
+<ul>
+<li><strong>format</strong> { <code>&#39;xlsx&#39;</code> | <code>&#39;xlsm&#39;</code> | <code>&#39;xls&#39;</code> | <code>&#39;csv&#39;</code> | <code>&#39;tsv&#39;</code> } - 文件格式</li>
+<li><strong>mode</strong> { <code>&#39;full&#39;</code> | <code>&#39;stream&#39;</code> } - 载入方式. <a href="#xlsx_m_info">info</a> 按 <code>&#39;auto&#39;</code> 的规则判断, <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_info">Workbook#info</a> 为打开时实际采用的方式</li>
+<li><strong>sheets</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 工作表清单, 每项含:<ul>
+<li><strong>name</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 名称</li>
+<li><strong>index</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 从 1 计的序号</li>
+<li><strong>rows</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 最后一个有内容的行号, 空表为 <code>0</code></li>
+<li><strong>cols</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 最后一个有内容的列号, 空表为 <code>0</code></li>
+<li><strong>dimension</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 已用范围, 例如 <code>&#39;A1:F120&#39;</code>, 空表没有此键</li>
+<li><strong>hidden</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否隐藏</li>
+</ul>
+</li>
+<li><strong>sizeBytes</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 文件大小 (字节)</li>
+<li><strong>encrypted</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否加密</li>
+<li><strong>dateSystem</strong> { <code>1900</code> | <code>1904</code> } - 日期系统, 见 <a href="#xlsx_2">行列编号与数据模型</a></li>
+<li><strong>encoding</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 只用于 csv 与 tsv: 编码</li>
+<li><strong>delimiter</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 只用于 csv 与 tsv: 分隔符</li>
+<li><strong>hasBom</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 只用于 csv 与 tsv: 是否带 BOM</li>
+</ul>
+<h3>SheetResult<span><a class="mark" href="#xlsx_sheetresult" id="xlsx_sheetresult">#</a></span></h3>
+<p>写入与文件工具 (<a href="#xlsx_m_write">write</a>, <a href="#xlsx_m_convert">convert</a>, <a href="#xlsx_m_merge">merge</a>, <a href="xlsxWorkbookType.html#xlsxworkbooktype_m_save">Workbook#save</a>, <a href="xlsxWriterType.html#xlsxwritertype_m_close">Writer#close</a> 等) 的结果.</p>
+<ul>
+<li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出文件的绝对路径</li>
+<li><strong>format</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 输出格式</li>
+<li><strong>sheets</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 输出的工作表, 每项含 <code>name</code>, <code>rows</code> 与 <code>cols</code></li>
+<li><strong>sizeBytes</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 输出文件的大小 (字节)</li>
+<li><strong>warnings</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 警告 (英文), 例如只写了一个工作表, 丢弃了不能保留的内容</li>
+<li><strong>removed</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 只用于 <a href="#xlsx_m_dedupe">dedupe</a>: 删除的重复行数</li>
+</ul>
+<h3>SplitResult<span><a class="mark" href="#xlsx_splitresult" id="xlsx_splitresult">#</a></span></h3>
+<p><a href="#xlsx_m_split">split</a> 的结果.</p>
+<ul>
+<li><strong>paths</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 各输出文件的绝对路径</li>
+<li><strong>outputs</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">object</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 与 <code>paths</code> 一一对应, 每项含 <code>name</code> (按 <code>namePattern</code> 生成的文件名, 重名时实际文件名以 <code>paths</code> 为准), <code>format</code>, <code>sheets</code> (同 <a href="#xlsx_sheetresult">SheetResult</a>) 与 <code>sizeBytes</code></li>
+<li><strong>warnings</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a><a href="dataTypes.html#datatypes_array">[]</a></span> } - 警告</li>
+</ul>
+<h3>SniffResult<span><a class="mark" href="#xlsx_sniffresult" id="xlsx_sniffresult">#</a></span></h3>
+<p><a href="#xlsx_m_sniff">sniff</a> 的结果.</p>
+<ul>
+<li><strong>format</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 探测到的格式</li>
+<li><strong>encoding</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 文本文件的编码, 工作簿为 <code>null</code></li>
+<li><strong>delimiter</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> | <span class="type"><a href="dataTypes.html#datatypes_null">null</a></span> } - 文本文件的分隔符, 工作簿为 <code>null</code></li>
+<li><strong>hasBom</strong> { <span class="type"><a href="dataTypes.html#datatypes_boolean">boolean</a></span> } - 是否带 BOM</li>
+<li><strong>confidence</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 编码判断的可信度, <code>0</code> 到 <code>1</code>, 工作簿为 <code>1</code></li>
+</ul>
+<h3>CellDetail<span><a class="mark" href="#xlsx_celldetail" id="xlsx_celldetail">#</a></span></h3>
+<p>读取选项 <code>cells: true</code> 时每个单元格的形态.</p>
+<ul>
+<li><strong>v</strong> { <span class="type"><a href="dataTypes.html#datatypes_any">any</a></span> } - 值, 规则同 <a href="#xlsx_2">行列编号与数据模型</a></li>
+<li><strong>f</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 公式 (不含 <code>=</code>), 没有公式时没有此键</li>
+<li><strong>t</strong> { <code>&#39;n&#39;</code> | <code>&#39;s&#39;</code> | <code>&#39;b&#39;</code> | <code>&#39;d&#39;</code> | <code>&#39;e&#39;</code> | <code>&#39;z&#39;</code> } - 类型: 数字, 字符串, 布尔, 日期, 错误值, 空</li>
+<li><strong>text</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 显示文本</li>
+<li><strong>style</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 样式 id, 默认样式为 <code>0</code>. 可传给同一工作簿的 <a href="xlsxSheetType.html#xlsxsheettype_m_setstyle">Sheet#setStyle</a> 等方法</li>
+<li><strong>ref</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 单元格的 A1 引用</li>
+<li><strong>merged</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 只用于 <a href="xlsxSheetType.html#xlsxsheettype_m_cell">Sheet#cell</a>: 所在的合并区域, 不在合并区域时没有此键</li>
+</ul>
+<h3>Progress<span><a class="mark" href="#xlsx_progress" id="xlsx_progress">#</a></span></h3>
+<p><code>onProgress</code> 收到的进度.</p>
+<ul>
+<li><strong>opId</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 本次操作的标识</li>
+<li><strong>percent</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 百分比 <code>0</code> 到 <code>100</code>, 总量未知时为 <code>-1</code></li>
+<li><strong>stage</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 阶段名称, 例如 <code>&#39;save&#39;</code>, <code>&#39;split&#39;</code></li>
+<li><strong>current</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 已处理的数量 (通常为行数)</li>
+<li><strong>total</strong> { <span class="type"><a href="dataTypes.html#datatypes_number">number</a></span> } - 总量, 未知时为 <code>-1</code></li>
+</ul>
+<p>操作完成前至多报告一次 <code>100</code>. 进度可能一次也不报告 (例如很小的文件).</p>
+<h2>限制<span><a class="mark" href="#xlsx_11" id="xlsx_11">#</a></span></h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每个脚本打开的工作簿与写出器</td>
+<td>16 个 (插件合计 64 个)</td>
+</tr>
+<tr>
+<td>插件同时执行的耗时操作</td>
+<td>2 个, 其余排队</td>
+</tr>
+<tr>
+<td>整载的单元格数</td>
+<td>1,000,000 个, 另受插件剩余 Java 堆的 90% 限制</td>
+</tr>
+<tr>
+<td>空闲的工作簿与写出器</td>
+<td>30 分钟没有调用且没有进行中的操作时被关闭</td>
+</tr>
+<tr>
+<td>单行大小</td>
+<td>32 MiB</td>
+</tr>
+<tr>
+<td>选项对象</td>
+<td>序列化后 64 KiB</td>
+</tr>
+<tr>
+<td><a href="#xlsx_m_merge">merge</a> 的输入</td>
+<td>2 到 64 个</td>
+</tr>
+<tr>
+<td><a href="#xlsx_m_split">split</a> 的输出</td>
+<td>256 个</td>
+</tr>
+<tr>
+<td><a href="xlsxSheetType.html#xlsxsheettype_m_find">Sheet#find</a> 的结果</td>
+<td>默认 100 个, 至多 1000 个</td>
+</tr>
+<tr>
+<td>工作表名称</td>
+<td>31 个字符</td>
+</tr>
+<tr>
+<td>xlsx / xlsm 的行列</td>
+<td>1,048,576 行, 16,384 列 (XFD)</td>
+</tr>
+<tr>
+<td>xls 的行列</td>
+<td>65,536 行, 256 列 (IV)</td>
+</tr>
+<tr>
+<td>查看器显示等待</td>
+<td>60 秒</td>
+</tr>
+<tr>
+<td>进度回调间隔</td>
+<td>至少 100 毫秒</td>
+</tr>
+<tr>
+<td>调用超时</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<h2>示例 (Examples)<span><a class="mark" href="#xlsx_examples" id="xlsx_examples">#</a></span></h2>
+<h3>读取并筛选<span><a class="mark" href="#xlsx_12" id="xlsx_12">#</a></span></h3>
+<pre><code class="lang-js">let rows = xlsx.read(&#39;./sales.xlsx&#39;, { header: true, trim: true });
+let big = rows.filter(r =&gt; r[&#39;金额&#39;] &gt;= 1000);
+console.log(&#39;大额订单 &#39; + big.length + &#39; 笔&#39;);
+big.forEach(r =&gt; console.log(r[&#39;客户&#39;], r[&#39;金额&#39;]));
+</code></pre>
+<h3>写出带版式的报表<span><a class="mark" href="#xlsx_13" id="xlsx_13">#</a></span></h3>
+<pre><code class="lang-js">let rows = [
+    { 产品: &#39;苹果&#39;, 数量: 120, 单价: 4.5 },
+    { 产品: &#39;香蕉&#39;, 数量: 80, 单价: 3.2 },
+];
+let r = xlsx.write(&#39;./report.xlsx&#39;, rows, {
+    sheet: &#39;报表&#39;,
+    columnWidths: &#39;auto&#39;,
+    freeze: 1,
+    autoFilter: true,
+    styles: { header: { font: { bold: true }, fill: &#39;#DDEBF7&#39; }, columns: { C: { numFmt: &#39;0.00&#39; } } },
+});
+console.log(r.path);
+</code></pre>
+<h3>追加日志<span><a class="mark" href="#xlsx_14" id="xlsx_14">#</a></span></h3>
+<pre><code class="lang-js">xlsx.append(&#39;./log.csv&#39;, [[new Date(), &#39;start&#39;, 1]], { createIfMissing: true });
+console.log(xlsx.read(&#39;./log.csv&#39;).length);
+</code></pre>
+<h3>流式写出与读取大表<span><a class="mark" href="#xlsx_15" id="xlsx_15">#</a></span></h3>
+<pre><code class="lang-js">let w = xlsx.createWriter(&#39;./big.xlsx&#39;, { header: [&#39;序号&#39;, &#39;值&#39;] });
+try {
+    for (let i = 1; i &lt;= 300000; i++) {
+        w.addRow([i, i * 2]);
+    }
+    w.close();
+} catch (e) {
+    w.abort();
+    throw e;
+}
+let wb = xlsx.open(&#39;./big.xlsx&#39;, { mode: &#39;stream&#39; });
+try {
+    let sum = 0;
+    wb.sheet(1).eachRow((rows, startRow) =&gt; {
+        rows.forEach(row =&gt; { sum += row[1]; });
+    }, { from: 2 });
+    console.log(sum);
+} finally {
+    wb.close();
+}
+</code></pre>
+<h3>csv 编码<span><a class="mark" href="#xlsx_csv_1" id="xlsx_csv_1">#</a></span></h3>
+<pre><code class="lang-js">let s = xlsx.sniff(&#39;./old.csv&#39;);
+console.log(s.encoding, s.delimiter, s.confidence);
+xlsx.convert(&#39;./old.csv&#39;, &#39;./old-utf8.csv&#39;, { encoding: &#39;UTF-8&#39;, sourceEncoding: &#39;GBK&#39; });
+let rows = xlsx.read(&#39;./old-utf8.csv&#39;, { header: true });
+console.log(rows[0]);
+</code></pre>
+<h3>异步与取消<span><a class="mark" href="#xlsx_16" id="xlsx_16">#</a></span></h3>
+<pre><code class="lang-js">let job = xlsx.convertAsync(&#39;./big.xlsx&#39;, &#39;./big.csv&#39;, {
+    onProgress: p =&gt; console.log(p.stage, p.percent),
+});
+let timer = setTimeout(() =&gt; job.cancel(), 10000);
+job.then(r =&gt; {
+    clearTimeout(timer);
+    console.log(&#39;完成: &#39; + r.path);
+}).catch(e =&gt; {
+    clearTimeout(timer);
+    console.error(e.code === &#39;CANCELLED&#39; ? &#39;已取消&#39; : e.toString());
+});
+</code></pre>
+<h3>在查看器中选择一行<span><a class="mark" href="#xlsx_17" id="xlsx_17">#</a></span></h3>
+<pre><code class="lang-js">let rows = [[&#39;名称&#39;, &#39;数量&#39;], [&#39;苹果&#39;, 120], [&#39;香蕉&#39;, 80]];
+let session = xlsx.view(rows, { title: &#39;选择产品&#39;, header: true, selectable: true });
+session.on(&#39;select&#39;, e =&gt; {
+    toastLog(&#39;选择了 &#39; + e.values[0]);
+    session.close({ finish: true });
+});
+session.on(&#39;close&#39;, e =&gt; console.log(&#39;查看器结束: &#39; + e.reason));
+</code></pre>
+
+        </div>
+    </div>
+</div>
+
+<script src="assets/sh_javascript.js"></script>
+<script src="assets/sh_java.js"></script>
+<script src="assets/sh_main.js"></script>
+<script src="assets/offline-search.js"></script>
+
+<script src="plugins/docsify-copy-code@2.js"></script>
+<script src="plugins/zoom-image.js"></script>
+
+<script>
+    highlight(void 0, void 0, 'pre');
+    highlight(void 0, void 0, 'tt');
+</script>
+
+<!-- __TRACKING__ -->
+
+</body>
+</html>

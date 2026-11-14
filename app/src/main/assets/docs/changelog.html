@@ -117,6 +117,7 @@
 <li><a class="nav-util" href="util.html">Util - 工具</a></li>
 <li><a class="nav-web" href="web.html">Web - 万维网</a></li>
 <li><a class="nav-workManager" href="workManager.html">WorkManager - 计划任务兼容接口</a></li>
+<li><a class="nav-xlsx" href="xlsx.html">Xlsx - 表格</a></li>
 <li><a class="nav-yolo" href="yolo.html">YOLO - 目标检测</a></li>
 <li><a class="nav-zip" href="zip.html">Zip - 压缩文件</a></li>
 </ul>
@@ -156,8 +157,12 @@
 <li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
 <li><a class="nav-pdfDocumentType" href="pdfDocumentType.html">PdfDocument - PDF 文档对象</a></li>
 <li><a class="nav-pdfViewSessionType" href="pdfViewSessionType.html">PdfViewSession - PDF 查看器会话</a></li>
+<li><a class="nav-xlsxSheetType" href="xlsxSheetType.html">Sheet - 工作表对象</a></li>
+<li><a class="nav-xlsxViewSessionType" href="xlsxViewSessionType.html">SheetViewSession - 表格查看器会话</a></li>
 <li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
 <li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
+<li><a class="nav-xlsxWorkbookType" href="xlsxWorkbookType.html">Workbook - 工作簿对象</a></li>
+<li><a class="nav-xlsxWriterType" href="xlsxWriterType.html">Writer - 写出器对象</a></li>
 <li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
 <li><a class="nav-eventEmitterType" href="eventEmitterType.html">EventEmitter - 事件发射器</a></li>
 <li><a class="nav-imageWrapperType" href="imageWrapperType.html">ImageWrapper - 包装图像类</a></li>
@@ -362,6 +367,8 @@
 <li><p><code>新增</code> <a href="alarms.html#alarms_p_holidays">闹钟 (Alarms)</a>: 3-Chime Alarm 1.2.0 提供的节假日 (alarms.holidays) 与 <a href="alarms.html#alarms_4">响铃前决定</a> (AutoJs6 6.8.1), 包括节假日数据的地区列表, 判断某天是否为节假日或工作日, 列出一年的节假日与补班日, 数据信息与刷新 (refresh 与返回 Promise 的 refreshAsync), 闹钟的节假日过滤 (holidays 选项: 节假日跳过, 只在节假日响, 每个工作日响), 响铃前的 beforeRing 事件 (绑定的 leadSeconds 提前量, 事件对象的 skip(reason?) 与 ring(overrides?), 截止时刻, 以及没有及时决定时照常响铃的各种情形); 说明补班日是否准确取决于上游节假日数据, 官方尚未公布安排的年份为推算, 在插件 1.1.0 及更早版本上调用会提示把插件升级到 1.2.0 (PLUGIN_INCOMPATIBLE)</p>
 </li>
 <li><p><code>新增</code> <a href="pdf.html">PDF 文档 (PDF)</a>: 3-Paper PDF 插件提供的 pdf 模块 (AutoJs6 6.8.1), 包括文档信息, 文字提取与搜索, 目录, 页面渲染, 图片的列出与导出, 合并, 拆分, 提取, 删除, 重排与旋转页面, 由图片, 文本与 HTML 生成 PDF, 加密与解密, 以及打开的文档 (<a href="pdfDocumentType.html">PdfDocument</a>) 与查看器会话 (<a href="pdfViewSessionType.html">PdfViewSession</a>) 两个类型页; 页首说明路径与输出文件的规则, 页码范围的写法, 同步与 Async 形态, 进度与取消, 加密文档的密码, 以及识别扫描页文字 (OCR) 的两种做法; <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_pdf">运行时 API (Runtime APIs)</a> 补充 &quot;Node.js / Bun / Worker 的 pdf&quot; 一节 (能力与 Bun 的 pdf.control 授权, signal 与 timeoutMs); 由 AutoJs6 6.8.1 及以上版本打包的应用也可使用 pdf 模块 (设备上需安装 3-Paper PDF 1.0.0 及以上版本, 打包流程自动加入 org.autojs.plugin.pdf.permission.RUNTIME 权限); <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
+</li>
+<li><p><code>新增</code> <a href="xlsx.html">表格 (Xlsx)</a>: 3-Tally Sheet 插件提供的 xlsx 模块 (AutoJs6 6.8.1), 读写 xlsx, xlsm, xls, csv 与 tsv 表格, 包括工作簿与工作表信息, 读取单元格数据, 整体写出与在末尾追加行, 格式转换, 合并, 拆分, 去重, 重算公式, 加密与解密, 探测 csv 的编码与分隔符, 打开工作簿后编辑单元格, 样式, 合并单元格, 条件格式与数据有效性, 用写出器逐行生成大表, 以及打开表格查看器并接收用户的选择, 另有工作簿 (<a href="xlsxWorkbookType.html">Workbook</a>), 工作表 (<a href="xlsxSheetType.html">Sheet</a>), 写出器 (<a href="xlsxWriterType.html">Writer</a>) 与查看器会话 (<a href="xlsxViewSessionType.html">SheetViewSession</a>) 四个类型页; 页首说明同步与 Async 形态, 进度与取消, 读取模式与大表的上限, 行列编号, 日期与时区, 路径与默认输出目录, 公式, csv 的编码, 加密文件的密码, 以及每个脚本同时最多打开 16 个工作簿与写出器; 由 AutoJs6 6.8.1 及以上版本打包的应用也可使用 xlsx 模块 (设备上需安装 3-Tally Sheet 1.0.0 及以上版本, Node.js 与 Bun 项目由打包流程自动加入 org.autojs.plugin.xlsx.permission.RUNTIME 权限, Rhino 项目需在 project.json 中自行加入); <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
 </li>
 <li><p><code>新增</code> <a href="video.html">视频 (Video)</a> 与 <a href="audio.html">音频 (Audio)</a>: AutoJs6 自带的录屏与录音 (video.record, audio.record), 以及 3-Slate Studio 插件提供的视频与音频加工 (AutoJs6 6.8.1), 包括裁剪, 拼接, 变速, 缩放 / 旋转 / 裁切, 叠加, 抽帧与 GIF, 转码, 混音, 音量与格式转换, 多轨时间线合成 (转场, 叠加与字幕) 与字幕烧录; 页首说明默认输出位置, 插件的 &quot;所有文件访问&quot; 权限 (video.frame 同样需要), 同步与 Async 形态, 进度与取消, Node.js 与 Bun 的用法, 以及计划中的 FFmpeg 命令透传与第三方 FFmpeg 插件的对应写法; 新页 <a href="threeSlateStudio.html">3-Slate Studio</a> 介绍插件的安装, 权限, 界面 (媒体库, 工具箱, 时间线剪辑器, 录音) 与代码生成, 以及计划中的 FFmpeg 大库; <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加这一行</p>
 </li>

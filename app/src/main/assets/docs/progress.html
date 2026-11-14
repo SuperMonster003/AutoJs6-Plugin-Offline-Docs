@@ -117,6 +117,7 @@
 <li><a class="nav-util" href="util.html">Util - 工具</a></li>
 <li><a class="nav-web" href="web.html">Web - 万维网</a></li>
 <li><a class="nav-workManager" href="workManager.html">WorkManager - 计划任务兼容接口</a></li>
+<li><a class="nav-xlsx" href="xlsx.html">Xlsx - 表格</a></li>
 <li><a class="nav-yolo" href="yolo.html">YOLO - 目标检测</a></li>
 <li><a class="nav-zip" href="zip.html">Zip - 压缩文件</a></li>
 </ul>
@@ -156,8 +157,12 @@
 <li><a class="nav-mailMessageType" href="mailMessageType.html">MailMessage - 邮件消息</a></li>
 <li><a class="nav-pdfDocumentType" href="pdfDocumentType.html">PdfDocument - PDF 文档对象</a></li>
 <li><a class="nav-pdfViewSessionType" href="pdfViewSessionType.html">PdfViewSession - PDF 查看器会话</a></li>
+<li><a class="nav-xlsxSheetType" href="xlsxSheetType.html">Sheet - 工作表对象</a></li>
+<li><a class="nav-xlsxViewSessionType" href="xlsxViewSessionType.html">SheetViewSession - 表格查看器会话</a></li>
 <li><a class="nav-speechSessionType" href="speechSessionType.html">SpeechSession - 听写会话</a></li>
 <li><a class="nav-speechWakeSessionType" href="speechWakeSessionType.html">SpeechWakeSession - 唤醒会话</a></li>
+<li><a class="nav-xlsxWorkbookType" href="xlsxWorkbookType.html">Workbook - 工作簿对象</a></li>
+<li><a class="nav-xlsxWriterType" href="xlsxWriterType.html">Writer - 写出器对象</a></li>
 <li><a class="nav-webSocketType" href="webSocketType.html">WebSocket</a></li>
 <li><a class="nav-eventEmitterType" href="eventEmitterType.html">EventEmitter - 事件发射器</a></li>
 <li><a class="nav-imageWrapperType" href="imageWrapperType.html">ImageWrapper - 包装图像类</a></li>
@@ -333,6 +338,7 @@
 
         <div id="apicontent">
             <h1>文档部署进度 (Progress)<span><a class="mark" href="#progress_progress" id="progress_progress">#</a></span></h1>
+<p>2026-11-14 表格 (Xlsx) 新页 (3-Tally Sheet 路线图 P5.1, D44, AutoJs6 6.8.1): <a href="xlsx.html">表格 (Xlsx)</a> 收录 xlsx 模块的 21 个方法 (除 isAvailable 外各带 Async 形态) 与 XlsxError 构造器 (含 23 个错误码), 以及同步与 Async, 进度与取消, 读取模式与大表 (整体载入以 1,000,000 个单元格与剩余 Java 堆的 90% 为上限, Q60), 行列编号与数据模型 (本地时区与 1904 日期系统), 路径与输出 (默认输出目录 Documents/3-Tally Sheet), 公式, 条件格式与数据有效性, csv 与编码 (短文件回落到设置页的默认编码, Q42), 加密与密码, 打包应用 (Q20 (b)), 返回对象与限制 (每个脚本同时最多 16 个工作簿与写出器, 默认不超时); 页首有运行时支持表. 类型页 <a href="xlsxWorkbookType.html">Workbook</a> (打开或新建的工作簿), <a href="xlsxSheetType.html">Sheet</a> (工作表的读取, 编辑, 样式, 合并单元格, 条件格式与数据有效性, 查找), <a href="xlsxWriterType.html">Writer</a> (流式写出器, 行缓冲, close 与 abort) 与 <a href="xlsxViewSessionType.html">SheetViewSession</a> (查看器会话, 就地替换, 事件与关闭原因). <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_xlsx">运行时 API</a> 的 &quot;Node.js / Bun / Worker 的 xlsx&quot; 一节链接到本页. 依据为 AutoJs6 源码 (宿主 a8b22c4c0e, xlsx 模块最后改动于 4e414bd68c), 3-Tally Sheet 插件 (6671be8) 与插件契约. 内容与实现有出入时以实现为准, 差异记在 3-Tally Sheet 路线图 (Q92, Q93). <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加该行, 侧栏与目录增加五页, 数据类型页增加四个类型. 3-Tally Sheet 1.0.0 与 AutoJs6 6.8.1 尚未发布, 此条不表示官方发布.</p>
 <p>2026-11-14 PDF 文档 (PDF) 的打包应用 (3-Paper PDF 路线图 P5.5, 附录 D Q145 (b), AutoJs6 6.8.1): <a href="pdf.html">PDF 文档 (PDF)</a> 页首改为说明由 AutoJs6 打包的应用也可使用 pdf 模块, 以及三个前提 (设备上安装 3-Paper PDF 1.0.0 及以上, 由 AutoJs6 6.8.1 及以上打包, 打包流程自动加入 <code>org.autojs.plugin.pdf.permission.RUNTIME</code>); <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_pdf">运行时 API</a> 的 &quot;Node.js / Bun / Worker 的 pdf&quot; 中 &quot;额度&quot; 一节改为 &quot;打包应用与额度&quot;, 照 xlsx 与 EPUB 的写法说明独立入口, Builder 为 Node (files) 与 Bun (pdf.control) 项目加入的权限, 以及文档, 查看器会话与操作只允许创建它们的应用调用. 依据为 AutoJs6 宿主 c37a23258d (PdfEntry, RemoteApkBuildRequestPreparer) 与 3-Paper PDF 插件的打包入口 (路线图 D43 - D45). 3-Paper PDF 1.0.0 与 AutoJs6 6.8.1 尚未发布, 此条不表示官方发布.</p>
 <p>2026-11-13 PDF 文档 (PDF) 新页 (3-Paper PDF 路线图 P5.1 与 P1.4 / P1.5 的文档行, AutoJs6 6.8.1, Node.js Runtime 2.2.0, Bun Runtime 0.23.0): <a href="pdf.html">PDF 文档 (PDF)</a> 收录 pdf 模块的 22 个方法及其 Async 形态与 PdfError 构造器 (含 20 个错误码), 以及路径与输出文件, 页码范围, 同步与 Async, 进度与取消, 加密文档的密码, 文字识别 (OCR) 的两种做法 (text 的 ocr 选项, 以及 render 后交给 OCR 模块, 对应插件仓库样例 <code>samples/pdf-ocr-manual.js</code>), 返回对象与限制; 类型页 <a href="pdfDocumentType.html">PdfDocument</a> (pdf.open 打开的文档, 每个脚本 8 个, 全部脚本合计 32 个, save 的四步顺序) 与 <a href="pdfViewSessionType.html">PdfViewSession</a> (查看器会话, 事件与关闭原因). <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_pdf">运行时 API</a> 新增 &quot;Node.js / Bun / Worker 的 pdf&quot; 一节 (入口, 45 个成员均返回 Promise, text 与 render 的结果差别, cancel(), onProgress, signal 与 timeoutMs, 按调用声明的能力 (files, files.write, ocr, ui) 与 Bun 的 pdf.control 授权, PdfDocument 与查看器会话). 依据为 AutoJs6 源码 (宿主 aae16b2ae8 时的 pdf 模块与 PdfScriptArguments / PdfCalls / PdfDocumentNativeObject / PdfViewSession), 3-Paper PDF 插件 (e7d4247) 与插件协议, Node 插件 1bf91959 与 Bun 插件 054d1df 的共享门面. 内容与实现有出入时以实现为准, 差异记在 3-Paper PDF 路线图附录 D (Q140, Q141). <a href="plugins.html#plugins_1">插件 (Plugins)</a> 的模块表增加该行, 侧栏, 目录与数据类型页增加三页. 3-Paper PDF 1.0.0 与 AutoJs6 6.8.1 尚未发布, 此条不表示官方发布.</p>
 <p>2026-11-13 Node.js / Bun / Worker 的 xlsx 增补 (3-Tally Sheet 路线图附录 D Q35 (a), Q36 (b), AutoJs6 6.8.1): <a href="runtimeApis.html#runtimeapis_node_js_bun_worker_xlsx">运行时 API</a> 的 &quot;Writer 与查看器&quot; 说明查看器的就地替换 (查看器正显示同一线程上一个会话时再次 view 直接替换它, 不要求 AutoJs6 在前台, 上一个会话以 reason <code>replaced</code> 结束, 之后的调用以 <code>SESSION_CLOSED</code> 拒绝; 其他线程的会话不替换, 仍要求 AutoJs6 在前台) 与 selectable 的取值 (布尔值, <code>&#39;row&#39;</code>, <code>&#39;cell&#39;</code>, <code>&#39;none&#39;</code>). 依据为宿主契约文档 <code>docs/dev/plugin-xlsx-contract.md</code> 的 &quot;Taking Over A Visible Viewer&quot; 一节, 以及 Node.js 插件与 Bun 插件的 xlsx 回归测试. merge 的 outputPassword 与 split 的 header 是模块选项, 随 xlsx 模块页 (3-Tally Sheet 路线图 P5.1) 补齐. 3-Tally Sheet 1.0.0 与 AutoJs6 6.8.1 尚未发布, 此条不表示官方发布.</p>
