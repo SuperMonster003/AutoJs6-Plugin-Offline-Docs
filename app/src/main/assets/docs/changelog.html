@@ -387,6 +387,8 @@
 </li>
 <li><p><code>更新</code> <a href="projectConfig.html#projectconfig_4">项目配置 (project.json)</a>: 补充 &quot;改用规范键名&quot; 一节, 说明项目配置页菜单中的 &quot;改用规范键名&quot; 把别名, 规范键的其他写法与段名别名改为规范键名, 反向别名改名时把值取反, 只在有这类键时出现, project.json 不是合法 JSON 时不能改用, 以及较早版本的 AutoJs6 与 AutoJs4 / AutoX 不识别部分规范键名; &quot;保存时的行为&quot;, &quot;反向别名&quot;, &quot;来自 AutoJs4 与 AutoX 的键&quot; 与常见问题 &quot;hideLogs 等配置每次保存后都会反过来&quot; 增加该节的链接 (AutoJs6 6.8.1, AutoJs6 issue #598)</p>
 </li>
+<li><p><code>更新</code> <a href="debugging.html#debugging_1">调试 (Debugging)</a>: 补充 &quot;UI 线程上的暂停&quot; 说明: 在代码编辑器中调试时, UI 线程 (如 &quot;ui&quot; 脚本的主体与界面事件回调) 停下后立即自动继续 (先触发 pause 事件, 随即触发 resume 事件), 编辑器提示停下的位置, 其他线程不随之暂停, 也无法在该处查看变量; 经 3-Probe Debugger 连接的调试器可以让 UI 线程停下并查看变量, 暂停默认至多 60 秒后自动继续; resume 事件的触发时机随之补充 (AutoJs6 6.8.1)</p>
+</li>
 <li><p><code>更新</code> <a href="plugins.html#plugins_3">插件 (Plugins)</a>: 补充 &quot;插件设置页入口&quot; 一节, 说明插件中心的插件设置页按 meta-data <code>org.autojs.plugin.SETTINGS_ACTION</code>, MCP Server 与 3-Shell Terminal 原有的设置页 action 的顺序打开插件自身的设置页, 以及 meta-data 的写法与对 Activity 的要求 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="console.html#console_p_restoredentrycount">控制台 (Console)</a>: 补充 restoredEntryCount 属性, 即日志页从 AutoJs6 上一个进程恢复的日志条目数 (读取期间为 null), 脚本中的 console 读取始终为 0 (AutoJs6 6.8.1)</p>

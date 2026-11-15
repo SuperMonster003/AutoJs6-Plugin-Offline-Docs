@@ -549,7 +549,7 @@ debugging.off(&#39;pause&#39;, onPause);
 </tr>
 <tr>
 <td>resume</td>
-<td>本脚本继续运行 (继续或单步请求, 以及 UI 线程暂停超时后自动继续)</td>
+<td>本脚本继续运行 (继续或单步请求, UI 线程暂停超时后自动继续, 以及在代码编辑器中调试时 UI 线程停下后立即自动继续)</td>
 <td>无</td>
 </tr>
 </tbody>
@@ -591,6 +591,11 @@ debugging.off(&#39;pause&#39;, onPause);
 </table>
 <p><code>threadName</code> 为暂停线程的名称, 与调试器中显示的线程名相同.</p>
 <p>调试器以 &quot;全部暂停&quot; 模式工作 (默认) 时, 一个线程暂停会让本脚本的其他线程一同暂停, 此时只触发一次 pause 事件.</p>
+<p>UI 线程上的暂停:</p>
+<ul>
+<li>在代码编辑器中调试时, UI 线程 (如 &quot;ui&quot; 脚本的主体与界面事件回调) 不会停住. 编辑器本身运行在 UI 线程上, 因此 UI 线程停下后立即自动继续 (先触发 pause 事件, 随即触发 resume 事件), 编辑器提示停下的位置, 其他线程不随之暂停, 也无法在该处查看变量.</li>
+<li>经 3-Probe Debugger 连接的调试器可以让 UI 线程停下并查看变量, 但暂停默认至多持续 60 秒, 到时自动继续 (触发 resume 事件). 需要调试 UI 线程上的代码时, 使用这种调试器.</li>
+</ul>
 <h2>类型<span><a class="mark" href="#debugging_2" id="debugging_2">#</a></span></h2>
 <h3>DebuggingSubscription<span><a class="mark" href="#debugging_debuggingsubscription" id="debugging_debuggingsubscription">#</a></span></h3>
 <p><a href="#debugging_m_on">on</a> 与 <a href="#debugging_m_once">once</a> 返回的订阅句柄.</p>
