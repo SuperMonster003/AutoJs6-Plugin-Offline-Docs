@@ -34,6 +34,7 @@
 <li><a class="nav-projectConfig" href="projectConfig.html">Project Config - 项目配置</a></li>
 <li><a class="nav-qa" href="qa.html">Q &amp; A - 疑难解答</a></li>
 <li><a class="nav-upgradeTo68" href="upgradeTo68.html">Upgrade to 6.8 - 从 6.7 升级到 6.8</a></li>
+<li><a class="nav-companionPack" href="companionPack.html">Companion Pack - 伴生包</a></li>
 <li><a class="nav-suspicious" href="suspicious.html">Suspicious - 存疑内容</a></li>
 </ul>
 <div class="line"></div>
@@ -358,6 +359,8 @@
 <li><p><code>新增</code> <a href="automator.html#automator_foreground_app">自动化 (Automator)</a>: 补充 &quot;前台应用的判定&quot; 一节, 说明用 registerEvent 判定回到桌面时的三个要点 (桌面本体与最近任务共用包名, 只能按类名区分且类名因 ROM 而异; 桌面的事件可能晚于应用的事件到达; 无法匹配时不判定) 及示例, 桌面包名改为经 PackageManager 查询; <a href="global.html#global_m_currentpackage">全局对象 (Global)</a>: currentPackage 补充 a11y 模式的维护规则 (已失去焦点或已关闭窗口的补发事件不更新结果, AutoJs6 6.8.1 起跟随系统窗口列表的焦点变化, 监听器中读取到的结果已包含触发它的事件) (AutoJs6 issue #585)</p>
 </li>
 <li><p><code>新增</code> <a href="upgradeTo68.html">从 6.7 升级到 6.8 (Upgrade to 6.8)</a>, 列出 6.8 起改由插件提供的功能与对应插件, 常见报错的含义, 插件安装失败的处理办法 (索引加载失败, 下载失败, 安装包检查未通过) 以及 AutoJs6 安装包的选择; <a href="plugins.html#plugins_1">插件 (Plugins)</a> 与 <a href="bundledLibraries.html#bundledlibraries_5">脚本库 (Bundled Libraries)</a> 增加该页链接</p>
+</li>
+<li><p><code>新增</code> <a href="companionPack.html">伴生包 (Companion Pack)</a>, 说明 AutoJs6 6.8.1 起的伴生包 (.aj6pack): 包里有什么, 如何制作与应用 (三种打开方式, 概览与确认, &quot;改用最新版&quot;, 同名文件, 中途停止与再次应用), 无特权安装与经 3-Setup Installer 静默安装的点按次数实测, 密码与加密部分, 安全说明, 无障碍插件的受限设置以及常见问题; 侧边栏 &quot;AutoJs6 使用手册&quot; 下增加该页</p>
 </li>
 <li><p><code>新增</code> <a href="camera.html">相机 (Camera)</a>: 3-Prism Camera 插件提供的 camera 模块 (AutoJs6 6.8.1), 包括拍照, 连续帧分析, 预览与相机控制, 会话对象, 事件与错误码; 页首说明帧的生命周期 (回调期间有效, 返回即回收, 保留需 clone, 回调过慢时丢帧), 以及省略参数按插件设置页的默认值补齐, UI 线程上的调用形式, 镜像规则与插件网络权限的用途</p>
 </li>
