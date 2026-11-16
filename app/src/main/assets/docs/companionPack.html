@@ -350,6 +350,7 @@
 </ul>
 </li>
 <li><span class="stability_undefined"><a href="#companionpack_14">在电脑上制作</a></span></li>
+<li><span class="stability_undefined"><a href="#companionpack_vscode">在 VSCode 中使用</a></span></li>
 <li><span class="stability_undefined"><a href="#companionpack_15">密码与加密部分</a></span></li>
 <li><span class="stability_undefined"><a href="#companionpack_16">安全说明</a></span></li>
 <li><span class="stability_undefined"><a href="#companionpack_17">无障碍插件与受限设置</a></span></li>
@@ -416,7 +417,7 @@
 <li>名称与保存位置: 名称可选, 仅用于显示. 随后在系统页面中选择保存位置, 请保留 <code>.aj6pack</code> 后缀, 以便在其他设备上用 AutoJs6 打开.</li>
 </ol>
 <p>写出过程中可以取消, 取消或失败时不会留下不完整的文件.</p>
-<p>也可以不经设备, 在电脑上用命令行制作伴生包, 见 <a href="#companionpack_14">在电脑上制作</a>.</p>
+<p>也可以不经设备, 在电脑上用命令行制作伴生包, 见 <a href="#companionpack_14">在电脑上制作</a>; 或在 VSCode 中制作, 见 <a href="#companionpack_vscode">在 VSCode 中使用</a>.</p>
 <hr>
 <h2>应用伴生包<span><a class="mark" href="#companionpack_2" id="companionpack_2">#</a></span></h2>
 <h3>打开伴生包<span><a class="mark" href="#companionpack_3" id="companionpack_3">#</a></span></h3>
@@ -475,7 +476,7 @@
 </ul>
 </div><hr>
 <h2>从电脑部署<span><a class="mark" href="#companionpack_7" id="companionpack_7">#</a></span></h2>
-<p>电脑端命令行工具 <code>autojs6-companion</code> (npm 包, 源码在 <a href="https://github.com/SuperMonster003/AutoJs6-Companion-CLI">AutoJs6-Companion-CLI</a>) 经 adb 把伴生包部署到一台或多台设备: 安装 AutoJs6 与插件, 预先授予权限, 导入设置并写入文件, 设备上通常不需要点按 (ColorOS 的例外见 <a href="#companionpack_12">实测</a>). 适合一次配置多台设备, 或给没有人在旁操作的设备部署.</p>
+<p>电脑端命令行工具 <code>autojs6-companion</code> (npm 包, 源码在 <a href="https://github.com/SuperMonster003/AutoJs6-Companion-CLI">AutoJs6-Companion-CLI</a>) 经 adb 把伴生包部署到一台或多台设备: 安装 AutoJs6 与插件, 预先授予权限, 导入设置并写入文件, 设备上通常不需要点按 (ColorOS 的例外见 <a href="#companionpack_12">实测</a>). 适合一次配置多台设备, 或给没有人在旁操作的设备部署. 同样的部署也可以在 VSCode 中进行, 见 <a href="#companionpack_vscode">在 VSCode 中使用</a>.</p>
 <h3>准备<span><a class="mark" href="#companionpack_8" id="companionpack_8">#</a></span></h3>
 <div class="signature"><ul>
 <li>电脑: Node.js 22 或更新版本, 以及 Android platform-tools (<code>adb</code>).</li>
@@ -612,7 +613,7 @@ autojs6-companion deploy backup.aj6pack --serial R58M1234ABC --password
 </div><h3>安全<span><a class="mark" href="#companionpack_13" id="companionpack_13">#</a></span></h3>
 <div class="signature"><ul>
 <li>只安装官方签名的 AutoJs6 与插件, 以安装包文件自身的签名证书为准.</li>
-<li>密码不出现在命令行参数, 输出与日志中. 它经标准输入, 或经只有当前用户能读取的临时文件交给 AutoJs6, 用后删除; 设备上的密码文件在导入结束后删除.</li>
+<li>密码不出现在命令行参数, 输出与日志中. 它经标准输入, 或经只有当前用户能读取的临时文件交给 AutoJs6, 用后删除; 设备上的密码文件在 AutoJs6 读取后立即删除, 不等到导入结束.</li>
 <li>命令行的输出只包含分类名, 包名与结果, 不包含任何设置值.</li>
 </ul>
 </div><hr>
@@ -751,6 +752,40 @@ autojs6-companion inspect lab.aj6pack
 <li>伴生包先写到同一目录的临时文件, 按 <code>inspect</code> 的规则校验通过后才保存为目标文件; 有问题时不会留下文件. 做好的伴生包可以用 <code>deploy</code> 部署, 也可以复制到设备上用 AutoJs6 打开.</li>
 <li>伴生包中 AutoJs6 的版本取自 <code>--host-apk</code>, 其次取自设置归档, 都没有时记为 6.8.1. 这只影响概览页的显示; 设备上的 AutoJs6 较新时照常应用.</li>
 <li>命令行的输出只包含包名, 版本, 大小与数量, 不包含任何设置值.</li>
+</ul>
+<hr>
+<h2>在 VSCode 中使用<span><a class="mark" href="#companionpack_vscode" id="companionpack_vscode">#</a></span></h2>
+<p>AutoJs6 VSCode 扩展 1.3.0 起提供三条伴生包命令, 与电脑端命令行 <code>autojs6-companion</code> 使用同一套检查, 部署与制作规则. 命令行的库已打包在扩展内, 不必另装 Node.js 与命令行.</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;伴生包: 部署到设备&quot; (Companion Pack: Deploy to Devices)</td>
+<td>选择伴生包, 勾选 ADB 设备 (可多台) 后部署, 相当于 <a href="#companionpack_7">从电脑部署</a> 的 <code>deploy</code>. 菜单中另有 &quot;演练&quot; (只列出计划, 不做改动), 以及部署哪些部分, 插件版本, 设置分类, 插件设置, 同名文件与 AutoJs6 安装包等选项, 对应命令行的同名选项</td>
+</tr>
+<tr>
+<td>&quot;伴生包: 检查&quot; (Companion Pack: Inspect)</td>
+<td>核对伴生包的结构, 校验值与安装包签名, 相当于 <code>inspect</code></td>
+</tr>
+<tr>
+<td>&quot;伴生包: 制作&quot; (Companion Pack: Make)</td>
+<td>从官方插件索引勾选插件, 可再加入设置 (设备上导出的设置归档或伴生包), 权限, 文件夹, AutoJs6 安装包与名称, 选择保存位置后写出并自动检查, 相当于 <a href="#companionpack_14">在电脑上制作</a> 的 <code>build</code></td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>三条命令都在命令面板中; 资源管理器中 <code>.aj6pack</code> 文件的右键菜单也有 &quot;部署到设备&quot; 与 &quot;检查&quot;.</li>
+<li>加密部分的密码在不显示内容的输入框中输入, 不出现在输出与日志中.</li>
+<li>部署进度按设备显示在通知中, 结果汇总写入输出面板 &quot;AutoJs6 Companion Pack&quot;.</li>
+<li>使用与扩展的 ADB 连接相同的 adb (可在设置 <code>autojs6.adb.path</code> 中指定).</li>
+<li>读取官方插件索引 (制作, 以及部署时下载插件) 需要 VS Code 1.82 或更新版本; 更早的版本只能检查伴生包与不联网部署.</li>
+<li>同一时间只运行一个伴生包任务. 通知上的 &quot;取消&quot; 只停止等待, 设备上的部署会继续到结束, 结果照常写入输出面板.</li>
 </ul>
 <hr>
 <h2>密码与加密部分<span><a class="mark" href="#companionpack_15" id="companionpack_15">#</a></span></h2>
