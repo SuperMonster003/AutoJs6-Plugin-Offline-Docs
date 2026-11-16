@@ -527,12 +527,12 @@
 <p>完整的变化列表参阅 AutoJs6 的 <a href="https://github.com/SuperMonster003/AutoJs6/blob/master/app/src/main/assets-app/doc/CHANGELOG-zh-Hans.md">发行历史</a>.</p>
 <hr>
 <h2>插件安装失败怎么办<span><a class="mark" href="#upgradeto68_4" id="upgradeto68_4">#</a></span></h2>
-<p>以下说明适用于 AutoJs6 6.8.1 及以上版本. 下载或安装失败的对话框会写明错误与原因, 处理前先查看其中的说明.</p>
+<p>以下说明适用于 AutoJs6 6.8.1 及以上版本. 下载或安装失败的对话框会写明错误与原因, 处理前先查看其中的说明. 在插件中心安装或更新插件时, 下载在后台进行, 进度, 失败原因与 &quot;已下载&quot; 标记显示在该插件的列表项中, 点按列表项右侧的按钮可查看详情, 重试或安装.</p>
 <h3>插件列表为空或插件索引加载失败<span><a class="mark" href="#upgradeto68_5" id="upgradeto68_5">#</a></span></h3>
 <p>插件列表来自 GitHub 上的插件索引. AutoJs6 先从 <code>raw.githubusercontent.com</code> 读取, 失败时自动改用 <code>cdn.jsdelivr.net</code> 与 <code>fastly.jsdelivr.net</code>. 全部失败时, 插件中心与插件安装向导列出已尝试的域名与各自的错误 (如 &quot;域名无法解析&quot;, &quot;连接超时&quot;, &quot;安全连接 (TLS) 失败&quot;), 并继续显示上次成功加载的列表.</p>
 <p>做法: 检查网络连接与代理设置后重新打开或刷新列表. 只有某个域名失败时, 列表仍可正常加载.</p>
 <h3>插件下载失败<span><a class="mark" href="#upgradeto68_6" id="upgradeto68_6">#</a></span></h3>
-<p>下载失败时 AutoJs6 自动重试 2 次. 仍然失败时, 对话框显示错误, 域名, HTTP 状态与已下载的大小, 并在 &quot;其他下载方式&quot; 中提供:</p>
+<p>下载失败时 AutoJs6 自动重试 2 次, 重试与之后再次下载都从中断处继续, 已下载的部分不必重新下载. 仍然失败时, 对话框显示错误, 域名, HTTP 状态与已下载的大小 (插件中心在列表项中显示失败原因, 点按按钮打开该对话框), 并在 &quot;其他下载方式&quot; 中提供:</p>
 <ul>
 <li>&quot;复制下载链接&quot;: 复制插件安装包的下载地址, 在其他设备或网络下载后传到本机安装.</li>
 <li>&quot;用浏览器下载&quot;: 用浏览器下载安装包, 下载完成后在浏览器或文件管理器中打开安装包即可安装.</li>
@@ -564,7 +564,7 @@
 </tr>
 <tr>
 <td>版本低于已安装的版本</td>
-<td>Android 不允许直接降级安装, 需要先卸载已安装的版本</td>
+<td>Android 不允许直接降级安装, 需要先卸载已安装的版本. 插件中心提示需要改装较低的配套版本时, 点 &quot;重新安装&quot; 会先下载并校验配套版本, 再请求卸载, 卸载完成后插件中心在显示时自动安装配套版本 (卸载会清除该插件的数据; 在卸载对话框中取消即结束本次重新安装)</td>
 </tr>
 <tr>
 <td>需要更高的 Android 版本</td>
@@ -584,6 +584,7 @@
 <div class="signature"><ul>
 <li>首次安装时, 系统可能要求允许 AutoJs6 安装未知应用, 按系统提示允许后重试.</li>
 <li>&quot;安装被设备策略或用户限制阻止&quot;: 设备的管理策略或系统设置禁止安装应用, 需要在系统设置中解除限制.</li>
+<li>取消安装或安装失败后, 下载并校验过的安装包会保留, 插件中心列表项标为 &quot;已下载&quot; 并显示原因, 再次点按即重新校验并安装, 无需重新下载. 安装包 7 天未使用时自动删除, 也可以在 插件中心菜单 &gt; 全局设置 &gt; &quot;安装包缓存&quot; 查看占用并清理.</li>
 <li>安装 APKS / XAPK 等分包安装包需要 3-Setup Installer 插件. 具备 Shizuku, Root 或 Dhizuku 授权时, 插件安装向导可以通过该插件静默安装.</li>
 </ul>
 </div><h3>插件中心显示 &quot;[ 旧 SDK 插件 ]&quot;<span><a class="mark" href="#upgradeto68_sdk" id="upgradeto68_sdk">#</a></span></h3>
