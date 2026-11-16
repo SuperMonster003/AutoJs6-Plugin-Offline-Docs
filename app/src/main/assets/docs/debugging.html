@@ -404,7 +404,7 @@
 <p>各 API 在同一运行时中的入口, 状态与授权一致, 没有差异项.</p>
 <p>Node.js 与 Bun 的导入方式, 异步返回值与授权检查见 <a href="runtimeApis.html#runtimeapis">运行时 API</a>.</p>
 <!-- runtime-support:end -->
-<p>debugging 模块用于让脚本得知自身是否正被调试, 以及在调试器附加, 分离, 暂停与继续时得到通知. 调试器可以是 AutoJs6 代码编辑器的 &quot;调试&quot;, 也可以是经 <a href="https://github.com/SuperMonster003/AutoJs6-Plugin-Three-Probe-Debugger">3-Probe Debugger</a> 插件连接的调试器 (如 VS Code).</p>
+<p>debugging 模块用于让脚本得知自身是否正被调试, 以及在调试器附加, 分离, 暂停与继续时得到通知. 调试器可以是 AutoJs6 代码编辑器的 &quot;调试&quot;, 也可以是经 <a href="threeProbeDebugger.html">3-Probe Debugger</a> 插件连接的调试器 (如 VS Code). 在电脑上调试脚本的步骤与调试配置见 <a href="debugScripts.html">调试脚本 (Debug Scripts)</a>.</p>
 <p>此模块只读取调试状态, 不控制调试器: 脚本不能读取断点或变量, 也不能单步执行自己的调试会话.</p>
 <p><code>debugging</code> 与 <code>$debugging</code> 指向同一个模块对象. 此模块仅用于 AutoJs6 脚本 (Rhino 引擎); Node.js 脚本请使用 Node.js 自带的 <code>inspector</code> 模块.</p>
 <h3>可附加的条件<span><a class="mark" href="#debugging" id="debugging">#</a></span></h3>

@@ -597,6 +597,7 @@ exp.test(&#39;hello&#39;);
 <p>Bundled Libraries 插件不可用时, <code>require</code> 上述名称或读取 axios 等全局对象抛出代码为 <code>MODULE_NOT_FOUND</code> 的错误, 错误消息说明如何安装或开启.</p>
 <p>自 AutoJs6 6.8.1 起, Pinyin4j 插件 (1.4.0 及以上) 与 Java Libraries 插件 (1.0.0 及以上) 还导出 Java 包: 安装并启用后, 脚本可以照原名使用 Pinyin4j, Apache Commons Lang3, Apache Commons IO 与 Jackson 的 Java 类, 详见 <a href="scriptingJava.html#scriptingjava_java_2">官方插件导出的 Java 包</a>.</p>
 <p><a href="autojs4Runtime.html">AutoJs4 Runtime</a> 插件不提供脚本模块, 它为文件管理器增加 &quot;使用 AutoJs4 运行&quot; 入口.</p>
+<p><a href="threeProbeDebugger.html">3-Probe Debugger</a> 插件也不提供脚本模块, 它让电脑上的 VS Code, JetBrains IDE, Neovim 等调试器调试设备上的脚本, 见 <a href="debugScripts.html">调试脚本 (Debug Scripts)</a>.</p>
 <p>语言运行时插件让 AutoJs6 运行其他语言的脚本文件, 它们给脚本的 API 见各自页面: <a href="pythonRuntime.html">Python 运行时</a> (<code>.py</code>, <code>autojs6</code> 包), <a href="javaRuntime.html">Java 运行时</a> (<code>.java</code>) 与 <a href="kotlinRuntime.html">Kotlin 运行时</a> (<code>.kt</code>, JVM Entry API), <a href="luaRuntime.html">Lua 运行时</a> (<code>.lua</code>, <code>autojs</code> 模块).</p>
 <h3>插件设置迁移<span><a class="mark" href="#plugins_2" id="plugins_2">#</a></span></h3>
 <p>自 AutoJs6 6.8.1 起, 声明支持设置迁移的官方插件, 其设置随 设置 &gt; 配置 &gt; &quot;管理 AutoJs6 设置&quot; 一同导出与导入, 首批为 3-Macaw Speech 1.5.0, MCP Server 1.3.0 与 3-Stove Agent 1.4.0 及以上版本. 迁移的范围, 敏感设置的处理, 以及插件如何以 common-plugin-api 1.1.0 声明并实现迁移, 参阅 <a href="settings.html#settings">插件设置迁移</a>.</p>

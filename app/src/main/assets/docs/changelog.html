@@ -384,6 +384,10 @@
 </li>
 <li><p><code>新增</code> <a href="debugging.html">调试 (Debugging)</a>: debugging 模块 (也可写作 $debugging, AutoJs6 6.8.1, 仅 AutoJs6 脚本), 让脚本得知自身是否正被调试, 包括 isAttached, waitForAttach (等待调试器附加并结束配置, 可给超时), breakpoint (已附加时像 debugger 语句一样暂停), 以及 on / once / off 监听的 attach, detach, pause 与 resume 事件 (attach 的 frontend, pause 的 reason 与 threadName); 页首说明可附加的条件 (在代码编辑器中用 &quot;调试&quot; 运行, 或开启 3-Probe Debugger 插件的 &quot;调试服务&quot; 之后开始运行的脚本) 以及不可附加时各方法的表现</p>
 </li>
+<li><p><code>新增</code> <a href="debugScripts.html">调试脚本 (Debug Scripts)</a>: 说明经 3-Probe Debugger 插件在电脑上调试设备上的脚本 (AutoJs6 6.8.1): 准备与引擎, 三种开始方式 (启动, 附加, 等待调试器), VS Code, Node.js 脚本, 调试配置的各项属性, Neovim (nvim-dap) 与 JetBrains IDE (LSP4IJ) 等通用 DAP 客户端的附加示例 (均已实测), 配对密钥与令牌, 已知限制, 以及开启调试服务对脚本耗时的影响</p>
+</li>
+<li><p><code>新增</code> <a href="threeProbeDebugger.html">3-Probe Debugger</a>: 远程调试插件的安装与启用, &quot;调试服务&quot; 的各种状态, 插件界面, 三种连接方式 (ADB 转发, 局域网直连, 开发连接隧道) 与安全说明 (默认只监听本机, 局域网电脑的手机确认与配对密钥, 撤销, 令牌模式) (AutoJs6 6.8.1)</p>
+</li>
 <li><p><code>更新</code> <a href="projectConfig.html#projectconfig_usefeatures">项目配置 (project.json)</a>: useFeatures 一节与常见问题 &quot;打包应用中 continuation 不可用&quot; 改为打包应用也读取 useFeatures, 需要用 6.8.1 或更高版本的 APK Builder Template 插件打包, 更早版本打包的应用不读取, 重新打包后生效; &quot;键名与读取规则&quot; 补充 project.json 无法解析时的还原能识别顶层, launchConfig 与 build 段的全部键与别名, 不读取 node, bun 与 agent 段, 接受单引号, 还原字符串中的转义, 用段名别名写的段保存后保留原写法, 以及与正常读取的其他差别 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="projectConfig.html#projectconfig_10">项目配置 (project.json)</a>: 补充 &quot;缺少权限时的表现&quot; 一节, 说明打包应用缺少对应的前台服务权限时, 截图 (images.requestScreenCapture), 网页的后台录音与后台录像, 以及 recorder 模块的录音不再启动前台服务, 改为报错并写明所缺的权限, 打包应用设置页的 &quot;开机时&quot; 开关在缺少 RECEIVE_BOOT_COMPLETED 时不可用; launchConfig.runOnBoot 一节补充该项为 true 时打包始终保留 RECEIVE_BOOT_COMPLETED, 常见问题增加 &quot;打包应用同意截图授权后仍无法截图&quot;; <a href="runtimeApis.html#runtimeapis_23">运行时 API (Runtime APIs)</a> 的 &quot;打包权限与平台边界&quot; 增加该节的链接 (AutoJs6 6.8.1)</p>
