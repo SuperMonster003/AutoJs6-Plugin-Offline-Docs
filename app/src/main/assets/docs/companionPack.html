@@ -349,11 +349,12 @@
 <li><span class="stability_undefined"><a href="#companionpack_13">安全</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#companionpack_14">密码与加密部分</a></span></li>
-<li><span class="stability_undefined"><a href="#companionpack_15">安全说明</a></span></li>
-<li><span class="stability_undefined"><a href="#companionpack_16">无障碍插件与受限设置</a></span></li>
-<li><span class="stability_undefined"><a href="#companionpack_17">常见问题</a></span></li>
-<li><span class="stability_undefined"><a href="#companionpack_18">相关链接</a></span></li>
+<li><span class="stability_undefined"><a href="#companionpack_14">在电脑上制作</a></span></li>
+<li><span class="stability_undefined"><a href="#companionpack_15">密码与加密部分</a></span></li>
+<li><span class="stability_undefined"><a href="#companionpack_16">安全说明</a></span></li>
+<li><span class="stability_undefined"><a href="#companionpack_17">无障碍插件与受限设置</a></span></li>
+<li><span class="stability_undefined"><a href="#companionpack_18">常见问题</a></span></li>
+<li><span class="stability_undefined"><a href="#companionpack_19">相关链接</a></span></li>
 </ul>
 </li>
 </ul>
@@ -384,7 +385,7 @@
 <tr>
 <td>设置</td>
 <td>与 <a href="settings.html">应用设置</a> 的 &quot;导出设置&quot; 相同的设置归档, 可含插件设置</td>
-<td>凭据与含密钥的插件设置单独加密, 见 <a href="#companionpack_14">密码与加密部分</a></td>
+<td>凭据与含密钥的插件设置单独加密, 见 <a href="#companionpack_15">密码与加密部分</a></td>
 </tr>
 <tr>
 <td>权限</td>
@@ -415,6 +416,7 @@
 <li>名称与保存位置: 名称可选, 仅用于显示. 随后在系统页面中选择保存位置, 请保留 <code>.aj6pack</code> 后缀, 以便在其他设备上用 AutoJs6 打开.</li>
 </ol>
 <p>写出过程中可以取消, 取消或失败时不会留下不完整的文件.</p>
+<p>也可以不经设备, 在电脑上用命令行制作伴生包, 见 <a href="#companionpack_14">在电脑上制作</a>.</p>
 <hr>
 <h2>应用伴生包<span><a class="mark" href="#companionpack_2" id="companionpack_2">#</a></span></h2>
 <h3>打开伴生包<span><a class="mark" href="#companionpack_3" id="companionpack_3">#</a></span></h3>
@@ -524,7 +526,15 @@ autojs6-companion deploy backup.aj6pack --serial R58M1234ABC --password
 </tr>
 <tr>
 <td><code>--categories &lt;分类&gt;</code></td>
-<td>要导入的设置分类, 用逗号分隔, 例如 <code>appearance,developer</code>. 只限定设置分类: 伴生包中的插件设置仍按设备上导入时的默认勾选导入</td>
+<td>要导入的设置分类, 用逗号分隔, 例如 <code>appearance,developer</code>. 只限定设置分类, 插件设置用下面两个选项选择</td>
+</tr>
+<tr>
+<td><code>--plugin-settings &lt;插件&gt;</code></td>
+<td>要导入其设置的插件, 用逗号分隔, 例如 <code>mcp.server,three.macaw.speech</code> (可省略包名前缀 <code>io.github.supermonster003.autojs6.plugin.</code>). 只导入其中伴生包有且可以导入的插件设置, 其余在结果的设置一行中列出. 需要命令行 1.1.0 与支持选择插件设置的 AutoJs6 (6.8.1 正式版起); AutoJs6 不支持时该设备在安装插件之前失败, 不会忽略这个选项</td>
+</tr>
+<tr>
+<td><code>--no-plugin-settings</code></td>
+<td>不导入任何插件设置 (要求同上)</td>
 </tr>
 <tr>
 <td><code>--files skip</code> / <code>--files overwrite</code></td>
@@ -548,7 +558,7 @@ autojs6-companion deploy backup.aj6pack --serial R58M1234ABC --password
 <li>权限: 用 adb 预先授予伴生包中的权限, 例如所有文件访问, 通知, 忽略电池优化, 悬浮窗, 使用情况访问, 修改系统设置, 无障碍服务与通知使用权. Shizuku 授权, 小米与 vivo 的后台弹出界面等只能在设备上开启的权限, 列在结果中由用户自行处理. 伴生包带有文件时, 即使指定 <code>--no-permissions</code>, 也会授予写入文件所需的存储权限. 各项的做法见 <a href="#companionpack_11">预先授予的权限</a>.</li>
 <li>设置与文件: 把不含安装包的精简伴生包交给 AutoJs6, 由 AutoJs6 导入设置并写入文件, 与在设备上应用伴生包的规则相同 (导入前备份, 之后可以 &quot;撤销上次导入&quot;; 文件只写入工作目录之内).</li>
 </ol>
-<p>不指定 <code>--categories</code> 时, 导入的设置分类与设备上导入时默认勾选的相同, 不含凭据, 开发者选项等默认不勾选的分类; 结果中列出这些留下未导入的分类. 不提供密码时, 加密部分不导入, 也会在结果中列出.</p>
+<p>不指定 <code>--categories</code> 时, 导入的设置分类与设备上导入时默认勾选的相同, 不含凭据, 开发者选项等默认不勾选的分类; 结果中列出这些留下未导入的分类. 插件设置同理: 不指定 <code>--plugin-settings</code> 或 <code>--no-plugin-settings</code> 时, 导入设备上默认勾选的插件设置. 不提供密码时, 加密部分不导入, 也会在结果中列出.</p>
 <p>部署结束后, 命令按设备与项目列出结果表 (每台设备的 AutoJs6, 各插件, 权限, 设置, 文件与总耗时), 最后一行给出完成, 未完成与失败的设备数. 命令的退出码: 0 全部完成; 30 至少一台设备失败; 31 没有设备失败, 但有项目未完成 (例如插件不适用于该设备, 某项权限未能授予, 文件冲突). 伴生包本身有问题时不连接任何设备, 退出码为 1.</p>
 <p>再次部署同一个伴生包是安全的: 已安装的 AutoJs6 与插件跳过, 内容相同的文件保持不变.</p>
 <h3>预先授予的权限<span><a class="mark" href="#companionpack_11" id="companionpack_11">#</a></span></h3>
@@ -591,7 +601,7 @@ autojs6-companion deploy backup.aj6pack --serial R58M1234ABC --password
 </tr>
 </tbody>
 </table>
-<p>插件自己的无障碍服务 (例如 3-Adapt A11y) 不在其中, 参阅 <a href="#companionpack_16">无障碍插件与受限设置</a>.</p>
+<p>插件自己的无障碍服务 (例如 3-Adapt A11y) 不在其中, 参阅 <a href="#companionpack_17">无障碍插件与受限设置</a>.</p>
 <h3>实测<span><a class="mark" href="#companionpack_12" id="companionpack_12">#</a></span></h3>
 <div class="signature"><ul>
 <li>模拟器 (Android 7.0 与 15 同时部署, 伴生包含 6 个插件, 29 个设置分类, 13 项权限与 4 个文件, 由命令一并安装 AutoJs6): 设备上 0 次点按, 约 40 秒; 再次部署约 15 秒, 各项全部跳过或不变. Android 7.0 上, 内嵌安装包不含 x86 的两个插件改从官方插件索引下载.</li>
@@ -606,7 +616,144 @@ autojs6-companion deploy backup.aj6pack --serial R58M1234ABC --password
 <li>命令行的输出只包含分类名, 包名与结果, 不包含任何设置值.</li>
 </ul>
 </div><hr>
-<h2>密码与加密部分<span><a class="mark" href="#companionpack_14" id="companionpack_14">#</a></span></h2>
+<h2>在电脑上制作<span><a class="mark" href="#companionpack_14" id="companionpack_14">#</a></span></h2>
+<p>电脑端命令行 <code>autojs6-companion</code> 1.1.0 起提供 <code>build</code> 命令, 不经设备, 直接在电脑上制作伴生包: 从官方插件索引按名称取插件, 还可以放入在设备上导出的设置, 权限配置, 文件与 AutoJs6 安装包. 适合给一批新设备准备同一套插件, 或在自动化流程中生成伴生包. 运行环境与 <a href="#companionpack_8">从电脑部署</a> 相同, 但不需要 adb 与设备.</p>
+<pre><code class="lang-shell">autojs6-companion build lab.aj6pack --plugin mcp.server --plugin pinyin4j --abi arm64-v8a
+autojs6-companion build lab.aj6pack --plugins-file plugins.txt --settings settings.zip --permissions all_files_access,accessibility_service --files-dir scripts --name &quot;实验室设备&quot;
+autojs6-companion inspect lab.aj6pack
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--plugin &lt;插件&gt;[@版本号]</code></td>
+<td>官方插件索引中的插件, 可重复, 也可用逗号分隔, 例如 <code>mcp.server</code>, <code>pinyin4j@40</code> (版本号即 versionCode). 不写版本号时取最新版本; 可省略包名前缀 <code>io.github.supermonster003.autojs6.plugin.</code></td>
+</tr>
+<tr>
+<td><code>--plugins-file &lt;文件&gt;</code></td>
+<td>插件清单文件: 每行一个 <code>插件[@版本号]</code>, 行末可加 <code>manifest-only</code>; <code>#</code> 之后为注释</td>
+</tr>
+<tr>
+<td><code>--abi &lt;架构&gt;</code></td>
+<td>内嵌安装包的 CPU 架构, 例如 <code>arm64-v8a</code> 或 <code>x86_64,arm64-v8a</code>, 默认 <code>arm64-v8a</code>. 应用时设备架构不符的插件改从官方插件索引下载</td>
+</tr>
+<tr>
+<td><code>--manifest-only</code></td>
+<td>所有插件都只记录名称与版本, 不放安装包, 应用时由设备从官方插件索引下载 (即 <a href="#companionpack">伴生包的内容</a> 中的 &quot;仅清单&quot;)</td>
+</tr>
+<tr>
+<td><code>--settings &lt;文件&gt;</code></td>
+<td>在设备上导出的设置归档 (<code>.zip</code>, 设置 &gt; 管理 AutoJs6 设置 &gt; 导出设置), 或另一个伴生包 (取出其中的设置)</td>
+</tr>
+<tr>
+<td><code>--permissions &lt;权限&gt;</code></td>
+<td>应用时要申请的权限: 权限 id (见下表, 用逗号分隔), 或另一个伴生包 / JSON 文件中的权限配置</td>
+</tr>
+<tr>
+<td><code>--files-dir &lt;目录&gt;</code></td>
+<td>把该目录中的全部文件 (至多 4000 个) 放入伴生包, 应用时按相对路径写入 AutoJs6 的工作目录</td>
+</tr>
+<tr>
+<td><code>--files skip</code> / <code>--files overwrite</code></td>
+<td>伴生包建议的同名文件处理方式, 默认跳过</td>
+</tr>
+<tr>
+<td><code>--host-apk &lt;安装包&gt;</code></td>
+<td>放入伴生包的 AutoJs6 安装包 (只认官方签名)</td>
+</tr>
+<tr>
+<td><code>--name &lt;名称&gt;</code></td>
+<td>在设备上显示的伴生包名称</td>
+</tr>
+<tr>
+<td><code>--force</code></td>
+<td>目标文件已存在时替换它</td>
+</tr>
+<tr>
+<td><code>--json</code></td>
+<td>以 JSON 输出结果, 供脚本读取</td>
+</tr>
+</tbody>
+</table>
+<p><code>--permissions</code> 的权限 id 与权限申请向导中的名称:</p>
+<table>
+<thead>
+<tr>
+<th>权限 id</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>post_notifications</code></td>
+<td>发布通知权限</td>
+</tr>
+<tr>
+<td><code>all_files_access</code></td>
+<td>所有文件访问权限</td>
+</tr>
+<tr>
+<td><code>ignore_battery_optimizations</code></td>
+<td>忽略电池优化</td>
+</tr>
+<tr>
+<td><code>display_over_other_apps</code></td>
+<td>显示在其他应用上层</td>
+</tr>
+<tr>
+<td><code>usage_stats</code></td>
+<td>查看使用情况权限</td>
+</tr>
+<tr>
+<td><code>write_system_settings</code></td>
+<td>修改系统设置</td>
+</tr>
+<tr>
+<td><code>write_secure_settings</code></td>
+<td>修改安全设置</td>
+</tr>
+<tr>
+<td><code>project_media</code></td>
+<td>投影媒体权限</td>
+</tr>
+<tr>
+<td><code>notification_access</code></td>
+<td>通知读取权限</td>
+</tr>
+<tr>
+<td><code>xiaomi_background_popup</code>, <code>vivo_background_popup</code></td>
+<td>后台弹出界面 (小米 / vivo)</td>
+</tr>
+<tr>
+<td><code>shizuku</code></td>
+<td>Shizuku 权限</td>
+</tr>
+<tr>
+<td><code>local_network</code></td>
+<td>本地网络权限</td>
+</tr>
+<tr>
+<td><code>accessibility_service</code></td>
+<td>AutoJs6 的无障碍服务</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>只放官方插件: 不在官方插件索引中的插件被拒绝. 下载的安装包要核对大小, SHA-256, 官方签名, 以及包名与版本号, 不符时不写出伴生包. 已退役的插件名称照常放入, 并提示替代它的插件.</li>
+<li>下载的安装包保存在本机的包缓存中, 再次制作时直接使用.</li>
+<li>设置归档原样放入伴生包, 不解密, 也不读取设置值. 其中的加密部分仍只能在导出它的设备上导入, 或凭导出时设置的密码导入, 见 <a href="#companionpack_15">密码与加密部分</a>.</li>
+<li>伴生包先写到同一目录的临时文件, 按 <code>inspect</code> 的规则校验通过后才保存为目标文件; 有问题时不会留下文件. 做好的伴生包可以用 <code>deploy</code> 部署, 也可以复制到设备上用 AutoJs6 打开.</li>
+<li>伴生包中 AutoJs6 的版本取自 <code>--host-apk</code>, 其次取自设置归档, 都没有时记为 6.8.1. 这只影响概览页的显示; 设备上的 AutoJs6 较新时照常应用.</li>
+<li>命令行的输出只包含包名, 版本, 大小与数量, 不包含任何设置值.</li>
+</ul>
+<hr>
+<h2>密码与加密部分<span><a class="mark" href="#companionpack_15" id="companionpack_15">#</a></span></h2>
 <p>设置中的凭据, 以及含密钥的插件设置, 在伴生包中是加密保存的:</p>
 <ul>
 <li>在导出伴生包的同一台设备上应用时, 不需要密码即可导入. 清除 AutoJs6 数据或重新安装 AutoJs6 之后仍然如此.</li>
@@ -614,14 +761,14 @@ autojs6-companion deploy backup.aj6pack --serial R58M1234ABC --password
 <li>密码不保存在伴生包中, 遗失后无法找回.</li>
 </ul>
 <hr>
-<h2>安全说明<span><a class="mark" href="#companionpack_15" id="companionpack_15">#</a></span></h2>
+<h2>安全说明<span><a class="mark" href="#companionpack_16" id="companionpack_16">#</a></span></h2>
 <div class="signature"><ul>
 <li>伴生包只安装官方签名的插件. 安装包的摘要, 包名或版本与伴生包记录不符时不会安装, 并在结果页写明原因.</li>
 <li>文件只写入工作目录之内. 选择 &quot;覆盖&quot; 时, 被替换的旧文件移入回收站.</li>
 <li>伴生包中未加密的部分 (普通设置, 脚本与项目文件) 任何人都能读取. 请像保管备份一样保管伴生包, 不要分享给他人.</li>
 </ul>
 </div><hr>
-<h2>无障碍插件与受限设置<span><a class="mark" href="#companionpack_16" id="companionpack_16">#</a></span></h2>
+<h2>无障碍插件与受限设置<span><a class="mark" href="#companionpack_17" id="companionpack_17">#</a></span></h2>
 <p>Android 13 起, 系统对来源记为本地文件的应用限制开启无障碍服务等敏感设置. 通过伴生包安装的 3-Adapt A11y 等提供无障碍服务的插件, 在多数设备上会显示为 &quot;受限设置&quot;: 开关为灰色, 点按后提示该设置当前不可用. 经 3-Setup Installer 静默安装时同样如此, 只有部分系统自带的安装器不受影响.</p>
 <p>解除方法:</p>
 <ol>
@@ -633,14 +780,14 @@ autojs6-companion deploy backup.aj6pack --serial R58M1234ABC --password
 <p>应用伴生包后, 结果页的 &quot;权限&quot; 部分会列出本次装上, 无障碍服务尚未开启且安装来源为本地文件的插件 (提示无障碍开关受 &quot;受限设置&quot; 限制), 每个插件附有 &quot;去应用信息&quot; 按钮, 下方是一行解除方法与 &quot;打开无障碍设置&quot; 按钮. 从系统页面返回后 AutoJs6 会重新检查, 服务开启后该项消失. AutoJs6 读不到系统记录的实际受限状态, 只按安装来源判断, 因此不记录安装来源的安装 (例如 ColorOS 的系统安装器) 不会出现这一提示.</p>
 <p>HyperOS 上允许受限设置之后, 开启插件的无障碍服务仍可能被系统安全中心拦下 (确认倒计时提示后开关仍为关闭), 这与受限设置无关; 此时结果页的这一项不会消失.</p>
 <hr>
-<h2>常见问题<span><a class="mark" href="#companionpack_17" id="companionpack_17">#</a></span></h2>
+<h2>常见问题<span><a class="mark" href="#companionpack_18" id="companionpack_18">#</a></span></h2>
 <div class="signature"><ul>
 <li>文件管理器的 &quot;打开方式&quot; 中找不到 AutoJs6: 部分文件管理器先显示自己的建议列表, 需要在菜单中选择 &quot;全部&quot;; MIUI 文件管理会先让用户选择文件类型, 任选一类后的应用列表中都有 AutoJs6. 也可以改用 设置 &gt; 管理 AutoJs6 设置 &gt; 应用伴生包.</li>
 <li>系统的应用选择器在点 &quot;仅此一次&quot; 时关闭, AutoJs6 没有打开: 这是部分系统 (例如某些 HyperOS 版本) 的应用选择器的问题. 在选择器中连续点按两次 AutoJs6 一项即可直接打开, 也可以改用其他文件管理器或设置页入口.</li>
-<li>伴生包显示 &quot;含加密内容&quot;: 在其他设备上应用时需要输入导出时设置的密码, 参阅 <a href="#companionpack_14">密码与加密部分</a>.</li>
+<li>伴生包显示 &quot;含加密内容&quot;: 在其他设备上应用时需要输入导出时设置的密码, 参阅 <a href="#companionpack_15">密码与加密部分</a>.</li>
 </ul>
 </div><hr>
-<h2>相关链接<span><a class="mark" href="#companionpack_18" id="companionpack_18">#</a></span></h2>
+<h2>相关链接<span><a class="mark" href="#companionpack_19" id="companionpack_19">#</a></span></h2>
 <div class="signature"><ul>
 <li><a href="settings.html">应用设置</a></li>
 <li><a href="plugins.html">插件</a></li>
