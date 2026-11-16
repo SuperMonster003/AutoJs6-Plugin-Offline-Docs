@@ -396,6 +396,8 @@
 </li>
 <li><p><code>更新</code> <a href="upgradeTo68.html#upgradeto68_4">从 6.7 升级到 6.8 (Upgrade to 6.8)</a>: &quot;插件安装失败怎么办&quot; 补充 AutoJs6 6.8.1 插件中心的下载与安装方式: 进度, 失败原因与 &quot;已下载&quot; 标记显示在插件的列表项中, 自动重试与再次下载都从中断处继续, 取消安装或安装失败后保留的安装包再次点按即可安装, 无需重新下载 (7 天未使用时删除, 可在 &quot;安装包缓存&quot; 中清理), 以及需要改装较低的配套版本时 &quot;重新安装&quot; 的过程</p>
 </li>
+<li><p><code>更新</code> <a href="companionPack.html#companionpack_7">伴生包 (Companion Pack)</a>: 新增 &quot;从电脑部署&quot; 一节, 说明电脑端命令行 autojs6-companion 经 adb 部署伴生包, 设备上不需要点按: 准备, 用法与常用选项, 部署的过程 (AutoJs6, 插件, 权限, 设置与文件), 设置分类的默认选择, 结果表与退出码, 安全说明; &quot;安装插件的方式与点按次数&quot; 改为说明设备上另有安装器时 AutoJs6 直接交给系统自带的安装器, 不再先弹出安装器的选择; &quot;无障碍插件与受限设置&quot; 补上先在无障碍设置中点按一次插件的步骤, 以及应用伴生包后结果页的提示与入口 (AutoJs6 6.8.1)</p>
+</li>
 <li><p><code>更新</code> <a href="console.html#console_p_restoredentrycount">控制台 (Console)</a>: 补充 restoredEntryCount 属性, 即日志页从 AutoJs6 上一个进程恢复的日志条目数 (读取期间为 null), 脚本中的 console 读取始终为 0 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="shizuku.html#shizuku_p_state">Shizuku</a>: 补充 state 各字段的含义 (isRunning 即已收到 Shizuku 服务端的 Binder, 收到之前 hasPermission 总为 false), 读取 state 时在后台绑定用户服务, &quot;等待 Shizuku 可用&quot; 一节 (轮询 state 或直接执行一次命令, 无需 auto.restart) 以及 Shizuku 不可用时执行命令的报错顺序 (AutoJs6 6.8.1)</p>
