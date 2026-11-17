@@ -416,6 +416,8 @@
 </li>
 <li><p><code>更新</code> <a href="image.html#image_m_images_capturescreen">图像 (Image)</a>: captureScreen 说明返回调用时的最新画面 (画面静止时约两个刷新周期内即返回最近一帧, 需要某个操作之后的画面时应自行等待), 取不到画面时约 2.4 秒后返回上一帧; &quot;屏幕捕获会话共享&quot; 一节补充多个脚本同时截图的行为 (不排队, 同一时刻得到同一帧的独立副本) (AutoJs6 6.8.1)</p>
 </li>
+<li><p><code>更新</code> <a href="gallery.html#gallery_m_convert">相册 (Gallery)</a>: convert / convertAsync 补充 PNG 输出的有损压缩 (指定 quality 或 targetBytes 时写为有损压缩的 PNG, 均未指定仍为无损; 每个颜色通道的偏差有上限, 透明度不变), targetBytes 可用于 PNG (format 为 &#39;png&#39; 时需要 AutoJs6 6.8.1); edit 补充指定 quality 且保存为 PNG 时保存对话框的 &quot;有损压缩&quot; 开关初始为开 (需要 3-Maple Image 3.5.0 及以上版本)</p>
+</li>
 <li><p><code>更新</code> <a href="qa.html#qa_9">疑难解答 (Q &amp; A)</a>: 补充 &quot;无响应与自动重启&quot; 一节, 说明主线程无响应时写入的无响应报告与自动重启 (默认 60 秒, 10 分钟内最多 2 次, 可关闭; 重启后重新运行由 &quot;AutoJs6 启动时&quot; 触发的任务), 以及 AutoJs6 被系统冻结时的冻结记录与保持后台运行的系统设置 (AutoJs6 6.8.1)</p>
 </li>
 <li><p><code>更新</code> <a href="runtimeApis.html#runtimeapis_node_js_3">运行时 API (Runtime APIs)</a>: 说明 Node.js 的 images.requestScreenCapture 受桥接调用 30 秒等待上限约束 (超时以 ERR_AUTOJS6_BRIDGE_TIMEOUT 失败, 授权对话框随之关闭), 并给出 video 与 audio 模块在 Node.js 与 Bun 中的入口</p>

@@ -591,6 +591,7 @@ session.on(&#39;close&#39;, e =&gt; console.log(&#39;closed:&#39;, e.reason));
 <li><code>output</code> 指定输出路径 (相对路径按工作目录解析, 缺少的父文件夹会被创建); 该文件已存在时失败于 <code>OUTPUT_EXISTS</code>, 除非 <code>overwrite</code> 为 <code>true</code>.</li>
 <li>只有 <code>overwrite: true</code> 而没有 <code>output</code> 时, 结果替换原图.</li>
 <li><code>format</code>, <code>quality</code> (1 到 100), <code>keepExif</code> 与 <code>keepLocation</code> 是编辑器保存对话框的初始值, 用户在对话框中仍可更改. <code>keepLocation</code> 只在同时保留 EXIF 且插件设置中开启了 &quot;显示位置&quot; 时可用.</li>
+<li>保存为 PNG 时, 指定了 <code>quality</code> 则对话框中的 &quot;有损压缩&quot; 开关初始为开 (含义见 <a href="#gallery_m_convert">convert</a>), 未指定则为关, 即无损; 这需要 3-Maple Image 3.5.0 及以上版本, 更早版本保存 PNG 时忽略 <code>quality</code>.</li>
 </ul>
 <pre><code class="lang-js">let output = gallery.edit(&#39;./photos/cat.jpg&#39;, { format: &#39;jpeg&#39;, quality: 90, keepExif: true });
 console.log(output === null ? &#39;未保存&#39; : &#39;已保存到 &#39; + output);
@@ -605,7 +606,7 @@ console.log(output === null ? &#39;未保存&#39; : &#39;已保存到 &#39; + ou
 </ul>
 <h2>[m] convert<span><a class="mark" href="#gallery_m_convert" id="gallery_m_convert">#</a></span></h2>
 <h3>gallery.convert(path, options?)<span><a class="mark" href="#gallery_gallery_convert_path_options" id="gallery_gallery_convert_path_options">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong></p>
+<p><strong><code>6.8.0</code></strong> <strong><code>[6.8.1]</code></strong></p>
 <ul>
 <li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 图片路径</li>
 <li><strong>[ options ]</strong> {{<ul>
@@ -632,9 +633,10 @@ console.log(output === null ? &#39;未保存&#39; : &#39;已保存到 &#39; + ou
 <p>不显示界面, 用插件的转换器转换图片并返回写出的图片信息. 输出位置与 <a href="#gallery_m_edit">edit</a> 相同: 默认在原图旁写为 <code>名称_converted.扩展名</code>, <code>output</code> 与 <code>overwrite</code> 的规则一致.</p>
 <ul>
 <li><code>format</code> 省略时保留原图格式 (原图为 JPEG, PNG 或 WebP 时), 否则写为 JPEG.</li>
-<li><code>quality</code> 为 1 到 100, 默认 <code>92</code>; PNG 与无损 WebP 忽略此项.</li>
+<li><code>quality</code> 为 1 到 100, 默认 <code>92</code>; 无损 WebP 忽略此项.</li>
+<li>输出为 PNG 时, <code>quality</code> 与 <code>targetBytes</code> 都未指定则写为无损 PNG; 指定其中之一则写为有损压缩的 PNG: 每个颜色通道的偏差有上限 (<code>quality</code> 为 90 到 99 时不超过 1 级, 越低允许越大, 最多 16 级), 透明度不变, <code>quality</code> 为 <code>100</code> 时仍为无损. 图片不会像调色板量化那样被压到 256 色: 一般图片保持真彩色, 纯色区域不变; 只有合并相近颜色后不超过 256 种颜色的图片才写为调色板 PNG. 这需要 3-Maple Image 3.5.0 及以上版本, 更早版本的插件忽略 PNG 的 <code>quality</code> 并拒绝 <code>targetBytes</code>.</li>
 <li><code>lossless</code> 只用于 WebP 输出, Android 11 以下不支持时写为有损 WebP.</li>
-<li><code>targetBytes</code> 让转换器搜索使文件不超过该字节数的质量, 只用于 JPEG 与有损 WebP, 不能与 <code>quality</code> 同时指定.</li>
+<li><code>targetBytes</code> 让转换器搜索使文件不超过该字节数的质量, 用于 JPEG, 有损 WebP 与 PNG, 不能用于无损 WebP, 也不能与 <code>quality</code> 同时指定. <code>format</code> 为 <code>&#39;png&#39;</code> 时使用 <code>targetBytes</code> 需要 AutoJs6 6.8.1 及以上版本 (此前失败于 <code>INVALID_ARGUMENT</code>); 省略 <code>format</code> 而原图为 PNG 时不受此限.</li>
 <li>尺寸: <code>sizeMode</code> 为 <code>&#39;original&#39;</code> (默认), <code>&#39;percent&#39;</code> (<code>percent</code> 为 1 到 1000), <code>&#39;longEdge&#39;</code> (<code>longEdge</code> 为 1 到 16384, 长边已不超过它的图片不放大) 或 <code>&#39;custom&#39;</code> (<code>width</code> 和/或 <code>height</code>, 各为 1 到 16384). 省略 <code>sizeMode</code> 时由给出的 <code>percent</code>, <code>longEdge</code> 或 <code>width</code> / <code>height</code> 推断. 自定义尺寸默认保持宽高比 (只给一边时另一边按比例, 两边都给时缩放到两者之内); <code>keepAspectRatio: false</code> 需要同时给出两边并拉伸到该尺寸. 输出不能超过 16384 像素边长与 4000 万像素.</li>
 <li><code>background</code> 是写为 JPEG 时透明像素的填充色, 可为 ARGB 数字或 <code>&#39;#RGB&#39;</code>, <code>&#39;#RRGGBB&#39;</code>, <code>&#39;#AARRGGBB&#39;</code> 字符串, 默认白色.</li>
 <li><code>keepExif</code> 保留拍摄信息 (相机, 曝光, 拍摄时间等), <code>keepLocation</code> 在保留 EXIF 时同时保留位置信息; 默认都不保留, 输出不含位置信息.</li>
@@ -647,7 +649,7 @@ gallery.convert(&#39;./photos/cat.png&#39;, { output: &#39;./out/cat.webp&#39;, 
 </code></pre>
 <h2>[m] convertAsync<span><a class="mark" href="#gallery_m_convertasync" id="gallery_m_convertasync">#</a></span></h2>
 <h3>gallery.convertAsync(path, options?)<span><a class="mark" href="#gallery_gallery_convertasync_path_options" id="gallery_gallery_convertasync_path_options">#</a></span></h3>
-<p><strong><code>6.8.0</code></strong> <strong><code>Async</code></strong></p>
+<p><strong><code>6.8.0</code></strong> <strong><code>[6.8.1]</code></strong> <strong><code>Async</code></strong></p>
 <ul>
 <li><strong>path</strong> { <span class="type"><a href="dataTypes.html#datatypes_string">string</a></span> } - 图片路径</li>
 <li><strong>[ options ]</strong> { <span class="type"><a href="dataTypes.html#datatypes_object">Object</a></span> } - 转换选项, 同 <a href="#gallery_m_convert">convert</a></li>
