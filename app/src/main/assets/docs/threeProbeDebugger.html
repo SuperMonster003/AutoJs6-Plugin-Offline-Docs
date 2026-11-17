@@ -331,18 +331,25 @@
             <h2>目录</h2>
 <ul>
 <li><span class="stability_undefined"><a href="#threeprobedebugger_3_probe_debugger">3-Probe Debugger</a></span><ul>
-<li><span class="stability_undefined"><a href="#threeprobedebugger">安装与启用</a></span></li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_1">插件界面</a></span></li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_2">连接方式</a></span></li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_3">安全</a></span></li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_4">调试的影响</a></span></li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_5">常见问题</a></span><ul>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_vs_code">必须使用 VS Code 吗?</a></span></li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_6">调试客户端连不上</a></span></li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_7">能附加到已经在运行的脚本吗?</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger">安装与启用</a></span><ul>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_1">插件的警告</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_2">被系统强行停止</a></span></li>
 </ul>
 </li>
-<li><span class="stability_undefined"><a href="#threeprobedebugger_8">相关链接</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_3">插件界面</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_4">连接方式</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_5">安全</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_6">调试的影响</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_7">常见问题</a></span><ul>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_vs_code">必须使用 VS Code 吗?</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_8">调试客户端连不上</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_9">手机上没有出现配对询问</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_10">能附加到已经在运行的脚本吗?</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_autojs6">AutoJs6 被系统结束后, 调试服务没有恢复?</a></span></li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_11">&quot;调试服务&quot; 下方显示 &quot;后台活动受限&quot;</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="#threeprobedebugger_12">相关链接</a></span></li>
 </ul>
 </li>
 </ul>
@@ -393,12 +400,16 @@
 <td>插件已安装但尚未被 Android 激活, 按提示激活</td>
 </tr>
 <tr>
+<td>已被强行停止, 需要激活</td>
+<td>开关开启期间插件被系统强行停止且暂时无法自动恢复, 见下文 <a href="#threeprobedebugger_2">被系统强行停止</a></td>
+</tr>
+<tr>
 <td>版本不兼容</td>
 <td>AutoJs6 与插件的版本不匹配, 安装兼容的版本</td>
 </tr>
 <tr>
 <td>等待 AutoJs6 连接</td>
-<td>AutoJs6 曾退出或被系统结束; 监听保持开启, AutoJs6 再次启动并打开调试服务后自动恢复</td>
+<td>AutoJs6 曾退出或被系统结束; 监听保持开启, AutoJs6 再次启动并打开调试服务后自动恢复, 见 <a href="#threeprobedebugger_autojs6">常见问题</a></td>
 </tr>
 <tr>
 <td>启动失败</td>
@@ -407,15 +418,48 @@
 </tbody>
 </table>
 <p>只有在调试服务开启之后开始运行的 Rhino 脚本才能被调试器附加, 见 <a href="debugging.html#debugging">可附加的条件</a>. AutoJs6 打包生成的应用不能被调试.</p>
-<h2>插件界面<span><a class="mark" href="#threeprobedebugger_1" id="threeprobedebugger_1">#</a></span></h2>
+<h3>插件的警告<span><a class="mark" href="#threeprobedebugger_1" id="threeprobedebugger_1">#</a></span></h3>
+<p>调试服务运行期间, 插件发现可能影响调试的情况时会告知 AutoJs6. 警告显示在 &quot;调试服务&quot; 一项的状态下方, 并以 toast 提示一次 (同一警告在 AutoJs6 本次运行期间只提示一次, 监听重新启动后仍显示, 但不再提示):</p>
+<table>
+<thead>
+<tr>
+<th>警告</th>
+<th>含义与处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>后台活动受限</td>
+<td>Android 限制了插件的后台活动 (例如 HyperOS 对新安装应用的默认设置), 熄屏或插件在后台时监听可能被停止. 点按 &quot;调试服务&quot; 一项, 说明对话框中的 &quot;打开 &quot;设置&quot;&quot; 打开插件的应用信息页, 在其中允许后台运行 (例如把电池用量或省电策略设为 &quot;不受限制&quot; / &quot;无限制&quot;). 解除限制后回到 AutoJs6, 警告不再显示. 插件只在监听启动时检查这一限制; 限制在之后才生效时 (例如 HyperOS 在新安装的插件离开屏幕约 1 分钟后才限制它), AutoJs6 回到前台时会自行读取并显示该警告</td>
+</tr>
+<tr>
+<td>前台服务未能启动</td>
+<td>插件未能启动保持监听运行的前台服务, Android 回收插件进程时监听随之停止. 处理方法同上</td>
+</tr>
+<tr>
+<td>Node.js 中继无法监听端口</td>
+<td>Node.js 中继端口被占用, 只能调试 Rhino 脚本; 在插件设置中更换 Node.js 中继端口</td>
+</tr>
+</tbody>
+</table>
+<p>局域网中的电脑多次尝试失败而被暂时拦截时, AutoJs6 只以 toast 提示一次. 插件发来的其他警告按原文 (英文) 显示. 监听停止或重新启动时警告清除, 重新启动后仍存在的情况会再次报告.</p>
+<h3>被系统强行停止<span><a class="mark" href="#threeprobedebugger_2" id="threeprobedebugger_2">#</a></span></h3>
+<p>部分系统在清理最近任务或后台应用时会强行停止插件 (例如 ColorOS). 开关开启期间插件被强行停止时, AutoJs6 自动唤醒插件并重新连接. 插件连续被停止时, 两次自动恢复之间的间隔逐次拉长 (第一次之后 1 分钟, 最长 30 分钟); AutoJs6 在后台且没有 &quot;显示在其他应用上层&quot; 权限时无法唤醒插件, 回到 AutoJs6 时再恢复.</p>
+<p>暂时无法恢复时, &quot;调试服务&quot; 一项显示 &quot;已被强行停止, 需要激活&quot;, 开关保持开启的意图 (下次打开 AutoJs6 主界面时再次尝试). 点按开关会说明原因: &quot;激活&quot; 立即唤醒插件并开启调试服务, &quot;打开 &quot;设置&quot;&quot; 打开插件的应用信息页, 在其中允许自启动与后台运行. 插件首页 &quot;保持运行&quot; 一栏按 HyperOS / MIUI, ColorOS / OxygenOS 与其他系统说明需要的设置. 在 AutoJs6 中手动关闭的开关不会被自动恢复.</p>
+<h2>插件界面<span><a class="mark" href="#threeprobedebugger_3" id="threeprobedebugger_3">#</a></span></h2>
 <p>从桌面图标或插件中心的 &quot;打开插件&quot; 进入插件界面.</p>
 <ul>
-<li>状态页: 调试服务是否在运行, 没有运行时该怎么做, 端口, 监听范围与允许连接的范围, 连接方式 (本机地址, 局域网地址及其二维码, 可复制的 <code>adb forward</code> 命令, VS Code, JetBrains IDE 与其他 DAP 客户端的简要说明), 以及打开的调试会话 (编辑器, 脚本, 暂停的线程, 每个线程都有 &quot;继续&quot; 按钮).</li>
-<li>已配对的电脑: 在手机上选择过 &quot;允许并记住&quot; 的电脑, 可以撤销, 见 <a href="#threeprobedebugger_3">安全</a>.</li>
-<li>设置: DAP 端口 (默认 <code>8347</code>), Node.js 中继端口 (默认 <code>8348</code>), 监听范围, 令牌模式与令牌, 通知, 外观 (语言, 夜间模式, 主题色, 启动器图标, 默认跟随 AutoJs6), 发行历史与更新检查. 修改端口, 监听范围或令牌模式后, 运行中的监听立即按新设置重启, 打开的调试会话随之结束.</li>
-<li>通知: 监听运行期间显示前台服务通知 (监听的端点与会话数); 局域网中的电脑请求连接时显示确认通知; 脚本暂停时显示 &quot;脚本已暂停于 文件:行&quot; 通知并带 &quot;继续&quot; 按钮, UI 线程暂停时还显示距自动继续的倒计时. Android 13 及以上未授予通知权限时, 状态页会提示授予.</li>
+<li>状态页: 调试服务是否在运行, 没有运行时该怎么做, 端口, 监听范围与允许连接的范围, 连接方式 (本机地址, 局域网地址及其二维码, 可复制的 <code>adb forward</code> 命令, VS Code, JetBrains IDE 与其他 DAP 客户端的简要说明), 以及打开的调试会话 (编辑器, 脚本, 暂停的线程, 每个线程都有 &quot;继续&quot; 按钮).<ul>
+<li>局域网中的电脑请求连接时, 最上方显示待确认的卡片 (编辑器, 地址, 倒计时与三个回答按钮), 通知没有出现时可在这里回答, 见 <a href="#threeprobedebugger_5">安全</a>.</li>
+<li>系统限制插件的后台活动时, 置顶显示 &quot;后台活动受限&quot; 提示与打开应用信息的按钮.</li>
+<li>折叠的 &quot;保持运行&quot; 一栏按 HyperOS / MIUI, ColorOS / OxygenOS 与其他系统说明电池与自启动设置, 附打开应用信息的按钮. ColorOS 与 OxygenOS 还要在 设置 &gt; 应用 &gt; 自动启动 中打开 3-Probe Debugger 与 AutoJs6, 这张列表与应用信息里的开关是分开的.</li>
 </ul>
-<h2>连接方式<span><a class="mark" href="#threeprobedebugger_2" id="threeprobedebugger_2">#</a></span></h2>
+</li>
+<li>已配对的电脑: 在手机上选择过 &quot;允许并记住&quot; 的电脑, 可以撤销, 见 <a href="#threeprobedebugger_5">安全</a>.</li>
+<li>设置: DAP 端口 (默认 <code>8347</code>), Node.js 中继端口 (默认 <code>8348</code>), 监听范围, 令牌模式与令牌, 通知, 外观 (语言, 夜间模式, 主题色, 启动器图标, 默认跟随 AutoJs6), 发行历史与更新检查. 修改端口, 监听范围或令牌模式后, 运行中的监听立即按新设置重启, 打开的调试会话随之结束. 把监听范围从 &quot;仅本机&quot; 改为局域网时, 插件检查通知: 通知未开启时说明询问不会弹出, 只能在首页回答, 并请求通知权限; &quot;连接请求&quot; 类通知被关闭时给出 &quot;打开通知设置&quot; 入口.</li>
+<li>通知: 监听运行期间显示前台服务通知 (监听的端点与会话数); 局域网中的电脑请求连接时显示确认通知, 熄屏时亮屏并显示全屏确认页; 脚本暂停时显示 &quot;脚本已暂停于 文件:行&quot; 通知并带 &quot;继续&quot; 按钮, UI 线程暂停时还显示距自动继续的倒计时. Android 13 及以上未授予通知权限时, 状态页会提示授予; Android 14 及以上设置页的 &quot;通知&quot; 一节另有 &quot;全屏询问&quot; 一行, 未允许时点按即可打开系统设置.</li>
+</ul>
+<h2>连接方式<span><a class="mark" href="#threeprobedebugger_4" id="threeprobedebugger_4">#</a></span></h2>
 <table>
 <thead>
 <tr>
@@ -448,19 +492,21 @@
 </table>
 <ul>
 <li>ADB 转发: 调试 Node.js 脚本时还要转发中继端口: <code>adb forward tcp:8348 tcp:8348</code>. 状态页 &quot;数据线 (adb forward)&quot; 一项给出可复制的命令.</li>
-<li>局域网直连: 在插件设置中把 &quot;监听范围&quot; 改为 &quot;局域网 (所有网络接口)&quot;. 同一网络中的电脑可直接连接, 新电脑开始调试之前手机会先询问.</li>
+<li>局域网直连: 在插件设置中把 &quot;监听范围&quot; 改为 &quot;局域网 (所有网络接口)&quot;. 同一网络中的电脑可直接连接, 新电脑开始调试之前手机会先询问, 见 <a href="#threeprobedebugger_5">安全</a>.</li>
 <li>开发连接隧道: 目前由 AutoJs6 VSCode 扩展 1.2.0 及以上版本使用 (调试配置的 <code>transport</code> 为 <code>auto</code> 或 <code>tunnel</code>). 隧道下不能为子脚本开独立会话 (<code>childSessions</code>). 隧道会话中调试 Node.js 脚本时, 电脑仍经局域网连接手机的中继端口 <code>8348</code>, 因此监听范围要设为局域网; 插件按开发连接的对端地址放行这台电脑的中继连接 (经 <code>adb forward</code> 的回环地址除外).</li>
 </ul>
 <p>通用 DAP 客户端 (Neovim nvim-dap, JetBrains IDE 的 LSP4IJ 等) 用前两种方式, 配置示例见 <a href="debugScripts.html#debugscripts_dap">调试脚本</a>.</p>
-<h2>安全<span><a class="mark" href="#threeprobedebugger_3" id="threeprobedebugger_3">#</a></span></h2>
+<h2>安全<span><a class="mark" href="#threeprobedebugger_5" id="threeprobedebugger_5">#</a></span></h2>
 <p>插件在设计上尽量收窄可以调试本机脚本的范围. 连接后, 电脑可以在本机运行脚本并读取其中的变量, 因此只允许你信任的电脑.</p>
 <ul>
 <li>受保护的入口: 调试服务与激活入口都受 AutoJs6 插件权限 (<code>org.autojs.permission.PLUGIN</code>) 保护, 其他应用无法直接调用; 插件在插件中心默认不启用.</li>
 <li>监听范围: 默认只监听本机回环地址 (<code>127.0.0.1</code>), 电脑只能经 <code>adb forward</code> 或开发连接隧道到达, 这些连接不需要确认.</li>
-<li>局域网的手机确认: 监听局域网时, 一台电脑第一次 <code>launch</code> / <code>attach</code> 之前, 手机显示 &quot;允许这台电脑连接吗?&quot; 并给出三个选择:<ul>
+<li>局域网的手机确认: 监听局域网时, 一台电脑第一次 <code>launch</code> / <code>attach</code> 之前, 手机询问 &quot;允许这台电脑连接吗?&quot;:<ul>
+<li>询问以通知弹出. Android 10 及以上熄屏时亮屏并显示全屏确认页 (Android 14 及以上需要允许插件的 &quot;全屏询问&quot;, 未允许时只以普通通知出现); 手机锁定时可以直接拒绝, 允许之前要先解锁. Android 9 及更早直接打开确认页.</li>
+<li>没有通知权限, &quot;连接请求&quot; 类通知被关闭, 或系统没有弹出通知 (例如 MIUI / HyperOS 默认关闭新应用的悬浮通知) 时, 打开插件首页, 在最上方待确认的卡片上回答.</li>
 <li>允许并记住: 放行这次连接, 并给这台电脑上的调试客户端下发一个配对密钥. 之后带着有效密钥的连接直接放行, 电脑换了 IP 地址也一样.</li>
 <li>仅本次: 只放行这一次连接.</li>
-<li>拒绝: 结束这次调试. 90 秒内不回答视为拒绝.</li>
+<li>拒绝: 结束这次调试. 90 秒内不回答视为拒绝. 同一地址连续失败 3 次会被暂时拦截, AutoJs6 以 toast 提示.</li>
 </ul>
 </li>
 <li>配对密钥: VS Code 扩展与 AutoJs6 JetBrains 插件自动保存密钥 (VS Code 存在机密存储中, 不写进 <code>launch.json</code>). 不会保存密钥的通用 DAP 客户端在 &quot;允许并记住&quot; 之后, 调试控制台会显示一行以 <code>3-Probe Debugger:</code> 开头的提示, 给出 <code>&quot;pairingKey&quot;: &quot;...&quot;</code> 写法, 把它抄进调试配置即可, 见 <a href="debugScripts.html#debugscripts_3">配对密钥与令牌</a>. 手机上只保存密钥的摘要. 密钥要像密码一样保管. 手机不认识的密钥 (已撤销或写错) 不会被放行, 手机会重新询问.</li>
@@ -469,26 +515,32 @@
 <li>开发连接隧道: 隧道中的调试会话沿用开发连接已有的信任 (例如 VS Code 扩展建立连接时在手机上确认过的设备), 不再另行确认.</li>
 <li>日志: 求值的表达式, 变量值与脚本源码不写进普通日志.</li>
 </ul>
-<h2>调试的影响<span><a class="mark" href="#threeprobedebugger_4" id="threeprobedebugger_4">#</a></span></h2>
+<h2>调试的影响<span><a class="mark" href="#threeprobedebugger_6" id="threeprobedebugger_6">#</a></span></h2>
 <div class="signature"><ul>
 <li>调试服务开启期间新启动的 Rhino 脚本都带调试钩子, 纯 JavaScript 计算会变慢; 调用自动化 API 的脚本影响很小. 关闭调试服务后, 新启动的脚本没有额外开销. 实测数据见 <a href="debugScripts.html#debugscripts_5">调试脚本</a>.</li>
 <li>在 UI 线程上暂停会让应用无响应: 经本插件连接的调试器可以让 UI 线程停下并查看变量, 但暂停默认至多持续 60 秒, 到时自动继续 (调试配置 <code>uiThreadPauseTimeoutMs</code>, <code>0</code> 为不自动继续), 电脑端与手机通知都会提示.</li>
 <li>同时最多 4 个调试会话. 单条 DAP 消息超过 16 MiB 或格式错误时, 只断开出错的连接并在调试控制台说明原因.</li>
 </ul>
-</div><h2>常见问题<span><a class="mark" href="#threeprobedebugger_5" id="threeprobedebugger_5">#</a></span></h2>
+</div><h2>常见问题<span><a class="mark" href="#threeprobedebugger_7" id="threeprobedebugger_7">#</a></span></h2>
 <h3>必须使用 VS Code 吗?<span><a class="mark" href="#threeprobedebugger_vs_code" id="threeprobedebugger_vs_code">#</a></span></h3>
 <p>不必. 插件实现标准的 Debug Adapter Protocol, 任何 DAP 客户端都能连接; VS Code 扩展额外提供一键调试, 自动端口转发与开发连接隧道.</p>
-<h3>调试客户端连不上<span><a class="mark" href="#threeprobedebugger_6" id="threeprobedebugger_6">#</a></span></h3>
+<h3>调试客户端连不上<span><a class="mark" href="#threeprobedebugger_8" id="threeprobedebugger_8">#</a></span></h3>
 <div class="signature"><ul>
 <li>确认 AutoJs6 抽屉中 &quot;调试服务&quot; 显示 &quot;运行中&quot;.</li>
 <li>经数据线连接时, 确认已执行 <code>adb forward tcp:8347 tcp:8347</code>, 客户端连接的是 <code>127.0.0.1:8347</code>.</li>
-<li>经局域网连接时, 确认插件的监听范围为 &quot;局域网 (所有网络接口)&quot;, 并留意手机上的确认通知.</li>
+<li>经局域网连接时, 确认插件的监听范围为 &quot;局域网 (所有网络接口)&quot;, 并在手机上回答确认 (通知, 全屏确认页或插件首页的卡片), 见 <a href="#threeprobedebugger_9">手机上没有出现配对询问</a>.</li>
 <li>修改过端口时, 客户端要使用新端口.</li>
 <li>Node.js 脚本的调试器经 HTTP 访问中继端口. 电脑设置了 HTTP 代理 (例如环境变量 <code>HTTP_PROXY</code>) 时, 经局域网的请求可能被代理拦下并返回 <code>503</code>, 此时把手机地址加入不走代理的列表 (例如 <code>NO_PROXY</code>).</li>
 </ul>
-</div><h3>能附加到已经在运行的脚本吗?<span><a class="mark" href="#threeprobedebugger_7" id="threeprobedebugger_7">#</a></span></h3>
+</div><h3>手机上没有出现配对询问<span><a class="mark" href="#threeprobedebugger_9" id="threeprobedebugger_9">#</a></span></h3>
+<p>询问以通知弹出, 熄屏时亮屏并全屏显示. 没有通知权限 (Android 13 及以上要允许插件发送通知), &quot;连接请求&quot; 类通知被关闭, 或系统没有弹出通知 (MIUI / HyperOS 默认关闭新应用的悬浮通知) 时, 打开插件首页即可在待确认的卡片上回答. 90 秒内未回答视为拒绝, 同一地址连续失败 3 次会被暂时拦截.</p>
+<h3>能附加到已经在运行的脚本吗?<span><a class="mark" href="#threeprobedebugger_10" id="threeprobedebugger_10">#</a></span></h3>
 <p>可以附加调试服务开启之后开始运行的 Rhino 脚本. 调试服务开启之前已在运行的脚本, 以及已在运行的 Node.js 脚本不能附加; Node.js 脚本需要以调试模式启动, 见 <a href="debugScripts.html#debugscripts_node_js">调试脚本</a>.</p>
-<h2>相关链接<span><a class="mark" href="#threeprobedebugger_8" id="threeprobedebugger_8">#</a></span></h2>
+<h3>AutoJs6 被系统结束后, 调试服务没有恢复?<span><a class="mark" href="#threeprobedebugger_autojs6" id="threeprobedebugger_autojs6">#</a></span></h3>
+<p>AutoJs6 被系统结束后, 调试服务在下次打开 AutoJs6 时恢复 (没有锁屏时, 重新打开后数秒内恢复). 手机锁屏时被拉起的 AutoJs6, 以及由定时任务等在后台拉起的 AutoJs6 不会自动恢复调试服务; 这时插件的监听仍在, 电脑端看到 &quot;AutoJs6 不可用&quot;, 打开一次 AutoJs6 即可. 为减少被系统结束, 可按插件首页 &quot;保持运行&quot; 一栏的说明设置电池与自启动.</p>
+<h3>&quot;调试服务&quot; 下方显示 &quot;后台活动受限&quot;<span><a class="mark" href="#threeprobedebugger_11" id="threeprobedebugger_11">#</a></span></h3>
+<p>Android 限制了 3-Probe Debugger 的后台活动, 熄屏或插件在后台时监听可能被停止, 见 <a href="#threeprobedebugger_1">插件的警告</a>.</p>
+<h2>相关链接<span><a class="mark" href="#threeprobedebugger_12" id="threeprobedebugger_12">#</a></span></h2>
 <div class="signature"><ul>
 <li><a href="debugScripts.html">调试脚本 (Debug Scripts)</a></li>
 <li><a href="debugging.html">调试 (Debugging)</a></li>

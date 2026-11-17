@@ -363,8 +363,11 @@
 <h2>准备<span><a class="mark" href="#debugscripts" id="debugscripts">#</a></span></h2>
 <div class="signature"><ul>
 <li>AutoJs6 6.8.1 (内部版本 6641) 或更高版本, 以及 3-Probe Debugger 1.0.0 或更高版本. 在插件中心启用插件, 并在主页抽屉中打开 &quot;调试服务&quot;, 见 <a href="threeProbeDebugger.html#threeprobedebugger">安装与启用</a>.</li>
-<li>TypeScript 脚本需要 TypeScript 编译插件 (TypeScript Engine); Node.js 脚本需要 Node.js 运行时插件 2.2.0 或更高版本.</li>
-<li>电脑能到达手机: 数据线与 <code>adb</code>, 同一局域网, 或 AutoJs6 的开发连接, 见 <a href="threeProbeDebugger.html#threeprobedebugger_2">连接方式</a>.</li>
+<li>TypeScript 脚本需要 TypeScript 编译插件 (TypeScript Engine); Node.js 脚本需要 Node.js 运行时插件 2.2.0 或更高版本.<ul>
+<li>TypeScript Engine 0.7.1 需要 Android System WebView (或作为 WebView 提供者的 Chrome) 119 或更高版本. 版本过低时编译立即失败, 脚本不会运行, 控制台错误信息的 <code>Caused by:</code> 一行给出原因, 例如 &quot;TypeScript 编译需要 Android System WebView 119 或更高版本, 当前为 69.0.3497.100 (com.android.chrome). 请更新 Android System WebView 或 Chrome 后重试&quot;; 0.7.0 遇到过低的 WebView 只会等到超时, 没有明确的错误.</li>
+</ul>
+</li>
+<li>电脑能到达手机: 数据线与 <code>adb</code>, 同一局域网, 或 AutoJs6 的开发连接, 见 <a href="threeProbeDebugger.html#threeprobedebugger_4">连接方式</a>.</li>
 </ul>
 </div><p>脚本按文件名决定在哪个引擎上运行:</p>
 <table>
@@ -394,10 +397,15 @@
 <div class="signature"><ul>
 <li>启动 (launch): 由电脑启动脚本并调试. 脚本可以是电脑上的文件 (文本随启动发送到设备, 设备上不需要有该文件), 设备上的文件, 或保存到设备的项目.</li>
 <li>附加 (attach): 附加到正在运行的脚本. 只有在调试服务开启之后开始运行的 Rhino 脚本可以附加, 见 <a href="debugging.html#debugging">可附加的条件</a>.</li>
-<li>等待调试器: 让脚本启动后先等调试器附加, 再开始运行.<ul>
+<li><p>等待调试器: 让脚本启动后先等调试器附加, 再开始运行.</p>
+<ul>
 <li>在代码编辑器的菜单或文件管理器中脚本的选项菜单中选择 &quot;调试运行&quot;. 脚本先等待调试器附加 (对话框显示剩余时间), 附加后在调试器完成设置时开始运行; 等待超时后脚本照常运行, 不调试. 对话框中的 &quot;直接运行&quot; 不等待. 只有在 Rhino 引擎上运行的脚本可以调试运行.</li>
-<li>在脚本中调用 <a href="debugging.html#debugging_m_waitforattach">debugging.waitForAttach</a>.</li>
-<li>然后在电脑上用附加配置并设置 <code>waitForTarget: true</code>, 调试器附加到正在等待的脚本或下一个启动的脚本.</li>
+<li><p>在脚本中调用 <a href="debugging.html#debugging_m_waitforattach">debugging.waitForAttach</a>. TypeScript 脚本 (<code>.ts</code>, <code>.tsx</code>) 中使用 debugging 模块需要 TypeScript Engine 0.7.1 或更高版本: 0.7.0 不认识 <code>debugging</code>, 编译报 TS2304 (找不到名称), 脚本不会运行. 仍在用 0.7.0 时, 可以先在脚本开头补一行声明:</p>
+<pre><code class="lang-ts">declare const debugging: { waitForAttach(timeout?: number): boolean };
+</code></pre>
+</li>
+<li><p>然后在电脑上用附加配置并设置 <code>waitForTarget: true</code>, 调试器附加到正在等待的脚本或下一个启动的脚本.</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -626,7 +634,7 @@ dap.configurations.javascript = {
 <p>IntelliJ IDEA Ultimate, WebStorm 等自带 JavaScript 调试的 IDE 中, 同一行只能放一种断点, 而自带的 JavaScript 断点总是优先, 在行号栏点出的都是 JavaScript 断点. LSP4IJ 只发送自己的 &quot;DAP Breakpoint&quot;, 于是附加成功后脚本不会停下, 一直运行到结束. 在这类 IDE 中, 先在 Settings &gt; Plugins 中停用 &quot;JavaScript Debugger&quot; 插件 (连同依赖它的插件) 并重启 IDE, 再重新设置断点; 停用后该 IDE 自带的 JavaScript 与 Node.js 调试也不可用. 不带 JavaScript 调试插件的 IDE (例如 Android Studio) 不受影响.</p>
 <h3>配对密钥与令牌<span><a class="mark" href="#debugscripts_3" id="debugscripts_3">#</a></span></h3>
 <div class="signature"><ul>
-<li>经局域网连接时, 一台电脑第一次 <code>launch</code> / <code>attach</code> 之前手机会询问, 见 <a href="threeProbeDebugger.html#threeprobedebugger_3">安全</a>. 在手机上选择 &quot;允许并记住&quot; 后, 通用 DAP 客户端的调试控制台显示一行:</li>
+<li>经局域网连接时, 一台电脑第一次 <code>launch</code> / <code>attach</code> 之前手机会询问 (通知, 熄屏时的全屏确认页, 或插件首页待确认的卡片), 见 <a href="threeProbeDebugger.html#threeprobedebugger_5">安全</a>. 在手机上选择 &quot;允许并记住&quot; 后, 通用 DAP 客户端的调试控制台显示一行:</li>
 </ul>
 </div><pre><code class="lang-text">3-Probe Debugger: the phone remembered this computer. Add &quot;pairingKey&quot;: &quot;...&quot; to this launch / attach configuration; with it the phone lets this computer in without asking, also from another address. Keep it like a password.
 </code></pre>
