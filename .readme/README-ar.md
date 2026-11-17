@@ -3,6 +3,7 @@
 <div align="center">
   <p>
     <picture>
+      <source srcset="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap-night/ic_launcher.png?raw=true" media="(prefers-color-scheme: dark)" />
       <img src="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap/ic_launcher.png?raw=true" alt="autojs6-plugin-offline-docs-ic-launcher" border="0" width="128" />
     </picture>
   </p>
@@ -61,9 +62,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=267
-totalBytes=20806746
-contentSha256=0a2b7e0da22fe1ed2002646d114f510ac05950ae80b0ea84947551f05973073d
+fileCount=270
+totalBytes=21065217
+contentSha256=9b40b62434a6dbaf170c194ef9c75c64b4bf24ee22141d527aee45fd383764be
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=78c42a90282975864263dd08522ec0efbb02c778
 sourcePath=api
@@ -114,6 +115,12 @@ category=offline-docs
 
 ******
 
+# v6.8.42
+
+###### 2026/11/17
+
+* `تحسين` أُعيد تصميم أيقونة الملحق كرسم بلون واحد على خلفية شفافة يظهر بوضوح في السمتين الفاتحة والداكنة
+
 # v6.8.41
 
 ###### 2026/11/04
@@ -127,12 +134,6 @@ category=offline-docs
 * `ميزة` توثيق API: التحكم في مهام ai.agent والأحداث وسياق ونتائج النصوص المسجلة في Node.js وBun وWorker, مع تفويض صريح للتطبيقات المحزمة
 * `إصلاح` لم تعد أدوات التحقق من الوثائق غير المتصلة تعتبر اسم واجهة الدخول `AutoJsJvmEntry` لإضافات Java و Kotlin Runtime اسما قديما مجردا للمنتج
 * `تحسين` مرجع مصمم 3-Block Compose: ابتداء من 1.9.0 ثلاثة أقسام جديدة: "الجديد في المعاينة التفاعلية" (مربعات الحوار ومفتاح الرجوع والإيقاف المؤقت والاستئناف وألوان شريط الحالة وشريط التنقل وحد انشغال الخيط الرئيسي) و "مشاريع UI المكتوبة بـ TSX" (تحرير تخطيطات JSX في سكربتات .tsx وطريقة كتابة قوالب الأحداث وتشغيل TSX في المعاينة التفاعلية) و "التحرير المرتبط لحاويات <compose>" (تحرير واجهات Compose المرفقة عبر compose.attach مباشرة على اللوحة وإضافة حاوية بخطوة واحدة); وصار لجدول "فروق المعاينة" عمودان منفصلان لبناءات AutoJs6 التي تتضمن عقد المعاينة v4 والتي لا تتضمنه
-
-# v6.8.39
-
-###### 2026/10/22
-
-* `ميزة` توليد النصوص والبث وفهرس النماذج والجلسات المستمرة في Node.js وBun وWorkers, مع الإلغاء وموافقة مستقلة لكل تطبيق في 3-Stone AI
 
 ##### لمزيد من سجل الإصدارات
 

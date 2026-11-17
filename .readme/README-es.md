@@ -3,6 +3,7 @@
 <div align="center">
   <p>
     <picture>
+      <source srcset="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap-night/ic_launcher.png?raw=true" media="(prefers-color-scheme: dark)" />
       <img src="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap/ic_launcher.png?raw=true" alt="autojs6-plugin-offline-docs-ic-launcher" border="0" width="128" />
     </picture>
   </p>
@@ -61,9 +62,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=267
-totalBytes=20806746
-contentSha256=0a2b7e0da22fe1ed2002646d114f510ac05950ae80b0ea84947551f05973073d
+fileCount=270
+totalBytes=21065217
+contentSha256=9b40b62434a6dbaf170c194ef9c75c64b4bf24ee22141d527aee45fd383764be
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=78c42a90282975864263dd08522ec0efbb02c778
 sourcePath=api
@@ -114,6 +115,12 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 
 ******
 
+# v6.8.42
+
+###### 2026/11/17
+
+* `Mejora` Icono del plugin rediseñado como una figura de un solo color sobre fondo transparente, bien visible en los temas claro y oscuro
+
 # v6.8.41
 
 ###### 2026/11/04
@@ -127,12 +134,6 @@ El plugin no tiene interfaz independiente. AutoJs6 lo descubre y valida cuando e
 * `Función` Documentación de API: Control de tareas ai.agent, eventos y contexto/resultados de scripts registrados para Node.js, Bun y Workers, con autorización explícita para las aplicaciones empaquetadas
 * `Corrección` Los validadores de documentación sin conexión ya no confunden el nombre de la interfaz de entrada `AutoJsJvmEntry` de los plugins Java y Kotlin Runtime con un nombre de producto heredado sin calificar
 * `Mejora` Referencia del Diseñador de 3-Block Compose: desde 1.9.0, tres secciones nuevas: "Novedades de la vista previa interactiva" (diálogos, la tecla Atrás, pausa y reanudación, colores de la barra de estado y de navegación, límite de ocupación del hilo principal), "Proyectos UI en TSX" (edición de diseños JSX en scripts .tsx, cómo se escriben los esqueletos de eventos, ejecución de TSX en la vista previa interactiva) y "Edición vinculada de contenedores <compose>" (edición directa en el lienzo de las interfaces Compose acopladas con compose.attach, creación de un contenedor en un paso); la tabla "Diferencias de vista previa" tiene ahora columnas separadas para las versiones de AutoJs6 con y sin el contrato de vista previa v4
-
-# v6.8.39
-
-###### 2026/10/22
-
-* `Función` Generación de texto con IA, transmisión, catálogo de modelos y sesiones persistentes para Node.js, Bun y Workers, con cancelación y consentimiento por aplicación en 3-Stone AI
 
 ##### Para ver más historial de versiones
 

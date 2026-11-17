@@ -3,6 +3,7 @@
 <div align="center">
   <p>
     <picture>
+      <source srcset="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap-night/ic_launcher.png?raw=true" media="(prefers-color-scheme: dark)" />
       <img src="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap/ic_launcher.png?raw=true" alt="autojs6-plugin-offline-docs-ic-launcher" border="0" width="128" />
     </picture>
   </p>
@@ -61,9 +62,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=267
-totalBytes=20806746
-contentSha256=0a2b7e0da22fe1ed2002646d114f510ac05950ae80b0ea84947551f05973073d
+fileCount=270
+totalBytes=21065217
+contentSha256=9b40b62434a6dbaf170c194ef9c75c64b4bf24ee22141d527aee45fd383764be
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=78c42a90282975864263dd08522ec0efbb02c778
 sourcePath=api
@@ -114,6 +115,12 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 
 ******
 
+# v6.8.42
+
+###### 2026/11/17
+
+* `优化` 插件图标重新设计为透明背景的单色图案, 在亮色与暗色主题下都清晰可辨
+
 # v6.8.41
 
 ###### 2026/11/04
@@ -127,12 +134,6 @@ OfflineDocsPluginInfoService 通过 IPluginInfoProvider 发布 PluginInfo. 宿�
 * `新增` API 文档: Node.js/Bun/Worker 的 ai.agent 任务控制与事件, 注册脚本上下文和结果回传, 以及打包应用的独立授权
 * `修复` 离线文档校验将 Java/Kotlin Runtime 插件的入口接口 AutoJsJvmEntry 误判为旧版产品名称的问题
 * `优化` 3-Block Compose 设计器参考文档: 1.9.0 起新增 "交互预览的新能力" 一节 (对话框, 返回键, 暂停与恢复, 状态栏与导航栏颜色, 主线程占用上限), "TSX 的 UI 工程" 一节 (在 .tsx 脚本中编辑 JSX 布局, 事件桩的写法, 在交互预览中运行 TSX) 与 "<compose> 容器的联动编辑" 一节 (在画布上直接编辑经 compose.attach 挂上的 Compose 界面, 一步新建容器); "预览差异" 表按 AutoJs6 是否包含预览契约 v4 分为两列
-
-# v6.8.39
-
-###### 2026/10/22
-
-* `新增` Node.js, Bun 和 Worker 的 AI 文本生成, 流式结果, 模型目录与持久会话, 支持取消及 3-Stone AI 对打包应用的逐应用授权
 
 ##### 更多发行历史可参阅
 

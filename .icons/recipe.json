@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatorVersion": "1.3.0",
+  "generatorVersion": "1.4.0",
   "profile": "catalog",
   "repository": "AutoJs6-Plugin-Offline-Docs",
   "packages": [
@@ -9,31 +9,31 @@
   "launcher": false,
   "params": {
     "sources": {
-      "day": "e58aa4f347ffbc0b8e9acdbdfebb6b9038e125e9626c4e7fb75776df221398ed",
-      "night": "e58aa4f347ffbc0b8e9acdbdfebb6b9038e125e9626c4e7fb75776df221398ed",
+      "day": "909c09e60cf677f55ed6dc73ca6480fbd6b1594c323d9b9c6d11d96379e1ce01",
+      "night": "909c09e60cf677f55ed6dc73ca6480fbd6b1594c323d9b9c6d11d96379e1ce01",
       "alphaMode": "alpha"
     },
     "geometry": {
-      "mode": "preserve",
-      "scale": 0.87,
-      "offsetX": 0,
-      "offsetY": 0
+      "mode": "normalized",
+      "scale": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
     },
     "day": {
-      "mode": "original",
+      "mode": "mask",
       "foreground": "#272727",
-      "brightness": 1,
-      "contrast": 1,
-      "gamma": 1,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "gamma": 1.0,
       "threshold": 128,
       "invert": false
     },
     "night": {
-      "mode": "original",
+      "mode": "mask",
       "foreground": "#d8d8d8",
-      "brightness": 1,
-      "contrast": 1,
-      "gamma": 1,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "gamma": 1.0,
       "threshold": 128,
       "invert": false
     },
@@ -128,14 +128,21 @@
     }
   },
   "assets": [
+    "909c09e60cf677f55ed6dc73ca6480fbd6b1594c323d9b9c6d11d96379e1ce01",
+    "afdcc414b983ef7e40cdbc8e35dc6957f29981af2ad4341a2f3fc61d9930a39a",
     "e58aa4f347ffbc0b8e9acdbdfebb6b9038e125e9626c4e7fb75776df221398ed"
   ],
   "legacyGenerator": null,
   "backgroundDefaults": {
     "day": "transparent",
-    "night": "#280000"
+    "night": "transparent"
   },
-  "originalSources": {},
+  "originalSources": {
+    "909c09e60cf677f55ed6dc73ca6480fbd6b1594c323d9b9c6d11d96379e1ce01": {
+      "asset": "afdcc414b983ef7e40cdbc8e35dc6957f29981af2ad4341a2f3fc61d9930a39a",
+      "filename": "offline-docs-icon.svg"
+    }
+  },
   "systemIcon": true,
   "systemIconMinSdk": 24,
   "systemIconObsolete": []

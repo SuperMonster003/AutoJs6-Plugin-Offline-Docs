@@ -4,6 +4,12 @@
 
 ******
 
+# v6.8.42
+
+###### 2026/11/17
+
+* `Improvement` Redesigned the plugin icon as a single-color glyph on a transparent background that stays clear in both light and dark themes
+
 # v6.8.41
 
 ###### 2026/11/04

@@ -3,6 +3,7 @@
 <div align="center">
   <p>
     <picture>
+      <source srcset="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap-night/ic_launcher.png?raw=true" media="(prefers-color-scheme: dark)" />
       <img src="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap/ic_launcher.png?raw=true" alt="autojs6-plugin-offline-docs-ic-launcher" border="0" width="128" />
     </picture>
   </p>
@@ -61,9 +62,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=267
-totalBytes=20806746
-contentSha256=0a2b7e0da22fe1ed2002646d114f510ac05950ae80b0ea84947551f05973073d
+fileCount=270
+totalBytes=21065217
+contentSha256=9b40b62434a6dbaf170c194ef9c75c64b4bf24ee22141d527aee45fd383764be
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=78c42a90282975864263dd08522ec0efbb02c778
 sourcePath=api
@@ -114,6 +115,12 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 
 ******
 
+# v6.8.42
+
+###### 2026/11/17
+
+* `Improvement` Redesigned the plugin icon as a single-color glyph on a transparent background that stays clear in both light and dark themes
+
 # v6.8.41
 
 ###### 2026/11/04
@@ -127,12 +134,6 @@ The plugin has no standalone interface. AutoJs6 discovers and validates it on de
 * `Feature` API documentation: ai.agent task controls, events and registered-script context/results for Node.js, Bun and Workers, with explicit authorization for packaged applications
 * `Fix` Offline documentation validators no longer treat the entry interface name `AutoJsJvmEntry` of the Java and Kotlin Runtime plugins as a legacy bare product name
 * `Improvement` 3-Block Compose Designer reference: from 1.9.0 three new sections: "New in the interactive preview" (dialogs, the Back key, pause and resume, status bar and navigation bar colors, the main thread busy limit), "TSX UI projects" (editing JSX layouts in .tsx scripts, how event stubs are written, running TSX in the interactive preview) and "Linked editing of <compose> containers" (editing Compose interfaces attached with compose.attach directly on the canvas, adding a container in one step); the "Preview Differences" table now has separate columns for AutoJs6 builds with and without preview contract v4
-
-# v6.8.39
-
-###### 2026/10/22
-
-* `Feature` AI text generation, streaming, model catalog and persistent sessions for Node.js, Bun and Workers, with cancellation and per-app consent in 3-Stone AI for packaged apps
 
 ##### For more release history
 

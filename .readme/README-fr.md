@@ -3,6 +3,7 @@
 <div align="center">
   <p>
     <picture>
+      <source srcset="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap-night/ic_launcher.png?raw=true" media="(prefers-color-scheme: dark)" />
       <img src="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap/ic_launcher.png?raw=true" alt="autojs6-plugin-offline-docs-ic-launcher" border="0" width="128" />
     </picture>
   </p>
@@ -61,9 +62,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=267
-totalBytes=20806746
-contentSha256=0a2b7e0da22fe1ed2002646d114f510ac05950ae80b0ea84947551f05973073d
+fileCount=270
+totalBytes=21065217
+contentSha256=9b40b62434a6dbaf170c194ef9c75c64b4bf24ee22141d527aee45fd383764be
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=78c42a90282975864263dd08522ec0efbb02c778
 sourcePath=api
@@ -114,6 +115,12 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 
 ******
 
+# v6.8.42
+
+###### 2026/11/17
+
+* `Amélioration` Icône du plugin redessinée en un motif monochrome sur fond transparent, bien lisible avec les thèmes clair et sombre
+
 # v6.8.41
 
 ###### 2026/11/04
@@ -127,12 +134,6 @@ Le plugin ne possède pas d'interface autonome. AutoJs6 le découvre et le valid
 * `Fonctionnalité` Documentation API: Contrôle des tâches ai.agent, événements et contexte/résultats des scripts enregistrés pour Node.js, Bun et Workers, avec autorisation explicite des applications empaquetées
 * `Correctif` Les validateurs de documentation hors ligne ne confondent plus le nom de l'interface d'entrée `AutoJsJvmEntry` des plugins Java et Kotlin Runtime avec un ancien nom de produit nu
 * `Amélioration` Référence du Concepteur 3-Block Compose: à partir de 1.9.0, trois nouvelles sections: "Nouveautés de l'aperçu interactif" (boîtes de dialogue, touche Retour, pause et reprise, couleurs de la barre d'état et de la barre de navigation, limite d'occupation du thread principal), "Projets UI en TSX" (modification des mises en page JSX dans les scripts .tsx, écriture des gabarits d'événements, exécution de TSX dans l'aperçu interactif) et "Modification liée des conteneurs <compose>" (modification directe sur le canevas des interfaces Compose rattachées par compose.attach, ajout d'un conteneur en une étape); le tableau "Différences d'aperçu" a désormais des colonnes distinctes pour les versions d'AutoJs6 avec et sans le contrat d'aperçu v4
-
-# v6.8.39
-
-###### 2026/10/22
-
-* `Fonctionnalité` Génération de texte IA, flux, catalogue de modèles et sessions persistantes pour Node.js, Bun et Workers, avec annulation et consentement par application dans 3-Stone AI
 
 ##### Pour plus d'historique des versions
 

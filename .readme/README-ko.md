@@ -3,6 +3,7 @@
 <div align="center">
   <p>
     <picture>
+      <source srcset="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap-night/ic_launcher.png?raw=true" media="(prefers-color-scheme: dark)" />
       <img src="https://github.com/SuperMonster003/AutoJs6-Plugin-Offline-Docs/blob/master/app/src/main/res/mipmap/ic_launcher.png?raw=true" alt="autojs6-plugin-offline-docs-ic-launcher" border="0" width="128" />
     </picture>
   </p>
@@ -61,9 +62,9 @@ contentFormat=autojs6-static-html-v1
 assetRoot=docs
 entryPoint=index.html
 inventoryFile=offline-docs-inventory-v1.txt
-fileCount=267
-totalBytes=20806746
-contentSha256=0a2b7e0da22fe1ed2002646d114f510ac05950ae80b0ea84947551f05973073d
+fileCount=270
+totalBytes=21065217
+contentSha256=9b40b62434a6dbaf170c194ef9c75c64b4bf24ee22141d527aee45fd383764be
 sourceRepository=SuperMonster003/AutoJs6-Documentation
 sourceBaseCommit=78c42a90282975864263dd08522ec0efbb02c778
 sourcePath=api
@@ -114,6 +115,12 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 
 ******
 
+# v6.8.42
+
+###### 2026/11/17
+
+* `개선` 플러그인 아이콘을 투명 배경의 단색 그림으로 새로 디자인하여 밝은 테마와 어두운 테마 모두에서 잘 보이도록 함
+
 # v6.8.41
 
 ###### 2026/11/04
@@ -127,12 +134,6 @@ OfflineDocsPluginInfoService는 IPluginInfoProvider를 통해 PluginInfo를 제�
 * `기능` API 문서: Node.js/Bun/Worker의 ai.agent 작업 제어와 이벤트, 등록된 스크립트의 컨텍스트와 결과, 패키징된 앱의 명시적 승인
 * `수정` 오프라인 문서 validator 가 Java/Kotlin Runtime 플러그인의 진입 interface 이름 `AutoJsJvmEntry` 를 이전 제품의 단독 이름으로 더 이상 오인하지 않습니다
 * `개선` 3-Block Compose 디자이너 참조 문서: 1.9.0 부터 "대화형 미리보기의 새 기능" (대화상자, 뒤로 키, 일시 중지와 재개, 상태 표시줄과 내비게이션 바 색상, 메인 스레드 점유 한도), "TSX 의 UI 프로젝트" (.tsx 스크립트 안의 JSX 레이아웃 편집, 이벤트 스텁 작성 방식, 대화형 미리보기에서 TSX 실행), "<compose> 컨테이너의 연동 편집" (compose.attach 로 붙인 Compose 인터페이스를 캔버스에서 바로 편집, 컨테이너를 한 번에 추가) 세 절을 추가하고, "미리보기 차이" 표를 미리보기 계약 v4 를 포함한 AutoJs6 와 그 이전 두 열로 나눔
-
-# v6.8.39
-
-###### 2026/10/22
-
-* `기능` Node.js, Bun 및 Worker의 AI 텍스트 생성, 스트리밍, 모델 목록 및 영구 세션, 취소와 3-Stone AI의 패키지 앱별 접근 승인 지원
 
 ##### 더 많은 릴리스 기록
 
